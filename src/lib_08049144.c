@@ -259,7 +259,10 @@ void func_0804a014(struct MidiChannelBus *mChnlBus, const InstrumentBank *instBa
 
 #include "asm/lib_08049144/asm_0804adb0.s"
 
-#include "asm/lib_08049144/asm_0804adb4.s"
+// [func_0804adb4] Store Sequence Data volume to MIDI Channel Bus volume.
+void func_0804adb4(struct MidiChannelBus *mChnlBus, u8 volume) {
+    mChnlBus->volume = volume;
+}
 
 #include "asm/lib_08049144/asm_0804adb8.s"
 
