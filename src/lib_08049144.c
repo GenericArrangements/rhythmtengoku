@@ -319,7 +319,13 @@ u32 func_0804b330(u8 *stream) {
 }
 
 
-#include "asm/lib_08049144/asm_0804b348.s"
+// [func_0804b348] Determine length of Loop Marker symbols.
+u32 func_0804b348(char label[]) {
+    u8 i;
+
+    for (i = 0; label[i] != 0; i++);
+    return i;
+}
 
 
 // [func_0804b368] Store Sequence Data to a given Audio Channel.
