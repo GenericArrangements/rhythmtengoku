@@ -479,7 +479,22 @@ void func_0804b534(u16 index) {
 
 #include "asm/lib_08049144/asm_0804c35c.s"
 
-#include "asm/lib_08049144/asm_0804c398.s"
+// [func_0804c398] Parse MIDI Variable-Length Time
+u32 func_0804c398(u8 **midiStream) {
+    u8 *mStream = *midiStream;
+    u8 temp;
+    u32 time = 0;
+
+    do {
+        temp = *mStream;
+        mStream++;
+        time <<= 7;
+        time |= (temp & 0x7f);
+    } while (temp & 0x80);
+
+    *midiStream = mStream;
+    return time;
+}
 
 #include "asm/lib_08049144/asm_0804c3c0.s"
 

@@ -123,7 +123,7 @@ extern void func_0804b534(u16); // [func_0804b534] Load a Sound Sequence using t
 // extern ? func_0804c340(?);
 // extern ? func_0804c358(?);
 // extern ? func_0804c35c(?);
-extern u32 func_0804c398(u8 **);
+extern u32 func_0804c398(u8 **); // [func_0804c398] Parse MIDI Variable-Length Time
 // extern ? func_0804c3c0(?);
 // extern ? func_0804c4bc(?);
 // extern ? func_0804c508(?);
