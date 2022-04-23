@@ -54,7 +54,7 @@ extern void func_0804a014(struct MidiChannelBus *, const InstrumentBank *);
 // extern ? func_0804aae0(?);
 // extern ? func_0804ab88(?);
 // extern ? func_0804aba8(?);
-extern void func_0804abc8(struct MidiChannelBus *, u32, u16);
+extern void func_0804abc8(struct MidiChannelBus *, u32, u16); // [func_0804abc8] MIDI Controller 00 - ??; MIDI Controller 20 - ??
 // extern ? func_0804ac24(?);
 // extern ? func_0804ac40(?);
 // extern ? func_0804ac60(?);

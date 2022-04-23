@@ -242,7 +242,22 @@ void func_0804a014(struct MidiChannelBus *mChnlBus, const InstrumentBank *instBa
 
 #include "asm/lib_08049144/asm_0804aba8.s"
 
-#include "asm/lib_08049144/asm_0804abc8.s"
+// [func_0804abc8] MIDI Controller 00 - ??; MIDI Controller 20 - ??
+void func_0804abc8(struct MidiChannelBus *mChnlBus, u32 id, u16 var) {
+    u16 unk0_b9 = mChnlBus->midiChannel[id].unk0_b9;
+
+    // MIDI Controller 00 - ??
+    if (var & 0x8000) {
+        unk0_b9 &= 0x3f80;     // Bits 0-6  = 0
+        unk0_b9 |= (var << 7); // Bits 7-13 = var
+    }
+    // MIDI Controller 20 - ??
+    else {
+        unk0_b9 &= 0x7f; // Bits 7-13 = 0
+        unk0_b9 |= var;  // Bits 0-6  = var
+    }
+    mChnlBus->midiChannel[id].unk0_b9 = unk0_b9 & 0x3fff;
+}
 
 #include "asm/lib_08049144/asm_0804ac24.s"
 
@@ -479,26 +494,26 @@ void func_0804b534(u16 index) {
 
 
 // [func_0804b95c] Interpret MIDI Controller Change Instruction
-void func_0804b95c(struct AudioChannel *audioChnl, u32 arg1, u8 ctrl, u8 arg3) {
-    struct MidiChannelBus *channelBus = audioChnl->midi_channelBus;
+void func_0804b95c(struct AudioChannel *audioChnl, u32 id, u8 ctrl, u8 var) {
+    struct MidiChannelBus *mChnlBus = audioChnl->midi_channelBus;
 
     switch (ctrl) {
-        case 0x00: func_0804abc8(channelBus, arg1, arg3 | 0x8000); break;
-        case 0x01: func_0804ac40(channelBus, arg1, arg3); break;
-        case 0x07: func_0804aa5c(channelBus, arg1, arg3); break;
-        case 0x0A: func_0804aa7c(channelBus, arg1, arg3); break;
-        case 0x0B: func_0804aba8(channelBus, arg1, arg3); break;
-        case 0x14: func_0804ace4(channelBus, arg1, arg3); break;
-        case 0x15: func_0804accc(channelBus, arg1, arg3); break;
-        case 0x16: func_0804aca0(channelBus, arg1, arg3); break;
-        case 0x1A: func_0804acd8(channelBus, arg1, arg3); break;
-        case 0x20: func_0804abc8(channelBus, arg1, arg3); break;
-        case 0x21: func_0804ad18(channelBus, arg1, arg3); break;
-        case 0x0E: D_03005648 = arg3; break;
-        case 0x10: if (D_03005648 < D_03005b20) D_03005b7c[D_03005648] = arg3; break;
-        case 0x48: func_0804ac80(channelBus, arg1, arg3); break;
-        case 0x49: D_03005b3c = arg3;
-            switch (arg3) {
+        case 0x00: func_0804abc8(mChnlBus, id, var | 0x8000); break;
+        case 0x01: func_0804ac40(mChnlBus, id, var); break;
+        case 0x07: func_0804aa5c(mChnlBus, id, var); break;
+        case 0x0A: func_0804aa7c(mChnlBus, id, var); break;
+        case 0x0B: func_0804aba8(mChnlBus, id, var); break;
+        case 0x14: func_0804ace4(mChnlBus, id, var); break;
+        case 0x15: func_0804accc(mChnlBus, id, var); break;
+        case 0x16: func_0804aca0(mChnlBus, id, var); break;
+        case 0x1A: func_0804acd8(mChnlBus, id, var); break;
+        case 0x20: func_0804abc8(mChnlBus, id, var); break;
+        case 0x21: func_0804ad18(mChnlBus, id, var); break;
+        case 0x0E: D_03005648 = var; break;
+        case 0x10: if (D_03005648 < D_03005b20) D_03005b7c[D_03005648] = var; break;
+        case 0x48: func_0804ac80(mChnlBus, id, var); break;
+        case 0x49: D_03005b3c = var;
+            switch (var) {
                 case 0:
                 case 1: func_0804ae60(&D_03005b30); break;
                 case 2: func_08049be4(); func_0804ae54(&D_03005b30); break;
@@ -506,18 +521,18 @@ void func_0804b95c(struct AudioChannel *audioChnl, u32 arg1, u8 ctrl, u8 arg3) {
         case 0x4A: D_03005b3c = 0;
             func_0804ae60(&D_03005b30);
             func_08049be4();
-            func_08049b70((arg3 * 2) - 0x80);
+            func_08049b70((var * 2) - 0x80);
             break;
-        case 0x4C: D_03005640 = arg3 * 2; break;
-        case 0x4D: func_08049b8c(arg3); break;
-        case 0x4B: func_0804acf0(channelBus, arg1, arg3); break;
-        case 0x4E: audioChnl->unk2D = arg3; break;
-        case 0x4F: audioChnl->unk2E = arg3; break;
-        case 0x50: audioChnl->unk2F = arg3; break;
-        case 0x51: audioChnl->unk30 = arg3; break;
-        case 0x52: func_0804ad38(channelBus, arg1, arg3); break;
-        case 0x53: func_0804ad90(channelBus, arg1, arg3); break;
-        case 0x54: func_0804ad9c(channelBus, arg1, arg3); break;
+        case 0x4C: D_03005640 = var * 2; break;
+        case 0x4D: func_08049b8c(var); break;
+        case 0x4B: func_0804acf0(mChnlBus, id, var); break;
+        case 0x4E: audioChnl->unk2D = var; break;
+        case 0x4F: audioChnl->unk2E = var; break;
+        case 0x50: audioChnl->unk2F = var; break;
+        case 0x51: audioChnl->unk30 = var; break;
+        case 0x52: func_0804ad38(mChnlBus, id, var); break;
+        case 0x53: func_0804ad90(mChnlBus, id, var); break;
+        case 0x54: func_0804ad9c(mChnlBus, id, var); break;
     }
 }
 
