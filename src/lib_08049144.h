@@ -54,7 +54,7 @@ extern void func_0804a014(struct MidiChannelBus *, const InstrumentBank *);
 // extern ? func_0804aae0(?);
 // extern ? func_0804ab88(?);
 // extern ? func_0804aba8(?);
-// extern ? func_0804abc8(?);
+extern void func_0804abc8(struct MidiChannelBus *, u32, u16);
 // extern ? func_0804ac24(?);
 // extern ? func_0804ac40(?);
 // extern ? func_0804ac60(?);
@@ -89,7 +89,7 @@ extern void func_0804adb4(struct MidiChannelBus *, u8); // [func_0804adb4] Store
 // extern ? func_0804b2c4(?);
 extern u16 func_0804b324(u8 *); // [func_0804b324] Parse 16-bit Big Endian value in MIDI Stream.
 extern u32 func_0804b330(u8 *); // [func_0804b330] Parse 32-bit Big Endian value in MIDI Stream.
-extern u32 func_0804b348(char []);  // [func_0804b348] Loop Symbol Character Size
+extern u32 func_0804b348(char []); // Determine length of Loop Marker symbols.
 extern void func_0804b368(struct AudioChannel *, const struct SequenceData *);  // [func_0804b368] Store Music to Memory
 extern void func_0804b534(u16); // [func_0804b534] Load a Sound Sequence using the D_08aa06f8 table.
 // extern ? func_0804b560(?);
@@ -113,7 +113,7 @@ extern void func_0804b534(u16); // [func_0804b534] Load a Sound Sequence using t
 // extern ? func_0804b7fc(?);
 // extern ? func_0804b80c(?);
 // extern ? func_0804b898(?);
-// extern ? func_0804b95c(?);
+extern void func_0804b95c(struct AudioChannel *, u32, u8, u8); // [func_0804b95c] Interpret MIDI Controller Change Instruction
 // extern ? func_0804bc5c(?);
 // extern ? func_0804bcc0(?);
 // extern ? func_0804bed0(?);

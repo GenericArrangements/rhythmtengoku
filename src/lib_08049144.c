@@ -2,6 +2,8 @@
 #include "sound.h"
 #include "lib_08049144.h"
 
+asm(".include \"include/gba.inc\"");//Temporary
+
 struct Bingus {
     u32 unk0_b0:1;
     u32 unk4;
@@ -14,7 +16,13 @@ struct Bingus {
     u32 unk1D:24;
 };
 
+extern u8  D_03005640;
+extern u16 D_03005648;
 extern struct Bingus D_030056a0[];
+extern u16 D_03005b20;
+extern u32 D_03005b30;
+extern u8  D_03005b3c;
+extern u8 *D_03005b7c;
 extern struct Bingus *D_03005b88;
 extern u16 D_03005b8c;
 extern struct Bingus *D_030064bc;
@@ -23,9 +31,6 @@ extern s16 D_08a86008[];
 extern const InstrumentBank *const instrumentBanks[];
 extern char D_08a865a4[]; // '['
 extern char D_08a865a8[]; // ']'
-
-
-asm(".include \"include/gba.inc\"");//Temporary
 
 
 
@@ -78,6 +83,7 @@ void func_080493b0(u32 id) {
 
 #include "asm/lib_08049144/asm_08049d30.s"
 
+
 // [func_08049db8] ?
 void func_08049db8(struct MidiChannelBus *mChnlBus, u32 id) {
     struct MidiChannel *mChnl = &mChnlBus->midiChannel[id];
@@ -119,6 +125,7 @@ void func_08049e8c(struct MidiChannelBus *mChnlBus, u8 unk4f4) {
         func_0804ad18(mChnlBus, i, 0);
     }
 }
+
 
 #include "asm/lib_08049144/asm_08049ec4.s"
 
@@ -257,10 +264,12 @@ void func_0804a014(struct MidiChannelBus *mChnlBus, const InstrumentBank *instBa
 
 #include "asm/lib_08049144/asm_0804acf0.s"
 
+
 // [func_0804ad18] ?
 void func_0804ad18(struct MidiChannelBus *mChnlBus, u32 i, u8 arg2) {
     mChnlBus->midiChannel[i].unk8_b22 = arg2 + mChnlBus->unk14_b5;
 }
+
 
 #include "asm/lib_08049144/asm_0804ad38.s"
 
@@ -270,10 +279,12 @@ void func_0804ad18(struct MidiChannelBus *mChnlBus, u32 i, u8 arg2) {
 
 #include "asm/lib_08049144/asm_0804adb0.s"
 
+
 // [func_0804adb4] Store Sequence Data volume to MIDI Channel Bus volume.
 void func_0804adb4(struct MidiChannelBus *mChnlBus, u8 volume) {
     mChnlBus->volume = volume;
 }
+
 
 #include "asm/lib_08049144/asm_0804adb8.s"
 
@@ -306,6 +317,7 @@ void func_0804adb4(struct MidiChannelBus *mChnlBus, u8 volume) {
 #include "asm/lib_08049144/asm_0804aff0.s"
 
 #include "asm/lib_08049144/asm_0804b2c4.s"
+
 
 // [func_0804b324] Parse 16-bit Big Endian value in MIDI Stream.
 u16 func_0804b324(u8 *stream) {
@@ -465,7 +477,50 @@ void func_0804b534(u16 index) {
 
 #include "asm/lib_08049144/asm_0804b898.s"
 
-#include "asm/lib_08049144/asm_0804b95c.s"
+
+// [func_0804b95c] Interpret MIDI Controller Change Instruction
+void func_0804b95c(struct AudioChannel *audioChnl, u32 arg1, u8 ctrl, u8 arg3) {
+    struct MidiChannelBus *channelBus = audioChnl->midi_channelBus;
+
+    switch (ctrl) {
+        case 0x00: func_0804abc8(channelBus, arg1, arg3 | 0x8000); break;
+        case 0x01: func_0804ac40(channelBus, arg1, arg3); break;
+        case 0x07: func_0804aa5c(channelBus, arg1, arg3); break;
+        case 0x0A: func_0804aa7c(channelBus, arg1, arg3); break;
+        case 0x0B: func_0804aba8(channelBus, arg1, arg3); break;
+        case 0x14: func_0804ace4(channelBus, arg1, arg3); break;
+        case 0x15: func_0804accc(channelBus, arg1, arg3); break;
+        case 0x16: func_0804aca0(channelBus, arg1, arg3); break;
+        case 0x1A: func_0804acd8(channelBus, arg1, arg3); break;
+        case 0x20: func_0804abc8(channelBus, arg1, arg3); break;
+        case 0x21: func_0804ad18(channelBus, arg1, arg3); break;
+        case 0x0E: D_03005648 = arg3; break;
+        case 0x10: if (D_03005648 < D_03005b20) D_03005b7c[D_03005648] = arg3; break;
+        case 0x48: func_0804ac80(channelBus, arg1, arg3); break;
+        case 0x49: D_03005b3c = arg3;
+            switch (arg3) {
+                case 0:
+                case 1: func_0804ae60(&D_03005b30); break;
+                case 2: func_08049be4(); func_0804ae54(&D_03005b30); break;
+            } break;
+        case 0x4A: D_03005b3c = 0;
+            func_0804ae60(&D_03005b30);
+            func_08049be4();
+            func_08049b70((arg3 * 2) - 0x80);
+            break;
+        case 0x4C: D_03005640 = arg3 * 2; break;
+        case 0x4D: func_08049b8c(arg3); break;
+        case 0x4B: func_0804acf0(channelBus, arg1, arg3); break;
+        case 0x4E: audioChnl->unk2D = arg3; break;
+        case 0x4F: audioChnl->unk2E = arg3; break;
+        case 0x50: audioChnl->unk2F = arg3; break;
+        case 0x51: audioChnl->unk30 = arg3; break;
+        case 0x52: func_0804ad38(channelBus, arg1, arg3); break;
+        case 0x53: func_0804ad90(channelBus, arg1, arg3); break;
+        case 0x54: func_0804ad9c(channelBus, arg1, arg3); break;
+    }
+}
+
 
 #include "asm/lib_08049144/asm_0804bc5c.s"
 
@@ -485,6 +540,7 @@ void func_0804b534(u16 index) {
 
 #include "asm/lib_08049144/asm_0804c35c.s"
 
+
 // [func_0804c398] Parse MIDI Variable-Length Time
 u32 func_0804c398(u8 **midiStream) {
     u8 *mStream = *midiStream;
@@ -501,6 +557,7 @@ u32 func_0804c398(u8 **midiStream) {
     *midiStream = mStream;
     return time;
 }
+
 
 #include "asm/lib_08049144/asm_0804c3c0.s"
 
