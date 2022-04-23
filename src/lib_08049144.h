@@ -25,7 +25,7 @@
 // extern ? func_08049db8(?);
 // extern ? func_08049e3c(?);
 // extern ? func_08049e64(?);
-// extern ? func_08049e8c(?);
+extern void func_08049e8c(struct MidiChannelBus *, u8);
 // extern ? func_08049ec4(?);
 // extern ? func_08049ecc(?);
 // extern ? func_08049fa0(?);
@@ -87,10 +87,10 @@
 // extern ? func_0804afd8(?);
 // extern ? func_0804aff0(?);
 // extern ? func_0804b2c4(?);
-// extern ? func_0804b324(?);
-// extern ? func_0804b330(?);
-// extern ? func_0804b348(?);
-// extern ? func_0804b368(?);
+extern u16 func_0804b324(u8 *); // [func_0804b324] Parse 16-bit Big Endian
+extern u32 func_0804b330(u8 *); // [func_0804b330] Parse 32-bit Big Endian
+extern u32 func_0804b348(char []);  // [func_0804b348] Loop Symbol Character Size
+extern void func_0804b368(struct AudioChannel *, const struct SequenceData *);  // [func_0804b368] Store Music to Memory
 // extern ? func_0804b534(?);
 // extern ? func_0804b560(?);
 // extern ? func_0804b574(?);
@@ -123,7 +123,7 @@
 // extern ? func_0804c340(?);
 // extern ? func_0804c358(?);
 // extern ? func_0804c35c(?);
-// extern ? func_0804c398(?);
+extern u32 func_0804c398(u8 **);
 // extern ? func_0804c3c0(?);
 // extern ? func_0804c4bc(?);
 // extern ? func_0804c508(?);

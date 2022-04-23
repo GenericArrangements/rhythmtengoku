@@ -1,5 +1,8 @@
 #include "global.h"
+#include "sound.h"
 #include "lib_08049144.h"
+
+extern const InstrumentBank *const instrumentBanks[];
 
 asm(".include \"include/gba.inc\"");//Temporary
 
@@ -183,7 +186,93 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 #include "asm/lib_08049144/asm_0804b348.s"
 
-#include "asm/lib_08049144/asm_0804b368.s"
+
+extern char D_08a865a4[]; // '['
+extern char D_08a865a8[]; // ']'
+
+// [func_0804b368] Store Sequence Data to a given Audio Channel.
+void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqData) {
+    struct MidiChannelBus *mChnlBus;
+    struct MidiTrackReader *mTrkReader;
+    u8 *mTrkStream;
+    u8 *mTrkStart;
+    u32 chnkLength;
+    u32 trackTotal;
+    u32 deltaTime;
+    u32 i;
+    u32 n;
+
+    // Reading Sequence Data:
+    if (func_0804b5a0(channel)) {
+        if ((*(u32 *)channel & 0x200800) == 0x200000) {
+            if (channel->sequenceData->unk4f4 > seqData->unk4f4) return;
+        }
+    }
+    mChnlBus = channel->midi_channelBus;
+    func_08049e64(mChnlBus);
+    func_08049fa0(mChnlBus, mChnlBus->unk14, mChnlBus->midiChannel);
+    func_0804a014(mChnlBus, instrumentBanks[seqData->soundBank]);
+    func_0804adb4(mChnlBus, seqData->volume);
+    func_08049e8c(mChnlBus, seqData->unk4f4);
+    channel->sequenceData = seqData;
+    channel->seqData_channelVol = seqData->volume;
+
+    // Reading MIDI Data:
+    mTrkStream = (u8 *)seqData->romAddress;
+
+    // Header:
+    mTrkStream += 4; // Skip (Header: "MThd")
+    chnkLength = func_0804b330(mTrkStream);
+    mTrkStream += 4; // Skip (Header: Length)
+    trackTotal = func_0804b324(mTrkStream + 2); // Header: Number of MIDI Tracks
+    channel->unk0_trkTotal = trackTotal;
+
+    if (channel->unk0_trkTotal > channel->unk0_trkMax) {
+        channel->unk0_trkTotal = channel->unk0_trkMax;
+    }
+    channel->midi_quarterNote = func_0804b324(mTrkStream + 4); // Header: Division
+    mTrkStream += chnkLength; // Skip (Header: Data)
+
+    // Track:
+    mTrkReader = channel->midi_trackReader;
+    for (i = 0; i < channel->unk0_trkTotal; i++) {
+        mTrkStream += 4; // Skip (Track: Length)
+        chnkLength = func_0804b330(mTrkStream);
+        mTrkStream += 4; // Skip (Track: Length)
+        mTrkStart = mTrkStream;
+        mTrkStream += chnkLength;
+        mTrkReader->unk0_0 = 1;
+        mTrkReader->start = mTrkStart;
+        deltaTime = func_0804c398(&mTrkStart);
+        mTrkReader->unkC = deltaTime << 8;
+        mTrkReader->current = mTrkStart;
+        mTrkReader->deltaTime = deltaTime;
+        mTrkReader->unk0_1 = 0;
+        mTrkReader->unk0_18 = 0;
+        mTrkReader++;
+    }
+
+    // Other Data:
+    channel->unk0_10 = 0;
+    channel->unk0_pause = 0;
+    channel->speed1 = 1;
+    channel->beatscript_channelVol = 0x100;
+    channel->speed2 = 0x100;
+    channel->beatscript_trackVol = 0x100;
+    channel->unk0_27 = 0;
+    channel->beatscript_volFadeMul = 0x8000;
+    channel->beatscript_volFadeDcr = 0;
+    channel->midi_loopStartSym = &D_08a865a4[0];
+    channel->midi_loopStartSymSize = func_0804b348(D_08a865a4);
+    channel->midi_loopEndSym = &D_08a865a8[0];
+    channel->midi_loopEndSymSize = func_0804b348(D_08a865a8);
+    channel->unk2D = 0x40;
+    channel->unk2E = 0x40;
+    channel->unk2F = 0x40;
+    channel->unk30 = 0x40;
+    channel->unk34 = 0;
+}
+
 
 #include "asm/lib_08049144/asm_0804b534.s"
 
