@@ -114,8 +114,37 @@ void func_08049e64(struct MidiChannelBus *midi_channelBus) {
 
 #include "asm/lib_08049144/asm_08049ec4.s"
 
-#include "asm/lib_08049144/asm_08049ecc.s"
 
+// [func_08049ecc] Initialise MIDI Channel.
+void func_08049ecc(struct MidiChannel *mChnl) {
+    mChnl->unk0_b0 = 0;
+    mChnl->unk0_b1 = 0;
+    mChnl->instPatch = 0;
+    mChnl->unk0_b9 = 0;
+    mChnl->volume = 0x64;
+    mChnl->panning = 0x40;
+    mChnl->expression = 0x7F;
+    mChnl->unk4_b21 = 0;
+    mChnl->modDepth = 0;
+    mChnl->modType = 0;
+    mChnl->unkC = 1;
+    mChnl->modSpeed = 0x3C00;
+    mChnl->modCount = 0;
+    mChnl->modDelay = 0;
+    mChnl->modDelayCount = 0;
+    mChnl->modResult = 0;
+    mChnl->pitchWheel = 0x2000;
+    mChnl->modWheelRange = 2;
+    mChnl->unk8_b22 = 0;
+    mChnl->unk0_b30 = 0;
+    mChnl->unk0_b31 = 0;
+    mChnl->rndmPitch = 0x100;
+    mChnl->rndmPitchFloor = 0x100;
+    mChnl->rndmPitchRange = 0;
+    mChnl->unk1C = 0;
+    mChnl->unk1D = 0;
+    mChnl->unk1E = 0;
+}
 
 
 // [func_08049fa0] Initialise Midi Channel Bus.
