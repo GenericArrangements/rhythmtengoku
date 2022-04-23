@@ -7,8 +7,8 @@ asm(".include \"include/gba.inc\"");//Temporary
 struct Bingus {
     u32 unk0_b0:1;
     u8 unk1;
-    u8 unk2;
-    u8 unk3;
+    u8 unk2; // ?? Panning 1
+    u8 unk3; // ?? Panning 2
     u32 unk4;
     u32 unk8;
     struct MidiChannel *midiChannel;
