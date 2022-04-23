@@ -230,9 +230,16 @@ void func_0804a014(struct MidiChannelBus *mChnlBus, const InstrumentBank *instBa
 
 #include "asm/lib_08049144/asm_0804aa40.s"
 
-#include "asm/lib_08049144/asm_0804aa5c.s"
+// [func_0804aa5c] MIDI Controller 07 - Channel Volume
+void func_0804aa5c(struct MidiChannelBus *mChnlBus, u32 id, u8 volume) {
+    mChnlBus->midiChannel[id].volume = volume;
+}
 
-#include "asm/lib_08049144/asm_0804aa7c.s"
+// [func_0804aa7c] MIDI Controller 0A - Channel Panning
+void func_0804aa7c(struct MidiChannelBus *mChnlBus, u32 id, u8 panning) {
+    mChnlBus->midiChannel[id].panning = panning;
+    func_0804aae0(mChnlBus, id);
+}
 
 #include "asm/lib_08049144/asm_0804aaa4.s"
 
