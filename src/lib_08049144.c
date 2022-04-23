@@ -3,7 +3,7 @@
 #include "lib_08049144.h"
 
 struct Bingus {
-    u32 unk0:1;
+    u32 unk0_b0:1;
     u32 unk4;
     u32 unk8;
     struct MidiChannel *midiChannel;
@@ -37,7 +37,7 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 // [func_080493b0] ?
 void func_080493b0(u32 id) {
-    D_03005b88[id].unk0 = 0;
+    D_03005b88[id].unk0_b0 = 0;
 }
 
 
@@ -83,13 +83,13 @@ void func_08049db8(struct MidiChannelBus *mChnlBus, u32 id) {
     u32 i;
 
     for (i = 0; i < D_03005b8c; i++) {
-        if (D_030064bc[i].unk0 && (D_030064bc[i].midiChannel == mChnl)) {
-            D_030064bc[i].unk0 = 0;
+        if (D_030064bc[i].unk0_b0 && (D_030064bc[i].midiChannel == mChnl)) {
+            D_030064bc[i].unk0_b0 = 0;
             func_080493b0(i);
         }
     }
     for (i = 0; i < 4; i++) {
-        if (D_030056a0[i].unk0 && (D_030056a0[i].midiChannel == mChnl)) {
+        if (D_030056a0[i].unk0_b0 && (D_030056a0[i].midiChannel == mChnl)) {
             D_030056a0[i].unk1C = 3;
             D_030056a0[i].unk1D = 0;
         }
@@ -324,7 +324,16 @@ void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqD
 }
 
 
-#include "asm/lib_08049144/asm_0804b534.s"
+// [func_0804b534] Load a Sound Sequence using the D_08aa06f8 table.
+void func_0804b534(u16 index) {
+    struct AudioChannel *channel;
+    const struct SequenceData *seqData;
+
+    channel = D_08aa4460[D_08aa06f8[index].channelID].audioChannel;
+    seqData = D_08aa06f8[index].sequenceData;
+    func_0804b368(channel, seqData);
+}
+
 
 #include "asm/lib_08049144/asm_0804b560.s"
 
