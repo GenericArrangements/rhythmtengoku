@@ -19,6 +19,7 @@ extern struct Bingus *D_03005b88;
 extern u16 D_03005b8c;
 extern struct Bingus *D_030064bc;
 
+extern s16 D_08a86008[];
 extern const InstrumentBank *const instrumentBanks[];
 extern char D_08a865a4[]; // '['
 extern char D_08a865a8[]; // ']'
@@ -115,7 +116,33 @@ void func_08049e64(struct MidiChannelBus *midi_channelBus) {
 
 #include "asm/lib_08049144/asm_08049ecc.s"
 
-#include "asm/lib_08049144/asm_08049fa0.s"
+
+
+// [func_08049fa0] Initialise Midi Channel Bus.
+void func_08049fa0(struct MidiChannelBus *mChnlBus, u32 unk14_b0, struct MidiChannel *mChnl) {
+    u32 i;
+
+    mChnlBus->volume = 0x64;
+    mChnlBus->unk1 = 0x64;
+    mChnlBus->unk2 = 0;
+    mChnlBus->unk4 = 0;
+    mChnlBus->unk5 = 0;
+    mChnlBus->unk6 = 0;
+    mChnlBus->unk8 = 0x1400;
+    mChnlBus->unkC = &D_08a86008[0];
+
+    mChnlBus->unk14_b0 = unk14_b0;
+    mChnlBus->midiChannel = mChnl;
+    for (i = 0; i < unk14_b0; i++) {
+        func_08049ecc(&mChnl[i]);
+    }
+
+    mChnlBus->unk14_b5 = 0;
+    for (i = 0; i < 12; i++) {
+        mChnlBus->unk1C[i] = 0;
+    }
+}
+
 
 #include "asm/lib_08049144/asm_0804a014.s"
 
