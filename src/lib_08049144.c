@@ -110,7 +110,15 @@ void func_08049e64(struct MidiChannelBus *midi_channelBus) {
 }
 
 
-#include "asm/lib_08049144/asm_08049e8c.s"
+// [func_08049e8c] ?
+void func_08049e8c(struct MidiChannelBus *mChnlBus, u8 unk4f4) {
+    u32 i;
+
+    mChnlBus->unk14_b5 = unk4f4;
+    for (i = 0; i < mChnlBus->unk14_b0; i++) {
+        func_0804ad18(mChnlBus, i, 0);
+    }
+}
 
 #include "asm/lib_08049144/asm_08049ec4.s"
 
@@ -249,7 +257,10 @@ void func_0804a014(struct MidiChannelBus *mChnlBus, const InstrumentBank *instBa
 
 #include "asm/lib_08049144/asm_0804acf0.s"
 
-#include "asm/lib_08049144/asm_0804ad18.s"
+// [func_0804ad18] ?
+void func_0804ad18(struct MidiChannelBus *mChnlBus, u32 i, u8 arg2) {
+    mChnlBus->midiChannel[i].unk8_b22 = arg2 + mChnlBus->unk14_b5;
+}
 
 #include "asm/lib_08049144/asm_0804ad38.s"
 

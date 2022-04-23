@@ -65,7 +65,7 @@ extern void func_0804a014(struct MidiChannelBus *, const InstrumentBank *);
 // extern ? func_0804acd8(?);
 // extern ? func_0804ace4(?);
 // extern ? func_0804acf0(?);
-// extern ? func_0804ad18(?);
+extern void func_0804ad18(struct MidiChannelBus *, u32, u8);
 // extern ? func_0804ad38(?);
 // extern ? func_0804ad90(?);
 // extern ? func_0804ad9c(?);
