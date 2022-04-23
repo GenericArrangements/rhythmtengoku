@@ -173,7 +173,11 @@ void func_08049fa0(struct MidiChannelBus *mChnlBus, u32 unk14_b0, struct MidiCha
 }
 
 
-#include "asm/lib_08049144/asm_0804a014.s"
+// [func_0804a014] Store Sound Bank to MIDI Channel Bus
+void func_0804a014(struct MidiChannelBus *mChnlBus, const InstrumentBank *instBank) {
+    mChnlBus->soundBank = instBank;
+}
+
 
 #include "asm/lib_08049144/asm_0804a018.s"
 

@@ -29,7 +29,7 @@ extern void func_08049e8c(struct MidiChannelBus *, u8);
 // extern ? func_08049ec4(?);
 extern void func_08049ecc(struct MidiChannel *); // [func_08049ecc] Initialise MIDI Channel.
 extern void func_08049fa0(struct MidiChannelBus *, u32, struct MidiChannel *); // [func_08049fa0] Initialise Midi Channel Bus
-// extern ? func_0804a014(?);
+extern void func_0804a014(struct MidiChannelBus *, const InstrumentBank*);
 // extern ? func_0804a018(?);
 // extern ? func_0804a1f4(?);
 // extern ? func_0804a224(?);

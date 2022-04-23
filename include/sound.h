@@ -119,7 +119,7 @@ struct MidiChannelBus {
     u16 unk6;
     u16 unk8;
     s16 *unkC;      // ROM Pointer to a curve table(?) in the sound data section.
-    u32 soundBank;
+    const InstrumentBank *soundBank;
     u32 unk14_b0:5;
     u32 unk14_b5:27; // ??? ( = seqData.unk4f4)
     struct MidiChannel *midiChannel; // Array of MIDI Channels
