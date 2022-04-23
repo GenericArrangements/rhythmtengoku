@@ -261,7 +261,10 @@ void func_0804abc8(struct MidiChannelBus *mChnlBus, u32 id, u16 var) {
 
 #include "asm/lib_08049144/asm_0804ac24.s"
 
-#include "asm/lib_08049144/asm_0804ac40.s"
+// [func_0804ac40] MIDI Controller 01 - Modulation Depth
+void func_0804ac40(struct MidiChannelBus *mChnlBus, u32 id, u8 depth) {
+    mChnlBus->midiChannel[id].modDepth = depth;
+}
 
 #include "asm/lib_08049144/asm_0804ac60.s"
 
