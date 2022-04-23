@@ -87,8 +87,8 @@ extern void func_0804adb4(struct MidiChannelBus *, u8); // [func_0804adb4] Store
 // extern ? func_0804afd8(?);
 // extern ? func_0804aff0(?);
 // extern ? func_0804b2c4(?);
-extern u16 func_0804b324(u8 *); // [func_0804b324] Parse 16-bit Big Endian
-extern u32 func_0804b330(u8 *); // [func_0804b330] Parse 32-bit Big Endian
+extern u16 func_0804b324(u8 *); // [func_0804b324] Parse 16-bit Big Endian value in MIDI Stream.
+extern u32 func_0804b330(u8 *); // [func_0804b330] Parse 32-bit Big Endian value in MIDI Stream.
 extern u32 func_0804b348(char []);  // [func_0804b348] Loop Symbol Character Size
 extern void func_0804b368(struct AudioChannel *, const struct SequenceData *);  // [func_0804b368] Store Music to Memory
 extern void func_0804b534(u16); // [func_0804b534] Load a Sound Sequence using the D_08aa06f8 table.

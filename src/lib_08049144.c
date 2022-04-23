@@ -307,9 +307,17 @@ void func_0804adb4(struct MidiChannelBus *mChnlBus, u8 volume) {
 
 #include "asm/lib_08049144/asm_0804b2c4.s"
 
-#include "asm/lib_08049144/asm_0804b324.s"
+// [func_0804b324] Parse 16-bit Big Endian value in MIDI Stream.
+u16 func_0804b324(u8 *stream) {
+    return (stream[0] << 8) | stream[1];
+}
 
-#include "asm/lib_08049144/asm_0804b330.s"
+
+// [func_0804b330] Parse 32-bit Big Endian value in MIDI Stream.
+u32 func_0804b330(u8 *stream) {
+    return (stream[0]) << 0x18 | (stream[1]) << 0x10 | (stream[2]) << 8 | stream[3];
+}
+
 
 #include "asm/lib_08049144/asm_0804b348.s"
 
