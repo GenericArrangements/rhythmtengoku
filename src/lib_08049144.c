@@ -2,11 +2,30 @@
 #include "sound.h"
 #include "lib_08049144.h"
 
+struct Bingus {
+    u32 unk0:1;
+    u32 unk4;
+    u32 unk8;
+    struct MidiChannel *midiChannel;
+    u32 unk10;
+    u32 unk14;
+    u32 unk18;
+    u32 unk1C:8;
+    u32 unk1D:24;
+};
+
+extern struct Bingus D_030056a0[];
+extern u16 D_03005b8c;
+extern struct Bingus *D_030064bc;
+
 extern const InstrumentBank *const instrumentBanks[];
 extern char D_08a865a4[]; // '['
 extern char D_08a865a8[]; // ']'
 
+
 asm(".include \"include/gba.inc\"");//Temporary
+
+
 
 #include "asm/lib_08049144/asm_08049144.s"
 
@@ -52,9 +71,28 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 #include "asm/lib_08049144/asm_08049d30.s"
 
-#include "asm/lib_08049144/asm_08049db8.s"
+// [func_08049db8] ?
+void func_08049db8(struct MidiChannelBus *mChnlBus, u32 id) {
+    struct MidiChannel *mChnl = &mChnlBus->midiChannel[id];
+    u32 i;
+
+    for (i = 0; i < D_03005b8c; i++) {
+        if (D_030064bc[i].unk0 && (D_030064bc[i].midiChannel == mChnl)) {
+            D_030064bc[i].unk0 = 0;
+            func_080493b0(i);
+        }
+    }
+    for (i = 0; i < 4; i++) {
+        if (D_030056a0[i].unk0 && (D_030056a0[i].midiChannel == mChnl)) {
+            D_030056a0[i].unk1C = 3;
+            D_030056a0[i].unk1D = 0;
+        }
+    }
+}
+
 
 #include "asm/lib_08049144/asm_08049e3c.s"
+
 
 // [func_08049e64] ?
 void func_08049e64(struct MidiChannelBus *midi_channelBus) {
