@@ -11,7 +11,8 @@ struct Bingus {
     struct MidiChannel *midiChannel;
     u32 unk10;
     u32 unk14;
-    u32 unk18;
+    s16 unk18;
+    u16 unk1A;
     u32 unk1C:8;
     u32 unk1D:24;
 };
@@ -241,9 +242,39 @@ void func_0804aa7c(struct MidiChannelBus *mChnlBus, u32 id, u8 panning) {
     func_0804aae0(mChnlBus, id);
 }
 
-#include "asm/lib_08049144/asm_0804aaa4.s"
+// [func_0804aaa4] Return a net Panning value, factoring all relevant Panning controllers.
+u8 func_0804aaa4(struct MidiChannelBus *mChnlBus, u32 id) {
+    struct MidiChannel *mChnl = &mChnlBus->midiChannel[id];
+    s32 panning = mChnl->panning + (mChnlBus->unk5 >> 1);
 
-#include "asm/lib_08049144/asm_0804aae0.s"
+    // Include modulation if modType is set to "panning".
+    if (mChnl->modType == 2) panning += (mChnl->modResult >> 1);
+
+    // Clamp to 7 bits and return.
+    if (panning < 0) panning = 0;
+    if (panning > 0x7f) panning = 0x7f;
+    return panning;
+}
+
+// [func_0804aae0] ??? (called after setting channel panning)
+void func_0804aae0(struct MidiChannelBus *mChnlBus, u32 id) {
+    s32 panning = func_0804aaa4(mChnlBus, id);
+    struct MidiChannel *mChnl = &mChnlBus->midiChannel[id];
+    u32 chorused = (mChnl->unk0_b31) ? -1 : 1;
+    s32 i = 0;
+    struct Bingus *bingus = D_030064bc;
+
+    for (i; i < D_03005b8c; bingus++) {
+        if (bingus->unk0_b0 && (bingus->midiChannel == mChnl)) {
+            panning += bingus->unk18;
+            // Clamp to 7 bits.
+            if (panning < 0) panning = 0;
+            if (panning > 0x7f) panning = 0x7f;
+            func_080493c8(i, func_0804a674(panning), func_0804a65c(panning) * chorused);
+        }
+        i++;
+    }
+}
 
 #include "asm/lib_08049144/asm_0804ab88.s"
 

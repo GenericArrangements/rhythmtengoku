@@ -4,7 +4,7 @@
 // extern ? func_0804930c(?);
 // extern ? func_08049394(?);
 extern void func_080493b0(u32);
-// extern ? func_080493c8(?);
+extern void func_080493c8(u32, u8, s32);
 // extern ? func_080493e4(?);
 // extern ? func_080493f4(?);
 // extern ? func_08049450(?);
@@ -43,15 +43,15 @@ extern void func_0804a014(struct MidiChannelBus *, const InstrumentBank *);
 // extern ? func_0804a4e0(?);
 // extern ? func_0804a5b4(?);
 // extern ? func_0804a628(?);
-// extern ? func_0804a65c(?);
-// extern ? func_0804a674(?);
+extern u8   func_0804a65c(u8);
+extern u8   func_0804a674(u8);
 // extern ? func_0804a690(?);
 // extern ? func_0804a6b0(?);
 // extern ? func_0804aa40(?);
 extern void func_0804aa5c(struct MidiChannelBus *, u32, u8); // [func_0804aa5c] MIDI Controller 07 - Channel Volume
 extern void func_0804aa7c(struct MidiChannelBus *, u32, u8); // [func_0804aa7c] MIDI Controller 0A - Channel Panning
-// extern ? func_0804aaa4(?);
-// extern ? func_0804aae0(?);
+extern u8   func_0804aaa4(struct MidiChannelBus *, u32); // [func_0804aaa4] Return a net Panning value, factoring all relevant Panning controllers.
+extern void func_0804aae0(struct MidiChannelBus *, u32); // [func_0804aae0] ??? (called after setting channel panning)
 // extern ? func_0804ab88(?);
 extern void func_0804aba8(struct MidiChannelBus *, u32, u8); // [func_0804aba8] MIDI Controller 0B - Expression
 extern void func_0804abc8(struct MidiChannelBus *, u32, u16); // [func_0804abc8] MIDI Controller 00 - ??; MIDI Controller 20 - ??
@@ -87,9 +87,9 @@ extern void func_0804adb4(struct MidiChannelBus *, u8); // [func_0804adb4] Store
 // extern ? func_0804afd8(?);
 // extern ? func_0804aff0(?);
 // extern ? func_0804b2c4(?);
-extern u16 func_0804b324(u8 *); // [func_0804b324] Parse 16-bit Big Endian value in MIDI Stream.
-extern u32 func_0804b330(u8 *); // [func_0804b330] Parse 32-bit Big Endian value in MIDI Stream.
-extern u32 func_0804b348(char []); // Determine length of Loop Marker symbols.
+extern u16  func_0804b324(u8 *); // [func_0804b324] Parse 16-bit Big Endian value in MIDI Stream.
+extern u32  func_0804b330(u8 *); // [func_0804b330] Parse 32-bit Big Endian value in MIDI Stream.
+extern u32  func_0804b348(char []); // Determine length of Loop Marker symbols.
 extern void func_0804b368(struct AudioChannel *, const struct SequenceData *);  // [func_0804b368] Store Music to Memory
 extern void func_0804b534(u16); // [func_0804b534] Load a Sound Sequence using the D_08aa06f8 table.
 // extern ? func_0804b560(?);
@@ -123,7 +123,7 @@ extern void func_0804b95c(struct AudioChannel *, u32, u8, u8); // [func_0804b95c
 // extern ? func_0804c340(?);
 // extern ? func_0804c358(?);
 // extern ? func_0804c35c(?);
-extern u32 func_0804c398(u8 **); // [func_0804c398] Parse MIDI Variable-Length Time
+extern u32  func_0804c398(u8 **); // [func_0804c398] Parse MIDI Variable-Length Time
 // extern ? func_0804c3c0(?);
 // extern ? func_0804c4bc(?);
 // extern ? func_0804c508(?);
