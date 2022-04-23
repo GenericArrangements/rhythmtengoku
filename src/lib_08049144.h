@@ -48,15 +48,15 @@ extern void func_0804a014(struct MidiChannelBus *, const InstrumentBank *);
 // extern ? func_0804a690(?);
 // extern ? func_0804a6b0(?);
 // extern ? func_0804aa40(?);
-extern void func_0804aa5c(struct MidiChannelBus *mChnlBus, u32 id, u8 volume); // [func_0804aa5c] MIDI Controller 07 - Channel Volume
-extern void func_0804aa7c(struct MidiChannelBus *mChnlBus, u32 id, u8 panning); // [func_0804aa7c] MIDI Controller 0A - Channel Panning
+extern void func_0804aa5c(struct MidiChannelBus *, u32, u8); // [func_0804aa5c] MIDI Controller 07 - Channel Volume
+extern void func_0804aa7c(struct MidiChannelBus *, u32, u8); // [func_0804aa7c] MIDI Controller 0A - Channel Panning
 // extern ? func_0804aaa4(?);
 // extern ? func_0804aae0(?);
 // extern ? func_0804ab88(?);
-// extern ? func_0804aba8(?);
+extern void func_0804aba8(struct MidiChannelBus *, u32, u8); // [func_0804aba8] MIDI Controller 0B - Expression
 extern void func_0804abc8(struct MidiChannelBus *, u32, u16); // [func_0804abc8] MIDI Controller 00 - ??; MIDI Controller 20 - ??
 // extern ? func_0804ac24(?);
-extern void func_0804ac40(struct MidiChannelBus *mChnlBus, u32 id, u8 depth); // [func_0804ac40] MIDI Controller 01 - Modulation Depth
+extern void func_0804ac40(struct MidiChannelBus *, u32, u8); // [func_0804ac40] MIDI Controller 01 - Modulation Depth
 // extern ? func_0804ac60(?);
 // extern ? func_0804ac80(?);
 // extern ? func_0804aca0(?);

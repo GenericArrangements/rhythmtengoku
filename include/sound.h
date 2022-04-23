@@ -82,7 +82,7 @@ struct MidiChannel {
     u32 unk0_b1:1;      // ??? [default = 0]
     u32 instPatch:7;    // Instrument Patch Number [mEvnt_C; default = 0]
     u32 unk0_b9:14;     // ??? [mCtrl_00; mCtrl_20; default = 0]
-    u32 volume:7;       // Volume [mCtrl_07; default = 0x64]
+    u32 volume:7;       // Channel Volume [mCtrl_07; default = 0x64]
     u32 unk0_b30:1;     // Compression? Reverb? [default = 0]
     u32 unk0_b31:1;     // Stereo/Chorus? [default = 0]
     u32 panning:7;      // Channel Panning [mCtrl_0A; default = 0x40]

@@ -247,7 +247,10 @@ void func_0804aa7c(struct MidiChannelBus *mChnlBus, u32 id, u8 panning) {
 
 #include "asm/lib_08049144/asm_0804ab88.s"
 
-#include "asm/lib_08049144/asm_0804aba8.s"
+// [func_0804aba8] MIDI Controller 0B - Expression
+void func_0804aba8(struct MidiChannelBus *mChnlBus, u32 id, u8 expression) {
+    mChnlBus->midiChannel[id].expression = expression;
+}
 
 // [func_0804abc8] MIDI Controller 00 - ??; MIDI Controller 20 - ??
 void func_0804abc8(struct MidiChannelBus *mChnlBus, u32 id, u16 var) {
