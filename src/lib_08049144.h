@@ -24,7 +24,7 @@
 // extern ? func_08049d30(?);
 // extern ? func_08049db8(?);
 // extern ? func_08049e3c(?);
-// extern ? func_08049e64(?);
+extern void func_08049e64(struct MidiChannelBus *);
 extern void func_08049e8c(struct MidiChannelBus *, u8);
 // extern ? func_08049ec4(?);
 // extern ? func_08049ecc(?);

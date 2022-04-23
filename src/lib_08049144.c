@@ -3,6 +3,8 @@
 #include "lib_08049144.h"
 
 extern const InstrumentBank *const instrumentBanks[];
+extern char D_08a865a4[]; // '['
+extern char D_08a865a8[]; // ']'
 
 asm(".include \"include/gba.inc\"");//Temporary
 
@@ -54,7 +56,14 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 #include "asm/lib_08049144/asm_08049e3c.s"
 
-#include "asm/lib_08049144/asm_08049e64.s"
+// [func_08049e64] ?
+void func_08049e64(struct MidiChannelBus *midi_channelBus) {
+    u32 i;
+    for (i = 0; i < midi_channelBus->unk14_b0; i++) {
+        func_08049db8(midi_channelBus, i);
+    }
+}
+
 
 #include "asm/lib_08049144/asm_08049e8c.s"
 
@@ -187,9 +196,6 @@ asm(".include \"include/gba.inc\"");//Temporary
 #include "asm/lib_08049144/asm_0804b348.s"
 
 
-extern char D_08a865a4[]; // '['
-extern char D_08a865a8[]; // ']'
-
 // [func_0804b368] Store Sequence Data to a given Audio Channel.
 void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqData) {
     struct MidiChannelBus *mChnlBus;
@@ -210,7 +216,7 @@ void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqD
     }
     mChnlBus = channel->midi_channelBus;
     func_08049e64(mChnlBus);
-    func_08049fa0(mChnlBus, mChnlBus->unk14, mChnlBus->midiChannel);
+    func_08049fa0(mChnlBus, mChnlBus->unk14_b0, mChnlBus->midiChannel);
     func_0804a014(mChnlBus, instrumentBanks[seqData->soundBank]);
     func_0804adb4(mChnlBus, seqData->volume);
     func_08049e8c(mChnlBus, seqData->unk4f4);
