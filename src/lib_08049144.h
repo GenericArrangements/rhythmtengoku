@@ -3,7 +3,7 @@
 // extern ? func_08049144(?);
 // extern ? func_0804930c(?);
 // extern ? func_08049394(?);
-// extern ? func_080493b0(?);
+extern void func_080493b0(u32);
 // extern ? func_080493c8(?);
 // extern ? func_080493e4(?);
 // extern ? func_080493f4(?);
@@ -22,7 +22,7 @@
 // extern ? func_08049c34(?);
 // extern ? func_08049d08(?);
 // extern ? func_08049d30(?);
-// extern ? func_08049db8(?);
+extern void func_08049db8(struct MidiChannelBus *, u32);
 // extern ? func_08049e3c(?);
 extern void func_08049e64(struct MidiChannelBus *);
 extern void func_08049e8c(struct MidiChannelBus *, u8);

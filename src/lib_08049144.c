@@ -15,6 +15,7 @@ struct Bingus {
 };
 
 extern struct Bingus D_030056a0[];
+extern struct Bingus *D_03005b88;
 extern u16 D_03005b8c;
 extern struct Bingus *D_030064bc;
 
@@ -33,7 +34,12 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 #include "asm/lib_08049144/asm_08049394.s"
 
-#include "asm/lib_08049144/asm_080493b0.s"
+
+// [func_080493b0] ?
+void func_080493b0(u32 id) {
+    D_03005b88[id].unk0 = 0;
+}
+
 
 #include "asm/lib_08049144/asm_080493c8.s"
 
