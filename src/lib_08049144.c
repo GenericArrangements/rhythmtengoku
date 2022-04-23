@@ -6,6 +6,9 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 struct Bingus {
     u32 unk0_b0:1;
+    u8 unk1;
+    u8 unk2;
+    u8 unk3;
     u32 unk4;
     u32 unk8;
     struct MidiChannel *midiChannel;
@@ -41,14 +44,16 @@ extern char D_08a865a8[]; // ']'
 
 #include "asm/lib_08049144/asm_08049394.s"
 
-
 // [func_080493b0] ?
 void func_080493b0(u32 id) {
     D_03005b88[id].unk0_b0 = 0;
 }
 
-
-#include "asm/lib_08049144/asm_080493c8.s"
+// [func_080493c8] Store panning-related values to D_03005b88[i].
+void func_080493c8(u32 i, u32 pan1, u32 pan2) {
+    D_03005b88[i].unk2 = pan1;
+    D_03005b88[i].unk3 = pan2;
+}
 
 #include "asm/lib_08049144/asm_080493e4.s"
 
@@ -221,9 +226,17 @@ void func_0804a014(struct MidiChannelBus *mChnlBus, const InstrumentBank *instBa
 
 #include "asm/lib_08049144/asm_0804a628.s"
 
-#include "asm/lib_08049144/asm_0804a65c.s"
+// [func_0804a65c] ?? (something about left panning)
+u8 func_0804a65c(u8 panning) {
+    if (panning > 0x3f) return 0x7f;
+    else return panning << 1;
+}
 
-#include "asm/lib_08049144/asm_0804a674.s"
+// [func_0804a674] ?? (something about right panning)
+u8 func_0804a674(u8 panning) {
+    if (panning <= 0x3f) return 0x7f;
+    else return (0x7f - panning) << 1;
+}
 
 #include "asm/lib_08049144/asm_0804a690.s"
 

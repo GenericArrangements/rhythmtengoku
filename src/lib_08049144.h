@@ -4,7 +4,7 @@
 // extern ? func_0804930c(?);
 // extern ? func_08049394(?);
 extern void func_080493b0(u32);
-extern void func_080493c8(u32, u8, s32);
+extern void func_080493c8(u32, u32, u32); // [func_080493c8] Store panning-related values to D_03005b88[i].
 // extern ? func_080493e4(?);
 // extern ? func_080493f4(?);
 // extern ? func_08049450(?);
@@ -43,8 +43,8 @@ extern void func_0804a014(struct MidiChannelBus *, const InstrumentBank *);
 // extern ? func_0804a4e0(?);
 // extern ? func_0804a5b4(?);
 // extern ? func_0804a628(?);
-extern u8   func_0804a65c(u8);
-extern u8   func_0804a674(u8);
+extern u8   func_0804a65c(u8); // [func_0804a65c] ?? (something about left panning)
+extern u8   func_0804a674(u8); // [func_0804a674] ?? (something about right panning)
 // extern ? func_0804a690(?);
 // extern ? func_0804a6b0(?);
 // extern ? func_0804aa40(?);
