@@ -67,8 +67,8 @@ extern void func_0804ace4(struct MidiChannelBus *, u32, u8); // [func_0804ace4] 
 extern void func_0804acf0(struct MidiChannelBus *, u32, u32); // [func_0804acf0] MIDI Controller 4B - Chorus?
 extern void func_0804ad18(struct MidiChannelBus *, u32, u8); // [func_0804ad18] MIDI Controller 21 - ??
 extern void func_0804ad38(struct MidiChannelBus *, u32, u8); // [func_0804ad38] MIDI Controller 52 - Random Pitch Variation
-// extern ? func_0804ad90(?);
-// extern ? func_0804ad9c(?);
+extern void func_0804ad90(struct MidiChannelBus *, u32, u8); // [func_0804ad90] MIDI Controller 53 - ??
+extern void func_0804ad9c(struct MidiChannelBus *, u32, u8); // [func_0804ad9c] MIDI Controller 54 - ??
 // extern ? func_0804adb0(?);
 extern void func_0804adb4(struct MidiChannelBus *, u8); // [func_0804adb4] Store Sequence Data volume to MIDI Channel Bus volume.
 // extern ? func_0804adb8(?);

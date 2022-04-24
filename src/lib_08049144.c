@@ -371,9 +371,16 @@ void func_0804ad38(struct MidiChannelBus *mChnlBus, u32 id, u8 range) {
     mChnlBus->midiChannel[id].rndmPitch = 0x100;
 }
 
-#include "asm/lib_08049144/asm_0804ad90.s"
+// [func_0804ad90] MIDI Controller 53 - ??
+void func_0804ad90(struct MidiChannelBus *mChnlBus, u32 id, u8 arg2) {
+    mChnlBus->midiChannel[id].unk1C = arg2;
+}
 
-#include "asm/lib_08049144/asm_0804ad9c.s"
+// [func_0804ad9c] MIDI Controller 54 - ??
+void func_0804ad9c(struct MidiChannelBus *mChnlBus, u32 id, u8 arg2) {
+    mChnlBus->midiChannel[id].unk1D = arg2;
+    mChnlBus->midiChannel[id].unk1E = arg2;
+}
 
 #include "asm/lib_08049144/asm_0804adb0.s"
 
