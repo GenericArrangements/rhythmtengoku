@@ -110,7 +110,7 @@ extern void func_0804b534(u16); // [func_0804b534] Load a Sound Sequence using t
 // extern ? func_0804b734(?);
 // extern ? func_0804b7dc(?);
 // extern ? func_0804b7ec(?);
-// extern ? func_0804b7fc(?);
+extern void func_0804b7fc(struct AudioChannel *channel, u16 time); // [func_0804b7fc] Fade-in for given duration.
 // extern ? func_0804b80c(?);
 // extern ? func_0804b898(?);
 extern void func_0804b95c(struct AudioChannel *, u32, u8, u8); // [func_0804b95c] Interpret MIDI Controller Change Instruction

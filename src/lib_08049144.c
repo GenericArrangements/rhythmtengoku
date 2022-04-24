@@ -591,7 +591,10 @@ void func_0804b534(u16 index) {
 
 #include "asm/lib_08049144/asm_0804b7ec.s"
 
-#include "asm/lib_08049144/asm_0804b7fc.s"
+// [func_0804b7fc] Fade-in for given duration.
+void func_0804b7fc(struct AudioChannel *channel, u16 time) {
+    func_0804b734(channel, 1, time);
+}
 
 #include "asm/lib_08049144/asm_0804b80c.s"
 
