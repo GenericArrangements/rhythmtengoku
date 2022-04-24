@@ -20,12 +20,20 @@ struct Bingus {
     u32 unk1D:24;
 };
 
+struct Jason {
+    u32 unk0;
+    u16 unk4;
+    u8  unk6;
+    u8  unk7;
+    u32 unk8;
+};
+
 extern u8  D_03005640;
 extern u16 D_03005648;
 extern struct Bingus D_030056a0[];
 extern u16 D_03005b20;
 extern u8  D_03005b28;
-extern u32 D_03005b30;
+extern struct Jason D_03005b30;
 extern u8  D_03005b3c;
 extern u8  D_03005b44;
 extern u8 *D_03005b7c;
@@ -410,7 +418,12 @@ void func_0804adb4(struct MidiChannelBus *mChnlBus, u8 volume) {
 
 #include "asm/lib_08049144/asm_0804ae54.s"
 
-#include "asm/lib_08049144/asm_0804ae60.s"
+// [func_0804ae60] MIDI Controller 4D - ??; MIDI Controller 4A - ??
+void func_0804ae60(struct Jason *arg0) {
+    arg0->unk6 = 0;
+    arg0->unk8 = 0;
+    arg0->unk7 = 0;
+}
 
 #include "asm/lib_08049144/asm_0804ae6c.s"
 
