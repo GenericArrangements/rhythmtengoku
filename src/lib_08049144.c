@@ -336,7 +336,10 @@ void func_0804accc(struct MidiChannelBus *mChnlBus, u32 id, u16 speed) {
     mChnlBus->midiChannel[id].modSpeed = speed << 8;
 }
 
-#include "asm/lib_08049144/asm_0804acd8.s"
+// [func_0804acd8] MIDI Controller 1A - Modulation Delay
+void func_0804acd8(struct MidiChannelBus *mChnlBus, u32 id, u8 delay) {
+    mChnlBus->midiChannel[id].modDelay = delay;
+}
 
 // [func_0804ace4] MIDI Controller 14 - Modulation Wheel Range
 void func_0804ace4(struct MidiChannelBus *mChnlBus, u32 id, u8 range) {
