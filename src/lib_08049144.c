@@ -39,10 +39,10 @@ extern u8  D_03005b44;
 extern u8 *D_03005b7c;
 extern struct Bingus *D_03005b88;
 extern u16 D_03005b8c;
-extern u8 D_03005b90[];
+extern u8  D_03005b90[];
 extern struct Bingus *D_030064bc;
 
-extern s16 D_08a86008[];
+extern s16  D_08a86008[];
 extern const InstrumentBank *const instrumentBanks[];
 extern char D_08a865a4[]; // '['
 extern char D_08a865a8[]; // ']'
@@ -93,7 +93,10 @@ void func_08049b8c(u8 arg0) {
 
 #include "asm/lib_08049144/asm_08049bac.s"
 
-#include "asm/lib_08049144/asm_08049be4.s"
+// [func_08049be4] MIDI Controller 4D - ??; MIDI Controller 4A - ??
+void func_08049be4(void) {
+    if (D_03005b44 == 0) func_08049bac();
+}
 
 #include "asm/lib_08049144/asm_08049bfc.s"
 
