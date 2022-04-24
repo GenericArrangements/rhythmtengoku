@@ -322,7 +322,10 @@ void func_0804ac40(struct MidiChannelBus *mChnlBus, u32 id, u8 depth) {
 
 #include "asm/lib_08049144/asm_0804ac60.s"
 
-#include "asm/lib_08049144/asm_0804ac80.s"
+// [func_0804ac80] MIDI Controller 48 - Compress/Dampen?
+void func_0804ac80(struct MidiChannelBus *mChnlBus, u32 id, u8 comp) {
+    mChnlBus->midiChannel[id].unk0_b30 = comp;
+}
 
 // [func_0804aca0] MIDI Controller 16 - Modulation Type
 void func_0804aca0(struct MidiChannelBus *mChnlBus, u32 id, u8 type) {
