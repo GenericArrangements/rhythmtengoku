@@ -328,7 +328,10 @@ void func_0804ac40(struct MidiChannelBus *mChnlBus, u32 id, u8 depth) {
 
 #include "asm/lib_08049144/asm_0804acc0.s"
 
-#include "asm/lib_08049144/asm_0804accc.s"
+// [func_0804accc] MIDI Controller 15 - Modulation Speed
+void func_0804accc(struct MidiChannelBus *mChnlBus, u32 id, u16 speed) {
+    mChnlBus->midiChannel[id].modSpeed = speed << 8;
+}
 
 #include "asm/lib_08049144/asm_0804acd8.s"
 
@@ -339,12 +342,10 @@ void func_0804ace4(struct MidiChannelBus *mChnlBus, u32 id, u8 range) {
 
 #include "asm/lib_08049144/asm_0804acf0.s"
 
-
 // [func_0804ad18] MIDI Controller 21 - ??
 void func_0804ad18(struct MidiChannelBus *mChnlBus, u32 i, u8 arg2) {
     mChnlBus->midiChannel[i].unk8_b22 = arg2 + mChnlBus->unk14_b5;
 }
-
 
 #include "asm/lib_08049144/asm_0804ad38.s"
 
