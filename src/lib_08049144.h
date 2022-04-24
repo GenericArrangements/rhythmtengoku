@@ -15,7 +15,7 @@ extern void func_080493c8(u32, u32, u32); // [func_080493c8] Store panning-relat
 // extern ? func_08049b34(?);
 // extern ? func_08049b5c(?);
 // extern ? func_08049b70(?);
-// extern ? func_08049b8c(?);
+extern void func_08049b8c(u8); // [func_08049b8c] MIDI Controller 4D - ??
 // extern ? func_08049bac(?);
 // extern ? func_08049be4(?);
 // extern ? func_08049bfc(?);

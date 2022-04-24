@@ -24,8 +24,10 @@ extern u8  D_03005640;
 extern u16 D_03005648;
 extern struct Bingus D_030056a0[];
 extern u16 D_03005b20;
+extern u8  D_03005b28;
 extern u32 D_03005b30;
 extern u8  D_03005b3c;
+extern u8  D_03005b44;
 extern u8 *D_03005b7c;
 extern struct Bingus *D_03005b88;
 extern u16 D_03005b8c;
@@ -76,7 +78,10 @@ void func_080493c8(u32 i, u32 pan1, u32 pan2) {
 
 #include "asm/lib_08049144/asm_08049b70.s"
 
-#include "asm/lib_08049144/asm_08049b8c.s"
+// [func_08049b8c] MIDI Controller 4D - ??
+void func_08049b8c(u8 arg0) {
+    if (D_03005b44 == 0) D_03005b28 = arg0;
+}
 
 #include "asm/lib_08049144/asm_08049bac.s"
 
