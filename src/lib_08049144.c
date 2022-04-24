@@ -285,7 +285,7 @@ void func_0804aae0(struct MidiChannelBus *mChnlBus, u32 id) {
     s32 i = 0;
     struct Bingus *bingus = D_030064bc;
 
-    for (i; i < D_03005b8c; bingus++) {
+    for (i; i < D_03005b8c;) {
         if (bingus->unk0_b0 && (bingus->midiChannel == mChnl)) {
             panning += bingus->unk18;
             // Clamp to 7 bits.
@@ -294,6 +294,7 @@ void func_0804aae0(struct MidiChannelBus *mChnlBus, u32 id) {
             func_080493c8(i, func_0804a674(panning), func_0804a65c(panning) * chorused);
         }
         i++;
+        bingus++;
     }
 }
 
@@ -543,7 +544,6 @@ void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqD
     channel->unk34 = 0;
 }
 
-
 // [func_0804b534] Load a Sound Sequence using the D_08aa06f8 table.
 void func_0804b534(u16 index) {
     struct AudioChannel *channel;
@@ -554,8 +554,11 @@ void func_0804b534(u16 index) {
     func_0804b368(channel, seqData);
 }
 
-
-#include "asm/lib_08049144/asm_0804b560.s"
+// [func_0804b560] Remove Sound Sequence from Audio Channel
+void func_0804b560(struct AudioChannel *channel) {
+    func_08049e3c(channel->midi_channelBus);
+    channel->sequenceData = 0;
+}
 
 #include "asm/lib_08049144/asm_0804b574.s"
 
@@ -596,14 +599,13 @@ void func_0804b734(struct AudioChannel *channel, u16 type, u16 time) {
         case 1: // Fade-in
             if (time == 0) time = 1;
             if (channel->volumeFadeType == 0) channel->volumeFadeEnv = 0;
-
             channel->volumeFadeSpeed = 0x8000 / time;
             channel->isPaused = 0;
             break;
 
-        case 2: case 3:
+        case 2:
+        case 3:
             if (channel->volumeFadeType == 0) channel->volumeFadeEnv = 0x8000;
-
             if (time != 0) {
                 channel->volumeFadeSpeed = 0x8000 / time;
             } else {
