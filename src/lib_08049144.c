@@ -88,7 +88,10 @@ void func_080493c8(u32 i, u32 pan1, u32 pan2) {
 
 #include "asm/lib_08049144/asm_08049b5c.s"
 
-#include "asm/lib_08049144/asm_08049b70.s"
+// [func_08049b70] (SUB) MIDI Controller 4A - ??
+void func_08049b70(u32 arg0) {
+    if (D_03005b44 == 0) D_03005620[0] = arg0;
+}
 
 // [func_08049b8c] MIDI Controller 4D - ??
 void func_08049b8c(u8 arg0) {
@@ -104,7 +107,7 @@ void func_08049bac(void) {
     D_030064b0[D_03005638 - 2] = D_030064b0[D_03005638 - 1] = 0;
 }
 
-// [func_08049be4] MIDI Controller 4D - ??; MIDI Controller 4A - ??
+// [func_08049be4] MIDI Controller 49 - ??; MIDI Controller 4A - ??
 void func_08049be4(void) {
     if (D_03005b44 == 0) func_08049bac();
 }
