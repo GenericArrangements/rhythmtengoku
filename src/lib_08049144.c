@@ -577,7 +577,11 @@ void func_0804b560(struct AudioChannel *channel) {
     channel->sequenceData = 0;
 }
 
-#include "asm/lib_08049144/asm_0804b574.s"
+// [func_0804b574] Pause/Unpause Sound Sequence in Audio Channel { 0 = Unpause; 1 = Pause }
+void func_0804b574(struct AudioChannel *channel, u8 pause) {
+    channel->isPaused = pause;
+    if (pause) func_08049e64(channel->midi_channelBus);
+}
 
 #include "asm/lib_08049144/asm_0804b5a0.s"
 
