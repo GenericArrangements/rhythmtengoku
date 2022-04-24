@@ -4,29 +4,6 @@
 
 asm(".include \"include/gba.inc\"");//Temporary
 
-struct Bingus {
-    u32 unk0_b0:1;
-    u8 unk1;
-    u8 unk2; // ?? Panning 1
-    u8 unk3; // ?? Panning 2
-    u32 unk4;
-    u32 unk8;
-    struct MidiChannel *midiChannel;
-    u32 unk10;
-    u32 unk14;
-    s16 unk18;
-    u16 unk1A;
-    u32 unk1C:8;
-    u32 unk1D:24;
-};
-
-struct Jason {
-    u32 unk0;
-    u16 unk4;
-    u8  unk6;
-    u8  unk7;
-    u32 unk8;
-};
 
 extern u32 D_03005620[];
 extern u32 D_03005638;
@@ -121,7 +98,7 @@ void func_08049be4(void) {
 #include "asm/lib_08049144/asm_08049d30.s"
 
 
-// [func_08049db8] ?
+// [func_08049db8] ??
 void func_08049db8(struct MidiChannelBus *mChnlBus, u32 id) {
     struct MidiChannel *mChnl = &mChnlBus->midiChannel[id];
     u32 i;
@@ -144,7 +121,7 @@ void func_08049db8(struct MidiChannelBus *mChnlBus, u32 id) {
 #include "asm/lib_08049144/asm_08049e3c.s"
 
 
-// [func_08049e64] ?
+// [func_08049e64] ??
 void func_08049e64(struct MidiChannelBus *midi_channelBus) {
     u32 i;
     for (i = 0; i < midi_channelBus->unk14_b0; i++) {
@@ -153,7 +130,7 @@ void func_08049e64(struct MidiChannelBus *midi_channelBus) {
 }
 
 
-// [func_08049e8c] ?
+// [func_08049e8c] ??
 void func_08049e8c(struct MidiChannelBus *mChnlBus, u8 unk4f4) {
     u32 i;
 
@@ -414,12 +391,10 @@ void func_0804ad9c(struct MidiChannelBus *mChnlBus, u32 id, u8 arg2) {
 
 #include "asm/lib_08049144/asm_0804adb0.s"
 
-
 // [func_0804adb4] Store Sequence Data volume to MIDI Channel Bus volume.
 void func_0804adb4(struct MidiChannelBus *mChnlBus, u8 volume) {
     mChnlBus->volume = volume;
 }
-
 
 #include "asm/lib_08049144/asm_0804adb8.s"
 

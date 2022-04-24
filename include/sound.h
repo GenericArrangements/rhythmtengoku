@@ -186,3 +186,28 @@ struct SequenceDataAudioChannel D_08aa06f8[1924]; // Sequence Data Audio Channel
 
 struct AudioChannel *D_08aa4324[13]; // Array of Audio Channel pointers.
 u8 D_08aa445c; // Total number of Audio Channels. [13]
+
+
+struct Bingus {
+    u32 unk0_b0:1;
+    u8 unk1;
+    u8 unk2; // ?? Panning 1
+    u8 unk3; // ?? Panning 2
+    u32 unk4;
+    u32 unk8;
+    struct MidiChannel *midiChannel;
+    u32 unk10;
+    u32 unk14;
+    s16 unk18;
+    u16 unk1A;
+    u32 unk1C:8;
+    u32 unk1D:24;
+};
+
+struct Jason {
+    u32 unk0;
+    u16 unk4;
+    u8  unk6;
+    u8  unk7;
+    u32 unk8;
+};

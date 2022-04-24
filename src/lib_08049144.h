@@ -14,22 +14,22 @@ extern void func_080493c8(u32, u32, u32); // [func_080493c8] Store panning-relat
 // extern ? func_08049ad8(?);
 // extern ? func_08049b34(?);
 // extern ? func_08049b5c(?);
-// extern ? func_08049b70(?);
+extern void func_08049b70(u32); // [func_08049b70] (SUB) MIDI Controller 4A - ??
 extern void func_08049b8c(u8); // [func_08049b8c] MIDI Controller 4D - ??
-// extern ? func_08049bac(?);
-// extern ? func_08049be4(?);
+extern void func_08049bac(void); // [func_08049bac] ??
+extern void func_08049be4(void); // [func_08049be4] MIDI Controller 49 - ??; MIDI Controller 4A - ??
 // extern ? func_08049bfc(?);
 // extern ? func_08049c34(?);
 // extern ? func_08049d08(?);
 // extern ? func_08049d30(?);
-extern void func_08049db8(struct MidiChannelBus *, u32);
+extern void func_08049db8(struct MidiChannelBus *, u32); // [func_08049db8] ??
 // extern ? func_08049e3c(?);
-extern void func_08049e64(struct MidiChannelBus *);
-extern void func_08049e8c(struct MidiChannelBus *, u8);
+extern void func_08049e64(struct MidiChannelBus *); // [func_08049e64] ??
+extern void func_08049e8c(struct MidiChannelBus *, u8); // [func_08049e8c] ??
 // extern ? func_08049ec4(?);
 extern void func_08049ecc(struct MidiChannel *); // [func_08049ecc] Initialise MIDI Channel.
 extern void func_08049fa0(struct MidiChannelBus *, u32, struct MidiChannel *); // [func_08049fa0] Initialise Midi Channel Bus
-extern void func_0804a014(struct MidiChannelBus *, const InstrumentBank *);
+extern void func_0804a014(struct MidiChannelBus *, const InstrumentBank *); // [func_0804a014] Store Sound Bank to MIDI Channel Bus
 // extern ? func_0804a018(?);
 // extern ? func_0804a1f4(?);
 // extern ? func_0804a224(?);
@@ -77,8 +77,8 @@ extern void func_0804adb4(struct MidiChannelBus *, u8); // [func_0804adb4] Store
 // extern ? func_0804ae14(?);
 // extern ? func_0804ae18(?);
 // extern ? func_0804ae1c(?);
-// extern ? func_0804ae54(?);
-// extern ? func_0804ae60(?);
+extern void func_0804ae54(struct Jason *); // [func_0804ae54] MIDI Controller 49 - ??
+extern void func_0804ae60(struct Jason *); // [func_0804ae60] MIDI Controller 49 - ??; MIDI Controller 4A - ??
 // extern ? func_0804ae6c(?);
 // extern ? func_0804af0c(?);
 // extern ? func_0804af30(?);
