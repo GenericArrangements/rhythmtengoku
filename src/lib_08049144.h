@@ -21,9 +21,9 @@ extern void func_08049be4(void); // [func_08049be4] MIDI Controller 49 - ??; MID
 // extern ? func_08049bfc(?);
 // extern ? func_08049c34(?);
 // extern ? func_08049d08(?);
-// extern ? func_08049d30(?);
+extern void func_08049d30(struct MidiChannelBus *, u32); // [func_08049d30] ?? (Unload)
 extern void func_08049db8(struct MidiChannelBus *, u32); // [func_08049db8] ??
-// extern ? func_08049e3c(?);
+extern void func_08049e3c(struct MidiChannelBus *); // [func_08049e3c] ?? (Unload)
 extern void func_08049e64(struct MidiChannelBus *); // [func_08049e64] ??
 extern void func_08049e8c(struct MidiChannelBus *, u8); // [func_08049e8c] ??
 // extern ? func_08049ec4(?);

@@ -95,8 +95,26 @@ void func_08049be4(void) {
 
 #include "asm/lib_08049144/asm_08049d08.s"
 
-#include "asm/lib_08049144/asm_08049d30.s"
+// [func_08049d30] ?? (Unload)
+void func_08049d30(struct MidiChannelBus *mChnlBus, u32 id) {
+    struct MidiChannel *mChnl = &mChnlBus->midiChannel[id];
+    u32 i;
 
+    if (mChnl->volumeWheel == 0) {
+        func_08049db8(mChnlBus, id);
+        return;
+    }
+    for (i = 0; i < D_03005b8c; i++) {
+        if (D_030064bc[i].unk0_b0 && (D_030064bc[i].midiChannel == mChnl)) {
+            D_030064bc[i].unk1C = 4;
+        }
+    }
+    for (i = 0; i < 4; i++) {
+        if (D_030056a0[i].unk0_b0 && (D_030056a0[i].midiChannel == mChnl)) {
+            D_030056a0[i].unk1C = 4;
+        }
+    }
+}
 
 // [func_08049db8] ??
 void func_08049db8(struct MidiChannelBus *mChnlBus, u32 id) {
@@ -117,9 +135,14 @@ void func_08049db8(struct MidiChannelBus *mChnlBus, u32 id) {
     }
 }
 
+// [func_08049e3c] ?? (Unload)
+void func_08049e3c(struct MidiChannelBus *mChnlBus) {
+    u32 i;
 
-#include "asm/lib_08049144/asm_08049e3c.s"
-
+    for (i = 0; i < mChnlBus->unk14_b0; i++) {
+        func_08049d30(mChnlBus, i);
+    }
+}
 
 // [func_08049e64] ??
 void func_08049e64(struct MidiChannelBus *midi_channelBus) {
@@ -128,7 +151,6 @@ void func_08049e64(struct MidiChannelBus *midi_channelBus) {
         func_08049db8(midi_channelBus, i);
     }
 }
-
 
 // [func_08049e8c] ??
 void func_08049e8c(struct MidiChannelBus *mChnlBus, u8 unk4f4) {
@@ -140,9 +162,7 @@ void func_08049e8c(struct MidiChannelBus *mChnlBus, u8 unk4f4) {
     }
 }
 
-
 #include "asm/lib_08049144/asm_08049ec4.s"
-
 
 // [func_08049ecc] Initialise MIDI Channel.
 void func_08049ecc(struct MidiChannel *mChnl) {
@@ -175,7 +195,6 @@ void func_08049ecc(struct MidiChannel *mChnl) {
     mChnl->unk1E = 0;
 }
 
-
 // [func_08049fa0] Initialise Midi Channel Bus.
 void func_08049fa0(struct MidiChannelBus *mChnlBus, u32 unk14_b0, struct MidiChannel *mChnl) {
     u32 i;
@@ -201,12 +220,10 @@ void func_08049fa0(struct MidiChannelBus *mChnlBus, u32 unk14_b0, struct MidiCha
     }
 }
 
-
 // [func_0804a014] Store Sound Bank to MIDI Channel Bus
 void func_0804a014(struct MidiChannelBus *mChnlBus, const InstrumentBank *instBank) {
     mChnlBus->soundBank = instBank;
 }
-
 
 #include "asm/lib_08049144/asm_0804a018.s"
 
