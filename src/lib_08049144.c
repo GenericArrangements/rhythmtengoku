@@ -332,12 +332,15 @@ void func_0804ac40(struct MidiChannelBus *mChnlBus, u32 id, u8 depth) {
 
 #include "asm/lib_08049144/asm_0804acd8.s"
 
-#include "asm/lib_08049144/asm_0804ace4.s"
+// [func_0804ace4] MIDI Controller 14 - Modulation Wheel Range
+void func_0804ace4(struct MidiChannelBus *mChnlBus, u32 id, u8 range) {
+    mChnlBus->midiChannel[id].modWheelRange = range;
+}
 
 #include "asm/lib_08049144/asm_0804acf0.s"
 
 
-// [func_0804ad18] ?
+// [func_0804ad18] MIDI Controller 21 - ??
 void func_0804ad18(struct MidiChannelBus *mChnlBus, u32 i, u8 arg2) {
     mChnlBus->midiChannel[i].unk8_b22 = arg2 + mChnlBus->unk14_b5;
 }

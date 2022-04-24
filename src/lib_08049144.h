@@ -63,9 +63,9 @@ extern void func_0804ac40(struct MidiChannelBus *, u32, u8); // [func_0804ac40] 
 // extern ? func_0804acc0(?);
 // extern ? func_0804accc(?);
 // extern ? func_0804acd8(?);
-// extern ? func_0804ace4(?);
+extern void func_0804ace4(struct MidiChannelBus *, u32, u8); // [func_0804ace4] MIDI Controller 14 - Modulation Wheel Range
 // extern ? func_0804acf0(?);
-extern void func_0804ad18(struct MidiChannelBus *, u32, u8);
+extern void func_0804ad18(struct MidiChannelBus *, u32, u8); // [func_0804ad18] MIDI Controller 21 - ??
 // extern ? func_0804ad38(?);
 // extern ? func_0804ad90(?);
 // extern ? func_0804ad9c(?);
