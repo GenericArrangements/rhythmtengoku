@@ -28,6 +28,8 @@ struct Jason {
     u32 unk8;
 };
 
+extern u32 D_03005620[];
+extern u32 D_03005638;
 extern u8  D_03005640;
 extern u16 D_03005648;
 extern struct Bingus D_030056a0[];
@@ -40,7 +42,9 @@ extern u8 *D_03005b7c;
 extern struct Bingus *D_03005b88;
 extern u16 D_03005b8c;
 extern u8  D_03005b90[];
+extern u32 *D_030064b0;
 extern struct Bingus *D_030064bc;
+extern u8  D_030064c0;
 
 extern s16  D_08a86008[];
 extern const InstrumentBank *const instrumentBanks[];
@@ -91,7 +95,14 @@ void func_08049b8c(u8 arg0) {
     if (D_03005b44 == 0) D_03005b28 = arg0;
 }
 
-#include "asm/lib_08049144/asm_08049bac.s"
+// [func_08049bac] ??
+void func_08049bac(void) {
+    D_03005620[2] = 0;
+    D_03005620[1] = 0;
+    D_03005620[0] = 0;
+    D_030064c0 = 0;
+    D_030064b0[D_03005638 - 2] = D_030064b0[D_03005638 - 1] = 0;
+}
 
 // [func_08049be4] MIDI Controller 4D - ??; MIDI Controller 4A - ??
 void func_08049be4(void) {
