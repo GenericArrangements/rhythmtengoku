@@ -29,6 +29,7 @@ extern u8  D_03005b3c;
 extern u8 *D_03005b7c;
 extern struct Bingus *D_03005b88;
 extern u16 D_03005b8c;
+extern u8 D_03005b90[];
 extern struct Bingus *D_030064bc;
 
 extern s16 D_08a86008[];
@@ -619,7 +620,13 @@ void func_0804b95c(struct AudioChannel *audioChnl, u32 id, u8 ctrl, u8 var) {
 
 #include "asm/lib_08049144/asm_0804c170.s"
 
-#include "asm/lib_08049144/asm_0804c340.s"
+// [func_0804c340] Set Reverb
+void func_0804c340(u32 arg0, u32 arg1, u32 arg2, u32 arg3) {
+    D_03005b90[0] = arg0;
+    D_03005b90[1] = arg1;
+    D_03005b90[2] = arg2;
+    D_03005b90[3] = arg3;
+}
 
 #include "asm/lib_08049144/asm_0804c358.s"
 

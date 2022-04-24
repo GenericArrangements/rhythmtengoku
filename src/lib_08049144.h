@@ -120,7 +120,7 @@ extern void func_0804b95c(struct AudioChannel *, u32, u8, u8); // [func_0804b95c
 // extern ? func_0804c040(?);
 // extern ? func_0804c0f8(?);
 // extern ? func_0804c170(?);
-// extern ? func_0804c340(?);
+extern void func_0804c340(u32, u32, u32, u32); // [func_0804c340] Set Reverb
 // extern ? func_0804c358(?);
 // extern ? func_0804c35c(?);
 extern u32  func_0804c398(u8 **); // [func_0804c398] Parse MIDI Variable-Length Time
