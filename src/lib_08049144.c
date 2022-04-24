@@ -430,9 +430,14 @@ void func_0804adb4(struct MidiChannelBus *mChnlBus, u8 volume) {
 
 #include "asm/lib_08049144/asm_0804ae1c.s"
 
-#include "asm/lib_08049144/asm_0804ae54.s"
+// [func_0804ae54] MIDI Controller 49 - ??
+void func_0804ae54(struct Jason *arg0) {
+    arg0->unk6 = 1;
+    arg0->unk8 = 0;
+    arg0->unk7 = 0;
+}
 
-// [func_0804ae60] MIDI Controller 4D - ??; MIDI Controller 4A - ??
+// [func_0804ae60] MIDI Controller 49 - ??; MIDI Controller 4A - ??
 void func_0804ae60(struct Jason *arg0) {
     arg0->unk6 = 0;
     arg0->unk8 = 0;
