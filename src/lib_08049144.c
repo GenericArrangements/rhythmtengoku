@@ -350,14 +350,26 @@ void func_0804ace4(struct MidiChannelBus *mChnlBus, u32 id, u8 range) {
     mChnlBus->midiChannel[id].modWheelRange = range;
 }
 
-#include "asm/lib_08049144/asm_0804acf0.s"
+// [func_0804acf0] MIDI Controller 4B - Chorus?
+void func_0804acf0(struct MidiChannelBus *mChnlBus, u32 id, u32 vol) {
+    mChnlBus->midiChannel[id].unk0_b31 = vol;
+    func_0804aa7c(mChnlBus, id, mChnlBus->midiChannel[id].panning);
+}
 
 // [func_0804ad18] MIDI Controller 21 - ??
 void func_0804ad18(struct MidiChannelBus *mChnlBus, u32 i, u8 arg2) {
     mChnlBus->midiChannel[i].unk8_b22 = arg2 + mChnlBus->unk14_b5;
 }
 
-#include "asm/lib_08049144/asm_0804ad38.s"
+// [func_0804ad38] MIDI Controller 52 - Random Pitch Variation
+void func_0804ad38(struct MidiChannelBus *mChnlBus, u32 id, u8 range) {
+    u32 lowMax = 0x8000 / (u32) (range + 0x80);
+    u32 highMax = 0x10000 / (u32) (0x100 - range);
+
+    mChnlBus->midiChannel[id].rndmPitchFloor = lowMax;
+    mChnlBus->midiChannel[id].rndmPitchRange = highMax - lowMax;
+    mChnlBus->midiChannel[id].rndmPitch = 0x100;
+}
 
 #include "asm/lib_08049144/asm_0804ad90.s"
 
