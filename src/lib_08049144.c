@@ -324,7 +324,10 @@ void func_0804ac40(struct MidiChannelBus *mChnlBus, u32 id, u8 depth) {
 
 #include "asm/lib_08049144/asm_0804ac80.s"
 
-#include "asm/lib_08049144/asm_0804aca0.s"
+// [func_0804aca0] MIDI Controller 16 - Modulation Type
+void func_0804aca0(struct MidiChannelBus *mChnlBus, u32 id, u8 type) {
+    mChnlBus->midiChannel[id].modType = type;
+}
 
 #include "asm/lib_08049144/asm_0804acc0.s"
 
