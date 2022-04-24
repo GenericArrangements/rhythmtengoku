@@ -495,17 +495,17 @@ void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqD
     chnkLength = func_0804b330(mTrkStream);
     mTrkStream += 4; // Skip (Header: Length)
     trackTotal = func_0804b324(mTrkStream + 2); // Header: Number of MIDI Tracks
-    channel->unk0_trkTotal = trackTotal;
+    channel->nTracksUsed = trackTotal;
 
-    if (channel->unk0_trkTotal > channel->unk0_trkMax) {
-        channel->unk0_trkTotal = channel->unk0_trkMax;
+    if (channel->nTracksUsed > channel->nTracksMax) {
+        channel->nTracksUsed = channel->nTracksMax;
     }
     channel->midi_quarterNote = func_0804b324(mTrkStream + 4); // Header: Division
     mTrkStream += chnkLength; // Skip (Header: Data)
 
     // Track:
     mTrkReader = channel->midi_trackReader;
-    for (i = 0; i < channel->unk0_trkTotal; i++) {
+    for (i = 0; i < channel->nTracksUsed; i++) {
         mTrkStream += 4; // Skip (Track: Length)
         chnkLength = func_0804b330(mTrkStream);
         mTrkStream += 4; // Skip (Track: Length)
@@ -523,15 +523,15 @@ void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqD
     }
 
     // Other Data:
-    channel->unk0_10 = 0;
-    channel->unk0_pause = 0;
+    channel->unk0_b10 = 0;
+    channel->isPaused = 0;
     channel->speed1 = 1;
     channel->beatscript_channelVol = 0x100;
     channel->speed2 = 0x100;
     channel->beatscript_trackVol = 0x100;
-    channel->unk0_27 = 0;
-    channel->beatscript_volFadeMul = 0x8000;
-    channel->beatscript_volFadeDcr = 0;
+    channel->volumeFadeType = 0;
+    channel->volumeFadeEnv = 0x8000;
+    channel->volumeFadeSpeed = 0;
     channel->midi_loopStartSym = &D_08a865a4[0];
     channel->midi_loopStartSymSize = func_0804b348(D_08a865a4);
     channel->midi_loopEndSym = &D_08a865a8[0];
@@ -585,7 +585,41 @@ void func_0804b534(u16 index) {
 
 #include "asm/lib_08049144/asm_0804b710.s"
 
-#include "asm/lib_08049144/asm_0804b734.s"
+// [func_0804b734] Gradual Volume Change? { type = 0..3 }
+void func_0804b734(struct AudioChannel *channel, u16 type, u16 time) {
+    switch (type) {
+        case 0:
+            channel->volumeFadeEnv = 0x8000;
+            channel->volumeFadeSpeed = 0;
+            break;
+
+        case 1: // Fade-in
+            if (time == 0) time = 1;
+            if (channel->volumeFadeType == 0) channel->volumeFadeEnv = 0;
+
+            channel->volumeFadeSpeed = 0x8000 / time;
+            channel->isPaused = 0;
+            break;
+
+        case 2: case 3:
+            if (channel->volumeFadeType == 0) channel->volumeFadeEnv = 0x8000;
+
+            if (time != 0) {
+                channel->volumeFadeSpeed = 0x8000 / time;
+            } else {
+                channel->volumeFadeEnv = 0;
+                channel->volumeFadeSpeed = 1;
+                if (type == 2) {
+                    type = 0;
+                    func_0804b560(channel);
+                } else {
+                    func_0804b574(channel, 1);
+                }
+            }
+            break;
+    }
+    channel->volumeFadeType = type;
+}
 
 #include "asm/lib_08049144/asm_0804b7dc.s"
 
@@ -673,15 +707,15 @@ void func_0804c340(u32 arg0, u32 arg1, u32 arg2, u32 arg3) {
 // [func_0804c398] Parse MIDI Variable-Length Time
 u32 func_0804c398(u8 **midiStream) {
     u8 *mStream = *midiStream;
-    u8 temp;
+    u8 current;
     u32 time = 0;
 
     do {
-        temp = *mStream;
+        current = *mStream;
         mStream++;
         time <<= 7;
-        time |= (temp & 0x7f);
-    } while (temp & 0x80);
+        time |= (current & 0x7f);
+    } while (current & 0x80);
 
     *midiStream = mStream;
     return time;

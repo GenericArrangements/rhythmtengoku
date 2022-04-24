@@ -107,7 +107,7 @@ extern void func_0804b534(u16); // [func_0804b534] Load a Sound Sequence using t
 // extern ? func_0804b6c4(?);
 // extern ? func_0804b6f0(?);
 // extern ? func_0804b710(?);
-// extern ? func_0804b734(?);
+extern void func_0804b734(struct AudioChannel *, u16, u16); // [func_0804b734] Gradual Volume Change? { type = 0..3 }
 // extern ? func_0804b7dc(?);
 // extern ? func_0804b7ec(?);
 extern void func_0804b7fc(struct AudioChannel *channel, u16 time); // [func_0804b7fc] Fade-in for given duration.
