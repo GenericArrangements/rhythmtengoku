@@ -600,7 +600,10 @@ void func_0804b650(struct AudioChannel *channel, u16 volume) {
 
 #include "asm/lib_08049144/asm_0804b654.s"
 
-#include "asm/lib_08049144/asm_0804b65c.s"
+// [func_0804b65c] Set Pitch
+void func_0804b65c(struct AudioChannel *channel, u16 unused, s16 pitch) {
+    func_0804ade4(channel->midi_channelBus, pitch);
+}
 
 #include "asm/lib_08049144/asm_0804b66c.s"
 
