@@ -183,7 +183,7 @@ void func_08049ecc(struct MidiChannel *mChnl) {
     mChnl->modDelayCount = 0;
     mChnl->modResult = 0;
     mChnl->pitchWheel = 0x2000;
-    mChnl->modWheelRange = 2;
+    mChnl->modRange = 2;
     mChnl->unk8_b22 = 0;
     mChnl->unk0_b30 = 0;
     mChnl->unk0_b31 = 0;
@@ -384,7 +384,7 @@ void func_0804acd8(struct MidiChannelBus *mChnlBus, u32 id, u8 delay) {
 
 // [func_0804ace4] MIDI Controller 14 - Modulation Wheel Range
 void func_0804ace4(struct MidiChannelBus *mChnlBus, u32 id, u8 range) {
-    mChnlBus->midiChannel[id].modWheelRange = range;
+    mChnlBus->midiChannel[id].modRange = range;
 }
 
 // [func_0804acf0] MIDI Controller 4B - Chorus?
@@ -444,7 +444,14 @@ void func_0804ade4(struct MidiChannelBus *mChnlBus, s16 pitch) {
     mChnlBus->pitch = pitch;
 }
 
-#include "asm/lib_08049144/asm_0804ade8.s"
+// [func_0804ade8] MIDI Channel Bus - Set Modulation Range
+void func_0804ade8(struct MidiChannelBus *mChnlBus, u8 range) {
+    u32 i;
+
+    for (i = 0; i < mChnlBus->unk14_b0; i++) {
+        mChnlBus->midiChannel[i].modRange = range;
+    }
+}
 
 // [func_0804ae14] MIDI Channel Bus - Set ?? (unk8)
 void func_0804ae14(struct MidiChannelBus *mChnlBus, u16 var) {

@@ -97,7 +97,7 @@ struct MidiChannel {
     u8  unkC;           // ??? [default = 1]
     s8  modResult;      // Modulation Result [mCtrl_01; default = 0]
     u8  unkE;
-    u8  modWheelRange;  // Pitch Wheel Range [mCtrl_14; default = 2]
+    u8  modRange;       // Pitch Wheel Range [mCtrl_14; default = 2]
     u16 modSpeed;       // Modulation Counter Increment [mCtrl_15; default = 0x3C00]
     u16 modCount;       // Modulation Counter (ticks Up) [mCtrl_15; default = 0]
     u8  modDelay;       // Modulation Delay Time [mCtrl_1A; default = 0]
