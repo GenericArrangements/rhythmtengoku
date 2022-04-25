@@ -102,7 +102,7 @@ extern u32  func_0804b5a0(struct AudioChannel *channel); // [func_0804b5a0] Chec
 extern void func_0804b650(struct AudioChannel *, u16); // [func_0804b650] Set Volume
 extern void func_0804b654(struct AudioChannel *, u16, u16); // [func_0804b654] Set Volume for Selected Tracks
 extern void func_0804b65c(struct AudioChannel *, u16, s16); // [func_0804b65c] Set Pitch
-// extern ? func_0804b66c(?);
+extern void func_0804b66c(struct AudioChannel *, u16, s8); // [func_0804b66c] Set Panning
 // extern ? func_0804b67c(?);
 // extern ? func_0804b6c4(?);
 extern u32  func_0804b6f0(u16, u16, u16); // [func_0804b6f0] Playback Speed Formula

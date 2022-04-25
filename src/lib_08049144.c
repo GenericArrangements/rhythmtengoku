@@ -620,7 +620,10 @@ void func_0804b65c(struct AudioChannel *channel, u16 unused, s16 pitch) {
     func_0804ade4(channel->midi_channelBus, pitch);
 }
 
-#include "asm/lib_08049144/asm_0804b66c.s"
+// [func_0804b66c] Set Panning
+void func_0804b66c(struct AudioChannel *channel, u16 unused, s8 panning) {
+    func_0804adb8(channel->midi_channelBus, panning);
+}
 
 #include "asm/lib_08049144/asm_0804b67c.s"
 
