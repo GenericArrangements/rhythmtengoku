@@ -601,7 +601,11 @@ void func_0804b650(struct AudioChannel *channel, u16 volume) {
     channel->beatscript_channelVol = volume;
 }
 
-#include "asm/lib_08049144/asm_0804b654.s"
+// [func_0804b654] Set Volume for Selected Tracks
+void func_0804b654(struct AudioChannel *channel, u16 tracks, u16 volume) {
+    channel->beatscript_trackVol = volume;
+    channel->beatscript_trackSel = tracks;
+}
 
 // [func_0804b65c] Set Pitch
 void func_0804b65c(struct AudioChannel *channel, u16 unused, s16 pitch) {

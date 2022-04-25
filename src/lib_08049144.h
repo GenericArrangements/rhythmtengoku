@@ -100,7 +100,7 @@ extern void func_0804b574(struct AudioChannel *, u8); // [func_0804b574] Pause/U
 // extern ? func_0804b5f0(?);
 // extern ? func_0804b620(?);
 extern void func_0804b650(struct AudioChannel *, u16); // [func_0804b650] Set Volume
-// extern ? func_0804b654(?);
+extern void func_0804b654(struct AudioChannel *, u16, u16); // [func_0804b654] Set Volume for Selected Tracks
 extern void func_0804b65c(struct AudioChannel *, u16, s16); // [func_0804b65c] Set Pitch
 // extern ? func_0804b66c(?);
 // extern ? func_0804b67c(?);
