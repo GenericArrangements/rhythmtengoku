@@ -94,7 +94,7 @@ extern void func_0804b368(struct AudioChannel *, const struct SequenceData *);  
 extern void func_0804b534(u16); // [func_0804b534] Load a Sound Sequence using the D_08aa06f8 table.
 extern void func_0804b560(struct AudioChannel *); // [func_0804b560] Remove Sound Sequence from Audio Channel
 extern void func_0804b574(struct AudioChannel *, u8); // [func_0804b574] Pause/Unpause Sound Sequence in Audio Channel { 0 = Unpause; 1 = Pause }
-// extern ? func_0804b5a0(?);
+extern u32  func_0804b5a0(struct AudioChannel *channel); // [func_0804b5a0] Check for Active MIDI Readers
 // extern ? func_0804b5d8(?);
 // extern ? func_0804b5e4(?);
 // extern ? func_0804b5f0(?);

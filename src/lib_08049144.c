@@ -585,7 +585,16 @@ void func_0804b574(struct AudioChannel *channel, u8 pause) {
     if (pause) func_08049e64(channel->midi_channelBus);
 }
 
-#include "asm/lib_08049144/asm_0804b5a0.s"
+// [func_0804b5a0] Check for Active MIDI Readers
+u32 func_0804b5a0(struct AudioChannel *channel) {
+    u32 i;
+
+    if (channel->sequenceData == 0) return 0;
+    for (i = 0; i < channel->nTracksUsed; i++) {
+        if (channel->midi_trackReader[i].unk0_0) return 1;
+    }
+    return 0;
+}
 
 #include "asm/lib_08049144/asm_0804b5d8.s"
 
