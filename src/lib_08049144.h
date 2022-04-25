@@ -99,7 +99,7 @@ extern void func_0804b574(struct AudioChannel *, u8); // [func_0804b574] Pause/U
 // extern ? func_0804b5e4(?);
 // extern ? func_0804b5f0(?);
 // extern ? func_0804b620(?);
-// extern ? func_0804b650(?);
+extern void func_0804b650(struct AudioChannel *, u16); // [func_0804b650] Set Volume
 // extern ? func_0804b654(?);
 // extern ? func_0804b65c(?);
 // extern ? func_0804b66c(?);

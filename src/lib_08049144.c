@@ -593,7 +593,10 @@ void func_0804b574(struct AudioChannel *channel, u8 pause) {
 
 #include "asm/lib_08049144/asm_0804b620.s"
 
-#include "asm/lib_08049144/asm_0804b650.s"
+// [func_0804b650] Set Volume
+void func_0804b650(struct AudioChannel *channel, u16 volume) {
+    channel->beatscript_channelVol = volume;
+}
 
 #include "asm/lib_08049144/asm_0804b654.s"
 
