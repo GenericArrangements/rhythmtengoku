@@ -644,11 +644,17 @@ void func_0804b734(struct AudioChannel *channel, u16 type, u16 time) {
     channel->volumeFadeType = type;
 }
 
-#include "asm/lib_08049144/asm_0804b7dc.s"
+// [func_0804b7dc] Apply Volume Fade - Fade-Out & Clear
+void func_0804b7dc(struct AudioChannel *channel, u16 time) {
+    func_0804b734(channel, 2, time);
+}
 
-#include "asm/lib_08049144/asm_0804b7ec.s"
+// [func_0804b7ec] Apply Volume Fade - Fade-Out & Pause
+void func_0804b7ec(struct AudioChannel *channel, u16 time) {
+    func_0804b734(channel, 3, time);
+}
 
-// [func_0804b7fc] Fade-in for given duration.
+// [func_0804b7fc] Apply Volume Fade - Fade-In
 void func_0804b7fc(struct AudioChannel *channel, u16 time) {
     func_0804b734(channel, 1, time);
 }
