@@ -267,7 +267,10 @@ u8 func_0804a674(u8 panning) {
 
 #include "asm/lib_08049144/asm_0804a6b0.s"
 
-#include "asm/lib_08049144/asm_0804aa40.s"
+// [func_0804aa40] MIDI Channel - Set Pitch Wheel
+void func_0804aa40(struct MidiChannelBus *mChnlBus, u32 id, u16 pitch) {
+    mChnlBus->midiChannel[id].pitchWheel = pitch;
+}
 
 // [func_0804aa5c] MIDI Controller 07 - Channel Volume
 void func_0804aa5c(struct MidiChannelBus *mChnlBus, u32 id, u8 volume) {
@@ -700,7 +703,15 @@ void func_0804b67c(u16 offset) {
     }
 }
 
-#include "asm/lib_08049144/asm_0804b6c4.s"
+// [func_0804b6c4] Check if two phrases are identical.
+u32 func_0804b6c4(u8 *byteStream0, u8 *byteStream1, u32 length) {
+    u32 i;
+
+    for (i = 0; i < length; i++) {
+        if (byteStream0[i] != byteStream1[i]) return 0;
+    }
+    return 1;
+}
 
 // [func_0804b6f0] Playback Speed Formula
 u32 func_0804b6f0(u16 tempo, u16 speedEnv, u16 quarterNote) {

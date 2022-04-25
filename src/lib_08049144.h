@@ -47,35 +47,35 @@ extern u8   func_0804a65c(u8); // [func_0804a65c] ?? (something about left panni
 extern u8   func_0804a674(u8); // [func_0804a674] ?? (something about right panning)
 // extern ? func_0804a690(?);
 // extern ? func_0804a6b0(?);
-// extern ? func_0804aa40(?);
-extern void func_0804aa5c(struct MidiChannelBus *, u32, u8); // [func_0804aa5c] MIDI Controller 07 - Channel Volume
-extern void func_0804aa7c(struct MidiChannelBus *, u32, u8); // [func_0804aa7c] MIDI Controller 0A - Channel Panning
-extern u8   func_0804aaa4(struct MidiChannelBus *, u32); // [func_0804aaa4] Return a net Panning value, factoring all relevant Panning controllers.
-extern void func_0804aae0(struct MidiChannelBus *, u32); // [func_0804aae0] ??? (called after setting channel panning)
-extern void func_0804ab88(struct MidiChannelBus *, u32, u8); // [func_0804ab88] MIDI Channel - Set Instrument/Patch
-extern void func_0804aba8(struct MidiChannelBus *, u32, u8); // [func_0804aba8] MIDI Controller 0B - Expression
+extern void func_0804aa40(struct MidiChannelBus *, u32, u16); // [func_0804aa40] MIDI Channel - Set Pitch Wheel
+extern void func_0804aa5c(struct MidiChannelBus *, u32, u8);  // [func_0804aa5c] MIDI Controller 07 - Channel Volume
+extern void func_0804aa7c(struct MidiChannelBus *, u32, u8);  // [func_0804aa7c] MIDI Controller 0A - Channel Panning
+extern u8   func_0804aaa4(struct MidiChannelBus *, u32);      // [func_0804aaa4] Return a net Panning value, factoring all relevant Panning controllers.
+extern void func_0804aae0(struct MidiChannelBus *, u32);      // [func_0804aae0] ??? (called after setting channel panning)
+extern void func_0804ab88(struct MidiChannelBus *, u32, u8);  // [func_0804ab88] MIDI Channel - Set Instrument/Patch
+extern void func_0804aba8(struct MidiChannelBus *, u32, u8);  // [func_0804aba8] MIDI Controller 0B - Expression
 extern void func_0804abc8(struct MidiChannelBus *, u32, u16); // [func_0804abc8] MIDI Controller 00 - ??; MIDI Controller 20 - ??
-extern void func_0804ac24(struct MidiChannelBus *, u32, u8); // [func_0804ac24] MIDI Channel - Set ?? (unk0_b0)
-extern void func_0804ac40(struct MidiChannelBus *, u32, u8); // [func_0804ac40] MIDI Controller 01 - Modulation Depth
-extern void func_0804ac60(struct MidiChannelBus *, u32, u8); // [func_0804ac60] MIDI Channel - Set ?? (unk4_b21)
-extern void func_0804ac80(struct MidiChannelBus *, u32, u8); // [func_0804ac80] MIDI Controller 48 - Compress/Dampen?
-extern void func_0804aca0(struct MidiChannelBus *, u32, u8); // [func_0804aca0] MIDI Controller 16 - Modulation Type
-extern void func_0804acc0(struct MidiChannelBus *, u32, u8); // [func_0804acc0] MIDI Channel - Set ?? (unkC)
+extern void func_0804ac24(struct MidiChannelBus *, u32, u8);  // [func_0804ac24] MIDI Channel - Set ?? (unk0_b0)
+extern void func_0804ac40(struct MidiChannelBus *, u32, u8);  // [func_0804ac40] MIDI Controller 01 - Modulation Depth
+extern void func_0804ac60(struct MidiChannelBus *, u32, u8);  // [func_0804ac60] MIDI Channel - Set ?? (unk4_b21)
+extern void func_0804ac80(struct MidiChannelBus *, u32, u8);  // [func_0804ac80] MIDI Controller 48 - Compress/Dampen?
+extern void func_0804aca0(struct MidiChannelBus *, u32, u8);  // [func_0804aca0] MIDI Controller 16 - Modulation Type
+extern void func_0804acc0(struct MidiChannelBus *, u32, u8);  // [func_0804acc0] MIDI Channel - Set ?? (unkC)
 extern void func_0804accc(struct MidiChannelBus *, u32, u16); // [func_0804accc] MIDI Controller 15 - Modulation Speed
-extern void func_0804acd8(struct MidiChannelBus *, u32, u8); // [func_0804acd8] MIDI Controller 1A - Modulation Delay
-extern void func_0804ace4(struct MidiChannelBus *, u32, u8); // [func_0804ace4] MIDI Controller 14 - Modulation Range
+extern void func_0804acd8(struct MidiChannelBus *, u32, u8);  // [func_0804acd8] MIDI Controller 1A - Modulation Delay
+extern void func_0804ace4(struct MidiChannelBus *, u32, u8);  // [func_0804ace4] MIDI Controller 14 - Modulation Range
 extern void func_0804acf0(struct MidiChannelBus *, u32, u32); // [func_0804acf0] MIDI Controller 4B - Chorus?
-extern void func_0804ad18(struct MidiChannelBus *, u32, u8); // [func_0804ad18] MIDI Controller 21 - ??
-extern void func_0804ad38(struct MidiChannelBus *, u32, u8); // [func_0804ad38] MIDI Controller 52 - Random Pitch Variation
-extern void func_0804ad90(struct MidiChannelBus *, u32, u8); // [func_0804ad90] MIDI Controller 53 - ??
-extern void func_0804ad9c(struct MidiChannelBus *, u32, u8); // [func_0804ad9c] MIDI Controller 54 - ??
-extern void func_0804adb0(struct MidiChannelBus *, u8); // [func_0804adb0] MIDI Channel Bus - Set ?? (unk4)
-extern void func_0804adb4(struct MidiChannelBus *, u8); // [func_0804adb4] MIDI Channel Bus - Set Volume
-extern void func_0804adb8(struct MidiChannelBus *, s8); // [func_0804adb8] MIDI Channel Bus - Set Panning
-extern void func_0804ade4(struct MidiChannelBus *, s16); // [func_0804ade4] MIDI Channel Bus - Set Pitch
-extern void func_0804ade8(struct MidiChannelBus *, u8); // [func_0804ade8] MIDI Channel Bus - Set Modulation Range
-extern void func_0804ae14(struct MidiChannelBus *, u16); // [func_0804ae14] MIDI Channel Bus - Set ?? (unk8)
-extern void func_0804ae18(struct MidiChannelBus *, s16 *); // [func_0804ae18] MIDI Channel Bus - Set ?? (unkC)
+extern void func_0804ad18(struct MidiChannelBus *, u32, u8);  // [func_0804ad18] MIDI Controller 21 - ??
+extern void func_0804ad38(struct MidiChannelBus *, u32, u8);  // [func_0804ad38] MIDI Controller 52 - Random Pitch Variation
+extern void func_0804ad90(struct MidiChannelBus *, u32, u8);  // [func_0804ad90] MIDI Controller 53 - ??
+extern void func_0804ad9c(struct MidiChannelBus *, u32, u8);  // [func_0804ad9c] MIDI Controller 54 - ??
+extern void func_0804adb0(struct MidiChannelBus *, u8);       // [func_0804adb0] MIDI Channel Bus - Set ?? (unk4)
+extern void func_0804adb4(struct MidiChannelBus *, u8);       // [func_0804adb4] MIDI Channel Bus - Set Volume
+extern void func_0804adb8(struct MidiChannelBus *, s8);       // [func_0804adb8] MIDI Channel Bus - Set Panning
+extern void func_0804ade4(struct MidiChannelBus *, s16);      // [func_0804ade4] MIDI Channel Bus - Set Pitch
+extern void func_0804ade8(struct MidiChannelBus *, u8);       // [func_0804ade8] MIDI Channel Bus - Set Modulation Range
+extern void func_0804ae14(struct MidiChannelBus *, u16);      // [func_0804ae14] MIDI Channel Bus - Set ?? (unk8)
+extern void func_0804ae18(struct MidiChannelBus *, s16 *);    // [func_0804ae18] MIDI Channel Bus - Set ?? (unkC)
 extern void func_0804ae1c(struct Jason*, u8, u8, u8, u8, u8); // [func_0804ae1c] ??
 extern void func_0804ae54(struct Jason *); // [func_0804ae54] MIDI Controller 49 - ??
 extern void func_0804ae60(struct Jason *); // [func_0804ae60] MIDI Controller 49 - ??; MIDI Controller 4A - ??
@@ -104,7 +104,7 @@ extern void func_0804b654(struct AudioChannel *, u16, u16); // [func_0804b654] S
 extern void func_0804b65c(struct AudioChannel *, u16, s16); // [func_0804b65c] Set Pitch
 extern void func_0804b66c(struct AudioChannel *, u16, s8); // [func_0804b66c] Set Panning
 extern void func_0804b67c(u16); // [func_0804b67c] Pause Audio Channel using the D_08aa06f8 table.
-// extern ? func_0804b6c4(?);
+extern u32  func_0804b6c4(u8 *, u8 *, u32); // [func_0804b6c4] Check if two phrases are identical.
 extern u32  func_0804b6f0(u16, u16, u16); // [func_0804b6f0] Playback Speed Formula
 extern void func_0804b710(struct AudioChannel *, u16); // [func_0804b710] Align Speed with BeatScript
 extern void func_0804b734(struct AudioChannel *, u16, u16); // [func_0804b734] Volume Fade { type = 0..3 }
