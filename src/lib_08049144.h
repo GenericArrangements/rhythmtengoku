@@ -107,10 +107,10 @@ extern void func_0804b574(struct AudioChannel *, u8); // [func_0804b574] Pause/U
 // extern ? func_0804b6c4(?);
 // extern ? func_0804b6f0(?);
 // extern ? func_0804b710(?);
-extern void func_0804b734(struct AudioChannel *, u16, u16); // [func_0804b734] Gradual Volume Change? { type = 0..3 }
+extern void func_0804b734(struct AudioChannel *, u16, u16); // [func_0804b734] Volume Fade { type = 0..3 }
 // extern ? func_0804b7dc(?);
 // extern ? func_0804b7ec(?);
-extern void func_0804b7fc(struct AudioChannel *channel, u16 time); // [func_0804b7fc] Fade-in for given duration.
+extern void func_0804b7fc(struct AudioChannel *, u16); // [func_0804b7fc] Fade-in for given duration.
 // extern ? func_0804b80c(?);
 // extern ? func_0804b898(?);
 extern void func_0804b95c(struct AudioChannel *, u32, u8, u8); // [func_0804b95c] Interpret MIDI Controller Change Instruction

@@ -609,23 +609,23 @@ void func_0804b574(struct AudioChannel *channel, u8 pause) {
 
 #include "asm/lib_08049144/asm_0804b710.s"
 
-// [func_0804b734] Gradual Volume Change? { type = 0..3 }
+// [func_0804b734] Volume Fade { type = 0..3 }
 void func_0804b734(struct AudioChannel *channel, u16 type, u16 time) {
     switch (type) {
-        case 0:
+        case 0: // Reset Fade
             channel->volumeFadeEnv = 0x8000;
             channel->volumeFadeSpeed = 0;
             break;
 
-        case 1: // Fade-in
+        case 1: // Fade In
             if (time == 0) time = 1;
             if (channel->volumeFadeType == 0) channel->volumeFadeEnv = 0;
             channel->volumeFadeSpeed = 0x8000 / time;
             channel->isPaused = 0;
             break;
 
-        case 2:
-        case 3:
+        case 2: // Fade Out & Clear
+        case 3: // Fade Out & Pause
             if (channel->volumeFadeType == 0) channel->volumeFadeEnv = 0x8000;
             if (time != 0) {
                 channel->volumeFadeSpeed = 0x8000 / time;
