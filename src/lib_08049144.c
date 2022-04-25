@@ -339,7 +339,10 @@ void func_0804abc8(struct MidiChannelBus *mChnlBus, u32 id, u16 var) {
     mChnlBus->midiChannel[id].unk0_b9 = unk0_b9 & 0x3fff;
 }
 
-#include "asm/lib_08049144/asm_0804ac24.s"
+// [func_0804ac24] MIDI Channel - Set ?? (unk0_b0)
+void func_0804ac24(struct MidiChannelBus *mChnlBus, u32 id, u8 var) {
+    mChnlBus->midiChannel[id].unk0_b0 = var;
+}
 
 // [func_0804ac40] MIDI Controller 01 - Modulation Depth
 void func_0804ac40(struct MidiChannelBus *mChnlBus, u32 id, u8 depth) {

@@ -55,7 +55,7 @@ extern void func_0804aae0(struct MidiChannelBus *, u32); // [func_0804aae0] ??? 
 // extern ? func_0804ab88(?);
 extern void func_0804aba8(struct MidiChannelBus *, u32, u8); // [func_0804aba8] MIDI Controller 0B - Expression
 extern void func_0804abc8(struct MidiChannelBus *, u32, u16); // [func_0804abc8] MIDI Controller 00 - ??; MIDI Controller 20 - ??
-// extern ? func_0804ac24(?);
+extern void func_0804ac24(struct MidiChannelBus *, u32, u8); // [func_0804ac24] MIDI Channel - Set ?? (unk0_b0)
 extern void func_0804ac40(struct MidiChannelBus *, u32, u8); // [func_0804ac40] MIDI Controller 01 - Modulation Depth
 // extern ? func_0804ac60(?);
 extern void func_0804ac80(struct MidiChannelBus *, u32, u8); // [func_0804ac80] MIDI Controller 48 - Compress/Dampen?
