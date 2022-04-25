@@ -75,7 +75,7 @@ extern void func_0804adb8(struct MidiChannelBus *, s8); // [func_0804adb8] MIDI 
 extern void func_0804ade4(struct MidiChannelBus *, s16); // [func_0804ade4] MIDI Channel Bus - Set Pitch
 // extern ? func_0804ade8(?);
 extern void func_0804ae14(struct MidiChannelBus *, u16); // [func_0804ae14] MIDI Channel Bus - Set ?? (unk8)
-// extern ? func_0804ae18(?);
+extern void func_0804ae18(struct MidiChannelBus *, s16 *); // [func_0804ae18] MIDI Channel Bus - Set ?? (unkC)
 // extern ? func_0804ae1c(?);
 extern void func_0804ae54(struct Jason *); // [func_0804ae54] MIDI Controller 49 - ??
 extern void func_0804ae60(struct Jason *); // [func_0804ae60] MIDI Controller 49 - ??; MIDI Controller 4A - ??

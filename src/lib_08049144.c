@@ -451,7 +451,10 @@ void func_0804ae14(struct MidiChannelBus *mChnlBus, u16 var) {
     mChnlBus->unk8 = var;
 }
 
-#include "asm/lib_08049144/asm_0804ae18.s"
+// [func_0804ae18] MIDI Channel Bus - Set ?? (unkC)
+void func_0804ae18(struct MidiChannelBus *mChnlBus, s16 *var) {
+    mChnlBus->unkC = var;
+}
 
 #include "asm/lib_08049144/asm_0804ae1c.s"
 
