@@ -103,7 +103,7 @@ extern void func_0804b650(struct AudioChannel *, u16); // [func_0804b650] Set Vo
 extern void func_0804b654(struct AudioChannel *, u16, u16); // [func_0804b654] Set Volume for Selected Tracks
 extern void func_0804b65c(struct AudioChannel *, u16, s16); // [func_0804b65c] Set Pitch
 extern void func_0804b66c(struct AudioChannel *, u16, s8); // [func_0804b66c] Set Panning
-// extern ? func_0804b67c(?);
+extern void func_0804b67c(u16); // [func_0804b67c] Pause Audio Channel using the D_08aa06f8 table.
 // extern ? func_0804b6c4(?);
 extern u32  func_0804b6f0(u16, u16, u16); // [func_0804b6f0] Playback Speed Formula
 extern void func_0804b710(struct AudioChannel *, u16); // [func_0804b710] Align Speed with BeatScript

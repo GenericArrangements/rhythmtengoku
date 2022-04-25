@@ -688,7 +688,17 @@ void func_0804b66c(struct AudioChannel *channel, u16 unused, s8 panning) {
     func_0804adb8(channel->midi_channelBus, panning);
 }
 
-#include "asm/lib_08049144/asm_0804b67c.s"
+// [func_0804b67c] Pause Audio Channel using the D_08aa06f8 table.
+void func_0804b67c(u16 offset) {
+    struct SequenceData *seqData = D_08aa06f8[offset].sequenceData;
+    u32 i;
+
+    for (i = 0; i <= D_08aa4318; i++) {
+        if ((D_08aa4324[i] != 0) && (D_08aa4324[i]->sequenceData == seqData)) {
+            func_0804b5d8(D_08aa4324[i]);
+        }
+    }
+}
 
 #include "asm/lib_08049144/asm_0804b6c4.s"
 
