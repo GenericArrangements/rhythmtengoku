@@ -52,7 +52,7 @@ extern void func_0804aa5c(struct MidiChannelBus *, u32, u8); // [func_0804aa5c] 
 extern void func_0804aa7c(struct MidiChannelBus *, u32, u8); // [func_0804aa7c] MIDI Controller 0A - Channel Panning
 extern u8   func_0804aaa4(struct MidiChannelBus *, u32); // [func_0804aaa4] Return a net Panning value, factoring all relevant Panning controllers.
 extern void func_0804aae0(struct MidiChannelBus *, u32); // [func_0804aae0] ??? (called after setting channel panning)
-// extern ? func_0804ab88(?);
+extern void func_0804ab88(struct MidiChannelBus *, u32, u8); // [func_0804ab88] MIDI Channel - Set Instrument/Patch
 extern void func_0804aba8(struct MidiChannelBus *, u32, u8); // [func_0804aba8] MIDI Controller 0B - Expression
 extern void func_0804abc8(struct MidiChannelBus *, u32, u16); // [func_0804abc8] MIDI Controller 00 - ??; MIDI Controller 20 - ??
 extern void func_0804ac24(struct MidiChannelBus *, u32, u8); // [func_0804ac24] MIDI Channel - Set ?? (unk0_b0)

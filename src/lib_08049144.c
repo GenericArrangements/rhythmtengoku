@@ -315,7 +315,10 @@ void func_0804aae0(struct MidiChannelBus *mChnlBus, u32 id) {
     }
 }
 
-#include "asm/lib_08049144/asm_0804ab88.s"
+// [func_0804ab88] MIDI Channel - Set Instrument/Patch
+void func_0804ab88(struct MidiChannelBus *mChnlBus, u32 id, u8 inst) {
+    mChnlBus->midiChannel[id].instPatch = inst;
+}
 
 // [func_0804aba8] MIDI Controller 0B - Expression
 void func_0804aba8(struct MidiChannelBus *mChnlBus, u32 id, u8 expression) {
