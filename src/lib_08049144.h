@@ -95,8 +95,8 @@ extern void func_0804b534(u16); // [func_0804b534] Load a Sound Sequence using t
 extern void func_0804b560(struct AudioChannel *); // [func_0804b560] Remove Sound Sequence from Audio Channel
 extern void func_0804b574(struct AudioChannel *, u8); // [func_0804b574] Pause/Unpause Sound Sequence in Audio Channel { 0 = Unpause; 1 = Pause }
 extern u32  func_0804b5a0(struct AudioChannel *channel); // [func_0804b5a0] Check for Active MIDI Readers
-// extern ? func_0804b5d8(?);
-// extern ? func_0804b5e4(?);
+extern void func_0804b5d8(struct AudioChannel *); // [func_0804b5d8] Pause Audio Channel
+extern void func_0804b5e4(struct AudioChannel *); // [func_0804b5e4] Unpause Audio Channel
 extern void func_0804b5f0(void); // [func_0804b5f0] Pause All Audio Channels
 extern void func_0804b620(void); // [func_0804b620] Unpause All Audio Channels
 extern void func_0804b650(struct AudioChannel *, u16); // [func_0804b650] Set Volume

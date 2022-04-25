@@ -601,9 +601,15 @@ u32 func_0804b5a0(struct AudioChannel *channel) {
     return 0;
 }
 
-#include "asm/lib_08049144/asm_0804b5d8.s"
+// [func_0804b5d8] Pause Audio Channel
+void func_0804b5d8(struct AudioChannel *channel) {
+    func_0804b574(channel, 1);
+}
 
-#include "asm/lib_08049144/asm_0804b5e4.s"
+// [func_0804b5e4] Unpause Audio Channel
+void func_0804b5e4(struct AudioChannel *channel) {
+    func_0804b574(channel, 0);
+}
 
 // [func_0804b5f0] Pause All Audio Channels
 void func_0804b5f0(void) {
