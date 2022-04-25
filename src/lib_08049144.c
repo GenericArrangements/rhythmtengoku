@@ -463,7 +463,17 @@ void func_0804ae18(struct MidiChannelBus *mChnlBus, s16 *var) {
     mChnlBus->unkC = var;
 }
 
-#include "asm/lib_08049144/asm_0804ae1c.s"
+// [func_0804ae1c] ??
+void func_0804ae1c(struct Jason* jason, u8 arg1, u8 arg2, u8 arg3, u8 arg4, u8 arg5) {
+    jason->unk6 = 0;
+    jason->unk7 = 0;
+    jason->unk8 = 0;
+    jason->unk0 = arg1;
+    jason->unk1 = arg2;
+    jason->unk2 = 0x10000 / arg3;
+    jason->unk4 = arg4;
+    jason->unk5 = arg5;
+}
 
 // [func_0804ae54] MIDI Controller 49 - ??
 void func_0804ae54(struct Jason *arg0) {

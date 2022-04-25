@@ -208,8 +208,11 @@ struct Bingus {
 };
 
 struct Jason {
-    u32 unk0;
-    u16 unk4;
+    u8  unk0;
+    u8  unk1;
+    u16 unk2;
+    u8  unk4;
+    u8  unk5;
     u8  unk6;
     u8  unk7;
     u32 unk8;
