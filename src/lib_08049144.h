@@ -105,8 +105,8 @@ extern void func_0804b65c(struct AudioChannel *, u16, s16); // [func_0804b65c] S
 // extern ? func_0804b66c(?);
 // extern ? func_0804b67c(?);
 // extern ? func_0804b6c4(?);
-// extern ? func_0804b6f0(?);
-// extern ? func_0804b710(?);
+extern u32  func_0804b6f0(u16, u16, u16); // [func_0804b6f0] Playback Speed Formula
+extern void func_0804b710(struct AudioChannel *, u16); // [func_0804b710] Align Speed with BeatScript
 extern void func_0804b734(struct AudioChannel *, u16, u16); // [func_0804b734] Volume Fade { type = 0..3 }
 extern void func_0804b7dc(struct AudioChannel *, u16); // [func_0804b7dc] Apply Volume Fade - Fade-Out & Clear
 extern void func_0804b7ec(struct AudioChannel *, u16); // [func_0804b7ec] Apply Volume Fade - Fade-Out & Pause

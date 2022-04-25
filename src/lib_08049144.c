@@ -545,7 +545,7 @@ void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqD
     // Other Data:
     channel->unk0_b10 = 0;
     channel->isPaused = 0;
-    channel->midi_speed = 1;
+    channel->speed = 1;
     channel->env_channelVol = 0x100;
     channel->env_speed = 0x100;
     channel->env_trackVol = 0x100;
@@ -626,9 +626,20 @@ void func_0804b65c(struct AudioChannel *channel, u16 unused, s16 pitch) {
 
 #include "asm/lib_08049144/asm_0804b6c4.s"
 
-#include "asm/lib_08049144/asm_0804b6f0.s"
+// [func_0804b6f0] Playback Speed Formula
+u32 func_0804b6f0(u16 tempo, u16 speedEnv, u16 quarterNote) {
+    return (u32) (tempo * speedEnv * quarterNote) / 0xe10;
+}
 
-#include "asm/lib_08049144/asm_0804b710.s"
+// [func_0804b710] Align Speed with BeatScript
+void func_0804b710(struct AudioChannel *channel, u16 speedEnv) {
+    u32 speed;
+
+    channel->env_speed = speedEnv;
+    speed = func_0804b6f0(channel->midi_tempo, speedEnv, channel->midi_quarterNote);
+    if (speed == 0) speed = 1;
+    channel->speed = speed;
+}
 
 // [func_0804b734] Volume Fade { type = 0..3 }
 void func_0804b734(struct AudioChannel *channel, u16 type, u16 time) {
