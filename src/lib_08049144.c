@@ -414,7 +414,15 @@ void func_0804adb4(struct MidiChannelBus *mChnlBus, u8 volume) {
     mChnlBus->volume = volume;
 }
 
-#include "asm/lib_08049144/asm_0804adb8.s"
+// [func_0804adb8] Set MIDI Channel Bus Panning
+void func_0804adb8(struct MidiChannelBus *mChnlBus, s8 panning) {
+    u32 i;
+    mChnlBus->unk5 = panning;
+
+    for (i = 0; i < mChnlBus->unk14_b0; i++) {
+        func_0804aae0(mChnlBus, i);
+    }
+}
 
 // [func_0804ade4] Set MIDI Channel Bus Pitch
 void func_0804ade4(struct MidiChannelBus *mChnlBus, s16 pitch) {
