@@ -446,7 +446,10 @@ void func_0804ade4(struct MidiChannelBus *mChnlBus, s16 pitch) {
 
 #include "asm/lib_08049144/asm_0804ade8.s"
 
-#include "asm/lib_08049144/asm_0804ae14.s"
+// [func_0804ae14] MIDI Channel Bus - Set ?? (unk8)
+void func_0804ae14(struct MidiChannelBus *mChnlBus, u16 var) {
+    mChnlBus->unk8 = var;
+}
 
 #include "asm/lib_08049144/asm_0804ae18.s"
 
