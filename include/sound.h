@@ -188,6 +188,7 @@ struct SequenceDataAudioChannel D_08aa06f8[1924]; // Sequence Data Audio Channel
 
 struct AudioChannel *D_08aa4324[13]; // Array of Audio Channel pointers.
 u8 D_08aa445c; // Total number of Audio Channels. [13]
+u32 D_08aa4318; // Total number of Audio Channels - 1. [12]
 
 
 struct Bingus {

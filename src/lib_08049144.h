@@ -70,9 +70,9 @@ extern void func_0804ad38(struct MidiChannelBus *, u32, u8); // [func_0804ad38] 
 extern void func_0804ad90(struct MidiChannelBus *, u32, u8); // [func_0804ad90] MIDI Controller 53 - ??
 extern void func_0804ad9c(struct MidiChannelBus *, u32, u8); // [func_0804ad9c] MIDI Controller 54 - ??
 // extern ? func_0804adb0(?);
-extern void func_0804adb4(struct MidiChannelBus *, u8); // [func_0804adb4] Store Sequence Data volume to MIDI Channel Bus volume.
-extern void func_0804adb8(struct MidiChannelBus *, s8); // [func_0804adb8] Set MIDI Channel Bus Panning
-extern void func_0804ade4(struct MidiChannelBus *, s16); // [func_0804ade4] Set MIDI Channel Bus Pitch
+extern void func_0804adb4(struct MidiChannelBus *, u8); // [func_0804adb4] MIDI Channel Bus - Set Volume
+extern void func_0804adb8(struct MidiChannelBus *, s8); // [func_0804adb8] MIDI Channel Bus - Set Panning
+extern void func_0804ade4(struct MidiChannelBus *, s16); // [func_0804ade4] MIDI Channel Bus - Set Pitch
 // extern ? func_0804ade8(?);
 // extern ? func_0804ae14(?);
 // extern ? func_0804ae18(?);
@@ -97,8 +97,8 @@ extern void func_0804b574(struct AudioChannel *, u8); // [func_0804b574] Pause/U
 extern u32  func_0804b5a0(struct AudioChannel *channel); // [func_0804b5a0] Check for Active MIDI Readers
 // extern ? func_0804b5d8(?);
 // extern ? func_0804b5e4(?);
-// extern ? func_0804b5f0(?);
-// extern ? func_0804b620(?);
+extern void func_0804b5f0(void); // [func_0804b5f0] Pause All Audio Channels
+extern void func_0804b620(void); // [func_0804b620] Unpause All Audio Channels
 extern void func_0804b650(struct AudioChannel *, u16); // [func_0804b650] Set Volume
 extern void func_0804b654(struct AudioChannel *, u16, u16); // [func_0804b654] Set Volume for Selected Tracks
 extern void func_0804b65c(struct AudioChannel *, u16, s16); // [func_0804b65c] Set Pitch

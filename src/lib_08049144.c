@@ -409,12 +409,12 @@ void func_0804ad9c(struct MidiChannelBus *mChnlBus, u32 id, u8 arg2) {
 
 #include "asm/lib_08049144/asm_0804adb0.s"
 
-// [func_0804adb4] Store Sequence Data volume to MIDI Channel Bus volume.
+// [func_0804adb4] MIDI Channel Bus - Set Volume
 void func_0804adb4(struct MidiChannelBus *mChnlBus, u8 volume) {
     mChnlBus->volume = volume;
 }
 
-// [func_0804adb8] Set MIDI Channel Bus Panning
+// [func_0804adb8] MIDI Channel Bus - Set Panning
 void func_0804adb8(struct MidiChannelBus *mChnlBus, s8 panning) {
     u32 i;
     mChnlBus->unk5 = panning;
@@ -424,7 +424,7 @@ void func_0804adb8(struct MidiChannelBus *mChnlBus, s8 panning) {
     }
 }
 
-// [func_0804ade4] Set MIDI Channel Bus Pitch
+// [func_0804ade4] MIDI Channel Bus - Set Pitch
 void func_0804ade4(struct MidiChannelBus *mChnlBus, s16 pitch) {
     mChnlBus->pitch = pitch;
 }
@@ -473,12 +473,10 @@ u16 func_0804b324(u8 *stream) {
     return (stream[0] << 8) | stream[1];
 }
 
-
 // [func_0804b330] Parse 32-bit Big Endian value in MIDI Stream.
 u32 func_0804b330(u8 *stream) {
     return (stream[0]) << 0x18 | (stream[1]) << 0x10 | (stream[2]) << 8 | stream[3];
 }
-
 
 // [func_0804b348] Determine length of Loop Marker symbols.
 u32 func_0804b348(char label[]) {
@@ -487,7 +485,6 @@ u32 func_0804b348(char label[]) {
     for (i = 0; label[i] != 0; i++);
     return i;
 }
-
 
 // [func_0804b368] Store Sequence Data to a given Audio Channel.
 void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqData) {
@@ -608,9 +605,23 @@ u32 func_0804b5a0(struct AudioChannel *channel) {
 
 #include "asm/lib_08049144/asm_0804b5e4.s"
 
-#include "asm/lib_08049144/asm_0804b5f0.s"
+// [func_0804b5f0] Pause All Audio Channels
+void func_0804b5f0(void) {
+    u32 i;
 
-#include "asm/lib_08049144/asm_0804b620.s"
+    for (i = 0; i <= D_08aa4318; i++) {
+        func_0804b574(D_08aa4324[i], 1);
+    }
+}
+
+// [func_0804b620] Unpause All Audio Channels
+void func_0804b620(void) {
+    u32 i;
+
+    for (i = 0; i <= D_08aa4318; i++) {
+        func_0804b574(D_08aa4324[i], 0);
+    }
+}
 
 // [func_0804b650] Set Volume
 void func_0804b650(struct AudioChannel *channel, u16 volume) {
