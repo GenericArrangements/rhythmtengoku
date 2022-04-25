@@ -487,15 +487,14 @@ void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqD
     struct MidiTrackReader *mTrkReader;
     u8 *mTrkStream;
     u8 *mTrkStart;
-    u32 chnkLength;
+    u32 chunkLength;
     u32 trackTotal;
     u32 deltaTime;
     u32 i;
-    u32 n;
 
     // Reading Sequence Data:
     if (func_0804b5a0(channel)) {
-        if ((*(u32 *)channel & 0x200800) == 0x200000) {
+        if (channel->unk0_b21 && !channel->isPaused) {
             if (channel->sequenceData->unk4f4 > seqData->unk4f4) return;
         }
     }
@@ -506,14 +505,14 @@ void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqD
     func_0804adb4(mChnlBus, seqData->volume);
     func_08049e8c(mChnlBus, seqData->unk4f4);
     channel->sequenceData = seqData;
-    channel->seqData_channelVol = seqData->volume;
+    channel->volume = seqData->volume;
 
     // Reading MIDI Data:
     mTrkStream = (u8 *)seqData->romAddress;
 
     // Header:
     mTrkStream += 4; // Skip (Header: "MThd")
-    chnkLength = func_0804b330(mTrkStream);
+    chunkLength = func_0804b330(mTrkStream);
     mTrkStream += 4; // Skip (Header: Length)
     trackTotal = func_0804b324(mTrkStream + 2); // Header: Number of MIDI Tracks
     channel->nTracksUsed = trackTotal;
@@ -522,16 +521,16 @@ void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqD
         channel->nTracksUsed = channel->nTracksMax;
     }
     channel->midi_quarterNote = func_0804b324(mTrkStream + 4); // Header: Division
-    mTrkStream += chnkLength; // Skip (Header: Data)
+    mTrkStream += chunkLength; // Skip (Header: Data)
 
     // Track:
     mTrkReader = channel->midi_trackReader;
     for (i = 0; i < channel->nTracksUsed; i++) {
         mTrkStream += 4; // Skip (Track: Length)
-        chnkLength = func_0804b330(mTrkStream);
+        chunkLength = func_0804b330(mTrkStream);
         mTrkStream += 4; // Skip (Track: Length)
         mTrkStart = mTrkStream;
-        mTrkStream += chnkLength;
+        mTrkStream += chunkLength;
         mTrkReader->unk0_0 = 1;
         mTrkReader->start = mTrkStart;
         deltaTime = func_0804c398(&mTrkStart);
@@ -546,21 +545,21 @@ void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqD
     // Other Data:
     channel->unk0_b10 = 0;
     channel->isPaused = 0;
-    channel->speed1 = 1;
-    channel->beatscript_channelVol = 0x100;
-    channel->speed2 = 0x100;
-    channel->beatscript_trackVol = 0x100;
-    channel->volumeFadeType = 0;
-    channel->volumeFadeEnv = 0x8000;
-    channel->volumeFadeSpeed = 0;
+    channel->midi_speed = 1;
+    channel->env_channelVol = 0x100;
+    channel->env_speed = 0x100;
+    channel->env_trackVol = 0x100;
+    channel->volFadeType = 0;
+    channel->env_volFadeEnv = 0x8000;
+    channel->env_volFadeSpeed = 0;
     channel->midi_loopStartSym = &D_08a865a4[0];
     channel->midi_loopStartSymSize = func_0804b348(D_08a865a4);
     channel->midi_loopEndSym = &D_08a865a8[0];
     channel->midi_loopEndSymSize = func_0804b348(D_08a865a8);
-    channel->unk2D = 0x40;
-    channel->unk2E = 0x40;
-    channel->unk2F = 0x40;
-    channel->unk30 = 0x40;
+    channel->midiController4E = 0x40;
+    channel->midiController4F = 0x40;
+    channel->midiController50 = 0x40;
+    channel->midiController51 = 0x40;
     channel->unk34 = 0;
 }
 
@@ -598,13 +597,13 @@ void func_0804b574(struct AudioChannel *channel, u8 pause) {
 
 // [func_0804b650] Set Volume
 void func_0804b650(struct AudioChannel *channel, u16 volume) {
-    channel->beatscript_channelVol = volume;
+    channel->env_channelVol = volume;
 }
 
 // [func_0804b654] Set Volume for Selected Tracks
 void func_0804b654(struct AudioChannel *channel, u16 tracks, u16 volume) {
-    channel->beatscript_trackVol = volume;
-    channel->beatscript_trackSel = tracks;
+    channel->env_trackVol = volume;
+    channel->env_trackSel = tracks;
 }
 
 // [func_0804b65c] Set Pitch
@@ -626,25 +625,25 @@ void func_0804b65c(struct AudioChannel *channel, u16 unused, s16 pitch) {
 void func_0804b734(struct AudioChannel *channel, u16 type, u16 time) {
     switch (type) {
         case 0: // Reset Fade
-            channel->volumeFadeEnv = 0x8000;
-            channel->volumeFadeSpeed = 0;
+            channel->env_volFadeEnv = 0x8000;
+            channel->env_volFadeSpeed = 0;
             break;
 
         case 1: // Fade In
             if (time == 0) time = 1;
-            if (channel->volumeFadeType == 0) channel->volumeFadeEnv = 0;
-            channel->volumeFadeSpeed = 0x8000 / time;
+            if (channel->volFadeType == 0) channel->env_volFadeEnv = 0;
+            channel->env_volFadeSpeed = 0x8000 / time;
             channel->isPaused = 0;
             break;
 
         case 2: // Fade Out & Clear
         case 3: // Fade Out & Pause
-            if (channel->volumeFadeType == 0) channel->volumeFadeEnv = 0x8000;
+            if (channel->volFadeType == 0) channel->env_volFadeEnv = 0x8000;
             if (time != 0) {
-                channel->volumeFadeSpeed = 0x8000 / time;
+                channel->env_volFadeSpeed = 0x8000 / time;
             } else {
-                channel->volumeFadeEnv = 0;
-                channel->volumeFadeSpeed = 1;
+                channel->env_volFadeEnv = 0;
+                channel->env_volFadeSpeed = 1;
                 if (type == 2) {
                     type = 0;
                     func_0804b560(channel);
@@ -654,7 +653,7 @@ void func_0804b734(struct AudioChannel *channel, u16 type, u16 time) {
             }
             break;
     }
-    channel->volumeFadeType = type;
+    channel->volFadeType = type;
 }
 
 // [func_0804b7dc] Apply Volume Fade - Fade-Out & Clear
@@ -710,10 +709,10 @@ void func_0804b95c(struct AudioChannel *audioChnl, u32 id, u8 ctrl, u8 var) {
         case 0x4C: D_03005640 = var * 2; break;
         case 0x4D: func_08049b8c(var); break;
         case 0x4B: func_0804acf0(mChnlBus, id, var); break;
-        case 0x4E: audioChnl->unk2D = var; break;
-        case 0x4F: audioChnl->unk2E = var; break;
-        case 0x50: audioChnl->unk2F = var; break;
-        case 0x51: audioChnl->unk30 = var; break;
+        case 0x4E: audioChnl->midiController4E = var; break;
+        case 0x4F: audioChnl->midiController4F = var; break;
+        case 0x50: audioChnl->midiController50 = var; break;
+        case 0x51: audioChnl->midiController51 = var; break;
         case 0x52: func_0804ad38(mChnlBus, id, var); break;
         case 0x53: func_0804ad90(mChnlBus, id, var); break;
         case 0x54: func_0804ad9c(mChnlBus, id, var); break;

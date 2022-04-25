@@ -141,33 +141,35 @@ struct MidiTrackReader {
 
 // Audio Device Channel
 struct AudioChannel {
-    u32 nTracksMax:5;       // Maximum number of MIDI Tracks this Audio Channel is able to process. (?)
-    u32 nTracksUsed:5;      // The number of MIDI Tracks being used by the given Sound Sequence.
-    u32 unk0_b10:1;         // ???
-    u32 isPaused:1;         // Paused State { 0 = Unpaused; 1 = Paused }
-    u32 unk0_b12:15;        // ??? (indeterminate split; may be unused entirely)
-    u32 volumeFadeType:3;   // Type of currently-active Volume Fade { 0..3 }
+    u32 nTracksMax:5;   // Maximum number of MIDI Tracks this Audio Channel is able to process. (?)
+    u32 nTracksUsed:5;  // The number of MIDI Tracks being used by the given Sound Sequence.
+    u32 unk0_b10:1;     // ???
+    u32 isPaused:1;     // Paused State { 0 = Unpaused; 1 = Paused }
+    u32 unk0_b12:9;     // (indeterminate split; may be unused entirely)
+    u32 unk0_b21:1;     // ??? (can prevent a track from loading when set)
+    u32 unk0_b22:5;     // (indeterminate split; may be unused entirely)
+    u32 volFadeType:3;  // Type of currently-active Volume Fade { 0..3 }
     struct MidiChannelBus *midi_channelBus;     // ??: IWRAM Pointer (various sound data, e.g. InstrumentBank pointer)
     struct MidiTrackReader *midi_trackReader;   // MIDI: Array of structs which each keep track of a MIDI Track being processed.
     const struct SequenceData *sequenceData;    // SequenceData: Currently-loaded Sound Sequence.
-    u32 speed1;     // ??: Similar but not directly tempo. [default = 1]
+    u32 midi_speed;     // ??: Similar but not directly tempo. [default = 1]
     char *midi_loopStartSym;    // MIDI: Label char denoting "Loop Start". [always D_08A865D4, '[']
     char *midi_loopEndSym;      // MIDI: Label char denoting "Loop End". [always D_08A865D8, ']']
     u8  midi_loopStartSymSize;  // MIDI: Value of func_0804B348(D_08A865A4). [1]
     u8  midi_loopEndSymSize;    // MIDI: Value of func_0804B348(D_08A865A8). [1]
     u16 midi_quarterNote;       // MIDI: Value denoting 1 beat. Read upon initialisation, and for any change in tempo. [always 0x18]
-    u16 beatscript_channelVol;  // BeatScript: Audio Channel Volume Envelope. [default = 0x100]
-    u16 beatscript_trackVol;    // BeatScript: Volume Envelope for a selection of MIDI Tracks. [default = 0x100]
-    u16 beatscript_trackSel;    // BeatScript: Selection of MIDI Tracks to apply Volume Envelope.
-    u16 speed2;     // ??: Similar to speed1, but with different values, and being 16-bit. [default = 0x100]
-    u16 volumeFadeEnv;      // BeatScript: Volume multiplier used for fade-out and mute effects. [default = 0x8000]
-    u16 volumeFadeSpeed;    // BeatScript: Higher values for faster fade-out. Is set to 1 when track is muted instantly. [default = 0]
-    u8  seqData_channelVol; // SequenceData: Volume Envelope
-    u8  unk2D;      // ??: [default = 0x40]
-    u8  unk2E;      // ??: [default = 0x40]
-    u8  unk2F;      // ??: [default = 0x40]
-    u8  unk30;      // ??: [default = 0x40]
-    u32 unk34;      // ??: [default = 0]
+    u16 env_channelVol; // BeatScript: Channel Volume Envelope. [default = 0x100]
+    u16 env_trackVol;   // BeatScript: Volume Envelope for a selection of MIDI Tracks. [default = 0x100]
+    u16 env_trackSel;   // BeatScript: Selection of MIDI Tracks to apply Volume Envelope.
+    u16 env_speed;      // BeatScript: Speed Envelope. [default = 0x100]
+    u16 env_volFadeEnv;     // BeatScript: Volume multiplier used for fade-out and mute effects. [default = 0x8000]
+    u16 env_volFadeSpeed;   // BeatScript: Higher values for faster fade-out. Is set to 1 when track is muted instantly. [default = 0]
+    u8  volume;         // SequenceData: Volume Envelope
+    u8  midiController4E;   // ??: [default = 0x40]
+    u8  midiController4F;   // ??: [default = 0x40]
+    u8  midiController50;   // ??: [default = 0x40]
+    u8  midiController51;   // ??: [default = 0x40]
+    u32 unk34;          // ??: [default = 0]
 };
 
 struct AudioChannelInfo {
