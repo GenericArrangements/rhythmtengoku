@@ -416,7 +416,10 @@ void func_0804ad9c(struct MidiChannelBus *mChnlBus, u32 id, u8 arg2) {
     mChnlBus->midiChannel[id].unk1E = arg2;
 }
 
-#include "asm/lib_08049144/asm_0804adb0.s"
+// [func_0804adb0] MIDI Channel Bus - Set ?? (unk4)
+void func_0804adb0(struct MidiChannelBus *mChnlBus, u8 var) {
+    mChnlBus->unk4 = var;
+}
 
 // [func_0804adb4] MIDI Channel Bus - Set Volume
 void func_0804adb4(struct MidiChannelBus *mChnlBus, u8 volume) {
