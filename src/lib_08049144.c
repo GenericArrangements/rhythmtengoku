@@ -204,7 +204,7 @@ void func_08049fa0(struct MidiChannelBus *mChnlBus, u32 unk14_b0, struct MidiCha
     mChnlBus->unk2 = 0;
     mChnlBus->unk4 = 0;
     mChnlBus->unk5 = 0;
-    mChnlBus->unk6 = 0;
+    mChnlBus->pitch = 0;
     mChnlBus->unk8 = 0x1400;
     mChnlBus->unkC = &D_08a86008[0];
 
@@ -416,7 +416,10 @@ void func_0804adb4(struct MidiChannelBus *mChnlBus, u8 volume) {
 
 #include "asm/lib_08049144/asm_0804adb8.s"
 
-#include "asm/lib_08049144/asm_0804ade4.s"
+// [func_0804ade4] Set MIDI Channel Bus Pitch
+void func_0804ade4(struct MidiChannelBus *mChnlBus, s16 pitch) {
+    mChnlBus->pitch = pitch;
+}
 
 #include "asm/lib_08049144/asm_0804ade8.s"
 

@@ -72,7 +72,7 @@ extern void func_0804ad9c(struct MidiChannelBus *, u32, u8); // [func_0804ad9c] 
 // extern ? func_0804adb0(?);
 extern void func_0804adb4(struct MidiChannelBus *, u8); // [func_0804adb4] Store Sequence Data volume to MIDI Channel Bus volume.
 // extern ? func_0804adb8(?);
-// extern ? func_0804ade4(?);
+extern void func_0804ade4(struct MidiChannelBus *, s16); // [func_0804ade4] Set MIDI Channel Bus Pitch
 // extern ? func_0804ade8(?);
 // extern ? func_0804ae14(?);
 // extern ? func_0804ae18(?);
