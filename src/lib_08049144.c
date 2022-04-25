@@ -349,7 +349,10 @@ void func_0804ac40(struct MidiChannelBus *mChnlBus, u32 id, u8 depth) {
     mChnlBus->midiChannel[id].modDepth = depth;
 }
 
-#include "asm/lib_08049144/asm_0804ac60.s"
+// [func_0804ac60] MIDI Channel - Set ?? (unk4_b21)
+void func_0804ac60(struct MidiChannelBus *mChnlBus, u32 id, u8 var) {
+    mChnlBus->midiChannel[id].unk4_b21 = var;
+}
 
 // [func_0804ac80] MIDI Controller 48 - Compress/Dampen?
 void func_0804ac80(struct MidiChannelBus *mChnlBus, u32 id, u8 comp) {
@@ -361,7 +364,10 @@ void func_0804aca0(struct MidiChannelBus *mChnlBus, u32 id, u8 type) {
     mChnlBus->midiChannel[id].modType = type;
 }
 
-#include "asm/lib_08049144/asm_0804acc0.s"
+// [func_0804acc0] MIDI Channel - Set ?? (unkC)
+void func_0804acc0(struct MidiChannelBus *mChnlBus, u32 id, u8 var) {
+    mChnlBus->midiChannel[id].unkC = var;
+}
 
 // [func_0804accc] MIDI Controller 15 - Modulation Speed
 void func_0804accc(struct MidiChannelBus *mChnlBus, u32 id, u16 speed) {

@@ -57,10 +57,10 @@ extern void func_0804aba8(struct MidiChannelBus *, u32, u8); // [func_0804aba8] 
 extern void func_0804abc8(struct MidiChannelBus *, u32, u16); // [func_0804abc8] MIDI Controller 00 - ??; MIDI Controller 20 - ??
 extern void func_0804ac24(struct MidiChannelBus *, u32, u8); // [func_0804ac24] MIDI Channel - Set ?? (unk0_b0)
 extern void func_0804ac40(struct MidiChannelBus *, u32, u8); // [func_0804ac40] MIDI Controller 01 - Modulation Depth
-// extern ? func_0804ac60(?);
+extern void func_0804ac60(struct MidiChannelBus *, u32, u8); // [func_0804ac60] MIDI Channel - Set ?? (unk4_b21)
 extern void func_0804ac80(struct MidiChannelBus *, u32, u8); // [func_0804ac80] MIDI Controller 48 - Compress/Dampen?
 extern void func_0804aca0(struct MidiChannelBus *, u32, u8); // [func_0804aca0] MIDI Controller 16 - Modulation Type
-// extern ? func_0804acc0(?);
+extern void func_0804acc0(struct MidiChannelBus *, u32, u8); // [func_0804acc0] MIDI Channel - Set ?? (unkC)
 extern void func_0804accc(struct MidiChannelBus *, u32, u16); // [func_0804accc] MIDI Controller 15 - Modulation Speed
 extern void func_0804acd8(struct MidiChannelBus *, u32, u8); // [func_0804acd8] MIDI Controller 1A - Modulation Delay
 extern void func_0804ace4(struct MidiChannelBus *, u32, u8); // [func_0804ace4] MIDI Controller 14 - Modulation Wheel Range
