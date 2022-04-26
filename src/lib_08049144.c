@@ -844,7 +844,7 @@ u32 func_0804b898(struct AudioChannel *channel, u8 **upstream) {
     }
 }
 
-// [func_0804b95c] Interpret MIDI Controller Change Instruction
+// [func_0804b95c] MIDI Controller Change Instructions
 void func_0804b95c(struct AudioChannel *audioChnl, u32 id, u8 ctrl, u8 var) {
     struct MidiChannelBus *mChnlBus = audioChnl->midi_channelBus;
 
@@ -889,7 +889,131 @@ void func_0804b95c(struct AudioChannel *audioChnl, u32 id, u8 ctrl, u8 var) {
 
 #include "asm/lib_08049144/asm_0804bc5c.s"
 
-#include "asm/lib_08049144/asm_0804bcc0.s"
+// [func_0804bcc0] MIDI Messages/Events
+u32 func_0804bcc0(struct AudioChannel *channel, u32 id) {
+    u32 trackEndType = 0;
+    struct MidiTrackReader *reader = &channel->midi_trackReader[id];
+    struct MidiTrackReader *tempReader;
+    u8 *byteStream = reader->current;
+    u8 command;
+    u16 mod;
+    u32 i;
+
+    // ??
+    command = byteStream[0];
+    if ((command & 0x80) != 0) {
+        reader->unk0_b2 = command;
+        byteStream++;
+    }
+    command = reader->unk0_b2;
+
+    // MIDI Meta Events & System Messages
+    if (command > 0xEF) {
+        switch (command & 0x0F) {
+            // MIDI System Exclusive Message (F0)
+            case 0x00:
+                i = func_0804c398(&byteStream);
+                func_0804b80c(channel, byteStream);
+                byteStream += i;
+                break;
+
+            // MIDI Meta Events (FF)
+            case 0x0F:
+                switch (func_0804b898(channel, &byteStream)) {
+                    // End of Track
+                    case 1:
+                        func_0804accc(channel->midi_channelBus, id, 0);
+                        return 1;
+                    // Marker: Loop Start
+                    case 2:
+                        if (channel->unk0_b10) break;
+                        reader->unk0_b1 = reader->unk0_b0;
+                        reader->unk0_b10 = reader->unk0_b2;
+                        reader->unk10 = byteStream;
+                        reader->unk0_b18 = 1;
+                        channel->unk34 = reader->deltaTime;
+                        channel->unk0_b10 = 1;
+                        break;
+
+                    // Marker: Loop End
+                    case 3:
+                        if (!channel->unk0_b10) break;
+                        for (i = 0; i < channel->nTracksUsed; i++) {
+                            tempReader = &channel->midi_trackReader[i];
+                            tempReader->unk0_b0 = tempReader->unk0_b1;
+                            tempReader->unk0_b2 = tempReader->unk0_b10;
+                            if (reader == tempReader) {
+                                byteStream = reader->unk10;
+                            } else {
+                                tempReader->current = tempReader->unk10;
+                                tempReader->unkC = reader->unkC;
+                            }
+                            func_08049d30(channel->midi_channelBus, i);
+                        }
+                        trackEndType = 2;
+                        break;
+                }
+                break;
+
+            // Else, do nothing.
+            default:
+                i = func_0804c398(&byteStream);
+                byteStream += i;
+                break;
+        }
+    }
+
+    // MIDI Messages { 80, 90, A0, B0, C0, D0, E0 }
+    else {
+        switch (command & 0xf0) {
+            // Note Off
+            case 0x80:
+                func_0804bc5c(id, byteStream[0], 0);
+                byteStream += 2;
+                break;
+
+            // Note On
+            case 0x90:
+                func_0804bc5c(id, byteStream[0], byteStream[1]);
+                byteStream += 2;
+                break;
+
+            // Polyphonic Key Pressure (Aftertouch) [Not Supported]
+            case 0xA0:
+                byteStream += 2;
+                break;
+
+            // MIDI Controller Change
+            case 0xB0:
+                func_0804b95c(channel, id, byteStream[0], byteStream[1]);
+                byteStream += 2;
+                break;
+
+            // Program Change
+            case 0xC0:
+                func_0804ab88(channel->midi_channelBus, id, byteStream[0]);
+                byteStream += 1;
+                break;
+
+            // Channel Pressure (Aftertouch) [Not Supported]
+            case 0xD0:
+                byteStream += 1;
+                break;
+
+            // Pitch Wheel Change
+            case 0xE0:
+                mod = (byteStream[0] & 0x7f) | ((byteStream[1] & 0x7f) << 7);
+                func_0804aa40(channel->midi_channelBus, id, mod);
+                byteStream += 2;
+                break;
+        }
+    }
+
+    // Close.
+    reader->current = byteStream;
+    return trackEndType;
+}
+
 
 #include "asm/lib_08049144/asm_0804bed0.s"
 

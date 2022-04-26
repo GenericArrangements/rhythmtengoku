@@ -113,9 +113,9 @@ extern void func_0804b7ec(struct AudioChannel *, u16); // [func_0804b7ec] Apply 
 extern void func_0804b7fc(struct AudioChannel *, u16); // [func_0804b7fc] Apply Volume Fade - Fade-In
 extern void func_0804b80c(struct AudioChannel *, u8 *); // [func_0804b80c] MIDI Event F0 - System-Exclusive Message
 extern u32  func_0804b898(struct AudioChannel *, u8 **); // [func_0804b898] MIDI Meta Events (Loop Start, Loop End, Track End, Set Tempo)
-extern void func_0804b95c(struct AudioChannel *, u32, u8, u8); // [func_0804b95c] Interpret MIDI Controller Change Instruction
+extern void func_0804b95c(struct AudioChannel *, u32, u8, u8); // [func_0804b95c] MIDI Controller Change Instructions
 // extern ? func_0804bc5c(?);
-extern u32  func_0804bcc0(struct AudioChannel *, u32); // [func_0804bcc0] Interpret MIDI Events
+extern u32  func_0804bcc0(struct AudioChannel *, u32);// [func_0804bcc0] MIDI Messages/Events
 // extern ? func_0804bed0(?);
 // extern ? func_0804c040(?);
 // extern ? func_0804c0f8(?);
