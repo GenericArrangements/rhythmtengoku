@@ -8,6 +8,7 @@ extern u32 D_03005620[];
 extern u32 D_0300562c;
 extern u32 D_03005638;
 extern u8  D_03005640;
+extern struct AudioChannel *D_03005644;
 extern u16 D_03005648;
 extern struct Bingus D_030056a0[];
 extern u16 D_03005b20;
@@ -778,7 +779,29 @@ void func_0804b7fc(struct AudioChannel *channel, u16 time) {
     func_0804b734(channel, 1, time);
 }
 
-#include "asm/lib_08049144/asm_0804b80c.s"
+// [func_0804b80c] MIDI Event F0 - System-Exclusive Message
+void func_0804b80c(struct AudioChannel *channel, u8 *stream) {
+    struct MidiChannelBus *mChnlBus = channel->midi_channelBus;
+    u8 type = *stream;
+    u32 i;
+
+    stream++;
+    switch (type) {
+        case 0:
+            func_08049be4();
+            D_03005b3c = 0;
+            D_03005640 = stream[0] << 1;
+            func_0804ae1c(&D_03005b30, stream[1] * 2, stream[2] * 2, stream[3] * 2, stream[4] * 2, stream[5] * 2);
+            func_08049b8c(stream[6]);
+            D_03005644 = channel;
+            break;
+
+        case 1:
+            for (i = 0; i < 12; i++) mChnlBus->unk1C[i] = stream[i] - 0x40;
+            break;
+    }
+}
+
 
 // [func_0804b898] MIDI Meta Events { returns 0..3 }
 u32 func_0804b898(struct AudioChannel *channel, u8 **upstream) {
