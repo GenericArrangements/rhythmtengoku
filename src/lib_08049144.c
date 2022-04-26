@@ -165,7 +165,11 @@ void func_08049e8c(struct MidiChannelBus *mChnlBus, u8 unk4f4) {
     }
 }
 
-#include "asm/lib_08049144/asm_08049ec4.s"
+// [func_08049ec4] ??
+void func_08049ec4(struct MidiChannelBus *mChnlBus, u8 unk1, u16 unk2) {
+    mChnlBus->unk1 = unk1;
+    mChnlBus->unk2 = unk2;
+}
 
 // [func_08049ecc] INITIALISE - MIDI Channel
 void func_08049ecc(struct MidiChannel *mChnl) {
