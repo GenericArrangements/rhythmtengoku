@@ -127,14 +127,15 @@ struct MidiChannelBus {
 };
 
 struct MidiTrackReader {
-    u32 unk0_0:1;
-    u32 unk0_1:1;
-    u32 unk0_2:16;
-    u32 unk0_18:1;
+    u32 unk0_b0:1;
+    u32 unk0_b1:1;
+    u32 unk0_b2:8;
+    u32 unk0_b10:8;
+    u32 unk0_b18:1;
     u8 *start;
     u8 *current;
     u32 unkC;
-    u32 unk10;
+    u8 *unk10;
     u32 unk14;
     u32 deltaTime;
 };

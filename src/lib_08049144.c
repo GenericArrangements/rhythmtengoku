@@ -4,8 +4,8 @@
 
 asm(".include \"include/gba.inc\"");//Temporary
 
-
 extern u32 D_03005620[];
+extern u32 D_0300562c;
 extern u32 D_03005638;
 extern u8  D_03005640;
 extern u16 D_03005648;
@@ -577,14 +577,14 @@ void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqD
         mTrkStream += 4; // Skip (Track: Length)
         mTrkStart = mTrkStream;
         mTrkStream += chunkLength;
-        mTrkReader->unk0_0 = 1;
+        mTrkReader->unk0_b0 = 1;
         mTrkReader->start = mTrkStart;
         deltaTime = func_0804c398(&mTrkStart);
         mTrkReader->unkC = deltaTime << 8;
         mTrkReader->current = mTrkStart;
         mTrkReader->deltaTime = deltaTime;
-        mTrkReader->unk0_1 = 0;
-        mTrkReader->unk0_18 = 0;
+        mTrkReader->unk0_b1 = 0;
+        mTrkReader->unk0_b18 = 0;
         mTrkReader++;
     }
 
@@ -637,7 +637,7 @@ u32 func_0804b5a0(struct AudioChannel *channel) {
 
     if (channel->sequenceData == 0) return 0;
     for (i = 0; i < channel->nTracksUsed; i++) {
-        if (channel->midi_trackReader[i].unk0_0) return 1;
+        if (channel->midi_trackReader[i].unk0_b0) return 1;
     }
     return 0;
 }
@@ -780,8 +780,46 @@ void func_0804b7fc(struct AudioChannel *channel, u16 time) {
 
 #include "asm/lib_08049144/asm_0804b80c.s"
 
-#include "asm/lib_08049144/asm_0804b898.s"
+// [func_0804b898] MIDI Meta Events { returns 0..3 }
+u32 func_0804b898(struct AudioChannel *channel, u8 **upstream) {
+    u8 *stream = *upstream;
+    u8 event = *stream;
+    u32 length;
+    u32 tempo;
 
+    stream++;
+    length = func_0804c398(&stream);
+    *upstream = stream + length;
+
+    switch (event) {
+        // Text Marker
+        case 0x06:
+            if (length == channel->midi_loopStartSymSize) {
+                if (func_0804b6c4(channel->midi_loopStartSym, stream, length))
+                    return 2;
+            }
+            if (length == channel->midi_loopEndSymSize) {
+                if (func_0804b6c4(channel->midi_loopEndSym, stream, length))
+                    return 3;
+            }
+            return 0;
+
+        // End of Track
+        case 0x2F:
+            return 1;
+
+        // Set Tempo
+        case 0x51:
+            tempo = (u32) 60000000 / ((stream[0] << 0x10) | (stream[1] << 0x8) | stream[2]);
+            channel->midi_tempo = tempo;
+            D_0300562c = func_0804b6f0(tempo, channel->env_speed, channel->midi_quarterNote);
+            return 0;
+
+        // Else, do nothing.
+        default:
+            return 0;
+    }
+}
 
 // [func_0804b95c] Interpret MIDI Controller Change Instruction
 void func_0804b95c(struct AudioChannel *audioChnl, u32 id, u8 ctrl, u8 var) {
@@ -825,7 +863,6 @@ void func_0804b95c(struct AudioChannel *audioChnl, u32 id, u8 ctrl, u8 var) {
         case 0x54: func_0804ad9c(mChnlBus, id, var); break;
     }
 }
-
 
 #include "asm/lib_08049144/asm_0804bc5c.s"
 
