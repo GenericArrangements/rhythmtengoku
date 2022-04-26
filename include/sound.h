@@ -218,3 +218,9 @@ struct Jason {
     u8  unk7;
     u32 unk8;
 };
+
+struct MidiNote {
+    u32 channel:4;
+    u32 key:7;
+    u32 velocity:7;
+};
