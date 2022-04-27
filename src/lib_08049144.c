@@ -936,13 +936,13 @@ void func_0804b95c(struct AudioChannel *audioChnl, u32 id, u8 ctrl, u8 var) {
 
 // [func_0804bc5c] MIDI - Note Off/On [Evnt_8; Evnt_9]
 void func_0804bc5c(u32 id, u32 key, u32 vel) {
-    struct MidiNote *noteThing;
+    struct MidiNote *midiNote;
 
     if (D_03005b78 < 20) {
-        noteThing = &D_03005650[D_03005b78++];
-        noteThing->channel = id;
-        noteThing->key = key;
-        noteThing->velocity = vel;
+        midiNote = &D_03005650[D_03005b78++];
+        midiNote->channel = id;
+        midiNote->key = key;
+        midiNote->velocity = vel;
     }
 }
 
