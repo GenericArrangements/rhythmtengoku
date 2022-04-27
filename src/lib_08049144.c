@@ -7,6 +7,10 @@ asm(".include \"include/gba.inc\"");//Temporary
 
   // // // // // // // // // // // // // // // // // // // //
 
+extern struct AudioChannel *D_03001598;
+
+extern u16 D_030055f0;
+
 extern u32 D_03005620[3];
 extern u32 D_0300562c; // Current Speed (NOT Tempo)
 
@@ -30,10 +34,11 @@ extern u8  D_03005b44; // Must be clear for certain operations to work; Affects 
 
 extern u16 D_03005b78; // Current Available MIDI Note Slot
 extern u8 *D_03005b7c; // Byte at offset D_03005648 set by MIDI Controller 10;
+extern u16 D_03005b80;
 
 extern struct Bingus *D_03005b88;
 extern u16 D_03005b8c; // Total number of elements at D_030064bc
-extern u8  D_03005b90[]; // Reverb controller..?
+extern s8  D_03005b90[]; // Reverb controller..?
 
 extern u32 *D_030064b0;
 extern struct Bingus *D_030064bc;
@@ -47,6 +52,7 @@ extern char D_08a865a4[]; // MIDI "Loop Start" Marker: '['
 extern char D_08a865a8[]; // MIDI "Loop End" Marker: ']'
 
   // // // // // // // // // // // // // // // // // // // //
+
 
 
 
@@ -1078,7 +1084,63 @@ u32 func_0804bcc0(struct AudioChannel *channel, u32 id) {
 
 #include "asm/lib_08049144/asm_0804c0f8.s"
 
-#include "asm/lib_08049144/asm_0804c170.s"
+// [func_0804c170] ??
+void func_0804c170(void) {
+    struct AudioChannel *channel;
+    u32 speed;
+    u32 i;
+    s32 rvb0 = D_03005b90[0];
+    s32 rvb1 = D_03005b90[1];
+    s32 rvb2 = D_03005b90[2];
+    s32 rvb3 = D_03005b90[3];
+
+    D_030055f0 = REG_VCOUNT;
+
+    for (i = 0; i <= D_08aa4318; i++) {
+        channel = D_08aa4324[i];
+        if (channel != 0) {
+            func_0804c040(channel);
+            func_0804c0f8(channel);
+            func_08049d08(channel->midi_channelBus);
+            if (channel->sequenceData != 0) {
+                rvb0 -= 0x80 - (channel->midiController4E * 2);
+                rvb1 -= 0x40 - (channel->midiController4F);
+                rvb2 -= 0x40 - (channel->midiController50);
+                rvb3 -= 0x40 - (channel->midiController51);
+            }
+        }
+    }
+
+    channel = D_03001598;
+    if ((D_08aa431c != 0) && (channel != 0)) {
+        func_0804c6c8();
+        rvb0 -= 0x80 - (channel->midiController4E * 2);
+        rvb1 -= 0x40 - (channel->midiController4F);
+        rvb2 -= 0x40 - (channel->midiController50);
+        rvb3 -= 0x40 - (channel->midiController51);
+    }
+
+    if ((D_03005644 != 0) && (D_03005b3c != 0)) {
+        speed = func_0804b6f0(D_03005644->midi_tempo, D_03005644->env_speed, 0x18);
+        func_0804ae6c(&D_03005b30, speed);
+        func_08049b70((D_03005b30.unk7 * D_03005640) >> 8);
+    }
+
+    func_0804a334();
+    D_03005b80 = REG_VCOUNT;
+
+    if (rvb0 < 0) rvb0 = 0;
+    if (rvb0 > 0x7f) rvb0 = 0x7f;
+    if (rvb1 < 0) rvb1 = 0;
+    if (rvb1 > 0x7f) rvb1 = 0x7f;
+    if (rvb2 < 0) rvb2 = 0;
+    if (rvb2 > 0x7f) rvb2 = 0x7f;
+    if (rvb3 < 0) rvb3 = 0;
+    if (rvb3 > 0x7f) rvb3 = 0x7f;
+
+    func_08049b34(rvb0, rvb1, rvb2, rvb3);
+    func_080497f8();
+}
 
 // [func_0804c340] Set Reverb
 void func_0804c340(u32 arg0, u32 arg1, u32 arg2, u32 arg3) {

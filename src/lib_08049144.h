@@ -134,7 +134,7 @@ extern u32  func_0804bcc0(struct AudioChannel *, u32); // [func_0804bcc0] MIDI -
 // extern ? func_0804bed0(?);
 // extern ? func_0804c040(?);
 // extern ? func_0804c0f8(?);
-// extern ? func_0804c170(?);
+extern void func_0804c170(void); // [func_0804c170] ??
 extern void func_0804c340(u32, u32, u32, u32); // [func_0804c340] Set Reverb
 // extern ? func_0804c358(?);
 // extern ? func_0804c35c(?);

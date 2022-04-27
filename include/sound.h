@@ -166,10 +166,10 @@ struct AudioChannel {
     u16 env_volFadeEnv;     // BeatScript: Volume multiplier used for fade-out and mute effects. [default = 0x8000]
     u16 env_volFadeSpeed;   // BeatScript: Higher values for faster fade-out. Is set to 1 when track is muted instantly. [default = 0]
     u8  volume;     // SequenceData: Volume Envelope
-    u8  midiController4E;   // ??: [default = 0x40]
-    u8  midiController4F;   // ??: [default = 0x40]
-    u8  midiController50;   // ??: [default = 0x40]
-    u8  midiController51;   // ??: [default = 0x40]
+    s8  midiController4E;   // ??: [default = 0x40]
+    s8  midiController4F;   // ??: [default = 0x40]
+    s8  midiController50;   // ??: [default = 0x40]
+    s8  midiController51;   // ??: [default = 0x40]
     u32 unk34;      // ??: [default = 0]
 };
 
@@ -190,6 +190,7 @@ struct SequenceDataAudioChannel D_08aa06f8[1924]; // Sequence Data Audio Channel
 struct AudioChannel *D_08aa4324[13]; // Array of Audio Channel pointers.
 u8 D_08aa445c; // Total number of Audio Channels. [13]
 u32 D_08aa4318; // Total number of Audio Channels - 1. [12]
+u8 D_08aa431c; // Unknown Constant [1]
 
 
 struct Bingus {
@@ -215,7 +216,7 @@ struct Jason {
     u8  unk4;
     u8  unk5;
     u8  unk6;
-    u8  unk7;
+    s8  unk7;
     u32 unk8;
 };
 
