@@ -825,7 +825,7 @@ void func_0804b7fc(struct AudioChannel *channel, u16 time) {
   //  //  //  //   MIDI SEQUENCE OPERATIONS   //  //  //  //
 
 
-// [func_0804b80c] MIDI - System-Exclusive Message (F0)
+// [func_0804b80c] MIDI - System-Exclusive Message [Evnt_F0]
 void func_0804b80c(struct AudioChannel *channel, u8 *stream) {
     struct MidiChannelBus *mChnlBus = channel->midi_channelBus;
     u8 type = *stream;
@@ -849,7 +849,6 @@ void func_0804b80c(struct AudioChannel *channel, u8 *stream) {
             break;
     }
 }
-
 
 // [func_0804b898] MIDI - Meta Event (Loop Start, Loop End, Track End, Set Tempo)
 u32 func_0804b898(struct AudioChannel *channel, u8 **upstream) {
@@ -892,7 +891,7 @@ u32 func_0804b898(struct AudioChannel *channel, u8 **upstream) {
     }
 }
 
-// [func_0804b95c] MIDI - Controller Change
+// [func_0804b95c] MIDI - Controller Change [Evnt_B]
 void func_0804b95c(struct AudioChannel *audioChnl, u32 id, u8 ctrl, u8 var) {
     struct MidiChannelBus *mChnlBus = audioChnl->midi_channelBus;
 
@@ -935,7 +934,17 @@ void func_0804b95c(struct AudioChannel *audioChnl, u32 id, u8 ctrl, u8 var) {
     }
 }
 
-#include "asm/lib_08049144/asm_0804bc5c.s"
+// [func_0804bc5c] MIDI - Note Off/On [Evnt_8; Evnt_9]
+void func_0804bc5c(u32 id, u32 key, u32 vel) {
+    struct MidiNote *noteThing;
+
+    if (D_03005b78 < 20) {
+        noteThing = &D_03005650[D_03005b78++];
+        noteThing->channel = id;
+        noteThing->key = key;
+        noteThing->velocity = vel;
+    }
+}
 
 // [func_0804bcc0] MIDI - Messages/Events
 u32 func_0804bcc0(struct AudioChannel *channel, u32 id) {

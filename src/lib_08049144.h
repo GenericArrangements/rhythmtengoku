@@ -126,10 +126,10 @@ extern void func_0804b7fc(struct AudioChannel *, u16); // [func_0804b7fc] AUDIO 
 
   // // //  MIDI SEQUENCE OPERATIONS  // // //
 
-extern void func_0804b80c(struct AudioChannel *, u8 *); // [func_0804b80c] MIDI - System-Exclusive Message (F0)
+extern void func_0804b80c(struct AudioChannel *, u8 *); // [func_0804b80c] MIDI - System-Exclusive Message [Evnt_F0]
 extern u32  func_0804b898(struct AudioChannel *, u8 **); // [func_0804b898] MIDI - Meta Event (Loop Start, Loop End, Track End, Set Tempo)
-extern void func_0804b95c(struct AudioChannel *, u32, u8, u8); // [func_0804b95c] MIDI - Controller Change
-// extern ? func_0804bc5c(?);
+extern void func_0804b95c(struct AudioChannel *, u32, u8, u8); // [func_0804b95c] MIDI - Controller Change [Evnt_B]
+extern void func_0804bc5c(u32, u32, u32); // [func_0804bc5c] MIDI - Note Off/On [Evnt_8; Evnt_9]
 extern u32  func_0804bcc0(struct AudioChannel *, u32); // [func_0804bcc0] MIDI - Messages/Events
 // extern ? func_0804bed0(?);
 // extern ? func_0804c040(?);
