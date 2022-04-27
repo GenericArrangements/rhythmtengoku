@@ -4,33 +4,54 @@
 
 asm(".include \"include/gba.inc\"");//Temporary
 
+
+  // // // // // // // // // // // // // // // // // // // //
+
 extern u32 D_03005620[3];
 extern u32 D_0300562c; // Current Speed (NOT Tempo)
+
 extern u32 D_03005638;
+
 extern u8  D_03005640; // Byte 0 of MIDI Event F0; Set by MIDI Controller 4C
 extern struct AudioChannel *D_03005644; // Channel which most recently called MIDI Event F0
 extern u16 D_03005648; // Set by MIDI Controller 0E; Current byte in D_03005b7c to set
+
 extern struct MidiNote D_03005650[20]; // MIDI Notes
 extern struct Bingus D_030056a0[];
+
 extern u16 D_03005b20; // Total Bytes in array at D_03005b7c
+
 extern u8  D_03005b28; // Set by MIDI Controller 4D; Only set if D_03005b44 == 0
+
 extern struct Jason D_03005b30;
 extern u8  D_03005b3c; // Set by MIDI Controller 49; Cleared by MIDI Controller 4A and MIDI Event F0
+
 extern u8  D_03005b44; // Must be clear for certain operations to work; Affects MIDI Controllers 49, 4A and 4D
+
 extern u16 D_03005b78; // Current Available MIDI Note Slot
 extern u8 *D_03005b7c; // Byte at offset D_03005648 set by MIDI Controller 10;
+
 extern struct Bingus *D_03005b88;
 extern u16 D_03005b8c; // Total number of elements at D_030064bc
 extern u8  D_03005b90[]; // Reverb controller..?
+
 extern u32 *D_030064b0;
 extern struct Bingus *D_030064bc;
 extern u8  D_030064c0; // Set to 0 alongside all elements in D_03005620
 
-extern s16  D_08a86008[];
-extern const InstrumentBank *const instrumentBanks[];
+  // // // // // // // // // // // // // // // // // // // //
+
+extern s16  D_08a86008[]; // ?? (some curve)
+extern InstrumentBank *instrumentBanks[]; // Instrument Bank Index
 extern char D_08a865a4[]; // MIDI "Loop Start" Marker: '['
 extern char D_08a865a8[]; // MIDI "Loop End" Marker: ']'
 
+  // // // // // // // // // // // // // // // // // // // //
+
+
+
+
+  //  //  //  //   ??? CODE   //  //  //  //
 
 
 #include "asm/lib_08049144/asm_08049144.s"
@@ -44,10 +65,10 @@ void func_080493b0(u32 id) {
     D_03005b88[id].unk0_b0 = 0;
 }
 
-// [func_080493c8] Store panning-related values to D_03005b88[i].
-void func_080493c8(u32 i, u32 pan1, u32 pan2) {
-    D_03005b88[i].unk2 = pan1;
-    D_03005b88[i].unk3 = pan2;
+// [func_080493c8] Store panning-related values to D_03005b88[id].
+void func_080493c8(u32 id, u32 pan1, u32 pan2) {
+    D_03005b88[id].unk2 = pan1;
+    D_03005b88[id].unk3 = pan2;
 }
 
 #include "asm/lib_08049144/asm_080493e4.s"
@@ -142,7 +163,7 @@ void func_08049db8(struct MidiChannelBus *mChnlBus, u32 id) {
 void func_08049e3c(struct MidiChannelBus *mChnlBus) {
     u32 i;
 
-    for (i = 0; i < mChnlBus->unk14_b0; i++) {
+    for (i = 0; i < mChnlBus->totalChannels; i++) {
         func_08049d30(mChnlBus, i);
     }
 }
@@ -150,22 +171,22 @@ void func_08049e3c(struct MidiChannelBus *mChnlBus) {
 // [func_08049e64] ??
 void func_08049e64(struct MidiChannelBus *midi_channelBus) {
     u32 i;
-    for (i = 0; i < midi_channelBus->unk14_b0; i++) {
+    for (i = 0; i < midi_channelBus->totalChannels; i++) {
         func_08049db8(midi_channelBus, i);
     }
 }
 
 // [func_08049e8c] ??
-void func_08049e8c(struct MidiChannelBus *mChnlBus, u8 unk4f4) {
+void func_08049e8c(struct MidiChannelBus *mChnlBus, u8 priority) {
     u32 i;
 
-    mChnlBus->unk14_b5 = unk4f4;
-    for (i = 0; i < mChnlBus->unk14_b0; i++) {
+    mChnlBus->priority = priority;
+    for (i = 0; i < mChnlBus->totalChannels; i++) {
         func_0804ad18(mChnlBus, i, 0);
     }
 }
 
-// [func_08049ec4] ??
+// [func_08049ec4] INITIALISE - MIDI Channel Bus - unk1, unk2
 void func_08049ec4(struct MidiChannelBus *mChnlBus, u8 unk1, u16 unk2) {
     mChnlBus->unk1 = unk1;
     mChnlBus->unk2 = unk2;
@@ -191,9 +212,9 @@ void func_08049ecc(struct MidiChannel *mChnl) {
     mChnl->modResult = 0;
     mChnl->pitchWheel = 0x2000;
     mChnl->modRange = 2;
-    mChnl->unk8_b22 = 0;
+    mChnl->priority = 0;
     mChnl->unk0_b30 = 0;
-    mChnl->unk0_b31 = 0;
+    mChnl->stereo = 0;
     mChnl->rndmPitch = 0x100;
     mChnl->rndmPitchFloor = 0x100;
     mChnl->rndmPitchRange = 0;
@@ -203,7 +224,7 @@ void func_08049ecc(struct MidiChannel *mChnl) {
 }
 
 // [func_08049fa0] INITIALISE - MIDI Channel Bus
-void func_08049fa0(struct MidiChannelBus *mChnlBus, u32 unk14_b0, struct MidiChannel *mChnl) {
+void func_08049fa0(struct MidiChannelBus *mChnlBus, u32 totalChannels, struct MidiChannel *mChnl) {
     u32 i;
 
     mChnlBus->volume = 0x64;
@@ -215,13 +236,13 @@ void func_08049fa0(struct MidiChannelBus *mChnlBus, u32 unk14_b0, struct MidiCha
     mChnlBus->unk8 = 0x1400;
     mChnlBus->unkC = &D_08a86008[0];
 
-    mChnlBus->unk14_b0 = unk14_b0;
+    mChnlBus->totalChannels = totalChannels;
     mChnlBus->midiChannel = mChnl;
-    for (i = 0; i < unk14_b0; i++) {
+    for (i = 0; i < totalChannels; i++) {
         func_08049ecc(&mChnl[i]);
     }
 
-    mChnlBus->unk14_b5 = 0;
+    mChnlBus->priority = 0;
     for (i = 0; i < 12; i++) {
         mChnlBus->unk1C[i] = 0;
     }
@@ -278,23 +299,23 @@ u8 func_0804a674(u8 panning) {
   //  //  //  //   MIDI CHANNEL OPERATIONS   //  //  //  //
 
 
-// [func_0804aa40] MIDI Channel - Set Pitch Wheel
+// [func_0804aa40] MIDI CHANNEL - Set Pitch Wheel [Evnt_E]
 void func_0804aa40(struct MidiChannelBus *mChnlBus, u32 id, u16 pitch) {
     mChnlBus->midiChannel[id].pitchWheel = pitch;
 }
 
-// [func_0804aa5c] MIDI Controller 07 - Channel Volume
+// [func_0804aa5c] MIDI CHANNEL - Set Volume [Ctrl_07]
 void func_0804aa5c(struct MidiChannelBus *mChnlBus, u32 id, u8 volume) {
     mChnlBus->midiChannel[id].volume = volume;
 }
 
-// [func_0804aa7c] MIDI Controller 0A - Channel Panning
+// [func_0804aa7c] MIDI CHANNEL - Set Panning [Ctrl_0A]
 void func_0804aa7c(struct MidiChannelBus *mChnlBus, u32 id, u8 panning) {
     mChnlBus->midiChannel[id].panning = panning;
     func_0804aae0(mChnlBus, id);
 }
 
-// [func_0804aaa4] Return a net Panning value, factoring all relevant Panning controllers.
+// [func_0804aaa4] MIDI CHANNEL - Return a net Panning value, factoring all relevant Panning controllers.
 u8 func_0804aaa4(struct MidiChannelBus *mChnlBus, u32 id) {
     struct MidiChannel *mChnl = &mChnlBus->midiChannel[id];
     s32 panning = mChnl->panning + (mChnlBus->unk5 >> 1);
@@ -308,11 +329,11 @@ u8 func_0804aaa4(struct MidiChannelBus *mChnlBus, u32 id) {
     return panning;
 }
 
-// [func_0804aae0] ??? (called after setting channel panning)
+// [func_0804aae0] MIDI CHANNEL - ??? (called after setting channel panning)
 void func_0804aae0(struct MidiChannelBus *mChnlBus, u32 id) {
     s32 panning = func_0804aaa4(mChnlBus, id);
     struct MidiChannel *mChnl = &mChnlBus->midiChannel[id];
-    u32 chorused = (mChnl->unk0_b31) ? -1 : 1;
+    u32 isStereo = (mChnl->stereo) ? -1 : 1;
     s32 i = 0;
     struct Bingus *bingus = D_030064bc;
 
@@ -322,24 +343,24 @@ void func_0804aae0(struct MidiChannelBus *mChnlBus, u32 id) {
             // Clamp to 7 bits.
             if (panning < 0) panning = 0;
             if (panning > 0x7f) panning = 0x7f;
-            func_080493c8(i, func_0804a674(panning), func_0804a65c(panning) * chorused);
+            func_080493c8(i, func_0804a674(panning), func_0804a65c(panning) * isStereo);
         }
         i++;
         bingus++;
     }
 }
 
-// [func_0804ab88] MIDI Channel - Set Instrument/Patch
+// [func_0804ab88] MIDI Channel - Set Instrument/Patch [Evnt_C]
 void func_0804ab88(struct MidiChannelBus *mChnlBus, u32 id, u8 inst) {
     mChnlBus->midiChannel[id].instPatch = inst;
 }
 
-// [func_0804aba8] MIDI Controller 0B - Expression
+// [func_0804aba8] MIDI CHANNEL - Set Expression [Ctrl_0B]
 void func_0804aba8(struct MidiChannelBus *mChnlBus, u32 id, u8 expression) {
     mChnlBus->midiChannel[id].expression = expression;
 }
 
-// [func_0804abc8] MIDI Controller 00 - ??; MIDI Controller 20 - ??
+// [func_0804abc8] MIDI CHANNEL - Set unk0_b9 [Ctrl_00; Ctrl_20]
 void func_0804abc8(struct MidiChannelBus *mChnlBus, u32 id, u16 var) {
     u16 unk0_b9 = mChnlBus->midiChannel[id].unk0_b9;
 
@@ -353,66 +374,66 @@ void func_0804abc8(struct MidiChannelBus *mChnlBus, u32 id, u16 var) {
         unk0_b9 &= 0x7f; // Bits 7-13 = 0
         unk0_b9 |= var;  // Bits 0-6  = var
     }
-    mChnlBus->midiChannel[id].unk0_b9 = unk0_b9 & 0x3fff;
+    mChnlBus->midiChannel[id].unk0_b9 = unk0_b9;
 }
 
-// [func_0804ac24] MIDI Channel - Set ?? (unk0_b0)
+// [func_0804ac24] MIDI CHANNEL - Set unk0_b0
 void func_0804ac24(struct MidiChannelBus *mChnlBus, u32 id, u8 var) {
     mChnlBus->midiChannel[id].unk0_b0 = var;
 }
 
-// [func_0804ac40] MIDI Controller 01 - Modulation Depth
+// [func_0804ac40] MIDI CHANNEL - Set Modulation Depth [Ctrl_01]
 void func_0804ac40(struct MidiChannelBus *mChnlBus, u32 id, u8 depth) {
     mChnlBus->midiChannel[id].modDepth = depth;
 }
 
-// [func_0804ac60] MIDI Channel - Set ?? (unk4_b21)
+// [func_0804ac60] MIDI CHANNEL - Set unk4_b21
 void func_0804ac60(struct MidiChannelBus *mChnlBus, u32 id, u8 var) {
     mChnlBus->midiChannel[id].unk4_b21 = var;
 }
 
-// [func_0804ac80] MIDI Controller 48 - Compress/Dampen?
+// [func_0804ac80] MIDI CHANNEL - Set Compression/Dampening? [Ctrl_48]
 void func_0804ac80(struct MidiChannelBus *mChnlBus, u32 id, u8 comp) {
     mChnlBus->midiChannel[id].unk0_b30 = comp;
 }
 
-// [func_0804aca0] MIDI Controller 16 - Modulation Type
+// [func_0804aca0] MIDI CHANNEL - Set Modulation Type [Ctrl_16]
 void func_0804aca0(struct MidiChannelBus *mChnlBus, u32 id, u8 type) {
     mChnlBus->midiChannel[id].modType = type;
 }
 
-// [func_0804acc0] MIDI Channel - Set ?? (unkC)
+// [func_0804acc0] MIDI CHANNEL - Set unkC
 void func_0804acc0(struct MidiChannelBus *mChnlBus, u32 id, u8 var) {
     mChnlBus->midiChannel[id].unkC = var;
 }
 
-// [func_0804accc] MIDI Controller 15 - Modulation Speed
+// [func_0804accc] MIDI CHANNEL - Set Modulation Speed [Ctrl_15]
 void func_0804accc(struct MidiChannelBus *mChnlBus, u32 id, u16 speed) {
     mChnlBus->midiChannel[id].modSpeed = speed << 8;
 }
 
-// [func_0804acd8] MIDI Controller 1A - Modulation Delay
+// [func_0804acd8] MIDI CHANNEL - Set Modulation Delay [Ctrl_1A]
 void func_0804acd8(struct MidiChannelBus *mChnlBus, u32 id, u8 delay) {
     mChnlBus->midiChannel[id].modDelay = delay;
 }
 
-// [func_0804ace4] MIDI Controller 14 - Modulation Wheel Range
+// [func_0804ace4] MIDI CHANNEL - Set Modulation Range [Ctrl_14]
 void func_0804ace4(struct MidiChannelBus *mChnlBus, u32 id, u8 range) {
     mChnlBus->midiChannel[id].modRange = range;
 }
 
-// [func_0804acf0] MIDI Controller 4B - Chorus?
-void func_0804acf0(struct MidiChannelBus *mChnlBus, u32 id, u32 vol) {
-    mChnlBus->midiChannel[id].unk0_b31 = vol;
+// [func_0804acf0] MIDI CHANNEL - Set Offset/Split Stereo Effect [Ctrl_4B]
+void func_0804acf0(struct MidiChannelBus *mChnlBus, u32 id, u32 var) {
+    mChnlBus->midiChannel[id].stereo = var;
     func_0804aa7c(mChnlBus, id, mChnlBus->midiChannel[id].panning);
 }
 
-// [func_0804ad18] MIDI Controller 21 - ??
-void func_0804ad18(struct MidiChannelBus *mChnlBus, u32 i, u8 arg2) {
-    mChnlBus->midiChannel[i].unk8_b22 = arg2 + mChnlBus->unk14_b5;
+// [func_0804ad18] MIDI CHANNEL - Set Priority [Ctrl_21]
+void func_0804ad18(struct MidiChannelBus *mChnlBus, u32 i, u8 priority) {
+    mChnlBus->midiChannel[i].priority = priority + mChnlBus->priority;
 }
 
-// [func_0804ad38] MIDI Controller 52 - Random Pitch Variation
+// [func_0804ad38] MIDI CHANNEL - Set Random Pitch Variation [Ctrl_52]
 void func_0804ad38(struct MidiChannelBus *mChnlBus, u32 id, u8 range) {
     u32 lowMax = 0x8000 / (u32) (range + 0x80);
     u32 highMax = 0x10000 / (u32) (0x100 - range);
@@ -422,61 +443,61 @@ void func_0804ad38(struct MidiChannelBus *mChnlBus, u32 id, u8 range) {
     mChnlBus->midiChannel[id].rndmPitch = 0x100;
 }
 
-// [func_0804ad90] MIDI Controller 53 - ??
-void func_0804ad90(struct MidiChannelBus *mChnlBus, u32 id, u8 arg2) {
-    mChnlBus->midiChannel[id].unk1C = arg2;
+// [func_0804ad90] MIDI CHANNEL - Set unk1C [Ctrl_53]
+void func_0804ad90(struct MidiChannelBus *mChnlBus, u32 id, u8 var) {
+    mChnlBus->midiChannel[id].unk1C = var;
 }
 
-// [func_0804ad9c] MIDI Controller 54 - ??
-void func_0804ad9c(struct MidiChannelBus *mChnlBus, u32 id, u8 arg2) {
-    mChnlBus->midiChannel[id].unk1D = arg2;
-    mChnlBus->midiChannel[id].unk1E = arg2;
+// [func_0804ad9c] MIDI CHANNEL - Set unk1D & unk1E [Ctrl_54]
+void func_0804ad9c(struct MidiChannelBus *mChnlBus, u32 id, u8 var) {
+    mChnlBus->midiChannel[id].unk1D = var;
+    mChnlBus->midiChannel[id].unk1E = var;
 }
 
 
   //  //  //  //   MIDI CHANNEL BUS OPERATIONS   //  //  //  //
 
 
-// [func_0804adb0] MIDI Channel Bus - Set ?? (unk4)
+// [func_0804adb0] MIDI CHANNEL BUS - Set unk4
 void func_0804adb0(struct MidiChannelBus *mChnlBus, u8 var) {
     mChnlBus->unk4 = var;
 }
 
-// [func_0804adb4] MIDI Channel Bus - Set Volume
+// [func_0804adb4] MIDI CHANNEL BUS - Set Volume
 void func_0804adb4(struct MidiChannelBus *mChnlBus, u8 volume) {
     mChnlBus->volume = volume;
 }
 
-// [func_0804adb8] MIDI Channel Bus - Set Panning
+// [func_0804adb8] MIDI CHANNEL BUS - Set Panning
 void func_0804adb8(struct MidiChannelBus *mChnlBus, s8 panning) {
     u32 i;
     mChnlBus->unk5 = panning;
 
-    for (i = 0; i < mChnlBus->unk14_b0; i++) {
+    for (i = 0; i < mChnlBus->totalChannels; i++) {
         func_0804aae0(mChnlBus, i);
     }
 }
 
-// [func_0804ade4] MIDI Channel Bus - Set Pitch
+// [func_0804ade4] MIDI CHANNEL BUS - Set Pitch
 void func_0804ade4(struct MidiChannelBus *mChnlBus, s16 pitch) {
     mChnlBus->pitch = pitch;
 }
 
-// [func_0804ade8] MIDI Channel Bus - Set Modulation Range
+// [func_0804ade8] MIDI CHANNEL BUS - Set Modulation Range
 void func_0804ade8(struct MidiChannelBus *mChnlBus, u8 range) {
     u32 i;
 
-    for (i = 0; i < mChnlBus->unk14_b0; i++) {
+    for (i = 0; i < mChnlBus->totalChannels; i++) {
         mChnlBus->midiChannel[i].modRange = range;
     }
 }
 
-// [func_0804ae14] MIDI Channel Bus - Set ?? (unk8)
+// [func_0804ae14] MIDI CHANNEL BUS - Set unk8
 void func_0804ae14(struct MidiChannelBus *mChnlBus, u16 var) {
     mChnlBus->unk8 = var;
 }
 
-// [func_0804ae18] MIDI Channel Bus - Set ?? (unkC)
+// [func_0804ae18] MIDI CHANNEL BUS - Set unkC
 void func_0804ae18(struct MidiChannelBus *mChnlBus, s16 *var) {
     mChnlBus->unkC = var;
 }
@@ -497,14 +518,14 @@ void func_0804ae1c(struct Jason* jason, u8 arg1, u8 arg2, u8 arg3, u8 arg4, u8 a
     jason->unk5 = arg5;
 }
 
-// [func_0804ae54] MIDI Controller 49 - ??
+// [func_0804ae54] Set ?? [Ctrl_49]
 void func_0804ae54(struct Jason *arg0) {
     arg0->unk6 = 1;
     arg0->unk8 = 0;
     arg0->unk7 = 0;
 }
 
-// [func_0804ae60] MIDI Controller 49 - ??; MIDI Controller 4A - ??
+// [func_0804ae60] Set ?? [Ctrl_49; Ctrl_4A]
 void func_0804ae60(struct Jason *arg0) {
     arg0->unk6 = 0;
     arg0->unk8 = 0;
@@ -528,17 +549,20 @@ void func_0804ae60(struct Jason *arg0) {
 #include "asm/lib_08049144/asm_0804b2c4.s"
 
 
-// [func_0804b324] Parse 16-bit Big Endian value in MIDI Stream.
+  //  //  //  //   AUDIO CHANNEL OPERATIONS   //  //  //  //
+
+
+// [func_0804b324] AUDIO CHANNEL - Parse 16-bit Big Endian value in Byte Stream.
 u16 func_0804b324(u8 *stream) {
     return (stream[0] << 8) | stream[1];
 }
 
-// [func_0804b330] Parse 32-bit Big Endian value in MIDI Stream.
+// [func_0804b330] AUDIO CHANNEL - Parse 32-bit Big Endian value in Byte Stream.
 u32 func_0804b330(u8 *stream) {
     return (stream[0]) << 0x18 | (stream[1]) << 0x10 | (stream[2]) << 8 | stream[3];
 }
 
-// [func_0804b348] Determine length of Loop Marker symbols.
+// [func_0804b348] AUDIO CHANNEL - Loop Marker Symbol Length
 u32 func_0804b348(char label[]) {
     u8 i;
 
@@ -546,7 +570,7 @@ u32 func_0804b348(char label[]) {
     return i;
 }
 
-// [func_0804b368] Store Sequence Data to a given Audio Channel.
+// [func_0804b368] AUDIO CHANNEL - Store Sound Sequence
 void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqData) {
     struct MidiChannelBus *mChnlBus;
     struct MidiTrackReader *mTrkReader;
@@ -560,15 +584,15 @@ void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqD
     // Reading Sequence Data:
     if (func_0804b5a0(channel)) {
         if (channel->unk0_b21 && !channel->isPaused) {
-            if (channel->sequenceData->unk4f4 > seqData->unk4f4) return;
+            if (channel->sequenceData->priority > seqData->priority) return;
         }
     }
     mChnlBus = channel->midi_channelBus;
     func_08049e64(mChnlBus);
-    func_08049fa0(mChnlBus, mChnlBus->unk14_b0, mChnlBus->midiChannel);
+    func_08049fa0(mChnlBus, mChnlBus->totalChannels, mChnlBus->midiChannel);
     func_0804a014(mChnlBus, instrumentBanks[seqData->soundBank]);
     func_0804adb4(mChnlBus, seqData->volume);
-    func_08049e8c(mChnlBus, seqData->unk4f4);
+    func_08049e8c(mChnlBus, seqData->priority);
     channel->sequenceData = seqData;
     channel->volume = seqData->volume;
 
@@ -628,7 +652,7 @@ void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqD
     channel->unk34 = 0;
 }
 
-// [func_0804b534] Load a Sound Sequence using the D_08aa06f8 table.
+// [func_0804b534] AUDIO CHANNEL - Load & Store Sound Sequence from Index
 void func_0804b534(u16 index) {
     struct AudioChannel *channel;
     const struct SequenceData *seqData;
@@ -638,19 +662,19 @@ void func_0804b534(u16 index) {
     func_0804b368(channel, seqData);
 }
 
-// [func_0804b560] Remove Sound Sequence from Audio Channel
+// [func_0804b560] AUDIO CHANNEL - Remove Sound Sequence
 void func_0804b560(struct AudioChannel *channel) {
     func_08049e3c(channel->midi_channelBus);
     channel->sequenceData = 0;
 }
 
-// [func_0804b574] Pause/Unpause Sound Sequence in Audio Channel { 0 = Unpause; 1 = Pause }
+// [func_0804b574] AUDIO CHANNEL - Pause/Unpause Sound Sequence { 0 = Unpause; 1 = Pause }
 void func_0804b574(struct AudioChannel *channel, u8 pause) {
     channel->isPaused = pause;
     if (pause) func_08049e64(channel->midi_channelBus);
 }
 
-// [func_0804b5a0] Check for Active MIDI Readers
+// [func_0804b5a0] AUDIO CHANNEL - Check for Active MIDI Readers
 u32 func_0804b5a0(struct AudioChannel *channel) {
     u32 i;
 
@@ -661,17 +685,17 @@ u32 func_0804b5a0(struct AudioChannel *channel) {
     return 0;
 }
 
-// [func_0804b5d8] Pause Audio Channel
+// [func_0804b5d8] AUDIO CHANNEL - Pause Channel
 void func_0804b5d8(struct AudioChannel *channel) {
     func_0804b574(channel, 1);
 }
 
-// [func_0804b5e4] Unpause Audio Channel
+// [func_0804b5e4] AUDIO CHANNEL - Unpause Channel
 void func_0804b5e4(struct AudioChannel *channel) {
     func_0804b574(channel, 0);
 }
 
-// [func_0804b5f0] Pause All Audio Channels
+// [func_0804b5f0] AUDIO CHANNEL - Pause All Channels
 void func_0804b5f0(void) {
     u32 i;
 
@@ -680,7 +704,7 @@ void func_0804b5f0(void) {
     }
 }
 
-// [func_0804b620] Unpause All Audio Channels
+// [func_0804b620] AUDIO CHANNEL - Unpause All Channels
 void func_0804b620(void) {
     u32 i;
 
@@ -689,28 +713,28 @@ void func_0804b620(void) {
     }
 }
 
-// [func_0804b650] Set Volume
+// [func_0804b650] AUDIO CHANNEL - Set Volume
 void func_0804b650(struct AudioChannel *channel, u16 volume) {
     channel->env_channelVol = volume;
 }
 
-// [func_0804b654] Set Volume for Selected Tracks
+// [func_0804b654] AUDIO CHANNEL - Set Volume for Selected Tracks
 void func_0804b654(struct AudioChannel *channel, u16 tracks, u16 volume) {
     channel->env_trackVol = volume;
     channel->env_trackSel = tracks;
 }
 
-// [func_0804b65c] Set Pitch
+// [func_0804b65c] AUDIO CHANNEL - Set Pitch
 void func_0804b65c(struct AudioChannel *channel, u16 unused, s16 pitch) {
     func_0804ade4(channel->midi_channelBus, pitch);
 }
 
-// [func_0804b66c] Set Panning
+// [func_0804b66c] AUDIO CHANNEL - Set Panning
 void func_0804b66c(struct AudioChannel *channel, u16 unused, s8 panning) {
     func_0804adb8(channel->midi_channelBus, panning);
 }
 
-// [func_0804b67c] Pause Audio Channel using the D_08aa06f8 table.
+// [func_0804b67c] AUDIO CHANNEL - Pause Sound Sequence from Index
 void func_0804b67c(u16 offset) {
     struct SequenceData *seqData = D_08aa06f8[offset].sequenceData;
     u32 i;
@@ -722,7 +746,7 @@ void func_0804b67c(u16 offset) {
     }
 }
 
-// [func_0804b6c4] Check if two phrases are identical.
+// [func_0804b6c4] UTIL - String.equals()
 u32 func_0804b6c4(u8 *byteStream0, u8 *byteStream1, u32 length) {
     u32 i;
 
@@ -732,12 +756,12 @@ u32 func_0804b6c4(u8 *byteStream0, u8 *byteStream1, u32 length) {
     return 1;
 }
 
-// [func_0804b6f0] Playback Speed Formula
+// [func_0804b6f0] UTIL - Playback Speed Formula
 u32 func_0804b6f0(u16 tempo, u16 speedEnv, u16 quarterNote) {
     return (u32) (tempo * speedEnv * quarterNote) / 0xe10;
 }
 
-// [func_0804b710] Align Speed with BeatScript
+// [func_0804b710] AUDIO CHANNEL - Align Speed with BeatScript
 void func_0804b710(struct AudioChannel *channel, u16 speedEnv) {
     u32 speed;
 
@@ -747,7 +771,7 @@ void func_0804b710(struct AudioChannel *channel, u16 speedEnv) {
     channel->speed = speed;
 }
 
-// [func_0804b734] Volume Fade { type = 0..3 }
+// [func_0804b734] AUDIO CHANNEL - Apply Volume Fade { type = 0..3 }
 void func_0804b734(struct AudioChannel *channel, u16 type, u16 time) {
     switch (type) {
         case 0: // Reset Fade
@@ -782,22 +806,26 @@ void func_0804b734(struct AudioChannel *channel, u16 type, u16 time) {
     channel->volFadeType = type;
 }
 
-// [func_0804b7dc] Apply Volume Fade - Fade-Out & Clear
+// [func_0804b7dc] AUDIO CHANNEL - Volume Fade-Out & Clear
 void func_0804b7dc(struct AudioChannel *channel, u16 time) {
     func_0804b734(channel, 2, time);
 }
 
-// [func_0804b7ec] Apply Volume Fade - Fade-Out & Pause
+// [func_0804b7ec] AUDIO CHANNEL - Volume Fade-Out & Pause
 void func_0804b7ec(struct AudioChannel *channel, u16 time) {
     func_0804b734(channel, 3, time);
 }
 
-// [func_0804b7fc] Apply Volume Fade - Fade-In
+// [func_0804b7fc] AUDIO CHANNEL - Volume Fade-In
 void func_0804b7fc(struct AudioChannel *channel, u16 time) {
     func_0804b734(channel, 1, time);
 }
 
-// [func_0804b80c] MIDI Event F0 - System-Exclusive Message
+
+  //  //  //  //   MIDI SEQUENCE OPERATIONS   //  //  //  //
+
+
+// [func_0804b80c] MIDI - System-Exclusive Message (F0)
 void func_0804b80c(struct AudioChannel *channel, u8 *stream) {
     struct MidiChannelBus *mChnlBus = channel->midi_channelBus;
     u8 type = *stream;
@@ -823,7 +851,7 @@ void func_0804b80c(struct AudioChannel *channel, u8 *stream) {
 }
 
 
-// [func_0804b898] MIDI Meta Events { returns 0..3 }
+// [func_0804b898] MIDI - Meta Event (Loop Start, Loop End, Track End, Set Tempo)
 u32 func_0804b898(struct AudioChannel *channel, u8 **upstream) {
     u8 *stream = *upstream;
     u8 event = *stream;
@@ -864,7 +892,7 @@ u32 func_0804b898(struct AudioChannel *channel, u8 **upstream) {
     }
 }
 
-// [func_0804b95c] MIDI Controller Change Instructions
+// [func_0804b95c] MIDI - Controller Change
 void func_0804b95c(struct AudioChannel *audioChnl, u32 id, u8 ctrl, u8 var) {
     struct MidiChannelBus *mChnlBus = audioChnl->midi_channelBus;
 
@@ -909,7 +937,7 @@ void func_0804b95c(struct AudioChannel *audioChnl, u32 id, u8 ctrl, u8 var) {
 
 #include "asm/lib_08049144/asm_0804bc5c.s"
 
-// [func_0804bcc0] MIDI Messages/Events
+// [func_0804bcc0] MIDI - Messages/Events
 u32 func_0804bcc0(struct AudioChannel *channel, u32 id) {
     u32 trackEndType = 0;
     struct MidiTrackReader *reader = &channel->midi_trackReader[id];
@@ -986,7 +1014,7 @@ u32 func_0804bcc0(struct AudioChannel *channel, u32 id) {
 
     // MIDI Messages { 80, 90, A0, B0, C0, D0, E0 }
     else {
-        switch (command & 0xf0) {
+        switch (command & 0xF0) {
             // Note Off
             case 0x80:
                 func_0804bc5c(id, byteStream[0], 0);
@@ -1055,7 +1083,7 @@ void func_0804c340(u32 arg0, u32 arg1, u32 arg2, u32 arg3) {
 
 #include "asm/lib_08049144/asm_0804c35c.s"
 
-// [func_0804c398] Parse MIDI Variable-Length Time
+// [func_0804c398] MIDI - Parse Variable-Length Quantity
 u32 func_0804c398(u8 **midiStream) {
     u8 *mStream = *midiStream;
     u8 current;
@@ -1071,7 +1099,6 @@ u32 func_0804c398(u8 **midiStream) {
     *midiStream = mStream;
     return time;
 }
-
 
 #include "asm/lib_08049144/asm_0804c3c0.s"
 

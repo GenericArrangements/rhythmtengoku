@@ -69,7 +69,7 @@ struct SequenceData {
     u32 unk4f1:5;
     u32 soundBank:10;
     u32 volume:7;
-    u32 unk4f4:10;
+    u32 priority:10;
     u32 unk8;
     const char *seqName;
     u32 iramChnlIndex;
@@ -83,8 +83,8 @@ struct MidiChannel {
     u32 instPatch:7;    // Instrument Patch Number [mEvnt_C; default = 0]
     u32 unk0_b9:14;     // ??? [mCtrl_00; mCtrl_20; default = 0]
     u32 volume:7;       // Channel Volume [mCtrl_07; default = 0x64]
-    u32 unk0_b30:1;     // Compression? Reverb? [default = 0]
-    u32 unk0_b31:1;     // Stereo/Chorus? [default = 0]
+    u32 unk0_b30:1;     // Compression? Dampen? [mCtrl_48; default = 0]
+    u32 stereo:1;       // Offset/Split Stereo Effect [mCtrl_4B; default = 0]
     u32 panning:7;      // Channel Panning [mCtrl_0A; default = 0x40]
     u32 expression:7;   // Expression [mCtrl_0B; default = 0x7f]
     u32 modDepth:7;     // Modulation Depth [mCtrl_01; default = 0]
@@ -93,7 +93,7 @@ struct MidiChannel {
     u32 unk4_b30:2;     // ??? [no default]
     u32 pitchWheel:14;  // Pitch Wheel [mEvnt_E; default = 0x2000]
     u32 volumeWheel:8;  // Volume Wheel? [no default]
-    u32 unk8_b22:10;    // ??? ( = AudioChannel_unk4.unk14_5 = seqData.unk4f4) [default = 0]
+    u32 priority:10;    // Priority [mCtrl_20; default = 0]
     u8  unkC;           // ??? [default = 1]
     s8  modResult;      // Modulation Result [mCtrl_01; default = 0]
     u8  unkE;
@@ -120,8 +120,8 @@ struct MidiChannelBus {
     u16 unk8;
     s16 *unkC;      // ROM Pointer to a curve table(?) in the sound data section.
     const InstrumentBank *soundBank;
-    u32 unk14_b0:5;
-    u32 unk14_b5:27; // ??? ( = seqData.unk4f4)
+    u32 totalChannels:5;
+    u32 priority:27; // Priority
     struct MidiChannel *midiChannel; // Array of MIDI Channels
     u8  unk1C[12];
 };
@@ -202,7 +202,7 @@ struct Bingus {
     struct MidiChannel *midiChannel;
     u32 unk10;
     u32 unk14;
-    s16 unk18;
+    s16 unk18; // ?? Panning
     u16 unk1A;
     u32 unk1C:8;
     u32 unk1D:24;
