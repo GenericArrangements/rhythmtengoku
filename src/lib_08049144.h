@@ -90,7 +90,10 @@ extern void func_0804ae54(struct Jason *); // [func_0804ae54] Set ?? [Ctrl_49]
 extern void func_0804ae60(struct Jason *); // [func_0804ae60] Set ?? [Ctrl_49; Ctrl_4A]
 // extern ? func_0804ae6c(?);
 // extern ? func_0804af0c(?);
-// extern ? func_0804af30(?);
+
+  // // //  "BINGUS" STRUCT OPERATIONS  // // //
+
+extern void func_0804af30(void); // [func_0804af30] Initialise D_030056a0 (Bingus) and D_03001578.
 // extern ? func_0804af74(?);
 // extern ? func_0804afa4(?);
 // extern ? func_0804afd8(?);
@@ -143,4 +146,4 @@ extern u32  func_0804c398(u8 **); // [func_0804c398] MIDI - Parse Variable-Lengt
 // extern ? func_0804c4bc(?);
 // extern ? func_0804c508(?);
 // extern ? func_0804c6c8(?);
-// extern ? func_0804c778(?);
+extern void func_0804c778(void); // [func_0804c778] Initialise All?

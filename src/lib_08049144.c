@@ -7,6 +7,8 @@ asm(".include \"include/gba.inc\"");//Temporary
 
   // // // // // // // // // // // // // // // // // // // //
 
+extern u8 D_03001578[4];
+extern u8 *D_03001590;
 extern struct AudioChannel *D_03001598;
 
 extern u8  D_030015a7; // Initial value at D_03005b7c
@@ -28,7 +30,7 @@ extern struct AudioChannel *D_03005644; // Channel which most recently called MI
 extern u16 D_03005648; // Set by MIDI Controller 0E; Current byte in D_03005b7c to set
 
 extern struct MidiNote D_03005650[20]; // MIDI Notes
-extern struct Bingus D_030056a0[];
+extern struct Bingus D_030056a0[4];
 
 extern u16 D_03005b20; // Total Bytes in array at D_03005b7c
 
@@ -59,12 +61,6 @@ extern char D_08a865a4[]; // MIDI "Loop Start" Marker: '['
 extern char D_08a865a8[]; // MIDI "Loop End" Marker: ']'
 
   // // // // // // // // // // // // // // // // // // // //
-
-extern struct AudioChannel *D_03005644;
-extern u16 D_03005b20;
-extern u8  D_03005b3c;
-extern u8 *D_03005b7c;
-extern s8  D_03005b90[];
 
 
 
@@ -555,7 +551,19 @@ void func_0804ae60(struct Jason *arg0) {
 
 #include "asm/lib_08049144/asm_0804af0c.s"
 
-#include "asm/lib_08049144/asm_0804af30.s"
+// [func_0804af30] Initialise D_030056a0 (Bingus) and D_03001578.
+void func_0804af30(void) {
+    u32 i;
+
+    for (i = 0; i < 4; i++) {
+        D_030056a0[i].unk0_b0 = 0;
+    }
+
+    for (i = 0; i < 4; i++) {
+        D_03001578[i] = 0;
+    }
+    *D_03001590 = 0;
+}
 
 #include "asm/lib_08049144/asm_0804af74.s"
 
