@@ -1181,7 +1181,8 @@ void func_0804c340(u32 arg0, u32 arg1, u32 arg2, u32 arg3) {
     D_03005b90[3] = arg3;
 }
 
-#include "asm/lib_08049144/asm_0804c358.s"
+void func_0804c358(void) {
+}
 
 // [func_0804c35c] INITIALISE - Audio Channels
 void func_0804c35c(struct AudioChannel *channel, struct MidiChannelBus *mChnlBus, u32 nTracksMax, struct MidiTrackReader *mTrkReader, u32 type) {

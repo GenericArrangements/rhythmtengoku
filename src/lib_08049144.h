@@ -139,7 +139,7 @@ extern u32  func_0804bcc0(struct AudioChannel *, u32); // [func_0804bcc0] MIDI -
 // extern ? func_0804c0f8(?);
 extern void func_0804c170(void); // [func_0804c170] ??
 extern void func_0804c340(u32, u32, u32, u32); // [func_0804c340] Set Reverb
-// extern ? func_0804c358(?);
+extern void func_0804c358(void);
 extern void func_0804c35c(struct AudioChannel *, struct MidiChannelBus *, u32, struct MidiTrackReader *, u32); // [func_0804c35c] INITIALISE - Audio Channels
 extern u32  func_0804c398(u8 **); // [func_0804c398] MIDI - Parse Variable-Length Quantity
 // extern ? func_0804c3c0(?);
