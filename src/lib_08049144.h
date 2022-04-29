@@ -35,7 +35,7 @@ extern void func_0804a014(struct MidiChannelBus *, const InstrumentBank *); // [
 // extern ? func_0804a224(?);
 // extern ? func_0804a2c4(?);
 // extern ? func_0804a334(?);
-// extern ? func_0804a360(?);
+extern void func_0804a360(u32, struct Bingus *); // [func_0804a360] Initialise D_030064bc (Bingus)
 // extern ? func_0804a3a0(?);
 // extern ? func_0804a3fc(?);
 // extern ? func_0804a434(?);

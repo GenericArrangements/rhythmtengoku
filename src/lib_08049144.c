@@ -50,7 +50,7 @@ extern u16 D_03005b8c; // Total number of elements at D_030064bc
 extern s8  D_03005b90[]; // Reverb controller..?
 
 extern u32 *D_030064b0;
-extern struct Bingus *D_030064bc;
+extern struct Bingus *D_030064bc; // bingus
 extern u8  D_030064c0; // Set to 0 alongside all elements in D_03005620
 
   // // // // // // // // // // // // // // // // // // // //
@@ -278,7 +278,17 @@ void func_0804a014(struct MidiChannelBus *mChnlBus, const InstrumentBank *instBa
 
 #include "asm/lib_08049144/asm_0804a334.s"
 
-#include "asm/lib_08049144/asm_0804a360.s"
+// [func_0804a360] Initialise D_030064bc (Bingus)
+void func_0804a360(u32 total, struct Bingus *bingus) {
+    u32 i;
+
+    D_03005b8c = total;
+    D_030064bc = bingus;
+
+    for (i = 0; i < D_03005b8c; i++) {
+        D_030064bc[i].unk0_b0 = 0;
+    }
+}
 
 #include "asm/lib_08049144/asm_0804a3a0.s"
 
