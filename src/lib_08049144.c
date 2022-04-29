@@ -9,6 +9,13 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 extern struct AudioChannel *D_03001598;
 
+extern u8  D_030015a7; // Initial value at D_03005b7c
+
+extern u32 D_03001888; // this is like, sample data or something
+extern u32 D_030024c8; // sample envelope or something
+extern struct Bingus D_030028c8; // bingus
+extern struct Bingus D_03002a48; // bingus
+
 extern u16 D_030055f0;
 
 extern u32 D_03005620[3];
@@ -36,7 +43,7 @@ extern u16 D_03005b78; // Current Available MIDI Note Slot
 extern u8 *D_03005b7c; // Byte at offset D_03005648 set by MIDI Controller 10;
 extern u16 D_03005b80;
 
-extern struct Bingus *D_03005b88;
+extern struct Bingus *D_03005b88; // bingus
 extern u16 D_03005b8c; // Total number of elements at D_030064bc
 extern s8  D_03005b90[]; // Reverb controller..?
 
@@ -52,6 +59,12 @@ extern char D_08a865a4[]; // MIDI "Loop Start" Marker: '['
 extern char D_08a865a8[]; // MIDI "Loop End" Marker: ']'
 
   // // // // // // // // // // // // // // // // // // // //
+
+extern struct AudioChannel *D_03005644;
+extern u16 D_03005b20;
+extern u8  D_03005b3c;
+extern u8 *D_03005b7c;
+extern s8  D_03005b90[];
 
 
 
@@ -1179,4 +1192,31 @@ u32 func_0804c398(u8 **midiStream) {
 
 #include "asm/lib_08049144/asm_0804c6c8.s"
 
-#include "asm/lib_08049144/asm_0804c778.s"
+// [func_0804c778] Initialise All?
+void func_0804c778(void) {
+    u32 i;
+
+    func_08049490(0, 13379, 0x620, &D_03001888, 0x80, &D_030024c8, 12, &D_030028c8);
+    func_0804af30();
+    func_0804a360(12, &D_03002a48);
+
+    for (i = 0; i <= 12; i++) {
+        func_08049fa0(D_08aa4358[i].midiChannelBus, D_08aa4358[i].nTracksMax, D_08aa4358[i].midiChannels);
+        func_0804c35c(D_08aa4358[i].audioChannel, D_08aa4358[i].midiChannelBus, D_08aa4358[i].nTracksMax, D_08aa4358[i].midiTrackReaders, D_08aa4358[i].unk0_b10);
+    }
+
+    D_03005b7c = &D_030015a7;
+    D_03005b20 = 4;
+
+    for (i = 0; i <= 3; i++) {
+        D_03005b7c[i] = 0;
+    }
+
+    D_03005b3c = 0;
+    D_03005644 = 0;
+    D_03005b90[0] = 0;
+    D_03005b90[1] = 0;
+    D_03005b90[2] = 0;
+    D_03005b90[3] = 0;
+    D_03001598 = 0;
+}

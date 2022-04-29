@@ -9,7 +9,7 @@ extern void func_080493c8(u32, u32, u32); // [func_080493c8] Store panning-relat
 // extern ? func_080493f4(?);
 // extern ? func_08049450(?);
 // extern ? func_08049470(?);
-// extern ? func_08049490(?);
+extern void func_08049490(u32, u32, u32, u32 *, u32, u32 *, u16, struct Bingus *); // [func_08049490] Initialise... a lot...
 // extern ? func_080497f8(?);
 // extern ? func_08049ad8(?);
 // extern ? func_08049b34(?);

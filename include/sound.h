@@ -173,24 +173,40 @@ struct AudioChannel {
     u32 unk34;      // ??: [default = 0]
 };
 
-struct AudioChannelInfo {
+
+// Sequence Data Audio Channel table.
+struct SequenceDataAudioChannel {
+    struct SequenceData *sequenceData; // Sound Sequence.
+    u16 channelID; // Audio Channel to play the given Sound Sequence in. { 0..12 }
+} D_08aa06f8[1924];
+
+u32 D_08aa4318; // Total number of Audio Channels - 1. [12]
+u8  D_08aa431c; // Unknown Constant [1]
+u8  D_08aa431d; // Unknown Constant [0x45]
+u16 D_08aa431e; // Unknown Constant [0x7f]
+u32 D_08aa4320; // Unknown Constant [0x96]
+
+struct AudioChannel *D_08aa4324[13]; // Array of Audio Channel pointers.
+struct {
+    u32 id:5;
+    u32 nTracksMax:5;
+    u32 unk0_b10:6; // ??? (0 for music channels, 1 for sfx channels)
+    struct MidiChannel *midiChannels;
+    struct MidiChannelBus *midiChannelBus;
+    struct MidiTrackReader *midiTrackReaders;
+    struct AudioChannel *audioChannel;
+} D_08aa4358[13];
+
+u8 D_08aa445c; // Total number of Audio Channels. [13]
+
+// Audio Channel index, with other information.
+struct {
     struct AudioChannel *audioChannel;
     u32 null4;  // Empty
     u16 unk8;   // Maximum MIDI Tracks? { 5..15 }
     u16 unkC;   // ?? { 0, 1 }
-};
-struct AudioChannelInfo D_08aa4460[13]; // Audio Channel index, with other information.
+} D_08aa4460[13];
 
-struct SequenceDataAudioChannel {
-    struct SequenceData *sequenceData; // Sound Sequence.
-    u16 channelID; // Audio Channel to play the given Sound Sequence in. { 0..12 }
-};
-struct SequenceDataAudioChannel D_08aa06f8[1924]; // Sequence Data Audio Channel table.
-
-struct AudioChannel *D_08aa4324[13]; // Array of Audio Channel pointers.
-u8 D_08aa445c; // Total number of Audio Channels. [13]
-u32 D_08aa4318; // Total number of Audio Channels - 1. [12]
-u8 D_08aa431c; // Unknown Constant [1]
 
 
 struct Bingus {
