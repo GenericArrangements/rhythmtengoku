@@ -1183,7 +1183,15 @@ void func_0804c340(u32 arg0, u32 arg1, u32 arg2, u32 arg3) {
 
 #include "asm/lib_08049144/asm_0804c358.s"
 
-#include "asm/lib_08049144/asm_0804c35c.s"
+// [func_0804c35c] INITIALISE - Audio Channels
+void func_0804c35c(struct AudioChannel *channel, struct MidiChannelBus *mChnlBus, u32 nTracksMax, struct MidiTrackReader *mTrkReader, u32 type) {
+    channel->sequenceData = 0;
+    channel->midi_channelBus = mChnlBus;
+    channel->nTracksMax = nTracksMax;
+    channel->midi_trackReader = mTrkReader;
+    channel->unk0_b21 = type;
+    channel->volume = 0x64;
+}
 
 // [func_0804c398] MIDI - Parse Variable-Length Quantity
 u32 func_0804c398(u8 **midiStream) {
@@ -1210,7 +1218,7 @@ u32 func_0804c398(u8 **midiStream) {
 
 #include "asm/lib_08049144/asm_0804c6c8.s"
 
-// [func_0804c778] Initialise All?
+// [func_0804c778] INITIALISE - All?
 void func_0804c778(void) {
     u32 i;
 
