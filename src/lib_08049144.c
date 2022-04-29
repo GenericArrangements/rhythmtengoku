@@ -1181,6 +1181,7 @@ void func_0804c340(u32 arg0, u32 arg1, u32 arg2, u32 arg3) {
     D_03005b90[3] = arg3;
 }
 
+// [func_0804c358] STUB
 void func_0804c358(void) {
 }
 
