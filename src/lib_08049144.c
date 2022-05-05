@@ -1153,10 +1153,41 @@ void func_0804c040(struct AudioChannel *channel) {
 
     temp = ((volume >> 8) * channel->env_trackVol) >> 15;
     if (temp > 0xff) temp = 0xff;
-    func_08049ec4(channel->midi_channelBus, (u8) temp, channel->env_trackSel);
+    func_08049ec4(channel->midi_channelBus, temp, channel->env_trackSel);
 }
 
-#include "asm/lib_08049144/asm_0804c0f8.s"
+// [func_0804c0f8] ?? (relates to speed)
+void func_0804c0f8(struct AudioChannel *channel) {
+    u32 i;
+    u32 noActiveReader;
+    struct MidiTrackReader *mTrkReader;
+
+    // If the Audio Channel is stopped or paused, do not proceed.
+    if ((channel->sequenceData == 0) || channel->isPaused) return;
+
+    D_0300562c = 0;
+
+    // ???
+    for (i = 0; i < channel->nTracksUsed; i++) {
+        func_0804bed0(channel, i);
+    }
+
+    // If the above loop modifies the value of D_0300562c, apply to channel as speed envelope.
+    if (D_0300562c != 0) channel->speed = D_0300562c;
+
+    // Check if any MIDI Track Readers are currently operating.
+    mTrkReader = channel->midi_trackReader;
+    noActiveReader = 1;
+    for (i = 0; (i < channel->nTracksUsed) && noActiveReader;) {
+        if (mTrkReader->unk0_b0) noActiveReader = 0;
+
+        i++;
+        mTrkReader++;
+    }
+
+    // If none are active, remove the Sound Sequence from the Audio Channel.
+    if (noActiveReader) channel->sequenceData = 0;
+}
 
 // [func_0804c170] ??
 void func_0804c170(void) {
