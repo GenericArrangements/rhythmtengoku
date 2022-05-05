@@ -159,9 +159,9 @@ struct AudioChannel {
     u8  midi_loopStartSymSize;  // MIDI: Value of func_0804B348(D_08A865A4). [1]
     u8  midi_loopEndSymSize;    // MIDI: Value of func_0804B348(D_08A865A8). [1]
     u16 midi_quarterNote;       // MIDI: Value denoting 1 beat. Read upon initialisation, and for any change in tempo. [always 0x18]
-    u16 env_channelVol; // BeatScript: Channel Volume Envelope. [default = 0x100]
-    u16 env_trackVol;   // BeatScript: Volume Envelope for a selection of MIDI Tracks. [default = 0x100]
-    u16 env_trackSel;   // BeatScript: Selection of MIDI Tracks to apply Volume Envelope.
+    u16 channelGain;    // BeatScript: Channel Volume Envelope. [default = 0x100]
+    u16 trackGain;      // BeatScript: Volume Envelope for a selection of MIDI Tracks. [default = 0x100]
+    u16 trackSelect;    // BeatScript: Selection of MIDI Tracks to apply Volume Envelope.
     u16 env_speed;      // BeatScript: Speed Envelope. [default = 0x100]
     u16 env_volFadeEnv;     // BeatScript: Volume multiplier used for fade-out and mute effects. [default = 0x8000]
     u16 env_volFadeSpeed;   // BeatScript: Higher values for faster fade-out. Is set to 1 when track is muted instantly. [default = 0]

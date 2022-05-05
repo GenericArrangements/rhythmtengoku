@@ -672,9 +672,9 @@ void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqD
     channel->unk0_b10 = 0;
     channel->isPaused = 0;
     channel->speed = 1;
-    channel->env_channelVol = 0x100;
+    channel->channelGain = 0x100;
     channel->env_speed = 0x100;
-    channel->env_trackVol = 0x100;
+    channel->trackGain = 0x100;
     channel->volFadeType = 0;
     channel->env_volFadeEnv = 0x8000;
     channel->env_volFadeSpeed = 0;
@@ -750,15 +750,15 @@ void func_0804b620(void) {
     }
 }
 
-// [func_0804b650] AUDIO CHANNEL - Set Volume
-void func_0804b650(struct AudioChannel *channel, u16 volume) {
-    channel->env_channelVol = volume;
+// [func_0804b650] AUDIO CHANNEL - Set Gain (Volume)
+void func_0804b650(struct AudioChannel *channel, u16 gain) {
+    channel->channelGain = gain;
 }
 
-// [func_0804b654] AUDIO CHANNEL - Set Volume for Selected Tracks
-void func_0804b654(struct AudioChannel *channel, u16 tracks, u16 volume) {
-    channel->env_trackVol = volume;
-    channel->env_trackSel = tracks;
+// [func_0804b654] AUDIO CHANNEL - Set Gain (Volume) for Selected Tracks
+void func_0804b654(struct AudioChannel *channel, u16 tracks, u16 gain) {
+    channel->trackGain = gain;
+    channel->trackSelect = tracks;
 }
 
 // [func_0804b65c] AUDIO CHANNEL - Set Pitch
@@ -1146,14 +1146,14 @@ void func_0804c040(struct AudioChannel *channel) {
             break;
     }
 
-    volume = (channel->volume * channel->env_channelVol * channel->env_volFadeEnv) >> 8;
+    volume = (channel->volume * channel->channelGain * channel->env_volFadeEnv) >> 8;
     temp = volume >> 15;
     if (temp > 0xff) temp = 0xff;
     func_0804adb4(channel->midi_channelBus, temp);
 
-    temp = ((volume >> 8) * channel->env_trackVol) >> 15;
+    temp = ((volume >> 8) * channel->trackGain) >> 15;
     if (temp > 0xff) temp = 0xff;
-    func_08049ec4(channel->midi_channelBus, temp, channel->env_trackSel);
+    func_08049ec4(channel->midi_channelBus, temp, channel->trackSelect);
 }
 
 // [func_0804c0f8] ?? (relates to speed)

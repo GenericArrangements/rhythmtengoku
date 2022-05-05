@@ -114,7 +114,7 @@ extern void func_0804b5d8(struct AudioChannel *); // [func_0804b5d8] AUDIO CHANN
 extern void func_0804b5e4(struct AudioChannel *); // [func_0804b5e4] AUDIO CHANNEL - Unpause Channel
 extern void func_0804b5f0(void); // [func_0804b5f0] AUDIO CHANNEL - Pause All Channels
 extern void func_0804b620(void); // [func_0804b620] AUDIO CHANNEL - Unpause All Channels
-extern void func_0804b650(struct AudioChannel *, u16); // [func_0804b650] AUDIO CHANNEL - Set Volume
+extern void func_0804b650(struct AudioChannel *, u16); // [func_0804b650] AUDIO CHANNEL - Set Gain (Volume)
 extern void func_0804b654(struct AudioChannel *, u16, u16); // [func_0804b654] AUDIO CHANNEL - Set Volume for Selected Tracks
 extern void func_0804b65c(struct AudioChannel *, u16, s16); // [func_0804b65c] AUDIO CHANNEL - Set Pitch
 extern void func_0804b66c(struct AudioChannel *, u16, s8); // [func_0804b66c] AUDIO CHANNEL - Set Panning
