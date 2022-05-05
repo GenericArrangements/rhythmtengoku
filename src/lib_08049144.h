@@ -26,7 +26,7 @@ extern void func_08049db8(struct MidiChannelBus *, u32); // [func_08049db8] ??
 extern void func_08049e3c(struct MidiChannelBus *); // [func_08049e3c] ?? (Unload)
 extern void func_08049e64(struct MidiChannelBus *); // [func_08049e64] ??
 extern void func_08049e8c(struct MidiChannelBus *, u8); // [func_08049e8c] ??
-extern void func_08049ec4(struct MidiChannelBus *, u8, u16); // [func_08049ec4] INITIALISE - MIDI Channel Bus - unk1, unk2
+extern void func_08049ec4(struct MidiChannelBus *, u8, u16); // [func_08049ec4] MIDI CHANNEL BUS - Set Selected Track Volume & Track Selection
 extern void func_08049ecc(struct MidiChannel *); // [func_08049ecc] INITIALISE - MIDI Channel
 extern void func_08049fa0(struct MidiChannelBus *, u32, struct MidiChannel *); // [func_08049fa0] INITIALISE - MIDI Channel Bus
 extern void func_0804a014(struct MidiChannelBus *, const InstrumentBank *); // [func_0804a014] INITIALISE - MIDI Channel Bus - Set Sound Bank

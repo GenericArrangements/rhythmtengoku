@@ -112,8 +112,8 @@ struct MidiChannel {
 
 struct MidiChannelBus {
     u8  volume;
-    u8  unk1;
-    u16 unk2;
+    u8  trackVol;
+    u16 trackSel;
     u8  unk4;
     s8  unk5; // Panning?
     s16 pitch;

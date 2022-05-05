@@ -201,10 +201,10 @@ void func_08049e8c(struct MidiChannelBus *mChnlBus, u8 priority) {
     }
 }
 
-// [func_08049ec4] INITIALISE - MIDI Channel Bus - unk1, unk2
-void func_08049ec4(struct MidiChannelBus *mChnlBus, u8 unk1, u16 unk2) {
-    mChnlBus->unk1 = unk1;
-    mChnlBus->unk2 = unk2;
+// [func_08049ec4] MIDI CHANNEL BUS - Set Selected Track Volume & Track Selection
+void func_08049ec4(struct MidiChannelBus *mChnlBus, u8 volume, u16 selection) {
+    mChnlBus->trackVol = volume;
+    mChnlBus->trackSel = selection;
 }
 
 // [func_08049ecc] INITIALISE - MIDI Channel
@@ -243,8 +243,8 @@ void func_08049fa0(struct MidiChannelBus *mChnlBus, u32 totalChannels, struct Mi
     u32 i;
 
     mChnlBus->volume = 0x64;
-    mChnlBus->unk1 = 0x64;
-    mChnlBus->unk2 = 0;
+    mChnlBus->trackVol = 0x64;
+    mChnlBus->trackSel = 0;
     mChnlBus->unk4 = 0;
     mChnlBus->unk5 = 0;
     mChnlBus->pitch = 0;
