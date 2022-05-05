@@ -115,7 +115,7 @@ struct MidiChannelBus {
     u8  trackVol;
     u16 trackSel;
     u8  unk4;
-    s8  unk5; // Panning?
+    s8  panning;
     s16 pitch;
     u16 unk8;
     s16 *unkC;      // ROM Pointer to a curve table(?) in the sound data section.

@@ -246,7 +246,7 @@ void func_08049fa0(struct MidiChannelBus *mChnlBus, u32 totalChannels, struct Mi
     mChnlBus->trackVol = 0x64;
     mChnlBus->trackSel = 0;
     mChnlBus->unk4 = 0;
-    mChnlBus->unk5 = 0;
+    mChnlBus->panning = 0;
     mChnlBus->pitch = 0;
     mChnlBus->unk8 = 0x1400;
     mChnlBus->unkC = &D_08a86008[0];
@@ -343,7 +343,7 @@ void func_0804aa7c(struct MidiChannelBus *mChnlBus, u32 id, u8 panning) {
 // [func_0804aaa4] MIDI CHANNEL - Return a net Panning value, factoring all relevant Panning controllers.
 u8 func_0804aaa4(struct MidiChannelBus *mChnlBus, u32 id) {
     struct MidiChannel *mChnl = &mChnlBus->midiChannel[id];
-    s32 panning = mChnl->panning + (mChnlBus->unk5 >> 1);
+    s32 panning = mChnl->panning + (mChnlBus->panning >> 1);
 
     // Include modulation if modType is set to "panning".
     if (mChnl->modType == 2) panning += (mChnl->modResult >> 1);
@@ -496,7 +496,7 @@ void func_0804adb4(struct MidiChannelBus *mChnlBus, u8 volume) {
 // [func_0804adb8] MIDI CHANNEL BUS - Set Panning
 void func_0804adb8(struct MidiChannelBus *mChnlBus, s8 panning) {
     u32 i;
-    mChnlBus->unk5 = panning;
+    mChnlBus->panning = panning;
 
     for (i = 0; i < mChnlBus->totalChannels; i++) {
         func_0804aae0(mChnlBus, i);
