@@ -184,10 +184,10 @@ void func_08049e3c(struct MidiChannelBus *mChnlBus) {
 }
 
 // [func_08049e64] ??
-void func_08049e64(struct MidiChannelBus *midi_channelBus) {
+void func_08049e64(struct MidiChannelBus *mChnlBus) {
     u32 i;
-    for (i = 0; i < midi_channelBus->totalChannels; i++) {
-        func_08049db8(midi_channelBus, i);
+    for (i = 0; i < mChnlBus->totalChannels; i++) {
+        func_08049db8(mChnlBus, i);
     }
 }
 
@@ -624,14 +624,14 @@ void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqD
             if (channel->sequenceData->priority > seqData->priority) return;
         }
     }
-    mChnlBus = channel->midi_channelBus;
+    mChnlBus = channel->midiChannelBus;
     func_08049e64(mChnlBus);
     func_08049fa0(mChnlBus, mChnlBus->totalChannels, mChnlBus->midiChannel);
     func_0804a014(mChnlBus, instrumentBanks[seqData->soundBank]);
     func_0804adb4(mChnlBus, seqData->volume);
     func_08049e8c(mChnlBus, seqData->priority);
     channel->sequenceData = seqData;
-    channel->volume = seqData->volume;
+    channel->channelVolume = seqData->volume;
 
     // Reading MIDI Data:
     mTrkStream = (u8 *)seqData->romAddress;
@@ -650,7 +650,7 @@ void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqD
     mTrkStream += chunkLength; // Skip (Header: Data)
 
     // Track:
-    mTrkReader = channel->midi_trackReader;
+    mTrkReader = channel->midiTrackReader;
     for (i = 0; i < channel->nTracksUsed; i++) {
         mTrkStream += 4; // Skip (Track: Length)
         chunkLength = func_0804b330(mTrkStream);
@@ -701,14 +701,14 @@ void func_0804b534(u16 index) {
 
 // [func_0804b560] AUDIO CHANNEL - Remove Sound Sequence
 void func_0804b560(struct AudioChannel *channel) {
-    func_08049e3c(channel->midi_channelBus);
+    func_08049e3c(channel->midiChannelBus);
     channel->sequenceData = 0;
 }
 
 // [func_0804b574] AUDIO CHANNEL - Pause/Unpause Sound Sequence { 0 = Unpause; 1 = Pause }
 void func_0804b574(struct AudioChannel *channel, u8 pause) {
     channel->isPaused = pause;
-    if (pause) func_08049e64(channel->midi_channelBus);
+    if (pause) func_08049e64(channel->midiChannelBus);
 }
 
 // [func_0804b5a0] AUDIO CHANNEL - Check for Active MIDI Readers
@@ -717,7 +717,7 @@ u32 func_0804b5a0(struct AudioChannel *channel) {
 
     if (channel->sequenceData == 0) return 0;
     for (i = 0; i < channel->nTracksUsed; i++) {
-        if (channel->midi_trackReader[i].unk0_b0) return 1;
+        if (channel->midiTrackReader[i].unk0_b0) return 1;
     }
     return 0;
 }
@@ -763,12 +763,12 @@ void func_0804b654(struct AudioChannel *channel, u16 tracks, u16 gain) {
 
 // [func_0804b65c] AUDIO CHANNEL - Set Pitch
 void func_0804b65c(struct AudioChannel *channel, u16 unused, s16 pitch) {
-    func_0804ade4(channel->midi_channelBus, pitch);
+    func_0804ade4(channel->midiChannelBus, pitch);
 }
 
 // [func_0804b66c] AUDIO CHANNEL - Set Panning
 void func_0804b66c(struct AudioChannel *channel, u16 unused, s8 panning) {
-    func_0804adb8(channel->midi_channelBus, panning);
+    func_0804adb8(channel->midiChannelBus, panning);
 }
 
 // [func_0804b67c] AUDIO CHANNEL - Pause Sound Sequence from Index
@@ -864,7 +864,7 @@ void func_0804b7fc(struct AudioChannel *channel, u16 time) {
 
 // [func_0804b80c] MIDI - System-Exclusive Message [Evnt_F0]
 void func_0804b80c(struct AudioChannel *channel, u8 *stream) {
-    struct MidiChannelBus *mChnlBus = channel->midi_channelBus;
+    struct MidiChannelBus *mChnlBus = channel->midiChannelBus;
     u8 type = *stream;
     u32 i;
 
@@ -929,8 +929,8 @@ u32 func_0804b898(struct AudioChannel *channel, u8 **upstream) {
 }
 
 // [func_0804b95c] MIDI - Controller Change [Evnt_B]
-void func_0804b95c(struct AudioChannel *audioChnl, u32 id, u8 ctrl, u8 var) {
-    struct MidiChannelBus *mChnlBus = audioChnl->midi_channelBus;
+void func_0804b95c(struct AudioChannel *channel, u32 id, u8 ctrl, u8 var) {
+    struct MidiChannelBus *mChnlBus = channel->midiChannelBus;
 
     switch (ctrl) {
         case 0x00: func_0804abc8(mChnlBus, id, var | 0x8000); break;
@@ -961,10 +961,10 @@ void func_0804b95c(struct AudioChannel *audioChnl, u32 id, u8 ctrl, u8 var) {
         case 0x4C: D_03005640 = var * 2; break;
         case 0x4D: func_08049b8c(var); break;
         case 0x4B: func_0804acf0(mChnlBus, id, var); break;
-        case 0x4E: audioChnl->midiController4E = var; break;
-        case 0x4F: audioChnl->midiController4F = var; break;
-        case 0x50: audioChnl->midiController50 = var; break;
-        case 0x51: audioChnl->midiController51 = var; break;
+        case 0x4E: channel->midiController4E = var; break;
+        case 0x4F: channel->midiController4F = var; break;
+        case 0x50: channel->midiController50 = var; break;
+        case 0x51: channel->midiController51 = var; break;
         case 0x52: func_0804ad38(mChnlBus, id, var); break;
         case 0x53: func_0804ad90(mChnlBus, id, var); break;
         case 0x54: func_0804ad9c(mChnlBus, id, var); break;
@@ -986,7 +986,7 @@ void func_0804bc5c(u32 id, u32 key, u32 vel) {
 // [func_0804bcc0] MIDI - Messages/Events
 u32 func_0804bcc0(struct AudioChannel *channel, u32 id) {
     u32 trackEndType = 0;
-    struct MidiTrackReader *reader = &channel->midi_trackReader[id];
+    struct MidiTrackReader *reader = &channel->midiTrackReader[id];
     struct MidiTrackReader *tempReader;
     u8 *byteStream = reader->current;
     u8 command;
@@ -1016,7 +1016,7 @@ u32 func_0804bcc0(struct AudioChannel *channel, u32 id) {
                 switch (func_0804b898(channel, &byteStream)) {
                     // End of Track
                     case 1:
-                        func_0804accc(channel->midi_channelBus, id, 0);
+                        func_0804accc(channel->midiChannelBus, id, 0);
                         return 1;
 
                     // Marker: Loop Start
@@ -1034,7 +1034,7 @@ u32 func_0804bcc0(struct AudioChannel *channel, u32 id) {
                     case 3:
                         if (!channel->unk0_b10) break;
                         for (i = 0; i < channel->nTracksUsed; i++) {
-                            tempReader = &channel->midi_trackReader[i];
+                            tempReader = &channel->midiTrackReader[i];
                             tempReader->unk0_b0 = tempReader->unk0_b1;
                             tempReader->unk0_b2 = tempReader->unk0_b10;
                             if (reader == tempReader) {
@@ -1043,7 +1043,7 @@ u32 func_0804bcc0(struct AudioChannel *channel, u32 id) {
                                 tempReader->current = tempReader->unk10;
                                 tempReader->unkC = reader->unkC;
                             }
-                            func_08049d30(channel->midi_channelBus, i);
+                            func_08049d30(channel->midiChannelBus, i);
                         }
                         trackEndType = 2;
                         break;
@@ -1086,7 +1086,7 @@ u32 func_0804bcc0(struct AudioChannel *channel, u32 id) {
 
             // Program Change
             case 0xC0:
-                func_0804ab88(channel->midi_channelBus, id, byteStream[0]);
+                func_0804ab88(channel->midiChannelBus, id, byteStream[0]);
                 byteStream += 1;
                 break;
 
@@ -1098,7 +1098,7 @@ u32 func_0804bcc0(struct AudioChannel *channel, u32 id) {
             // Pitch Wheel Change
             case 0xE0:
                 mod = (byteStream[0] & 0x7f) | ((byteStream[1] & 0x7f) << 7);
-                func_0804aa40(channel->midi_channelBus, id, mod);
+                func_0804aa40(channel->midiChannelBus, id, mod);
                 byteStream += 2;
                 break;
         }
@@ -1146,14 +1146,14 @@ void func_0804c040(struct AudioChannel *channel) {
             break;
     }
 
-    volume = (channel->volume * channel->channelGain * channel->env_volFadeEnv) >> 8;
+    volume = (channel->channelVolume * channel->channelGain * channel->env_volFadeEnv) >> 8;
     temp = volume >> 15;
     if (temp > 0xff) temp = 0xff;
-    func_0804adb4(channel->midi_channelBus, temp);
+    func_0804adb4(channel->midiChannelBus, temp);
 
     temp = ((volume >> 8) * channel->trackGain) >> 15;
     if (temp > 0xff) temp = 0xff;
-    func_08049ec4(channel->midi_channelBus, temp, channel->trackSelect);
+    func_08049ec4(channel->midiChannelBus, temp, channel->trackSelect);
 }
 
 // [func_0804c0f8] ?? (relates to speed)
@@ -1176,7 +1176,7 @@ void func_0804c0f8(struct AudioChannel *channel) {
     if (D_0300562c != 0) channel->speed = D_0300562c;
 
     // Check if any MIDI Track Readers are currently operating.
-    mTrkReader = channel->midi_trackReader;
+    mTrkReader = channel->midiTrackReader;
     noActiveReader = 1;
     for (i = 0; (i < channel->nTracksUsed) && noActiveReader;) {
         if (mTrkReader->unk0_b0) noActiveReader = 0;
@@ -1206,7 +1206,7 @@ void func_0804c170(void) {
         if (channel != 0) {
             func_0804c040(channel);
             func_0804c0f8(channel);
-            func_08049d08(channel->midi_channelBus);
+            func_08049d08(channel->midiChannelBus);
             if (channel->sequenceData != 0) {
                 rvb0 -= 0x80 - (channel->midiController4E * 2);
                 rvb1 -= 0x40 - (channel->midiController4F);
@@ -1262,11 +1262,11 @@ void func_0804c358(void) {
 // [func_0804c35c] INITIALISE - Audio Channels
 void func_0804c35c(struct AudioChannel *channel, struct MidiChannelBus *mChnlBus, u32 nTracksMax, struct MidiTrackReader *mTrkReader, u32 type) {
     channel->sequenceData = 0;
-    channel->midi_channelBus = mChnlBus;
+    channel->midiChannelBus = mChnlBus;
     channel->nTracksMax = nTracksMax;
-    channel->midi_trackReader = mTrkReader;
+    channel->midiTrackReader = mTrkReader;
     channel->unk0_b21 = type;
-    channel->volume = 0x64;
+    channel->channelVolume = 0x64;
 }
 
 // [func_0804c398] MIDI - Parse Variable-Length Quantity
