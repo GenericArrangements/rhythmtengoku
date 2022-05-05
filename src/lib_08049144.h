@@ -135,7 +135,7 @@ extern void func_0804b95c(struct AudioChannel *, u32, u8, u8); // [func_0804b95c
 extern void func_0804bc5c(u32, u32, u32); // [func_0804bc5c] MIDI - Note Off/On [Evnt_8; Evnt_9]
 extern u32  func_0804bcc0(struct AudioChannel *, u32); // [func_0804bcc0] MIDI - Messages/Events
 // extern ? func_0804bed0(?);
-// extern ? func_0804c040(?);
+extern void func_0804c040(struct AudioChannel *); // [func_0804c040] Apply Volume (Real-Time)
 // extern ? func_0804c0f8(?);
 extern void func_0804c170(void); // [func_0804c170] ??
 extern void func_0804c340(u32, u32, u32, u32); // [func_0804c340] Set Reverb

@@ -1111,7 +1111,50 @@ u32 func_0804bcc0(struct AudioChannel *channel, u32 id) {
 
 #include "asm/lib_08049144/asm_0804bed0.s"
 
-#include "asm/lib_08049144/asm_0804c040.s"
+// [func_0804c040] Apply Volume (Real-Time)
+void func_0804c040(struct AudioChannel *channel) {
+    u32 volume;
+    u32 temp;
+
+    switch (channel->volFadeType) {
+        case 0: // Reset Fade / None
+            break;
+        case 1: // Fade In
+            channel->env_volFadeEnv += channel->env_volFadeSpeed;
+            if ((s16) channel->env_volFadeEnv < 0) {
+                channel->volFadeType = 0;
+                channel->env_volFadeEnv = 0x8000;
+                channel->env_volFadeSpeed = 0;
+            }
+            break;
+        case 2: // Fade Out & Clear
+            if (channel->env_volFadeEnv < channel->env_volFadeSpeed) {
+                channel->volFadeType = 0;
+                channel->env_volFadeEnv = 0;
+                func_0804b560(channel); // Stop Channel
+            } else {
+                channel->env_volFadeEnv -= channel->env_volFadeSpeed;
+            }
+            break;
+        case 3: // Fade Out & Pause
+            if (channel->env_volFadeEnv < channel->env_volFadeSpeed) {
+                channel->env_volFadeEnv = 0;
+                func_0804b574(channel, 1); // Pause Channel
+            } else {
+                channel->env_volFadeEnv -= channel->env_volFadeSpeed;
+            }
+            break;
+    }
+
+    volume = (channel->volume * channel->env_channelVol * channel->env_volFadeEnv) >> 8;
+    temp = volume >> 15;
+    if (temp > 0xff) temp = 0xff;
+    func_0804adb4(channel->midi_channelBus, temp);
+
+    temp = ((volume >> 8) * channel->env_trackVol) >> 15;
+    if (temp > 0xff) temp = 0xff;
+    func_08049ec4(channel->midi_channelBus, (u8) temp, channel->env_trackSel);
+}
 
 #include "asm/lib_08049144/asm_0804c0f8.s"
 
