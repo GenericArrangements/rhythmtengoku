@@ -287,7 +287,13 @@ void func_0804a014(struct MidiChannelBus *mChnlBus, const InstrumentBank *instBa
 
 #include "asm/lib_08049144/asm_0804a2c4.s"
 
-#include "asm/lib_08049144/asm_0804a334.s"
+// [func_0804a334] ??
+void func_0804a334(void) {
+    u32 i;
+
+    for (i = 0; i < D_03005b8c; i++) func_0804a2c4(i);
+    func_0804b2c4();
+}
 
 // [func_0804a360] Initialise D_030064bc (Bingus)
 void func_0804a360(u32 total, struct Bingus *bingus) {

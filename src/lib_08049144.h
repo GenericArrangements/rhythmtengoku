@@ -34,7 +34,7 @@ extern void func_0804a014(struct MidiChannelBus *, const InstrumentBank *); // [
 // extern ? func_0804a1f4(?);
 // extern ? func_0804a224(?);
 // extern ? func_0804a2c4(?);
-// extern ? func_0804a334(?);
+extern void func_0804a334(void); // [func_0804a334] ??
 extern void func_0804a360(u32, struct Bingus *); // [func_0804a360] Initialise D_030064bc (Bingus)
 extern s32  func_0804a3a0(struct MidiChannel *, u8); // [func_0804a3a0] Return the ID of the first active, matching Bingus for which (unk1C != 3).
 // extern ? func_0804a3fc(?);
