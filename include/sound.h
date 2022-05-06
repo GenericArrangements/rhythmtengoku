@@ -90,7 +90,7 @@ struct MidiChannel {
     u32 modDepth:7;     // Modulation Depth [mCtrl_01; default = 0]
     u32 unk4_b21:7;     // ??? [default = 0]
     u32 modType:2;      // Modulation Type [default = 0] { 0 = Pitch; 1 = Volume (Tremolo); 2 = Panning }
-    u32 unk4_b30:2;     // ??? [no default]
+    u32 unk4_b30:2;     // ??? (might be unused) [no default]
     u32 pitchWheel:14;  // Pitch Wheel [mEvnt_E; default = 0x2000]
     u32 volumeWheel:8;  // Volume Wheel? [no default]
     u32 priority:10;    // Priority [mCtrl_20; default = 0]
@@ -111,9 +111,9 @@ struct MidiChannel {
 };
 
 struct MidiChannelBus {
-    u8  volume;
-    u8  trackVol;
-    u16 trackSel;
+    u8  busVolume;
+    u8  trackVolume;
+    u16 trackSelect;
     u8  unk4;
     s8  panning;
     s16 pitch;

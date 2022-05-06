@@ -203,8 +203,8 @@ void func_08049e8c(struct MidiChannelBus *mChnlBus, u8 priority) {
 
 // [func_08049ec4] MIDI CHANNEL BUS - Set Selected Track Volume & Track Selection
 void func_08049ec4(struct MidiChannelBus *mChnlBus, u8 volume, u16 selection) {
-    mChnlBus->trackVol = volume;
-    mChnlBus->trackSel = selection;
+    mChnlBus->trackVolume = volume;
+    mChnlBus->trackSelect = selection;
 }
 
 // [func_08049ecc] INITIALISE - MIDI Channel
@@ -242,9 +242,9 @@ void func_08049ecc(struct MidiChannel *mChnl) {
 void func_08049fa0(struct MidiChannelBus *mChnlBus, u32 totalChannels, struct MidiChannel *mChnl) {
     u32 i;
 
-    mChnlBus->volume = 0x64;
-    mChnlBus->trackVol = 0x64;
-    mChnlBus->trackSel = 0;
+    mChnlBus->busVolume = 0x64;
+    mChnlBus->trackVolume = 0x64;
+    mChnlBus->trackSelect = 0;
     mChnlBus->unk4 = 0;
     mChnlBus->panning = 0;
     mChnlBus->pitch = 0;
@@ -490,7 +490,7 @@ void func_0804adb0(struct MidiChannelBus *mChnlBus, u8 var) {
 
 // [func_0804adb4] MIDI CHANNEL BUS - Set Volume
 void func_0804adb4(struct MidiChannelBus *mChnlBus, u8 volume) {
-    mChnlBus->volume = volume;
+    mChnlBus->busVolume = volume;
 }
 
 // [func_0804adb8] MIDI CHANNEL BUS - Set Panning
