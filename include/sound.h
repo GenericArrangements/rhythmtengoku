@@ -121,30 +121,30 @@ struct MidiChannelBus {
     s16 *unkC;      // ROM Pointer to a curve table(?) in the sound data section.
     const InstrumentBank *soundBank;
     u32 totalChannels:5;
-    u32 priority:27; // Priority
+    u32 priority:27;
     struct MidiChannel *midiChannel; // Array of MIDI Channels
     u8  unk1C[12];
 };
 
 struct MidiTrackReader {
-    u32 unk0_b0:1;
-    u32 unk0_b1:1;
-    u32 unk0_b2:8;
-    u32 unk0_b10:8;
-    u32 unk0_b18:1;
-    u8 *start;
-    u8 *current;
-    u32 unkC;
-    u8 *unk10;
-    u32 unk14;
-    u32 deltaTime;
+    u32 active_curr:1;  // Active State (Current)
+    u32 active_loop:1;  // Active State (At Loop Start)
+    u32 command_curr:8; // Command (Current)
+    u32 command_loop:8; // Command (At Loop Start)
+    u32 inLoop:1;       // Reader is within MIDI loop region. [default = 0]
+    u8 *stream_start;   // Stream Position: Track Start
+    u8 *stream_curr;    // Stream Position: Current
+    u32 unkC;           // ?? ( = initial deltaTime << 8)
+    u8 *stream_loop;    // Stream Position: Loop Start
+    u32 unk14;          // ?? (may be unused?)
+    u32 deltaTime;      // Time until next instruction? (already parsed from variable-length quantity)
 };
 
 // Audio Device Channel
 struct AudioChannel {
     u32 nTracksMax:5;   // Maximum number of MIDI Tracks this Audio Channel is able to process.
     u32 nTracksUsed:5;  // Total number of MIDI Tracks used by the given Sound Sequence.
-    u32 unk0_b10:1;     // ???
+    u32 inLoop:1;       // Channel is currently within MIDI loop region. [default = 0]
     u32 isPaused:1;     // Paused State { 0 = Unpaused; 1 = Paused }
     u32 midiTempo:9;    // Current MIDI Tempo, in Beats Per Minute (BPM).
     u32 unk0_b21:1;     // ??? (set on startup. can prevent loading tracks if set to 1) { 0 = Music/Ambience Channel; 1 = Sound Effect Channel }
@@ -153,7 +153,7 @@ struct AudioChannel {
     struct MidiChannelBus *midiChannelBus;      // MIDI: Bus with effects for all MIDI Channels.
     struct MidiTrackReader *midiTrackReader;    // MIDI: Multiple structures which each keep track of a MIDI Track being processed.
     const struct SequenceData *sequenceData;    // SequenceData: Currently-loaded Sound Sequence.
-    u32 channelSpeed;   // ??: Similar but not directly tempo. [default = 1]
+    u32 channelSpeed;       // ??: Similar but not directly tempo. [default = 1]
     char *loopStartSym;     // MIDI: Label char denoting "Loop Start". [always D_08A865D4, '[']
     char *loopEndSym;       // MIDI: Label char denoting "Loop End". [always D_08A865D8, ']']
     u8  loopStartSymSize;   // MIDI: Value of func_0804B348(D_08A865A4). [1]
@@ -170,7 +170,7 @@ struct AudioChannel {
     s8  midiController4F;   // ??: [default = 0x40]
     s8  midiController50;   // ??: [default = 0x40]
     s8  midiController51;   // ??: [default = 0x40]
-    u32 unk34;      // ??: [default = 0]
+    u32 unk34;      // ??: (is set to midiTrackReader->deltaTime upon hitting a loop start marker) [default = 0]
 };
 
 
@@ -210,7 +210,8 @@ struct {
 
 
 struct Bingus {
-    u32 unk0_b0:1;
+    u32 active:1;
+    u32 key:7; // Pitch (key-wise)
     u8 unk1;
     u8 unk2; // ?? Panning 1
     u8 unk3; // ?? Panning 2

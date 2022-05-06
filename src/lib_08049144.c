@@ -77,7 +77,7 @@ extern char D_08a865a8[]; // MIDI "Loop End" Marker: ']'
 
 // [func_080493b0] ?
 void func_080493b0(u32 id) {
-    D_03005b88[id].unk0_b0 = 0;
+    D_03005b88[id].active = 0;
 }
 
 // [func_080493c8] Store panning-related values to D_03005b88[id].
@@ -144,12 +144,12 @@ void func_08049d30(struct MidiChannelBus *mChnlBus, u32 id) {
         return;
     }
     for (i = 0; i < D_03005b8c; i++) {
-        if (D_030064bc[i].unk0_b0 && (D_030064bc[i].midiChannel == mChnl)) {
+        if (D_030064bc[i].active && (D_030064bc[i].midiChannel == mChnl)) {
             D_030064bc[i].unk1C = 4;
         }
     }
     for (i = 0; i < 4; i++) {
-        if (D_030056a0[i].unk0_b0 && (D_030056a0[i].midiChannel == mChnl)) {
+        if (D_030056a0[i].active && (D_030056a0[i].midiChannel == mChnl)) {
             D_030056a0[i].unk1C = 4;
         }
     }
@@ -161,13 +161,13 @@ void func_08049db8(struct MidiChannelBus *mChnlBus, u32 id) {
     u32 i;
 
     for (i = 0; i < D_03005b8c; i++) {
-        if (D_030064bc[i].unk0_b0 && (D_030064bc[i].midiChannel == mChnl)) {
-            D_030064bc[i].unk0_b0 = 0;
+        if (D_030064bc[i].active && (D_030064bc[i].midiChannel == mChnl)) {
+            D_030064bc[i].active = 0;
             func_080493b0(i);
         }
     }
     for (i = 0; i < 4; i++) {
-        if (D_030056a0[i].unk0_b0 && (D_030056a0[i].midiChannel == mChnl)) {
+        if (D_030056a0[i].active && (D_030056a0[i].midiChannel == mChnl)) {
             D_030056a0[i].unk1C = 3;
             D_030056a0[i].unk1D = 0;
         }
@@ -286,7 +286,7 @@ void func_0804a360(u32 total, struct Bingus *bingus) {
     D_030064bc = bingus;
 
     for (i = 0; i < D_03005b8c; i++) {
-        D_030064bc[i].unk0_b0 = 0;
+        D_030064bc[i].active = 0;
     }
 }
 
@@ -363,7 +363,7 @@ void func_0804aae0(struct MidiChannelBus *mChnlBus, u32 id) {
     struct Bingus *bingus = D_030064bc;
 
     for (i; i < D_03005b8c;) {
-        if (bingus->unk0_b0 && (bingus->midiChannel == mChnl)) {
+        if (bingus->active && (bingus->midiChannel == mChnl)) {
             panning += bingus->unk18;
             // Clamp to 7 bits.
             if (panning < 0) panning = 0;
@@ -566,7 +566,7 @@ void func_0804af30(void) {
     u32 i;
 
     for (i = 0; i < 4; i++) {
-        D_030056a0[i].unk0_b0 = 0;
+        D_030056a0[i].active = 0;
     }
 
     for (i = 0; i < 4; i++) {
@@ -653,24 +653,24 @@ void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqD
     // Track:
     mTrkReader = channel->midiTrackReader;
     for (i = 0; i < channel->nTracksUsed; i++) {
-        mTrkStream += 4; // Skip (Track: Length)
+        mTrkStream += 4; // Skip (Track: Header)
         chunkLength = func_0804b330(mTrkStream);
         mTrkStream += 4; // Skip (Track: Length)
         mTrkStart = mTrkStream;
         mTrkStream += chunkLength;
-        mTrkReader->unk0_b0 = 1;
-        mTrkReader->start = mTrkStart;
+        mTrkReader->active_curr = 1;
+        mTrkReader->stream_start = mTrkStart;
         deltaTime = func_0804c398(&mTrkStart);
         mTrkReader->unkC = deltaTime << 8;
-        mTrkReader->current = mTrkStart;
+        mTrkReader->stream_curr = mTrkStart;
         mTrkReader->deltaTime = deltaTime;
-        mTrkReader->unk0_b1 = 0;
-        mTrkReader->unk0_b18 = 0;
+        mTrkReader->active_loop = 0;
+        mTrkReader->inLoop = 0;
         mTrkReader++;
     }
 
     // Other Data:
-    channel->unk0_b10 = 0;
+    channel->inLoop = 0;
     channel->isPaused = 0;
     channel->channelSpeed = 1;
     channel->channelGain = 0x100;
@@ -718,7 +718,7 @@ u32 func_0804b5a0(struct AudioChannel *channel) {
 
     if (channel->sequenceData == 0) return 0;
     for (i = 0; i < channel->nTracksUsed; i++) {
-        if (channel->midiTrackReader[i].unk0_b0) return 1;
+        if (channel->midiTrackReader[i].active_curr) return 1;
     }
     return 0;
 }
@@ -989,7 +989,7 @@ u32 func_0804bcc0(struct AudioChannel *channel, u32 id) {
     u32 trackEndType = 0;
     struct MidiTrackReader *reader = &channel->midiTrackReader[id];
     struct MidiTrackReader *tempReader;
-    u8 *byteStream = reader->current;
+    u8 *byteStream = reader->stream_curr;
     u8 command;
     u16 mod;
     u32 i;
@@ -997,10 +997,10 @@ u32 func_0804bcc0(struct AudioChannel *channel, u32 id) {
     // ??
     command = byteStream[0];
     if ((command & 0x80) != 0) {
-        reader->unk0_b2 = command;
+        reader->command_curr = command;
         byteStream++;
     }
-    command = reader->unk0_b2;
+    command = reader->command_curr;
 
     // MIDI Meta Events & System Messages
     if (command > 0xEF) {
@@ -1022,26 +1022,26 @@ u32 func_0804bcc0(struct AudioChannel *channel, u32 id) {
 
                     // Marker: Loop Start
                     case 2:
-                        if (channel->unk0_b10) break;
-                        reader->unk0_b1 = reader->unk0_b0;
-                        reader->unk0_b10 = reader->unk0_b2;
-                        reader->unk10 = byteStream;
-                        reader->unk0_b18 = 1;
+                        if (channel->inLoop) break;
+                        reader->active_loop = reader->active_curr;
+                        reader->command_loop = reader->command_curr;
+                        reader->stream_loop = byteStream;
+                        reader->inLoop = 1;
                         channel->unk34 = reader->deltaTime;
-                        channel->unk0_b10 = 1;
+                        channel->inLoop = 1;
                         break;
 
                     // Marker: Loop End
                     case 3:
-                        if (!channel->unk0_b10) break;
+                        if (!channel->inLoop) break;
                         for (i = 0; i < channel->nTracksUsed; i++) {
                             tempReader = &channel->midiTrackReader[i];
-                            tempReader->unk0_b0 = tempReader->unk0_b1;
-                            tempReader->unk0_b2 = tempReader->unk0_b10;
+                            tempReader->active_curr = tempReader->active_loop;
+                            tempReader->command_curr = tempReader->command_loop;
                             if (reader == tempReader) {
-                                byteStream = reader->unk10;
+                                byteStream = reader->stream_loop;
                             } else {
-                                tempReader->current = tempReader->unk10;
+                                tempReader->stream_curr = tempReader->stream_loop;
                                 tempReader->unkC = reader->unkC;
                             }
                             func_08049d30(channel->midiChannelBus, i);
@@ -1106,7 +1106,7 @@ u32 func_0804bcc0(struct AudioChannel *channel, u32 id) {
     }
 
     // Close.
-    reader->current = byteStream;
+    reader->stream_curr = byteStream;
     return trackEndType;
 }
 
@@ -1180,7 +1180,7 @@ void func_0804c0f8(struct AudioChannel *channel) {
     mTrkReader = channel->midiTrackReader;
     noActiveReader = 1;
     for (i = 0; (i < channel->nTracksUsed) && noActiveReader;) {
-        if (mTrkReader->unk0_b0) noActiveReader = 0;
+        if (mTrkReader->active_curr) noActiveReader = 0;
 
         i++;
         mTrkReader++;
