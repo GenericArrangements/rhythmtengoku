@@ -285,7 +285,23 @@ void func_0804a014(struct MidiChannelBus *mChnlBus, const InstrumentBank *instBa
 
 #include "asm/lib_08049144/asm_0804a224.s"
 
-#include "asm/lib_08049144/asm_0804a2c4.s"
+// [func_0804a2c4] ??
+void func_0804a2c4(u32 id) {
+    struct Bingus *bingus = &D_030064bc[id];
+
+    if (!bingus->active) return;
+
+    if (func_08049b5c(id) != 0) {
+        bingus->unk17_b7 = 0;
+        if (!bingus->midiChannel->unk0_b1) {
+            func_080493f4(id, func_0804a018(bingus));
+        }
+        func_080493e4(id, func_0804a1f4(bingus));
+        if (func_0804a224(bingus) == 0) return;
+        func_080493b0(id);
+    }
+    bingus->active = FALSE;
+}
 
 // [func_0804a334] ??
 void func_0804a334(void) {

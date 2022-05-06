@@ -219,7 +219,10 @@ struct Bingus {
     u32 unk8;
     struct MidiChannel *midiChannel;
     u32 unk10;
-    u32 unk14;
+    u16 unk14;
+    u8 unk16;
+    u8 unk17_b0:7;
+    u8 unk17_b7:1;
     s16 unk18; // ?? Panning
     u16 unk1A;
     u32 unk1C:8;
