@@ -36,12 +36,12 @@ extern void func_0804a014(struct MidiChannelBus *, const InstrumentBank *); // [
 // extern ? func_0804a2c4(?);
 // extern ? func_0804a334(?);
 extern void func_0804a360(u32, struct Bingus *); // [func_0804a360] Initialise D_030064bc (Bingus)
-// extern ? func_0804a3a0(?);
+extern s32  func_0804a3a0(struct MidiChannel *, u8); // [func_0804a3a0] Return the ID of the first active, matching Bingus for which (unk1C != 3).
 // extern ? func_0804a3fc(?);
 // extern ? func_0804a434(?);
 // extern ? func_0804a48c(?);
 // extern ? func_0804a4e0(?);
-// extern ? func_0804a5b4(?);
+extern void func_0804a5b4(struct MidiChannelBus *, u32, u8); // [func_0804a5b4] (Bingus) Set unk1C to 3 for all matching at D_030064bc and D_030056a0.
 // extern ? func_0804a628(?);
 extern u8   func_0804a65c(u8); // [func_0804a65c] ?? (something about left panning)
 extern u8   func_0804a674(u8); // [func_0804a674] ?? (something about right panning)

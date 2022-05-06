@@ -15,11 +15,12 @@ extern u8  D_030015a7; // Initial value at D_03005b7c
 
 extern u32 D_03001888; // this is like, sample data or something
 extern u32 D_030024c8; // sample envelope or something
-extern struct Bingus D_030028c8; // bingus
-extern struct Bingus D_03002a48; // bingus
+extern struct Bingus D_030028c8; // bingus (12 of them)
+extern struct Bingus D_03002a48; // bingus (12 of them)
 
 extern u16 D_030055f0;
 
+extern u16 D_03005610; // Number of elements at D_03005b88 (set to 12 on startup)
 extern u32 D_03005620[3];
 extern u32 D_0300562c; // Current Speed (NOT Tempo)
 
@@ -45,12 +46,12 @@ extern u16 D_03005b78; // Current Available MIDI Note Slot
 extern u8 *D_03005b7c; // Byte at offset D_03005648 set by MIDI Controller 10;
 extern u16 D_03005b80;
 
-extern struct Bingus *D_03005b88; // bingus
-extern u16 D_03005b8c; // Total number of elements at D_030064bc
+extern struct Bingus *D_03005b88; // bingus (12 of them, set to D_030028c8 on startup)
+extern u16 D_03005b8c; // Total number of elements at D_030064bc (set to 12 on startup)
 extern s8  D_03005b90[]; // Reverb controller..?
 
 extern u32 *D_030064b0;
-extern struct Bingus *D_030064bc; // bingus
+extern struct Bingus *D_030064bc; // bingus (12 of them, set to D_03002a48 on startup)
 extern u8  D_030064c0; // Set to 0 alongside all elements in D_03005620
 
   // // // // // // // // // // // // // // // // // // // //
@@ -290,7 +291,22 @@ void func_0804a360(u32 total, struct Bingus *bingus) {
     }
 }
 
-#include "asm/lib_08049144/asm_0804a3a0.s"
+// [func_0804a3a0] Return the ID of the first active, matching Bingus for which (unk1C != 3).
+s32 func_0804a3a0(struct MidiChannel *mChnl, u8 key) {
+    struct Bingus *bingus = D_030064bc;
+    struct Bingus *bingus2;
+    s32 i;
+
+    for (i = 0; i < D_03005b8c;) {
+        if (bingus->active && (bingus->midiChannel == mChnl) && (bingus->key == key)) {
+            bingus2 = &D_030064bc[i];
+            if (bingus2->unk1C != 3) return i;
+        }
+        i++;
+        bingus++;
+    }
+    return -1;
+}
 
 #include "asm/lib_08049144/asm_0804a3fc.s"
 
@@ -300,7 +316,32 @@ void func_0804a360(u32 total, struct Bingus *bingus) {
 
 #include "asm/lib_08049144/asm_0804a4e0.s"
 
-#include "asm/lib_08049144/asm_0804a5b4.s"
+// [func_0804a5b4] (Bingus) Set unk1C to 3 for all matching at D_030064bc and D_030056a0.
+void func_0804a5b4(struct MidiChannelBus *mChnlBus, u32 id, u8 key) {
+    struct Bingus *bingus;
+    struct Bingus *bingus2;
+    s32 three;
+    s32 i;
+
+    // Set unk1C to 3 for all matching at D_030064bc.
+    do {
+        i = func_0804a3a0(&mChnlBus->midiChannel[id], key);
+        if (i < 0) break;
+        bingus2 = &D_030064bc[i];
+        bingus2->unk1C = 3;
+    } while (1);
+
+    // Set unk1C to 3 for all matching at D_030056a0.
+    bingus = &D_030056a0[0];
+    three = 3;
+    for (i = 3; i >= 0;) {
+        if (bingus->active && (bingus->midiChannel == &mChnlBus->midiChannel[id]) && (bingus->key == key)) {
+            bingus->unk1C = three;
+        }
+        i--;
+        bingus++;
+    }
+}
 
 #include "asm/lib_08049144/asm_0804a628.s"
 
