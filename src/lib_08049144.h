@@ -88,7 +88,7 @@ extern void func_0804ae18(struct MidiChannelBus *, s16 *);  // [func_0804ae18] M
 extern void func_0804ae1c(struct Jason*, u8, u8, u8, u8, u8); // [func_0804ae1c] ??
 extern void func_0804ae54(struct Jason *); // [func_0804ae54] Set ?? [Ctrl_49]
 extern void func_0804ae60(struct Jason *); // [func_0804ae60] Set ?? [Ctrl_49; Ctrl_4A]
-// extern ? func_0804ae6c(?);
+extern void func_0804ae6c(struct Jason *, u32); // [func_0804ae6c] ?? (relates to speed)
 // extern ? func_0804af0c(?);
 
   // // //  "BINGUS" STRUCT OPERATIONS  // // //

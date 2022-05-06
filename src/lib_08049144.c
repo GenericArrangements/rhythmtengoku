@@ -57,7 +57,8 @@ extern u8  D_030064c0; // Set to 0 alongside all elements in D_03005620
 
   // // // // // // // // // // // // // // // // // // // //
 
-extern s16  D_08a86008[]; // ?? (some curve)
+extern s16  D_08a86008[]; // ?? (some curve table)
+extern s16  D_08a86140[]; // ?? (another curve table)
 extern InstrumentBank *instrumentBanks[]; // Instrument Bank Index
 extern char D_08a865a4[]; // MIDI "Loop Start" Marker: '['
 extern char D_08a865a8[]; // MIDI "Loop End" Marker: ']'
@@ -607,7 +608,46 @@ void func_0804ae60(struct Jason *arg0) {
     arg0->unk7 = 0;
 }
 
-#include "asm/lib_08049144/asm_0804ae6c.s"
+// [func_0804ae6c] ?? (relates to speed)
+void func_0804ae6c(struct Jason *jason, u32 speed) {
+    s32 temp;
+    s32 temp2;
+
+    switch (jason->unk6) {
+        case 0:
+            jason->unk7 = 0;
+            break;
+        case 1:
+            jason->unk8 += speed;
+            jason->unk7 = 0;
+            if ((jason->unk8 >> 8) >= jason->unk0) {
+                jason->unk8 = 0;
+                jason->unk6 = 2;
+            }
+            break;
+        case 2:
+        case 3:
+            jason->unk8 += speed;
+            temp2 = jason->unk8 >> 8;
+            temp = (temp2 * jason->unk2) >> 8;
+            if ((jason->unk5 != 0) && ((u32) temp > jason->unk5)) {
+                temp = jason->unk5;
+            }
+            temp += jason->unk4;
+            temp = D_08a86140[temp & 0xff] >> 1;
+            if (temp > 0x7f) temp = 0x7f;
+            if (temp < -0x80) temp = -0x80;
+            if (jason->unk6 == 2) {
+                if (temp2 < jason->unk1) {
+                    temp = (temp * temp2) / jason->unk1;
+                } else {
+                    jason->unk6 = 3;
+                }
+            }
+            jason->unk7 = temp;
+            break;
+    }
+}
 
 #include "asm/lib_08049144/asm_0804af0c.s"
 
