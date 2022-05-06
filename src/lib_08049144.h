@@ -145,5 +145,5 @@ extern u32  func_0804c398(u8 **); // [func_0804c398] MIDI - Parse Variable-Lengt
 // extern ? func_0804c3c0(?);
 // extern ? func_0804c4bc(?);
 // extern ? func_0804c508(?);
-// extern ? func_0804c6c8(?);
+extern void func_0804c6c8(void); // [func_0804c6c8] ?? (something about midi channels and notes and a midi channel bus that doesn't exist after startup?)
 extern void func_0804c778(void); // [func_0804c778] INITIALISE - All?

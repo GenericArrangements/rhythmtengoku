@@ -10,6 +10,7 @@ asm(".include \"include/gba.inc\"");//Temporary
 extern u8 D_03001578[4];
 extern u8 *D_03001590;
 extern struct AudioChannel *D_03001598;
+extern struct MidiChannelBus *D_0300159c;
 
 extern u8  D_030015a7; // Initial value at D_03005b7c
 
@@ -1402,7 +1403,38 @@ u32 func_0804c398(u8 **midiStream) {
 
 #include "asm/lib_08049144/asm_0804c508.s"
 
-#include "asm/lib_08049144/asm_0804c6c8.s"
+// [func_0804c6c8] ?? (something about midi channels and notes and a midi channel bus that doesn't exist after startup?)
+void func_0804c6c8(void) {
+    struct MidiChannel *mChnl;
+    struct MidiNote *note;
+    u32 anyNotePlayed;
+    u32 i;
+
+    func_08049d08(D_0300159c);
+    anyNotePlayed = FALSE;
+    D_03005b78 = 0;
+    func_0804c508();
+
+    note = &D_03005650[0];
+    i = 0;
+    while (i < D_03005b78) {
+        if (note->velocity != 0) { // Note has non-zero velocity.
+            func_0804a6b0(D_0300159c, note->channel, note->key, note->velocity);
+            mChnl = &D_0300159c->midiChannel[note->channel];
+            if (mChnl->unk0_b30 && (D_03005b3c == 1)) {
+                anyNotePlayed = TRUE;
+            }
+        } else { // Note is muted.
+            func_0804a5b4(D_0300159c, note->channel, note->key);
+        }
+        i++;
+        note++;
+    }
+    if (anyNotePlayed) {
+        func_08049be4();
+        func_0804ae54(&D_03005b30);
+    }
+}
 
 // [func_0804c778] INITIALISE - All?
 void func_0804c778(void) {
