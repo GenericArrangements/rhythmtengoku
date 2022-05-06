@@ -142,30 +142,30 @@ struct MidiTrackReader {
 
 // Audio Device Channel
 struct AudioChannel {
-    u32 nTracksMax:5;   // Maximum number of MIDI Tracks this Audio Channel is able to process. (?)
-    u32 nTracksUsed:5;  // The number of MIDI Tracks being used by the given Sound Sequence.
+    u32 nTracksMax:5;   // Maximum number of MIDI Tracks this Audio Channel is able to process.
+    u32 nTracksUsed:5;  // Total number of MIDI Tracks used by the given Sound Sequence.
     u32 unk0_b10:1;     // ???
     u32 isPaused:1;     // Paused State { 0 = Unpaused; 1 = Paused }
     u32 midiTempo:9;    // Current MIDI Tempo, in Beats Per Minute (BPM).
     u32 unk0_b21:1;     // ??? (set on startup. can prevent loading tracks if set to 1) { 0 = Music/Ambience Channel; 1 = Sound Effect Channel }
     u32 unk0_b22:5;     // (indeterminate split; may be unused entirely)
     u32 volumeFadeType:3;   // Type of currently-active Volume Fade { 0 = None; 1 = Fade-In; 2 = Fade-Out & Close; 3 = Fade-Out & Pause }
-    struct MidiChannelBus *midiChannelBus;     // MIDI: Bus with effects for all MIDI Channels.
-    struct MidiTrackReader *midiTrackReader;   // MIDI: Multiple structures which each keep track of a MIDI Track being processed.
+    struct MidiChannelBus *midiChannelBus;      // MIDI: Bus with effects for all MIDI Channels.
+    struct MidiTrackReader *midiTrackReader;    // MIDI: Multiple structures which each keep track of a MIDI Track being processed.
     const struct SequenceData *sequenceData;    // SequenceData: Currently-loaded Sound Sequence.
     u32 channelSpeed;   // ??: Similar but not directly tempo. [default = 1]
-    char *midi_loopStartSym;    // MIDI: Label char denoting "Loop Start". [always D_08A865D4, '[']
-    char *midi_loopEndSym;      // MIDI: Label char denoting "Loop End". [always D_08A865D8, ']']
-    u8  midi_loopStartSymSize;  // MIDI: Value of func_0804B348(D_08A865A4). [1]
-    u8  midi_loopEndSymSize;    // MIDI: Value of func_0804B348(D_08A865A8). [1]
-    u16 midi_quarterNote;       // MIDI: Value denoting 1 beat. Read upon initialisation, and for any change in tempo. [always 0x18]
+    char *loopStartSym;     // MIDI: Label char denoting "Loop Start". [always D_08A865D4, '[']
+    char *loopEndSym;       // MIDI: Label char denoting "Loop End". [always D_08A865D8, ']']
+    u8  loopStartSymSize;   // MIDI: Value of func_0804B348(D_08A865A4). [1]
+    u8  loopEndSymSize;     // MIDI: Value of func_0804B348(D_08A865A8). [1]
+    u16 midiQuarterNote;    // MIDI: Value denoting 1 beat. Read upon initialisation, and for any change in tempo. [always 0x18]
     u16 channelGain;    // BeatScript: Channel Gain (Volume) Envelope. [default = 0x100]
     u16 trackGain;      // BeatScript: Gain Envelope for a selection of MIDI Tracks. [default = 0x100]
     u16 trackSelect;    // BeatScript: Selection of MIDI Tracks to apply Gain Envelope.
     u16 speedMulti;     // BeatScript: Speed Multiplier Envelope. [default = 0x100]
     u16 volumeFadeEnv;  // BeatScript: Volume Multiplier Envelope used for fade-out and mute effects. [default = 0x8000]
     u16 volumeFadeSpd;  // BeatScript: Higher values for faster fade-out. Is set to 1 when track is muted instantly. [default = 0]
-    u8  channelVolume;  // SequenceData: Volume Envelope
+    u8  channelVolume;  // SequenceData: Volume
     s8  midiController4E;   // ??: [default = 0x40]
     s8  midiController4F;   // ??: [default = 0x40]
     s8  midiController50;   // ??: [default = 0x40]

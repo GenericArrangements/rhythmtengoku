@@ -624,6 +624,7 @@ void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqD
             if (channel->sequenceData->priority > seqData->priority) return;
         }
     }
+
     mChnlBus = channel->midiChannelBus;
     func_08049e64(mChnlBus);
     func_08049fa0(mChnlBus, mChnlBus->totalChannels, mChnlBus->midiChannel);
@@ -646,7 +647,7 @@ void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqD
     if (channel->nTracksUsed > channel->nTracksMax) {
         channel->nTracksUsed = channel->nTracksMax;
     }
-    channel->midi_quarterNote = func_0804b324(mTrkStream + 4); // Header: Division
+    channel->midiQuarterNote = func_0804b324(mTrkStream + 4); // Header: Division
     mTrkStream += chunkLength; // Skip (Header: Data)
 
     // Track:
@@ -678,10 +679,10 @@ void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqD
     channel->volumeFadeType = 0;
     channel->volumeFadeEnv = 0x8000;
     channel->volumeFadeSpd = 0;
-    channel->midi_loopStartSym = &D_08a865a4[0];
-    channel->midi_loopStartSymSize = func_0804b348(D_08a865a4);
-    channel->midi_loopEndSym = &D_08a865a8[0];
-    channel->midi_loopEndSymSize = func_0804b348(D_08a865a8);
+    channel->loopStartSym = &D_08a865a4[0];
+    channel->loopStartSymSize = func_0804b348(D_08a865a4);
+    channel->loopEndSym = &D_08a865a8[0];
+    channel->loopEndSymSize = func_0804b348(D_08a865a8);
     channel->midiController4E = 0x40;
     channel->midiController4F = 0x40;
     channel->midiController50 = 0x40;
@@ -803,7 +804,7 @@ void func_0804b710(struct AudioChannel *channel, u16 speedEnv) {
     u32 speed;
 
     channel->speedMulti = speedEnv;
-    speed = func_0804b6f0(channel->midiTempo, speedEnv, channel->midi_quarterNote);
+    speed = func_0804b6f0(channel->midiTempo, speedEnv, channel->midiQuarterNote);
     if (speed == 0) speed = 1;
     channel->channelSpeed = speed;
 }
@@ -901,12 +902,12 @@ u32 func_0804b898(struct AudioChannel *channel, u8 **upstream) {
     switch (event) {
         // Text Marker
         case 0x06:
-            if (length == channel->midi_loopStartSymSize) {
-                if (func_0804b6c4(channel->midi_loopStartSym, stream, length))
+            if (length == channel->loopStartSymSize) {
+                if (func_0804b6c4(channel->loopStartSym, stream, length))
                     return 2;
             }
-            if (length == channel->midi_loopEndSymSize) {
-                if (func_0804b6c4(channel->midi_loopEndSym, stream, length))
+            if (length == channel->loopEndSymSize) {
+                if (func_0804b6c4(channel->loopEndSym, stream, length))
                     return 3;
             }
             return 0;
@@ -919,7 +920,7 @@ u32 func_0804b898(struct AudioChannel *channel, u8 **upstream) {
         case 0x51:
             tempo = (u32) 60000000 / ((stream[0] << 0x10) | (stream[1] << 0x8) | stream[2]);
             channel->midiTempo = tempo;
-            D_0300562c = func_0804b6f0(tempo, channel->speedMulti, channel->midi_quarterNote);
+            D_0300562c = func_0804b6f0(tempo, channel->speedMulti, channel->midiQuarterNote);
             return 0;
 
         // Else, do nothing.
