@@ -19,8 +19,8 @@ extern void func_08049b8c(u8); // [func_08049b8c] MIDI Controller 4D - ??
 extern void func_08049bac(void); // [func_08049bac] ??
 extern void func_08049be4(void); // [func_08049be4] MIDI Controller 49 - ??; MIDI Controller 4A - ??
 // extern ? func_08049bfc(?);
-// extern ? func_08049c34(?);
-// extern ? func_08049d08(?);
+// extern ? func_08049c34(?); // [func_08049c34] Update Modulation
+extern void func_08049d08(struct MidiChannelBus *); // [func_08049d08] Update Modulation for All Channels in a MIDI Channel Bus
 extern void func_08049d30(struct MidiChannelBus *, u32); // [func_08049d30] ?? (Unload)
 extern void func_08049db8(struct MidiChannelBus *, u32); // [func_08049db8] ??
 extern void func_08049e3c(struct MidiChannelBus *); // [func_08049e3c] ?? (Unload)

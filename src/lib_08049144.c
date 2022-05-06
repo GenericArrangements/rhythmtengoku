@@ -131,9 +131,17 @@ void func_08049be4(void) {
 
 #include "asm/lib_08049144/asm_08049bfc.s"
 
+// [func_08049c34] Update Modulation
 #include "asm/lib_08049144/asm_08049c34.s"
 
-#include "asm/lib_08049144/asm_08049d08.s"
+// [func_08049d08] Update Modulation for All Channels in a MIDI Channel Bus
+void func_08049d08(struct MidiChannelBus *mChnlBus) {
+    u32 i;
+
+    for (i = 0; i < mChnlBus->totalChannels; i++) {
+        func_08049c34(mChnlBus, i);
+    }
+}
 
 // [func_08049d30] ?? (Unload)
 void func_08049d30(struct MidiChannelBus *mChnlBus, u32 id) {
