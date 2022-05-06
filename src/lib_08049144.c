@@ -1151,7 +1151,66 @@ u32 func_0804bcc0(struct AudioChannel *channel, u32 id) {
     return trackEndType;
 }
 
-#include "asm/lib_08049144/asm_0804bed0.s"
+// [func_0804bed0] ?? (something about speed and midi trackers and notes)
+void func_0804bed0(struct AudioChannel *channel, u32 id) {
+    struct MidiTrackReader *mTrkReader;
+    struct MidiChannel *mChnl;
+    struct MidiNote *note;
+    u32 anyNotePlayed;
+    u32 deltaTime;
+    u32 i;
+
+    mTrkReader = &channel->midiTrackReader[id];
+    if (!mTrkReader->active_curr) return;
+
+    anyNotePlayed = 0;
+    D_03005b78 = 0; // Reset "Current Note To Modify" counter.
+
+    while (mTrkReader->unkC < channel->channelSpeed) {
+        if (channel->inLoop && !mTrkReader->inLoop && (mTrkReader->deltaTime >= channel->unk34)) {
+            mTrkReader->active_loop = mTrkReader->active_curr;
+            mTrkReader->command_loop = mTrkReader->command_curr;
+            mTrkReader->stream_loop = mTrkReader->stream_curr;
+            mTrkReader->inLoop = 1;
+        }
+
+        if (func_0804bcc0(channel, id) == 1) {
+            mTrkReader->active_curr = 0;
+            func_08049d30(channel->midiChannelBus, id);
+            return;
+        }
+
+        deltaTime = func_0804c398(&mTrkReader->stream_curr);
+        if (deltaTime != 0) {
+            note = &D_03005650[0];
+            for (i = 0; i < D_03005b78;) {
+                if (note->velocity != 0) { // Note has non-zero velocity.
+                    func_0804a6b0(channel->midiChannelBus, note->channel, note->key, note->velocity);
+                    anyNotePlayed = 1;
+                } else { // Note is muted.
+                    func_0804a5b4(channel->midiChannelBus, note->channel, note->key);
+                }
+                i++;
+                note++;
+            }
+            D_03005b78 = 0; // Reset "Current Note To Modify" counter.
+        }
+
+        mTrkReader->unkC += (deltaTime << 8);
+        mTrkReader->deltaTime += deltaTime;
+    }
+
+    mTrkReader->unkC -= channel->channelSpeed;
+
+    // If any note had a non-zero velocity, and the given MIDI Channel's unk0_b30 is set:
+    if (anyNotePlayed) {
+        mChnl = &channel->midiChannelBus->midiChannel[id];
+        if (mChnl->unk0_b30 && (D_03005b3c == 1)) {
+            func_08049be4();
+            func_0804ae54(&D_03005b30);
+        }
+    }
+}
 
 // [func_0804c040] Apply Volume (Real-Time)
 void func_0804c040(struct AudioChannel *channel) {

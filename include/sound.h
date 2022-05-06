@@ -131,7 +131,7 @@ struct MidiTrackReader {
     u32 active_loop:1;  // Active State (At Loop Start)
     u32 command_curr:8; // Command (Current)
     u32 command_loop:8; // Command (At Loop Start)
-    u32 inLoop:1;       // Reader is within MIDI loop region. [default = 0]
+    u32 inLoop:1;       // Reader is within MIDI loop region (note: label may not be accurate). [default = 0]
     u8 *stream_start;   // Stream Position: Track Start
     u8 *stream_curr;    // Stream Position: Current
     u32 unkC;           // ?? ( = initial deltaTime << 8)

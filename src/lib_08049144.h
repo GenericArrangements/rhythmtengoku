@@ -46,7 +46,7 @@ extern void func_0804a5b4(struct MidiChannelBus *, u32, u8); // [func_0804a5b4] 
 extern u8   func_0804a65c(u8); // [func_0804a65c] ?? (something about left panning)
 extern u8   func_0804a674(u8); // [func_0804a674] ?? (something about right panning)
 // extern ? func_0804a690(?);
-// extern ? func_0804a6b0(?);
+extern void func_0804a6b0(struct MidiChannelBus *, u32, u8, u8);
 
   // // //  MIDI CHANNEL OPERATIONS  // // //
 
@@ -134,9 +134,9 @@ extern u32  func_0804b898(struct AudioChannel *, u8 **); // [func_0804b898] MIDI
 extern void func_0804b95c(struct AudioChannel *, u32, u8, u8); // [func_0804b95c] MIDI - Controller Change [Evnt_B]
 extern void func_0804bc5c(u32, u32, u32); // [func_0804bc5c] MIDI - Note Off/On [Evnt_8; Evnt_9]
 extern u32  func_0804bcc0(struct AudioChannel *, u32); // [func_0804bcc0] MIDI - Messages/Events
-// extern ? func_0804bed0(?);
+extern void func_0804bed0(struct AudioChannel *, u32); // [func_0804bed0] ?? (something about speed and midi trackers and notes)
 extern void func_0804c040(struct AudioChannel *); // [func_0804c040] Apply Volume (Real-Time)
-extern void func_0804c0f8(struct AudioChannel *channel); // [func_0804c0f8] ?? (relates to speed)
+extern void func_0804c0f8(struct AudioChannel *); // [func_0804c0f8] ?? (relates to speed)
 extern void func_0804c170(void); // [func_0804c170] ??
 extern void func_0804c340(u32, u32, u32, u32); // [func_0804c340] Set Reverb
 extern void func_0804c358(void); // [func_0804c358] STUB
