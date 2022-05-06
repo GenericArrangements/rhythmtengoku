@@ -671,13 +671,13 @@ void func_0804b368(struct AudioChannel *channel, const struct SequenceData *seqD
     // Other Data:
     channel->unk0_b10 = 0;
     channel->isPaused = 0;
-    channel->speed = 1;
+    channel->channelSpeed = 1;
     channel->channelGain = 0x100;
-    channel->env_speed = 0x100;
+    channel->speedMulti = 0x100;
     channel->trackGain = 0x100;
-    channel->volFadeType = 0;
-    channel->env_volFadeEnv = 0x8000;
-    channel->env_volFadeSpeed = 0;
+    channel->volumeFadeType = 0;
+    channel->volumeFadeEnv = 0x8000;
+    channel->volumeFadeSpd = 0;
     channel->midi_loopStartSym = &D_08a865a4[0];
     channel->midi_loopStartSymSize = func_0804b348(D_08a865a4);
     channel->midi_loopEndSym = &D_08a865a8[0];
@@ -798,39 +798,39 @@ u32 func_0804b6f0(u16 tempo, u16 speedEnv, u16 quarterNote) {
     return (u32) (tempo * speedEnv * quarterNote) / 0xe10;
 }
 
-// [func_0804b710] AUDIO CHANNEL - Align Speed with BeatScript
+// [func_0804b710] AUDIO CHANNEL - Align Channel Speed with BeatScript
 void func_0804b710(struct AudioChannel *channel, u16 speedEnv) {
     u32 speed;
 
-    channel->env_speed = speedEnv;
-    speed = func_0804b6f0(channel->midi_tempo, speedEnv, channel->midi_quarterNote);
+    channel->speedMulti = speedEnv;
+    speed = func_0804b6f0(channel->midiTempo, speedEnv, channel->midi_quarterNote);
     if (speed == 0) speed = 1;
-    channel->speed = speed;
+    channel->channelSpeed = speed;
 }
 
 // [func_0804b734] AUDIO CHANNEL - Apply Volume Fade { type = 0..3 }
 void func_0804b734(struct AudioChannel *channel, u16 type, u16 time) {
     switch (type) {
         case 0: // Reset Fade
-            channel->env_volFadeEnv = 0x8000;
-            channel->env_volFadeSpeed = 0;
+            channel->volumeFadeEnv = 0x8000;
+            channel->volumeFadeSpd = 0;
             break;
 
         case 1: // Fade In
             if (time == 0) time = 1;
-            if (channel->volFadeType == 0) channel->env_volFadeEnv = 0;
-            channel->env_volFadeSpeed = 0x8000 / time;
+            if (channel->volumeFadeType == 0) channel->volumeFadeEnv = 0;
+            channel->volumeFadeSpd = 0x8000 / time;
             channel->isPaused = 0;
             break;
 
         case 2: // Fade Out & Clear
         case 3: // Fade Out & Pause
-            if (channel->volFadeType == 0) channel->env_volFadeEnv = 0x8000;
+            if (channel->volumeFadeType == 0) channel->volumeFadeEnv = 0x8000;
             if (time != 0) {
-                channel->env_volFadeSpeed = 0x8000 / time;
+                channel->volumeFadeSpd = 0x8000 / time;
             } else {
-                channel->env_volFadeEnv = 0;
-                channel->env_volFadeSpeed = 1;
+                channel->volumeFadeEnv = 0;
+                channel->volumeFadeSpd = 1;
                 if (type == 2) {
                     type = 0;
                     func_0804b560(channel);
@@ -840,7 +840,7 @@ void func_0804b734(struct AudioChannel *channel, u16 type, u16 time) {
             }
             break;
     }
-    channel->volFadeType = type;
+    channel->volumeFadeType = type;
 }
 
 // [func_0804b7dc] AUDIO CHANNEL - Volume Fade-Out & Clear
@@ -918,8 +918,8 @@ u32 func_0804b898(struct AudioChannel *channel, u8 **upstream) {
         // Set Tempo
         case 0x51:
             tempo = (u32) 60000000 / ((stream[0] << 0x10) | (stream[1] << 0x8) | stream[2]);
-            channel->midi_tempo = tempo;
-            D_0300562c = func_0804b6f0(tempo, channel->env_speed, channel->midi_quarterNote);
+            channel->midiTempo = tempo;
+            D_0300562c = func_0804b6f0(tempo, channel->speedMulti, channel->midi_quarterNote);
             return 0;
 
         // Else, do nothing.
@@ -1114,46 +1114,46 @@ u32 func_0804bcc0(struct AudioChannel *channel, u32 id) {
 // [func_0804c040] Apply Volume (Real-Time)
 void func_0804c040(struct AudioChannel *channel) {
     u32 volume;
-    u32 temp;
+    u32 volumeAsByte;
 
-    switch (channel->volFadeType) {
+    switch (channel->volumeFadeType) {
         case 0: // Reset Fade / None
             break;
         case 1: // Fade In
-            channel->env_volFadeEnv += channel->env_volFadeSpeed;
-            if ((s16) channel->env_volFadeEnv < 0) {
-                channel->volFadeType = 0;
-                channel->env_volFadeEnv = 0x8000;
-                channel->env_volFadeSpeed = 0;
+            channel->volumeFadeEnv += channel->volumeFadeSpd;
+            if ((s16) channel->volumeFadeEnv < 0) {
+                channel->volumeFadeType = 0;
+                channel->volumeFadeEnv = 0x8000;
+                channel->volumeFadeSpd = 0;
             }
             break;
         case 2: // Fade Out & Clear
-            if (channel->env_volFadeEnv < channel->env_volFadeSpeed) {
-                channel->volFadeType = 0;
-                channel->env_volFadeEnv = 0;
+            if (channel->volumeFadeEnv < channel->volumeFadeSpd) {
+                channel->volumeFadeType = 0;
+                channel->volumeFadeEnv = 0;
                 func_0804b560(channel); // Stop Channel
             } else {
-                channel->env_volFadeEnv -= channel->env_volFadeSpeed;
+                channel->volumeFadeEnv -= channel->volumeFadeSpd;
             }
             break;
         case 3: // Fade Out & Pause
-            if (channel->env_volFadeEnv < channel->env_volFadeSpeed) {
-                channel->env_volFadeEnv = 0;
+            if (channel->volumeFadeEnv < channel->volumeFadeSpd) {
+                channel->volumeFadeEnv = 0;
                 func_0804b574(channel, 1); // Pause Channel
             } else {
-                channel->env_volFadeEnv -= channel->env_volFadeSpeed;
+                channel->volumeFadeEnv -= channel->volumeFadeSpd;
             }
             break;
     }
 
-    volume = (channel->channelVolume * channel->channelGain * channel->env_volFadeEnv) >> 8;
-    temp = volume >> 15;
-    if (temp > 0xff) temp = 0xff;
-    func_0804adb4(channel->midiChannelBus, temp);
+    volume = (channel->channelVolume * channel->channelGain * channel->volumeFadeEnv) >> 8;
+    volumeAsByte = volume >> 15;
+    if (volumeAsByte > 0xff) volumeAsByte = 0xff;
+    func_0804adb4(channel->midiChannelBus, volumeAsByte);
 
-    temp = ((volume >> 8) * channel->trackGain) >> 15;
-    if (temp > 0xff) temp = 0xff;
-    func_08049ec4(channel->midiChannelBus, temp, channel->trackSelect);
+    volumeAsByte = ((volume >> 8) * channel->trackGain) >> 15;
+    if (volumeAsByte > 0xff) volumeAsByte = 0xff;
+    func_08049ec4(channel->midiChannelBus, volumeAsByte, channel->trackSelect);
 }
 
 // [func_0804c0f8] ?? (relates to speed)
@@ -1173,7 +1173,7 @@ void func_0804c0f8(struct AudioChannel *channel) {
     }
 
     // If the above loop modifies the value of D_0300562c, apply to channel as speed envelope.
-    if (D_0300562c != 0) channel->speed = D_0300562c;
+    if (D_0300562c != 0) channel->channelSpeed = D_0300562c;
 
     // Check if any MIDI Track Readers are currently operating.
     mTrkReader = channel->midiTrackReader;
@@ -1226,7 +1226,7 @@ void func_0804c170(void) {
     }
 
     if ((D_03005644 != 0) && (D_03005b3c != 0)) {
-        speed = func_0804b6f0(D_03005644->midi_tempo, D_03005644->env_speed, 0x18);
+        speed = func_0804b6f0(D_03005644->midiTempo, D_03005644->speedMulti, 0x18);
         func_0804ae6c(&D_03005b30, speed);
         func_08049b70((D_03005b30.unk7 * D_03005640) >> 8);
     }

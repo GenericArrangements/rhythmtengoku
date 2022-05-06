@@ -121,7 +121,7 @@ extern void func_0804b66c(struct AudioChannel *, u16, s8); // [func_0804b66c] AU
 extern void func_0804b67c(u16); // [func_0804b67c] AUDIO CHANNEL - Pause Sound Sequence from Index
 extern u32  func_0804b6c4(u8 *, u8 *, u32); // [func_0804b6c4] UTIL - String.equals()
 extern u32  func_0804b6f0(u16, u16, u16); // [func_0804b6f0] UTIL - Playback Speed Formula
-extern void func_0804b710(struct AudioChannel *, u16); // [func_0804b710] AUDIO CHANNEL - Align Speed with BeatScript
+extern void func_0804b710(struct AudioChannel *, u16); // [func_0804b710] AUDIO CHANNEL - Align Channel Speed with BeatScript
 extern void func_0804b734(struct AudioChannel *, u16, u16); // [func_0804b734] AUDIO CHANNEL - Apply Volume Fade { type = 0..3 }
 extern void func_0804b7dc(struct AudioChannel *, u16); // [func_0804b7dc] AUDIO CHANNEL - Volume Fade-Out & Clear
 extern void func_0804b7ec(struct AudioChannel *, u16); // [func_0804b7ec] AUDIO CHANNEL - Volume Fade-Out & Pause
