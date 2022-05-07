@@ -16,7 +16,7 @@ extern u8  D_030015a7; // Initial value at D_03005b7c
 
 extern u32 D_03001888; // this is like, sample data or something
 extern u32 D_030024c8; // sample envelope or something
-extern struct Bingus D_030028c8; // bingus (12 of them)
+extern struct Comms D_030028c8; // bingus (12 of them)
 extern struct Bingus D_03002a48; // bingus (12 of them)
 
 extern u16 D_030055f0;
@@ -47,7 +47,7 @@ extern u16 D_03005b78; // Current Available MIDI Note Slot
 extern u8 *D_03005b7c; // Byte at offset D_03005648 set by MIDI Controller 10;
 extern u16 D_03005b80;
 
-extern struct Bingus *D_03005b88; // bingus (12 of them, set to D_030028c8 on startup)
+extern struct Comms *D_03005b88; // Comms (12 of them, set to D_030028c8 on startup)
 extern u16 D_03005b8c; // Total number of elements at D_030064bc (set to 12 on startup)
 extern s8  D_03005b90[]; // Reverb controller..?
 

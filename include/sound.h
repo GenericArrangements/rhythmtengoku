@@ -208,13 +208,9 @@ struct {
 } D_08aa4460[13];
 
 
-
 struct Bingus {
     u32 active:1;
     u32 key:7; // Pitch (key-wise)
-    u8 unk1;
-    u8 unk2; // ?? Panning 1
-    u8 unk3; // ?? Panning 2
     u32 unk4;
     u32 unk8;
     struct MidiChannel *midiChannel;
@@ -227,6 +223,21 @@ struct Bingus {
     u16 unk1A;
     u32 unk1C:8;
     u32 unk1D:24;
+};
+
+struct Comms {
+    u32 active:1;
+    u32 unk0_b1:1;
+    u8 unk1;
+    u8 unk2; // ?? Panning 1
+    u8 unk3; // ?? Panning 2
+    u32 unk4;
+    u32 unk8;
+    struct MidiChannel *midiChannel;
+    u32 unk10;
+    u32 unk14;
+    u32 unk18;
+    u32 unk1C;
 };
 
 struct Jason {
