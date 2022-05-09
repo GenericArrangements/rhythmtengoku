@@ -409,7 +409,7 @@ u32 func_0804a1f4(struct Bingus *pcmBuf) {
     }
 }
 
-// [func_0804a224] Update ADSR Envelope (return TRUE if envelope is complete)
+// [func_0804a224] PCM BUFFER - Update ADSR Envelope (return TRUE if envelope is complete)
 u32 func_0804a224(struct Bingus *pcmBuf) {
     struct InstrumentPCM *inst;
     struct BufferADSR *adsr;
