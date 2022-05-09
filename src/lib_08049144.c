@@ -297,7 +297,103 @@ void func_0804a014(struct MidiChannelBus *mChnlBus, const InstrumentBank *instBa
     mChnlBus->soundBank = instBank;
 }
 
-#include "asm/lib_08049144/asm_0804a018.s"
+// [func_0804a018] PCM BUFFER - Update & Return Pitch Envelope
+u32 func_0804a018(struct Bingus *pcmBuf) {
+    struct MidiChannelBus *mChnlBus;
+    struct MidiChannel *mChnl;
+    s32 result;
+    u32 modRange;
+    u32 unk1C;
+    s32 r5;
+    u32 r8;
+    u32 r0;
+    u32 r2;
+    u32 r3;
+    s32 index;
+    s32 what;
+
+    // Do not calculate pitch envelope for unpitched instruments.
+    if (pcmBuf->instrument->header.type == INSTRUMENT_PCM_UNPITCHED) return 0;
+
+    mChnlBus = pcmBuf->midiChannelBus;
+    mChnl = pcmBuf->midiChannel;
+    result = pcmBuf->unk0_b15;
+
+    // If... whatever this flag is, bypass all pitch envelopes, returning pcmBuf->unk0_b15.
+    if (mChnl->unk0_b1) return result;
+
+    // Pitch Envelope: ???
+    unk1C = mChnl->unk1C;
+    if ((unk1C != 0) && (mChnl->unk1D != 0) && (mChnl->unk1E == 0)) {
+        r5 = pcmBuf->key + func_0804af0c((unk1C * 2) + 1) - unk1C + mChnlBus->unk4; // r5
+
+        what = r5;
+        while (what < 0) r5 += 12; // ????????
+        r5 += mChnlBus->unk1C[what % 12];
+
+        while (r5 < 0) r5 += 12;
+        while (r5 > 127) r5 -= 12;
+
+        result = func_0804a690(mChnlBus, r5);
+        pcmBuf->unk0_b15 = result;
+        modRange = mChnl->modRange;
+        pcmBuf->unk10 = pcmBuf->unk0_b15 - func_0804a690(mChnlBus, r5 - modRange);
+        pcmBuf->unk12 = func_0804a690(mChnlBus, r5 + modRange) - pcmBuf->unk0_b15;
+        pcmBuf->unk14 = func_0804a690(mChnlBus, r5 + mChnl->unkC) - pcmBuf->unk0_b15;
+    }
+
+    // Pitch Envelope: MIDI Channel Pitch Wheel
+    r5 = mChnl->pitchWheel;
+    if (r5 != 0x2000) {
+        r8 = (r5 <= 0x1fff) ? pcmBuf->unk10 : pcmBuf->unk12;
+
+        if (r5 <= 0x1fff) {
+            result -= r8;
+        } else {
+            r5 -= 0x2000;
+        }
+
+        r2 = (r5 / 682);
+        index = r2;
+        r3 = r5 - (r2 * 682);
+        r5 = D_08a86108[index];
+        r0 = D_08a86108[index + 1] - r5;
+        r0 = r5 + ((r0 * r3) / 682);
+        result += (r0 * r8) >> 0x10;
+    }
+
+    // Pitch Envelope: MIDI Channel Bus
+    if (mChnlBus->pitch != 0) {
+        index = mChnlBus->pitch >> 8;
+        r3 = mChnlBus->pitch & 0xff;
+        while ((u32) index > 11) {
+            if (index < 0) {
+                result >>= 1;
+                index += 12;
+            } else {
+                result <<= 1;
+                index -= 12;
+            }
+        }
+        r5 = D_08a86108[index];
+        r0 = D_08a86108[index + 1] - r5;
+        r0 = r5 + ((r0 * r3) >> 8);
+        r0 *= result;
+        result += r0 >> 0x10;
+    }
+
+    // Pitch Envelope: Modulation (Type 0)
+    if (mChnl->modType == 0) {
+        result += (mChnl->modResult * pcmBuf->unk14) >> 5;
+    }
+
+    // Pitch Envelope: Pitch Randomiser
+    if (mChnl->rndmPitch != 0x100) {
+        result = (result * mChnl->rndmPitch) >> 8;
+    }
+
+    return result;
+}
 
 #include "asm/lib_08049144/asm_0804a1f4.s"
 

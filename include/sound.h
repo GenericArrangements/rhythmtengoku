@@ -114,7 +114,7 @@ struct MidiChannelBus {
     u8  busVolume;
     u8  trackVolume;
     u16 trackSelect;
-    u8  unk4;
+    s8  unk4;
     s8  panning;
     s16 pitch;
     u16 unk8;
@@ -123,7 +123,7 @@ struct MidiChannelBus {
     u32 totalChannels:5;
     u32 priority:27;
     struct MidiChannel *midiChannel; // Array of MIDI Channels
-    u8  unk1C[12];
+    s8  unk1C[12];
 };
 
 struct MidiTrackReader {
