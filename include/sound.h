@@ -72,7 +72,7 @@ struct SequenceData {
     u32 priority:10;
     u32 unk8;
     const char *seqName;
-    u32 iramChnlIndex;
+    u32 audioChannelIndex;
 };
 
  // // // RAM Structures // // //

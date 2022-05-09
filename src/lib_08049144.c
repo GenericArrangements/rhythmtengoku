@@ -7,6 +7,10 @@ asm(".include \"include/gba.inc\"");//Temporary
 
   // // // // // // // // // // // // // // // // // // // //
 
+#define REG_SOUNDCNT_L  *(volatile u16 *)(IORAMBase + 0x80)
+
+
+
 extern u16 D_03001570; // Pseudo-RNG Variable
 
 extern u8 D_03001578[4];
@@ -923,7 +927,37 @@ void func_0804af30(void) {
 
 #include "asm/lib_08049144/asm_0804aff0.s"
 
-#include "asm/lib_08049144/asm_0804b2c4.s"
+// [func_0804b2c4] PSG BUFFER - Update All
+void func_0804b2c4(void) {
+    struct Bingus *psgBuf = &D_030056a0[0];
+    u16 controller = 0;
+    u32 i;
+
+    // For each PSG Buffer Channel:
+    for (i = 0; i < 4; i++) {
+        // Update PSG Buffer Channel
+        func_0804aff0(i);
+
+        // Set Panning
+        controller >>= 1;
+        if (psgBuf->active) {
+            // Set Enable Flag LEFT
+            if (psgBuf->midiChannel->panning <= 0x40) {
+                controller |= 0x8000;
+            }
+            // Set Enable Flag RIGHT
+            if (psgBuf->midiChannel->panning >= 0x40) {
+                controller |= 0x800;
+            }
+        }
+        psgBuf++;
+    }
+
+    // Set Master Volume to 7 (LEFT & RIGHT)
+    controller |= 0x77;
+    // Store to IO Register
+    REG_SOUNDCNT_L = controller;
+}
 
 
   //  //  //  //   AUDIO CHANNEL OPERATIONS   //  //  //  //

@@ -98,7 +98,7 @@ extern void func_0804af30(void); // [func_0804af30] PSG BUFFER - Stop All PSG Bu
 // extern ? func_0804afa4(?);
 // extern ? func_0804afd8(?);
 // extern ? func_0804aff0(?);
-// extern ? func_0804b2c4(?);
+extern void func_0804b2c4(void); // [func_0804b2c4] PSG BUFFER - Update All
 
   // // //  AUDIO CHANNEL OPERATIONS  // // //
 
