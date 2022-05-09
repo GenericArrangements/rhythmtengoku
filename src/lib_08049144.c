@@ -94,7 +94,10 @@ void func_080493c8(u32 id, u32 pan1, u32 pan2) {
     D_03005b88[id].unk3 = pan2;
 }
 
-#include "asm/lib_08049144/asm_080493e4.s"
+// [func_080493e4] EFFECT CHAIN - Set Volume Envelope
+void func_080493e4(u32 id, u32 volumeEnv) {
+    D_03005b88[id].volume = volumeEnv;
+}
 
 // [func_080493f4] EFFECT CHAIN - Set Pitch Envelope
 void func_080493f4(u32 id, u32 pitchEnv) {
@@ -405,13 +408,13 @@ void func_0804a2c4(u32 id) {
 
     if (!pcmBuf->active) return;
 
-    if (func_08049b5c(id) != 0) {
+    if (func_08049b5c(id)) {
         pcmBuf->unk17_b7 = 0;
         if (!pcmBuf->midiChannel->unk0_b1) {
             func_080493f4(id, func_0804a018(pcmBuf));
         }
         func_080493e4(id, func_0804a1f4(pcmBuf));
-        if (func_0804a224(pcmBuf) == 0) return;
+        if (func_0804a224(pcmBuf) == FALSE) return;
         func_080493b0(id);
     }
     pcmBuf->active = FALSE;

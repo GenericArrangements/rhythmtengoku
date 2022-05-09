@@ -5,7 +5,7 @@
 // extern ? func_08049394(?);
 extern void func_080493b0(u32);
 extern void func_080493c8(u32, u32, u32); // [func_080493c8] Store panning-related values to D_03005b88[i].
-// extern ? func_080493e4(?);
+extern void func_080493e4(u32, u32); // [func_080493e4] EFFECT CHAIN - Set Volume Envelope
 extern void func_080493f4(u32, u32); // [func_080493f4] EFFECT CHAIN - Set Pitch Envelope
 // extern ? func_08049450(?);
 // extern ? func_08049470(?);
