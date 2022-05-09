@@ -58,6 +58,7 @@ extern u8  D_030064c0; // Set to 0 alongside all elements in D_03005620
   // // // // // // // // // // // // // // // // // // // //
 
 extern s16  D_08a86008[]; // ?? (some curve table)
+extern u32  D_08a86108[]; // ?? (honestly idk how to even describe this one)
 extern s16  D_08a86140[]; // ?? (another curve table)
 extern InstrumentBank *instrumentBanks[]; // Instrument Bank Index
 extern char D_08a865a4[]; // MIDI "Loop Start" Marker: '['
@@ -91,7 +92,17 @@ void func_080493c8(u32 id, u32 pan1, u32 pan2) {
 
 #include "asm/lib_08049144/asm_080493e4.s"
 
-#include "asm/lib_08049144/asm_080493f4.s"
+// [func_080493f4] EFFECT CHAIN - Set Pitch Envelope
+void func_080493f4(u32 id, u32 pitchEnv) {
+    struct Comms *comms = &D_03005b88[id];
+    if (pitchEnv == 0) {
+        comms->pitch = 0x80 << 7;
+        comms->unk0_b1 = 0;
+    } else {
+        comms->pitch = ((u64) comms->unk1C * pitchEnv) >> 14;
+        comms->unk0_b1 = (-(0x4000 ^ comms->pitch) | (0x4000 ^ comms->pitch)) >> 0x1f;
+    }
+}
 
 #include "asm/lib_08049144/asm_08049450.s"
 
@@ -105,7 +116,10 @@ void func_080493c8(u32 id, u32 pan1, u32 pan2) {
 
 #include "asm/lib_08049144/asm_08049b34.s"
 
-#include "asm/lib_08049144/asm_08049b5c.s"
+// [func_08049b5c] EFFECT CHAIN - Check If Active
+u32 func_08049b5c(u32 id) {
+    return D_03005b88[id].active;
+}
 
 // [func_08049b70] (SUB) MIDI Controller 4A - ??
 void func_08049b70(u32 arg0) {
@@ -285,25 +299,25 @@ void func_0804a014(struct MidiChannelBus *mChnlBus, const InstrumentBank *instBa
 
 #include "asm/lib_08049144/asm_0804a224.s"
 
-// [func_0804a2c4] ??
+// [func_0804a2c4] PCM BUFFER - Update PCM Buffer Channel
 void func_0804a2c4(u32 id) {
-    struct Bingus *bingus = &D_030064bc[id];
+    struct Bingus *pcmBuf = &D_030064bc[id];
 
-    if (!bingus->active) return;
+    if (!pcmBuf->active) return;
 
     if (func_08049b5c(id) != 0) {
-        bingus->unk17_b7 = 0;
-        if (!bingus->midiChannel->unk0_b1) {
-            func_080493f4(id, func_0804a018(bingus));
+        pcmBuf->unk17_b7 = 0;
+        if (!pcmBuf->midiChannel->unk0_b1) {
+            func_080493f4(id, func_0804a018(pcmBuf));
         }
-        func_080493e4(id, func_0804a1f4(bingus));
-        if (func_0804a224(bingus) == 0) return;
+        func_080493e4(id, func_0804a1f4(pcmBuf));
+        if (func_0804a224(pcmBuf) == 0) return;
         func_080493b0(id);
     }
-    bingus->active = FALSE;
+    pcmBuf->active = FALSE;
 }
 
-// [func_0804a334] ??
+// [func_0804a334] PCM BUFFER - Update PCM Buffer
 void func_0804a334(void) {
     u32 i;
 
@@ -311,12 +325,12 @@ void func_0804a334(void) {
     func_0804b2c4();
 }
 
-// [func_0804a360] Initialise D_030064bc (Bingus)
-void func_0804a360(u32 total, struct Bingus *bingus) {
+// [func_0804a360] PCM BUFFER - Stop PCM Buffer Channels
+void func_0804a360(u32 total, struct Bingus *pcmBuf) {
     u32 i;
 
     D_03005b8c = total;
-    D_030064bc = bingus;
+    D_030064bc = pcmBuf;
 
     for (i = 0; i < D_03005b8c; i++) {
         D_030064bc[i].active = FALSE;

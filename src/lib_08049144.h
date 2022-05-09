@@ -6,14 +6,14 @@
 extern void func_080493b0(u32);
 extern void func_080493c8(u32, u32, u32); // [func_080493c8] Store panning-related values to D_03005b88[i].
 // extern ? func_080493e4(?);
-// extern ? func_080493f4(?);
+extern void func_080493f4(u32, u32); // [func_080493f4] EFFECT CHAIN - Set Pitch Envelope
 // extern ? func_08049450(?);
 // extern ? func_08049470(?);
 extern void func_08049490(u32, u32, u32, u32 *, u32, u32 *, u16, struct Comms *); // [func_08049490] Initialise... a lot...
 // extern ? func_080497f8(?);
 // extern ? func_08049ad8(?);
 // extern ? func_08049b34(?);
-// extern ? func_08049b5c(?);
+extern u32  func_08049b5c(u32); // [func_08049b5c] EFFECT CHAIN - Check If Active
 extern void func_08049b70(u32); // [func_08049b70] (SUB) MIDI Controller 4A - ??
 extern void func_08049b8c(u8); // [func_08049b8c] MIDI Controller 4D - ??
 extern void func_08049bac(void); // [func_08049bac] ??
@@ -33,9 +33,9 @@ extern void func_0804a014(struct MidiChannelBus *, const InstrumentBank *); // [
 // extern ? func_0804a018(?);
 // extern ? func_0804a1f4(?);
 // extern ? func_0804a224(?);
-extern void func_0804a2c4(u32); // [func_0804a2c4] ??
-extern void func_0804a334(void); // [func_0804a334] ??
-extern void func_0804a360(u32, struct Bingus *); // [func_0804a360] Initialise D_030064bc (Bingus)
+extern void func_0804a2c4(u32); // [func_0804a2c4] PCM BUFFER - Update PCM Buffer Channel
+extern void func_0804a334(void); // [func_0804a334] PCM BUFFER - Update PCM Buffer
+extern void func_0804a360(u32, struct Bingus *); // [func_0804a360] PCM BUFFER - Stop PCM Buffer Channels
 extern s32  func_0804a3a0(struct MidiChannel *, u8); // [func_0804a3a0] Return the ID of the first active, matching Bingus for which (unk1C != 3).
 // extern ? func_0804a3fc(?);
 // extern ? func_0804a434(?);

@@ -244,7 +244,7 @@ struct Comms {
     u8 unk16;
     u8 unk17_b0:7;
     u8 unk17_b7:1;
-    u32 unk18; // Pitch Envelope
+    u32 pitch; // Pitch Envelope
     u32 unk1C; // ?? (also pitch-related)
 };
 
