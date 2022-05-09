@@ -7,8 +7,12 @@ asm(".include \"include/gba.inc\"");//Temporary
 
   // // // // // // // // // // // // // // // // // // // //
 
+extern u16 D_03001570; // Pseudo-RNG Variable
+
 extern u8 D_03001578[4];
+
 extern u8 *D_03001590;
+
 extern struct AudioChannel *D_03001598;
 extern struct MidiChannelBus *D_0300159c;
 
@@ -57,7 +61,7 @@ extern u8  D_030064c0; // Set to 0 alongside all elements in D_03005620
 
   // // // // // // // // // // // // // // // // // // // //
 
-extern s16  D_08a86008[]; // ?? (some curve table)
+extern u16  D_08a86008[]; // ?? (some curve table)
 extern u32  D_08a86108[]; // ?? (honestly idk how to even describe this one)
 extern s16  D_08a86140[]; // ?? (another curve table)
 extern InstrumentBank *instrumentBanks[]; // Instrument Bank Index
@@ -403,7 +407,18 @@ u8 func_0804a674(u8 panning) {
     else return (0x7f - panning) << 1;
 }
 
-#include "asm/lib_08049144/asm_0804a690.s"
+// [func_0804a690] MIDI CHANNEL BUS - Get unkC Value At Index
+u32 func_0804a690(struct MidiChannelBus *mChnlBus, u32 index) {
+    u8 u = index;
+    s8 s = index;
+
+    if (s < 0) {
+        s = 0;
+        if (u < 191) s = 0x7f;
+        u = s;
+    }
+    return mChnlBus->unkC[u];
+}
 
 #include "asm/lib_08049144/asm_0804a6b0.s"
 
@@ -610,7 +625,7 @@ void func_0804ae14(struct MidiChannelBus *mChnlBus, u16 var) {
 }
 
 // [func_0804ae18] MIDI CHANNEL BUS - Set unkC
-void func_0804ae18(struct MidiChannelBus *mChnlBus, s16 *var) {
+void func_0804ae18(struct MidiChannelBus *mChnlBus, u16 *var) {
     mChnlBus->unkC = var;
 }
 
@@ -685,9 +700,13 @@ void func_0804ae6c(struct Jason *jason, u32 speed) {
     }
 }
 
-#include "asm/lib_08049144/asm_0804af0c.s"
+// [func_0804af0c] UTIL - Pseudo-Random Number Generator
+u32 func_0804af0c(u16 var) {
+    D_03001570 = (D_03001570 * 109) + 1021;
+    return (u32) (var * D_03001570) >> 0x10;
+}
 
-// [func_0804af30] Initialise D_030056a0 (Bingus) and D_03001578.
+// [func_0804af30] PSG BUFFER - Stop All PSG Buffer Channels
 void func_0804af30(void) {
     u32 i;
 

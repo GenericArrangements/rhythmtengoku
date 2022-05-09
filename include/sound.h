@@ -118,7 +118,7 @@ struct MidiChannelBus {
     s8  panning;
     s16 pitch;
     u16 unk8;
-    s16 *unkC;      // ROM Pointer to a curve table(?) in the sound data section.
+    u16 *unkC;      // ROM Pointer to a curve table(?) in the sound data section.
     const InstrumentBank *soundBank;
     u32 totalChannels:5;
     u32 priority:27;

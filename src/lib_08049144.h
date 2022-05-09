@@ -45,7 +45,7 @@ extern void func_0804a5b4(struct MidiChannelBus *, u32, u8); // [func_0804a5b4] 
 // extern ? func_0804a628(?);
 extern u8   func_0804a65c(u8); // [func_0804a65c] ?? (something about left panning)
 extern u8   func_0804a674(u8); // [func_0804a674] ?? (something about right panning)
-// extern ? func_0804a690(?);
+extern u32  func_0804a690(struct MidiChannelBus *, u32); // [func_0804a690] MIDI CHANNEL BUS - Get unkC Value At Index
 extern void func_0804a6b0(struct MidiChannelBus *, u32, u8, u8);
 
   // // //  MIDI CHANNEL OPERATIONS  // // //
@@ -81,7 +81,7 @@ extern void func_0804adb8(struct MidiChannelBus *, s8);     // [func_0804adb8] M
 extern void func_0804ade4(struct MidiChannelBus *, s16);    // [func_0804ade4] MIDI CHANNEL BUS - Set Pitch
 extern void func_0804ade8(struct MidiChannelBus *, u8);     // [func_0804ade8] MIDI CHANNEL BUS - Set Modulation Range
 extern void func_0804ae14(struct MidiChannelBus *, u16);    // [func_0804ae14] MIDI CHANNEL BUS - Set unk8
-extern void func_0804ae18(struct MidiChannelBus *, s16 *);  // [func_0804ae18] MIDI CHANNEL BUS - Set unkC
+extern void func_0804ae18(struct MidiChannelBus *, u16 *);  // [func_0804ae18] MIDI CHANNEL BUS - Set unkC
 
   // // //  "JASON" STRUCT OPERATIONS  // // //
 
@@ -89,11 +89,11 @@ extern void func_0804ae1c(struct Jason*, u8, u8, u8, u8, u8); // [func_0804ae1c]
 extern void func_0804ae54(struct Jason *); // [func_0804ae54] Set ?? [Ctrl_49]
 extern void func_0804ae60(struct Jason *); // [func_0804ae60] Set ?? [Ctrl_49; Ctrl_4A]
 extern void func_0804ae6c(struct Jason *, u32); // [func_0804ae6c] ?? (relates to speed)
-// extern ? func_0804af0c(?);
+extern u32  func_0804af0c(u16); // [func_0804af0c] UTIL - Pseudo-Random Number Generator
 
   // // //  "BINGUS" STRUCT OPERATIONS  // // //
 
-extern void func_0804af30(void); // [func_0804af30] Initialise D_030056a0 (Bingus) and D_03001578.
+extern void func_0804af30(void); // [func_0804af30] PSG BUFFER - Stop All PSG Buffer Channels
 // extern ? func_0804af74(?);
 // extern ? func_0804afa4(?);
 // extern ? func_0804afd8(?);
