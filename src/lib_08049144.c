@@ -409,7 +409,94 @@ u32 func_0804a1f4(struct Bingus *pcmBuf) {
     }
 }
 
-#include "asm/lib_08049144/asm_0804a224.s"
+// [func_0804a224] Update ADSR Envelope (return TRUE if envelope is complete)
+u32 func_0804a224(struct Bingus *pcmBuf) {
+    struct InstrumentPCM *inst;
+    struct BufferADSR *adsr;
+    u32 finished;
+    s32 env;
+    u32 rel;
+
+    finished = FALSE;
+    inst = pcmBuf->instrument;
+    adsr = &pcmBuf->adsr;
+    env = adsr->envelope;
+
+    switch (pcmBuf->adsr.stage) {
+        /* ATTACK:
+            Trigger: Note On
+            Increment: inst->attack
+            Target: 0x7F0000
+        */
+        case 0:
+            env += inst->attack;
+            if (env >= 0x7f0000) {
+                env = 0x7f0000;
+                adsr->stage = 1;
+            }
+            break;
+
+        /* DECAY:
+            Trigger: Attack End
+            Decrement: inst->decay
+            Target: inst->sustain
+        */
+        case 1:
+            env -= inst->decay;
+            if (env <= inst->sustain) {
+                env = inst->sustain;
+                adsr->stage = 2;
+            }
+            break;
+
+        /* FADE:
+            Trigger: Decay End
+            Decrement: inst->fade
+            Target: 0
+        */
+        case 2:
+            env -= inst->fade;
+            if (env >= 0x7f0000) {
+                env = 0x7f0000;
+            }
+            else if (env <= 0) {
+                env = 0;
+                finished = TRUE;
+            }
+            break;
+
+        /* RELEASE:
+            Trigger: Note Off, Muted Note
+            Decrement: inst->release
+            Target: 0
+        */
+        case 3:
+            env -= inst->release;
+            if (env <= 0) {
+                env = 0;
+                finished = TRUE;
+            }
+            break;
+
+        /* RELEASE (Note Cut):
+            Trigger: Note Override, End of Loop Region, End of Track
+            Decrement: inst->unk1C (or default of 0x60000 if not set)
+            Target: 0
+        */
+        case 4:
+            rel = inst->release;
+            if (inst->release == 0) rel = 0x60000;
+            env -= rel;
+            if (env <= 0) {
+                env = 0;
+                finished = TRUE;
+            }
+            break;
+    }
+
+    adsr->envelope = env;
+    return finished;
+}
 
 // [func_0804a2c4] PCM BUFFER - Update PCM Buffer Channel
 void func_0804a2c4(u32 id) {

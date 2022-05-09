@@ -31,8 +31,8 @@ extern void func_08049ecc(struct MidiChannel *); // [func_08049ecc] INITIALISE -
 extern void func_08049fa0(struct MidiChannelBus *, u32, struct MidiChannel *); // [func_08049fa0] INITIALISE - MIDI Channel Bus
 extern void func_0804a014(struct MidiChannelBus *, const InstrumentBank *); // [func_0804a014] INITIALISE - MIDI Channel Bus - Set Sound Bank
 extern u32  func_0804a018(struct Bingus *); // [func_0804a018] PCM BUFFER - Update & Calculate Pitch Envelope
-extern u32  func_0804a1f4(struct Bingus *pcmBuf); // [func_0804a1f4] PCM BUFFER - Calculate Volume Envelope
-// extern ? func_0804a224(?);
+extern u32  func_0804a1f4(struct Bingus *); // [func_0804a1f4] PCM BUFFER - Calculate Volume Envelope
+extern u32  func_0804a224(struct Bingus *); // [func_0804a224] Update ADSR Envelope (return TRUE if envelope is complete)
 extern void func_0804a2c4(u32); // [func_0804a2c4] PCM BUFFER - Update PCM Buffer Channel
 extern void func_0804a334(void); // [func_0804a334] PCM BUFFER - Update PCM Buffer
 extern void func_0804a360(u32, struct Bingus *); // [func_0804a360] PCM BUFFER - Stop PCM Buffer Channels
