@@ -29,12 +29,12 @@ struct InstrumentHeader {
 struct InstrumentPCM {
 	struct InstrumentHeader header;
 	const struct SampleInfo *sample;
-	u32 unk8;
-	u32 unkC;
-	u32 unk10;
-	u32 unk14;
-	u32 unk18;
-	u32 unk1C;
+	s32 unk8;
+	s32 sustain;
+	s32 attack;
+	s32 decay;
+	s32 fade;
+	s32 release;
 };
 
 struct InstrumentPSG {
@@ -210,34 +210,42 @@ struct {
 
 struct Bingus {
     u32 active:1;
-    u32 key:7; // Pitch (key-wise)
-    u32 unk4;
-    u32 unk8;
+    u32 key:7; // MIDI Key
+    u32 velocity:7; // MIDI Velocity
+    u32 unk0_b15:17;
+    struct InstrumentPCM *instrument;
+    struct MidiChannelBus *midiChannelBus;
     struct MidiChannel *midiChannel;
-    u32 unk10;
-    u16 unk14;
+    u16 unk10;
+    u16 unk12;
+    s16 unk14;
     u8 unk16;
     u8 unk17_b0:7;
     u8 unk17_b7:1;
     s16 unk18; // ?? Panning
     u16 unk1A;
-    u32 unk1C:8;
-    u32 unk1D:24;
+    struct BufferADSR {
+        u32 stage:8;
+        u32 envelope:24;
+    } adsr;
 };
 
 struct Comms {
     u32 active:1;
     u32 unk0_b1:1;
-    u8 unk1;
+    u8 volume; // Volume Envelope
     u8 unk2; // ?? Panning 1
     u8 unk3; // ?? Panning 2
     u32 unk4;
     u32 unk8;
-    struct MidiChannel *midiChannel;
+    u32 unkC;
     u32 unk10;
-    u32 unk14;
-    u32 unk18;
-    u32 unk1C;
+    u16 unk14;
+    u8 unk16;
+    u8 unk17_b0:7;
+    u8 unk17_b7:1;
+    u32 unk18; // Pitch Envelope
+    u32 unk1C; // ?? (also pitch-related)
 };
 
 struct Jason {

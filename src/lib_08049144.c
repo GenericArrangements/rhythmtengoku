@@ -16,8 +16,8 @@ extern u8  D_030015a7; // Initial value at D_03005b7c
 
 extern u32 D_03001888; // this is like, sample data or something
 extern u32 D_030024c8; // sample envelope or something
-extern struct Comms D_030028c8; // bingus (12 of them)
-extern struct Bingus D_03002a48; // bingus (12 of them)
+extern struct Comms D_030028c8; // Comms (12 of them)
+extern struct Bingus D_03002a48; // PCM Buffer (12 of them)
 
 extern u16 D_030055f0;
 
@@ -31,8 +31,8 @@ extern u8  D_03005640; // Byte 0 of MIDI Event F0; Set by MIDI Controller 4C
 extern struct AudioChannel *D_03005644; // Channel which most recently called MIDI Event F0
 extern u16 D_03005648; // Set by MIDI Controller 0E; Current byte in D_03005b7c to set
 
-extern struct MidiNote D_03005650[20]; // MIDI Notes
-extern struct Bingus D_030056a0[4];
+extern struct MidiNote D_03005650[20]; // MIDI Note Buffer
+extern struct Bingus D_030056a0[4]; // PSG Buffer (4 of them)
 
 extern u16 D_03005b20; // Total Bytes in array at D_03005b7c
 
@@ -52,7 +52,7 @@ extern u16 D_03005b8c; // Total number of elements at D_030064bc (set to 12 on s
 extern s8  D_03005b90[]; // Reverb controller..?
 
 extern u32 *D_030064b0;
-extern struct Bingus *D_030064bc; // bingus (12 of them, set to D_03002a48 on startup)
+extern struct Bingus *D_030064bc; // PCM Buffer (12 of them, set to D_03002a48 on startup)
 extern u8  D_030064c0; // Set to 0 alongside all elements in D_03005620
 
   // // // // // // // // // // // // // // // // // // // //
@@ -156,12 +156,12 @@ void func_08049d30(struct MidiChannelBus *mChnlBus, u32 id) {
     }
     for (i = 0; i < D_03005b8c; i++) {
         if (D_030064bc[i].active && (D_030064bc[i].midiChannel == mChnl)) {
-            D_030064bc[i].unk1C = 4;
+            D_030064bc[i].adsr.stage = 4;
         }
     }
     for (i = 0; i < 4; i++) {
         if (D_030056a0[i].active && (D_030056a0[i].midiChannel == mChnl)) {
-            D_030056a0[i].unk1C = 4;
+            D_030056a0[i].adsr.stage = 4;
         }
     }
 }
@@ -179,8 +179,8 @@ void func_08049db8(struct MidiChannelBus *mChnlBus, u32 id) {
     }
     for (i = 0; i < 4; i++) {
         if (D_030056a0[i].active && (D_030056a0[i].midiChannel == mChnl)) {
-            D_030056a0[i].unk1C = 3;
-            D_030056a0[i].unk1D = 0;
+            D_030056a0[i].adsr.stage = 3;
+            D_030056a0[i].adsr.envelope = 0;
         }
     }
 }
@@ -332,7 +332,7 @@ s32 func_0804a3a0(struct MidiChannel *mChnl, u8 key) {
     for (i = 0; i < D_03005b8c;) {
         if (bingus->active && (bingus->midiChannel == mChnl) && (bingus->key == key)) {
             bingus2 = &D_030064bc[i];
-            if (bingus2->unk1C != 3) return i;
+            if (bingus2->adsr.stage != 3) return i;
         }
         i++;
         bingus++;
@@ -360,7 +360,7 @@ void func_0804a5b4(struct MidiChannelBus *mChnlBus, u32 id, u8 key) {
         i = func_0804a3a0(&mChnlBus->midiChannel[id], key);
         if (i < 0) break;
         bingus2 = &D_030064bc[i];
-        bingus2->unk1C = 3;
+        bingus2->adsr.stage = 3;
     } while (1);
 
     // Set unk1C to 3 for all matching at D_030056a0.
@@ -368,7 +368,7 @@ void func_0804a5b4(struct MidiChannelBus *mChnlBus, u32 id, u8 key) {
     three = 3;
     for (i = 3; i >= 0;) {
         if (bingus->active && (bingus->midiChannel == &mChnlBus->midiChannel[id]) && (bingus->key == key)) {
-            bingus->unk1C = three;
+            bingus->adsr.stage = three;
         }
         i--;
         bingus++;
