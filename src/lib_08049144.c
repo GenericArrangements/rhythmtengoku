@@ -300,7 +300,7 @@ void func_0804a014(struct MidiChannelBus *mChnlBus, const InstrumentBank *instBa
     mChnlBus->soundBank = instBank;
 }
 
-// [func_0804a018] PCM BUFFER - Update & Return Pitch Envelope
+// [func_0804a018] PCM BUFFER - Update & Calculate Pitch Envelope
 u32 func_0804a018(struct Bingus *pcmBuf) {
     struct MidiChannelBus *mChnlBus;
     struct MidiChannel *mChnl;
@@ -390,7 +390,7 @@ u32 func_0804a018(struct Bingus *pcmBuf) {
         result += (mChnl->modResult * pcmBuf->unk14) >> 5;
     }
 
-    // Pitch Envelope: Pitch Randomiser
+    // Pitch Envelope: Random Pitch
     if (mChnl->rndmPitch != 0x100) {
         result = (result * mChnl->rndmPitch) >> 8;
     }
@@ -398,7 +398,16 @@ u32 func_0804a018(struct Bingus *pcmBuf) {
     return result;
 }
 
-#include "asm/lib_08049144/asm_0804a1f4.s"
+// [func_0804a1f4] PCM BUFFER - Calculate Volume Envelope
+u32 func_0804a1f4(struct Bingus *pcmBuf) {
+    u32 volumeEnv;
+    if (pcmBuf->midiChannel == NULL) {
+        return (pcmBuf->velocity * (pcmBuf->adsr.envelope >> 0x10)) >> 7;
+    } else {
+        volumeEnv = pcmBuf->midiChannel->volumeWheel * pcmBuf->velocity * (pcmBuf->adsr.envelope >> 0x10);
+        return volumeEnv >> 14;
+    }
+}
 
 #include "asm/lib_08049144/asm_0804a224.s"
 
