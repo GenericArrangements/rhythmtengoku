@@ -56,12 +56,12 @@ extern s32  func_0804a3a0(struct MidiChannel *, u8); // [func_0804a3a0] PCM BUFF
 // extern ? func_0804a434(?);
 // extern ? func_0804a48c(?);
 // extern ? func_0804a4e0(?);
-extern void func_0804a5b4(struct MidiChannelBus *, u32, u8); // [func_0804a5b4] MIDI CHANNEL BUS - Update Sound Buffers for 'Note Off / Muted Note' Event
+extern void func_0804a5b4(struct MidiChannelBus *, u32, u8); // [func_0804a5b4] SOUND BUFFER - 'Note Off' Event
 // extern ? func_0804a628(?);
 extern u8   func_0804a65c(u8); // [func_0804a65c] ?? (something about left panning)
 extern u8   func_0804a674(u8); // [func_0804a674] ?? (something about right panning)
 extern u32  func_0804a690(struct MidiChannelBus *, u32); // [func_0804a690] MIDI CHANNEL BUS - Get unkC Value At Index
-extern void func_0804a6b0(struct MidiChannelBus *, u32, u8, u8);
+extern void func_0804a6b0(struct MidiChannelBus *, u32, u8, u8); // [func_0804a6b0] SOUND BUFFER - 'Note On' Event
 
   // // //  MIDI CHANNEL OPERATIONS  // // //
 
@@ -112,7 +112,7 @@ extern void func_0804af30(void); // [func_0804af30] PSG BUFFER - Stop All PSG Bu
 // extern ? func_0804af74(?);
 // extern ? func_0804afa4(?);
 // extern ? func_0804afd8(?);
-// extern ? func_0804aff0(?);
+// extern ? func_0804aff0(?); // [func_0804aff0] Update PSG Buffer Channel
 extern void func_0804b2c4(void); // [func_0804b2c4] PSG BUFFER - Update All
 
   // // //  AUDIO CHANNEL OPERATIONS  // // //

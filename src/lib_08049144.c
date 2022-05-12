@@ -586,7 +586,7 @@ s32 func_0804a3a0(struct MidiChannel *mChnl, u8 key) {
 
 #include "asm/lib_08049144/asm_0804a4e0.s"
 
-// [func_0804a5b4] MIDI CHANNEL BUS - Update Sound Buffers for 'Note Off / Muted Note' Event
+// [func_0804a5b4] SOUND BUFFER - 'Note Off' Event
 void func_0804a5b4(struct MidiChannelBus *mChnlBus, u32 id, u8 key) {
     struct SoundBuffer *psgBuf;
     struct SoundBuffer *pcmBuf;
@@ -617,13 +617,13 @@ void func_0804a5b4(struct MidiChannelBus *mChnlBus, u32 id, u8 key) {
 
 // [func_0804a65c] ?? (something about left panning)
 u8 func_0804a65c(u8 panning) {
-    if (panning > 0x3f) return 0x7f;
+    if (panning >= 0x40) return 0x7f;
     else return panning * 2;
 }
 
 // [func_0804a674] ?? (something about right panning)
 u8 func_0804a674(u8 panning) {
-    if (panning <= 0x3f) return 0x7f;
+    if (panning < 0x40) return 0x7f;
     else return (0x7f - panning) * 2;
 }
 
@@ -640,6 +640,7 @@ u32 func_0804a690(struct MidiChannelBus *mChnlBus, u32 index) {
     return mChnlBus->unkC[u];
 }
 
+// [func_0804a6b0] SOUND BUFFER - 'Note On' Event
 #include "asm/lib_08049144/asm_0804a6b0.s"
 
 
@@ -958,7 +959,6 @@ void func_0804b2c4(void) {
     u16 controller = 0;
     u32 i;
 
-    // For each PSG Buffer Channel:
     for (i = 0; i < 4; i++) {
         // Update PSG Buffer Channel
         func_0804aff0(i);
