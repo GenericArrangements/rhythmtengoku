@@ -947,10 +947,29 @@ void func_0804af30(void) {
 
 #include "asm/lib_08049144/asm_0804af74.s"
 
-#include "asm/lib_08049144/asm_0804afa4.s"
+// [func_0804afa4] PSG BUFFER - Convert Pitch Envelope to PSG Frequency Register Variable
+u32 func_0804afa4(u32 pitchEnv) {
+    s32 var;
 
-#include "asm/lib_08049144/asm_0804afd8.s"
+    if (pitchEnv == 0) return 0;
+    var = 0x800 - ((0x400000 / pitchEnv) >> 5);
+    if (var < 0) var = 0;
+    if (var > 0x7ff) var = 0x7ff;
+    return var;
+}
 
+// [func_0804afd8] PSG BUFFER - Convert Volume Envelope to PSG Volume Register Variable
+u32 func_0804afd8(u32 volumeEnv) {
+    u32 var = volumeEnv;
+
+    var = (volumeEnv >> 3);
+    volumeEnv = var >> 1;
+    var += var >> 1;
+    if (var > 0xf) var = 0xf;
+    return var;
+}
+
+// [func_0804aff0] Update PSG Buffer Channel
 #include "asm/lib_08049144/asm_0804aff0.s"
 
 // [func_0804b2c4] PSG BUFFER - Update All
