@@ -40,12 +40,12 @@ struct InstrumentPCM {
 struct InstrumentPSG {
 	struct InstrumentHeader header;
 	void *waveChannel;
-	u32 unk8;
-	u32 unkC;
-	u32 unk10;
-	u32 unk14;
-	u32 unk18;
-	u32 unk1C;
+	s32 unk8;
+	s32 sustain;
+	s32 attack;
+	s32 decay;
+	s32 fade;
+	s32 release;
 	u8 channel;
 	u8 unk21;
 	u8 unk22;
@@ -208,12 +208,15 @@ struct {
 } D_08aa4460[13];
 
 
-struct Bingus {
+struct SoundBuffer {
     u32 active:1;
     u32 key:7; // MIDI Key
     u32 velocity:7; // MIDI Velocity
     u32 unk0_b15:17;
-    struct InstrumentPCM *instrument;
+    union {
+        struct InstrumentPCM *pcm;
+        struct InstrumentPSG *psg;
+    } instrument;
     struct MidiChannelBus *midiChannelBus;
     struct MidiChannel *midiChannel;
     u16 unk10;

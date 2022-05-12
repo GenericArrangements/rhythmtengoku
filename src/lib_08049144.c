@@ -10,7 +10,6 @@ asm(".include \"include/gba.inc\"");//Temporary
 #define REG_SOUNDCNT_L  *(volatile u16 *)(IORAMBase + 0x80)
 
 
-
 extern u16 D_03001570; // Pseudo-RNG Variable
 
 extern u8 D_03001578[4];
@@ -20,54 +19,56 @@ extern u8 *D_03001590;
 extern struct AudioChannel *D_03001598;
 extern struct MidiChannelBus *D_0300159c;
 
-extern u8  D_030015a7; // Initial value at D_03005b7c
+extern u8 D_030015a7; // Initial value at D_03005b7c
 
-extern u32 D_03001888; // this is like, sample data or something
-extern u32 D_030024c8; // sample envelope or something
-extern struct Comms D_030028c8; // Comms (12 of them)
-extern struct Bingus D_03002a48; // PCM Buffer (12 of them)
+extern u32 D_03001888; // ?? (this is like, sample data or something)
+extern u32 D_030024c8; // ?? (sample envelope or something)
+extern struct Comms D_030028c8; // Comms Location (12 of them)
+extern struct SoundBuffer D_03002a48; // PCM Buffer Location (12 Channels)
 
 extern u16 D_030055f0;
 
-extern u16 D_03005610; // Number of elements at D_03005b88 (set to 12 on startup)
+extern u16 D_03005610; // Total Comms at D_03005b88 ( = 12)
 extern u32 D_03005620[3];
 extern u32 D_0300562c; // Current Speed (NOT Tempo)
 
 extern u32 D_03005638;
 
-extern u8  D_03005640; // Byte 0 of MIDI Event F0; Set by MIDI Controller 4C
+extern u8 D_03005640; // ?? (Byte 0 of MIDI Event F0) [mCtrl4C]
 extern struct AudioChannel *D_03005644; // Channel which most recently called MIDI Event F0
-extern u16 D_03005648; // Set by MIDI Controller 0E; Current byte in D_03005b7c to set
+extern u16 D_03005648; // Current byte in D_03005b7c to set [mCtrl0E]
 
 extern struct MidiNote D_03005650[20]; // MIDI Note Buffer
-extern struct Bingus D_030056a0[4]; // PSG Buffer (4 of them)
+extern struct SoundBuffer D_030056a0[4]; // PSG Buffer Channels { 0 = Tone+Sweep; 1 = Tone; 2 = Wave; 3 = Noise }
 
 extern u16 D_03005b20; // Total Bytes in array at D_03005b7c
 
-extern u8  D_03005b28; // Set by MIDI Controller 4D; Only set if D_03005b44 == 0
+extern u8 D_03005b28; // ?? (Set by MIDI Controller 4D; Only set if D_03005b44 == 0)
 
 extern struct Jason D_03005b30;
-extern u8  D_03005b3c; // Set by MIDI Controller 49; Cleared by MIDI Controller 4A and MIDI Event F0
+extern u8 D_03005b3c; // ?? (Set by MIDI Controller 49; Cleared by MIDI Controller 4A and MIDI Event F0)
 
-extern u8  D_03005b44; // Must be clear for certain operations to work; Affects MIDI Controllers 49, 4A and 4D
+extern u8 D_03005b44; // ?? (Must be clear for certain operations to work; Affects MIDI Controllers 49, 4A and 4D)
 
 extern u16 D_03005b78; // Current Available MIDI Note Slot
-extern u8 *D_03005b7c; // Byte at offset D_03005648 set by MIDI Controller 10;
-extern u16 D_03005b80;
 
-extern struct Comms *D_03005b88; // Comms (12 of them, set to D_030028c8 on startup)
-extern u16 D_03005b8c; // Total number of elements at D_030064bc (set to 12 on startup)
-extern s8  D_03005b90[]; // Reverb controller..?
+extern u8 *D_03005b7c; // ?? (Byte at offset D_03005648 set by MIDI Controller 10)
+extern u16 D_03005b80; // REG_VCOUNT
 
-extern u32 *D_030064b0;
-extern struct Bingus *D_030064bc; // PCM Buffer (12 of them, set to D_03002a48 on startup)
-extern u8  D_030064c0; // Set to 0 alongside all elements in D_03005620
+extern struct Comms *D_03005b88; // Comms (12 Channels, at D_030028c8)
+extern u16 D_03005b8c; // Total PCM Buffer Channels at D_030064bc ( = 12)
+extern s8 D_03005b90[]; // Reverb controller..?
+
+extern u32 *D_030064b0; // ?? (D_030024c8)
+
+extern struct SoundBuffer *D_030064bc; // PCM Buffer (12 Channels, at D_03002a48)
+extern u8 D_030064c0; // ?? (Set to 0 alongside all elements in D_03005620)
 
   // // // // // // // // // // // // // // // // // // // //
 
-extern u16  D_08a86008[]; // ?? (some curve table)
-extern u32  D_08a86108[]; // ?? (honestly idk how to even describe this one)
-extern s16  D_08a86140[]; // ?? (another curve table)
+extern u16 D_08a86008[]; // ?? (some curve table)
+extern u32 D_08a86108[]; // ?? (honestly idk how to even describe this one)
+extern s16 D_08a86140[]; // ?? (another curve table)
 extern InstrumentBank *instrumentBanks[]; // Instrument Bank Index
 extern char D_08a865a4[]; // MIDI "Loop Start" Marker: '['
 extern char D_08a865a8[]; // MIDI "Loop End" Marker: ']'
@@ -83,16 +84,20 @@ extern char D_08a865a8[]; // MIDI "Loop End" Marker: ']'
 
 #include "asm/lib_08049144/asm_08049144.s"
 
+
+  //  //  //  //   "COMMS" STRUCT OPERATIONS   //  //  //  //
+
+
 #include "asm/lib_08049144/asm_0804930c.s"
 
 #include "asm/lib_08049144/asm_08049394.s"
 
-// [func_080493b0] ?
+// [func_080493b0] EFFECT CHAIN - Close Channel
 void func_080493b0(u32 id) {
     D_03005b88[id].active = FALSE;
 }
 
-// [func_080493c8] Store panning-related values to D_03005b88[id].
+// [func_080493c8] EFFECT CHAIN - Set Panning
 void func_080493c8(u32 id, u32 pan1, u32 pan2) {
     D_03005b88[id].unk2 = pan1;
     D_03005b88[id].unk3 = pan2;
@@ -118,6 +123,10 @@ void func_080493f4(u32 id, u32 pitchEnv) {
 #include "asm/lib_08049144/asm_08049450.s"
 
 #include "asm/lib_08049144/asm_08049470.s"
+
+
+  //  //  //  //   ??? OPERATIONS   //  //  //  //
+
 
 #include "asm/lib_08049144/asm_08049490.s"
 
@@ -158,10 +167,14 @@ void func_08049be4(void) {
 
 #include "asm/lib_08049144/asm_08049bfc.s"
 
+
+  //  //  //  //   MIDI CHANNEL BUS UPDATE OPERATIONS   //  //  //  //
+
+
 // [func_08049c34] MIDI CHANNEL - Update Modulation
 #include "asm/lib_08049144/asm_08049c34.s"
 
-// [func_08049d08] MIDI CHANNEL BUS - Update Modulation for All MIDI Channels
+// [func_08049d08] MIDI CHANNEL BUS - Update Modulation
 void func_08049d08(struct MidiChannelBus *mChnlBus) {
     u32 i;
 
@@ -170,7 +183,7 @@ void func_08049d08(struct MidiChannelBus *mChnlBus) {
     }
 }
 
-// [func_08049d30] ?? (Unload)
+// [func_08049d30] MIDI CHANNEL - Update Sound Buffer for 'Note Cut' Event
 void func_08049d30(struct MidiChannelBus *mChnlBus, u32 id) {
     struct MidiChannel *mChnl = &mChnlBus->midiChannel[id];
     u32 i;
@@ -191,7 +204,7 @@ void func_08049d30(struct MidiChannelBus *mChnlBus, u32 id) {
     }
 }
 
-// [func_08049db8] ??
+// [func_08049db8] MIDI CHANNEL - Close Sound Buffer
 void func_08049db8(struct MidiChannelBus *mChnlBus, u32 id) {
     struct MidiChannel *mChnl = &mChnlBus->midiChannel[id];
     u32 i;
@@ -210,7 +223,7 @@ void func_08049db8(struct MidiChannelBus *mChnlBus, u32 id) {
     }
 }
 
-// [func_08049e3c] ?? (Unload)
+// [func_08049e3c] MIDI CHANNEL BUS - Update All Sound Buffers for 'Note Cut' Event
 void func_08049e3c(struct MidiChannelBus *mChnlBus) {
     u32 i;
 
@@ -219,7 +232,7 @@ void func_08049e3c(struct MidiChannelBus *mChnlBus) {
     }
 }
 
-// [func_08049e64] ??
+// [func_08049e64] MIDI CHANNEL BUS - Close All Sound Buffers
 void func_08049e64(struct MidiChannelBus *mChnlBus) {
     u32 i;
     for (i = 0; i < mChnlBus->totalChannels; i++) {
@@ -227,7 +240,11 @@ void func_08049e64(struct MidiChannelBus *mChnlBus) {
     }
 }
 
-// [func_08049e8c] ??
+
+  //  //  //  //   MIDI CHANNEL BUS INITIALISATION OPERATIONS   //  //  //  //
+
+
+// [func_08049e8c] MIDI CHANNEL BUS - Set Priority
 void func_08049e8c(struct MidiChannelBus *mChnlBus, u8 priority) {
     u32 i;
 
@@ -243,7 +260,7 @@ void func_08049ec4(struct MidiChannelBus *mChnlBus, u8 volume, u16 selection) {
     mChnlBus->trackSelect = selection;
 }
 
-// [func_08049ecc] INITIALISE - MIDI Channel
+// [func_08049ecc] MIDI CHANNEL - Initialise
 void func_08049ecc(struct MidiChannel *mChnl) {
     mChnl->unk0_b0 = FALSE;
     mChnl->unk0_b1 = FALSE;
@@ -274,7 +291,7 @@ void func_08049ecc(struct MidiChannel *mChnl) {
     mChnl->unk1E = 0;
 }
 
-// [func_08049fa0] INITIALISE - MIDI Channel Bus
+// [func_08049fa0] MIDI CHANNEL BUS - Initialise
 void func_08049fa0(struct MidiChannelBus *mChnlBus, u32 totalChannels, struct MidiChannel *mChnl) {
     u32 i;
 
@@ -299,13 +316,17 @@ void func_08049fa0(struct MidiChannelBus *mChnlBus, u32 totalChannels, struct Mi
     }
 }
 
-// [func_0804a014] INITIALISE - MIDI Channel Bus - Set Sound Bank
+// [func_0804a014] MIDI CHANNEL BUS - Set Sound Bank
 void func_0804a014(struct MidiChannelBus *mChnlBus, const InstrumentBank *instBank) {
     mChnlBus->soundBank = instBank;
 }
 
-// [func_0804a018] PCM BUFFER - Update & Calculate Pitch Envelope
-u32 func_0804a018(struct Bingus *pcmBuf) {
+
+  //  //  //  //   SOUND BUFFER OPERATIONS   //  //  //  //
+
+
+// [func_0804a018] SOUND BUFFER - Update & Calculate Pitch Envelope
+u32 func_0804a018(struct SoundBuffer *pcmBuf) {
     struct MidiChannelBus *mChnlBus;
     struct MidiChannel *mChnl;
     s32 result;
@@ -320,7 +341,7 @@ u32 func_0804a018(struct Bingus *pcmBuf) {
     s32 what;
 
     // Do not calculate pitch envelope for unpitched instruments.
-    if (pcmBuf->instrument->header.type == INSTRUMENT_PCM_UNPITCHED) return 0;
+    if (pcmBuf->instrument.pcm->header.type == INSTRUMENT_PCM_UNPITCHED) return 0;
 
     mChnlBus = pcmBuf->midiChannelBus;
     mChnl = pcmBuf->midiChannel;
@@ -402,8 +423,8 @@ u32 func_0804a018(struct Bingus *pcmBuf) {
     return result;
 }
 
-// [func_0804a1f4] PCM BUFFER - Calculate Volume Envelope
-u32 func_0804a1f4(struct Bingus *pcmBuf) {
+// [func_0804a1f4] SOUND BUFFER - Calculate Volume Envelope
+u32 func_0804a1f4(struct SoundBuffer *pcmBuf) {
     u32 volumeEnv;
     if (pcmBuf->midiChannel == NULL) {
         return (pcmBuf->velocity * (pcmBuf->adsr.envelope >> 0x10)) >> 7;
@@ -413,8 +434,8 @@ u32 func_0804a1f4(struct Bingus *pcmBuf) {
     }
 }
 
-// [func_0804a224] PCM BUFFER - Update ADSR Envelope (return TRUE if envelope is complete)
-u32 func_0804a224(struct Bingus *pcmBuf) {
+// [func_0804a224] SOUND BUFFER - Update ADSR Envelope
+u32 func_0804a224(struct SoundBuffer *pcmBuf) {
     struct InstrumentPCM *inst;
     struct BufferADSR *adsr;
     u32 finished;
@@ -422,7 +443,7 @@ u32 func_0804a224(struct Bingus *pcmBuf) {
     u32 rel;
 
     finished = FALSE;
-    inst = pcmBuf->instrument;
+    inst = pcmBuf->instrument.pcm;
     adsr = &pcmBuf->adsr;
     env = adsr->envelope;
 
@@ -502,9 +523,9 @@ u32 func_0804a224(struct Bingus *pcmBuf) {
     return finished;
 }
 
-// [func_0804a2c4] PCM BUFFER - Update PCM Buffer Channel
+// [func_0804a2c4] PCM BUFFER - Update PCM Buffer
 void func_0804a2c4(u32 id) {
-    struct Bingus *pcmBuf = &D_030064bc[id];
+    struct SoundBuffer *pcmBuf = &D_030064bc[id];
 
     if (!pcmBuf->active) return;
 
@@ -520,7 +541,7 @@ void func_0804a2c4(u32 id) {
     pcmBuf->active = FALSE;
 }
 
-// [func_0804a334] PCM BUFFER - Update PCM Buffer
+// [func_0804a334] SOUND BUFFER - Update Sound Buffers
 void func_0804a334(void) {
     u32 i;
 
@@ -529,7 +550,7 @@ void func_0804a334(void) {
 }
 
 // [func_0804a360] PCM BUFFER - Stop PCM Buffer Channels
-void func_0804a360(u32 total, struct Bingus *pcmBuf) {
+void func_0804a360(u32 total, struct SoundBuffer *pcmBuf) {
     u32 i;
 
     D_03005b8c = total;
@@ -540,19 +561,19 @@ void func_0804a360(u32 total, struct Bingus *pcmBuf) {
     }
 }
 
-// [func_0804a3a0] Return the ID of the first active, matching Bingus for which (unk1C != 3).
+// [func_0804a3a0] PCM BUFFER - Return ID of first active PCM Buffer which is not at ADSR Stage 3.
 s32 func_0804a3a0(struct MidiChannel *mChnl, u8 key) {
-    struct Bingus *bingus = D_030064bc;
-    struct Bingus *bingus2;
+    struct SoundBuffer *pcmBuf = D_030064bc;
+    struct SoundBuffer *tempBuf;
     s32 i;
 
     for (i = 0; i < D_03005b8c;) {
-        if (bingus->active && (bingus->midiChannel == mChnl) && (bingus->key == key)) {
-            bingus2 = &D_030064bc[i];
-            if (bingus2->adsr.stage != 3) return i;
+        if (pcmBuf->active && (pcmBuf->midiChannel == mChnl) && (pcmBuf->key == key)) {
+            tempBuf = &D_030064bc[i];
+            if (tempBuf->adsr.stage != 3) return i;
         }
         i++;
-        bingus++;
+        pcmBuf++;
     }
     return -1;
 }
@@ -565,30 +586,30 @@ s32 func_0804a3a0(struct MidiChannel *mChnl, u8 key) {
 
 #include "asm/lib_08049144/asm_0804a4e0.s"
 
-// [func_0804a5b4] (Bingus) Set unk1C to 3 for all matching at D_030064bc and D_030056a0.
+// [func_0804a5b4] MIDI CHANNEL BUS - Update Sound Buffers for 'Note Off / Muted Note' Event
 void func_0804a5b4(struct MidiChannelBus *mChnlBus, u32 id, u8 key) {
-    struct Bingus *bingus;
-    struct Bingus *bingus2;
+    struct SoundBuffer *psgBuf;
+    struct SoundBuffer *pcmBuf;
     s32 three;
     s32 i;
 
-    // Set unk1C to 3 for all matching at D_030064bc.
+    // Set ADSR Stage to 3 for all relevant PCM Buffers.
     do {
         i = func_0804a3a0(&mChnlBus->midiChannel[id], key);
         if (i < 0) break;
-        bingus2 = &D_030064bc[i];
-        bingus2->adsr.stage = 3;
+        pcmBuf = &D_030064bc[i];
+        pcmBuf->adsr.stage = 3;
     } while (1);
 
-    // Set unk1C to 3 for all matching at D_030056a0.
-    bingus = &D_030056a0[0];
+    // Set ADSR Stage to 3 for all relevant PSG Buffers.
+    psgBuf = &D_030056a0[0];
     three = 3;
     for (i = 3; i >= 0;) {
-        if (bingus->active && (bingus->midiChannel == &mChnlBus->midiChannel[id]) && (bingus->key == key)) {
-            bingus->adsr.stage = three;
+        if (psgBuf->active && (psgBuf->midiChannel == &mChnlBus->midiChannel[id]) && (psgBuf->key == key)) {
+            psgBuf->adsr.stage = three;
         }
         i--;
-        bingus++;
+        psgBuf++;
     }
 }
 
@@ -597,13 +618,13 @@ void func_0804a5b4(struct MidiChannelBus *mChnlBus, u32 id, u8 key) {
 // [func_0804a65c] ?? (something about left panning)
 u8 func_0804a65c(u8 panning) {
     if (panning > 0x3f) return 0x7f;
-    else return panning << 1;
+    else return panning * 2;
 }
 
 // [func_0804a674] ?? (something about right panning)
 u8 func_0804a674(u8 panning) {
     if (panning <= 0x3f) return 0x7f;
-    else return (0x7f - panning) << 1;
+    else return (0x7f - panning) * 2;
 }
 
 // [func_0804a690] MIDI CHANNEL BUS - Get unkC Value At Index
@@ -641,12 +662,12 @@ void func_0804aa7c(struct MidiChannelBus *mChnlBus, u32 id, u8 panning) {
     func_0804aae0(mChnlBus, id);
 }
 
-// [func_0804aaa4] MIDI CHANNEL - Return a net Panning value, factoring all relevant Panning controllers.
+// [func_0804aaa4] MIDI CHANNEL - Calculate Panning Envelope
 u8 func_0804aaa4(struct MidiChannelBus *mChnlBus, u32 id) {
     struct MidiChannel *mChnl = &mChnlBus->midiChannel[id];
     s32 panning = mChnl->panning + (mChnlBus->panning >> 1);
 
-    // Include modulation if modType is set to "panning".
+    // Include panning modulation.
     if (mChnl->modType == 2) panning += (mChnl->modResult >> 1);
 
     // Clamp to 7 bits and return.
@@ -655,24 +676,24 @@ u8 func_0804aaa4(struct MidiChannelBus *mChnlBus, u32 id) {
     return panning;
 }
 
-// [func_0804aae0] MIDI CHANNEL - ??? (called after setting channel panning)
+// [func_0804aae0] MIDI CHANNEL - Update Effect Chain Panning
 void func_0804aae0(struct MidiChannelBus *mChnlBus, u32 id) {
     s32 panning = func_0804aaa4(mChnlBus, id);
     struct MidiChannel *mChnl = &mChnlBus->midiChannel[id];
     u32 isStereo = (mChnl->stereo) ? -1 : 1;
     s32 i = 0;
-    struct Bingus *bingus = D_030064bc;
+    struct SoundBuffer *sndBuf = D_030064bc;
 
     while (i < D_03005b8c) {
-        if (bingus->active && (bingus->midiChannel == mChnl)) {
-            panning += bingus->unk18;
+        if (sndBuf->active && (sndBuf->midiChannel == mChnl)) {
+            panning += sndBuf->unk18;
             // Clamp to 7 bits.
             if (panning < 0) panning = 0;
             if (panning > 0x7f) panning = 0x7f;
             func_080493c8(i, func_0804a674(panning), func_0804a65c(panning) * isStereo);
         }
         i++;
-        bingus++;
+        sndBuf++;
     }
 }
 
@@ -785,7 +806,7 @@ void func_0804ad9c(struct MidiChannelBus *mChnlBus, u32 id, u8 var) {
 
 
 // [func_0804adb0] MIDI CHANNEL BUS - Set unk4
-void func_0804adb0(struct MidiChannelBus *mChnlBus, u8 var) {
+void func_0804adb0(struct MidiChannelBus *mChnlBus, s8 var) {
     mChnlBus->unk4 = var;
 }
 
@@ -905,6 +926,10 @@ u32 func_0804af0c(u16 var) {
     return (u32) (var * D_03001570) >> 0x10;
 }
 
+
+  //  //  //  //   PSG SOUND BUFFER OPERATIONS   //  //  //  //
+
+
 // [func_0804af30] PSG BUFFER - Stop All PSG Buffer Channels
 void func_0804af30(void) {
     u32 i;
@@ -929,7 +954,7 @@ void func_0804af30(void) {
 
 // [func_0804b2c4] PSG BUFFER - Update All
 void func_0804b2c4(void) {
-    struct Bingus *psgBuf = &D_030056a0[0];
+    struct SoundBuffer *psgBuf = &D_030056a0[0];
     u16 controller = 0;
     u32 i;
 

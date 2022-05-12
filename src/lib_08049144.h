@@ -1,14 +1,20 @@
 #pragma once
 
 // extern ? func_08049144(?);
+
+  // // //  "COMMS" STRUCT OPERATIONS  // // //
+
 // extern ? func_0804930c(?);
 // extern ? func_08049394(?);
-extern void func_080493b0(u32);
-extern void func_080493c8(u32, u32, u32); // [func_080493c8] Store panning-related values to D_03005b88[i].
+extern void func_080493b0(u32); // [func_080493b0] EFFECT CHAIN - Close Channel
+extern void func_080493c8(u32, u32, u32); // [func_080493c8] EFFECT CHAIN - Set Panning
 extern void func_080493e4(u32, u32); // [func_080493e4] EFFECT CHAIN - Set Volume Envelope
 extern void func_080493f4(u32, u32); // [func_080493f4] EFFECT CHAIN - Set Pitch Envelope
 // extern ? func_08049450(?);
 // extern ? func_08049470(?);
+
+  // // //  ??? OPERATIONS  // // //
+
 extern void func_08049490(u32, u32, u32, u32 *, u32, u32 *, u16, struct Comms *); // [func_08049490] Initialise... a lot...
 // extern ? func_080497f8(?);
 // extern ? func_08049ad8(?);
@@ -19,29 +25,38 @@ extern void func_08049b8c(u8); // [func_08049b8c] MIDI Controller 4D - ??
 extern void func_08049bac(void); // [func_08049bac] ??
 extern void func_08049be4(void); // [func_08049be4] MIDI Controller 49 - ??; MIDI Controller 4A - ??
 // extern ? func_08049bfc(?);
+
+  // // //  MIDI CHANNEL BUS UPDATE OPERATIONS  // // //
+
 // extern ? func_08049c34(?); // [func_08049c34] MIDI CHANNEL - Update Modulation
-extern void func_08049d08(struct MidiChannelBus *); // [func_08049d08] MIDI CHANNEL BUS - Update Modulation for All MIDI Channels
-extern void func_08049d30(struct MidiChannelBus *, u32); // [func_08049d30] ?? (Unload)
-extern void func_08049db8(struct MidiChannelBus *, u32); // [func_08049db8] ??
-extern void func_08049e3c(struct MidiChannelBus *); // [func_08049e3c] ?? (Unload)
-extern void func_08049e64(struct MidiChannelBus *); // [func_08049e64] ??
-extern void func_08049e8c(struct MidiChannelBus *, u8); // [func_08049e8c] ??
+extern void func_08049d08(struct MidiChannelBus *); // [func_08049d08] MIDI CHANNEL BUS - Update Modulation
+extern void func_08049d30(struct MidiChannelBus *, u32); // [func_08049d30] MIDI CHANNEL - Update Sound Buffer for Note Cut Event
+extern void func_08049db8(struct MidiChannelBus *, u32); // [func_08049db8] MIDI CHANNEL - Close Sound Buffer
+extern void func_08049e3c(struct MidiChannelBus *); // [func_08049e3c] MIDI CHANNEL BUS - Update All Sound Buffers for 'Note Cut' Event
+extern void func_08049e64(struct MidiChannelBus *); // [func_08049e64] MIDI CHANNEL BUS - Close All Sound Buffers
+
+  // // //  MIDI CHANNEL BUS INITIALISATION OPERATIONS  // // //
+
+extern void func_08049e8c(struct MidiChannelBus *, u8); // [func_08049e8c] MIDI CHANNEL BUS - Set Priority
 extern void func_08049ec4(struct MidiChannelBus *, u8, u16); // [func_08049ec4] MIDI CHANNEL BUS - Set Selected Track Volume & Track Selection
-extern void func_08049ecc(struct MidiChannel *); // [func_08049ecc] INITIALISE - MIDI Channel
-extern void func_08049fa0(struct MidiChannelBus *, u32, struct MidiChannel *); // [func_08049fa0] INITIALISE - MIDI Channel Bus
-extern void func_0804a014(struct MidiChannelBus *, const InstrumentBank *); // [func_0804a014] INITIALISE - MIDI Channel Bus - Set Sound Bank
-extern u32  func_0804a018(struct Bingus *); // [func_0804a018] PCM BUFFER - Update & Calculate Pitch Envelope
-extern u32  func_0804a1f4(struct Bingus *); // [func_0804a1f4] PCM BUFFER - Calculate Volume Envelope
-extern u32  func_0804a224(struct Bingus *); // [func_0804a224] PCM BUFFER - Update ADSR Envelope (return TRUE if envelope is complete)
-extern void func_0804a2c4(u32); // [func_0804a2c4] PCM BUFFER - Update PCM Buffer Channel
-extern void func_0804a334(void); // [func_0804a334] PCM BUFFER - Update PCM Buffer
-extern void func_0804a360(u32, struct Bingus *); // [func_0804a360] PCM BUFFER - Stop PCM Buffer Channels
-extern s32  func_0804a3a0(struct MidiChannel *, u8); // [func_0804a3a0] Return the ID of the first active, matching Bingus for which (unk1C != 3).
+extern void func_08049ecc(struct MidiChannel *); // [func_08049ecc] MIDI CHANNEL - Initialise
+extern void func_08049fa0(struct MidiChannelBus *, u32, struct MidiChannel *); // [func_08049fa0] MIDI CHANNEL BUS - Initialise
+extern void func_0804a014(struct MidiChannelBus *, const InstrumentBank *); // [func_0804a014] MIDI CHANNEL BUS - Set Sound Bank
+
+  // // //  SOUND BUFFER OPERATIONS  // // //
+
+extern u32  func_0804a018(struct SoundBuffer *); // [func_0804a018] PCM BUFFER - Update & Calculate Pitch Envelope
+extern u32  func_0804a1f4(struct SoundBuffer *); // [func_0804a1f4] PCM BUFFER - Calculate Volume Envelope
+extern u32  func_0804a224(struct SoundBuffer *); // [func_0804a224] PCM BUFFER - Update ADSR Envelope
+extern void func_0804a2c4(u32); // [func_0804a2c4] PCM BUFFER - Update PCM Buffer
+extern void func_0804a334(void); // [func_0804a334] SOUND BUFFER - Update Sound Buffers
+extern void func_0804a360(u32, struct SoundBuffer *); // [func_0804a360] PCM BUFFER - Stop PCM Buffer Channels
+extern s32  func_0804a3a0(struct MidiChannel *, u8); // [func_0804a3a0] PCM BUFFER - Return ID of first active PCM Buffer which is not at ADSR Stage 3.
 // extern ? func_0804a3fc(?);
 // extern ? func_0804a434(?);
 // extern ? func_0804a48c(?);
 // extern ? func_0804a4e0(?);
-extern void func_0804a5b4(struct MidiChannelBus *, u32, u8); // [func_0804a5b4] (Bingus) Set unk1C to 3 for all matching at D_030064bc and D_030056a0.
+extern void func_0804a5b4(struct MidiChannelBus *, u32, u8); // [func_0804a5b4] MIDI CHANNEL BUS - Update Sound Buffers for 'Note Off / Muted Note' Event
 // extern ? func_0804a628(?);
 extern u8   func_0804a65c(u8); // [func_0804a65c] ?? (something about left panning)
 extern u8   func_0804a674(u8); // [func_0804a674] ?? (something about right panning)
@@ -53,8 +68,8 @@ extern void func_0804a6b0(struct MidiChannelBus *, u32, u8, u8);
 extern void func_0804aa40(struct MidiChannelBus *, u32, u16); // [func_0804aa40] MIDI CHANNEL - Set Pitch Wheel [Evnt_E]
 extern void func_0804aa5c(struct MidiChannelBus *, u32, u8);  // [func_0804aa5c] MIDI CHANNEL - Set Volume [Ctrl_07]
 extern void func_0804aa7c(struct MidiChannelBus *, u32, u8);  // [func_0804aa7c] MIDI CHANNEL - Set Panning [Ctrl_0A]
-extern u8   func_0804aaa4(struct MidiChannelBus *, u32);      // [func_0804aaa4] MIDI CHANNEL - Return a net Panning value, factoring all relevant Panning controllers.
-extern void func_0804aae0(struct MidiChannelBus *, u32);      // [func_0804aae0] MIDI CHANNEL - ??? (called after setting channel panning)
+extern u8   func_0804aaa4(struct MidiChannelBus *, u32);      // [func_0804aaa4] MIDI CHANNEL - Calculate Panning Envelope
+extern void func_0804aae0(struct MidiChannelBus *, u32);      // [func_0804aae0] MIDI CHANNEL - Update Effect Chain Panning
 extern void func_0804ab88(struct MidiChannelBus *, u32, u8);  // [func_0804ab88] MIDI Channel - Set Instrument/Patch [Evnt_C]
 extern void func_0804aba8(struct MidiChannelBus *, u32, u8);  // [func_0804aba8] MIDI CHANNEL - Set Expression [Ctrl_0B]
 extern void func_0804abc8(struct MidiChannelBus *, u32, u16); // [func_0804abc8] MIDI CHANNEL - Set unk0_b9 [Ctrl_00; Ctrl_20]
@@ -75,7 +90,7 @@ extern void func_0804ad9c(struct MidiChannelBus *, u32, u8);  // [func_0804ad9c]
 
   // // //  MIDI CHANNEL BUS OPERATIONS  // // //
 
-extern void func_0804adb0(struct MidiChannelBus *, u8);     // [func_0804adb0] MIDI CHANNEL BUS - Set unk4
+extern void func_0804adb0(struct MidiChannelBus *, s8);     // [func_0804adb0] MIDI CHANNEL BUS - Set unk4
 extern void func_0804adb4(struct MidiChannelBus *, u8);     // [func_0804adb4] MIDI CHANNEL BUS - Set Volume
 extern void func_0804adb8(struct MidiChannelBus *, s8);     // [func_0804adb8] MIDI CHANNEL BUS - Set Panning
 extern void func_0804ade4(struct MidiChannelBus *, s16);    // [func_0804ade4] MIDI CHANNEL BUS - Set Pitch
@@ -91,7 +106,7 @@ extern void func_0804ae60(struct Jason *); // [func_0804ae60] Set ?? [Ctrl_49; C
 extern void func_0804ae6c(struct Jason *, u32); // [func_0804ae6c] ?? (relates to speed)
 extern u32  func_0804af0c(u16); // [func_0804af0c] UTIL - Pseudo-Random Number Generator
 
-  // // //  "BINGUS" STRUCT OPERATIONS  // // //
+  // // //  PSG SOUND BUFFER OPERATIONS  // // //
 
 extern void func_0804af30(void); // [func_0804af30] PSG BUFFER - Stop All PSG Buffer Channels
 // extern ? func_0804af74(?);
