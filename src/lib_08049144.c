@@ -649,7 +649,25 @@ s32 func_0804a434(void) {
     return id;
 }
 
-#include "asm/lib_08049144/asm_0804a48c.s"
+// [func_0804a48c] PCM BUFFER - Return PCM Buffer with Lowest Volume (exclude ADSR)
+s32 func_0804a48c(void) {
+    struct SoundBuffer *sndBuf;
+    s32 id = -1;
+    u32 currentVol = 0x10000;
+    u32 bufferVol;
+    s32 i;
+
+    for (i = 0; i < D_03005b8c; i++) {
+        if (D_030064bc[i].active) {
+            bufferVol = D_030064bc[i].midiChannel->volumeWheel * D_030064bc[i].velocity;
+            if (bufferVol < currentVol) {
+                currentVol = bufferVol;
+                id = i;
+            }
+        }
+    }
+    return id;
+}
 
 #include "asm/lib_08049144/asm_0804a4e0.s"
 

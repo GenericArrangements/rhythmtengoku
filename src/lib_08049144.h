@@ -54,7 +54,7 @@ extern void func_0804a360(u32, struct SoundBuffer *); // [func_0804a360] PCM BUF
 extern s32  func_0804a3a0(struct MidiChannel *, u8); // [func_0804a3a0] PCM BUFFER - Return ID of first active PCM Buffer which is not at ADSR Stage 3.
 extern s32  func_0804a3fc(void); // [func_0804a3fc] PCM BUFFER - Return First Inactive PCM Buffer
 extern s32  func_0804a434(void); // [func_0804a434] PCM BUFFER - Return PCM Buffer with Lowest Volume
-// extern ? func_0804a48c(?);
+extern s32  func_0804a48c(void); // [func_0804a48c] PCM BUFFER - Return PCM Buffer with Lowest Volume (exclude ADSR)
 // extern ? func_0804a4e0(?);
 extern void func_0804a5b4(struct MidiChannelBus *, u32, u8); // [func_0804a5b4] SOUND BUFFER - 'Note Off' Event
 extern s32  func_0804a628(struct MidiChannelBus *, u32, u8, u8); // [func_0804a628] PCM BUFFER - Return First Most Replaceable PCM Buffer
