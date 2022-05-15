@@ -12,10 +12,11 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 extern u16 D_03001570; // Pseudo-RNG Variable
 
-extern u8 D_03001578[4];
+extern u8 D_03001578[4]; // PSG BUFFER - ?? (checked by TONE 1 and WAVE)
 
-extern u8 *D_03001590;
-
+extern u16 D_03001580[4]; // PSG BUFFER - Initial Volume of Envelope
+extern u16 D_03001588[4]; // PSG BUFFER - Frequency
+extern u8 *D_03001590; // PSG BUFFER - Wave Pattern
 extern struct AudioChannel *D_03001598;
 extern struct MidiChannelBus *D_0300159c;
 
@@ -1046,7 +1047,12 @@ void func_0804af30(void) {
     *D_03001590 = 0;
 }
 
-#include "asm/lib_08049144/asm_0804af74.s"
+// [func_0804af74] PSG BUFFER - Initialise
+void func_0804af74(u32 id) {
+    D_03001578[id] = 1;
+    D_03001580[id] = -1;
+    D_03001588[id] = -1;
+}
 
 // [func_0804afa4] PSG BUFFER - Convert Pitch Envelope to PSG Frequency Register Variable
 u32 func_0804afa4(u32 pitchEnv) {

@@ -109,7 +109,7 @@ extern u32  func_0804af0c(u16); // [func_0804af0c] UTIL - Pseudo-Random Number G
   // // //  PSG SOUND BUFFER OPERATIONS  // // //
 
 extern void func_0804af30(void); // [func_0804af30] PSG BUFFER - Stop All PSG Buffer Channels
-// extern ? func_0804af74(?);
+extern void func_0804af74(u32); // [func_0804af74] PSG BUFFER - Initialise
 extern u32  func_0804afa4(u32); // [func_0804afa4] PSG BUFFER - Convert Pitch Envelope to PSG Frequency Register Variable
 extern u32  func_0804afd8(u32); // [func_0804afd8] PSG BUFFER - Convert Volume Envelope to PSG Volume Register Variable
 // extern ? func_0804aff0(?); // [func_0804aff0] Update PSG Buffer Channel
