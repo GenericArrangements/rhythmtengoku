@@ -91,7 +91,7 @@ extern u32 __udivmoddi4(u64, u64);
   //  //  //  //   "COMMS" STRUCT OPERATIONS   //  //  //  //
 
 
-// [func_0804930c] SAMPLE READER - Initialise
+// [func_0804930c] SAMPLE READER - Initialise Channel
 void func_0804930c(u32 id, struct SampleInfo *sample) {
     struct Comms *comms = &D_03005b88[id]; // r6
     u32 keySampleRate;
@@ -116,7 +116,11 @@ void func_0804930c(u32 id, struct SampleInfo *sample) {
     comms->unk1C = __udivmoddi4((sampleRate + keySampleRate) - 1, keySampleRate);
 }
 
-#include "asm/lib_08049144/asm_08049394.s"
+// [func_08049394] SAMPLE READER - Reset Channel
+void func_08049394(u32 id) {
+    D_03005b88[id].unkC = 0;
+    D_03005b88[id].active = TRUE;
+}
 
 // [func_080493b0] SAMPLE READER - Close Channel
 void func_080493b0(u32 id) {
