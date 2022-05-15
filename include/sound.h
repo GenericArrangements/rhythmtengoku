@@ -14,10 +14,10 @@
 struct SampleInfo {
 	u32 length;
 	u32 sampleRate;
-	u32 pitch;
+	u32 key;
 	u32 loopStart;
 	u32 loopEnd;
-	const u32 *romAddress;
+	const u32 *waveform;
 };
 
 struct InstrumentHeader {
@@ -29,7 +29,7 @@ struct InstrumentHeader {
 struct InstrumentPCM {
 	struct InstrumentHeader header;
 	const struct SampleInfo *sample;
-	s32 unk8;
+	s32 initial;
 	s32 sustain;
 	s32 attack;
 	s32 decay;
@@ -39,8 +39,8 @@ struct InstrumentPCM {
 
 struct InstrumentPSG {
 	struct InstrumentHeader header;
-	void *waveChannel;
-	s32 unk8;
+	u32 *wavetable;
+	s32 initial;
 	s32 sustain;
 	s32 attack;
 	s32 decay;
@@ -233,22 +233,21 @@ struct SoundBuffer {
     } adsr;
 };
 
-struct Comms {
+struct Comms { // Sample Buffer?
     u32 active:1;
     u32 unk0_b1:1;
+    u32 unk0_b2:1; // ?? ( = instPCM->unk1_b7)
+    u32 unk0_b3:1; // ?? ( = mChnl->unk0_b30)
     u8 volume; // Volume Envelope
     u8 unk2; // ?? Panning 1
     u8 unk3; // ?? Panning 2
-    u32 unk4;
-    u32 unk8;
-    u32 unkC;
-    u32 unk10;
-    u16 unk14;
-    u8 unk16;
-    u8 unk17_b0:7;
-    u8 unk17_b7:1;
+    const u32 *sample;   // Sample - Stream
+    u32 length;         // Sample - Length
+    u32 unkC;           // ??
+    u32 loopStart;      // Sample - Loop Start
+    u32 loopEnd;        // Sample - Loop End
     u32 pitch; // Pitch Envelope
-    u32 unk1C; // ?? (also pitch-related)
+    u32 unk1C; // ?? (samplerate-related)
 };
 
 struct Jason {

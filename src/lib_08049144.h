@@ -4,14 +4,14 @@
 
   // // //  "COMMS" STRUCT OPERATIONS  // // //
 
-// extern ? func_0804930c(?);
+extern void func_0804930c(u32, struct SampleInfo *); // [func_0804930c] SAMPLE READER - Initialise
 // extern ? func_08049394(?);
-extern void func_080493b0(u32); // [func_080493b0] EFFECT CHAIN - Close Channel
-extern void func_080493c8(u32, u32, u32); // [func_080493c8] EFFECT CHAIN - Set Panning
-extern void func_080493e4(u32, u32); // [func_080493e4] EFFECT CHAIN - Set Volume Envelope
-extern void func_080493f4(u32, u32); // [func_080493f4] EFFECT CHAIN - Set Pitch Envelope
-// extern ? func_08049450(?);
-// extern ? func_08049470(?);
+extern void func_080493b0(u32); // [func_080493b0] SAMPLE READER - Close Channel
+extern void func_080493c8(u32, u32, u32); // [func_080493c8] SAMPLE READER - Set Panning
+extern void func_080493e4(u32, u32); // [func_080493e4] SAMPLE READER - Set Volume Envelope
+extern void func_080493f4(u32, u32); // [func_080493f4] SAMPLE READER - Set Pitch Envelope
+extern void func_08049450(u32, u32); // [func_08049450] SAMPLE READER - Set unk0_b2
+extern void func_08049470(u32, u32); // [func_08049470] SAMPLE READER - Set unk0_b3
 
   // // //  ??? OPERATIONS  // // //
 
@@ -19,7 +19,7 @@ extern void func_08049490(u32, u32, u32, u32 *, u32, u32 *, u16, struct Comms *)
 // extern ? func_080497f8(?);
 // extern ? func_08049ad8(?);
 // extern ? func_08049b34(?);
-extern u32  func_08049b5c(u32); // [func_08049b5c] EFFECT CHAIN - Check If Active
+extern u32  func_08049b5c(u32); // [func_08049b5c] SAMPLE READER - Check If Active
 extern void func_08049b70(u32); // [func_08049b70] (SUB) MIDI Controller 4A - ??
 extern void func_08049b8c(u8); // [func_08049b8c] MIDI Controller 4D - ??
 extern void func_08049bac(void); // [func_08049bac] ??
@@ -45,9 +45,9 @@ extern void func_0804a014(struct MidiChannelBus *, const InstrumentBank *); // [
 
   // // //  SOUND BUFFER OPERATIONS  // // //
 
-extern u32  func_0804a018(struct SoundBuffer *); // [func_0804a018] PCM BUFFER - Update & Calculate Pitch Envelope
-extern u32  func_0804a1f4(struct SoundBuffer *); // [func_0804a1f4] PCM BUFFER - Calculate Volume Envelope
-extern u32  func_0804a224(struct SoundBuffer *); // [func_0804a224] PCM BUFFER - Update ADSR Envelope
+extern u32  func_0804a018(struct SoundBuffer *); // [func_0804a018] SOUND BUFFER - Update & Calculate Pitch Envelope
+extern u32  func_0804a1f4(struct SoundBuffer *); // [func_0804a1f4] SOUND BUFFER - Calculate Volume Envelope
+extern u32  func_0804a224(struct SoundBuffer *); // [func_0804a224] SOUND BUFFER - Update ADSR Envelope
 extern void func_0804a2c4(u32); // [func_0804a2c4] PCM BUFFER - Update PCM Buffer
 extern void func_0804a334(void); // [func_0804a334] SOUND BUFFER - Update Sound Buffers
 extern void func_0804a360(u32, struct SoundBuffer *); // [func_0804a360] PCM BUFFER - Stop PCM Buffer Channels

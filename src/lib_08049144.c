@@ -23,7 +23,7 @@ extern u8 D_030015a7; // Initial value at D_03005b7c
 
 extern u32 D_03001888; // ?? (this is like, sample data or something)
 extern u32 D_030024c8; // ?? (sample envelope or something)
-extern struct Comms D_030028c8; // Comms Location (12 of them)
+extern struct Comms D_030028c8; // Sample Reader Location (12 Channels)
 extern struct SoundBuffer D_03002a48; // PCM Buffer Location (12 Channels)
 
 extern u16 D_030055f0;
@@ -58,6 +58,7 @@ extern u16 D_03005b80; // REG_VCOUNT
 extern struct Comms *D_03005b88; // Comms (12 Channels, at D_030028c8)
 extern u16 D_03005b8c; // Total PCM Buffer Channels at D_030064bc ( = 12)
 extern s8 D_03005b90[]; // Reverb controller..?
+extern u32 D_03005b94; // Standard Sample Rate (13379Hz)
 
 extern u32 *D_030064b0; // ?? (D_030024c8)
 
@@ -66,12 +67,14 @@ extern u8 D_030064c0; // ?? (Set to 0 alongside all elements in D_03005620)
 
   // // // // // // // // // // // // // // // // // // // //
 
-extern u16 D_08a86008[]; // ?? (some curve table)
+extern u16 D_08a86008[]; // Note Frequency Table
 extern u32 D_08a86108[]; // ?? (honestly idk how to even describe this one)
 extern s16 D_08a86140[]; // ?? (another curve table)
 extern InstrumentBank *instrumentBanks[]; // Instrument Bank Index
 extern char D_08a865a4[]; // MIDI "Loop Start" Marker: '['
 extern char D_08a865a8[]; // MIDI "Loop End" Marker: ']'
+
+extern u32 __udivmoddi4(u64, u64);
 
   // // // // // // // // // // // // // // // // // // // //
 
@@ -88,27 +91,50 @@ extern char D_08a865a8[]; // MIDI "Loop End" Marker: ']'
   //  //  //  //   "COMMS" STRUCT OPERATIONS   //  //  //  //
 
 
-#include "asm/lib_08049144/asm_0804930c.s"
+// [func_0804930c] SAMPLE READER - Initialise
+void func_0804930c(u32 id, struct SampleInfo *sample) {
+    struct Comms *comms = &D_03005b88[id]; // r6
+    u32 keySampleRate;
+    u32 keyFreq;
+    u64 sampleRate;
+
+    comms->active = FALSE;
+    comms->sample = sample->waveform;
+    comms->length = sample->length >> 2;
+
+    if ((sample->loopStart | sample->loopEnd) != 0) {
+        comms->loopStart = sample->loopStart << 14;
+        comms->loopEnd = sample->loopEnd << 14;
+    } else {
+        comms->loopStart = sample->length << 14;
+        comms->loopEnd = sample->length << 14;
+    }
+
+    keyFreq = D_08a86008[sample->key];
+    keySampleRate = D_03005b94 * keyFreq; // r2
+    sampleRate = (u64) sample->sampleRate << 28;
+    comms->unk1C = __udivmoddi4((sampleRate + keySampleRate) - 1, keySampleRate);
+}
 
 #include "asm/lib_08049144/asm_08049394.s"
 
-// [func_080493b0] EFFECT CHAIN - Close Channel
+// [func_080493b0] SAMPLE READER - Close Channel
 void func_080493b0(u32 id) {
     D_03005b88[id].active = FALSE;
 }
 
-// [func_080493c8] EFFECT CHAIN - Set Panning
+// [func_080493c8] SAMPLE READER - Set Panning
 void func_080493c8(u32 id, u32 pan1, u32 pan2) {
     D_03005b88[id].unk2 = pan1;
     D_03005b88[id].unk3 = pan2;
 }
 
-// [func_080493e4] EFFECT CHAIN - Set Volume Envelope
+// [func_080493e4] SAMPLE READER - Set Volume Envelope
 void func_080493e4(u32 id, u32 volumeEnv) {
     D_03005b88[id].volume = volumeEnv;
 }
 
-// [func_080493f4] EFFECT CHAIN - Set Pitch Envelope
+// [func_080493f4] SAMPLE READER - Set Pitch Envelope
 void func_080493f4(u32 id, u32 pitchEnv) {
     struct Comms *comms = &D_03005b88[id];
     if (pitchEnv == 0) {
@@ -120,9 +146,15 @@ void func_080493f4(u32 id, u32 pitchEnv) {
     }
 }
 
-#include "asm/lib_08049144/asm_08049450.s"
+// [func_08049450] SAMPLE READER - Set unk0_b2
+void func_08049450(u32 id, u32 arg1) {
+    D_03005b88[id].unk0_b2 = arg1;
+}
 
-#include "asm/lib_08049144/asm_08049470.s"
+// [func_08049470] SAMPLE READER - Set unk0_b3
+void func_08049470(u32 id, u32 arg1) {
+    D_03005b88[id].unk0_b3 = arg1;
+}
 
 
   //  //  //  //   ??? OPERATIONS   //  //  //  //
@@ -136,7 +168,7 @@ void func_080493f4(u32 id, u32 pitchEnv) {
 
 #include "asm/lib_08049144/asm_08049b34.s"
 
-// [func_08049b5c] EFFECT CHAIN - Check If Active
+// [func_08049b5c] SAMPLE READER - Check If Active
 u32 func_08049b5c(u32 id) {
     return D_03005b88[id].active;
 }
