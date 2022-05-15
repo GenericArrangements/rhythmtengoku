@@ -52,12 +52,12 @@ extern void func_0804a2c4(u32); // [func_0804a2c4] PCM BUFFER - Update PCM Buffe
 extern void func_0804a334(void); // [func_0804a334] SOUND BUFFER - Update Sound Buffers
 extern void func_0804a360(u32, struct SoundBuffer *); // [func_0804a360] PCM BUFFER - Stop PCM Buffer Channels
 extern s32  func_0804a3a0(struct MidiChannel *, u8); // [func_0804a3a0] PCM BUFFER - Return ID of first active PCM Buffer which is not at ADSR Stage 3.
-// extern ? func_0804a3fc(?);
-// extern ? func_0804a434(?);
+extern s32  func_0804a3fc(void); // [func_0804a3fc] PCM BUFFER - Return First Inactive PCM Buffer
+extern s32  func_0804a434(void); // [func_0804a434] PCM BUFFER - Return PCM Buffer with Lowest Volume
 // extern ? func_0804a48c(?);
 // extern ? func_0804a4e0(?);
 extern void func_0804a5b4(struct MidiChannelBus *, u32, u8); // [func_0804a5b4] SOUND BUFFER - 'Note Off' Event
-// extern ? func_0804a628(?);
+extern s32  func_0804a628(struct MidiChannelBus *, u32, u8, u8); // [func_0804a628] PCM BUFFER - Return First Most Replaceable PCM Buffer
 extern u8   func_0804a65c(u8); // [func_0804a65c] ?? (something about left panning)
 extern u8   func_0804a674(u8); // [func_0804a674] ?? (something about right panning)
 extern u32  func_0804a690(struct MidiChannelBus *, u32); // [func_0804a690] MIDI CHANNEL BUS - Get unkC Value At Index

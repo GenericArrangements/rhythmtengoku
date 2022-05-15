@@ -614,9 +614,40 @@ s32 func_0804a3a0(struct MidiChannel *mChnl, u8 key) {
     return -1;
 }
 
-#include "asm/lib_08049144/asm_0804a3fc.s"
+// [func_0804a3fc] PCM BUFFER - Return First Inactive PCM Buffer
+s32 func_0804a3fc(void) {
+    s32 i;
 
-#include "asm/lib_08049144/asm_0804a434.s"
+    for (i = 0; i < D_03005b8c; i++) {
+        if (!D_030064bc[i].active) return i;
+    }
+    return -1;
+}
+
+// [func_0804a434] PCM BUFFER - Return PCM Buffer with Lowest Volume
+s32 func_0804a434(void) {
+    struct SoundBuffer *sndBuf;
+    s32 id = -1;
+    u32 currentVol = 0x10000;
+    u32 bufferVol;
+    s32 i = 0;
+
+    sndBuf = D_030064bc;
+    while (i < D_03005b8c) {
+        if (sndBuf->active && (sndBuf->adsr.stage == 3)) {
+            bufferVol = sndBuf->midiChannel->volumeWheel * sndBuf->velocity;
+            if (bufferVol < currentVol) {
+                currentVol = bufferVol;
+                id = i;
+            }
+        }
+
+        i++;
+        sndBuf++;
+    }
+
+    return id;
+}
 
 #include "asm/lib_08049144/asm_0804a48c.s"
 
@@ -649,7 +680,23 @@ void func_0804a5b4(struct MidiChannelBus *mChnlBus, u32 id, u8 key) {
     }
 }
 
-#include "asm/lib_08049144/asm_0804a628.s"
+// [func_0804a628] PCM BUFFER - Return First Most Replaceable PCM Buffer
+s32 func_0804a628(struct MidiChannelBus *mChnlBus, u32 id, u8 key, u8 vel) {
+    s32 buffer;
+
+    // Return the first inactive buffer.
+    buffer = func_0804a3fc();
+    if (buffer >= 0) return buffer;
+
+    // Return the quietest buffer (below threshold; see function).
+    buffer = func_0804a434();
+    if (buffer >= 0) return buffer;
+
+    // Return a buffer of a lower priority.
+    buffer = func_0804a4e0(mChnlBus, id, vel);
+    if (buffer >= 0) return buffer;
+    return -1;
+}
 
 // [func_0804a65c] ?? (something about left panning)
 u8 func_0804a65c(u8 panning) {
