@@ -19,7 +19,7 @@ extern void func_08049470(u32, u32); // [func_08049470] SAMPLE READER - Set unk0
 
 extern void func_08049490(u32, u32, u32, u32 *, u32, u32 *, u16, struct Comms *); // [func_08049490] Initialise... a lot...
 // extern ? func_080497f8(?);
-// extern ? func_08049ad8(?);
+extern void func_08049ad8(void); // [func_08049ad8] Initialise(?) REG_DMA1CNT & REG_DMA2CNT
 extern void func_08049b34(u32, u32, u32, u32); // [func_08049b34] ??
 extern u32  func_08049b5c(u32); // [func_08049b5c] SAMPLE READER - Check If Active
 extern void func_08049b70(u32); // [func_08049b70] (SUB) MIDI Controller 4A - ??

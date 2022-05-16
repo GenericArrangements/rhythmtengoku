@@ -245,7 +245,22 @@ void func_08049470(u32 id, u32 arg1) {
 
 #include "asm/lib_08049144/asm_080497f8.s"
 
-#include "asm/lib_08049144/asm_08049ad8.s"
+// [func_08049ad8] Initialise(?) REG_DMA1CNT & REG_DMA2CNT
+void func_08049ad8(void) {
+    volatile u32 dummy;
+
+    D_030064c4 = 0;
+    if (D_030055f4 != 1) {
+        REG_DMA1CNT = ((DMACNT_ENABLE | DMACNT_SIZE | DMACNT_DEST_INC_TYPE_UNCHANGED) << 0x10) + 4;
+        dummy = 0;
+        dummy = 1;
+        REG_DMA1CNT_H = DMACNT_SIZE;
+    }
+    REG_DMA2CNT = ((DMACNT_ENABLE | DMACNT_SIZE | DMACNT_DEST_INC_TYPE_UNCHANGED) << 0x10) + 4;
+    dummy = 0;
+    dummy = 1;
+    REG_DMA2CNT_H = DMACNT_SIZE;
+}
 
 // [func_08049b34] ??
 void func_08049b34(u32 arg0, u32 arg1, u32 arg2, u32 arg3) {
