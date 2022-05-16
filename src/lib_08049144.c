@@ -92,10 +92,10 @@ extern u32 __udivmoddi4(u64, u64);
 
 
 
-  //  //  //  //   ??? CODE   //  //  //  //
+  //  //  //  //   INTERRUPT_DMA2   //  //  //  //
 
 
-// [func_08049144] ?? (first non-handwritten function in audio library)
+// [func_08049144] INTERRUPT_DMA2
 void func_08049144(void) {
     volatile u32 dummy;
     u32 temp;

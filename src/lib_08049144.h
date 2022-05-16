@@ -1,6 +1,8 @@
 #pragma once
 
-extern void func_08049144(void); // [func_08049144] ?? (first non-handwritten function in audio library)
+  // // //  INTERRUPT_DMA2  // // //
+
+extern void func_08049144(void); // [func_08049144] INTERRUPT_DMA2
 
   // // //  "COMMS" STRUCT OPERATIONS  // // //
 
