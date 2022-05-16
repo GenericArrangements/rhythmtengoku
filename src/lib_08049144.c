@@ -28,43 +28,52 @@ extern struct Comms D_030028c8; // Sample Reader Location (12 Channels)
 extern struct SoundBuffer D_03002a48; // PCM Buffer Location (12 Channels)
 
 extern u16 D_030055f0;
+extern u32 D_030055f4; // ?? (init. = 0) { 0..2 }
 
+extern u32 D_03005600[4];
 extern u16 D_03005610; // Total Comms at D_03005b88 ( = 12)
 extern u32 D_03005620[3];
 extern u32 D_0300562c; // Current Speed (NOT Tempo)
-
+extern u32 D_03005630; // ?? (init. = 0)
+extern u32 D_03005634; // ?? (init. = 4)
 extern u32 D_03005638;
-
+extern volatile u32 *D_0300563c; // &D_03001888
 extern u8 D_03005640; // ?? (Byte 0 of MIDI Event F0) [mCtrl4C]
 extern struct AudioChannel *D_03005644; // Channel which most recently called MIDI Event F0
 extern u16 D_03005648; // Current byte in D_03005b7c to set [mCtrl0E]
 
 extern struct MidiNote D_03005650[20]; // MIDI Note Buffer
 extern struct SoundBuffer D_030056a0[4]; // PSG Buffer Channels { 0 = Tone+Sweep; 1 = Tone; 2 = Wave; 3 = Noise }
-
+extern u8 D_03005720[0x400]; // ???? (it's a line or curve or something idk)
 extern u16 D_03005b20; // Total Bytes in array at D_03005b7c
-
+extern volatile u32 D_03005b24; // Offset of *D_030064b8 from D_03001888 ( = 0x620)
 extern u8 D_03005b28; // ?? (Set by MIDI Controller 4D; Only set if D_03005b44 == 0)
 
 extern struct Jason D_03005b30;
 extern u8 D_03005b3c; // ?? (Set by MIDI Controller 49; Cleared by MIDI Controller 4A and MIDI Event F0)
-
+extern u32 D_03005b40;
 extern u8 D_03005b44; // ?? (Must be clear for certain operations to work; Affects MIDI Controllers 49, 4A and 4D)
+extern u32 D_03005b48; // ?? (init. = 2)
 
 extern u16 D_03005b78; // Current Available MIDI Note Slot
-
 extern u8 *D_03005b7c; // ?? (Byte at offset D_03005648 set by MIDI Controller 10)
 extern u16 D_03005b80; // REG_VCOUNT
 
 extern struct Comms *D_03005b88; // Comms (12 Channels, at D_030028c8)
 extern u16 D_03005b8c; // Total PCM Buffer Channels at D_030064bc ( = 12)
 extern s8 D_03005b90[]; // Reverb controller..?
-extern u32 D_03005b94; // Standard Sample Rate (13379Hz)
+extern u32 D_03005b94; // Global Sample Rate ( = 13379Hz)
+
+extern volatile u32 D_030064a0; // Offset from *D_0300563c and *D_030064b8 to operate on.
+extern u32 D_030064a4; // ?? (init. = 0)
+extern u32 D_030064a8; // 13379Hz / 60
 
 extern u32 *D_030064b0; // ?? (D_030024c8)
-
+extern u32 D_030064b4; // 16776921 / 13379Hz
+extern volatile u32 *D_030064b8; // &D_03001888[D_03005b24] (D_03001ea8)
 extern struct SoundBuffer *D_030064bc; // PCM Buffer (12 Channels, at D_03002a48)
 extern u8 D_030064c0; // ?? (Set to 0 alongside all elements in D_03005620)
+extern u16 D_030064c4; // ?? (init. = 1)
 
   // // // // // // // // // // // // // // // // // // // //
 
@@ -86,7 +95,74 @@ extern u32 __udivmoddi4(u64, u64);
   //  //  //  //   ??? CODE   //  //  //  //
 
 
-#include "asm/lib_08049144/asm_08049144.s"
+// [func_08049144] ?? (first non-handwritten function in audio library)
+void func_08049144(void) {
+    volatile u32 dummy;
+    u32 temp;
+    u32 flag;
+
+    if (!D_030064c4) return;
+
+    flag = FALSE;
+    D_030064a0 += 4;
+
+    if (D_030064a0 >= D_03005b24) {
+        D_030064a0 -= D_03005b24;
+    }
+
+    if (D_030064a0 == D_03005b40) {
+        D_030064a0 = (D_030064a0 != 0) ? D_030064a0 - 4 : D_03005b24 - 4;
+
+        temp = D_0300563c[D_030064a0 + 3] >> 0x18;
+        temp |= (temp << 0x8);
+        temp |= (temp << 0x10);
+        D_0300563c[D_030064a0 + 0] = D_0300563c[D_030064a0 + 1] = D_0300563c[D_030064a0 + 2] = D_0300563c[D_030064a0 + 3] = temp;
+
+        temp = D_030064b8[D_030064a0 + 3] >> 0x18;
+        temp |= (temp << 0x8);
+        temp |= (temp << 0x10);
+        D_030064b8[D_030064a0 + 0] = D_030064b8[D_030064a0 + 1] = D_030064b8[D_030064a0 + 2] = D_030064b8[D_030064a0 + 3] = temp;
+        flag = TRUE;
+    }
+
+    if (D_030064a0 == 0) flag = TRUE;
+
+    if (!flag) return;
+
+    switch (D_030055f4) {
+        case 0:
+            REG_DMA1CNT_H = 0;
+            REG_DMA2CNT_H = 0;
+            REG_DMA1SAD = (u32) &D_0300563c[D_030064a0];
+            REG_DMA2SAD = (u32) &D_030064b8[D_030064a0];
+            REG_DMA1CNT_H = 0xB600;
+            dummy = 0;
+            dummy = 0;
+            REG_DMA2CNT_H = 0xF600;
+            dummy = 0;
+            dummy = 0;
+            break;
+        case 1:
+            REG_DMA2CNT_H = 0;
+            REG_DMA2SAD = (u32) &D_0300563c[D_030064a0];
+            REG_DMA2CNT_H = 0xF600;
+            dummy = 0;
+            dummy = 0;
+            break;
+        case 2:
+            REG_DMA1CNT_H = 0;
+            REG_DMA2CNT_H = 0;
+            REG_DMA1SAD = (u32) &D_0300563c[D_030064a0];
+            REG_DMA2SAD = (u32) &D_0300563c[D_030064a0];
+            REG_DMA1CNT_H = 0xB600;
+            dummy = 0;
+            dummy = 0;
+            REG_DMA2CNT_H = 0xF600;
+            dummy = 0;
+            dummy = 0;
+            break;
+    }
+}
 
 
   //  //  //  //   "COMMS" STRUCT OPERATIONS   //  //  //  //

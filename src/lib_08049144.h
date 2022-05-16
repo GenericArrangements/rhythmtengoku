@@ -1,6 +1,6 @@
 #pragma once
 
-// extern ? func_08049144(?);
+extern void func_08049144(void); // [func_08049144] ?? (first non-handwritten function in audio library)
 
   // // //  "COMMS" STRUCT OPERATIONS  // // //
 
