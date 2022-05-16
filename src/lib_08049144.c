@@ -247,7 +247,13 @@ void func_08049470(u32 id, u32 arg1) {
 
 #include "asm/lib_08049144/asm_08049ad8.s"
 
-#include "asm/lib_08049144/asm_08049b34.s"
+// [func_08049b34] ??
+void func_08049b34(u32 arg0, u32 arg1, u32 arg2, u32 arg3) {
+    D_030064a4 = arg0;
+    D_03005630 = arg1;
+    D_03005b48 = arg2;
+    D_03005634 = arg3;
+}
 
 // [func_08049b5c] SAMPLE READER - Check If Active
 u32 func_08049b5c(u32 id) {

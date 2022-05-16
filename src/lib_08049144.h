@@ -20,7 +20,7 @@ extern void func_08049470(u32, u32); // [func_08049470] SAMPLE READER - Set unk0
 extern void func_08049490(u32, u32, u32, u32 *, u32, u32 *, u16, struct Comms *); // [func_08049490] Initialise... a lot...
 // extern ? func_080497f8(?);
 // extern ? func_08049ad8(?);
-// extern ? func_08049b34(?);
+extern void func_08049b34(u32, u32, u32, u32); // [func_08049b34] ??
 extern u32  func_08049b5c(u32); // [func_08049b5c] SAMPLE READER - Check If Active
 extern void func_08049b70(u32); // [func_08049b70] (SUB) MIDI Controller 4A - ??
 extern void func_08049b8c(u8); // [func_08049b8c] MIDI Controller 4D - ??
@@ -71,7 +71,7 @@ extern void func_0804aa40(struct MidiChannelBus *, u32, u16); // [func_0804aa40]
 extern void func_0804aa5c(struct MidiChannelBus *, u32, u8);  // [func_0804aa5c] MIDI CHANNEL - Set Volume [Ctrl_07]
 extern void func_0804aa7c(struct MidiChannelBus *, u32, u8);  // [func_0804aa7c] MIDI CHANNEL - Set Panning [Ctrl_0A]
 extern u8   func_0804aaa4(struct MidiChannelBus *, u32);      // [func_0804aaa4] MIDI CHANNEL - Calculate Panning Envelope
-extern void func_0804aae0(struct MidiChannelBus *, u32);      // [func_0804aae0] MIDI CHANNEL - Update Effect Chain Panning
+extern void func_0804aae0(struct MidiChannelBus *, u32);      // [func_0804aae0] MIDI CHANNEL - Update Sample Buffer Panning
 extern void func_0804ab88(struct MidiChannelBus *, u32, u8);  // [func_0804ab88] MIDI Channel - Set Instrument/Patch [Evnt_C]
 extern void func_0804aba8(struct MidiChannelBus *, u32, u8);  // [func_0804aba8] MIDI CHANNEL - Set Expression [Ctrl_0B]
 extern void func_0804abc8(struct MidiChannelBus *, u32, u16); // [func_0804abc8] MIDI CHANNEL - Set unk0_b9 [Ctrl_00; Ctrl_20]
