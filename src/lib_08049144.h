@@ -26,7 +26,7 @@ extern void func_08049b70(u32); // [func_08049b70] (SUB) MIDI Controller 4A - ??
 extern void func_08049b8c(u8); // [func_08049b8c] MIDI Controller 4D - ??
 extern void func_08049bac(void); // [func_08049bac] ??
 extern void func_08049be4(void); // [func_08049be4] MIDI Controller 49 - ??; MIDI Controller 4A - ??
-// extern ? func_08049bfc(?);
+extern void func_08049bfc(u32, u32, u32); // [func_08049bfc] ??
 
   // // //  MIDI CHANNEL BUS UPDATE OPERATIONS  // // //
 

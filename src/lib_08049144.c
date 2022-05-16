@@ -284,8 +284,16 @@ void func_08049be4(void) {
     if (D_03005b44 == 0) func_08049bac();
 }
 
-#include "asm/lib_08049144/asm_08049bfc.s"
-
+// [func_08049bfc] ??
+void func_08049bfc(u32 arg0, u32 arg1, u32 arg2) {
+    if (arg0 != 0) arg0 = 1;
+    if (D_03005b44 != arg0) {
+        func_08049bac();
+        D_03005b44 = arg0;
+        D_03005620[0] = arg1;
+        D_03005b28 = arg2;
+    }
+}
 
   //  //  //  //   MIDI CHANNEL BUS UPDATE OPERATIONS   //  //  //  //
 
