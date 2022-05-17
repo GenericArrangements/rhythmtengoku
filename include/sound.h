@@ -181,10 +181,11 @@ struct SequenceDataAudioChannel {
 } D_08aa06f8[1924];
 
 u32 D_08aa4318; // Total number of Audio Channels - 1. [12]
-u8  D_08aa431c; // Unknown Constant [1]
-u8  D_08aa431d; // Unknown Constant [0x45]
-u16 D_08aa431e; // Unknown Constant [0x7f]
-u32 D_08aa4320; // Unknown Constant [0x96]
+u8  D_08aa431c; // Unknown: ?? [1]
+u8  D_08aa431d; // Unknown: Sound Bank ID [0x45]
+u8  D_08aa431e; // Unknown: Volume [0x7f]
+u8  D_08aa431f; // Unknown: Priority [0]
+u8  D_08aa4320; // Unknown: Tempo [0x96]
 
 struct AudioChannel *D_08aa4324[13]; // Array of Audio Channel pointers.
 struct {

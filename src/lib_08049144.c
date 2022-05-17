@@ -12,15 +12,17 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 extern u16 D_03001570; // Pseudo-RNG Variable
 
-extern u8 D_03001578[4]; // PSG BUFFER - ?? (checked by TONE 1 and WAVE)
+extern u8  D_03001578[4]; // PSG BUFFER - ?? (checked by TONE 1 and WAVE)
 
 extern u16 D_03001580[4]; // PSG BUFFER - Initial Volume of Envelope
 extern u16 D_03001588[4]; // PSG BUFFER - Frequency
 extern u8 *D_03001590; // PSG BUFFER - Wave Pattern
 extern struct AudioChannel *D_03001598;
 extern struct MidiChannelBus *D_0300159c;
-
-extern u8 D_030015a7; // Initial value at D_03005b7c
+extern u8 *D_030015a0;
+extern volatile u16 D_030015a4;
+extern u8  D_030015a6;
+extern u8  D_030015a7; // Initial value at D_03005b7c
 
 extern u32 D_03001888; // ?? (this is like, sample data or something)
 extern u32 D_030024c8; // ?? (sample envelope or something)
@@ -38,21 +40,21 @@ extern u32 D_03005630; // ?? (init. = 0)
 extern u32 D_03005634; // ?? (init. = 4)
 extern u32 D_03005638;
 extern volatile u32 *D_0300563c; // &D_03001888
-extern u8 D_03005640; // ?? (Byte 0 of MIDI Event F0) [mCtrl4C]
+extern u8  D_03005640; // ?? (Byte 0 of MIDI Event F0) [mCtrl4C]
 extern struct AudioChannel *D_03005644; // Channel which most recently called MIDI Event F0
 extern u16 D_03005648; // Current byte in D_03005b7c to set [mCtrl0E]
 
 extern struct MidiNote D_03005650[20]; // MIDI Note Buffer
 extern struct SoundBuffer D_030056a0[4]; // PSG Buffer Channels { 0 = Tone+Sweep; 1 = Tone; 2 = Wave; 3 = Noise }
-extern u8 D_03005720[0x400]; // ???? (it's a line or curve or something idk)
+extern u8  D_03005720[0x400]; // ???? (it's a line or curve or something idk)
 extern u16 D_03005b20; // Total Bytes in array at D_03005b7c
 extern volatile u32 D_03005b24; // Offset of *D_030064b8 from D_03001888 ( = 0x620)
-extern u8 D_03005b28; // ?? (Set by MIDI Controller 4D; Only set if D_03005b44 == 0)
+extern u8  D_03005b28; // ?? (Set by MIDI Controller 4D; Only set if D_03005b44 == 0)
 
 extern struct Jason D_03005b30;
-extern u8 D_03005b3c; // ?? (Set by MIDI Controller 49; Cleared by MIDI Controller 4A and MIDI Event F0)
+extern u8  D_03005b3c; // ?? (Set by MIDI Controller 49; Cleared by MIDI Controller 4A and MIDI Event F0)
 extern u32 D_03005b40;
-extern u8 D_03005b44; // ?? (Must be clear for certain operations to work; Affects MIDI Controllers 49, 4A and 4D)
+extern u8  D_03005b44; // ?? (Must be clear for certain operations to work; Affects MIDI Controllers 49, 4A and 4D)
 extern u32 D_03005b48; // ?? (init. = 2)
 
 extern u16 D_03005b78; // Current Available MIDI Note Slot
@@ -61,7 +63,7 @@ extern u16 D_03005b80; // REG_VCOUNT
 
 extern struct Comms *D_03005b88; // Comms (12 Channels, at D_030028c8)
 extern u16 D_03005b8c; // Total PCM Buffer Channels at D_030064bc ( = 12)
-extern s8 D_03005b90[]; // Reverb controller..?
+extern s8  D_03005b90[]; // Reverb controller..?
 extern u32 D_03005b94; // Global Sample Rate ( = 13379Hz)
 
 extern volatile u32 D_030064a0; // Offset from *D_0300563c and *D_030064b8 to operate on.
@@ -72,7 +74,7 @@ extern u32 *D_030064b0; // ?? (D_030024c8)
 extern u32 D_030064b4; // 16776921 / 13379Hz
 extern volatile u32 *D_030064b8; // &D_03001888[D_03005b24] (D_03001ea8)
 extern struct SoundBuffer *D_030064bc; // PCM Buffer (12 Channels, at D_03002a48)
-extern u8 D_030064c0; // ?? (Set to 0 alongside all elements in D_03005620)
+extern u8  D_030064c0; // ?? (Set to 0 alongside all elements in D_03005620)
 extern u16 D_030064c4; // ?? (init. = 1)
 
   // // // // // // // // // // // // // // // // // // // //
@@ -1977,7 +1979,36 @@ u32 func_0804c398(u8 **midiStream) {
     return time;
 }
 
-#include "asm/lib_08049144/asm_0804c3c0.s"
+// [func_0804c3c0] Initialise... an audio channel that don't exist.
+void func_0804c3c0(struct AudioChannel *channel, struct MidiTrackReader *mTrkReader, u32 nTracksMax,
+                        struct MidiChannelBus *mChnlBus, struct MidiChannel *mChnl, u8 *arg5) {
+
+    if (D_08aa431c == 0) return;
+
+    func_08049fa0(mChnlBus, nTracksMax, mChnl);
+    func_0804a014(mChnlBus, instrumentBanks[D_08aa431d]);
+    func_0804adb4(mChnlBus, D_08aa431e);
+    func_08049e8c(mChnlBus, D_08aa431f);
+    func_0804c35c(channel, mChnlBus, nTracksMax, mTrkReader, D_08aa431f);
+
+    channel->speedMulti = 0x100;
+    channel->trackGain = 0x100;
+    channel->volumeFadeType = 0;
+    channel->volumeFadeEnv = 0x8000;
+    channel->volumeFadeSpd = 0;
+    channel->midiTempo = D_08aa4320;
+    channel->channelSpeed = func_0804b6f0(D_08aa4320, 0x100, 0x18);
+    channel->midiController4E = 0x40;
+    channel->midiController4F = 0x40;
+    channel->midiController50 = 0x40;
+    channel->midiController51 = 0x40;
+
+    D_03001598 = channel;
+    D_0300159c = mChnlBus;
+    D_030015a0 = arg5;
+    D_030015a4 = 0;
+    D_030015a6 = 0;
+}
 
 #include "asm/lib_08049144/asm_0804c4bc.s"
 

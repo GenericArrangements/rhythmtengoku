@@ -57,7 +57,7 @@ extern s32  func_0804a3a0(struct MidiChannel *, u8); // [func_0804a3a0] PCM BUFF
 extern s32  func_0804a3fc(void); // [func_0804a3fc] PCM BUFFER - Return First Inactive PCM Buffer
 extern s32  func_0804a434(void); // [func_0804a434] PCM BUFFER - Return PCM Buffer with Lowest Volume
 extern s32  func_0804a48c(void); // [func_0804a48c] PCM BUFFER - Return PCM Buffer with Lowest Volume (exclude ADSR)
-// extern ? func_0804a4e0(?);
+// extern ? func_0804a4e0(?); // [func_0804a4e0] PCM BUFFER - Return PCM Buffer with Lowest Priority
 extern void func_0804a5b4(struct MidiChannelBus *, u32, u8); // [func_0804a5b4] SOUND BUFFER - 'Note Off' Event
 extern s32  func_0804a628(struct MidiChannelBus *, u32, u8, u8); // [func_0804a628] PCM BUFFER - Return First Most Replaceable PCM Buffer
 extern u8   func_0804a65c(u8); // [func_0804a65c] ?? (something about left panning)
@@ -159,7 +159,7 @@ extern void func_0804c340(u32, u32, u32, u32); // [func_0804c340] Set Reverb
 extern void func_0804c358(void); // [func_0804c358] STUB
 extern void func_0804c35c(struct AudioChannel *, struct MidiChannelBus *, u32, struct MidiTrackReader *, u32); // [func_0804c35c] INITIALISE - Audio Channels
 extern u32  func_0804c398(u8 **); // [func_0804c398] MIDI - Parse Variable-Length Quantity
-// extern ? func_0804c3c0(?);
+extern void func_0804c3c0(struct AudioChannel *, struct MidiTrackReader *, u32, struct MidiChannelBus *, struct MidiChannel *, u8 *); // [func_0804c3c0] Initialise... an audio channel that don't exist.
 // extern ? func_0804c4bc(?);
 // extern ? func_0804c508(?);
 extern void func_0804c6c8(void); // [func_0804c6c8] ?? (something about midi channels and notes and a midi channel bus that doesn't exist after startup?)
