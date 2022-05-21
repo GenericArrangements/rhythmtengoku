@@ -30,14 +30,11 @@ struct SampleInfo {
 	const u32 *waveform;
 };
 
-struct InstrumentHeader {
-	u8 type;
-	u8 unk1;
-	u16 unk2;
-};
-
 struct InstrumentPCM {
-	struct InstrumentHeader header;
+	u8 type;
+	u8 key:7;
+    u8 distort:1;
+	s16 panning;
 	const struct SampleInfo *sample;
 	s32 initial;
 	s32 sustain;
@@ -48,7 +45,9 @@ struct InstrumentPCM {
 };
 
 struct InstrumentPSG {
-	struct InstrumentHeader header;
+	u8 type;
+	u8 key;
+	s16 panning;
 	u32 *wavetable;
 	s32 initial;
 	s32 sustain;
@@ -56,23 +55,35 @@ struct InstrumentPSG {
 	s32 decay;
 	s32 fade;
 	s32 release;
-	u8 channel;
-	u8 unk21;
-	u8 unk22;
+	u32 channel:2;
+	u32 length:8;
+	u32 sweep:7;
+    u32 dutyTone:2;
+    u32 dutyNoise:13;
 };
 
 struct InstrumentSubbankSingleKey {
-	struct InstrumentHeader header;
-	void *subbank;
+	u32 type:8;
+    u32 total:24;
+	const union Instrument **subBank;
 };
 
 struct InstrumentSubbankMultiKey {
-	struct InstrumentHeader header;
-	void *unk4;
-	void *subbank;
+	u32 type:8;
+    u32 unk1:24;
+	u8 *unk4;
+	const union Instrument **subBank;
 };
 
-typedef const struct InstrumentHeader *InstrumentBank[];
+union Instrument {
+    u8 undefinedType;
+    struct InstrumentPCM pcm;
+    struct InstrumentPSG psg;
+    struct InstrumentSubbankSingleKey subSingle;
+    struct InstrumentSubbankMultiKey subMulti;
+};
+
+typedef const u8 *InstrumentBank[];
 
 struct SequenceData {
     const u32 *romAddress;

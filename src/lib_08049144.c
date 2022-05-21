@@ -485,7 +485,7 @@ u32 func_0804a018(struct SoundBuffer *pcmBuf) {
     s32 what;
 
     // Do not calculate pitch envelope for unpitched instruments.
-    if (pcmBuf->instrument.pcm->header.type == INSTRUMENT_PCM_UNPITCHED) return 0;
+    if (pcmBuf->instrument.pcm->type == INSTRUMENT_PCM_UNPITCHED) return 0;
 
     mChnlBus = pcmBuf->midiChannelBus;
     mChnl = pcmBuf->midiChannel;
