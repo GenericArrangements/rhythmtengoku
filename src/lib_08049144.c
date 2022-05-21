@@ -171,7 +171,7 @@ void func_08049144(void) {
 
 
 // [func_0804930c] SAMPLE READER - Initialise Channel
-void func_0804930c(u32 id, struct SampleInfo *sample) {
+void func_0804930c(u32 id, const struct SampleInfo *sample) {
     struct Comms *comms = &D_03005b88[id]; // r6
     u32 keySampleRate;
     u32 keyFreq;
@@ -580,7 +580,7 @@ u32 func_0804a1f4(struct SoundBuffer *pcmBuf) {
 
 // [func_0804a224] SOUND BUFFER - Update ADSR Envelope
 u32 func_0804a224(struct SoundBuffer *pcmBuf) {
-    struct InstrumentPCM *inst;
+    const struct InstrumentPCM *inst;
     struct BufferADSR *adsr;
     u32 finished;
     s32 env;
@@ -850,7 +850,158 @@ u32 func_0804a690(struct MidiChannelBus *mChnlBus, u32 index) {
 }
 
 // [func_0804a6b0] SOUND BUFFER - 'Note On' Event
-#include "asm/lib_08049144/asm_0804a6b0.s"
+void func_0804a6b0(struct MidiChannelBus *mChnlBus, u32 channelID, u8 key, u8 vel) {
+    const union Instrument *inst;
+    struct MidiChannel *mChnl;
+    struct SoundBuffer *sndBuf;
+    s32 panning;
+    u32 isPSG;
+    const struct InstrumentPCM *instPCM;
+    const struct InstrumentPSG *instPSG;
+    u32 isSubSingle;
+    u32 chnlUnk1C;
+    u32 modRange;
+    s32 temp;
+    s32 temp2;
+    u32 priority;
+    s32 bufferID;
+    u32 adsrEnv;
+    struct BufferADSR *bufferADSR;
+
+    if (vel == 0) {
+        func_0804a5b4(mChnlBus, channelID, key);
+        return;
+    }
+
+    mChnl = &mChnlBus->midiChannel[channelID];
+    if (mChnl->unk0_b0) return;
+
+    inst = (const union Instrument *) (*mChnlBus->soundBank)[mChnl->instPatch];
+    if (inst == NULL) return;
+
+    isSubSingle = FALSE;
+
+    switch (inst->undefinedType) {
+        case INSTRUMENT_SUBBANK_SINGLE_KEY:
+            isSubSingle = TRUE;
+            inst = inst->subSingle.subBank[key - inst->subSingle.total];
+            if (inst == NULL) return;
+            if ((u8) (inst->undefinedType - 0x52) <= 1) return; // If it's another sub-bank, just give up.
+            break;
+        case INSTRUMENT_SUBBANK_MULTI_KEY:
+            inst = inst->subMulti.subBank[inst->subMulti.unk4[key - inst->subMulti.unk1]];
+            if (inst == NULL) return;
+            if ((u8) (inst->undefinedType - 0x52) <= 1) return; // If it's another sub-bank, just give up.
+            break;
+    }
+
+    // Instantiate PSG Instrument
+    if ((u8) (inst->undefinedType - 0x50) <= 1) {
+        instPSG = &inst->psg;
+        isPSG = TRUE;
+        sndBuf = &D_030056a0[inst->psg.channel];
+    }
+    // Instantiate PCM Instrument
+    else {
+        instPCM = &inst->pcm;
+        isPSG = FALSE;
+        bufferID = func_0804a628(mChnlBus, channelID, key, vel);
+        if (bufferID < 0) return;
+        sndBuf = &D_030064bc[bufferID];
+    }
+
+    // Begin initialising key and panning.
+    if (!isSubSingle) {
+        temp = key + mChnlBus->unk4;
+        panning = 0;
+    }
+    // Use the built-in Key/Panning parameters.
+    else {
+        if (isPSG) temp = instPSG->key;
+            else temp = instPCM->key;
+        if (isPSG) panning = instPSG->panning;
+            else panning = instPCM->panning;
+        if (panning == 127) panning = 0;
+    }
+
+    if ((u32) temp > 127) return;
+
+    // For "Unpitched" Instruments, use the Key from the Sample Data.
+    if (!isPSG && instPCM->type == INSTRUMENT_PCM_UNPITCHED) {
+        temp = instPCM->sample->key;
+    }
+
+    sndBuf->active = FALSE;
+    chnlUnk1C = mChnl->unk1C;
+
+    // Highly similar to func_0804a018().
+    if (chnlUnk1C != 0) {
+        temp += (func_0804af0c((chnlUnk1C << 1) + 1) - chnlUnk1C);
+        temp2 = temp;
+        while (temp2 < 0) {
+            temp2 += 12;
+        }
+        temp += mChnlBus->unk1C[temp2 % 12];
+        while (temp < 0) temp += 12;
+        while (temp > 127) temp -= 12;
+    }
+
+    sndBuf->unk0_b15 = func_0804a690(mChnlBus, (u8) temp);
+
+    if (isPSG && (instPSG->channel == PSG_NOISE_CHANNEL)) {
+        sndBuf->unk0_b15 = temp;
+    }
+
+    // Pretty much directly copied from func_0804a018().
+    modRange = mChnl->modRange;
+    sndBuf->unk10 = sndBuf->unk0_b15 - func_0804a690(mChnlBus, (u8) (temp - modRange));
+    sndBuf->unk12 = func_0804a690(mChnlBus, (u8) (modRange + temp)) - sndBuf->unk0_b15;
+    sndBuf->unk14 = func_0804a690(mChnlBus, (u8) (temp + mChnl->unkC)) - sndBuf->unk0_b15;
+
+    sndBuf->key = key;
+    sndBuf->velocity = vel;
+    sndBuf->midiChannel = mChnl;
+    sndBuf->unk18 = panning;
+    priority = (mChnl->priority << 4) + 15;
+    sndBuf->priority = priority - channelID;
+    sndBuf->unk17_b7 = TRUE;
+    sndBuf->midiChannelBus = mChnlBus;
+
+    // ADSR
+    bufferADSR = &sndBuf->adsr;
+    sndBuf->adsr.stage = 0;
+    if (isPSG) adsrEnv = instPSG->initial;
+    else adsrEnv = instPCM->initial;
+    bufferADSR->envelope = adsrEnv;
+
+    if (!isPSG) sndBuf->instrument.pcm = instPCM;
+    else sndBuf->instrument.psg = instPSG;
+
+    if (mChnl->rndmPitchRange != 0) {
+        mChnl->rndmPitch = mChnl->rndmPitchFloor + func_0804af0c(mChnl->rndmPitchRange);
+    }
+
+    // Initialise PSG/PCM-specific Sound Buffer Parameters
+    if (isPSG) {
+        func_0804af74(instPSG->channel);
+    } else {
+        func_080493b0(bufferID);
+        func_0804930c(bufferID, instPCM->sample);
+        func_080493e4(bufferID, func_0804a1f4(sndBuf));
+        temp = (mChnl->stereo) ? -1 : 1;
+        panning += func_0804aaa4(mChnlBus, channelID);
+        if (panning < 0) panning = 0;
+        if (panning > 127) panning = 127;
+        func_080493c8(bufferID, func_0804a674(panning), func_0804a65c(panning) * temp);
+        func_080493f4(bufferID, func_0804a018(sndBuf));
+        func_08049450(bufferID, instPCM->distort);
+        func_08049470(bufferID, mChnl->unk0_b30);
+        func_08049394(bufferID);
+    }
+
+    mChnl->modDelayCount = mChnl->modDelay;
+    sndBuf->active = TRUE;
+}
 
 
   //  //  //  //   MIDI CHANNEL OPERATIONS   //  //  //  //
