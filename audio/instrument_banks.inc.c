@@ -1,16 +1,16 @@
 // 128 entries
 const InstrumentBank instrumentBank1 = {
-    /* 000 */ &instrumentPCMData1.header,  &instrumentPCMData2.header,  &instrumentPCMData3.header,  &instrumentPCMData4.header,
-    /* 004 */ NULL,                        &instrumentPCMData5.header,  NULL,                        &instrumentPCMData6.header,
-    /* 008 */ &instrumentPCMData7.header,  NULL,                        &instrumentPCMData8.header,  &instrumentPCMData9.header,
-    /* 012 */ &instrumentPCMData10.header, NULL,                        NULL,                        NULL,
+    /* 000 */ (u8 *) &instrumentPCMData1,  (u8 *) &instrumentPCMData2,  (u8 *) &instrumentPCMData3,  (u8 *) &instrumentPCMData4,
+    /* 004 */ NULL,                        (u8 *) &instrumentPCMData5,  NULL,                        (u8 *) &instrumentPCMData6,
+    /* 008 */ (u8 *) &instrumentPCMData7,  NULL,                        (u8 *) &instrumentPCMData8,  (u8 *) &instrumentPCMData9,
+    /* 012 */ (u8 *) &instrumentPCMData10, NULL,                        NULL,                        NULL,
     /* 016 */ NULL,                        NULL,                        NULL,                        NULL,
     /* 020 */ NULL,                        NULL,                        NULL,                        NULL,
     /* 024 */ NULL,                        NULL,                        NULL,                        NULL,
     /* 028 */ NULL,                        NULL,                        NULL,                        NULL,
     /* 032 */ NULL,                        NULL,                        NULL,                        NULL,
-    /* 036 */ NULL,                        NULL,                        NULL, &instrumentPCMData12.header,
-    /* 040 */ NULL,                        &instrumentSubbankMultiKeyData11.header, NULL,            NULL,
+    /* 036 */ NULL,                        NULL,                        NULL, (u8 *) &instrumentPCMData12,
+    /* 040 */ NULL,                        (u8 *) &instrumentSubbankMultiKeyData11, NULL,            NULL,
     /* 044 */ NULL,                        NULL,                        NULL,                        NULL,
     /* 048 */ NULL,                        NULL,                        NULL,                        NULL,
     /* 052 */ NULL,                        NULL,                        NULL,                        NULL,
@@ -29,22 +29,22 @@ const InstrumentBank instrumentBank1 = {
     /* 104 */ NULL,                        NULL,                        NULL,                        NULL,
     /* 108 */ NULL,                        NULL,                        NULL,                        NULL,
     /* 112 */ NULL,                        NULL,                        NULL,                        NULL,
-    /* 116 */ NULL,                        NULL,                        NULL,                        &instrumentPCMData13.header,
+    /* 116 */ NULL,                        NULL,                        NULL,                        (u8 *) &instrumentPCMData13,
     /* 120 */ NULL,                        NULL,                        NULL,                        NULL,
-    /* 124 */ NULL,                        &instrumentSubbankSingleKeyData14.header, &instrumentSubbankSingleKeyData15.header, &instrumentSubbankSingleKeyData16.header
+    /* 124 */ NULL,                        (u8 *) &instrumentSubbankSingleKeyData14, (u8 *) &instrumentSubbankSingleKeyData15, (u8 *) &instrumentSubbankSingleKeyData16
 };
 
 // 128 entries
 const InstrumentBank instrumentBank2 = {
-    /* 000 */ &instrumentPCMData17.header, &instrumentPCMData18.header, &instrumentPCMData19.header, &instrumentPCMData20.header,
-    /* 004 */ &instrumentPCMData21.header, &instrumentPCMData22.header, &instrumentPCMData23.header, &instrumentPCMData24.header,
-    /* 008 */ &instrumentPCMData25.header, &instrumentPCMData26.header, &instrumentPCMData27.header, &instrumentPCMData28.header,
-    /* 012 */ &instrumentPCMData29.header, &instrumentPCMData30.header, &instrumentPCMData31.header, &instrumentPCMData32.header,
-    /* 016 */ &instrumentPCMData33.header, &instrumentPCMData34.header, &instrumentPCMData35.header, &instrumentPCMData36.header,
-    /* 020 */ &instrumentPSGData37.header, &instrumentPCMData38.header, &instrumentPCMData39.header, &instrumentPCMData40.header,
-    /* 024 */ &instrumentPCMData41.header, &instrumentPCMData42.header, &instrumentPCMData43.header, &instrumentPCMData44.header,
-    /* 028 */ &instrumentPCMData45.header, &instrumentPCMData46.header, &instrumentPCMData47.header, &instrumentPCMData48.header,
-    /* 032 */ &instrumentPCMData49.header, &instrumentPCMData50.header, &instrumentPCMData51.header, NULL,
+    /* 000 */ (u8 *) &instrumentPCMData17, (u8 *) &instrumentPCMData18, (u8 *) &instrumentPCMData19, (u8 *) &instrumentPCMData20,
+    /* 004 */ (u8 *) &instrumentPCMData21, (u8 *) &instrumentPCMData22, (u8 *) &instrumentPCMData23, (u8 *) &instrumentPCMData24,
+    /* 008 */ (u8 *) &instrumentPCMData25, (u8 *) &instrumentPCMData26, (u8 *) &instrumentPCMData27, (u8 *) &instrumentPCMData28,
+    /* 012 */ (u8 *) &instrumentPCMData29, (u8 *) &instrumentPCMData30, (u8 *) &instrumentPCMData31, (u8 *) &instrumentPCMData32,
+    /* 016 */ (u8 *) &instrumentPCMData33, (u8 *) &instrumentPCMData34, (u8 *) &instrumentPCMData35, (u8 *) &instrumentPCMData36,
+    /* 020 */ (u8 *) &instrumentPSGData37, (u8 *) &instrumentPCMData38, (u8 *) &instrumentPCMData39, (u8 *) &instrumentPCMData40,
+    /* 024 */ (u8 *) &instrumentPCMData41, (u8 *) &instrumentPCMData42, (u8 *) &instrumentPCMData43, (u8 *) &instrumentPCMData44,
+    /* 028 */ (u8 *) &instrumentPCMData45, (u8 *) &instrumentPCMData46, (u8 *) &instrumentPCMData47, (u8 *) &instrumentPCMData48,
+    /* 032 */ (u8 *) &instrumentPCMData49, (u8 *) &instrumentPCMData50, (u8 *) &instrumentPCMData51, NULL,
     /* 036 */ NULL,                        NULL,                        NULL,                        NULL,
     /* 040 */ NULL,                        NULL,                        NULL,                        NULL,
     /* 044 */ NULL,                        NULL,                        NULL,                        NULL,
@@ -67,19 +67,19 @@ const InstrumentBank instrumentBank2 = {
     /* 112 */ NULL,                        NULL,                        NULL,                        NULL,
     /* 116 */ NULL,                        NULL,                        NULL,                        NULL,
     /* 120 */ NULL,                        NULL,                        NULL,                        NULL,
-    /* 124 */ &instrumentSubbankSingleKeyData52.header, &instrumentSubbankSingleKeyData53.header, &instrumentSubbankSingleKeyData54.header, &instrumentSubbankSingleKeyData55.header
+    /* 124 */ (u8 *) &instrumentSubbankSingleKeyData52, (u8 *) &instrumentSubbankSingleKeyData53, (u8 *) &instrumentSubbankSingleKeyData54, (u8 *) &instrumentSubbankSingleKeyData55
 };
 
 // 128 entries
 const InstrumentBank instrumentBank3 = {
-    /* 000 */ &instrumentPCMData56.header, &instrumentPCMData57.header, &instrumentPCMData58.header, &instrumentPCMData59.header,
-    /* 004 */ &instrumentPCMData60.header, &instrumentPCMData61.header, &instrumentPCMData62.header, &instrumentPCMData63.header,
-    /* 008 */ &instrumentPCMData64.header, &instrumentPCMData65.header, &instrumentPCMData66.header, &instrumentPCMData67.header,
-    /* 012 */ &instrumentPCMData68.header, &instrumentPCMData69.header, &instrumentPSGData70.header, NULL,
-    /* 016 */ NULL,                        NULL,                        NULL,                        &instrumentPCMData71.header,
-    /* 020 */ &instrumentPCMData72.header, &instrumentPCMData73.header, &instrumentPCMData74.header, &instrumentPCMData75.header,
-    /* 024 */ &instrumentPCMData76.header, &instrumentPCMData77.header, &instrumentPCMData78.header, &instrumentPCMData79.header,
-    /* 028 */ &instrumentPCMData80.header, NULL,                        NULL,                        NULL,
+    /* 000 */ (u8 *) &instrumentPCMData56, (u8 *) &instrumentPCMData57, (u8 *) &instrumentPCMData58, (u8 *) &instrumentPCMData59,
+    /* 004 */ (u8 *) &instrumentPCMData60, (u8 *) &instrumentPCMData61, (u8 *) &instrumentPCMData62, (u8 *) &instrumentPCMData63,
+    /* 008 */ (u8 *) &instrumentPCMData64, (u8 *) &instrumentPCMData65, (u8 *) &instrumentPCMData66, (u8 *) &instrumentPCMData67,
+    /* 012 */ (u8 *) &instrumentPCMData68, (u8 *) &instrumentPCMData69, (u8 *) &instrumentPSGData70, NULL,
+    /* 016 */ NULL,                        NULL,                        NULL,                        (u8 *) &instrumentPCMData71,
+    /* 020 */ (u8 *) &instrumentPCMData72, (u8 *) &instrumentPCMData73, (u8 *) &instrumentPCMData74, (u8 *) &instrumentPCMData75,
+    /* 024 */ (u8 *) &instrumentPCMData76, (u8 *) &instrumentPCMData77, (u8 *) &instrumentPCMData78, (u8 *) &instrumentPCMData79,
+    /* 028 */ (u8 *) &instrumentPCMData80, NULL,                        NULL,                        NULL,
     /* 032 */ NULL,                        NULL,                        NULL,                        NULL,
     /* 036 */ NULL,                        NULL,                        NULL,                        NULL,
     /* 040 */ NULL,                        NULL,                        NULL,                        NULL,
@@ -103,24 +103,24 @@ const InstrumentBank instrumentBank3 = {
     /* 112 */ NULL,                        NULL,                        NULL,                        NULL,
     /* 116 */ NULL,                        NULL,                        NULL,                        NULL,
     /* 120 */ NULL,                        NULL,                        NULL,                        NULL,
-    /* 124 */ NULL,                        NULL,                        NULL,                        &instrumentSubbankSingleKeyData81.header
+    /* 124 */ NULL,                        NULL,                        NULL,                        (u8 *) &instrumentSubbankSingleKeyData81
 };
 
 // 128 entries
 const InstrumentBank instrumentBank4 = {
-    /* 000 */ &instrumentPCMData82.header,  &instrumentPCMData83.header,  &instrumentPCMData84.header,  &instrumentPCMData85.header,
-    /* 004 */ &instrumentPCMData86.header,  &instrumentPCMData87.header,  &instrumentPCMData88.header,  &instrumentPSGData89.header,
-    /* 008 */ &instrumentPSGData90.header,  &instrumentPCMData91.header,  &instrumentPCMData92.header,  &instrumentPSGData93.header,
-    /* 012 */ &instrumentPCMData94.header,  &instrumentPCMData95.header,  NULL,                         NULL,
+    /* 000 */ (u8 *) &instrumentPCMData82,  (u8 *) &instrumentPCMData83,  (u8 *) &instrumentPCMData84,  (u8 *) &instrumentPCMData85,
+    /* 004 */ (u8 *) &instrumentPCMData86,  (u8 *) &instrumentPCMData87,  (u8 *) &instrumentPCMData88,  (u8 *) &instrumentPSGData89,
+    /* 008 */ (u8 *) &instrumentPSGData90,  (u8 *) &instrumentPCMData91,  (u8 *) &instrumentPCMData92,  (u8 *) &instrumentPSGData93,
+    /* 012 */ (u8 *) &instrumentPCMData94,  (u8 *) &instrumentPCMData95,  NULL,                         NULL,
     /* 016 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 020 */ &instrumentPCMData96.header,  &instrumentPCMData97.header,  &instrumentPCMData98.header,  &instrumentPCMData99.header,
-    /* 024 */ &instrumentPCMData100.header, &instrumentPCMData101.header, &instrumentPCMData102.header, &instrumentPCMData103.header,
-    /* 028 */ &instrumentPCMData104.header, &instrumentPCMData105.header, &instrumentPCMData106.header, &instrumentPCMData107.header,
-    /* 032 */ &instrumentPCMData108.header, NULL,                         NULL,                         NULL,
+    /* 020 */ (u8 *) &instrumentPCMData96,  (u8 *) &instrumentPCMData97,  (u8 *) &instrumentPCMData98,  (u8 *) &instrumentPCMData99,
+    /* 024 */ (u8 *) &instrumentPCMData100, (u8 *) &instrumentPCMData101, (u8 *) &instrumentPCMData102, (u8 *) &instrumentPCMData103,
+    /* 028 */ (u8 *) &instrumentPCMData104, (u8 *) &instrumentPCMData105, (u8 *) &instrumentPCMData106, (u8 *) &instrumentPCMData107,
+    /* 032 */ (u8 *) &instrumentPCMData108, NULL,                         NULL,                         NULL,
     /* 036 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 040 */ &instrumentPCMData109.header, &instrumentPCMData110.header, &instrumentPCMData111.header, &instrumentPCMData112.header,
-    /* 044 */ &instrumentPCMData113.header, &instrumentPCMData114.header, &instrumentPCMData115.header, &instrumentPCMData116.header,
-    /* 048 */ NULL,                         &instrumentPCMData117.header, &instrumentPCMData118.header, NULL,
+    /* 040 */ (u8 *) &instrumentPCMData109, (u8 *) &instrumentPCMData110, (u8 *) &instrumentPCMData111, (u8 *) &instrumentPCMData112,
+    /* 044 */ (u8 *) &instrumentPCMData113, (u8 *) &instrumentPCMData114, (u8 *) &instrumentPCMData115, (u8 *) &instrumentPCMData116,
+    /* 048 */ NULL,                         (u8 *) &instrumentPCMData117, (u8 *) &instrumentPCMData118, NULL,
     /* 052 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 056 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 060 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -139,18 +139,18 @@ const InstrumentBank instrumentBank4 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         NULL,                         &instrumentSubbankSingleKeyData119.header, &instrumentSubbankSingleKeyData120.header
+    /* 124 */ NULL,                         NULL,                         (u8 *) &instrumentSubbankSingleKeyData119, (u8 *) &instrumentSubbankSingleKeyData120
 };
 
 // 128 entries
 const InstrumentBank instrumentBank5 = {
-    /* 000 */ &instrumentPCMData121.header, &instrumentPCMData122.header, &instrumentPSGData123.header, &instrumentPCMData124.header,
-    /* 004 */ &instrumentPCMData125.header, &instrumentPCMData126.header, &instrumentPCMData127.header, &instrumentPCMData128.header,
-    /* 008 */ &instrumentPCMData129.header, NULL,                         NULL,                         NULL,
-    /* 012 */ &instrumentPCMData130.header, &instrumentPCMData131.header, &instrumentPCMData132.header, &instrumentPCMData133.header,
-    /* 016 */ &instrumentPCMData134.header, &instrumentPCMData135.header, &instrumentPCMData136.header, &instrumentPCMData137.header,
-    /* 020 */ &instrumentPCMData138.header, &instrumentPCMData139.header, &instrumentPCMData140.header, &instrumentPCMData141.header,
-    /* 024 */ &instrumentPCMData142.header, &instrumentPCMData143.header, &instrumentPCMData144.header, NULL,
+    /* 000 */ (u8 *) &instrumentPCMData121, (u8 *) &instrumentPCMData122, (u8 *) &instrumentPSGData123, (u8 *) &instrumentPCMData124,
+    /* 004 */ (u8 *) &instrumentPCMData125, (u8 *) &instrumentPCMData126, (u8 *) &instrumentPCMData127, (u8 *) &instrumentPCMData128,
+    /* 008 */ (u8 *) &instrumentPCMData129, NULL,                         NULL,                         NULL,
+    /* 012 */ (u8 *) &instrumentPCMData130, (u8 *) &instrumentPCMData131, (u8 *) &instrumentPCMData132, (u8 *) &instrumentPCMData133,
+    /* 016 */ (u8 *) &instrumentPCMData134, (u8 *) &instrumentPCMData135, (u8 *) &instrumentPCMData136, (u8 *) &instrumentPCMData137,
+    /* 020 */ (u8 *) &instrumentPCMData138, (u8 *) &instrumentPCMData139, (u8 *) &instrumentPCMData140, (u8 *) &instrumentPCMData141,
+    /* 024 */ (u8 *) &instrumentPCMData142, (u8 *) &instrumentPCMData143, (u8 *) &instrumentPCMData144, NULL,
     /* 028 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 032 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 036 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -175,20 +175,20 @@ const InstrumentBank instrumentBank5 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankSingleKeyData145.header
+    /* 124 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankSingleKeyData145
 };
 
 // 128 entries
 const InstrumentBank instrumentBank6 = {
-    /* 000 */ &instrumentPCMData146.header, &instrumentPCMData147.header, &instrumentPCMData148.header, &instrumentPCMData149.header,
-    /* 004 */ &instrumentPCMData150.header, &instrumentPCMData151.header, &instrumentPCMData152.header, &instrumentPCMData153.header,
-    /* 008 */ &instrumentPCMData154.header, &instrumentPCMData155.header, &instrumentPCMData156.header, &instrumentSubbankMultiKeyData157.header,
-    /* 012 */ &instrumentPCMData158.header, &instrumentPCMData159.header, &instrumentPCMData160.header, &instrumentPCMData161.header,
-    /* 016 */ &instrumentPCMData162.header, &instrumentPCMData163.header, &instrumentPCMData164.header, &instrumentPCMData165.header,
-    /* 020 */ &instrumentPCMData166.header, &instrumentPCMData167.header, &instrumentPCMData168.header, &instrumentPCMData169.header,
-    /* 024 */ &instrumentPCMData170.header, &instrumentPCMData171.header, &instrumentPSGData172.header, &instrumentPSGData173.header,
-    /* 028 */ &instrumentPCMData174.header, &instrumentPCMData175.header, &instrumentPCMData176.header, &instrumentPCMData177.header,
-    /* 032 */ &instrumentPCMData178.header, NULL,                         NULL,                         NULL,
+    /* 000 */ (u8 *) &instrumentPCMData146, (u8 *) &instrumentPCMData147, (u8 *) &instrumentPCMData148, (u8 *) &instrumentPCMData149,
+    /* 004 */ (u8 *) &instrumentPCMData150, (u8 *) &instrumentPCMData151, (u8 *) &instrumentPCMData152, (u8 *) &instrumentPCMData153,
+    /* 008 */ (u8 *) &instrumentPCMData154, (u8 *) &instrumentPCMData155, (u8 *) &instrumentPCMData156, (u8 *) &instrumentSubbankMultiKeyData157,
+    /* 012 */ (u8 *) &instrumentPCMData158, (u8 *) &instrumentPCMData159, (u8 *) &instrumentPCMData160, (u8 *) &instrumentPCMData161,
+    /* 016 */ (u8 *) &instrumentPCMData162, (u8 *) &instrumentPCMData163, (u8 *) &instrumentPCMData164, (u8 *) &instrumentPCMData165,
+    /* 020 */ (u8 *) &instrumentPCMData166, (u8 *) &instrumentPCMData167, (u8 *) &instrumentPCMData168, (u8 *) &instrumentPCMData169,
+    /* 024 */ (u8 *) &instrumentPCMData170, (u8 *) &instrumentPCMData171, (u8 *) &instrumentPSGData172, (u8 *) &instrumentPSGData173,
+    /* 028 */ (u8 *) &instrumentPCMData174, (u8 *) &instrumentPCMData175, (u8 *) &instrumentPCMData176, (u8 *) &instrumentPCMData177,
+    /* 032 */ (u8 *) &instrumentPCMData178, NULL,                         NULL,                         NULL,
     /* 036 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 040 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 044 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -211,16 +211,16 @@ const InstrumentBank instrumentBank6 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ &instrumentSubbankSingleKeyData179.header, NULL,            &instrumentSubbankSingleKeyData180.header, &instrumentSubbankSingleKeyData181.header
+    /* 124 */ (u8 *) &instrumentSubbankSingleKeyData179, NULL,            (u8 *) &instrumentSubbankSingleKeyData180, (u8 *) &instrumentSubbankSingleKeyData181
 };
 
 // 128 entries
 const InstrumentBank instrumentBank7 = {
-    /* 000 */ &instrumentPCMData182.header, &instrumentPCMData183.header, NULL,                         NULL,
-    /* 004 */ &instrumentPCMData184.header, &instrumentPCMData185.header, &instrumentPCMData186.header, &instrumentPCMData187.header,
-    /* 008 */ &instrumentPCMData188.header, &instrumentPCMData189.header, &instrumentPCMData190.header, &instrumentPCMData191.header,
-    /* 012 */ &instrumentPCMData192.header, &instrumentPCMData193.header, &instrumentPCMData194.header, &instrumentPCMData195.header,
-    /* 016 */ &instrumentPCMData196.header, NULL,                         NULL,                         NULL,
+    /* 000 */ (u8 *) &instrumentPCMData182, (u8 *) &instrumentPCMData183, NULL,                         NULL,
+    /* 004 */ (u8 *) &instrumentPCMData184, (u8 *) &instrumentPCMData185, (u8 *) &instrumentPCMData186, (u8 *) &instrumentPCMData187,
+    /* 008 */ (u8 *) &instrumentPCMData188, (u8 *) &instrumentPCMData189, (u8 *) &instrumentPCMData190, (u8 *) &instrumentPCMData191,
+    /* 012 */ (u8 *) &instrumentPCMData192, (u8 *) &instrumentPCMData193, (u8 *) &instrumentPCMData194, (u8 *) &instrumentPCMData195,
+    /* 016 */ (u8 *) &instrumentPCMData196, NULL,                         NULL,                         NULL,
     /* 020 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 024 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 028 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -247,13 +247,13 @@ const InstrumentBank instrumentBank7 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankSingleKeyData197.header
+    /* 124 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankSingleKeyData197
 };
 
 // 128 entries
 const InstrumentBank instrumentBank8 = {
-    /* 000 */ &instrumentPCMData198.header, &instrumentPCMData199.header, &instrumentPCMData200.header, &instrumentPCMData201.header,
-    /* 004 */ &instrumentPCMData202.header, &instrumentPCMData203.header, &instrumentPCMData204.header, NULL,
+    /* 000 */ (u8 *) &instrumentPCMData198, (u8 *) &instrumentPCMData199, (u8 *) &instrumentPCMData200, (u8 *) &instrumentPCMData201,
+    /* 004 */ (u8 *) &instrumentPCMData202, (u8 *) &instrumentPCMData203, (u8 *) &instrumentPCMData204, NULL,
     /* 008 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 012 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 016 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -283,24 +283,24 @@ const InstrumentBank instrumentBank8 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankSingleKeyData205.header
+    /* 124 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankSingleKeyData205
 };
 
 // 128 entries
 const InstrumentBank instrumentBank9 = {
-    /* 000 */ &instrumentPCMData206.header, &instrumentPCMData207.header, &instrumentPCMData208.header, &instrumentPCMData209.header,
-    /* 004 */ &instrumentPCMData210.header, &instrumentPCMData212.header, &instrumentPCMData213.header, &instrumentPCMData214.header,
+    /* 000 */ (u8 *) &instrumentPCMData206, (u8 *) &instrumentPCMData207, (u8 *) &instrumentPCMData208, (u8 *) &instrumentPCMData209,
+    /* 004 */ (u8 *) &instrumentPCMData210, (u8 *) &instrumentPCMData212, (u8 *) &instrumentPCMData213, (u8 *) &instrumentPCMData214,
     /* 008 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 012 */ &instrumentPCMData215.header, &instrumentPCMData217.header, &instrumentPCMData218.header, &instrumentPCMData219.header,
-    /* 016 */ &instrumentPCMData220.header, NULL,                         &instrumentPCMData221.header, &instrumentPCMData222.header,
+    /* 012 */ (u8 *) &instrumentPCMData215, (u8 *) &instrumentPCMData217, (u8 *) &instrumentPCMData218, (u8 *) &instrumentPCMData219,
+    /* 016 */ (u8 *) &instrumentPCMData220, NULL,                         (u8 *) &instrumentPCMData221, (u8 *) &instrumentPCMData222,
     /* 020 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 024 */ &instrumentPCMData223.header, &instrumentPCMData224.header, &instrumentPCMData225.header, &instrumentPCMData226.header,
-    /* 028 */ &instrumentPCMData227.header, &instrumentPCMData229.header, &instrumentPCMData230.header, &instrumentPCMData231.header,
-    /* 032 */ NULL,                         &instrumentPCMData232.header, NULL,                         NULL,
-    /* 036 */ &instrumentPCMData233.header, &instrumentPCMData234.header, NULL,                         &instrumentPCMData235.header,
-    /* 040 */ &instrumentPCMData236.header, &instrumentPCMData237.header, &instrumentPCMData238.header, &instrumentPCMData239.header,
-    /* 044 */ &instrumentPCMData240.header, &instrumentPCMData241.header, &instrumentPCMData211.header, &instrumentPCMData216.header,
-    /* 048 */ &instrumentPCMData228.header, NULL,                         NULL,                         NULL,
+    /* 024 */ (u8 *) &instrumentPCMData223, (u8 *) &instrumentPCMData224, (u8 *) &instrumentPCMData225, (u8 *) &instrumentPCMData226,
+    /* 028 */ (u8 *) &instrumentPCMData227, (u8 *) &instrumentPCMData229, (u8 *) &instrumentPCMData230, (u8 *) &instrumentPCMData231,
+    /* 032 */ NULL,                         (u8 *) &instrumentPCMData232, NULL,                         NULL,
+    /* 036 */ (u8 *) &instrumentPCMData233, (u8 *) &instrumentPCMData234, NULL,                         (u8 *) &instrumentPCMData235,
+    /* 040 */ (u8 *) &instrumentPCMData236, (u8 *) &instrumentPCMData237, (u8 *) &instrumentPCMData238, (u8 *) &instrumentPCMData239,
+    /* 044 */ (u8 *) &instrumentPCMData240, (u8 *) &instrumentPCMData241, (u8 *) &instrumentPCMData211, (u8 *) &instrumentPCMData216,
+    /* 048 */ (u8 *) &instrumentPCMData228, NULL,                         NULL,                         NULL,
     /* 052 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 056 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 060 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -319,24 +319,24 @@ const InstrumentBank instrumentBank9 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankSingleKeyData242.header
+    /* 124 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankSingleKeyData242
 };
 
 // 128 entries
 const InstrumentBank instrumentBank10 = {
-    /* 000 */ &instrumentPCMData243.header, &instrumentPCMData244.header, &instrumentPCMData245.header, &instrumentPCMData246.header,
-    /* 004 */ &instrumentPCMData247.header, &instrumentPCMData248.header, &instrumentPCMData249.header, &instrumentPCMData250.header,
-    /* 008 */ &instrumentPCMData251.header, &instrumentPCMData252.header, &instrumentPCMData253.header, &instrumentPCMData254.header,
-    /* 012 */ &instrumentPCMData255.header, &instrumentPCMData256.header, &instrumentPCMData257.header, &instrumentPCMData258.header,
-    /* 016 */ &instrumentPCMData259.header, &instrumentPCMData260.header, &instrumentPCMData261.header, &instrumentPCMData262.header,
-    /* 020 */ NULL,                         &instrumentPCMData263.header, &instrumentPCMData264.header, &instrumentPCMData265.header,
-    /* 024 */ &instrumentPCMData266.header, &instrumentPCMData267.header, &instrumentPCMData268.header, &instrumentPCMData269.header,
-    /* 028 */ &instrumentPCMData270.header, &instrumentPCMData271.header, &instrumentPCMData272.header, &instrumentPCMData273.header,
-    /* 032 */ &instrumentPCMData274.header, &instrumentPCMData275.header, &instrumentPCMData276.header, &instrumentPCMData277.header,
-    /* 036 */ &instrumentPCMData278.header, &instrumentPCMData279.header, &instrumentPCMData280.header, &instrumentPCMData281.header,
-    /* 040 */ &instrumentSubbankMultiKeyData282.header, &instrumentPCMData283.header, &instrumentPCMData284.header, &instrumentPCMData285.header,
+    /* 000 */ (u8 *) &instrumentPCMData243, (u8 *) &instrumentPCMData244, (u8 *) &instrumentPCMData245, (u8 *) &instrumentPCMData246,
+    /* 004 */ (u8 *) &instrumentPCMData247, (u8 *) &instrumentPCMData248, (u8 *) &instrumentPCMData249, (u8 *) &instrumentPCMData250,
+    /* 008 */ (u8 *) &instrumentPCMData251, (u8 *) &instrumentPCMData252, (u8 *) &instrumentPCMData253, (u8 *) &instrumentPCMData254,
+    /* 012 */ (u8 *) &instrumentPCMData255, (u8 *) &instrumentPCMData256, (u8 *) &instrumentPCMData257, (u8 *) &instrumentPCMData258,
+    /* 016 */ (u8 *) &instrumentPCMData259, (u8 *) &instrumentPCMData260, (u8 *) &instrumentPCMData261, (u8 *) &instrumentPCMData262,
+    /* 020 */ NULL,                         (u8 *) &instrumentPCMData263, (u8 *) &instrumentPCMData264, (u8 *) &instrumentPCMData265,
+    /* 024 */ (u8 *) &instrumentPCMData266, (u8 *) &instrumentPCMData267, (u8 *) &instrumentPCMData268, (u8 *) &instrumentPCMData269,
+    /* 028 */ (u8 *) &instrumentPCMData270, (u8 *) &instrumentPCMData271, (u8 *) &instrumentPCMData272, (u8 *) &instrumentPCMData273,
+    /* 032 */ (u8 *) &instrumentPCMData274, (u8 *) &instrumentPCMData275, (u8 *) &instrumentPCMData276, (u8 *) &instrumentPCMData277,
+    /* 036 */ (u8 *) &instrumentPCMData278, (u8 *) &instrumentPCMData279, (u8 *) &instrumentPCMData280, (u8 *) &instrumentPCMData281,
+    /* 040 */ (u8 *) &instrumentSubbankMultiKeyData282, (u8 *) &instrumentPCMData283, (u8 *) &instrumentPCMData284, (u8 *) &instrumentPCMData285,
     /* 044 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 048 */ NULL,                         NULL,                         NULL,                         &instrumentPCMData286.header,
+    /* 048 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentPCMData286,
     /* 052 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 056 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 060 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -355,19 +355,19 @@ const InstrumentBank instrumentBank10 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         &instrumentSubbankSingleKeyData287.header, &instrumentSubbankSingleKeyData288.header, &instrumentSubbankSingleKeyData289.header
+    /* 124 */ NULL,                         (u8 *) &instrumentSubbankSingleKeyData287, (u8 *) &instrumentSubbankSingleKeyData288, (u8 *) &instrumentSubbankSingleKeyData289
 };
 
 // 128 entries
 const InstrumentBank instrumentBank11 = {
-    /* 000 */ &instrumentPCMData290.header, &instrumentPCMData291.header, &instrumentPCMData292.header, &instrumentPCMData293.header,
-    /* 004 */ &instrumentPCMData294.header, NULL,                         NULL,                         NULL,
+    /* 000 */ (u8 *) &instrumentPCMData290, (u8 *) &instrumentPCMData291, (u8 *) &instrumentPCMData292, (u8 *) &instrumentPCMData293,
+    /* 004 */ (u8 *) &instrumentPCMData294, NULL,                         NULL,                         NULL,
     /* 008 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 012 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 016 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 020 */ &instrumentPCMData295.header, &instrumentPCMData296.header, &instrumentPCMData297.header, &instrumentPCMData298.header,
-    /* 024 */ &instrumentPCMData299.header, &instrumentPCMData300.header, &instrumentPCMData301.header, &instrumentPCMData302.header,
-    /* 028 */ &instrumentPCMData303.header, &instrumentPCMData304.header, &instrumentPCMData305.header, NULL,
+    /* 020 */ (u8 *) &instrumentPCMData295, (u8 *) &instrumentPCMData296, (u8 *) &instrumentPCMData297, (u8 *) &instrumentPCMData298,
+    /* 024 */ (u8 *) &instrumentPCMData299, (u8 *) &instrumentPCMData300, (u8 *) &instrumentPCMData301, (u8 *) &instrumentPCMData302,
+    /* 028 */ (u8 *) &instrumentPCMData303, (u8 *) &instrumentPCMData304, (u8 *) &instrumentPCMData305, NULL,
     /* 032 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 036 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 040 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -391,17 +391,17 @@ const InstrumentBank instrumentBank11 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankSingleKeyData306.header
+    /* 124 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankSingleKeyData306
 };
 
 // 128 entries
 const InstrumentBank instrumentBank12 = {
-    /* 000 */ &instrumentPCMData307.header, &instrumentPCMData308.header, &instrumentPCMData309.header, &instrumentPCMData310.header,
-    /* 004 */ &instrumentPCMData311.header, &instrumentPCMData312.header, &instrumentPCMData313.header, &instrumentPCMData314.header,
-    /* 008 */ &instrumentPCMData315.header, &instrumentPCMData316.header, &instrumentPCMData317.header, &instrumentPCMData318.header,
-    /* 012 */ &instrumentPCMData319.header, &instrumentPCMData320.header, &instrumentPCMData321.header, &instrumentPCMData322.header,
-    /* 016 */ &instrumentPCMData323.header, NULL,                         NULL,                         NULL,
-    /* 020 */ &instrumentPCMData324.header, &instrumentPCMData325.header, NULL,                         NULL,
+    /* 000 */ (u8 *) &instrumentPCMData307, (u8 *) &instrumentPCMData308, (u8 *) &instrumentPCMData309, (u8 *) &instrumentPCMData310,
+    /* 004 */ (u8 *) &instrumentPCMData311, (u8 *) &instrumentPCMData312, (u8 *) &instrumentPCMData313, (u8 *) &instrumentPCMData314,
+    /* 008 */ (u8 *) &instrumentPCMData315, (u8 *) &instrumentPCMData316, (u8 *) &instrumentPCMData317, (u8 *) &instrumentPCMData318,
+    /* 012 */ (u8 *) &instrumentPCMData319, (u8 *) &instrumentPCMData320, (u8 *) &instrumentPCMData321, (u8 *) &instrumentPCMData322,
+    /* 016 */ (u8 *) &instrumentPCMData323, NULL,                         NULL,                         NULL,
+    /* 020 */ (u8 *) &instrumentPCMData324, (u8 *) &instrumentPCMData325, NULL,                         NULL,
     /* 024 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 028 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 032 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -427,17 +427,17 @@ const InstrumentBank instrumentBank12 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankSingleKeyData326.header
+    /* 124 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankSingleKeyData326
 };
 
 // 128 entries
 const InstrumentBank instrumentBank13 = {
-    /* 000 */ &instrumentPCMData327.header, &instrumentPCMData328.header, &instrumentPCMData329.header, &instrumentPCMData330.header,
-    /* 004 */ &instrumentPCMData331.header, &instrumentPCMData332.header, &instrumentPCMData333.header, &instrumentPCMData334.header,
-    /* 008 */ &instrumentPCMData335.header, &instrumentPCMData336.header, NULL,                         &instrumentPCMData337.header,
-    /* 012 */ NULL,                         &instrumentPCMData338.header, NULL,                         &instrumentSubbankMultiKeyData339.header,
-    /* 016 */ &instrumentPCMData340.header, &instrumentPCMData341.header, &instrumentPCMData342.header, NULL,
-    /* 020 */ &instrumentPCMData343.header, &instrumentPCMData344.header, NULL,                         &instrumentPCMData345.header,
+    /* 000 */ (u8 *) &instrumentPCMData327, (u8 *) &instrumentPCMData328, (u8 *) &instrumentPCMData329, (u8 *) &instrumentPCMData330,
+    /* 004 */ (u8 *) &instrumentPCMData331, (u8 *) &instrumentPCMData332, (u8 *) &instrumentPCMData333, (u8 *) &instrumentPCMData334,
+    /* 008 */ (u8 *) &instrumentPCMData335, (u8 *) &instrumentPCMData336, NULL,                         (u8 *) &instrumentPCMData337,
+    /* 012 */ NULL,                         (u8 *) &instrumentPCMData338, NULL,                         (u8 *) &instrumentSubbankMultiKeyData339,
+    /* 016 */ (u8 *) &instrumentPCMData340, (u8 *) &instrumentPCMData341, (u8 *) &instrumentPCMData342, NULL,
+    /* 020 */ (u8 *) &instrumentPCMData343, (u8 *) &instrumentPCMData344, NULL,                         (u8 *) &instrumentPCMData345,
     /* 024 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 028 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 032 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -463,59 +463,59 @@ const InstrumentBank instrumentBank13 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         &instrumentSubbankSingleKeyData346.header, NULL,            &instrumentSubbankSingleKeyData347.header
+    /* 124 */ NULL,                         (u8 *) &instrumentSubbankSingleKeyData346, NULL,            (u8 *) &instrumentSubbankSingleKeyData347
 };
 
 // 113 entries
 const InstrumentBank instrumentBank14 = {
-    /* 000 */ &instrumentPSGData348.header, &instrumentPSGData349.header, &instrumentPSGData350.header, &instrumentPSGData351.header,
-    /* 004 */ &instrumentPSGData352.header, &instrumentPSGData353.header, &instrumentPSGData354.header, &instrumentPSGData355.header,
-    /* 008 */ &instrumentPSGData356.header, &instrumentPSGData357.header, &instrumentPSGData358.header, NULL,
+    /* 000 */ (u8 *) &instrumentPSGData348, (u8 *) &instrumentPSGData349, (u8 *) &instrumentPSGData350, (u8 *) &instrumentPSGData351,
+    /* 004 */ (u8 *) &instrumentPSGData352, (u8 *) &instrumentPSGData353, (u8 *) &instrumentPSGData354, (u8 *) &instrumentPSGData355,
+    /* 008 */ (u8 *) &instrumentPSGData356, (u8 *) &instrumentPSGData357, (u8 *) &instrumentPSGData358, NULL,
     /* 012 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 016 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 020 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 024 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 028 */ NULL,                         NULL,                         &instrumentPSGData359.header, &instrumentPSGData360.header,
-    /* 032 */ &instrumentPSGData361.header, &instrumentPSGData362.header, &instrumentPSGData363.header, &instrumentPSGData364.header,
-    /* 036 */ &instrumentPSGData365.header, &instrumentPSGData366.header, &instrumentPSGData367.header, &instrumentPSGData368.header,
-    /* 040 */ &instrumentPSGData369.header, &instrumentPSGData370.header, &instrumentPSGData371.header, &instrumentPSGData372.header,
-    /* 044 */ &instrumentPSGData373.header, &instrumentPSGData374.header, &instrumentPSGData375.header, &instrumentPSGData376.header,
-    /* 048 */ &instrumentPSGData377.header, &instrumentPSGData378.header, &instrumentPSGData379.header, &instrumentPSGData380.header,
-    /* 052 */ &instrumentPSGData381.header, &instrumentPSGData382.header, &instrumentPSGData383.header, &instrumentPSGData384.header,
-    /* 056 */ &instrumentPSGData385.header, &instrumentPSGData386.header, &instrumentPSGData387.header, &instrumentPSGData388.header,
+    /* 028 */ NULL,                         NULL,                         (u8 *) &instrumentPSGData359, (u8 *) &instrumentPSGData360,
+    /* 032 */ (u8 *) &instrumentPSGData361, (u8 *) &instrumentPSGData362, (u8 *) &instrumentPSGData363, (u8 *) &instrumentPSGData364,
+    /* 036 */ (u8 *) &instrumentPSGData365, (u8 *) &instrumentPSGData366, (u8 *) &instrumentPSGData367, (u8 *) &instrumentPSGData368,
+    /* 040 */ (u8 *) &instrumentPSGData369, (u8 *) &instrumentPSGData370, (u8 *) &instrumentPSGData371, (u8 *) &instrumentPSGData372,
+    /* 044 */ (u8 *) &instrumentPSGData373, (u8 *) &instrumentPSGData374, (u8 *) &instrumentPSGData375, (u8 *) &instrumentPSGData376,
+    /* 048 */ (u8 *) &instrumentPSGData377, (u8 *) &instrumentPSGData378, (u8 *) &instrumentPSGData379, (u8 *) &instrumentPSGData380,
+    /* 052 */ (u8 *) &instrumentPSGData381, (u8 *) &instrumentPSGData382, (u8 *) &instrumentPSGData383, (u8 *) &instrumentPSGData384,
+    /* 056 */ (u8 *) &instrumentPSGData385, (u8 *) &instrumentPSGData386, (u8 *) &instrumentPSGData387, (u8 *) &instrumentPSGData388,
     /* 060 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 064 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 068 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 072 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 076 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 080 */ &instrumentPSGData389.header, &instrumentPSGData390.header, &instrumentPSGData391.header, &instrumentPSGData392.header,
-    /* 084 */ &instrumentPSGData393.header, &instrumentPSGData394.header, &instrumentPSGData395.header, &instrumentPSGData396.header,
-    /* 088 */ NULL,                         NULL,                         &instrumentPSGData397.header, &instrumentPSGData398.header,
-    /* 092 */ &instrumentPSGData399.header, &instrumentPSGData400.header, &instrumentPSGData401.header, &instrumentPSGData402.header,
-    /* 096 */ NULL,                         NULL,                         &instrumentPSGData403.header, &instrumentPSGData404.header,
-    /* 100 */ &instrumentPSGData405.header, &instrumentPSGData406.header, &instrumentPSGData407.header, &instrumentPSGData408.header,
-    /* 104 */ &instrumentPSGData409.header, &instrumentPSGData410.header, &instrumentPSGData411.header, &instrumentPSGData412.header,
-    /* 108 */ &instrumentPSGData413.header, &instrumentPSGData414.header, &instrumentPSGData415.header, &instrumentPSGData416.header,
-    /* 112 */ &instrumentPCMData417.header
+    /* 080 */ (u8 *) &instrumentPSGData389, (u8 *) &instrumentPSGData390, (u8 *) &instrumentPSGData391, (u8 *) &instrumentPSGData392,
+    /* 084 */ (u8 *) &instrumentPSGData393, (u8 *) &instrumentPSGData394, (u8 *) &instrumentPSGData395, (u8 *) &instrumentPSGData396,
+    /* 088 */ NULL,                         NULL,                         (u8 *) &instrumentPSGData397, (u8 *) &instrumentPSGData398,
+    /* 092 */ (u8 *) &instrumentPSGData399, (u8 *) &instrumentPSGData400, (u8 *) &instrumentPSGData401, (u8 *) &instrumentPSGData402,
+    /* 096 */ NULL,                         NULL,                         (u8 *) &instrumentPSGData403, (u8 *) &instrumentPSGData404,
+    /* 100 */ (u8 *) &instrumentPSGData405, (u8 *) &instrumentPSGData406, (u8 *) &instrumentPSGData407, (u8 *) &instrumentPSGData408,
+    /* 104 */ (u8 *) &instrumentPSGData409, (u8 *) &instrumentPSGData410, (u8 *) &instrumentPSGData411, (u8 *) &instrumentPSGData412,
+    /* 108 */ (u8 *) &instrumentPSGData413, (u8 *) &instrumentPSGData414, (u8 *) &instrumentPSGData415, (u8 *) &instrumentPSGData416,
+    /* 112 */ (u8 *) &instrumentPCMData417
 };
 
 // 128 entries
 const InstrumentBank instrumentBank15 = {
-    /* 000 */ &instrumentPCMData418.header, &instrumentPCMData419.header, &instrumentPCMData420.header, &instrumentPCMData421.header,
-    /* 004 */ &instrumentPCMData422.header, &instrumentPCMData423.header, &instrumentPCMData424.header, NULL,
-    /* 008 */ &instrumentPCMData425.header, NULL,                         NULL,                         &instrumentPCMData426.header,
-    /* 012 */ &instrumentPCMData427.header, &instrumentPCMData428.header, &instrumentPCMData429.header, NULL,
-    /* 016 */ &instrumentPCMData430.header, NULL,                         &instrumentPCMData431.header, &instrumentPCMData432.header,
-    /* 020 */ &instrumentPCMData433.header, &instrumentPCMData434.header, &instrumentPCMData435.header, &instrumentPCMData436.header,
-    /* 024 */ &instrumentPCMData437.header, &instrumentPCMData438.header, &instrumentPCMData439.header, NULL,
-    /* 028 */ NULL,                         &instrumentPCMData440.header, &instrumentPCMData441.header, &instrumentPCMData442.header,
-    /* 032 */ &instrumentPCMData443.header, &instrumentPCMData444.header, &instrumentPCMData445.header, &instrumentPCMData446.header,
-    /* 036 */ &instrumentPCMData447.header, &instrumentPCMData448.header, &instrumentPCMData449.header, &instrumentPCMData450.header,
-    /* 040 */ &instrumentSubbankMultiKeyData451.header, &instrumentPCMData452.header, NULL,             NULL,
-    /* 044 */ NULL,                         NULL,                         NULL,                         &instrumentPCMData453.header,
-    /* 048 */ &instrumentPCMData454.header, &instrumentPCMData455.header, &instrumentPCMData456.header, &instrumentPCMData457.header,
-    /* 052 */ &instrumentPCMData458.header, &instrumentPCMData459.header, &instrumentPCMData460.header, &instrumentPCMData461.header,
-    /* 056 */ &instrumentPCMData462.header, &instrumentPCMData463.header, NULL,                         NULL,
+    /* 000 */ (u8 *) &instrumentPCMData418, (u8 *) &instrumentPCMData419, (u8 *) &instrumentPCMData420, (u8 *) &instrumentPCMData421,
+    /* 004 */ (u8 *) &instrumentPCMData422, (u8 *) &instrumentPCMData423, (u8 *) &instrumentPCMData424, NULL,
+    /* 008 */ (u8 *) &instrumentPCMData425, NULL,                         NULL,                         (u8 *) &instrumentPCMData426,
+    /* 012 */ (u8 *) &instrumentPCMData427, (u8 *) &instrumentPCMData428, (u8 *) &instrumentPCMData429, NULL,
+    /* 016 */ (u8 *) &instrumentPCMData430, NULL,                         (u8 *) &instrumentPCMData431, (u8 *) &instrumentPCMData432,
+    /* 020 */ (u8 *) &instrumentPCMData433, (u8 *) &instrumentPCMData434, (u8 *) &instrumentPCMData435, (u8 *) &instrumentPCMData436,
+    /* 024 */ (u8 *) &instrumentPCMData437, (u8 *) &instrumentPCMData438, (u8 *) &instrumentPCMData439, NULL,
+    /* 028 */ NULL,                         (u8 *) &instrumentPCMData440, (u8 *) &instrumentPCMData441, (u8 *) &instrumentPCMData442,
+    /* 032 */ (u8 *) &instrumentPCMData443, (u8 *) &instrumentPCMData444, (u8 *) &instrumentPCMData445, (u8 *) &instrumentPCMData446,
+    /* 036 */ (u8 *) &instrumentPCMData447, (u8 *) &instrumentPCMData448, (u8 *) &instrumentPCMData449, (u8 *) &instrumentPCMData450,
+    /* 040 */ (u8 *) &instrumentSubbankMultiKeyData451, (u8 *) &instrumentPCMData452, NULL,             NULL,
+    /* 044 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentPCMData453,
+    /* 048 */ (u8 *) &instrumentPCMData454, (u8 *) &instrumentPCMData455, (u8 *) &instrumentPCMData456, (u8 *) &instrumentPCMData457,
+    /* 052 */ (u8 *) &instrumentPCMData458, (u8 *) &instrumentPCMData459, (u8 *) &instrumentPCMData460, (u8 *) &instrumentPCMData461,
+    /* 056 */ (u8 *) &instrumentPCMData462, (u8 *) &instrumentPCMData463, NULL,                         NULL,
     /* 060 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 064 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 068 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -532,16 +532,16 @@ const InstrumentBank instrumentBank15 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankSingleKeyData464.header
+    /* 124 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankSingleKeyData464
 };
 
 // 128 entries
 const InstrumentBank instrumentBank16 = {
-    /* 000 */ &instrumentPCMData465.header, NULL,                         NULL,                         NULL,
+    /* 000 */ (u8 *) &instrumentPCMData465, NULL,                         NULL,                         NULL,
     /* 004 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 008 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 012 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 016 */ NULL,                         &instrumentPCMData466.header, NULL,                         NULL,
+    /* 016 */ NULL,                         (u8 *) &instrumentPCMData466, NULL,                         NULL,
     /* 020 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 024 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 028 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -568,22 +568,22 @@ const InstrumentBank instrumentBank16 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankSingleKeyData467.header
+    /* 124 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankSingleKeyData467
 };
 
 // 1 entry
 const InstrumentBank instrumentBank17 = {
-    /* 000 */ &instrumentPCMData468.header
+    /* 000 */ (u8 *) &instrumentPCMData468
 };
 
 // 128 entries
 const InstrumentBank instrumentBank18 = {
-    /* 000 */ &instrumentPCMData469.header, &instrumentPCMData470.header, &instrumentPCMData471.header, &instrumentPCMData472.header,
-    /* 004 */ &instrumentPCMData473.header, NULL,                         NULL,                         NULL,
-    /* 008 */ NULL,                         NULL,                         &instrumentPCMData474.header, NULL,
-    /* 012 */ &instrumentPCMData475.header, &instrumentPCMData476.header, &instrumentPCMData477.header, &instrumentPCMData478.header,
-    /* 016 */ NULL,                         &instrumentPCMData479.header, &instrumentPCMData480.header, &instrumentPCMData481.header,
-    /* 020 */ &instrumentPCMData482.header, &instrumentPCMData483.header, NULL,                         NULL,
+    /* 000 */ (u8 *) &instrumentPCMData469, (u8 *) &instrumentPCMData470, (u8 *) &instrumentPCMData471, (u8 *) &instrumentPCMData472,
+    /* 004 */ (u8 *) &instrumentPCMData473, NULL,                         NULL,                         NULL,
+    /* 008 */ NULL,                         NULL,                         (u8 *) &instrumentPCMData474, NULL,
+    /* 012 */ (u8 *) &instrumentPCMData475, (u8 *) &instrumentPCMData476, (u8 *) &instrumentPCMData477, (u8 *) &instrumentPCMData478,
+    /* 016 */ NULL,                         (u8 *) &instrumentPCMData479, (u8 *) &instrumentPCMData480, (u8 *) &instrumentPCMData481,
+    /* 020 */ (u8 *) &instrumentPCMData482, (u8 *) &instrumentPCMData483, NULL,                         NULL,
     /* 024 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 028 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 032 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -609,14 +609,14 @@ const InstrumentBank instrumentBank18 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         &instrumentSubbankSingleKeyData484.header, NULL,            &instrumentSubbankSingleKeyData485.header
+    /* 124 */ NULL,                         (u8 *) &instrumentSubbankSingleKeyData484, NULL,            (u8 *) &instrumentSubbankSingleKeyData485
 };
 
 // 128 entries
 const InstrumentBank instrumentBank19 = {
-    /* 000 */ &instrumentPCMData486.header, &instrumentPCMData487.header, &instrumentPCMData488.header, &instrumentPCMData489.header,
-    /* 004 */ &instrumentPCMData490.header, NULL, &instrumentPCMData491.header, &instrumentPCMData492.header,
-    /* 008 */ &instrumentPCMData493.header, NULL,                         NULL,                         NULL,
+    /* 000 */ (u8 *) &instrumentPCMData486, (u8 *) &instrumentPCMData487, (u8 *) &instrumentPCMData488, (u8 *) &instrumentPCMData489,
+    /* 004 */ (u8 *) &instrumentPCMData490, NULL, (u8 *) &instrumentPCMData491, (u8 *) &instrumentPCMData492,
+    /* 008 */ (u8 *) &instrumentPCMData493, NULL,                         NULL,                         NULL,
     /* 012 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 016 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 020 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -645,14 +645,14 @@ const InstrumentBank instrumentBank19 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankSingleKeyData494.header
+    /* 124 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankSingleKeyData494
 };
 
 // 128 entries
 const InstrumentBank instrumentBank20 = {
-    /* 000 */ &instrumentPCMData495.header, &instrumentPCMData496.header, &instrumentPCMData497.header, &instrumentPCMData498.header,
-    /* 004 */ &instrumentPCMData499.header, &instrumentPCMData500.header, &instrumentPCMData501.header, &instrumentPCMData502.header,
-    /* 008 */ &instrumentPCMData503.header, NULL,                         NULL,                         NULL,
+    /* 000 */ (u8 *) &instrumentPCMData495, (u8 *) &instrumentPCMData496, (u8 *) &instrumentPCMData497, (u8 *) &instrumentPCMData498,
+    /* 004 */ (u8 *) &instrumentPCMData499, (u8 *) &instrumentPCMData500, (u8 *) &instrumentPCMData501, (u8 *) &instrumentPCMData502,
+    /* 008 */ (u8 *) &instrumentPCMData503, NULL,                         NULL,                         NULL,
     /* 012 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 016 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 020 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -681,13 +681,13 @@ const InstrumentBank instrumentBank20 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         &instrumentSubbankSingleKeyData504.header, NULL,            &instrumentSubbankSingleKeyData505.header
+    /* 124 */ NULL,                         (u8 *) &instrumentSubbankSingleKeyData504, NULL,            (u8 *) &instrumentSubbankSingleKeyData505
 };
 
 // 128 entries
 const InstrumentBank instrumentBank21 = {
-    /* 000 */ NULL,                         &instrumentPCMData506.header, &instrumentPCMData507.header, &instrumentPCMData508.header,
-    /* 004 */ &instrumentPCMData509.header, &instrumentPCMData510.header, &instrumentPCMData511.header, NULL,
+    /* 000 */ NULL,                         (u8 *) &instrumentPCMData506, (u8 *) &instrumentPCMData507, (u8 *) &instrumentPCMData508,
+    /* 004 */ (u8 *) &instrumentPCMData509, (u8 *) &instrumentPCMData510, (u8 *) &instrumentPCMData511, NULL,
     /* 008 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 012 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 016 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -717,15 +717,15 @@ const InstrumentBank instrumentBank21 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankSingleKeyData512.header
+    /* 124 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankSingleKeyData512
 };
 
 // 128 entries
 const InstrumentBank instrumentBank22 = {
-    /* 000 */ &instrumentPCMData513.header, &instrumentPCMData514.header, &instrumentPCMData515.header, &instrumentPCMData516.header,
-    /* 004 */ &instrumentPCMData517.header, &instrumentPCMData518.header, &instrumentPCMData519.header, &instrumentPCMData520.header,
-    /* 008 */ &instrumentPCMData521.header, &instrumentPCMData522.header, &instrumentPCMData523.header, &instrumentSubbankMultiKeyData524.header,
-    /* 012 */ &instrumentPCMData525.header, &instrumentPCMData526.header, &instrumentPCMData527.header, NULL,
+    /* 000 */ (u8 *) &instrumentPCMData513, (u8 *) &instrumentPCMData514, (u8 *) &instrumentPCMData515, (u8 *) &instrumentPCMData516,
+    /* 004 */ (u8 *) &instrumentPCMData517, (u8 *) &instrumentPCMData518, (u8 *) &instrumentPCMData519, (u8 *) &instrumentPCMData520,
+    /* 008 */ (u8 *) &instrumentPCMData521, (u8 *) &instrumentPCMData522, (u8 *) &instrumentPCMData523, (u8 *) &instrumentSubbankMultiKeyData524,
+    /* 012 */ (u8 *) &instrumentPCMData525, (u8 *) &instrumentPCMData526, (u8 *) &instrumentPCMData527, NULL,
     /* 016 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 020 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 024 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -747,22 +747,22 @@ const InstrumentBank instrumentBank22 = {
     /* 088 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 092 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 096 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 100 */ &instrumentPCMData528.header, NULL,                         NULL,                         NULL,
+    /* 100 */ (u8 *) &instrumentPCMData528, NULL,                         NULL,                         NULL,
     /* 104 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 108 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankSingleKeyData529.header
+    /* 124 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankSingleKeyData529
 };
 
 // 128 entries
 const InstrumentBank instrumentBank23 = {
-    /* 000 */ &instrumentPCMData530.header, &instrumentPCMData531.header, &instrumentPCMData533.header, &instrumentPCMData534.header,
-    /* 004 */ &instrumentPCMData535.header, &instrumentPCMData536.header, &instrumentPCMData537.header, &instrumentPCMData538.header,
-    /* 008 */ &instrumentPCMData539.header, &instrumentPCMData540.header, &instrumentPCMData541.header, &instrumentPCMData542.header,
-    /* 012 */ &instrumentPCMData543.header, &instrumentPCMData544.header, &instrumentPCMData545.header, &instrumentPCMData546.header,
-    /* 016 */ &instrumentPCMData547.header, &instrumentPCMData532.header, &instrumentPCMData548.header, &instrumentPCMData549.header,
+    /* 000 */ (u8 *) &instrumentPCMData530, (u8 *) &instrumentPCMData531, (u8 *) &instrumentPCMData533, (u8 *) &instrumentPCMData534,
+    /* 004 */ (u8 *) &instrumentPCMData535, (u8 *) &instrumentPCMData536, (u8 *) &instrumentPCMData537, (u8 *) &instrumentPCMData538,
+    /* 008 */ (u8 *) &instrumentPCMData539, (u8 *) &instrumentPCMData540, (u8 *) &instrumentPCMData541, (u8 *) &instrumentPCMData542,
+    /* 012 */ (u8 *) &instrumentPCMData543, (u8 *) &instrumentPCMData544, (u8 *) &instrumentPCMData545, (u8 *) &instrumentPCMData546,
+    /* 016 */ (u8 *) &instrumentPCMData547, (u8 *) &instrumentPCMData532, (u8 *) &instrumentPCMData548, (u8 *) &instrumentPCMData549,
     /* 020 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 024 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 028 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -789,14 +789,14 @@ const InstrumentBank instrumentBank23 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankSingleKeyData550.header
+    /* 124 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankSingleKeyData550
 };
 
 // 128 entries
 const InstrumentBank instrumentBank24 = {
-    /* 000 */ &instrumentPCMData551.header, &instrumentPCMData552.header, &instrumentPCMData553.header, &instrumentPCMData554.header,
-    /* 004 */ &instrumentPCMData555.header, &instrumentPCMData556.header, &instrumentPCMData557.header, &instrumentPCMData558.header,
-    /* 008 */ &instrumentPCMData559.header, NULL,                         NULL,                         NULL,
+    /* 000 */ (u8 *) &instrumentPCMData551, (u8 *) &instrumentPCMData552, (u8 *) &instrumentPCMData553, (u8 *) &instrumentPCMData554,
+    /* 004 */ (u8 *) &instrumentPCMData555, (u8 *) &instrumentPCMData556, (u8 *) &instrumentPCMData557, (u8 *) &instrumentPCMData558,
+    /* 008 */ (u8 *) &instrumentPCMData559, NULL,                         NULL,                         NULL,
     /* 012 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 016 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 020 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -825,13 +825,13 @@ const InstrumentBank instrumentBank24 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         &instrumentSubbankSingleKeyData560.header, NULL,            &instrumentSubbankSingleKeyData561.header
+    /* 124 */ NULL,                         (u8 *) &instrumentSubbankSingleKeyData560, NULL,            (u8 *) &instrumentSubbankSingleKeyData561
 };
 
 // 128 entries
 const InstrumentBank instrumentBank25 = {
-    /* 000 */ &instrumentPCMData562.header, &instrumentPCMData563.header, &instrumentPCMData564.header, &instrumentPCMData565.header,
-    /* 004 */ &instrumentPCMData566.header, &instrumentPCMData567.header, &instrumentPCMData568.header, &instrumentPCMData569.header,
+    /* 000 */ (u8 *) &instrumentPCMData562, (u8 *) &instrumentPCMData563, (u8 *) &instrumentPCMData564, (u8 *) &instrumentPCMData565,
+    /* 004 */ (u8 *) &instrumentPCMData566, (u8 *) &instrumentPCMData567, (u8 *) &instrumentPCMData568, (u8 *) &instrumentPCMData569,
     /* 008 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 012 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 016 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -861,17 +861,17 @@ const InstrumentBank instrumentBank25 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankSingleKeyData570.header
+    /* 124 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankSingleKeyData570
 };
 
 // 128 entries
 const InstrumentBank instrumentBank26 = {
-    /* 000 */ NULL,                         &instrumentPCMData571.header, &instrumentPCMData572.header, &instrumentPCMData573.header,
-    /* 004 */ &instrumentPCMData574.header, &instrumentPCMData575.header, &instrumentPCMData576.header, &instrumentPCMData577.header,
-    /* 008 */ &instrumentPCMData578.header, &instrumentPCMData579.header, &instrumentPCMData580.header, &instrumentPCMData581.header,
+    /* 000 */ NULL,                         (u8 *) &instrumentPCMData571, (u8 *) &instrumentPCMData572, (u8 *) &instrumentPCMData573,
+    /* 004 */ (u8 *) &instrumentPCMData574, (u8 *) &instrumentPCMData575, (u8 *) &instrumentPCMData576, (u8 *) &instrumentPCMData577,
+    /* 008 */ (u8 *) &instrumentPCMData578, (u8 *) &instrumentPCMData579, (u8 *) &instrumentPCMData580, (u8 *) &instrumentPCMData581,
     /* 012 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 016 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 020 */ &instrumentPCMData582.header, &instrumentPCMData583.header, NULL,                         NULL,
+    /* 020 */ (u8 *) &instrumentPCMData582, (u8 *) &instrumentPCMData583, NULL,                         NULL,
     /* 024 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 028 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 032 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -897,15 +897,15 @@ const InstrumentBank instrumentBank26 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankSingleKeyData584.header
+    /* 124 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankSingleKeyData584
 };
 
 // 128 entries
 const InstrumentBank instrumentBank27 = {
-    /* 000 */ &instrumentPCMData585.header, &instrumentPCMData586.header, &instrumentPCMData587.header, &instrumentPCMData588.header,
-    /* 004 */ &instrumentPCMData589.header, &instrumentPCMData590.header, &instrumentPCMData591.header, &instrumentPSGData592.header,
-    /* 008 */ &instrumentPSGData593.header, &instrumentPCMData594.header, &instrumentPCMData595.header, NULL,
-    /* 012 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankMultiKeyData596.header,
+    /* 000 */ (u8 *) &instrumentPCMData585, (u8 *) &instrumentPCMData586, (u8 *) &instrumentPCMData587, (u8 *) &instrumentPCMData588,
+    /* 004 */ (u8 *) &instrumentPCMData589, (u8 *) &instrumentPCMData590, (u8 *) &instrumentPCMData591, (u8 *) &instrumentPSGData592,
+    /* 008 */ (u8 *) &instrumentPSGData593, (u8 *) &instrumentPCMData594, (u8 *) &instrumentPCMData595, NULL,
+    /* 012 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankMultiKeyData596,
     /* 016 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 020 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 024 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -933,14 +933,14 @@ const InstrumentBank instrumentBank27 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankSingleKeyData597.header
+    /* 124 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankSingleKeyData597
 };
 
 // 128 entries
 const InstrumentBank instrumentBank28 = {
-    /* 000 */ &instrumentPCMData598.header, &instrumentPCMData599.header, &instrumentPCMData600.header, &instrumentPCMData601.header,
-    /* 004 */ &instrumentPCMData602.header, &instrumentPCMData603.header, &instrumentPCMData604.header, &instrumentPCMData605.header,
-    /* 008 */ &instrumentPCMData606.header, &instrumentPCMData607.header, &instrumentPCMData608.header, NULL,
+    /* 000 */ (u8 *) &instrumentPCMData598, (u8 *) &instrumentPCMData599, (u8 *) &instrumentPCMData600, (u8 *) &instrumentPCMData601,
+    /* 004 */ (u8 *) &instrumentPCMData602, (u8 *) &instrumentPCMData603, (u8 *) &instrumentPCMData604, (u8 *) &instrumentPCMData605,
+    /* 008 */ (u8 *) &instrumentPCMData606, (u8 *) &instrumentPCMData607, (u8 *) &instrumentPCMData608, NULL,
     /* 012 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 016 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 020 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -969,15 +969,15 @@ const InstrumentBank instrumentBank28 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankSingleKeyData609.header
+    /* 124 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankSingleKeyData609
 };
 
 // 128 entries
 const InstrumentBank instrumentBank29 = {
-    /* 000 */ &instrumentPCMData610.header, &instrumentPCMData611.header, &instrumentPCMData612.header, &instrumentPCMData613.header,
-    /* 004 */ &instrumentPCMData614.header, &instrumentPCMData615.header, &instrumentPCMData616.header, NULL,
-    /* 008 */ NULL,                         NULL,                         &instrumentPCMData617.header, &instrumentPCMData618.header,
-    /* 012 */ &instrumentPCMData619.header, &instrumentPCMData620.header, NULL, &instrumentSubbankMultiKeyData621.header,
+    /* 000 */ (u8 *) &instrumentPCMData610, (u8 *) &instrumentPCMData611, (u8 *) &instrumentPCMData612, (u8 *) &instrumentPCMData613,
+    /* 004 */ (u8 *) &instrumentPCMData614, (u8 *) &instrumentPCMData615, (u8 *) &instrumentPCMData616, NULL,
+    /* 008 */ NULL,                         NULL,                         (u8 *) &instrumentPCMData617, (u8 *) &instrumentPCMData618,
+    /* 012 */ (u8 *) &instrumentPCMData619, (u8 *) &instrumentPCMData620, NULL, (u8 *) &instrumentSubbankMultiKeyData621,
     /* 016 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 020 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 024 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -1005,15 +1005,15 @@ const InstrumentBank instrumentBank29 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankSingleKeyData622.header
+    /* 124 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankSingleKeyData622
 };
 
 // 128 entries
 const InstrumentBank instrumentBank30 = {
-    /* 000 */ &instrumentPCMData623.header, &instrumentPCMData624.header, &instrumentPCMData625.header, &instrumentPCMData626.header,
-    /* 004 */ &instrumentPCMData627.header, &instrumentPCMData628.header, &instrumentPCMData629.header, &instrumentPCMData630.header,
-    /* 008 */ &instrumentPCMData631.header, &instrumentPCMData632.header, &instrumentPCMData633.header, &instrumentPCMData634.header,
-    /* 012 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankMultiKeyData635.header,
+    /* 000 */ (u8 *) &instrumentPCMData623, (u8 *) &instrumentPCMData624, (u8 *) &instrumentPCMData625, (u8 *) &instrumentPCMData626,
+    /* 004 */ (u8 *) &instrumentPCMData627, (u8 *) &instrumentPCMData628, (u8 *) &instrumentPCMData629, (u8 *) &instrumentPCMData630,
+    /* 008 */ (u8 *) &instrumentPCMData631, (u8 *) &instrumentPCMData632, (u8 *) &instrumentPCMData633, (u8 *) &instrumentPCMData634,
+    /* 012 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankMultiKeyData635,
     /* 016 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 020 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 024 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -1041,15 +1041,15 @@ const InstrumentBank instrumentBank30 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankSingleKeyData636.header
+    /* 124 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankSingleKeyData636
 };
 
 // 128 entries
 const InstrumentBank instrumentBank31 = {
-    /* 000 */ &instrumentPCMData637.header, &instrumentPCMData638.header, &instrumentPCMData639.header, &instrumentPCMData640.header,
-    /* 004 */ &instrumentPCMData641.header, &instrumentPCMData642.header, &instrumentPCMData643.header, &instrumentPCMData644.header,
-    /* 008 */ &instrumentPCMData645.header, &instrumentPCMData646.header, &instrumentPCMData647.header, NULL,
-    /* 012 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankMultiKeyData648.header,
+    /* 000 */ (u8 *) &instrumentPCMData637, (u8 *) &instrumentPCMData638, (u8 *) &instrumentPCMData639, (u8 *) &instrumentPCMData640,
+    /* 004 */ (u8 *) &instrumentPCMData641, (u8 *) &instrumentPCMData642, (u8 *) &instrumentPCMData643, (u8 *) &instrumentPCMData644,
+    /* 008 */ (u8 *) &instrumentPCMData645, (u8 *) &instrumentPCMData646, (u8 *) &instrumentPCMData647, NULL,
+    /* 012 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankMultiKeyData648,
     /* 016 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 020 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 024 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -1077,16 +1077,16 @@ const InstrumentBank instrumentBank31 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankSingleKeyData649.header
+    /* 124 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankSingleKeyData649
 };
 
 // 128 entries
 const InstrumentBank instrumentBank32 = {
-    /* 000 */ &instrumentPCMData650.header, &instrumentPCMData651.header, &instrumentPCMData652.header, &instrumentPCMData653.header,
-    /* 004 */ &instrumentPCMData654.header, &instrumentPCMData655.header, &instrumentPCMData656.header, &instrumentPCMData657.header,
-    /* 008 */ &instrumentPCMData658.header, &instrumentPCMData659.header, NULL,                         NULL,
-    /* 012 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankMultiKeyData660.header,
-    /* 016 */ &instrumentSubbankMultiKeyData661.header, NULL,             NULL,                         NULL,
+    /* 000 */ (u8 *) &instrumentPCMData650, (u8 *) &instrumentPCMData651, (u8 *) &instrumentPCMData652, (u8 *) &instrumentPCMData653,
+    /* 004 */ (u8 *) &instrumentPCMData654, (u8 *) &instrumentPCMData655, (u8 *) &instrumentPCMData656, (u8 *) &instrumentPCMData657,
+    /* 008 */ (u8 *) &instrumentPCMData658, (u8 *) &instrumentPCMData659, NULL,                         NULL,
+    /* 012 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankMultiKeyData660,
+    /* 016 */ (u8 *) &instrumentSubbankMultiKeyData661, NULL,             NULL,                         NULL,
     /* 020 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 024 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 028 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -1113,16 +1113,16 @@ const InstrumentBank instrumentBank32 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankSingleKeyData662.header
+    /* 124 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankSingleKeyData662
 };
 
 // 128 entries
 const InstrumentBank instrumentBank33 = {
-    /* 000 */ &instrumentPCMData663.header, &instrumentPCMData664.header, &instrumentPCMData665.header, &instrumentPCMData666.header,
-    /* 004 */ &instrumentPCMData667.header, &instrumentPCMData668.header, NULL,                         NULL,
-    /* 008 */ NULL,                         &instrumentPCMData669.header, &instrumentPCMData670.header, &instrumentPCMData671.header,
-    /* 012 */ &instrumentPCMData672.header, &instrumentPCMData673.header, &instrumentPCMData674.header, &instrumentPCMData675.header,
-    /* 016 */ &instrumentPCMData676.header, NULL,                         NULL,                         NULL,
+    /* 000 */ (u8 *) &instrumentPCMData663, (u8 *) &instrumentPCMData664, (u8 *) &instrumentPCMData665, (u8 *) &instrumentPCMData666,
+    /* 004 */ (u8 *) &instrumentPCMData667, (u8 *) &instrumentPCMData668, NULL,                         NULL,
+    /* 008 */ NULL,                         (u8 *) &instrumentPCMData669, (u8 *) &instrumentPCMData670, (u8 *) &instrumentPCMData671,
+    /* 012 */ (u8 *) &instrumentPCMData672, (u8 *) &instrumentPCMData673, (u8 *) &instrumentPCMData674, (u8 *) &instrumentPCMData675,
+    /* 016 */ (u8 *) &instrumentPCMData676, NULL,                         NULL,                         NULL,
     /* 020 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 024 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 028 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -1149,13 +1149,13 @@ const InstrumentBank instrumentBank33 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         &instrumentSubbankSingleKeyData677.header, NULL,            &instrumentSubbankSingleKeyData678.header
+    /* 124 */ NULL,                         (u8 *) &instrumentSubbankSingleKeyData677, NULL,            (u8 *) &instrumentSubbankSingleKeyData678
 };
 
 // 128 entries
 const InstrumentBank instrumentBank34 = {
-    /* 000 */ &instrumentPCMData679.header, &instrumentPCMData680.header, &instrumentPCMData681.header, &instrumentPCMData682.header,
-    /* 004 */ &instrumentPCMData683.header, &instrumentPCMData684.header, NULL,                         NULL,
+    /* 000 */ (u8 *) &instrumentPCMData679, (u8 *) &instrumentPCMData680, (u8 *) &instrumentPCMData681, (u8 *) &instrumentPCMData682,
+    /* 004 */ (u8 *) &instrumentPCMData683, (u8 *) &instrumentPCMData684, NULL,                         NULL,
     /* 008 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 012 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 016 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -1185,22 +1185,22 @@ const InstrumentBank instrumentBank34 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         &instrumentSubbankSingleKeyData685.header, NULL,            &instrumentSubbankSingleKeyData686.header
+    /* 124 */ NULL,                         (u8 *) &instrumentSubbankSingleKeyData685, NULL,            (u8 *) &instrumentSubbankSingleKeyData686
 };
 
 // 128 entries
 const InstrumentBank instrumentBank35 = {
-    /* 000 */ &instrumentPCMData687.header, &instrumentPCMData688.header, &instrumentPCMData689.header, &instrumentPCMData690.header,
-    /* 004 */ &instrumentPCMData691.header, &instrumentPCMData692.header, &instrumentPCMData693.header, &instrumentPCMData694.header,
-    /* 008 */ &instrumentPCMData695.header, &instrumentPCMData696.header, &instrumentPCMData697.header, &instrumentPCMData698.header,
-    /* 012 */ &instrumentPCMData699.header, &instrumentPCMData700.header, &instrumentPCMData701.header, &instrumentPCMData702.header,
-    /* 016 */ &instrumentPCMData703.header, &instrumentPCMData704.header, NULL,                         NULL,
+    /* 000 */ (u8 *) &instrumentPCMData687, (u8 *) &instrumentPCMData688, (u8 *) &instrumentPCMData689, (u8 *) &instrumentPCMData690,
+    /* 004 */ (u8 *) &instrumentPCMData691, (u8 *) &instrumentPCMData692, (u8 *) &instrumentPCMData693, (u8 *) &instrumentPCMData694,
+    /* 008 */ (u8 *) &instrumentPCMData695, (u8 *) &instrumentPCMData696, (u8 *) &instrumentPCMData697, (u8 *) &instrumentPCMData698,
+    /* 012 */ (u8 *) &instrumentPCMData699, (u8 *) &instrumentPCMData700, (u8 *) &instrumentPCMData701, (u8 *) &instrumentPCMData702,
+    /* 016 */ (u8 *) &instrumentPCMData703, (u8 *) &instrumentPCMData704, NULL,                         NULL,
     /* 020 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 024 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 028 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 032 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 036 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 040 */ &instrumentSubbankMultiKeyData705.header, &instrumentSubbankMultiKeyData706.header, NULL, NULL,
+    /* 040 */ (u8 *) &instrumentSubbankMultiKeyData705, (u8 *) &instrumentSubbankMultiKeyData706, NULL, NULL,
     /* 044 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 048 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 052 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -1221,16 +1221,16 @@ const InstrumentBank instrumentBank35 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         &instrumentSubbankSingleKeyData707.header, NULL,            &instrumentSubbankSingleKeyData708.header
+    /* 124 */ NULL,                         (u8 *) &instrumentSubbankSingleKeyData707, NULL,            (u8 *) &instrumentSubbankSingleKeyData708
 };
 
 // 128 entries
 const InstrumentBank instrumentBank36 = {
-    /* 000 */ &instrumentPCMData709.header, &instrumentPSGData710.header, &instrumentPSGData711.header, &instrumentPCMData712.header,
-    /* 004 */ &instrumentPCMData713.header, &instrumentPCMData714.header, &instrumentPCMData715.header, &instrumentPCMData716.header,
-    /* 008 */ &instrumentPCMData717.header, &instrumentPCMData718.header, &instrumentPCMData719.header, &instrumentPCMData720.header,
-    /* 012 */ &instrumentPCMData721.header, &instrumentPCMData722.header, &instrumentPCMData723.header, &instrumentPCMData724.header,
-    /* 016 */ &instrumentPCMData725.header, NULL,                         &instrumentPCMData726.header, NULL,
+    /* 000 */ (u8 *) &instrumentPCMData709, (u8 *) &instrumentPSGData710, (u8 *) &instrumentPSGData711, (u8 *) &instrumentPCMData712,
+    /* 004 */ (u8 *) &instrumentPCMData713, (u8 *) &instrumentPCMData714, (u8 *) &instrumentPCMData715, (u8 *) &instrumentPCMData716,
+    /* 008 */ (u8 *) &instrumentPCMData717, (u8 *) &instrumentPCMData718, (u8 *) &instrumentPCMData719, (u8 *) &instrumentPCMData720,
+    /* 012 */ (u8 *) &instrumentPCMData721, (u8 *) &instrumentPCMData722, (u8 *) &instrumentPCMData723, (u8 *) &instrumentPCMData724,
+    /* 016 */ (u8 *) &instrumentPCMData725, NULL,                         (u8 *) &instrumentPCMData726, NULL,
     /* 020 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 024 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 028 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -1257,28 +1257,28 @@ const InstrumentBank instrumentBank36 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         &instrumentSubbankSingleKeyData727.header, &instrumentSubbankSingleKeyData728.header, &instrumentSubbankSingleKeyData729.header
+    /* 124 */ NULL,                         (u8 *) &instrumentSubbankSingleKeyData727, (u8 *) &instrumentSubbankSingleKeyData728, (u8 *) &instrumentSubbankSingleKeyData729
 };
 
 // 128 entries
 const InstrumentBank instrumentBank37 = {
-    /* 000 */ &instrumentPCMData730.header, &instrumentPCMData731.header, &instrumentPCMData732.header, &instrumentPCMData733.header,
-    /* 004 */ &instrumentPCMData734.header, &instrumentPCMData735.header, &instrumentPCMData736.header, &instrumentPCMData737.header,
-    /* 008 */ &instrumentPCMData738.header, NULL,                         &instrumentPCMData739.header, &instrumentPCMData740.header,
-    /* 012 */ &instrumentPCMData741.header, &instrumentPCMData742.header, &instrumentPCMData743.header, &instrumentPCMData744.header,
-    /* 016 */ &instrumentPCMData745.header, &instrumentPCMData746.header, &instrumentPCMData747.header, &instrumentPCMData748.header,
-    /* 020 */ &instrumentPCMData749.header, &instrumentSubbankMultiKeyData750.header, &instrumentPCMData751.header, &instrumentPCMData752.header,
-    /* 024 */ &instrumentPCMData753.header, &instrumentPCMData754.header, &instrumentPCMData755.header, &instrumentPCMData756.header,
+    /* 000 */ (u8 *) &instrumentPCMData730, (u8 *) &instrumentPCMData731, (u8 *) &instrumentPCMData732, (u8 *) &instrumentPCMData733,
+    /* 004 */ (u8 *) &instrumentPCMData734, (u8 *) &instrumentPCMData735, (u8 *) &instrumentPCMData736, (u8 *) &instrumentPCMData737,
+    /* 008 */ (u8 *) &instrumentPCMData738, NULL,                         (u8 *) &instrumentPCMData739, (u8 *) &instrumentPCMData740,
+    /* 012 */ (u8 *) &instrumentPCMData741, (u8 *) &instrumentPCMData742, (u8 *) &instrumentPCMData743, (u8 *) &instrumentPCMData744,
+    /* 016 */ (u8 *) &instrumentPCMData745, (u8 *) &instrumentPCMData746, (u8 *) &instrumentPCMData747, (u8 *) &instrumentPCMData748,
+    /* 020 */ (u8 *) &instrumentPCMData749, (u8 *) &instrumentSubbankMultiKeyData750, (u8 *) &instrumentPCMData751, (u8 *) &instrumentPCMData752,
+    /* 024 */ (u8 *) &instrumentPCMData753, (u8 *) &instrumentPCMData754, (u8 *) &instrumentPCMData755, (u8 *) &instrumentPCMData756,
     /* 028 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 032 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 036 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 040 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 044 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 048 */ NULL,                         NULL,                         &instrumentPSGData757.header, &instrumentPSGData758.header,
-    /* 052 */ &instrumentPSGData759.header, &instrumentPSGData760.header, &instrumentPSGData761.header, &instrumentPSGData762.header,
-    /* 056 */ &instrumentPSGData763.header, &instrumentPSGData764.header, &instrumentPSGData765.header, &instrumentPSGData766.header,
-    /* 060 */ NULL,                         NULL,                         &instrumentPCMData767.header, &instrumentPCMData768.header,
-    /* 064 */ &instrumentSubbankMultiKeyData769.header, NULL,             NULL,                         NULL,
+    /* 048 */ NULL,                         NULL,                         (u8 *) &instrumentPSGData757, (u8 *) &instrumentPSGData758,
+    /* 052 */ (u8 *) &instrumentPSGData759, (u8 *) &instrumentPSGData760, (u8 *) &instrumentPSGData761, (u8 *) &instrumentPSGData762,
+    /* 056 */ (u8 *) &instrumentPSGData763, (u8 *) &instrumentPSGData764, (u8 *) &instrumentPSGData765, (u8 *) &instrumentPSGData766,
+    /* 060 */ NULL,                         NULL,                         (u8 *) &instrumentPCMData767, (u8 *) &instrumentPCMData768,
+    /* 064 */ (u8 *) &instrumentSubbankMultiKeyData769, NULL,             NULL,                         NULL,
     /* 068 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 072 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 076 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -1293,14 +1293,14 @@ const InstrumentBank instrumentBank37 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         &instrumentSubbankSingleKeyData770.header, NULL,            &instrumentSubbankSingleKeyData771.header
+    /* 124 */ NULL,                         (u8 *) &instrumentSubbankSingleKeyData770, NULL,            (u8 *) &instrumentSubbankSingleKeyData771
 };
 
 // 127 entries
 const InstrumentBank instrumentBank38 = {
-    /* 000 */ &instrumentPCMData772.header, &instrumentPCMData773.header, &instrumentPCMData774.header, &instrumentPCMData775.header,
-    /* 004 */ &instrumentPCMData776.header, &instrumentPCMData777.header, &instrumentPCMData778.header, &instrumentPCMData779.header,
-    /* 008 */ &instrumentPCMData780.header, NULL,                         NULL,                         NULL,
+    /* 000 */ (u8 *) &instrumentPCMData772, (u8 *) &instrumentPCMData773, (u8 *) &instrumentPCMData774, (u8 *) &instrumentPCMData775,
+    /* 004 */ (u8 *) &instrumentPCMData776, (u8 *) &instrumentPCMData777, (u8 *) &instrumentPCMData778, (u8 *) &instrumentPCMData779,
+    /* 008 */ (u8 *) &instrumentPCMData780, NULL,                         NULL,                         NULL,
     /* 012 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 016 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 020 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -1329,13 +1329,13 @@ const InstrumentBank instrumentBank38 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         &instrumentSubbankSingleKeyData781.header, &instrumentSubbankSingleKeyData782.header
+    /* 124 */ NULL,                         (u8 *) &instrumentSubbankSingleKeyData781, (u8 *) &instrumentSubbankSingleKeyData782
 };
 
 // 128 entries
 const InstrumentBank instrumentBank39 = {
-    /* 000 */ &instrumentPCMData783.header, &instrumentPCMData784.header, &instrumentPCMData785.header, &instrumentPCMData786.header,
-    /* 004 */ &instrumentPCMData787.header, &instrumentPCMData788.header, NULL,                         NULL,
+    /* 000 */ (u8 *) &instrumentPCMData783, (u8 *) &instrumentPCMData784, (u8 *) &instrumentPCMData785, (u8 *) &instrumentPCMData786,
+    /* 004 */ (u8 *) &instrumentPCMData787, (u8 *) &instrumentPCMData788, NULL,                         NULL,
     /* 008 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 012 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 016 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -1365,13 +1365,13 @@ const InstrumentBank instrumentBank39 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         &instrumentSubbankSingleKeyData789.header, &instrumentSubbankSingleKeyData790.header, &instrumentSubbankSingleKeyData791.header
+    /* 124 */ NULL,                         (u8 *) &instrumentSubbankSingleKeyData789, (u8 *) &instrumentSubbankSingleKeyData790, (u8 *) &instrumentSubbankSingleKeyData791
 };
 
 // 128 entries
 const InstrumentBank instrumentBank40 = {
-    /* 000 */ &instrumentPCMData792.header, &instrumentPCMData793.header, &instrumentPCMData794.header, &instrumentPCMData795.header,
-    /* 004 */ &instrumentPCMData796.header, &instrumentPCMData797.header, &instrumentPCMData798.header, NULL,
+    /* 000 */ (u8 *) &instrumentPCMData792, (u8 *) &instrumentPCMData793, (u8 *) &instrumentPCMData794, (u8 *) &instrumentPCMData795,
+    /* 004 */ (u8 *) &instrumentPCMData796, (u8 *) &instrumentPCMData797, (u8 *) &instrumentPCMData798, NULL,
     /* 008 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 012 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 016 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -1380,7 +1380,7 @@ const InstrumentBank instrumentBank40 = {
     /* 028 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 032 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 036 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 040 */ &instrumentSubbankMultiKeyData799.header, NULL,             NULL,                         NULL,
+    /* 040 */ (u8 *) &instrumentSubbankMultiKeyData799, NULL,             NULL,                         NULL,
     /* 044 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 048 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 052 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -1401,13 +1401,13 @@ const InstrumentBank instrumentBank40 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         &instrumentSubbankSingleKeyData800.header, NULL,            &instrumentSubbankSingleKeyData801.header
+    /* 124 */ NULL,                         (u8 *) &instrumentSubbankSingleKeyData800, NULL,            (u8 *) &instrumentSubbankSingleKeyData801
 };
 
 // 128 entries
 const InstrumentBank instrumentBank41 = {
-    /* 000 */ &instrumentPCMData802.header, &instrumentPCMData803.header, &instrumentPCMData804.header, &instrumentPCMData805.header,
-    /* 004 */ &instrumentPCMData806.header, &instrumentPCMData807.header, &instrumentPCMData808.header, NULL,
+    /* 000 */ (u8 *) &instrumentPCMData802, (u8 *) &instrumentPCMData803, (u8 *) &instrumentPCMData804, (u8 *) &instrumentPCMData805,
+    /* 004 */ (u8 *) &instrumentPCMData806, (u8 *) &instrumentPCMData807, (u8 *) &instrumentPCMData808, NULL,
     /* 008 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 012 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 016 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -1437,22 +1437,22 @@ const InstrumentBank instrumentBank41 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         &instrumentSubbankSingleKeyData809.header, NULL,            &instrumentSubbankSingleKeyData810.header
+    /* 124 */ NULL,                         (u8 *) &instrumentSubbankSingleKeyData809, NULL,            (u8 *) &instrumentSubbankSingleKeyData810
 };
 
 // 128 entries
 const InstrumentBank instrumentBank42 = {
-    /* 000 */ &instrumentPCMData811.header, &instrumentPCMData812.header, &instrumentPCMData813.header, &instrumentPCMData814.header,
-    /* 004 */ &instrumentPCMData815.header, &instrumentPCMData816.header, &instrumentPCMData817.header, &instrumentPCMData818.header,
-    /* 008 */ &instrumentPCMData819.header, &instrumentPCMData820.header, &instrumentPCMData821.header, &instrumentPCMData822.header,
-    /* 012 */ &instrumentPCMData823.header, NULL,                         NULL,                         &instrumentPCMData824.header,
-    /* 016 */ &instrumentPCMData825.header, &instrumentPCMData826.header, &instrumentPCMData827.header, &instrumentPCMData828.header,
-    /* 020 */ &instrumentPCMData829.header, &instrumentPCMData830.header, NULL,                         NULL,
+    /* 000 */ (u8 *) &instrumentPCMData811, (u8 *) &instrumentPCMData812, (u8 *) &instrumentPCMData813, (u8 *) &instrumentPCMData814,
+    /* 004 */ (u8 *) &instrumentPCMData815, (u8 *) &instrumentPCMData816, (u8 *) &instrumentPCMData817, (u8 *) &instrumentPCMData818,
+    /* 008 */ (u8 *) &instrumentPCMData819, (u8 *) &instrumentPCMData820, (u8 *) &instrumentPCMData821, (u8 *) &instrumentPCMData822,
+    /* 012 */ (u8 *) &instrumentPCMData823, NULL,                         NULL,                         (u8 *) &instrumentPCMData824,
+    /* 016 */ (u8 *) &instrumentPCMData825, (u8 *) &instrumentPCMData826, (u8 *) &instrumentPCMData827, (u8 *) &instrumentPCMData828,
+    /* 020 */ (u8 *) &instrumentPCMData829, (u8 *) &instrumentPCMData830, NULL,                         NULL,
     /* 024 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 028 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 032 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 036 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 040 */ &instrumentSubbankMultiKeyData831.header, &instrumentSubbankMultiKeyData832.header, NULL, NULL,
+    /* 040 */ (u8 *) &instrumentSubbankMultiKeyData831, (u8 *) &instrumentSubbankMultiKeyData832, NULL, NULL,
     /* 044 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 048 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 052 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -1473,22 +1473,22 @@ const InstrumentBank instrumentBank42 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         &instrumentSubbankSingleKeyData833.header, &instrumentSubbankSingleKeyData834.header, &instrumentSubbankSingleKeyData835.header
+    /* 124 */ NULL,                         (u8 *) &instrumentSubbankSingleKeyData833, (u8 *) &instrumentSubbankSingleKeyData834, (u8 *) &instrumentSubbankSingleKeyData835
 };
 
 // 128 entries
 const InstrumentBank instrumentBank43 = {
-    /* 000 */ &instrumentPCMData836.header, &instrumentPCMData837.header, &instrumentPCMData838.header, &instrumentPCMData839.header,
-    /* 004 */ &instrumentPCMData840.header, &instrumentPCMData841.header, &instrumentSubbankMultiKeyData848.header, &instrumentPCMData842.header,
-    /* 008 */ &instrumentPCMData843.header, &instrumentPCMData844.header, &instrumentPCMData845.header, &instrumentPCMData846.header,
-    /* 012 */ &instrumentPCMData847.header, NULL,                         NULL,                         NULL,
+    /* 000 */ (u8 *) &instrumentPCMData836, (u8 *) &instrumentPCMData837, (u8 *) &instrumentPCMData838, (u8 *) &instrumentPCMData839,
+    /* 004 */ (u8 *) &instrumentPCMData840, (u8 *) &instrumentPCMData841, (u8 *) &instrumentSubbankMultiKeyData848, (u8 *) &instrumentPCMData842,
+    /* 008 */ (u8 *) &instrumentPCMData843, (u8 *) &instrumentPCMData844, (u8 *) &instrumentPCMData845, (u8 *) &instrumentPCMData846,
+    /* 012 */ (u8 *) &instrumentPCMData847, NULL,                         NULL,                         NULL,
     /* 016 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 020 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 024 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 028 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 032 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 036 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 040 */ &instrumentSubbankMultiKeyData849.header, NULL,             NULL,                         NULL,
+    /* 040 */ (u8 *) &instrumentSubbankMultiKeyData849, NULL,             NULL,                         NULL,
     /* 044 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 048 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 052 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -1509,22 +1509,22 @@ const InstrumentBank instrumentBank43 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         &instrumentSubbankSingleKeyData850.header, &instrumentSubbankSingleKeyData851.header, &instrumentSubbankSingleKeyData852.header
+    /* 124 */ NULL,                         (u8 *) &instrumentSubbankSingleKeyData850, (u8 *) &instrumentSubbankSingleKeyData851, (u8 *) &instrumentSubbankSingleKeyData852
 };
 
 // 128 entries
 const InstrumentBank instrumentBank44 = {
-    /* 000 */ &instrumentPCMData853.header, &instrumentPCMData854.header, &instrumentPCMData855.header, &instrumentPCMData856.header,
-    /* 004 */ &instrumentPCMData857.header, &instrumentPSGData858.header, &instrumentPSGData859.header, &instrumentPCMData860.header,
-    /* 008 */ &instrumentPCMData861.header, &instrumentPCMData862.header, &instrumentPCMData863.header, &instrumentPCMData864.header,
-    /* 012 */ &instrumentPCMData865.header, &instrumentPCMData866.header, &instrumentPCMData867.header, &instrumentPCMData868.header,
-    /* 016 */ &instrumentPCMData869.header, &instrumentPCMData870.header, &instrumentPCMData871.header, &instrumentPCMData872.header,
-    /* 020 */ &instrumentPCMData873.header, &instrumentPCMData874.header, &instrumentPCMData875.header, &instrumentPCMData876.header,
-    /* 024 */ &instrumentPCMData877.header, &instrumentPCMData878.header, &instrumentPCMData879.header, &instrumentPCMData880.header,
-    /* 028 */ &instrumentPCMData881.header, &instrumentPCMData882.header, &instrumentPCMData883.header, &instrumentPCMData884.header,
-    /* 032 */ &instrumentPCMData885.header, &instrumentPCMData886.header, &instrumentPCMData887.header, &instrumentPCMData888.header,
-    /* 036 */ &instrumentPCMData889.header, &instrumentPCMData890.header, &instrumentPCMData891.header, &instrumentPCMData892.header,
-    /* 040 */ &instrumentPCMData893.header, &instrumentPCMData894.header, &instrumentPCMData895.header, NULL,
+    /* 000 */ (u8 *) &instrumentPCMData853, (u8 *) &instrumentPCMData854, (u8 *) &instrumentPCMData855, (u8 *) &instrumentPCMData856,
+    /* 004 */ (u8 *) &instrumentPCMData857, (u8 *) &instrumentPSGData858, (u8 *) &instrumentPSGData859, (u8 *) &instrumentPCMData860,
+    /* 008 */ (u8 *) &instrumentPCMData861, (u8 *) &instrumentPCMData862, (u8 *) &instrumentPCMData863, (u8 *) &instrumentPCMData864,
+    /* 012 */ (u8 *) &instrumentPCMData865, (u8 *) &instrumentPCMData866, (u8 *) &instrumentPCMData867, (u8 *) &instrumentPCMData868,
+    /* 016 */ (u8 *) &instrumentPCMData869, (u8 *) &instrumentPCMData870, (u8 *) &instrumentPCMData871, (u8 *) &instrumentPCMData872,
+    /* 020 */ (u8 *) &instrumentPCMData873, (u8 *) &instrumentPCMData874, (u8 *) &instrumentPCMData875, (u8 *) &instrumentPCMData876,
+    /* 024 */ (u8 *) &instrumentPCMData877, (u8 *) &instrumentPCMData878, (u8 *) &instrumentPCMData879, (u8 *) &instrumentPCMData880,
+    /* 028 */ (u8 *) &instrumentPCMData881, (u8 *) &instrumentPCMData882, (u8 *) &instrumentPCMData883, (u8 *) &instrumentPCMData884,
+    /* 032 */ (u8 *) &instrumentPCMData885, (u8 *) &instrumentPCMData886, (u8 *) &instrumentPCMData887, (u8 *) &instrumentPCMData888,
+    /* 036 */ (u8 *) &instrumentPCMData889, (u8 *) &instrumentPCMData890, (u8 *) &instrumentPCMData891, (u8 *) &instrumentPCMData892,
+    /* 040 */ (u8 *) &instrumentPCMData893, (u8 *) &instrumentPCMData894, (u8 *) &instrumentPCMData895, NULL,
     /* 044 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 048 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 052 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -1534,7 +1534,7 @@ const InstrumentBank instrumentBank44 = {
     /* 068 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 072 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 076 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 080 */ NULL,                         &instrumentPCMData898.header, NULL,                         NULL,
+    /* 080 */ NULL,                         (u8 *) &instrumentPCMData898, NULL,                         NULL,
     /* 084 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 088 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 092 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -1543,16 +1543,16 @@ const InstrumentBank instrumentBank44 = {
     /* 104 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 108 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 116 */ NULL,                         NULL,                         NULL,                         &instrumentPCMData897.header,
-    /* 120 */ &instrumentPCMData896.header, NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         &instrumentSubbankSingleKeyData899.header, &instrumentSubbankSingleKeyData900.header, &instrumentSubbankSingleKeyData901.header
+    /* 116 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentPCMData897,
+    /* 120 */ (u8 *) &instrumentPCMData896, NULL,                         NULL,                         NULL,
+    /* 124 */ NULL,                         (u8 *) &instrumentSubbankSingleKeyData899, (u8 *) &instrumentSubbankSingleKeyData900, (u8 *) &instrumentSubbankSingleKeyData901
 };
 
 // 128 entries
 const InstrumentBank instrumentBank45 = {
-    /* 000 */ &instrumentPCMData902.header, &instrumentPCMData903.header, &instrumentPCMData904.header, &instrumentPCMData905.header,
-    /* 004 */ &instrumentPCMData906.header, &instrumentPCMData907.header, &instrumentPCMData908.header, &instrumentPCMData909.header,
-    /* 008 */ &instrumentPCMData910.header, NULL,                         NULL,                         NULL,
+    /* 000 */ (u8 *) &instrumentPCMData902, (u8 *) &instrumentPCMData903, (u8 *) &instrumentPCMData904, (u8 *) &instrumentPCMData905,
+    /* 004 */ (u8 *) &instrumentPCMData906, (u8 *) &instrumentPCMData907, (u8 *) &instrumentPCMData908, (u8 *) &instrumentPCMData909,
+    /* 008 */ (u8 *) &instrumentPCMData910, NULL,                         NULL,                         NULL,
     /* 012 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 016 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 020 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -1581,22 +1581,22 @@ const InstrumentBank instrumentBank45 = {
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 120 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 124 */ NULL,                         &instrumentSubbankSingleKeyData911.header, NULL,            &instrumentSubbankSingleKeyData912.header
+    /* 124 */ NULL,                         (u8 *) &instrumentSubbankSingleKeyData911, NULL,            (u8 *) &instrumentSubbankSingleKeyData912
 };
 
 // 128 entries
 const InstrumentBank instrumentBank46 = {
-    /* 000 */ &instrumentPCMData913.header, &instrumentPCMData914.header, &instrumentPCMData915.header, &instrumentPCMData916.header,
-    /* 004 */ &instrumentPCMData917.header, &instrumentPCMData918.header, &instrumentPCMData919.header, &instrumentPCMData920.header,
-    /* 008 */ &instrumentPCMData921.header, NULL,                         &instrumentPCMData922.header, &instrumentPCMData923.header,
-    /* 012 */ &instrumentPCMData924.header, &instrumentPCMData925.header, &instrumentPCMData926.header, &instrumentSubbankMultiKeyData927.header,
-    /* 016 */ &instrumentPCMData928.header, &instrumentPCMData929.header, &instrumentPCMData930.header, &instrumentPCMData931.header,
-    /* 020 */ &instrumentPCMData932.header, &instrumentPCMData933.header, &instrumentSubbankMultiKeyData934.header, &instrumentPCMData935.header,
-    /* 024 */ &instrumentPCMData936.header, &instrumentPCMData937.header, &instrumentPCMData938.header, &instrumentPCMData939.header,
-    /* 028 */ &instrumentPCMData940.header, &instrumentPCMData941.header, &instrumentPCMData942.header, &instrumentPCMData943.header,
-    /* 032 */ &instrumentPCMData944.header, &instrumentPCMData945.header, &instrumentPCMData946.header, &instrumentPCMData947.header,
-    /* 036 */ &instrumentPCMData948.header, &instrumentPCMData949.header, &instrumentPCMData950.header, &instrumentPCMData951.header,
-    /* 040 */ &instrumentPCMData952.header, NULL,                         NULL,                         NULL,
+    /* 000 */ (u8 *) &instrumentPCMData913, (u8 *) &instrumentPCMData914, (u8 *) &instrumentPCMData915, (u8 *) &instrumentPCMData916,
+    /* 004 */ (u8 *) &instrumentPCMData917, (u8 *) &instrumentPCMData918, (u8 *) &instrumentPCMData919, (u8 *) &instrumentPCMData920,
+    /* 008 */ (u8 *) &instrumentPCMData921, NULL,                         (u8 *) &instrumentPCMData922, (u8 *) &instrumentPCMData923,
+    /* 012 */ (u8 *) &instrumentPCMData924, (u8 *) &instrumentPCMData925, (u8 *) &instrumentPCMData926, (u8 *) &instrumentSubbankMultiKeyData927,
+    /* 016 */ (u8 *) &instrumentPCMData928, (u8 *) &instrumentPCMData929, (u8 *) &instrumentPCMData930, (u8 *) &instrumentPCMData931,
+    /* 020 */ (u8 *) &instrumentPCMData932, (u8 *) &instrumentPCMData933, (u8 *) &instrumentSubbankMultiKeyData934, (u8 *) &instrumentPCMData935,
+    /* 024 */ (u8 *) &instrumentPCMData936, (u8 *) &instrumentPCMData937, (u8 *) &instrumentPCMData938, (u8 *) &instrumentPCMData939,
+    /* 028 */ (u8 *) &instrumentPCMData940, (u8 *) &instrumentPCMData941, (u8 *) &instrumentPCMData942, (u8 *) &instrumentPCMData943,
+    /* 032 */ (u8 *) &instrumentPCMData944, (u8 *) &instrumentPCMData945, (u8 *) &instrumentPCMData946, (u8 *) &instrumentPCMData947,
+    /* 036 */ (u8 *) &instrumentPCMData948, (u8 *) &instrumentPCMData949, (u8 *) &instrumentPCMData950, (u8 *) &instrumentPCMData951,
+    /* 040 */ (u8 *) &instrumentPCMData952, NULL,                         NULL,                         NULL,
     /* 044 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 048 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 052 */ NULL,                         NULL,                         NULL,                         NULL,
@@ -1616,89 +1616,89 @@ const InstrumentBank instrumentBank46 = {
     /* 108 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 112 */ NULL,                         NULL,                         NULL,                         NULL,
     /* 116 */ NULL,                         NULL,                         NULL,                         NULL,
-    /* 120 */ NULL,                         NULL,                         NULL,                         &instrumentSubbankSingleKeyData953.header,
-    /* 124 */ &instrumentSubbankSingleKeyData954.header, &instrumentSubbankSingleKeyData955.header, &instrumentSubbankSingleKeyData956.header, &instrumentSubbankSingleKeyData957.header
+    /* 120 */ NULL,                         NULL,                         NULL,                         (u8 *) &instrumentSubbankSingleKeyData953,
+    /* 124 */ (u8 *) &instrumentSubbankSingleKeyData954, (u8 *) &instrumentSubbankSingleKeyData955, (u8 *) &instrumentSubbankSingleKeyData956, (u8 *) &instrumentSubbankSingleKeyData957
 };
 
 // 92 entries
 const InstrumentBank instrumentBank47 = {
-    /* 000 */ &instrumentPCMData958.header,  &instrumentPCMData959.header,  &instrumentPCMData960.header,  &instrumentPCMData961.header,
-    /* 004 */ &instrumentPCMData962.header,  &instrumentPCMData963.header,  &instrumentPCMData964.header,  &instrumentPCMData965.header,
-    /* 008 */ &instrumentPCMData966.header,  &instrumentPCMData967.header,  &instrumentPCMData968.header,  &instrumentPCMData969.header,
-    /* 012 */ &instrumentPCMData970.header,  &instrumentPCMData971.header,  &instrumentPCMData972.header,  &instrumentPCMData973.header,
-    /* 016 */ &instrumentPCMData974.header,  &instrumentPCMData975.header,  &instrumentPCMData976.header,  &instrumentPCMData977.header,
-    /* 020 */ &instrumentPCMData978.header,  &instrumentPCMData979.header,  &instrumentPCMData980.header,  &instrumentPCMData981.header,
-    /* 024 */ &instrumentPCMData982.header,  &instrumentPCMData983.header,  &instrumentPCMData984.header,  &instrumentPCMData985.header,
-    /* 028 */ &instrumentPCMData986.header,  &instrumentPCMData987.header,  &instrumentPCMData988.header,  &instrumentPCMData989.header,
-    /* 032 */ &instrumentPCMData990.header,  &instrumentPCMData991.header,  &instrumentPCMData992.header,  &instrumentPCMData993.header,
-    /* 036 */ &instrumentPCMData994.header,  &instrumentPCMData995.header,  &instrumentPCMData996.header,  &instrumentPCMData997.header,
-    /* 040 */ &instrumentPCMData998.header,  &instrumentPCMData999.header,  &instrumentPCMData1000.header, &instrumentPCMData1001.header,
-    /* 044 */ &instrumentPCMData1002.header, &instrumentPCMData1003.header, &instrumentPCMData1004.header, &instrumentPCMData1005.header,
-    /* 048 */ &instrumentPCMData1006.header, &instrumentPCMData1007.header, &instrumentPCMData1008.header, &instrumentPCMData1009.header,
-    /* 052 */ &instrumentPCMData1010.header, &instrumentPCMData1011.header, &instrumentPCMData1012.header, &instrumentPCMData1013.header,
-    /* 056 */ &instrumentPCMData1014.header, &instrumentPCMData1015.header, &instrumentPCMData1016.header, &instrumentPCMData1017.header,
-    /* 060 */ &instrumentPCMData1018.header, &instrumentPCMData1019.header, &instrumentPCMData1020.header, &instrumentPCMData1021.header,
-    /* 064 */ &instrumentPCMData1022.header, &instrumentPCMData1023.header, &instrumentPCMData1024.header, &instrumentPCMData1025.header,
-    /* 068 */ &instrumentPCMData1026.header, &instrumentPCMData1027.header, &instrumentPCMData1028.header, &instrumentPCMData1029.header,
-    /* 072 */ &instrumentPCMData1030.header, &instrumentPCMData1031.header, &instrumentPCMData1032.header, &instrumentPCMData1033.header,
-    /* 076 */ &instrumentPCMData1034.header, &instrumentPCMData1035.header, &instrumentPCMData1036.header, &instrumentPCMData1037.header,
-    /* 080 */ &instrumentPCMData1038.header, &instrumentPCMData1039.header, &instrumentPCMData1040.header, &instrumentPCMData1041.header,
-    /* 084 */ &instrumentPCMData1042.header, &instrumentPCMData1043.header, &instrumentPCMData1044.header, &instrumentPCMData1045.header,
-    /* 088 */ &instrumentPCMData1046.header, &instrumentPCMData1047.header, &instrumentPCMData1048.header, &instrumentPCMData1049.header
+    /* 000 */ (u8 *) &instrumentPCMData958,  (u8 *) &instrumentPCMData959,  (u8 *) &instrumentPCMData960,  (u8 *) &instrumentPCMData961,
+    /* 004 */ (u8 *) &instrumentPCMData962,  (u8 *) &instrumentPCMData963,  (u8 *) &instrumentPCMData964,  (u8 *) &instrumentPCMData965,
+    /* 008 */ (u8 *) &instrumentPCMData966,  (u8 *) &instrumentPCMData967,  (u8 *) &instrumentPCMData968,  (u8 *) &instrumentPCMData969,
+    /* 012 */ (u8 *) &instrumentPCMData970,  (u8 *) &instrumentPCMData971,  (u8 *) &instrumentPCMData972,  (u8 *) &instrumentPCMData973,
+    /* 016 */ (u8 *) &instrumentPCMData974,  (u8 *) &instrumentPCMData975,  (u8 *) &instrumentPCMData976,  (u8 *) &instrumentPCMData977,
+    /* 020 */ (u8 *) &instrumentPCMData978,  (u8 *) &instrumentPCMData979,  (u8 *) &instrumentPCMData980,  (u8 *) &instrumentPCMData981,
+    /* 024 */ (u8 *) &instrumentPCMData982,  (u8 *) &instrumentPCMData983,  (u8 *) &instrumentPCMData984,  (u8 *) &instrumentPCMData985,
+    /* 028 */ (u8 *) &instrumentPCMData986,  (u8 *) &instrumentPCMData987,  (u8 *) &instrumentPCMData988,  (u8 *) &instrumentPCMData989,
+    /* 032 */ (u8 *) &instrumentPCMData990,  (u8 *) &instrumentPCMData991,  (u8 *) &instrumentPCMData992,  (u8 *) &instrumentPCMData993,
+    /* 036 */ (u8 *) &instrumentPCMData994,  (u8 *) &instrumentPCMData995,  (u8 *) &instrumentPCMData996,  (u8 *) &instrumentPCMData997,
+    /* 040 */ (u8 *) &instrumentPCMData998,  (u8 *) &instrumentPCMData999,  (u8 *) &instrumentPCMData1000, (u8 *) &instrumentPCMData1001,
+    /* 044 */ (u8 *) &instrumentPCMData1002, (u8 *) &instrumentPCMData1003, (u8 *) &instrumentPCMData1004, (u8 *) &instrumentPCMData1005,
+    /* 048 */ (u8 *) &instrumentPCMData1006, (u8 *) &instrumentPCMData1007, (u8 *) &instrumentPCMData1008, (u8 *) &instrumentPCMData1009,
+    /* 052 */ (u8 *) &instrumentPCMData1010, (u8 *) &instrumentPCMData1011, (u8 *) &instrumentPCMData1012, (u8 *) &instrumentPCMData1013,
+    /* 056 */ (u8 *) &instrumentPCMData1014, (u8 *) &instrumentPCMData1015, (u8 *) &instrumentPCMData1016, (u8 *) &instrumentPCMData1017,
+    /* 060 */ (u8 *) &instrumentPCMData1018, (u8 *) &instrumentPCMData1019, (u8 *) &instrumentPCMData1020, (u8 *) &instrumentPCMData1021,
+    /* 064 */ (u8 *) &instrumentPCMData1022, (u8 *) &instrumentPCMData1023, (u8 *) &instrumentPCMData1024, (u8 *) &instrumentPCMData1025,
+    /* 068 */ (u8 *) &instrumentPCMData1026, (u8 *) &instrumentPCMData1027, (u8 *) &instrumentPCMData1028, (u8 *) &instrumentPCMData1029,
+    /* 072 */ (u8 *) &instrumentPCMData1030, (u8 *) &instrumentPCMData1031, (u8 *) &instrumentPCMData1032, (u8 *) &instrumentPCMData1033,
+    /* 076 */ (u8 *) &instrumentPCMData1034, (u8 *) &instrumentPCMData1035, (u8 *) &instrumentPCMData1036, (u8 *) &instrumentPCMData1037,
+    /* 080 */ (u8 *) &instrumentPCMData1038, (u8 *) &instrumentPCMData1039, (u8 *) &instrumentPCMData1040, (u8 *) &instrumentPCMData1041,
+    /* 084 */ (u8 *) &instrumentPCMData1042, (u8 *) &instrumentPCMData1043, (u8 *) &instrumentPCMData1044, (u8 *) &instrumentPCMData1045,
+    /* 088 */ (u8 *) &instrumentPCMData1046, (u8 *) &instrumentPCMData1047, (u8 *) &instrumentPCMData1048, (u8 *) &instrumentPCMData1049
 };
 
 // 90 entries
 const InstrumentBank instrumentBank48 = {
-    /* 000 */ &instrumentPCMData1050.header, &instrumentPCMData1051.header, &instrumentPCMData1052.header, &instrumentPCMData1053.header,
-    /* 004 */ &instrumentPCMData1054.header, &instrumentPCMData1055.header, &instrumentPCMData1056.header, &instrumentPCMData1057.header,
-    /* 008 */ &instrumentPCMData1058.header, &instrumentPCMData1059.header, &instrumentPCMData1060.header, &instrumentPCMData1061.header,
-    /* 012 */ &instrumentPCMData1062.header, &instrumentPCMData1063.header, &instrumentPCMData1064.header, &instrumentPCMData1065.header,
-    /* 016 */ &instrumentPCMData1066.header, &instrumentPCMData1067.header, &instrumentPCMData1068.header, &instrumentPCMData1069.header,
-    /* 020 */ &instrumentPCMData1070.header, &instrumentPCMData1071.header, &instrumentPCMData1072.header, &instrumentPCMData1073.header,
-    /* 024 */ &instrumentPCMData1074.header, &instrumentPCMData1075.header, &instrumentPCMData1076.header, &instrumentPCMData1077.header,
-    /* 028 */ &instrumentPCMData1078.header, &instrumentPCMData1079.header, &instrumentPCMData1080.header, &instrumentPCMData1081.header,
-    /* 032 */ &instrumentPCMData1082.header, &instrumentPCMData1083.header, &instrumentPCMData1084.header, &instrumentPCMData1085.header,
-    /* 036 */ &instrumentPCMData1086.header, &instrumentPCMData1087.header, &instrumentPCMData1088.header, &instrumentPCMData1089.header,
-    /* 040 */ &instrumentPCMData1090.header, &instrumentPCMData1091.header, &instrumentPCMData1092.header, NULL,
-    /* 044 */ &instrumentPCMData1093.header, &instrumentPCMData1094.header, &instrumentPCMData1095.header, &instrumentPCMData1096.header,
-    /* 048 */ &instrumentPCMData1097.header, &instrumentPCMData1098.header, &instrumentPCMData1099.header, &instrumentPCMData1100.header,
-    /* 052 */ &instrumentPCMData1101.header, &instrumentPCMData1102.header, &instrumentPCMData1103.header, &instrumentPCMData1104.header,
-    /* 056 */ &instrumentPCMData1105.header, &instrumentPCMData1106.header, &instrumentPCMData1107.header, &instrumentPCMData1108.header,
-    /* 060 */ &instrumentPCMData1109.header, &instrumentPCMData1110.header, &instrumentPCMData1111.header, &instrumentPCMData1112.header,
-    /* 064 */ &instrumentPCMData1113.header, &instrumentPCMData1114.header, &instrumentPCMData1115.header, &instrumentPCMData1116.header,
-    /* 068 */ &instrumentPCMData1117.header, &instrumentPCMData1118.header, &instrumentPCMData1119.header, &instrumentPCMData1120.header,
-    /* 072 */ &instrumentPCMData1121.header, &instrumentPCMData1122.header, &instrumentPCMData1123.header, NULL,
+    /* 000 */ (u8 *) &instrumentPCMData1050, (u8 *) &instrumentPCMData1051, (u8 *) &instrumentPCMData1052, (u8 *) &instrumentPCMData1053,
+    /* 004 */ (u8 *) &instrumentPCMData1054, (u8 *) &instrumentPCMData1055, (u8 *) &instrumentPCMData1056, (u8 *) &instrumentPCMData1057,
+    /* 008 */ (u8 *) &instrumentPCMData1058, (u8 *) &instrumentPCMData1059, (u8 *) &instrumentPCMData1060, (u8 *) &instrumentPCMData1061,
+    /* 012 */ (u8 *) &instrumentPCMData1062, (u8 *) &instrumentPCMData1063, (u8 *) &instrumentPCMData1064, (u8 *) &instrumentPCMData1065,
+    /* 016 */ (u8 *) &instrumentPCMData1066, (u8 *) &instrumentPCMData1067, (u8 *) &instrumentPCMData1068, (u8 *) &instrumentPCMData1069,
+    /* 020 */ (u8 *) &instrumentPCMData1070, (u8 *) &instrumentPCMData1071, (u8 *) &instrumentPCMData1072, (u8 *) &instrumentPCMData1073,
+    /* 024 */ (u8 *) &instrumentPCMData1074, (u8 *) &instrumentPCMData1075, (u8 *) &instrumentPCMData1076, (u8 *) &instrumentPCMData1077,
+    /* 028 */ (u8 *) &instrumentPCMData1078, (u8 *) &instrumentPCMData1079, (u8 *) &instrumentPCMData1080, (u8 *) &instrumentPCMData1081,
+    /* 032 */ (u8 *) &instrumentPCMData1082, (u8 *) &instrumentPCMData1083, (u8 *) &instrumentPCMData1084, (u8 *) &instrumentPCMData1085,
+    /* 036 */ (u8 *) &instrumentPCMData1086, (u8 *) &instrumentPCMData1087, (u8 *) &instrumentPCMData1088, (u8 *) &instrumentPCMData1089,
+    /* 040 */ (u8 *) &instrumentPCMData1090, (u8 *) &instrumentPCMData1091, (u8 *) &instrumentPCMData1092, NULL,
+    /* 044 */ (u8 *) &instrumentPCMData1093, (u8 *) &instrumentPCMData1094, (u8 *) &instrumentPCMData1095, (u8 *) &instrumentPCMData1096,
+    /* 048 */ (u8 *) &instrumentPCMData1097, (u8 *) &instrumentPCMData1098, (u8 *) &instrumentPCMData1099, (u8 *) &instrumentPCMData1100,
+    /* 052 */ (u8 *) &instrumentPCMData1101, (u8 *) &instrumentPCMData1102, (u8 *) &instrumentPCMData1103, (u8 *) &instrumentPCMData1104,
+    /* 056 */ (u8 *) &instrumentPCMData1105, (u8 *) &instrumentPCMData1106, (u8 *) &instrumentPCMData1107, (u8 *) &instrumentPCMData1108,
+    /* 060 */ (u8 *) &instrumentPCMData1109, (u8 *) &instrumentPCMData1110, (u8 *) &instrumentPCMData1111, (u8 *) &instrumentPCMData1112,
+    /* 064 */ (u8 *) &instrumentPCMData1113, (u8 *) &instrumentPCMData1114, (u8 *) &instrumentPCMData1115, (u8 *) &instrumentPCMData1116,
+    /* 068 */ (u8 *) &instrumentPCMData1117, (u8 *) &instrumentPCMData1118, (u8 *) &instrumentPCMData1119, (u8 *) &instrumentPCMData1120,
+    /* 072 */ (u8 *) &instrumentPCMData1121, (u8 *) &instrumentPCMData1122, (u8 *) &instrumentPCMData1123, NULL,
     /* 076 */ NULL,                          NULL,                          NULL,                          NULL,
-    /* 080 */ NULL,                          NULL,                          &instrumentPCMData1124.header, &instrumentPCMData1125.header,
-    /* 084 */ &instrumentPCMData1126.header, &instrumentPCMData1127.header, &instrumentPCMData1128.header, &instrumentPCMData1129.header,
-    /* 088 */ &instrumentPCMData1130.header, &instrumentPCMData1131.header
+    /* 080 */ NULL,                          NULL,                          (u8 *) &instrumentPCMData1124, (u8 *) &instrumentPCMData1125,
+    /* 084 */ (u8 *) &instrumentPCMData1126, (u8 *) &instrumentPCMData1127, (u8 *) &instrumentPCMData1128, (u8 *) &instrumentPCMData1129,
+    /* 088 */ (u8 *) &instrumentPCMData1130, (u8 *) &instrumentPCMData1131
 };
 
 // 128 entries
 const InstrumentBank instrumentBank49 = {
-    /* 000 */ &instrumentPCMData1132.header, &instrumentPCMData1133.header, &instrumentPCMData1134.header, &instrumentPCMData1135.header,
-    /* 004 */ &instrumentPCMData1136.header, &instrumentPCMData1137.header, &instrumentPCMData1138.header, &instrumentPCMData1139.header,
-    /* 008 */ &instrumentPCMData1140.header, &instrumentPCMData1141.header, &instrumentPCMData1142.header, &instrumentPCMData1143.header,
-    /* 012 */ &instrumentPCMData1144.header, &instrumentPCMData1145.header, &instrumentPCMData1146.header, &instrumentPCMData1147.header,
-    /* 016 */ &instrumentPCMData1148.header, &instrumentPCMData1149.header, &instrumentPCMData1150.header, &instrumentPCMData1151.header,
-    /* 020 */ &instrumentPCMData1152.header, &instrumentPCMData1153.header, &instrumentPCMData1154.header, &instrumentPCMData1155.header,
-    /* 024 */ &instrumentPCMData1156.header, &instrumentPCMData1157.header, &instrumentPCMData1158.header, &instrumentPCMData1159.header,
-    /* 028 */ &instrumentPCMData1160.header, &instrumentPCMData1161.header, &instrumentPCMData1162.header, &instrumentPCMData1163.header,
-    /* 032 */ &instrumentPCMData1164.header, &instrumentPCMData1165.header, &instrumentPCMData1166.header, &instrumentPCMData1167.header,
-    /* 036 */ &instrumentPCMData1168.header, &instrumentPCMData1169.header, &instrumentPCMData1170.header, &instrumentPCMData1171.header,
-    /* 040 */ &instrumentPCMData1172.header, &instrumentPCMData1173.header, &instrumentPCMData1174.header, &instrumentPCMData1175.header,
-    /* 044 */ &instrumentPCMData1176.header, &instrumentPCMData1177.header, &instrumentPCMData1178.header, &instrumentPCMData1179.header,
-    /* 048 */ &instrumentPCMData1180.header, &instrumentPCMData1181.header, &instrumentPCMData1182.header, &instrumentPCMData1183.header,
-    /* 052 */ &instrumentPCMData1184.header, &instrumentPCMData1185.header, &instrumentPCMData1186.header, NULL,
-    /* 056 */ &instrumentPCMData1187.header, &instrumentPCMData1188.header, &instrumentPCMData1189.header, &instrumentPCMData1190.header,
-    /* 060 */ &instrumentPCMData1191.header, &instrumentPCMData1192.header, &instrumentPCMData1193.header, &instrumentPCMData1194.header,
-    /* 064 */ &instrumentPCMData1195.header, &instrumentPCMData1196.header, NULL,                          &instrumentPCMData1197.header,
-    /* 068 */ &instrumentPCMData1198.header, &instrumentPCMData1199.header, &instrumentPCMData1200.header, &instrumentPCMData1201.header,
-    /* 072 */ &instrumentPCMData1202.header, &instrumentPCMData1203.header, &instrumentPCMData1204.header, &instrumentPCMData1205.header,
-    /* 076 */ &instrumentPCMData1206.header, &instrumentPCMData1207.header, &instrumentPCMData1208.header, &instrumentPCMData1209.header,
-    /* 080 */ &instrumentPCMData1210.header, &instrumentPCMData1211.header, &instrumentPCMData1212.header, &instrumentPCMData1213.header,
-    /* 084 */ &instrumentPCMData1214.header, &instrumentPCMData1215.header, &instrumentPCMData1216.header, &instrumentPCMData1217.header,
-    /* 088 */ &instrumentPCMData1218.header, NULL,                          NULL,                          NULL,
+    /* 000 */ (u8 *) &instrumentPCMData1132, (u8 *) &instrumentPCMData1133, (u8 *) &instrumentPCMData1134, (u8 *) &instrumentPCMData1135,
+    /* 004 */ (u8 *) &instrumentPCMData1136, (u8 *) &instrumentPCMData1137, (u8 *) &instrumentPCMData1138, (u8 *) &instrumentPCMData1139,
+    /* 008 */ (u8 *) &instrumentPCMData1140, (u8 *) &instrumentPCMData1141, (u8 *) &instrumentPCMData1142, (u8 *) &instrumentPCMData1143,
+    /* 012 */ (u8 *) &instrumentPCMData1144, (u8 *) &instrumentPCMData1145, (u8 *) &instrumentPCMData1146, (u8 *) &instrumentPCMData1147,
+    /* 016 */ (u8 *) &instrumentPCMData1148, (u8 *) &instrumentPCMData1149, (u8 *) &instrumentPCMData1150, (u8 *) &instrumentPCMData1151,
+    /* 020 */ (u8 *) &instrumentPCMData1152, (u8 *) &instrumentPCMData1153, (u8 *) &instrumentPCMData1154, (u8 *) &instrumentPCMData1155,
+    /* 024 */ (u8 *) &instrumentPCMData1156, (u8 *) &instrumentPCMData1157, (u8 *) &instrumentPCMData1158, (u8 *) &instrumentPCMData1159,
+    /* 028 */ (u8 *) &instrumentPCMData1160, (u8 *) &instrumentPCMData1161, (u8 *) &instrumentPCMData1162, (u8 *) &instrumentPCMData1163,
+    /* 032 */ (u8 *) &instrumentPCMData1164, (u8 *) &instrumentPCMData1165, (u8 *) &instrumentPCMData1166, (u8 *) &instrumentPCMData1167,
+    /* 036 */ (u8 *) &instrumentPCMData1168, (u8 *) &instrumentPCMData1169, (u8 *) &instrumentPCMData1170, (u8 *) &instrumentPCMData1171,
+    /* 040 */ (u8 *) &instrumentPCMData1172, (u8 *) &instrumentPCMData1173, (u8 *) &instrumentPCMData1174, (u8 *) &instrumentPCMData1175,
+    /* 044 */ (u8 *) &instrumentPCMData1176, (u8 *) &instrumentPCMData1177, (u8 *) &instrumentPCMData1178, (u8 *) &instrumentPCMData1179,
+    /* 048 */ (u8 *) &instrumentPCMData1180, (u8 *) &instrumentPCMData1181, (u8 *) &instrumentPCMData1182, (u8 *) &instrumentPCMData1183,
+    /* 052 */ (u8 *) &instrumentPCMData1184, (u8 *) &instrumentPCMData1185, (u8 *) &instrumentPCMData1186, NULL,
+    /* 056 */ (u8 *) &instrumentPCMData1187, (u8 *) &instrumentPCMData1188, (u8 *) &instrumentPCMData1189, (u8 *) &instrumentPCMData1190,
+    /* 060 */ (u8 *) &instrumentPCMData1191, (u8 *) &instrumentPCMData1192, (u8 *) &instrumentPCMData1193, (u8 *) &instrumentPCMData1194,
+    /* 064 */ (u8 *) &instrumentPCMData1195, (u8 *) &instrumentPCMData1196, NULL,                          (u8 *) &instrumentPCMData1197,
+    /* 068 */ (u8 *) &instrumentPCMData1198, (u8 *) &instrumentPCMData1199, (u8 *) &instrumentPCMData1200, (u8 *) &instrumentPCMData1201,
+    /* 072 */ (u8 *) &instrumentPCMData1202, (u8 *) &instrumentPCMData1203, (u8 *) &instrumentPCMData1204, (u8 *) &instrumentPCMData1205,
+    /* 076 */ (u8 *) &instrumentPCMData1206, (u8 *) &instrumentPCMData1207, (u8 *) &instrumentPCMData1208, (u8 *) &instrumentPCMData1209,
+    /* 080 */ (u8 *) &instrumentPCMData1210, (u8 *) &instrumentPCMData1211, (u8 *) &instrumentPCMData1212, (u8 *) &instrumentPCMData1213,
+    /* 084 */ (u8 *) &instrumentPCMData1214, (u8 *) &instrumentPCMData1215, (u8 *) &instrumentPCMData1216, (u8 *) &instrumentPCMData1217,
+    /* 088 */ (u8 *) &instrumentPCMData1218, NULL,                          NULL,                          NULL,
     /* 092 */ NULL,                          NULL,                          NULL,                          NULL,
     /* 096 */ NULL,                          NULL,                          NULL,                          NULL,
     /* 100 */ NULL,                          NULL,                          NULL,                          NULL,
@@ -1707,42 +1707,42 @@ const InstrumentBank instrumentBank49 = {
     /* 112 */ NULL,                          NULL,                          NULL,                          NULL,
     /* 116 */ NULL,                          NULL,                          NULL,                          NULL,
     /* 120 */ NULL,                          NULL,                          NULL,                          NULL,
-    /* 124 */ NULL,                          NULL,                          NULL,                          &instrumentSubbankSingleKeyData1219.header
+    /* 124 */ NULL,                          NULL,                          NULL,                          (u8 *) &instrumentSubbankSingleKeyData1219
 };
 
 // 76 entries
 const InstrumentBank instrumentBank50 = {
-    /* 000 */ &instrumentPCMData1220.header, &instrumentPCMData1221.header, &instrumentPCMData1222.header, &instrumentPCMData1223.header,
-    /* 004 */ &instrumentPCMData1224.header, &instrumentPCMData1225.header, &instrumentPCMData1226.header, &instrumentPCMData1227.header,
-    /* 008 */ &instrumentPCMData1228.header, &instrumentPCMData1229.header, &instrumentPCMData1230.header, &instrumentPCMData1231.header,
-    /* 012 */ &instrumentPCMData1232.header, &instrumentPCMData1233.header, &instrumentPCMData1234.header, &instrumentPCMData1235.header,
-    /* 016 */ &instrumentPCMData1236.header, &instrumentPCMData1237.header, &instrumentPCMData1238.header, &instrumentPCMData1239.header,
-    /* 020 */ &instrumentPCMData1240.header, &instrumentPCMData1241.header, &instrumentPCMData1242.header, NULL,
-    /* 024 */ NULL,                          NULL,                          &instrumentPCMData1243.header, &instrumentPCMData1244.header,
-    /* 028 */ &instrumentPCMData1245.header, &instrumentPCMData1246.header, &instrumentPCMData1247.header, &instrumentPCMData1248.header,
-    /* 032 */ &instrumentPCMData1249.header, &instrumentPCMData1250.header, &instrumentPCMData1251.header, &instrumentPCMData1252.header,
-    /* 036 */ &instrumentPCMData1253.header, &instrumentPCMData1254.header, NULL,                          &instrumentPCMData1255.header,
-    /* 040 */ &instrumentPCMData1256.header, &instrumentPCMData1257.header, &instrumentPCMData1258.header, NULL,
-    /* 044 */ &instrumentPCMData1259.header, &instrumentPCMData1260.header, &instrumentPCMData1261.header, NULL,
-    /* 048 */ &instrumentPCMData1262.header, NULL,                          &instrumentPCMData1263.header, NULL,
-    /* 052 */ &instrumentPCMData1264.header, NULL,                          NULL,                          NULL,
-    /* 056 */ &instrumentPCMData1265.header, &instrumentPCMData1266.header, &instrumentPCMData1267.header, NULL,
-    /* 060 */ NULL,                          &instrumentPCMData1268.header, &instrumentPCMData1269.header, NULL,
-    /* 064 */ &instrumentPCMData1270.header, NULL,                          &instrumentPCMData1271.header, NULL,
-    /* 068 */ &instrumentPCMData1272.header, &instrumentPCMData1273.header, &instrumentPCMData1274.header, &instrumentPCMData1275.header,
-    /* 072 */ &instrumentPCMData1276.header, &instrumentPCMData1277.header, &instrumentPCMData1278.header, &instrumentPCMData1279.header
+    /* 000 */ (u8 *) &instrumentPCMData1220, (u8 *) &instrumentPCMData1221, (u8 *) &instrumentPCMData1222, (u8 *) &instrumentPCMData1223,
+    /* 004 */ (u8 *) &instrumentPCMData1224, (u8 *) &instrumentPCMData1225, (u8 *) &instrumentPCMData1226, (u8 *) &instrumentPCMData1227,
+    /* 008 */ (u8 *) &instrumentPCMData1228, (u8 *) &instrumentPCMData1229, (u8 *) &instrumentPCMData1230, (u8 *) &instrumentPCMData1231,
+    /* 012 */ (u8 *) &instrumentPCMData1232, (u8 *) &instrumentPCMData1233, (u8 *) &instrumentPCMData1234, (u8 *) &instrumentPCMData1235,
+    /* 016 */ (u8 *) &instrumentPCMData1236, (u8 *) &instrumentPCMData1237, (u8 *) &instrumentPCMData1238, (u8 *) &instrumentPCMData1239,
+    /* 020 */ (u8 *) &instrumentPCMData1240, (u8 *) &instrumentPCMData1241, (u8 *) &instrumentPCMData1242, NULL,
+    /* 024 */ NULL,                          NULL,                          (u8 *) &instrumentPCMData1243, (u8 *) &instrumentPCMData1244,
+    /* 028 */ (u8 *) &instrumentPCMData1245, (u8 *) &instrumentPCMData1246, (u8 *) &instrumentPCMData1247, (u8 *) &instrumentPCMData1248,
+    /* 032 */ (u8 *) &instrumentPCMData1249, (u8 *) &instrumentPCMData1250, (u8 *) &instrumentPCMData1251, (u8 *) &instrumentPCMData1252,
+    /* 036 */ (u8 *) &instrumentPCMData1253, (u8 *) &instrumentPCMData1254, NULL,                          (u8 *) &instrumentPCMData1255,
+    /* 040 */ (u8 *) &instrumentPCMData1256, (u8 *) &instrumentPCMData1257, (u8 *) &instrumentPCMData1258, NULL,
+    /* 044 */ (u8 *) &instrumentPCMData1259, (u8 *) &instrumentPCMData1260, (u8 *) &instrumentPCMData1261, NULL,
+    /* 048 */ (u8 *) &instrumentPCMData1262, NULL,                          (u8 *) &instrumentPCMData1263, NULL,
+    /* 052 */ (u8 *) &instrumentPCMData1264, NULL,                          NULL,                          NULL,
+    /* 056 */ (u8 *) &instrumentPCMData1265, (u8 *) &instrumentPCMData1266, (u8 *) &instrumentPCMData1267, NULL,
+    /* 060 */ NULL,                          (u8 *) &instrumentPCMData1268, (u8 *) &instrumentPCMData1269, NULL,
+    /* 064 */ (u8 *) &instrumentPCMData1270, NULL,                          (u8 *) &instrumentPCMData1271, NULL,
+    /* 068 */ (u8 *) &instrumentPCMData1272, (u8 *) &instrumentPCMData1273, (u8 *) &instrumentPCMData1274, (u8 *) &instrumentPCMData1275,
+    /* 072 */ (u8 *) &instrumentPCMData1276, (u8 *) &instrumentPCMData1277, (u8 *) &instrumentPCMData1278, (u8 *) &instrumentPCMData1279
 };
 
 // 78 entries
 const InstrumentBank instrumentBank51 = {
-    /* 000 */ &instrumentPCMData1280.header, &instrumentPCMData1281.header, &instrumentPCMData1282.header, &instrumentPCMData1283.header,
-    /* 004 */ &instrumentPCMData1284.header, &instrumentPCMData1285.header, &instrumentPCMData1286.header, &instrumentPCMData1287.header,
-    /* 008 */ &instrumentPCMData1288.header, &instrumentPCMData1289.header, &instrumentPCMData1290.header, &instrumentPCMData1291.header,
-    /* 012 */ &instrumentPCMData1292.header, &instrumentPCMData1293.header, &instrumentPCMData1294.header, &instrumentPCMData1295.header,
-    /* 016 */ &instrumentPCMData1296.header, &instrumentPCMData1297.header, &instrumentPCMData1298.header, &instrumentPCMData1299.header,
-    /* 020 */ &instrumentPCMData1300.header, &instrumentPCMData1301.header, &instrumentPCMData1302.header, &instrumentPCMData1303.header,
-    /* 024 */ &instrumentPCMData1304.header, &instrumentPCMData1305.header, &instrumentPCMData1306.header, &instrumentPCMData1307.header,
-    /* 028 */ &instrumentPCMData1308.header, NULL,                          NULL,                          NULL,
+    /* 000 */ (u8 *) &instrumentPCMData1280, (u8 *) &instrumentPCMData1281, (u8 *) &instrumentPCMData1282, (u8 *) &instrumentPCMData1283,
+    /* 004 */ (u8 *) &instrumentPCMData1284, (u8 *) &instrumentPCMData1285, (u8 *) &instrumentPCMData1286, (u8 *) &instrumentPCMData1287,
+    /* 008 */ (u8 *) &instrumentPCMData1288, (u8 *) &instrumentPCMData1289, (u8 *) &instrumentPCMData1290, (u8 *) &instrumentPCMData1291,
+    /* 012 */ (u8 *) &instrumentPCMData1292, (u8 *) &instrumentPCMData1293, (u8 *) &instrumentPCMData1294, (u8 *) &instrumentPCMData1295,
+    /* 016 */ (u8 *) &instrumentPCMData1296, (u8 *) &instrumentPCMData1297, (u8 *) &instrumentPCMData1298, (u8 *) &instrumentPCMData1299,
+    /* 020 */ (u8 *) &instrumentPCMData1300, (u8 *) &instrumentPCMData1301, (u8 *) &instrumentPCMData1302, (u8 *) &instrumentPCMData1303,
+    /* 024 */ (u8 *) &instrumentPCMData1304, (u8 *) &instrumentPCMData1305, (u8 *) &instrumentPCMData1306, (u8 *) &instrumentPCMData1307,
+    /* 028 */ (u8 *) &instrumentPCMData1308, NULL,                          NULL,                          NULL,
     /* 032 */ NULL,                          NULL,                          NULL,                          NULL,
     /* 036 */ NULL,                          NULL,                          NULL,                          NULL,
     /* 040 */ NULL,                          NULL,                          NULL,                          NULL,
@@ -1751,191 +1751,191 @@ const InstrumentBank instrumentBank51 = {
     /* 052 */ NULL,                          NULL,                          NULL,                          NULL,
     /* 056 */ NULL,                          NULL,                          NULL,                          NULL,
     /* 060 */ NULL,                          NULL,                          NULL,                          NULL,
-    /* 064 */ NULL,                          NULL,                          NULL,                          &instrumentPCMData1309.header,
-    /* 068 */ &instrumentPCMData1310.header, &instrumentPCMData1311.header, &instrumentPCMData1312.header, &instrumentPCMData1313.header,
-    /* 072 */ &instrumentPCMData1314.header, &instrumentPCMData1315.header, &instrumentPCMData1316.header, &instrumentPCMData1317.header,
-    /* 076 */ &instrumentPCMData1318.header, &instrumentPCMData1319.header
+    /* 064 */ NULL,                          NULL,                          NULL,                          (u8 *) &instrumentPCMData1309,
+    /* 068 */ (u8 *) &instrumentPCMData1310, (u8 *) &instrumentPCMData1311, (u8 *) &instrumentPCMData1312, (u8 *) &instrumentPCMData1313,
+    /* 072 */ (u8 *) &instrumentPCMData1314, (u8 *) &instrumentPCMData1315, (u8 *) &instrumentPCMData1316, (u8 *) &instrumentPCMData1317,
+    /* 076 */ (u8 *) &instrumentPCMData1318, (u8 *) &instrumentPCMData1319
 };
 
 // 69 entries
 const InstrumentBank instrumentBank52 = {
-    /* 000 */ &instrumentPCMData1320.header, &instrumentPCMData1321.header, &instrumentPCMData1322.header, &instrumentPCMData1323.header,
-    /* 004 */ &instrumentPCMData1324.header, &instrumentPCMData1325.header, &instrumentPCMData1326.header, &instrumentPCMData1327.header,
-    /* 008 */ &instrumentPCMData1328.header, &instrumentPCMData1329.header, &instrumentPCMData1330.header, &instrumentPCMData1331.header,
-    /* 012 */ &instrumentPCMData1332.header, &instrumentPCMData1333.header, &instrumentPCMData1334.header, &instrumentPCMData1335.header,
-    /* 016 */ &instrumentPCMData1336.header, &instrumentPCMData1337.header, &instrumentPCMData1338.header, &instrumentPCMData1339.header,
-    /* 020 */ &instrumentPCMData1340.header, &instrumentPCMData1341.header, &instrumentPCMData1342.header, &instrumentPCMData1343.header,
-    /* 024 */ &instrumentPCMData1344.header, &instrumentPCMData1345.header, &instrumentPCMData1346.header, &instrumentPCMData1347.header,
-    /* 028 */ &instrumentPCMData1348.header, &instrumentPCMData1349.header, &instrumentPCMData1350.header, &instrumentPCMData1351.header,
-    /* 032 */ &instrumentPCMData1352.header, &instrumentPCMData1353.header, &instrumentPCMData1354.header, &instrumentPCMData1355.header,
-    /* 036 */ &instrumentPCMData1356.header, &instrumentPCMData1357.header, &instrumentPCMData1358.header, &instrumentPCMData1359.header,
-    /* 040 */ &instrumentPCMData1360.header, &instrumentPCMData1361.header, NULL,                          NULL,
+    /* 000 */ (u8 *) &instrumentPCMData1320, (u8 *) &instrumentPCMData1321, (u8 *) &instrumentPCMData1322, (u8 *) &instrumentPCMData1323,
+    /* 004 */ (u8 *) &instrumentPCMData1324, (u8 *) &instrumentPCMData1325, (u8 *) &instrumentPCMData1326, (u8 *) &instrumentPCMData1327,
+    /* 008 */ (u8 *) &instrumentPCMData1328, (u8 *) &instrumentPCMData1329, (u8 *) &instrumentPCMData1330, (u8 *) &instrumentPCMData1331,
+    /* 012 */ (u8 *) &instrumentPCMData1332, (u8 *) &instrumentPCMData1333, (u8 *) &instrumentPCMData1334, (u8 *) &instrumentPCMData1335,
+    /* 016 */ (u8 *) &instrumentPCMData1336, (u8 *) &instrumentPCMData1337, (u8 *) &instrumentPCMData1338, (u8 *) &instrumentPCMData1339,
+    /* 020 */ (u8 *) &instrumentPCMData1340, (u8 *) &instrumentPCMData1341, (u8 *) &instrumentPCMData1342, (u8 *) &instrumentPCMData1343,
+    /* 024 */ (u8 *) &instrumentPCMData1344, (u8 *) &instrumentPCMData1345, (u8 *) &instrumentPCMData1346, (u8 *) &instrumentPCMData1347,
+    /* 028 */ (u8 *) &instrumentPCMData1348, (u8 *) &instrumentPCMData1349, (u8 *) &instrumentPCMData1350, (u8 *) &instrumentPCMData1351,
+    /* 032 */ (u8 *) &instrumentPCMData1352, (u8 *) &instrumentPCMData1353, (u8 *) &instrumentPCMData1354, (u8 *) &instrumentPCMData1355,
+    /* 036 */ (u8 *) &instrumentPCMData1356, (u8 *) &instrumentPCMData1357, (u8 *) &instrumentPCMData1358, (u8 *) &instrumentPCMData1359,
+    /* 040 */ (u8 *) &instrumentPCMData1360, (u8 *) &instrumentPCMData1361, NULL,                          NULL,
     /* 044 */ NULL,                          NULL,                          NULL,                          NULL,
-    /* 048 */ NULL,                          NULL,                          NULL,                          &instrumentPCMData1362.header,
-    /* 052 */ &instrumentPCMData1363.header, &instrumentPCMData1364.header, &instrumentPCMData1365.header, &instrumentPCMData1366.header,
-    /* 056 */ &instrumentPCMData1367.header, &instrumentPCMData1368.header, &instrumentPCMData1369.header, &instrumentPCMData1370.header,
-    /* 060 */ &instrumentPCMData1371.header, &instrumentPCMData1372.header, &instrumentPCMData1373.header, &instrumentPCMData1374.header,
-    /* 064 */ &instrumentPCMData1375.header, &instrumentPCMData1376.header, &instrumentPCMData1377.header, &instrumentPCMData1378.header,
-    /* 068 */ &instrumentPCMData1379.header
+    /* 048 */ NULL,                          NULL,                          NULL,                          (u8 *) &instrumentPCMData1362,
+    /* 052 */ (u8 *) &instrumentPCMData1363, (u8 *) &instrumentPCMData1364, (u8 *) &instrumentPCMData1365, (u8 *) &instrumentPCMData1366,
+    /* 056 */ (u8 *) &instrumentPCMData1367, (u8 *) &instrumentPCMData1368, (u8 *) &instrumentPCMData1369, (u8 *) &instrumentPCMData1370,
+    /* 060 */ (u8 *) &instrumentPCMData1371, (u8 *) &instrumentPCMData1372, (u8 *) &instrumentPCMData1373, (u8 *) &instrumentPCMData1374,
+    /* 064 */ (u8 *) &instrumentPCMData1375, (u8 *) &instrumentPCMData1376, (u8 *) &instrumentPCMData1377, (u8 *) &instrumentPCMData1378,
+    /* 068 */ (u8 *) &instrumentPCMData1379
 };
 
 // 55 entries
 const InstrumentBank instrumentBank53 = {
-    /* 000 */ &instrumentPCMData1380.header, &instrumentPCMData1381.header, &instrumentPCMData1382.header, &instrumentPCMData1383.header,
-    /* 004 */ &instrumentPCMData1384.header, &instrumentPCMData1385.header, &instrumentPCMData1386.header, &instrumentPCMData1387.header,
-    /* 008 */ &instrumentPCMData1388.header, &instrumentPCMData1389.header, &instrumentPCMData1390.header, &instrumentPCMData1391.header,
-    /* 012 */ &instrumentPCMData1392.header, &instrumentPCMData1393.header, &instrumentPCMData1394.header, &instrumentPCMData1395.header,
-    /* 016 */ &instrumentPCMData1396.header, &instrumentPCMData1397.header, &instrumentPCMData1398.header, &instrumentPCMData1399.header,
-    /* 020 */ &instrumentPCMData1400.header, &instrumentPCMData1401.header, &instrumentPCMData1402.header, &instrumentPCMData1403.header,
-    /* 024 */ &instrumentPCMData1404.header, &instrumentPCMData1405.header, &instrumentPCMData1406.header, &instrumentPCMData1407.header,
-    /* 028 */ &instrumentPCMData1408.header, &instrumentPCMData1409.header, &instrumentPCMData1410.header, &instrumentPCMData1411.header,
-    /* 032 */ &instrumentPCMData1412.header, &instrumentPCMData1413.header, &instrumentPCMData1414.header, &instrumentPCMData1415.header,
-    /* 036 */ &instrumentPCMData1416.header, &instrumentPCMData1417.header, &instrumentPCMData1418.header, &instrumentPCMData1419.header,
-    /* 040 */ &instrumentPCMData1420.header, &instrumentPCMData1421.header, &instrumentPCMData1422.header, &instrumentPCMData1423.header,
-    /* 044 */ &instrumentPCMData1424.header, &instrumentPCMData1425.header, &instrumentPCMData1426.header, &instrumentPCMData1427.header,
-    /* 048 */ &instrumentPCMData1428.header, &instrumentPCMData1429.header, &instrumentPCMData1430.header, &instrumentPCMData1431.header,
-    /* 052 */ &instrumentPCMData1432.header, &instrumentPCMData1433.header, &instrumentPCMData1434.header
+    /* 000 */ (u8 *) &instrumentPCMData1380, (u8 *) &instrumentPCMData1381, (u8 *) &instrumentPCMData1382, (u8 *) &instrumentPCMData1383,
+    /* 004 */ (u8 *) &instrumentPCMData1384, (u8 *) &instrumentPCMData1385, (u8 *) &instrumentPCMData1386, (u8 *) &instrumentPCMData1387,
+    /* 008 */ (u8 *) &instrumentPCMData1388, (u8 *) &instrumentPCMData1389, (u8 *) &instrumentPCMData1390, (u8 *) &instrumentPCMData1391,
+    /* 012 */ (u8 *) &instrumentPCMData1392, (u8 *) &instrumentPCMData1393, (u8 *) &instrumentPCMData1394, (u8 *) &instrumentPCMData1395,
+    /* 016 */ (u8 *) &instrumentPCMData1396, (u8 *) &instrumentPCMData1397, (u8 *) &instrumentPCMData1398, (u8 *) &instrumentPCMData1399,
+    /* 020 */ (u8 *) &instrumentPCMData1400, (u8 *) &instrumentPCMData1401, (u8 *) &instrumentPCMData1402, (u8 *) &instrumentPCMData1403,
+    /* 024 */ (u8 *) &instrumentPCMData1404, (u8 *) &instrumentPCMData1405, (u8 *) &instrumentPCMData1406, (u8 *) &instrumentPCMData1407,
+    /* 028 */ (u8 *) &instrumentPCMData1408, (u8 *) &instrumentPCMData1409, (u8 *) &instrumentPCMData1410, (u8 *) &instrumentPCMData1411,
+    /* 032 */ (u8 *) &instrumentPCMData1412, (u8 *) &instrumentPCMData1413, (u8 *) &instrumentPCMData1414, (u8 *) &instrumentPCMData1415,
+    /* 036 */ (u8 *) &instrumentPCMData1416, (u8 *) &instrumentPCMData1417, (u8 *) &instrumentPCMData1418, (u8 *) &instrumentPCMData1419,
+    /* 040 */ (u8 *) &instrumentPCMData1420, (u8 *) &instrumentPCMData1421, (u8 *) &instrumentPCMData1422, (u8 *) &instrumentPCMData1423,
+    /* 044 */ (u8 *) &instrumentPCMData1424, (u8 *) &instrumentPCMData1425, (u8 *) &instrumentPCMData1426, (u8 *) &instrumentPCMData1427,
+    /* 048 */ (u8 *) &instrumentPCMData1428, (u8 *) &instrumentPCMData1429, (u8 *) &instrumentPCMData1430, (u8 *) &instrumentPCMData1431,
+    /* 052 */ (u8 *) &instrumentPCMData1432, (u8 *) &instrumentPCMData1433, (u8 *) &instrumentPCMData1434
 };
 
 // 59 entries
 const InstrumentBank instrumentBank54 = {
-    /* 000 */ &instrumentPCMData1435.header, &instrumentPCMData1436.header, &instrumentPCMData1437.header, &instrumentPCMData1438.header,
-    /* 004 */ &instrumentPCMData1439.header, NULL,                          &instrumentPCMData1440.header, &instrumentPCMData1441.header,
-    /* 008 */ &instrumentPCMData1442.header, &instrumentPCMData1443.header, &instrumentPCMData1444.header, &instrumentPCMData1445.header,
-    /* 012 */ &instrumentPCMData1446.header, &instrumentPCMData1447.header, &instrumentPCMData1448.header, &instrumentPCMData1449.header,
-    /* 016 */ &instrumentPCMData1450.header, &instrumentPCMData1451.header, &instrumentPCMData1452.header, &instrumentPCMData1453.header,
-    /* 020 */ &instrumentPCMData1454.header, &instrumentPCMData1455.header, &instrumentPCMData1456.header, &instrumentPCMData1457.header,
-    /* 024 */ NULL,                          NULL,                          &instrumentPCMData1458.header, NULL,
-    /* 028 */ NULL,                          &instrumentPCMData1459.header, &instrumentPCMData1460.header, &instrumentPCMData1461.header,
+    /* 000 */ (u8 *) &instrumentPCMData1435, (u8 *) &instrumentPCMData1436, (u8 *) &instrumentPCMData1437, (u8 *) &instrumentPCMData1438,
+    /* 004 */ (u8 *) &instrumentPCMData1439, NULL,                          (u8 *) &instrumentPCMData1440, (u8 *) &instrumentPCMData1441,
+    /* 008 */ (u8 *) &instrumentPCMData1442, (u8 *) &instrumentPCMData1443, (u8 *) &instrumentPCMData1444, (u8 *) &instrumentPCMData1445,
+    /* 012 */ (u8 *) &instrumentPCMData1446, (u8 *) &instrumentPCMData1447, (u8 *) &instrumentPCMData1448, (u8 *) &instrumentPCMData1449,
+    /* 016 */ (u8 *) &instrumentPCMData1450, (u8 *) &instrumentPCMData1451, (u8 *) &instrumentPCMData1452, (u8 *) &instrumentPCMData1453,
+    /* 020 */ (u8 *) &instrumentPCMData1454, (u8 *) &instrumentPCMData1455, (u8 *) &instrumentPCMData1456, (u8 *) &instrumentPCMData1457,
+    /* 024 */ NULL,                          NULL,                          (u8 *) &instrumentPCMData1458, NULL,
+    /* 028 */ NULL,                          (u8 *) &instrumentPCMData1459, (u8 *) &instrumentPCMData1460, (u8 *) &instrumentPCMData1461,
     /* 032 */ NULL,                          NULL,                          NULL,                          NULL,
-    /* 036 */ &instrumentPCMData1462.header, &instrumentPCMData1463.header, &instrumentPCMData1464.header, &instrumentPCMData1465.header,
-    /* 040 */ &instrumentPCMData1466.header, NULL,                          NULL,                          NULL,
-    /* 044 */ NULL,                          &instrumentPCMData1467.header, NULL,                          &instrumentPCMData1468.header,
-    /* 048 */ &instrumentPCMData1469.header, &instrumentPCMData1470.header, NULL,                          NULL,
-    /* 052 */ NULL,                          NULL,                          &instrumentPCMData1471.header, &instrumentPCMData1472.header,
-    /* 056 */ &instrumentPCMData1473.header, &instrumentPCMData1474.header, &instrumentPCMData1475.header
+    /* 036 */ (u8 *) &instrumentPCMData1462, (u8 *) &instrumentPCMData1463, (u8 *) &instrumentPCMData1464, (u8 *) &instrumentPCMData1465,
+    /* 040 */ (u8 *) &instrumentPCMData1466, NULL,                          NULL,                          NULL,
+    /* 044 */ NULL,                          (u8 *) &instrumentPCMData1467, NULL,                          (u8 *) &instrumentPCMData1468,
+    /* 048 */ (u8 *) &instrumentPCMData1469, (u8 *) &instrumentPCMData1470, NULL,                          NULL,
+    /* 052 */ NULL,                          NULL,                          (u8 *) &instrumentPCMData1471, (u8 *) &instrumentPCMData1472,
+    /* 056 */ (u8 *) &instrumentPCMData1473, (u8 *) &instrumentPCMData1474, (u8 *) &instrumentPCMData1475
 };
 
 // 6 entries
 const InstrumentBank instrumentBank55 = {
-    /* 000 */ NULL,                          &instrumentPCMData1476.header, &instrumentPCMData1477.header, NULL,
-    /* 004 */ &instrumentPCMData1478.header, &instrumentPCMData1479.header
+    /* 000 */ NULL,                          (u8 *) &instrumentPCMData1476, (u8 *) &instrumentPCMData1477, NULL,
+    /* 004 */ (u8 *) &instrumentPCMData1478, (u8 *) &instrumentPCMData1479
 };
 
 // 128 entries
 const InstrumentBank instrumentBank56 = {
-    /* 000 */ &instrumentPCMData1480.header, &instrumentPCMData1481.header, &instrumentPCMData1482.header, &instrumentPCMData1483.header,
-    /* 004 */ &instrumentPCMData1484.header, &instrumentPCMData1485.header, &instrumentPCMData1486.header, NULL,
-    /* 008 */ NULL,                          &instrumentPCMData1536.header, &instrumentPCMData1487.header, &instrumentPCMData1488.header,
-    /* 012 */ &instrumentPCMData1489.header, &instrumentPCMData1490.header, &instrumentPCMData1491.header, &instrumentPCMData1492.header,
-    /* 016 */ &instrumentPCMData1493.header, &instrumentPCMData1494.header, &instrumentPCMData1495.header, &instrumentPCMData1496.header,
-    /* 020 */ &instrumentPCMData1497.header, &instrumentPCMData1498.header, &instrumentPCMData1499.header, &instrumentPCMData1534.header,
-    /* 024 */ &instrumentPCMData1535.header, &instrumentPCMData1500.header, &instrumentPSGData1501.header, &instrumentPCMData1502.header,
-    /* 028 */ &instrumentPCMData1503.header, &instrumentPCMData1504.header, &instrumentPCMData1505.header, &instrumentPCMData1506.header,
-    /* 032 */ &instrumentPCMData1507.header, &instrumentPCMData1532.header, &instrumentPCMData1533.header, &instrumentPCMData1508.header,
-    /* 036 */ &instrumentPCMData1509.header, &instrumentPCMData1510.header, &instrumentPCMData1511.header, &instrumentPCMData1512.header,
-    /* 040 */ &instrumentPCMData1513.header, &instrumentPCMData1514.header, &instrumentPCMData1515.header, &instrumentPCMData1516.header,
-    /* 044 */ &instrumentPCMData1517.header, &instrumentPSGData1518.header, &instrumentPCMData1519.header, &instrumentPCMData1520.header,
-    /* 048 */ &instrumentPCMData1521.header, &instrumentPCMData1522.header, &instrumentPCMData1523.header, &instrumentPCMData1524.header,
-    /* 052 */ &instrumentPCMData1525.header, &instrumentPCMData1526.header, &instrumentPCMData1527.header, &instrumentPCMData1528.header,
-    /* 056 */ &instrumentPCMData1529.header, &instrumentPCMData1530.header, &instrumentPCMData1531.header, &instrumentPCMData1539.header,
-    /* 060 */ &instrumentPCMData1540.header, &instrumentPCMData1541.header, &instrumentPCMData1542.header, &instrumentPCMData1543.header,
-    /* 064 */ &instrumentPCMData1544.header, &instrumentPSGData1545.header, &instrumentPCMData1546.header, &instrumentPCMData1547.header,
-    /* 068 */ &instrumentPCMData1548.header, &instrumentPCMData1549.header, &instrumentPCMData1550.header, &instrumentPCMData1551.header,
-    /* 072 */ &instrumentPCMData1552.header, &instrumentPCMData1553.header, &instrumentPCMData1554.header, NULL,
+    /* 000 */ (u8 *) &instrumentPCMData1480, (u8 *) &instrumentPCMData1481, (u8 *) &instrumentPCMData1482, (u8 *) &instrumentPCMData1483,
+    /* 004 */ (u8 *) &instrumentPCMData1484, (u8 *) &instrumentPCMData1485, (u8 *) &instrumentPCMData1486, NULL,
+    /* 008 */ NULL,                          (u8 *) &instrumentPCMData1536, (u8 *) &instrumentPCMData1487, (u8 *) &instrumentPCMData1488,
+    /* 012 */ (u8 *) &instrumentPCMData1489, (u8 *) &instrumentPCMData1490, (u8 *) &instrumentPCMData1491, (u8 *) &instrumentPCMData1492,
+    /* 016 */ (u8 *) &instrumentPCMData1493, (u8 *) &instrumentPCMData1494, (u8 *) &instrumentPCMData1495, (u8 *) &instrumentPCMData1496,
+    /* 020 */ (u8 *) &instrumentPCMData1497, (u8 *) &instrumentPCMData1498, (u8 *) &instrumentPCMData1499, (u8 *) &instrumentPCMData1534,
+    /* 024 */ (u8 *) &instrumentPCMData1535, (u8 *) &instrumentPCMData1500, (u8 *) &instrumentPSGData1501, (u8 *) &instrumentPCMData1502,
+    /* 028 */ (u8 *) &instrumentPCMData1503, (u8 *) &instrumentPCMData1504, (u8 *) &instrumentPCMData1505, (u8 *) &instrumentPCMData1506,
+    /* 032 */ (u8 *) &instrumentPCMData1507, (u8 *) &instrumentPCMData1532, (u8 *) &instrumentPCMData1533, (u8 *) &instrumentPCMData1508,
+    /* 036 */ (u8 *) &instrumentPCMData1509, (u8 *) &instrumentPCMData1510, (u8 *) &instrumentPCMData1511, (u8 *) &instrumentPCMData1512,
+    /* 040 */ (u8 *) &instrumentPCMData1513, (u8 *) &instrumentPCMData1514, (u8 *) &instrumentPCMData1515, (u8 *) &instrumentPCMData1516,
+    /* 044 */ (u8 *) &instrumentPCMData1517, (u8 *) &instrumentPSGData1518, (u8 *) &instrumentPCMData1519, (u8 *) &instrumentPCMData1520,
+    /* 048 */ (u8 *) &instrumentPCMData1521, (u8 *) &instrumentPCMData1522, (u8 *) &instrumentPCMData1523, (u8 *) &instrumentPCMData1524,
+    /* 052 */ (u8 *) &instrumentPCMData1525, (u8 *) &instrumentPCMData1526, (u8 *) &instrumentPCMData1527, (u8 *) &instrumentPCMData1528,
+    /* 056 */ (u8 *) &instrumentPCMData1529, (u8 *) &instrumentPCMData1530, (u8 *) &instrumentPCMData1531, (u8 *) &instrumentPCMData1539,
+    /* 060 */ (u8 *) &instrumentPCMData1540, (u8 *) &instrumentPCMData1541, (u8 *) &instrumentPCMData1542, (u8 *) &instrumentPCMData1543,
+    /* 064 */ (u8 *) &instrumentPCMData1544, (u8 *) &instrumentPSGData1545, (u8 *) &instrumentPCMData1546, (u8 *) &instrumentPCMData1547,
+    /* 068 */ (u8 *) &instrumentPCMData1548, (u8 *) &instrumentPCMData1549, (u8 *) &instrumentPCMData1550, (u8 *) &instrumentPCMData1551,
+    /* 072 */ (u8 *) &instrumentPCMData1552, (u8 *) &instrumentPCMData1553, (u8 *) &instrumentPCMData1554, NULL,
     /* 076 */ NULL,                          NULL,                          NULL,                          NULL,
-    /* 080 */ &instrumentSubbankSingleKeyData1555.header, NULL,             NULL,                          NULL,
-    /* 084 */ NULL,                          &instrumentPCMData1556.header, &instrumentPCMData1557.header, &instrumentPCMData1558.header,
-    /* 088 */ &instrumentPSGData1559.header, &instrumentPCMData1560.header, &instrumentPSGData1561.header, &instrumentPCMData1562.header,
-    /* 092 */ NULL,                          NULL,                          NULL,                          &instrumentPCMData1563.header,
-    /* 096 */ &instrumentPCMData1564.header, NULL,                          NULL,                          NULL,
+    /* 080 */ (u8 *) &instrumentSubbankSingleKeyData1555, NULL,             NULL,                          NULL,
+    /* 084 */ NULL,                          (u8 *) &instrumentPCMData1556, (u8 *) &instrumentPCMData1557, (u8 *) &instrumentPCMData1558,
+    /* 088 */ (u8 *) &instrumentPSGData1559, (u8 *) &instrumentPCMData1560, (u8 *) &instrumentPSGData1561, (u8 *) &instrumentPCMData1562,
+    /* 092 */ NULL,                          NULL,                          NULL,                          (u8 *) &instrumentPCMData1563,
+    /* 096 */ (u8 *) &instrumentPCMData1564, NULL,                          NULL,                          NULL,
     /* 100 */ NULL,                          NULL,                          NULL,                          NULL,
-    /* 104 */ NULL,                          &instrumentPCMData1565.header, &instrumentPCMData1566.header, &instrumentPCMData1567.header,
-    /* 108 */ &instrumentPCMData1568.header, NULL,                          &instrumentPCMData1569.header, &instrumentPCMData1570.header,
-    /* 112 */ NULL,                          NULL,                          NULL,                          &instrumentPCMData1571.header,
-    /* 116 */ &instrumentPCMData1572.header, &instrumentPCMData1573.header, &instrumentPCMData1574.header, &instrumentPCMData1575.header,
-    /* 120 */ &instrumentPCMData1576.header, NULL,                          NULL,                          &instrumentPCMData1537.header,
-    /* 124 */ &instrumentPCMData1538.header, &instrumentSubbankSingleKeyData1577.header, &instrumentPSGData1578.header, &instrumentSubbankSingleKeyData1579.header
+    /* 104 */ NULL,                          (u8 *) &instrumentPCMData1565, (u8 *) &instrumentPCMData1566, (u8 *) &instrumentPCMData1567,
+    /* 108 */ (u8 *) &instrumentPCMData1568, NULL,                          (u8 *) &instrumentPCMData1569, (u8 *) &instrumentPCMData1570,
+    /* 112 */ NULL,                          NULL,                          NULL,                          (u8 *) &instrumentPCMData1571,
+    /* 116 */ (u8 *) &instrumentPCMData1572, (u8 *) &instrumentPCMData1573, (u8 *) &instrumentPCMData1574, (u8 *) &instrumentPCMData1575,
+    /* 120 */ (u8 *) &instrumentPCMData1576, NULL,                          NULL,                          (u8 *) &instrumentPCMData1537,
+    /* 124 */ (u8 *) &instrumentPCMData1538, (u8 *) &instrumentSubbankSingleKeyData1577, (u8 *) &instrumentPSGData1578, (u8 *) &instrumentSubbankSingleKeyData1579
 };
 
 // 31 entries
 const InstrumentBank instrumentBank57 = {
-    /* 000 */ &instrumentPCMData1580.header, &instrumentPCMData1581.header, &instrumentPCMData1582.header, &instrumentPCMData1583.header,
-    /* 004 */ &instrumentPCMData1584.header, &instrumentPCMData1585.header, &instrumentPCMData1586.header, &instrumentPCMData1587.header,
-    /* 008 */ &instrumentPCMData1588.header, &instrumentPCMData1589.header, &instrumentPCMData1590.header, &instrumentPCMData1591.header,
-    /* 012 */ NULL,                          NULL,                          NULL,                          &instrumentPSGData1592.header,
+    /* 000 */ (u8 *) &instrumentPCMData1580, (u8 *) &instrumentPCMData1581, (u8 *) &instrumentPCMData1582, (u8 *) &instrumentPCMData1583,
+    /* 004 */ (u8 *) &instrumentPCMData1584, (u8 *) &instrumentPCMData1585, (u8 *) &instrumentPCMData1586, (u8 *) &instrumentPCMData1587,
+    /* 008 */ (u8 *) &instrumentPCMData1588, (u8 *) &instrumentPCMData1589, (u8 *) &instrumentPCMData1590, (u8 *) &instrumentPCMData1591,
+    /* 012 */ NULL,                          NULL,                          NULL,                          (u8 *) &instrumentPSGData1592,
     /* 016 */ NULL,                          NULL,                          NULL,                          NULL,
-    /* 020 */ &instrumentPCMData1593.header, &instrumentPCMData1594.header, &instrumentPCMData1595.header, &instrumentPCMData1596.header,
-    /* 024 */ &instrumentPCMData1599.header, &instrumentPCMData1597.header, &instrumentPCMData1598.header, NULL,
-    /* 028 */ NULL,                          NULL,                          &instrumentSubbankSingleKeyData1600.header
+    /* 020 */ (u8 *) &instrumentPCMData1593, (u8 *) &instrumentPCMData1594, (u8 *) &instrumentPCMData1595, (u8 *) &instrumentPCMData1596,
+    /* 024 */ (u8 *) &instrumentPCMData1599, (u8 *) &instrumentPCMData1597, (u8 *) &instrumentPCMData1598, NULL,
+    /* 028 */ NULL,                          NULL,                          (u8 *) &instrumentSubbankSingleKeyData1600
 };
 
 // 7 entries
 const InstrumentBank instrumentBank58 = {
-    /* 000 */ &instrumentPCMData1601.header, &instrumentPCMData1602.header, &instrumentPCMData1603.header, &instrumentPCMData1604.header,
-    /* 004 */ &instrumentPCMData1605.header, &instrumentPCMData1606.header, &instrumentPCMData1607.header
+    /* 000 */ (u8 *) &instrumentPCMData1601, (u8 *) &instrumentPCMData1602, (u8 *) &instrumentPCMData1603, (u8 *) &instrumentPCMData1604,
+    /* 004 */ (u8 *) &instrumentPCMData1605, (u8 *) &instrumentPCMData1606, (u8 *) &instrumentPCMData1607
 };
 
 // 6 entries
 const InstrumentBank instrumentBank59 = {
-    /* 000 */ NULL,                          NULL,                          &instrumentPCMData1608.header, &instrumentPCMData1609.header,
-    /* 004 */ &instrumentPCMData1610.header, &instrumentPCMData1611.header
+    /* 000 */ NULL,                          NULL,                          (u8 *) &instrumentPCMData1608, (u8 *) &instrumentPCMData1609,
+    /* 004 */ (u8 *) &instrumentPCMData1610, (u8 *) &instrumentPCMData1611
 };
 
 // 22 entries
 const InstrumentBank instrumentBank60 = {
-    /* 000 */ &instrumentPCMData1612.header, &instrumentPCMData1613.header, &instrumentPCMData1614.header, NULL,
+    /* 000 */ (u8 *) &instrumentPCMData1612, (u8 *) &instrumentPCMData1613, (u8 *) &instrumentPCMData1614, NULL,
     /* 004 */ NULL,                          NULL,                          NULL,                          NULL,
-    /* 008 */ NULL,                          NULL,                          NULL,                          &instrumentPCMData1615.header,
-    /* 012 */ &instrumentPCMData1616.header, &instrumentPCMData1617.header, &instrumentSubbankSingleKeyData1618.header, &instrumentPCMData1619.header,
-    /* 016 */ &instrumentPCMData1620.header, &instrumentPCMData1621.header, &instrumentPSGData1622.header, &instrumentPSGData1623.header,
-    /* 020 */ &instrumentPCMData1624.header, &instrumentPCMData1625.header
+    /* 008 */ NULL,                          NULL,                          NULL,                          (u8 *) &instrumentPCMData1615,
+    /* 012 */ (u8 *) &instrumentPCMData1616, (u8 *) &instrumentPCMData1617, (u8 *) &instrumentSubbankSingleKeyData1618, (u8 *) &instrumentPCMData1619,
+    /* 016 */ (u8 *) &instrumentPCMData1620, (u8 *) &instrumentPCMData1621, (u8 *) &instrumentPSGData1622, (u8 *) &instrumentPSGData1623,
+    /* 020 */ (u8 *) &instrumentPCMData1624, (u8 *) &instrumentPCMData1625
 };
 
 // 62 entries
 const InstrumentBank instrumentBank61 = {
-    /* 000 */ &instrumentPCMData1626.header, &instrumentPCMData1627.header, &instrumentPCMData1628.header, &instrumentPCMData1629.header,
-    /* 004 */ &instrumentPCMData1630.header, &instrumentPCMData1631.header, &instrumentPCMData1632.header, &instrumentPCMData1633.header,
-    /* 008 */ &instrumentPCMData1634.header, &instrumentPSGData1635.header, &instrumentPSGData1636.header, &instrumentPSGData1637.header,
-    /* 012 */ &instrumentPCMData1638.header, &instrumentPCMData1639.header, &instrumentPCMData1640.header, &instrumentPCMData1641.header,
-    /* 016 */ &instrumentPCMData1642.header, &instrumentPCMData1643.header, &instrumentPSGData1644.header, &instrumentPCMData1645.header,
-    /* 020 */ &instrumentPCMData1646.header, &instrumentPCMData1647.header, &instrumentPCMData1648.header, &instrumentPCMData1649.header,
-    /* 024 */ &instrumentPSGData1650.header, &instrumentPSGData1651.header, &instrumentPSGData1652.header, &instrumentPSGData1653.header,
-    /* 028 */ &instrumentPSGData1654.header, &instrumentPCMData1655.header, &instrumentPCMData1656.header, &instrumentPCMData1657.header,
-    /* 032 */ &instrumentPCMData1658.header, &instrumentSubbankSingleKeyData1659.header, &instrumentPCMData1660.header, &instrumentPCMData1661.header,
-    /* 036 */ &instrumentPCMData1662.header, &instrumentPCMData1663.header, &instrumentPCMData1664.header, &instrumentPCMData1665.header,
-    /* 040 */ &instrumentPCMData1666.header, &instrumentPCMData1667.header, &instrumentPCMData1668.header, &instrumentPCMData1669.header,
-    /* 044 */ &instrumentPCMData1670.header, &instrumentPCMData1671.header, &instrumentPCMData1672.header, &instrumentPCMData1673.header,
-    /* 048 */ &instrumentPCMData1674.header, &instrumentPCMData1675.header, &instrumentPCMData1676.header, &instrumentPCMData1677.header,
-    /* 052 */ &instrumentPCMData1678.header, &instrumentPCMData1679.header, &instrumentPCMData1680.header, &instrumentPCMData1681.header,
-    /* 056 */ &instrumentPCMData1682.header, &instrumentPCMData1683.header, &instrumentPCMData1684.header, &instrumentPCMData1685.header,
-    /* 060 */ &instrumentPCMData1686.header, &instrumentPCMData1687.header
+    /* 000 */ (u8 *) &instrumentPCMData1626, (u8 *) &instrumentPCMData1627, (u8 *) &instrumentPCMData1628, (u8 *) &instrumentPCMData1629,
+    /* 004 */ (u8 *) &instrumentPCMData1630, (u8 *) &instrumentPCMData1631, (u8 *) &instrumentPCMData1632, (u8 *) &instrumentPCMData1633,
+    /* 008 */ (u8 *) &instrumentPCMData1634, (u8 *) &instrumentPSGData1635, (u8 *) &instrumentPSGData1636, (u8 *) &instrumentPSGData1637,
+    /* 012 */ (u8 *) &instrumentPCMData1638, (u8 *) &instrumentPCMData1639, (u8 *) &instrumentPCMData1640, (u8 *) &instrumentPCMData1641,
+    /* 016 */ (u8 *) &instrumentPCMData1642, (u8 *) &instrumentPCMData1643, (u8 *) &instrumentPSGData1644, (u8 *) &instrumentPCMData1645,
+    /* 020 */ (u8 *) &instrumentPCMData1646, (u8 *) &instrumentPCMData1647, (u8 *) &instrumentPCMData1648, (u8 *) &instrumentPCMData1649,
+    /* 024 */ (u8 *) &instrumentPSGData1650, (u8 *) &instrumentPSGData1651, (u8 *) &instrumentPSGData1652, (u8 *) &instrumentPSGData1653,
+    /* 028 */ (u8 *) &instrumentPSGData1654, (u8 *) &instrumentPCMData1655, (u8 *) &instrumentPCMData1656, (u8 *) &instrumentPCMData1657,
+    /* 032 */ (u8 *) &instrumentPCMData1658, (u8 *) &instrumentSubbankSingleKeyData1659, (u8 *) &instrumentPCMData1660, (u8 *) &instrumentPCMData1661,
+    /* 036 */ (u8 *) &instrumentPCMData1662, (u8 *) &instrumentPCMData1663, (u8 *) &instrumentPCMData1664, (u8 *) &instrumentPCMData1665,
+    /* 040 */ (u8 *) &instrumentPCMData1666, (u8 *) &instrumentPCMData1667, (u8 *) &instrumentPCMData1668, (u8 *) &instrumentPCMData1669,
+    /* 044 */ (u8 *) &instrumentPCMData1670, (u8 *) &instrumentPCMData1671, (u8 *) &instrumentPCMData1672, (u8 *) &instrumentPCMData1673,
+    /* 048 */ (u8 *) &instrumentPCMData1674, (u8 *) &instrumentPCMData1675, (u8 *) &instrumentPCMData1676, (u8 *) &instrumentPCMData1677,
+    /* 052 */ (u8 *) &instrumentPCMData1678, (u8 *) &instrumentPCMData1679, (u8 *) &instrumentPCMData1680, (u8 *) &instrumentPCMData1681,
+    /* 056 */ (u8 *) &instrumentPCMData1682, (u8 *) &instrumentPCMData1683, (u8 *) &instrumentPCMData1684, (u8 *) &instrumentPCMData1685,
+    /* 060 */ (u8 *) &instrumentPCMData1686, (u8 *) &instrumentPCMData1687
 };
 
 // 42 entries
 const InstrumentBank instrumentBank62 = {
-    /* 000 */ &instrumentPCMData1688.header, &instrumentPCMData1689.header, &instrumentPCMData1690.header, NULL,
+    /* 000 */ (u8 *) &instrumentPCMData1688, (u8 *) &instrumentPCMData1689, (u8 *) &instrumentPCMData1690, NULL,
     /* 004 */ NULL,                          NULL,                          NULL,                          NULL,
     /* 008 */ NULL,                          NULL,                          NULL,                          NULL,
-    /* 012 */ &instrumentPCMData1701.header, &instrumentPCMData1702.header, &instrumentPCMData1703.header, &instrumentPCMData1704.header,
+    /* 012 */ (u8 *) &instrumentPCMData1701, (u8 *) &instrumentPCMData1702, (u8 *) &instrumentPCMData1703, (u8 *) &instrumentPCMData1704,
     /* 016 */ NULL,                          NULL,                          NULL,                          NULL,
     /* 020 */ NULL,                          NULL,                          NULL,                          NULL,
-    /* 024 */ &instrumentPCMData1691.header, &instrumentPCMData1692.header, &instrumentPCMData1693.header, &instrumentPCMData1694.header,
-    /* 028 */ &instrumentPCMData1695.header, &instrumentPCMData1696.header, &instrumentPCMData1697.header, &instrumentPCMData1698.header,
-    /* 032 */ &instrumentPCMData1699.header, &instrumentPCMData1700.header, NULL,                          NULL,
-    /* 036 */ &instrumentPCMData1705.header, &instrumentPCMData1706.header, &instrumentPCMData1707.header, &instrumentPCMData1708.header,
-    /* 040 */ &instrumentPCMData1709.header, &instrumentPCMData1710.header
+    /* 024 */ (u8 *) &instrumentPCMData1691, (u8 *) &instrumentPCMData1692, (u8 *) &instrumentPCMData1693, (u8 *) &instrumentPCMData1694,
+    /* 028 */ (u8 *) &instrumentPCMData1695, (u8 *) &instrumentPCMData1696, (u8 *) &instrumentPCMData1697, (u8 *) &instrumentPCMData1698,
+    /* 032 */ (u8 *) &instrumentPCMData1699, (u8 *) &instrumentPCMData1700, NULL,                          NULL,
+    /* 036 */ (u8 *) &instrumentPCMData1705, (u8 *) &instrumentPCMData1706, (u8 *) &instrumentPCMData1707, (u8 *) &instrumentPCMData1708,
+    /* 040 */ (u8 *) &instrumentPCMData1709, (u8 *) &instrumentPCMData1710
 };
 
 // 33 entries
 const InstrumentBank instrumentBank63 = {
-    /* 000 */ &instrumentPCMData1714.header, &instrumentPCMData1715.header, &instrumentPCMData1711.header, &instrumentPCMData1716.header,
-    /* 004 */ &instrumentPCMData1717.header, &instrumentPCMData1718.header, &instrumentPCMData1719.header, &instrumentPCMData1720.header,
-    /* 008 */ &instrumentPCMData1721.header, NULL,                          NULL,                          &instrumentPCMData1712.header,
-    /* 012 */ &instrumentPCMData1722.header, &instrumentPCMData1723.header, &instrumentPCMData1724.header, &instrumentPCMData1725.header,
-    /* 016 */ &instrumentPCMData1727.header, &instrumentPCMData1728.header, &instrumentPCMData1713.header, &instrumentPCMData1729.header,
-    /* 020 */ &instrumentPCMData1730.header, &instrumentPCMData1731.header, &instrumentPCMData1732.header, &instrumentPCMData1726.header,
-    /* 024 */ &instrumentPCMData1733.header, &instrumentPCMData1734.header, &instrumentPCMData1735.header, &instrumentPCMData1736.header,
-    /* 028 */ &instrumentPCMData1737.header, &instrumentPCMData1738.header, &instrumentPCMData1739.header, &instrumentPCMData1740.header,
-    /* 032 */ &instrumentPCMData1741.header
+    /* 000 */ (u8 *) &instrumentPCMData1714, (u8 *) &instrumentPCMData1715, (u8 *) &instrumentPCMData1711, (u8 *) &instrumentPCMData1716,
+    /* 004 */ (u8 *) &instrumentPCMData1717, (u8 *) &instrumentPCMData1718, (u8 *) &instrumentPCMData1719, (u8 *) &instrumentPCMData1720,
+    /* 008 */ (u8 *) &instrumentPCMData1721, NULL,                          NULL,                          (u8 *) &instrumentPCMData1712,
+    /* 012 */ (u8 *) &instrumentPCMData1722, (u8 *) &instrumentPCMData1723, (u8 *) &instrumentPCMData1724, (u8 *) &instrumentPCMData1725,
+    /* 016 */ (u8 *) &instrumentPCMData1727, (u8 *) &instrumentPCMData1728, (u8 *) &instrumentPCMData1713, (u8 *) &instrumentPCMData1729,
+    /* 020 */ (u8 *) &instrumentPCMData1730, (u8 *) &instrumentPCMData1731, (u8 *) &instrumentPCMData1732, (u8 *) &instrumentPCMData1726,
+    /* 024 */ (u8 *) &instrumentPCMData1733, (u8 *) &instrumentPCMData1734, (u8 *) &instrumentPCMData1735, (u8 *) &instrumentPCMData1736,
+    /* 028 */ (u8 *) &instrumentPCMData1737, (u8 *) &instrumentPCMData1738, (u8 *) &instrumentPCMData1739, (u8 *) &instrumentPCMData1740,
+    /* 032 */ (u8 *) &instrumentPCMData1741
 };

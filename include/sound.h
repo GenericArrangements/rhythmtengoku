@@ -11,58 +11,79 @@
 #define PSG_WAVE_CHANNEL 2
 #define PSG_NOISE_CHANNEL 3
 
+#define PSG_TONE_DUTY_12_5 0
+#define PSG_TONE_DUTY_25   1
+#define PSG_TONE_DUTY_50   2
+#define PSG_TONE_DUTY_75   3
+
+#define PSG_NOISE_COUNTER_15 0
+#define PSG_NOISE_COUNTER_7  1
+
+
+
 struct SampleInfo {
 	u32 length;
 	u32 sampleRate;
-	u32 pitch;
+	u32 key;
 	u32 loopStart;
 	u32 loopEnd;
-	const u32 *romAddress;
-};
-
-struct InstrumentHeader {
-	u8 type;
-	u8 unk1;
-	u16 unk2;
+	const u32 *waveform;
 };
 
 struct InstrumentPCM {
-	struct InstrumentHeader header;
+	u8 type;
+	u8 key:7;
+    u8 distort:1;
+	s16 panning;
 	const struct SampleInfo *sample;
-	u32 unk8;
-	u32 unkC;
-	u32 unk10;
-	u32 unk14;
-	u32 unk18;
-	u32 unk1C;
+	s32 initial;
+	s32 sustain;
+	s32 attack;
+	s32 decay;
+	s32 fade;
+	s32 release;
 };
 
 struct InstrumentPSG {
-	struct InstrumentHeader header;
-	void *waveChannel;
-	u32 unk8;
-	u32 unkC;
-	u32 unk10;
-	u32 unk14;
-	u32 unk18;
-	u32 unk1C;
-	u8 channel;
-	u8 unk21;
-	u8 unk22;
+	u8 type;
+	u8 key;
+	s16 panning;
+	u32 *wavetable;
+	s32 initial;
+	s32 sustain;
+	s32 attack;
+	s32 decay;
+	s32 fade;
+	s32 release;
+	u32 channel:2;
+	u32 length:8;
+	u32 sweep:7;
+    u32 dutyTone:2;
+    u32 dutyNoise:13;
 };
 
 struct InstrumentSubbankSingleKey {
-	struct InstrumentHeader header;
-	void *subbank;
+	u32 type:8;
+    u32 total:24;
+	const union Instrument **subBank;
 };
 
 struct InstrumentSubbankMultiKey {
-	struct InstrumentHeader header;
-	void *unk4;
-	void *subbank;
+	u32 type:8;
+    u32 unk1:24;
+	u8 *unk4;
+	const union Instrument **subBank;
 };
 
-typedef const struct InstrumentHeader *InstrumentBank[];
+union Instrument {
+    u8 undefinedType;
+    struct InstrumentPCM pcm;
+    struct InstrumentPSG psg;
+    struct InstrumentSubbankSingleKey subSingle;
+    struct InstrumentSubbankMultiKey subMulti;
+};
+
+typedef const u8 *InstrumentBank[];
 
 struct SequenceData {
     const u32 *romAddress;
