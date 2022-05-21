@@ -154,7 +154,7 @@ extern u32  func_0804bcc0(struct AudioChannel *, u32); // [func_0804bcc0] MIDI -
 extern void func_0804bed0(struct AudioChannel *, u32); // [func_0804bed0] ?? (something about speed and midi trackers and notes)
 extern void func_0804c040(struct AudioChannel *); // [func_0804c040] Apply Volume (Real-Time)
 extern void func_0804c0f8(struct AudioChannel *); // [func_0804c0f8] ?? (relates to speed)
-extern void func_0804c170(void); // [func_0804c170] ??
+extern void func_0804c170(void); // [func_0804c170] MAIN UPDATE
 extern void func_0804c340(u32, u32, u32, u32); // [func_0804c340] Set Reverb
 extern void func_0804c358(void); // [func_0804c358] STUB
 extern void func_0804c35c(struct AudioChannel *, struct MidiChannelBus *, u32, struct MidiTrackReader *, u32); // [func_0804c35c] INITIALISE - Audio Channels
@@ -163,4 +163,4 @@ extern void func_0804c3c0(struct AudioChannel *, struct MidiTrackReader *, u32, 
 // extern ? func_0804c4bc(?);
 // extern ? func_0804c508(?);
 extern void func_0804c6c8(void); // [func_0804c6c8] ?? (something about midi channels and notes and a midi channel bus that doesn't exist after startup?)
-extern void func_0804c778(void); // [func_0804c778] INITIALISE - All?
+extern void func_0804c778(void); // [func_0804c778] MAIN INITIALISE

@@ -1882,7 +1882,7 @@ void func_0804c0f8(struct AudioChannel *channel) {
     if (noActiveReader) channel->sequenceData = NULL;
 }
 
-// [func_0804c170] ??
+// [func_0804c170] MAIN UPDATE
 void func_0804c170(void) {
     struct AudioChannel *channel;
     u32 speed;
@@ -2047,7 +2047,7 @@ void func_0804c6c8(void) {
     }
 }
 
-// [func_0804c778] INITIALISE - All?
+// [func_0804c778] MAIN INITIALISE
 void func_0804c778(void) {
     u32 i;
 
@@ -2055,7 +2055,7 @@ void func_0804c778(void) {
     func_0804af30();
     func_0804a360(12, &D_03002a48);
 
-    for (i = 0; i <= 12; i++) {
+    for (i = 0; i < 13; i++) {
         func_08049fa0(D_08aa4358[i].midiChannelBus, D_08aa4358[i].nTracksMax, D_08aa4358[i].midiChannels);
         func_0804c35c(D_08aa4358[i].audioChannel, D_08aa4358[i].midiChannelBus, D_08aa4358[i].nTracksMax, D_08aa4358[i].midiTrackReaders, D_08aa4358[i].unk0_b10);
     }
@@ -2063,7 +2063,7 @@ void func_0804c778(void) {
     D_03005b7c = &D_030015a7;
     D_03005b20 = 4;
 
-    for (i = 0; i <= 3; i++) {
+    for (i = 0; i < 4; i++) {
         D_03005b7c[i] = 0;
     }
 

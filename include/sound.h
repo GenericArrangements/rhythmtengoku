@@ -11,6 +11,16 @@
 #define PSG_WAVE_CHANNEL 2
 #define PSG_NOISE_CHANNEL 3
 
+#define PSG_TONE_DUTY_12_5 0
+#define PSG_TONE_DUTY_25   1
+#define PSG_TONE_DUTY_50   2
+#define PSG_TONE_DUTY_75   3
+
+#define PSG_NOISE_COUNTER_15 0
+#define PSG_NOISE_COUNTER_7  1
+
+
+
 struct SampleInfo {
 	u32 length;
 	u32 sampleRate;
