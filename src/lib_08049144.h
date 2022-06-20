@@ -1,5 +1,7 @@
 #pragma once
 
+#include "global.h"
+
   // // //  INTERRUPT_DMA2  // // //
 
 extern void func_08049144(void); // [func_08049144] INTERRUPT_DMA2

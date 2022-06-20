@@ -1,5 +1,7 @@
 #pragma once
 
+#include "global.h"
+
 typedef u32 (*D_0300009c_func)(void);
 
 extern u16 D_03004ac0;
@@ -42,7 +44,7 @@ extern u8 func_0800184c(void);
 // extern ? func_080018e0(?);
 extern void func_08001958(u32);
 extern u16 func_08001964(void);
-//extern u16 func_08001980(u16); // prototype causes matching issues in func_08008e10
+extern u16 func_08001980(u16);
 // extern ? func_080019a4(?);
 // extern ? func_080019e4(?);
 extern void func_08001a24_stub(void);
@@ -62,7 +64,7 @@ extern u32 func_08001f34(struct struct_08001f94 *);
 extern u32 func_08001f64(struct struct_08001f94 *);
 extern u32 func_08001f94(struct struct_08001f94 *);
 extern u8 func_08001fc4(u8 *);
-// extern ? func_08001fe0(?);
+extern void func_08001fe0(u16, u8, u32, u16*, u16*, u16*);
 // extern ? func_08002018(?);
 // extern ? func_08002050(?);
 // extern ? func_08002088(?);
@@ -71,10 +73,10 @@ extern u8 func_08001fc4(u8 *);
 // extern ? func_08002194(?);
 // extern ? func_080021b8(?);
 // extern ? func_0800222c(?);
-// extern ? func_08002260(?);
+extern void func_08002260(s16, u32); // ROTATION/SCALING PARAMETER GROUP - Update Horizontal & Vertical Flip (and probably more)
 // extern ? func_08002280(?);
-// extern ? func_080022bc(?);
-// extern ? func_080022d8(?);
+extern void func_080022bc(s16); // ROTATION/SCALING PARAMETER GROUP - ?? (Reduced Angle Precision)
+extern void func_080022d8(s16); // ROTATION/SCALING PARAMETER GROUP - ?? (Fine Angle Precision)
 // extern ? func_080022f4(?);
 // extern ? func_08002310(?);
 // extern ? func_0800232c(?);
@@ -87,7 +89,7 @@ extern u8 func_08001fc4(u8 *);
 // extern ? func_080025d8(?);
 // extern ? func_080025fc(?);
 // extern ? func_08002630(?);
-// extern ? func_08002634(?);
+extern u32 *func_08002634();
 // extern ? func_0800267c(?);
 // extern ? func_08002698(?);
 // extern ? func_080026c4(?);
