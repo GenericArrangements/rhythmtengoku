@@ -281,6 +281,6 @@ extern void func_08010260(struct AffineSprite *, s8);       // [func_08010260] A
 extern u32  func_08010288(struct AffineSprite *);           // [func_08010288] AFFINE SPRITE - func_0804ddb0(..., 2)
 extern void func_080102a8(struct AffineSprite *, s16 *, s16 *); // [func_080102a8] AFFINE SPRITE - func_0804db44()
 
-extern u32  func_080102d0(const struct SequenceData *); // [func_080102d0] Get Music Tempo from D_089ccccc
+extern u32  func_080102d0(const SongInfo *); // [func_080102d0] Get Music Tempo from D_089ccccc
 // extern ? func_080102f4(?);
 // extern ? func_08010478(?);

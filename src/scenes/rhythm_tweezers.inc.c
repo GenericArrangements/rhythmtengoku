@@ -26,11 +26,11 @@ extern u32 D_088e89a8;  // Animation: hair_appear_long
 extern u32 D_088e8a50;  // Animation: "hair_long_pull"
 
 // Sound Effects:
-extern const struct SequenceData s_f_hair_next_seqData;         // SFX: Cash Register
-extern const struct SequenceData s_f_hair_nuki_long_seqData;    // SFX: ???
-extern const struct SequenceData s_f_hair_tuneru_seqData;       // SFX: ???
-extern const struct SequenceData s_hanabi_pon_seqData;          // SFX: Hair Appear (Short)
-extern const struct SequenceData s_f_hair_appear_long_seqData;  // SFX: Hair Appear (Long)
+extern const SongInfo s_f_hair_next_seqData;         // SFX: Cash Register
+extern const SongInfo s_f_hair_nuki_long_seqData;    // SFX: ???
+extern const SongInfo s_f_hair_tuneru_seqData;       // SFX: ???
+extern const SongInfo s_hanabi_pon_seqData;          // SFX: Hair Appear (Short)
+extern const SongInfo s_f_hair_appear_long_seqData;  // SFX: Hair Appear (Long)
 
 // Additional Data - Rhythm Tweezers:
 extern u32 *D_089e3d98[]; // Array of animation pointers for vegetable faces

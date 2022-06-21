@@ -6,7 +6,7 @@
 
 extern void func_08049144(void); // [func_08049144] INTERRUPT_DMA2
 
-  // // //  "COMMS" STRUCT OPERATIONS  // // //
+  // // //  SAMPLE READER OPERATIONS  // // //
 
 extern void func_0804930c(u32, struct SampleInfo *); // [func_0804930c] SAMPLE READER - Initialise Channel
 extern void func_08049394(u32); // [func_08049394] SAMPLE READER - Reset Channel
@@ -19,7 +19,7 @@ extern void func_08049470(u32, u32); // [func_08049470] SAMPLE READER - Set unk0
 
   // // //  ??? OPERATIONS  // // //
 
-extern void func_08049490(u32, u32, u32, u32 *, u32, u32 *, u16, struct Comms *); // [func_08049490] Initialise... a lot...
+extern void func_08049490(u32, u32, u32, u32 *, u32, u32 *, u16, DmaSampleReader *); // [func_08049490] Initialise... a lot...
 // extern ? func_080497f8(?);
 extern void func_08049ad8(void); // [func_08049ad8] Initialise(?) REG_DMA1CNT & REG_DMA2CNT
 extern void func_08049b34(u32, u32, u32, u32); // [func_08049b34] ??
@@ -102,12 +102,12 @@ extern void func_0804ade8(MidiBus *, u8);     // [func_0804ade8] MIDI CHANNEL BU
 extern void func_0804ae14(MidiBus *, u16);    // [func_0804ae14] MIDI CHANNEL BUS - Set unk8
 extern void func_0804ae18(MidiBus *, u16 *);  // [func_0804ae18] MIDI CHANNEL BUS - Set unkC
 
-  // // //  "JASON" STRUCT OPERATIONS  // // //
+  // // //  SYSTEM-EXCLUSIVE MESSAGE OPERATIONS  // // //
 
-extern void func_0804ae1c(struct Jason*, u8, u8, u8, u8, u8); // [func_0804ae1c] ??
-extern void func_0804ae54(struct Jason *); // [func_0804ae54] Set ?? [Ctrl_49]
-extern void func_0804ae60(struct Jason *); // [func_0804ae60] Set ?? [Ctrl_49; Ctrl_4A]
-extern void func_0804ae6c(struct Jason *, u32); // [func_0804ae6c] ?? (relates to speed)
+extern void func_0804ae1c(struct SysExcMsgHandler*, u8, u8, u8, u8, u8); // [func_0804ae1c] SYSTEM MESSAGE HANDLER - ??
+extern void func_0804ae54(struct SysExcMsgHandler *); // [func_0804ae54] SYSTEM MESSAGE HANDLER - Set ?? [Ctrl_49]
+extern void func_0804ae60(struct SysExcMsgHandler *); // [func_0804ae60] SYSTEM MESSAGE HANDLER - Set ?? [Ctrl_49; Ctrl_4A]
+extern void func_0804ae6c(struct SysExcMsgHandler *, u32); // [func_0804ae6c] SYSTEM MESSAGE HANDLER - ?? (relates to speed)
 extern u32  func_0804af0c(u16); // [func_0804af0c] UTIL - Pseudo-Random Number Generator
 
   // // //  PSG SOUND BUFFER OPERATIONS  // // //
@@ -116,15 +116,15 @@ extern void func_0804af30(void); // [func_0804af30] PSG BUFFER - Stop All PSG Bu
 extern void func_0804af74(u32); // [func_0804af74] PSG BUFFER - Initialise
 extern u32  func_0804afa4(u32); // [func_0804afa4] PSG BUFFER - Convert Pitch Envelope to PSG Frequency Register Variable
 extern u32  func_0804afd8(u32); // [func_0804afd8] PSG BUFFER - Convert Volume Envelope to PSG Volume Register Variable
-// extern ? func_0804aff0(?); // [func_0804aff0] Update PSG Buffer Channel
+// extern ? func_0804aff0(?); // [func_0804aff0] PSG BUFFER - Update PSG Buffer Channel
 extern void func_0804b2c4(void); // [func_0804b2c4] PSG BUFFER - Update All
 
   // // //  AUDIO CHANNEL OPERATIONS  // // //
 
-extern u16  func_0804b324(u8 *); // [func_0804b324] AUDIO CHANNEL - Parse 16-bit Big Endian value in Byte Stream.
-extern u32  func_0804b330(u8 *); // [func_0804b330] AUDIO CHANNEL - Parse 32-bit Big Endian value in Byte Stream.
-extern u32  func_0804b348(char []); // [func_0804b348] AUDIO CHANNEL - Loop Marker Symbol Length
-extern void func_0804b368(SoundPlayer *, const struct SequenceData *); // [func_0804b368] AUDIO CHANNEL - Store Sound Sequence
+extern u16  func_0804b324(MidiStream); // [func_0804b324] AUDIO CHANNEL - Parse 16-bit Big Endian value in Byte Stream.
+extern u32  func_0804b330(MidiStream); // [func_0804b330] AUDIO CHANNEL - Parse 32-bit Big Endian value in Byte Stream.
+extern u32  func_0804b348(char *); // [func_0804b348] AUDIO CHANNEL - Loop Marker Symbol Length
+extern void func_0804b368(SoundPlayer *, const SongInfo *); // [func_0804b368] AUDIO CHANNEL - Store Sound Sequence
 extern void func_0804b534(u16); // [func_0804b534] AUDIO CHANNEL - Load & Store Sound Sequence from Index
 extern void func_0804b560(SoundPlayer *); // [func_0804b560] AUDIO CHANNEL - Remove Sound Sequence
 extern void func_0804b574(SoundPlayer *, u8); // [func_0804b574] AUDIO CHANNEL - Pause/Unpause Sound Sequence { 0 = Unpause; 1 = Pause }
@@ -138,7 +138,7 @@ extern void func_0804b654(SoundPlayer *, u16, u16); // [func_0804b654] AUDIO CHA
 extern void func_0804b65c(SoundPlayer *, u16, s16); // [func_0804b65c] AUDIO CHANNEL - Set Pitch
 extern void func_0804b66c(SoundPlayer *, u16, s8); // [func_0804b66c] AUDIO CHANNEL - Set Panning
 extern void func_0804b67c(u16); // [func_0804b67c] AUDIO CHANNEL - Pause Sound Sequence from Index
-extern u32  func_0804b6c4(u8 *, u8 *, u32); // [func_0804b6c4] UTIL - String.equals()
+extern u32  func_0804b6c4(MidiStream, MidiStream, u32); // [func_0804b6c4] UTIL - String.equals()
 extern u32  func_0804b6f0(u16, u16, u16); // [func_0804b6f0] UTIL - Playback Speed Formula
 extern void func_0804b710(SoundPlayer *, u16); // [func_0804b710] AUDIO CHANNEL - Align Channel Speed with BeatScript
 extern void func_0804b734(SoundPlayer *, u16, u16); // [func_0804b734] AUDIO CHANNEL - Apply Volume Fade { type = 0..3 }
@@ -148,19 +148,25 @@ extern void func_0804b7fc(SoundPlayer *, u16); // [func_0804b7fc] AUDIO CHANNEL 
 
   // // //  MIDI SEQUENCE OPERATIONS  // // //
 
-extern void func_0804b80c(SoundPlayer *, u8 *); // [func_0804b80c] MIDI - System-Exclusive Message [Evnt_F0]
-extern u32  func_0804b898(SoundPlayer *, u8 **); // [func_0804b898] MIDI - Meta Event (Loop Start, Loop End, Track End, Set Tempo)
+extern void func_0804b80c(SoundPlayer *, MidiStream); // [func_0804b80c] MIDI - System-Exclusive Message [Evnt_F0]
+extern u32  func_0804b898(SoundPlayer *, MidiStream *); // [func_0804b898] MIDI - Meta Event (Loop Start, Loop End, Track End, Set Tempo)
 extern void func_0804b95c(SoundPlayer *, u32, u8, u8); // [func_0804b95c] MIDI - Controller Change [Evnt_B]
 extern void func_0804bc5c(u32, u32, u32); // [func_0804bc5c] MIDI - Note Off/On [Evnt_8; Evnt_9]
 extern u32  func_0804bcc0(SoundPlayer *, u32); // [func_0804bcc0] MIDI - Messages/Events
+
+
+
 extern void func_0804bed0(SoundPlayer *, u32); // [func_0804bed0] ?? (something about speed and midi trackers and notes)
 extern void func_0804c040(SoundPlayer *); // [func_0804c040] Apply Volume (Real-Time)
 extern void func_0804c0f8(SoundPlayer *); // [func_0804c0f8] ?? (relates to speed)
 extern void func_0804c170(void); // [func_0804c170] MAIN UPDATE
 extern void func_0804c340(u32, u32, u32, u32); // [func_0804c340] Set Reverb
 extern void func_0804c358(void); // [func_0804c358] STUB
+
+
+
 extern void func_0804c35c(SoundPlayer *, MidiBus *, u32, MidiReader *, u32); // [func_0804c35c] INITIALISE - Audio Channels
-extern u32  func_0804c398(u8 **); // [func_0804c398] MIDI - Parse Variable-Length Quantity
+extern u32  func_0804c398(MidiStream *); // [func_0804c398] MIDI - Parse Variable-Length Quantity
 extern void func_0804c3c0(SoundPlayer *, MidiReader *, u32, MidiBus *, MidiChannel *, u8 *); // [func_0804c3c0] Initialise... an audio channel that don't exist.
 // extern ? func_0804c4bc(?);
 // extern ? func_0804c508(?);

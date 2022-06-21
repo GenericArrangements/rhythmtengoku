@@ -34,14 +34,14 @@ extern u32 D_088a1258; // Animation: "arrow_hit"
 extern u32 D_088a1280; // Animation: "ghost_dash_tutorial"
 
 // Sound Effects:
-extern const struct SequenceData s_ghost_rain_seqData;           // Sound: Wind/Rain
-extern const struct SequenceData s_ghost_gosha_seqData;          // Sound: Arrow Missed
-extern const struct SequenceData s_ghost_walk_seqData;           // Sound: Ghost Moving
-extern const struct SequenceData s_f_aim_just_hit_seqData;       // Sound: Ghost Hit
-extern const struct SequenceData s_f_aim_just_hit_voice_seqData; // Sound: Ghost Hit Voice
-extern const struct SequenceData s_ghost_miss_hit_seqData;       // Sound: Ghost Barely
-extern const struct SequenceData s_ghost_dash_seqData;           // Sound: Ghost Miss
-extern const struct SequenceData s_ghost_warai_seqData;          // Sound: Ghost Miss Voice
+extern const SongInfo s_ghost_rain_seqData;           // Sound: Wind/Rain
+extern const SongInfo s_ghost_gosha_seqData;          // Sound: Arrow Missed
+extern const SongInfo s_ghost_walk_seqData;           // Sound: Ghost Moving
+extern const SongInfo s_f_aim_just_hit_seqData;       // Sound: Ghost Hit
+extern const SongInfo s_f_aim_just_hit_voice_seqData; // Sound: Ghost Hit Voice
+extern const SongInfo s_ghost_miss_hit_seqData;       // Sound: Ghost Barely
+extern const SongInfo s_ghost_dash_seqData;           // Sound: Ghost Miss
+extern const SongInfo s_ghost_warai_seqData;          // Sound: Ghost Miss Voice
 
 // Additional Data:
 extern char D_08059f90;   // Empty Default Text

@@ -30,15 +30,15 @@ extern u32 D_088acf7c[]; // Animation: "joe_punch_high_face" (Remix 8 face)
 extern u32 D_088acfc4[]; // Animation: "joe_punch_low_face" (Remix 8 face)
 
 // Sound Effects:
-extern const struct SequenceData s_f_boxing_score_reset_seqData;
-extern const struct SequenceData s_f_boxing_score_up_seqData;
-extern const struct SequenceData s_f_boxing_score_down_seqData;
-extern const struct SequenceData s_f_boxing_punch_seqData;
-extern const struct SequenceData s_f_boxing_land_seqData;
-extern const struct SequenceData s_f_boxing_hard_seqData;
-extern const struct SequenceData s_f_boxing_normal_seqData;
-extern const struct SequenceData s_f_boxing_kansei_seqData;
-extern const struct SequenceData s_f_boxing_v_nua_seqData;
+extern const SongInfo s_f_boxing_score_reset_seqData;
+extern const SongInfo s_f_boxing_score_up_seqData;
+extern const SongInfo s_f_boxing_score_down_seqData;
+extern const SongInfo s_f_boxing_punch_seqData;
+extern const SongInfo s_f_boxing_land_seqData;
+extern const SongInfo s_f_boxing_hard_seqData;
+extern const SongInfo s_f_boxing_normal_seqData;
+extern const SongInfo s_f_boxing_kansei_seqData;
+extern const SongInfo s_f_boxing_v_nua_seqData;
 
 // Additional Data - Karate Man:
 extern u16 D_088ad004[8][16];  // Palette

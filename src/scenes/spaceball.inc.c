@@ -21,7 +21,7 @@ extern u32 D_088a1ba0; // Animation: "umpire_show"
 extern u32 D_088a1bd0; // Animation: "umpire_sway"
 
 // Sound Effects:
-extern const struct SequenceData s_f_batter_ball_land_seqData;
+extern const SongInfo s_f_batter_ball_land_seqData;
 
 // Additional Data:
 extern u32  D_089de93c;    // GFX-related Null

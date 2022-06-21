@@ -14,13 +14,13 @@ extern u32 *D_089e6518[];   // GFX Struct Index
 extern u8  D_089e6520;
 extern u8  D_089e6525;
 
-extern const struct SequenceData *D_089e652c[2][2];
+extern const SongInfo *D_089e652c[2][2];
 extern u32 D_089e65f0[];
 
-extern const struct SequenceData s_RC_seqData;
-extern const struct SequenceData s_tom_M_seqData;
-extern const struct SequenceData s_SD1_seqData;
-extern const struct SequenceData s_CC4_seqData;
+extern const SongInfo s_RC_seqData;
+extern const SongInfo s_tom_M_seqData;
+extern const SongInfo s_SD1_seqData;
+extern const SongInfo s_CC4_seqData;
 
 u32 *func_080398b4(u32 arg0) {
     return D_089e63f8[arg0][gRapMenInfo.unk0];

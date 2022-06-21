@@ -27,7 +27,7 @@ extern u32 D_08932edc; // Animation: "shadow"
 extern u32 D_08932f94; // Animation: "sprout_appear_tutorial"
 
 // Sound Effects:
-extern const struct SequenceData s_witch_furu_seqData; // Sound for inputting without a cue.
+extern const SongInfo s_witch_furu_seqData; // Sound for inputting without a cue.
 
 // Additional Data - Wizard's Waltz:
 extern u32 D_089e9f10;   // GFX-related Null

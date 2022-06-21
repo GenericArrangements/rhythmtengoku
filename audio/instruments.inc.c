@@ -161,7 +161,7 @@ const struct InstrumentPCM instrumentPCMData10 = {
     /* unk1C  */ 0x00055552,
 };
 
-const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData11 = {
+const struct InstrumentSubSplit instrumentSubbankMultiKeyData11 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -203,7 +203,7 @@ const struct InstrumentPCM instrumentPCMData13 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData14 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData14 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -212,7 +212,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData14 = {
     /* Sub-bank */ (void *)0x08a998e4, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData15 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData15 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -221,7 +221,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData15 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData16 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData16 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -792,7 +792,7 @@ const struct InstrumentPCM instrumentPCMData51 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData52 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData52 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -801,7 +801,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData52 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData53 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData53 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -810,7 +810,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData53 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData54 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData54 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -819,7 +819,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData54 = {
     /* Sub-bank */ (void *)0x08a996e4, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData55 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData55 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -1230,7 +1230,7 @@ const struct InstrumentPCM instrumentPCMData80 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData81 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData81 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -1837,7 +1837,7 @@ const struct InstrumentPCM instrumentPCMData118 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData119 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData119 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -1846,7 +1846,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData119 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData120 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData120 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -2241,7 +2241,7 @@ const struct InstrumentPCM instrumentPCMData144 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData145 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData145 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -2426,7 +2426,7 @@ const struct InstrumentPCM instrumentPCMData156 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData157 = {
+const struct InstrumentSubSplit instrumentSubbankMultiKeyData157 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -2776,7 +2776,7 @@ const struct InstrumentPCM instrumentPCMData178 = {
     /* unk1C  */ 0x000b8000,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData179 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData179 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -2785,7 +2785,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData179 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData180 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData180 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -2794,7 +2794,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData180 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData181 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData181 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -3043,7 +3043,7 @@ const struct InstrumentPCM instrumentPCMData196 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData197 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData197 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -3164,7 +3164,7 @@ const struct InstrumentPCM instrumentPCMData204 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData205 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData205 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -3749,7 +3749,7 @@ const struct InstrumentPCM instrumentPCMData241 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData242 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData242 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -4382,7 +4382,7 @@ const struct InstrumentPCM instrumentPCMData281 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData282 = {
+const struct InstrumentSubSplit instrumentSubbankMultiKeyData282 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -4456,7 +4456,7 @@ const struct InstrumentPCM instrumentPCMData286 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData287 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData287 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -4465,7 +4465,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData287 = {
     /* Sub-bank */ (void *)0x08a998e4, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData288 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData288 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -4474,7 +4474,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData288 = {
     /* Sub-bank */ (void *)0x08a996e4, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData289 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData289 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -4739,7 +4739,7 @@ const struct InstrumentPCM instrumentPCMData305 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData306 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData306 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -5052,7 +5052,7 @@ const struct InstrumentPCM instrumentPCMData325 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData326 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData326 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -5253,7 +5253,7 @@ const struct InstrumentPCM instrumentPCMData338 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData339 = {
+const struct InstrumentSubSplit instrumentSubbankMultiKeyData339 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -5359,7 +5359,7 @@ const struct InstrumentPCM instrumentPCMData345 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData346 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData346 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -5368,7 +5368,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData346 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData347 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData347 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -7163,7 +7163,7 @@ const struct InstrumentPCM instrumentPCMData450 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData451 = {
+const struct InstrumentSubSplit instrumentSubbankMultiKeyData451 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -7365,7 +7365,7 @@ const struct InstrumentPCM instrumentPCMData463 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData464 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData464 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -7406,7 +7406,7 @@ const struct InstrumentPCM instrumentPCMData466 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData467 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData467 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -7671,7 +7671,7 @@ const struct InstrumentPCM instrumentPCMData483 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData484 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData484 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -7680,7 +7680,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData484 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData485 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData485 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -7817,7 +7817,7 @@ const struct InstrumentPCM instrumentPCMData493 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData494 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData494 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -7970,7 +7970,7 @@ const struct InstrumentPCM instrumentPCMData503 = {
     /* unk1C  */ 0x000b8000,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData504 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData504 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -7979,7 +7979,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData504 = {
     /* Sub-bank */ (void *)0x08a998e4, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData505 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData505 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -8084,7 +8084,7 @@ const struct InstrumentPCM instrumentPCMData511 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData512 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData512 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -8269,7 +8269,7 @@ const struct InstrumentPCM instrumentPCMData523 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData524 = {
+const struct InstrumentSubSplit instrumentSubbankMultiKeyData524 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -8343,7 +8343,7 @@ const struct InstrumentPCM instrumentPCMData528 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData529 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData529 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -8672,7 +8672,7 @@ const struct InstrumentPCM instrumentPCMData549 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData550 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData550 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -8825,7 +8825,7 @@ const struct InstrumentPCM instrumentPCMData559 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData560 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData560 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -8834,7 +8834,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData560 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData561 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData561 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -8971,7 +8971,7 @@ const struct InstrumentPCM instrumentPCMData569 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData570 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData570 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -9188,7 +9188,7 @@ const struct InstrumentPCM instrumentPCMData583 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData584 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData584 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -9377,7 +9377,7 @@ const struct InstrumentPCM instrumentPCMData595 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData596 = {
+const struct InstrumentSubSplit instrumentSubbankMultiKeyData596 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -9387,7 +9387,7 @@ const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData596 = {
     /* Sub-bank */ (void *)0x08a96c10, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData597 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData597 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -9572,7 +9572,7 @@ const struct InstrumentPCM instrumentPCMData608 = {
     /* unk1C  */ 0x000b8000,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData609 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData609 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -9757,7 +9757,7 @@ const struct InstrumentPCM instrumentPCMData620 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData621 = {
+const struct InstrumentSubSplit instrumentSubbankMultiKeyData621 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -9767,7 +9767,7 @@ const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData621 = {
     /* Sub-bank */ (void *)0x08a97010, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData622 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData622 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -9968,7 +9968,7 @@ const struct InstrumentPCM instrumentPCMData634 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData635 = {
+const struct InstrumentSubSplit instrumentSubbankMultiKeyData635 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -9978,7 +9978,7 @@ const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData635 = {
     /* Sub-bank */ (void *)0x08a97210, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData636 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData636 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -10163,7 +10163,7 @@ const struct InstrumentPCM instrumentPCMData647 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData648 = {
+const struct InstrumentSubSplit instrumentSubbankMultiKeyData648 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -10173,7 +10173,7 @@ const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData648 = {
     /* Sub-bank */ (void *)0x08a97010, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData649 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData649 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -10342,7 +10342,7 @@ const struct InstrumentPCM instrumentPCMData659 = {
     /* unk1C  */ 0x00082378,
 };
 
-const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData660 = {
+const struct InstrumentSubSplit instrumentSubbankMultiKeyData660 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -10352,7 +10352,7 @@ const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData660 = {
     /* Sub-bank */ (void *)0x08a97610, // POINTER
 };
 
-const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData661 = {
+const struct InstrumentSubSplit instrumentSubbankMultiKeyData661 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -10362,7 +10362,7 @@ const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData661 = {
     /* Sub-bank */ (void *)0x08a97610, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData662 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData662 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -10595,7 +10595,7 @@ const struct InstrumentPCM instrumentPCMData676 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData677 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData677 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -10604,7 +10604,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData677 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData678 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData678 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -10709,7 +10709,7 @@ const struct InstrumentPCM instrumentPCMData684 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData685 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData685 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -10718,7 +10718,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData685 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData686 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData686 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -11015,7 +11015,7 @@ const struct InstrumentPCM instrumentPCMData704 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData705 = {
+const struct InstrumentSubSplit instrumentSubbankMultiKeyData705 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -11025,7 +11025,7 @@ const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData705 = {
     /* Sub-bank */ (void *)0x08a97010, // POINTER
 };
 
-const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData706 = {
+const struct InstrumentSubSplit instrumentSubbankMultiKeyData706 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0x30,
@@ -11035,7 +11035,7 @@ const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData706 = {
     /* Sub-bank */ (void *)0x08a97c10, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData707 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData707 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -11044,7 +11044,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData707 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData708 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData708 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -11345,7 +11345,7 @@ const struct InstrumentPCM instrumentPCMData726 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData727 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData727 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -11354,7 +11354,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData727 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData728 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData728 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -11363,7 +11363,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData728 = {
     /* Sub-bank */ (void *)0x08a996e4, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData729 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData729 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -11692,7 +11692,7 @@ const struct InstrumentPCM instrumentPCMData749 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData750 = {
+const struct InstrumentSubSplit instrumentSubbankMultiKeyData750 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -12010,7 +12010,7 @@ const struct InstrumentPCM instrumentPCMData768 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData769 = {
+const struct InstrumentSubSplit instrumentSubbankMultiKeyData769 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0x30,
@@ -12020,7 +12020,7 @@ const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData769 = {
     /* Sub-bank */ (void *)0x08a98010, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData770 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData770 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12029,7 +12029,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData770 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData771 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData771 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12182,7 +12182,7 @@ const struct InstrumentPCM instrumentPCMData780 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData781 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData781 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12191,7 +12191,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData781 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData782 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData782 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12296,7 +12296,7 @@ const struct InstrumentPCM instrumentPCMData788 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData789 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData789 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12305,7 +12305,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData789 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData790 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData790 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12314,7 +12314,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData790 = {
     /* Sub-bank */ (void *)0x08a99a14, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData791 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData791 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12435,7 +12435,7 @@ const struct InstrumentPCM instrumentPCMData798 = {
     /* unk1C  */ 0x00235dd1,
 };
 
-const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData799 = {
+const struct InstrumentSubSplit instrumentSubbankMultiKeyData799 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0x24,
@@ -12445,7 +12445,7 @@ const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData799 = {
     /* Sub-bank */ (void *)0x08a9860c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData800 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData800 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12454,7 +12454,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData800 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData801 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData801 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12575,7 +12575,7 @@ const struct InstrumentPCM instrumentPCMData808 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData809 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData809 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12584,7 +12584,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData809 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData810 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData810 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12913,7 +12913,7 @@ const struct InstrumentPCM instrumentPCMData830 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData831 = {
+const struct InstrumentSubSplit instrumentSubbankMultiKeyData831 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -12923,7 +12923,7 @@ const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData831 = {
     /* Sub-bank */ (void *)0x08a97010, // POINTER
 };
 
-const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData832 = {
+const struct InstrumentSubSplit instrumentSubbankMultiKeyData832 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -12933,7 +12933,7 @@ const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData832 = {
     /* Sub-bank */ (void *)0x08a98a0c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData833 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData833 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12942,7 +12942,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData833 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData834 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData834 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12951,7 +12951,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData834 = {
     /* Sub-bank */ (void *)0x08a99b4c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData835 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData835 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -13152,7 +13152,7 @@ const struct InstrumentPCM instrumentPCMData847 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData848 = {
+const struct InstrumentSubSplit instrumentSubbankMultiKeyData848 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -13162,7 +13162,7 @@ const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData848 = {
     /* Sub-bank */ (void *)0x08a98a0c, // POINTER
 };
 
-const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData849 = {
+const struct InstrumentSubSplit instrumentSubbankMultiKeyData849 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0x24,
@@ -13172,7 +13172,7 @@ const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData849 = {
     /* Sub-bank */ (void *)0x08a9860c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData850 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData850 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -13181,7 +13181,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData850 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData851 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData851 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -13190,7 +13190,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData851 = {
     /* Sub-bank */ (void *)0x08a99c60, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData852 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData852 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -13939,7 +13939,7 @@ const struct InstrumentPCM instrumentPCMData898 = {
     /* unk1C  */ 0x00218000,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData899 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData899 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -13948,7 +13948,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData899 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData900 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData900 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -13957,7 +13957,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData900 = {
     /* Sub-bank */ (void *)0x08a99a14, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData901 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData901 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -14110,7 +14110,7 @@ const struct InstrumentPCM instrumentPCMData910 = {
     /* unk1C  */ 0x001fc000,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData911 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData911 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -14119,7 +14119,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData911 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData912 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData912 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -14352,7 +14352,7 @@ const struct InstrumentPCM instrumentPCMData926 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData927 = {
+const struct InstrumentSubSplit instrumentSubbankMultiKeyData927 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -14458,7 +14458,7 @@ const struct InstrumentPCM instrumentPCMData933 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-const struct InstrumentSubbankMultiKey instrumentSubbankMultiKeyData934 = {
+const struct InstrumentSubSplit instrumentSubbankMultiKeyData934 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -14756,7 +14756,7 @@ const struct InstrumentPCM instrumentPCMData952 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData953 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData953 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -14765,7 +14765,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData953 = {
     /* Sub-bank */ (void *)0x08a99b4c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData954 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData954 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -14774,7 +14774,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData954 = {
     /* Sub-bank */ (void *)0x08a998e4, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData955 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData955 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -14783,7 +14783,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData955 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData956 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData956 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -14792,7 +14792,7 @@ const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData956 = {
     /* Sub-bank */ (void *)0x08a996e4, // POINTER
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData957 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData957 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -18977,7 +18977,7 @@ const struct InstrumentPCM instrumentPCMData1218 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData1219 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData1219 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -24352,7 +24352,7 @@ const struct InstrumentPCM instrumentPCMData1554 = {
     /* unk1C  */ 0x001fc000,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData1555 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData1555 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -24701,7 +24701,7 @@ const struct InstrumentPCM instrumentPCMData1576 = {
     /* unk1C  */ 0x0016554d,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData1577 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData1577 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -24728,7 +24728,7 @@ const struct InstrumentPSG instrumentPSGData1578 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData1579 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData1579 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -25059,7 +25059,7 @@ const struct InstrumentPCM instrumentPCMData1599 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData1600 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData1600 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -25340,7 +25340,7 @@ const struct InstrumentPCM instrumentPCMData1617 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData1618 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData1618 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -26011,7 +26011,7 @@ const struct InstrumentPCM instrumentPCMData1658 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-const struct InstrumentSubbankSingleKey instrumentSubbankSingleKeyData1659 = {
+const struct InstrumentSubRhythm instrumentSubbankSingleKeyData1659 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x18,

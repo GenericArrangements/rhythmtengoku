@@ -1,7 +1,7 @@
 #define gBonOdoriInfo D_030055d0->gameInfo.bonOdori
 
-extern const struct SequenceData s_tebyoushi_pati_seqData;
-extern const struct SequenceData s_HC_seqData;
+extern const SongInfo s_tebyoushi_pati_seqData;
+extern const SongInfo s_HC_seqData;
 
 extern u16 *D_089deed4[];  // Index of pointers to palettes.
 extern u16 *D_089deecc[];  // Another index of pointers to palettes (more like sub-palettes).

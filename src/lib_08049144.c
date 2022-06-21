@@ -26,14 +26,14 @@ extern u8  D_030015a7; // Initial value at D_03005b7c
 
 extern u32 D_03001888; // ?? (this is like, sample data or something)
 extern u32 D_030024c8; // ?? (sample envelope or something)
-extern struct Comms D_030028c8; // Sample Reader Location (12 Channels)
+extern DmaSampleReader D_030028c8; // Sample Reader Location (12 Channels)
 extern struct SoundBuffer D_03002a48; // PCM Buffer Location (12 Channels)
 
 extern u16 D_030055f0;
 extern u32 D_030055f4; // ?? (init. = 0) { 0..2 }
 
 extern u32 D_03005600[4];
-extern u16 D_03005610; // Total Comms at D_03005b88 ( = 12)
+extern u16 D_03005610; // Total DmaSampleReader at D_03005b88 ( = 12)
 extern u32 D_03005620[3];
 extern u32 D_0300562c; // Current Speed (NOT Tempo)
 extern u32 D_03005630; // ?? (init. = 0)
@@ -51,7 +51,7 @@ extern u16 D_03005b20; // Total Bytes in array at D_03005b7c
 extern volatile u32 D_03005b24; // Offset of *D_030064b8 from D_03001888 ( = 0x620)
 extern u8  D_03005b28; // ?? (Set by MIDI Controller 4D; Only set if D_03005b44 == 0)
 
-extern struct Jason D_03005b30;
+extern struct SysExcMsgHandler D_03005b30;
 extern u8  D_03005b3c; // ?? (Set by MIDI Controller 49; Cleared by MIDI Controller 4A and MIDI Event F0)
 extern u32 D_03005b40;
 extern u8  D_03005b44; // ?? (Must be clear for certain operations to work; Affects MIDI Controllers 49, 4A and 4D)
@@ -61,7 +61,7 @@ extern u16 D_03005b78; // Current Available MIDI Note Slot
 extern u8 *D_03005b7c; // ?? (Byte at offset D_03005648 set by MIDI Controller 10)
 extern u16 D_03005b80; // REG_VCOUNT
 
-extern struct Comms *D_03005b88; // Comms (12 Channels, at D_030028c8)
+extern DmaSampleReader *D_03005b88; // DmaSampleReader (12 Channels, at D_030028c8)
 extern u16 D_03005b8c; // Total PCM Buffer Channels at D_030064bc ( = 12)
 extern s8  D_03005b90[]; // Reverb controller..?
 extern u32 D_03005b94; // Global Sample Rate ( = 13379Hz)
@@ -167,12 +167,12 @@ void func_08049144(void) {
 }
 
 
-  //  //  //  //   "COMMS" STRUCT OPERATIONS   //  //  //  //
+  //  //  //  //   SAMPLE READER OPERATIONS   //  //  //  //
 
 
 // [func_0804930c] SAMPLE READER - Initialise Channel
 void func_0804930c(u32 id, struct SampleInfo *sample) {
-    struct Comms *comms = &D_03005b88[id]; // r6
+    DmaSampleReader *comms = &D_03005b88[id]; // r6
     u32 keySampleRate;
     u32 keyFreq;
     u64 sampleRate;
@@ -189,7 +189,7 @@ void func_0804930c(u32 id, struct SampleInfo *sample) {
         comms->loopEnd = sample->length << 14;
     }
 
-    keyFreq = D_08a86008[sample->key];
+    keyFreq = D_08a86008[sample->baseKey];
     keySampleRate = D_03005b94 * keyFreq; // r2
     sampleRate = (u64) sample->sampleRate << 28;
     comms->unk1C = __udivmoddi4((sampleRate + keySampleRate) - 1, keySampleRate);
@@ -219,7 +219,7 @@ void func_080493e4(u32 id, u32 volumeEnv) {
 
 // [func_080493f4] SAMPLE READER - Set Pitch Envelope
 void func_080493f4(u32 id, u32 pitchEnv) {
-    struct Comms *comms = &D_03005b88[id];
+    DmaSampleReader *comms = &D_03005b88[id];
     if (pitchEnv == 0) {
         comms->pitch = 0x80 << 7;
         comms->unk0_b1 = 0;
@@ -1060,72 +1060,72 @@ void func_0804ae18(MidiBus *mChnlBus, u16 *var) {
 }
 
 
-  //  //  //  //   "JASON" STRUCT OPERATIONS   //  //  //  //
+  //  //  //  //   SYSTEM-EXCLUSIVE MESSAGE OPERATIONS   //  //  //  //
 
 
 // [func_0804ae1c] ??
-void func_0804ae1c(struct Jason* jason, u8 arg1, u8 arg2, u8 arg3, u8 arg4, u8 arg5) {
-    jason->unk6 = 0;
-    jason->unk7 = 0;
-    jason->unk8 = 0;
-    jason->unk0 = arg1;
-    jason->unk1 = arg2;
-    jason->unk2 = 0x10000 / arg3;
-    jason->unk4 = arg4;
-    jason->unk5 = arg5;
+void func_0804ae1c(struct SysExcMsgHandler* SysExcMsgHandler, u8 arg1, u8 arg2, u8 arg3, u8 arg4, u8 arg5) {
+    SysExcMsgHandler->unk6 = 0;
+    SysExcMsgHandler->unk7 = 0;
+    SysExcMsgHandler->unk8 = 0;
+    SysExcMsgHandler->unk0 = arg1;
+    SysExcMsgHandler->unk1 = arg2;
+    SysExcMsgHandler->unk2 = 0x10000 / arg3;
+    SysExcMsgHandler->unk4 = arg4;
+    SysExcMsgHandler->unk5 = arg5;
 }
 
 // [func_0804ae54] Set ?? [Ctrl_49]
-void func_0804ae54(struct Jason *arg0) {
+void func_0804ae54(struct SysExcMsgHandler *arg0) {
     arg0->unk6 = 1;
     arg0->unk8 = 0;
     arg0->unk7 = 0;
 }
 
 // [func_0804ae60] Set ?? [Ctrl_49; Ctrl_4A]
-void func_0804ae60(struct Jason *arg0) {
+void func_0804ae60(struct SysExcMsgHandler *arg0) {
     arg0->unk6 = 0;
     arg0->unk8 = 0;
     arg0->unk7 = 0;
 }
 
 // [func_0804ae6c] ?? (relates to speed)
-void func_0804ae6c(struct Jason *jason, u32 speed) {
+void func_0804ae6c(struct SysExcMsgHandler *SysExcMsgHandler, u32 speed) {
     s32 temp;
     s32 temp2;
 
-    switch (jason->unk6) {
+    switch (SysExcMsgHandler->unk6) {
         case 0:
-            jason->unk7 = 0;
+            SysExcMsgHandler->unk7 = 0;
             break;
         case 1:
-            jason->unk8 += speed;
-            jason->unk7 = 0;
-            if ((jason->unk8 >> 8) >= jason->unk0) {
-                jason->unk8 = 0;
-                jason->unk6 = 2;
+            SysExcMsgHandler->unk8 += speed;
+            SysExcMsgHandler->unk7 = 0;
+            if ((SysExcMsgHandler->unk8 >> 8) >= SysExcMsgHandler->unk0) {
+                SysExcMsgHandler->unk8 = 0;
+                SysExcMsgHandler->unk6 = 2;
             }
             break;
         case 2:
         case 3:
-            jason->unk8 += speed;
-            temp2 = jason->unk8 >> 8;
-            temp = (temp2 * jason->unk2) >> 8;
-            if ((jason->unk5 != 0) && ((u32) temp > jason->unk5)) {
-                temp = jason->unk5;
+            SysExcMsgHandler->unk8 += speed;
+            temp2 = SysExcMsgHandler->unk8 >> 8;
+            temp = (temp2 * SysExcMsgHandler->unk2) >> 8;
+            if ((SysExcMsgHandler->unk5 != 0) && ((u32) temp > SysExcMsgHandler->unk5)) {
+                temp = SysExcMsgHandler->unk5;
             }
-            temp += jason->unk4;
+            temp += SysExcMsgHandler->unk4;
             temp = D_08a86140[temp & 0xff] >> 1;
             if (temp > 0x7f) temp = 0x7f;
             if (temp < -0x80) temp = -0x80;
-            if (jason->unk6 == 2) {
-                if (temp2 < jason->unk1) {
-                    temp = (temp * temp2) / jason->unk1;
+            if (SysExcMsgHandler->unk6 == 2) {
+                if (temp2 < SysExcMsgHandler->unk1) {
+                    temp = (temp * temp2) / SysExcMsgHandler->unk1;
                 } else {
-                    jason->unk6 = 3;
+                    SysExcMsgHandler->unk6 = 3;
                 }
             }
-            jason->unk7 = temp;
+            SysExcMsgHandler->unk7 = temp;
             break;
     }
 }
@@ -1222,29 +1222,29 @@ void func_0804b2c4(void) {
 
 
 // [func_0804b324] AUDIO CHANNEL - Parse 16-bit Big Endian value in Byte Stream.
-u16 func_0804b324(u8 *stream) {
+u16 func_0804b324(MidiStream stream) {
     return (stream[0] << 8) | stream[1];
 }
 
 // [func_0804b330] AUDIO CHANNEL - Parse 32-bit Big Endian value in Byte Stream.
-u32 func_0804b330(u8 *stream) {
+u32 func_0804b330(MidiStream stream) {
     return (stream[0]) << 0x18 | (stream[1]) << 0x10 | (stream[2]) << 8 | stream[3];
 }
 
 // [func_0804b348] AUDIO CHANNEL - Loop Marker Symbol Length
-u32 func_0804b348(char label[]) {
+u32 func_0804b348(char *label) {
     u8 i;
 
-    for (i = 0; label[i] != 0; i++);
+    for (i = 0; label[i] != '\0'; i++);
     return i;
 }
 
 // [func_0804b368] AUDIO CHANNEL - Store Sound Sequence
-void func_0804b368(SoundPlayer *channel, const struct SequenceData *seqData) {
+void func_0804b368(SoundPlayer *channel, const SongInfo *seqData) {
     MidiBus *mChnlBus;
     MidiReader *mTrkReader;
-    u8 *mTrkStream;
-    u8 *mTrkStart;
+    MidiStream mTrkStream;
+    MidiStream mTrkStart;
     u32 chunkLength;
     u32 trackTotal;
     u32 deltaTime;
@@ -1253,7 +1253,7 @@ void func_0804b368(SoundPlayer *channel, const struct SequenceData *seqData) {
     // Reading Sequence Data:
     if (func_0804b5a0(channel)) {
         if (channel->unk0_b21 && !channel->isPaused) {
-            if (channel->sequenceData->priority > seqData->priority) return;
+            if (channel->songInfo->priority > seqData->priority) return;
         }
     }
 
@@ -1263,11 +1263,11 @@ void func_0804b368(SoundPlayer *channel, const struct SequenceData *seqData) {
     func_0804a014(mChnlBus, instrumentBanks[seqData->soundBank]);
     func_0804adb4(mChnlBus, seqData->volume);
     func_08049e8c(mChnlBus, seqData->priority);
-    channel->sequenceData = seqData;
+    channel->songInfo = seqData;
     channel->channelVolume = seqData->volume;
 
     // Reading MIDI Data:
-    mTrkStream = (u8 *)seqData->romAddress;
+    mTrkStream = seqData->midiSequence;
 
     // Header:
     mTrkStream += 4; // Skip (Header: "MThd")
@@ -1283,7 +1283,7 @@ void func_0804b368(SoundPlayer *channel, const struct SequenceData *seqData) {
     mTrkStream += chunkLength; // Skip (Header: Data)
 
     // Track:
-    mTrkReader = channel->midiTrackReader;
+    mTrkReader = channel->midiReader;
     for (i = 0; i < channel->nTracksUsed; i++) {
         mTrkStream += 4; // Skip (Track: Header)
         chunkLength = func_0804b330(mTrkStream);
@@ -1325,17 +1325,17 @@ void func_0804b368(SoundPlayer *channel, const struct SequenceData *seqData) {
 // [func_0804b534] AUDIO CHANNEL - Load & Store Sound Sequence from Index
 void func_0804b534(u16 index) {
     SoundPlayer *channel;
-    const struct SequenceData *seqData;
+    const SongInfo *seqData;
 
     channel = D_08aa4460[D_08aa06f8[index].channelID].audioChannel;
-    seqData = D_08aa06f8[index].sequenceData;
+    seqData = D_08aa06f8[index].songInfo;
     func_0804b368(channel, seqData);
 }
 
 // [func_0804b560] AUDIO CHANNEL - Remove Sound Sequence
 void func_0804b560(SoundPlayer *channel) {
     func_08049e3c(channel->midiBus);
-    channel->sequenceData = NULL;
+    channel->songInfo = NULL;
 }
 
 // [func_0804b574] AUDIO CHANNEL - Pause/Unpause Sound Sequence { 0 = Unpause; 1 = Pause }
@@ -1348,9 +1348,9 @@ void func_0804b574(SoundPlayer *channel, u8 pause) {
 u32 func_0804b5a0(SoundPlayer *channel) {
     u32 i;
 
-    if (channel->sequenceData == NULL) return FALSE;
+    if (channel->songInfo == NULL) return FALSE;
     for (i = 0; i < channel->nTracksUsed; i++) {
-        if (channel->midiTrackReader[i].active_curr) return TRUE;
+        if (channel->midiReader[i].active_curr) return TRUE;
     }
     return FALSE;
 }
@@ -1406,18 +1406,18 @@ void func_0804b66c(SoundPlayer *channel, u16 unused, s8 panning) {
 
 // [func_0804b67c] AUDIO CHANNEL - Pause Sound Sequence from Index
 void func_0804b67c(u16 offset) {
-    struct SequenceData *seqData = D_08aa06f8[offset].sequenceData;
+    SongInfo *seqData = D_08aa06f8[offset].songInfo;
     u32 i;
 
     for (i = 0; i <= D_08aa4318; i++) {
-        if ((D_08aa4324[i] != NULL) && (D_08aa4324[i]->sequenceData == seqData)) {
+        if ((D_08aa4324[i] != NULL) && (D_08aa4324[i]->songInfo == seqData)) {
             func_0804b5d8(D_08aa4324[i]);
         }
     }
 }
 
 // [func_0804b6c4] UTIL - String.equals()
-u32 func_0804b6c4(u8 *byteStream0, u8 *byteStream1, u32 length) {
+u32 func_0804b6c4(MidiStream byteStream0, MidiStream byteStream1, u32 length) {
     u32 i;
 
     for (i = 0; i < length; i++) {
@@ -1496,7 +1496,7 @@ void func_0804b7fc(SoundPlayer *channel, u16 time) {
 
 
 // [func_0804b80c] MIDI - System-Exclusive Message [Evnt_F0]
-void func_0804b80c(SoundPlayer *channel, u8 *stream) {
+void func_0804b80c(SoundPlayer *channel, MidiStream stream) {
     MidiBus *mChnlBus = channel->midiBus;
     u8 type = *stream;
     u32 i;
@@ -1521,8 +1521,8 @@ void func_0804b80c(SoundPlayer *channel, u8 *stream) {
 }
 
 // [func_0804b898] MIDI - Meta Event (Loop Start, Loop End, Track End, Set Tempo)
-u32 func_0804b898(SoundPlayer *channel, u8 **upstream) {
-    u8 *stream = *upstream;
+u32 func_0804b898(SoundPlayer *channel, MidiStream *upstream) {
+    MidiStream stream = *upstream;
     u8 event = *stream;
     u32 length;
     u32 tempo;
@@ -1619,9 +1619,9 @@ void func_0804bc5c(u32 id, u32 key, u32 vel) {
 // [func_0804bcc0] MIDI - Messages/Events
 u32 func_0804bcc0(SoundPlayer *channel, u32 id) {
     u32 trackEndType = 0;
-    MidiReader *reader = &channel->midiTrackReader[id];
+    MidiReader *reader = &channel->midiReader[id];
     MidiReader *tempReader;
-    u8 *byteStream = reader->stream_curr;
+    MidiStream byteStream = reader->stream_curr;
     u8 command;
     u16 mod;
     u32 i;
@@ -1667,7 +1667,7 @@ u32 func_0804bcc0(SoundPlayer *channel, u32 id) {
                     case 3:
                         if (!channel->inLoop) break;
                         for (i = 0; i < channel->nTracksUsed; i++) {
-                            tempReader = &channel->midiTrackReader[i];
+                            tempReader = &channel->midiReader[i];
                             tempReader->active_curr = tempReader->active_loop;
                             tempReader->command_curr = tempReader->command_loop;
                             if (reader == tempReader) {
@@ -1751,7 +1751,7 @@ void func_0804bed0(SoundPlayer *channel, u32 id) {
     u32 deltaTime;
     u32 i;
 
-    mTrkReader = &channel->midiTrackReader[id];
+    mTrkReader = &channel->midiReader[id];
     if (!mTrkReader->active_curr) return;
 
     anyNotePlayed = FALSE;
@@ -1856,7 +1856,7 @@ void func_0804c0f8(SoundPlayer *channel) {
     u32 i;
 
     // If the Audio Channel is stopped or paused, do not proceed.
-    if ((channel->sequenceData == NULL) || channel->isPaused) return;
+    if ((channel->songInfo == NULL) || channel->isPaused) return;
 
     D_0300562c = 0;
 
@@ -1869,17 +1869,14 @@ void func_0804c0f8(SoundPlayer *channel) {
     if (D_0300562c != 0) channel->channelSpeed = D_0300562c;
 
     // Check if any MIDI Track Readers are currently operating.
-    mTrkReader = channel->midiTrackReader;
+    mTrkReader = channel->midiReader;
     noActiveReader = TRUE;
-    for (i = 0; (i < channel->nTracksUsed) && noActiveReader;) {
+    for (i = 0; (i < channel->nTracksUsed) && noActiveReader; i++, mTrkReader++) {
         if (mTrkReader->active_curr) noActiveReader = FALSE;
-
-        i++;
-        mTrkReader++;
     }
 
     // If none are active, remove the Sound Sequence from the Audio Channel.
-    if (noActiveReader) channel->sequenceData = NULL;
+    if (noActiveReader) channel->songInfo = NULL;
 }
 
 // [func_0804c170] MAIN UPDATE
@@ -1900,7 +1897,7 @@ void func_0804c170(void) {
             func_0804c040(channel);
             func_0804c0f8(channel);
             func_08049d08(channel->midiBus);
-            if (channel->sequenceData != NULL) {
+            if (channel->songInfo != NULL) {
                 rvb0 -= 0x80 - (channel->midiController4E * 2);
                 rvb1 -= 0x40 - (channel->midiController4F);
                 rvb2 -= 0x40 - (channel->midiController50);
@@ -1954,17 +1951,17 @@ void func_0804c358(void) {
 
 // [func_0804c35c] INITIALISE - Audio Channels
 void func_0804c35c(SoundPlayer *channel, MidiBus *mChnlBus, u32 nTracksMax, MidiReader *mTrkReader, u32 type) {
-    channel->sequenceData = NULL;
+    channel->songInfo = NULL;
     channel->midiBus = mChnlBus;
     channel->nTracksMax = nTracksMax;
-    channel->midiTrackReader = mTrkReader;
+    channel->midiReader = mTrkReader;
     channel->unk0_b21 = type;
     channel->channelVolume = 0x64;
 }
 
 // [func_0804c398] MIDI - Parse Variable-Length Quantity
-u32 func_0804c398(u8 **midiStream) {
-    u8 *mStream = *midiStream;
+u32 func_0804c398(MidiStream *midiStream) {
+    MidiStream mStream = *midiStream;
     u8 current;
     u32 time = 0;
 
@@ -2057,7 +2054,7 @@ void func_0804c778(void) {
 
     for (i = 0; i < 13; i++) {
         func_08049fa0(D_08aa4358[i].midiBus, D_08aa4358[i].nTracksMax, D_08aa4358[i].midiChannels);
-        func_0804c35c(D_08aa4358[i].audioChannel, D_08aa4358[i].midiBus, D_08aa4358[i].nTracksMax, D_08aa4358[i].midiTrackReaders, D_08aa4358[i].unk0_b10);
+        func_0804c35c(D_08aa4358[i].audioChannel, D_08aa4358[i].midiBus, D_08aa4358[i].nTracksMax, D_08aa4358[i].midiReaders, D_08aa4358[i].unk0_b10);
     }
 
     D_03005b7c = &D_030015a7;

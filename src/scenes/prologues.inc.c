@@ -73,7 +73,7 @@ extern u32 D_089eb530;   // GFX Null   -  Prologue: Power Calligraphy
 extern u32 D_089eb534[]; // GFX Array  -  Prologue: Power Calligraphy
 extern u32 D_088b0690[]; // Animation  -  Text (Power Calligraphy)
 extern u32 D_088b06b0[]; // Animation  -  HAI (Power Calligraphy)
-extern const struct SequenceData s_sword_hi_seqData; // Sound Effect - HAI
+extern const SongInfo s_sword_hi_seqData; // Sound Effect - HAI
 
 extern u32 D_089eb66c;   // GFX Null   -  Prologue: Marching Orders
 extern u32 D_089eb670[]; // GFX Array  -  Prologue: Marching Orders

@@ -959,16 +959,16 @@ void func_080102a8(struct AffineSprite *affineData, s16 *arg1, s16 *arg2) {
 
 
 extern struct SequenceTempo {
-    const struct SequenceData *sequenceData;
+    const SongInfo *songInfo;
     u32 tempo;
 } D_089ccccc[155];
 
 // [func_080102d0] Get Music Tempo from D_089ccccc
-u32 func_080102d0(const struct SequenceData *seqData) {
+u32 func_080102d0(const SongInfo *seqData) {
     struct SequenceTempo *seqTempo = D_089ccccc;
 
-    while (seqTempo->sequenceData != NULL) {
-        if (seqTempo->sequenceData == seqData) {
+    while (seqTempo->songInfo != NULL) {
+        if (seqTempo->songInfo == seqData) {
             return seqTempo->tempo;
         }
         seqTempo++;
