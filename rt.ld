@@ -51,7 +51,7 @@ SECTIONS {
         build/src/scenes.c.o(.text);
 		build/src/code_08047e50.c.o(.text);
         build/bin/bindata_080482e0.bin.o(.rodata*); /* More ARM assembly */
-        build/src/lib_08049144.c.o(.text);
+        build/src/agb_midi.c.o(.text);
         build/asm/libagbsyscall.s.o(.text);
         build/src/lib_0804c870.c.o(.text);
         build/bin/bindata_0804e418.bin.o(.rodata*); /* More ARM assembly */
