@@ -4,8 +4,6 @@
 
   // // // // // // // // // // // // // // // // // // // //
 
-#define REG_SOUNDCNT_L  *(volatile u16 *)(IORAMBase + 0x80)
-
 extern u16 D_03001570; // Pseudo-RNG Variable
 
 extern u8  D_03001578[4]; // PSG BUFFER - ?? (checked by TONE 1 and WAVE)

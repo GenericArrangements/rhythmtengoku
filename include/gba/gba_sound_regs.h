@@ -65,8 +65,8 @@
 #define SOUNDCNT3_VOLUME_25   3
 #define SOUNDCNT3_VOLUME_75   4
 
-#define SOUNDCNT3_SOUND_LENGTH_MASK,  (0xFF << 0) // Note length = n / 256 seconds. Requires sound reset to change
-#define SOUNDCNT3_OUTPUT_VOLUME_MASK, (0x7 << 13) // Output volume ratio
+#define SOUNDCNT3_SOUND_LENGTH_MASK  (0xFF << 0) // Note length = n / 256 seconds. Requires sound reset to change
+#define SOUNDCNT3_OUTPUT_VOLUME_MASK (0x7 << 13) // Output volume ratio
 
 
 #define REG_SOUND1CNT     *(volatile u16*)(IORAMBase + 0x60) // (Note: this definition is wrong, but yeah sure let's put a "u48" in here)

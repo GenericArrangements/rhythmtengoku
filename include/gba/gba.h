@@ -28,7 +28,11 @@
 #define D_0E000003		*(volatile u8*)(CartRAMBase + 3)
 
 #include "include/gba/gba_graphics_regs.h"
+#include "include/gba/gba_sound_regs.h"
 #include "include/gba/gba_dma_regs.h"
+#include "include/gba/gba_timer_regs.h"
+#include "include/gba/gba_comm_regs.h"
 #include "include/gba/gba_input_regs.h"
+#include "include/gba/gba_transfer_regs.h"
 #include "include/gba/gba_interrupt_regs.h"
 #include "include/gba/macros.h"
