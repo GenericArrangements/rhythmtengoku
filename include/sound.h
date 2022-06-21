@@ -1,15 +1,9 @@
 #pragma once
 
-#define INSTRUMENT_PCM_PITCHED 0x41
-#define INSTRUMENT_PCM_UNPITCHED 0x46
-#define INSTRUMENT_PSG 0x50
-#define INSTRUMENT_SUBBANK_SINGLE_KEY 0x52
-#define INSTRUMENT_SUBBANK_MULTI_KEY 0x53
-
 #define PSG_PULSE_CHANNEL_1 0
 #define PSG_PULSE_CHANNEL_2 1
-#define PSG_WAVE_CHANNEL 2
-#define PSG_NOISE_CHANNEL 3
+#define PSG_WAVE_CHANNEL    2
+#define PSG_NOISE_CHANNEL   3
 
 #define PSG_TONE_DUTY_12_5 0
 #define PSG_TONE_DUTY_25   1
@@ -18,6 +12,43 @@
 
 #define PSG_NOISE_COUNTER_15 0
 #define PSG_NOISE_COUNTER_7  1
+
+#define INSTRUMENT_PCM_ALIGNED 'A' // 0x41
+#define INSTRUMENT_PCM_FIXED   'F' // 0x46
+#define INSTRUMENT_PSG         'P' // 0x50
+#define INSTRUMENT_SUB_RHYTHM  'R' // 0x52
+#define INSTRUMENT_SUB_SPLIT   'S' // 0x53
+
+#define MUSIC_PLAYER_0 0
+#define MUSIC_PLAYER_1 1
+#define MUSIC_PLAYER_2 2
+#define SFX_PLAYER_0   3
+#define SFX_PLAYER_1   4
+#define SFX_PLAYER_2   5
+#define SFX_PLAYER_3   6
+#define SFX_PLAYER_4   7
+#define SFX_PLAYER_5   8
+#define SFX_PLAYER_6   9
+#define SFX_PLAYER_7   10
+#define SFX_PLAYER_8   11
+#define SFX_PLAYER_9   12
+
+#define MIDI_CHANNEL_0  (1 << 0)
+#define MIDI_CHANNEL_1  (1 << 1)
+#define MIDI_CHANNEL_2  (1 << 2)
+#define MIDI_CHANNEL_3  (1 << 3)
+#define MIDI_CHANNEL_4  (1 << 4)
+#define MIDI_CHANNEL_5  (1 << 5)
+#define MIDI_CHANNEL_6  (1 << 6)
+#define MIDI_CHANNEL_7  (1 << 7)
+#define MIDI_CHANNEL_8  (1 << 8)
+#define MIDI_CHANNEL_9  (1 << 9)
+#define MIDI_CHANNEL_10 (1 << 10)
+#define MIDI_CHANNEL_11 (1 << 11)
+#define MIDI_CHANNEL_12 (1 << 12)
+#define MIDI_CHANNEL_13 (1 << 13)
+#define MIDI_CHANNEL_14 (1 << 14)
+#define MIDI_CHANNEL_15 (1 << 15)
 
 
 
@@ -87,7 +118,7 @@ struct SequenceData {
 
  // // // RAM Structures // // //
 
-struct MidiChannel {
+typedef struct MidiChannel {
     u32 unk0_b0:1;      // ??? [default = 0]
     u32 unk0_b1:1;      // ??? [default = 0]
     u32 instPatch:7;    // Instrument Patch Number [mEvnt_C; default = 0]
@@ -118,9 +149,9 @@ struct MidiChannel {
     u8  unk1C;          // [default = 0]
     u8  unk1D;          // [default = 0]
     u8  unk1E;          // [default = 0]
-};
+} MidiChannel;
 
-struct MidiChannelBus {
+typedef struct MidiBus {
     u8  busVolume;
     u8  trackVolume;
     u16 trackSelect;
@@ -132,11 +163,11 @@ struct MidiChannelBus {
     const InstrumentBank *soundBank;
     u32 totalChannels:5;
     u32 priority:27;
-    struct MidiChannel *midiChannel; // Array of MIDI Channels
+    MidiChannel *midiChannel; // Array of MIDI Channels
     s8  unk1C[12];
-};
+} MidiBus;
 
-struct MidiTrackReader {
+typedef struct MidiReader {
     u32 active_curr:1;  // Active State (Current)
     u32 active_loop:1;  // Active State (At Loop Start)
     u32 command_curr:8; // Command (Current)
@@ -148,10 +179,10 @@ struct MidiTrackReader {
     u8 *stream_loop;    // Stream Position: Loop Start
     u32 unk14;          // ?? (may be unused?)
     u32 deltaTime;      // Time until next instruction? (already parsed from variable-length quantity)
-};
+} MidiReader;
 
 // Audio Device Channel
-struct AudioChannel {
+typedef struct SoundPlayer {
     u32 nTracksMax:5;   // Maximum number of MIDI Tracks this Audio Channel is able to process.
     u32 nTracksUsed:5;  // Total number of MIDI Tracks used by the given Sound Sequence.
     u32 inLoop:1;       // Channel is currently within MIDI loop region. [default = 0]
@@ -160,8 +191,8 @@ struct AudioChannel {
     u32 unk0_b21:1;     // ??? (set on startup. can prevent loading tracks if set to 1) { 0 = Music/Ambience Channel; 1 = Sound Effect Channel }
     u32 unk0_b22:5;     // (indeterminate split; may be unused entirely)
     u32 volumeFadeType:3;   // Type of currently-active Volume Fade { 0 = None; 1 = Fade-In; 2 = Fade-Out & Close; 3 = Fade-Out & Pause }
-    struct MidiChannelBus *midiChannelBus;      // MIDI: Bus with effects for all MIDI Channels.
-    struct MidiTrackReader *midiTrackReader;    // MIDI: Multiple structures which each keep track of a MIDI Track being processed.
+    MidiBus *midiBus;      // MIDI: Bus with effects for all MIDI Channels.
+    MidiReader *midiTrackReader;    // MIDI: Multiple structures which each keep track of a MIDI Track being processed.
     const struct SequenceData *sequenceData;    // SequenceData: Currently-loaded Sound Sequence.
     u32 channelSpeed;       // ??: Similar but not directly tempo. [default = 1]
     char *loopStartSym;     // MIDI: Label char denoting "Loop Start". [always D_08A865D4, '[']
@@ -181,7 +212,7 @@ struct AudioChannel {
     s8  midiController50;   // ??: [default = 0x40]
     s8  midiController51;   // ??: [default = 0x40]
     u32 unk34;      // ??: (is set to midiTrackReader->deltaTime upon hitting a loop start marker) [default = 0]
-};
+} SoundPlayer;
 
 
 // Sequence Data Audio Channel table.
@@ -197,22 +228,22 @@ u8  D_08aa431e; // Unknown: Volume [0x7f]
 u8  D_08aa431f; // Unknown: Priority [0]
 u8  D_08aa4320; // Unknown: Tempo [0x96]
 
-struct AudioChannel *D_08aa4324[13]; // Array of Audio Channel pointers.
+SoundPlayer *D_08aa4324[13]; // Array of Audio Channel pointers.
 struct {
     u32 id:5;
     u32 nTracksMax:5;
     u32 unk0_b10:6; // ??? (0 for music channels, 1 for sfx channels)
-    struct MidiChannel *midiChannels;
-    struct MidiChannelBus *midiChannelBus;
-    struct MidiTrackReader *midiTrackReaders;
-    struct AudioChannel *audioChannel;
+    MidiChannel *midiChannels;
+    MidiBus *midiBus;
+    MidiReader *midiTrackReaders;
+    SoundPlayer *audioChannel;
 } D_08aa4358[13];
 
 u8 D_08aa445c; // Total number of Audio Channels. [13]
 
 // Audio Channel index, with other information.
 struct {
-    struct AudioChannel *audioChannel;
+    SoundPlayer *audioChannel;
     u32 null4;  // Empty
     u16 unk8;   // Maximum MIDI Tracks? { 5..15 }
     u16 unkC;   // ?? { 0, 1 }
@@ -228,8 +259,8 @@ struct SoundBuffer {
         struct InstrumentPCM *pcm;
         struct InstrumentPSG *psg;
     } instrument;
-    struct MidiChannelBus *midiChannelBus;
-    struct MidiChannel *midiChannel;
+    MidiBus *midiBus;
+    MidiChannel *midiChannel;
     u16 unk10;
     u16 unk12;
     s16 unk14;
@@ -272,8 +303,8 @@ struct Jason {
     u32 unk8;
 };
 
-struct MidiNote {
+typedef struct MidiNote {
     u32 channel:4;
     u32 key:7;
     u32 velocity:7;
-};
+} MidiNote;
