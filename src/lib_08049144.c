@@ -27,7 +27,7 @@ extern u8  D_030015a7; // Initial value at D_03005b7c
 extern u32 D_03001888; // ?? (this is like, sample data or something)
 extern u32 D_030024c8; // ?? (sample envelope or something)
 extern DmaSampleReader D_030028c8; // Sample Reader Location (12 Channels)
-extern struct SoundBuffer D_03002a48; // PCM Buffer Location (12 Channels)
+extern SoundChannel D_03002a48; // PCM Buffer Location (12 Channels)
 
 extern u16 D_030055f0;
 extern u32 D_030055f4; // ?? (init. = 0) { 0..2 }
@@ -45,7 +45,7 @@ extern SoundPlayer *D_03005644; // Channel which most recently called MIDI Event
 extern u16 D_03005648; // Current byte in D_03005b7c to set [mCtrl0E]
 
 extern MidiNote D_03005650[20]; // MIDI Note Buffer
-extern struct SoundBuffer D_030056a0[4]; // PSG Buffer Channels { 0 = Tone+Sweep; 1 = Tone; 2 = Wave; 3 = Noise }
+extern SoundChannel D_030056a0[4]; // PSG Buffer Channels { 0 = Tone+Sweep; 1 = Tone; 2 = Wave; 3 = Noise }
 extern u8  D_03005720[0x400]; // ???? (it's a line or curve or something idk)
 extern u16 D_03005b20; // Total Bytes in array at D_03005b7c
 extern volatile u32 D_03005b24; // Offset of *D_030064b8 from D_03001888 ( = 0x620)
@@ -73,7 +73,7 @@ extern u32 D_030064a8; // 13379Hz / 60
 extern u32 *D_030064b0; // ?? (D_030024c8)
 extern u32 D_030064b4; // 16776921 / 13379Hz
 extern volatile u32 *D_030064b8; // &D_03001888[D_03005b24] (D_03001ea8)
-extern struct SoundBuffer *D_030064bc; // PCM Buffer (12 Channels, at D_03002a48)
+extern SoundChannel *D_030064bc; // PCM Buffer (12 Channels, at D_03002a48)
 extern u8  D_030064c0; // ?? (Set to 0 alongside all elements in D_03005620)
 extern u16 D_030064c4; // ?? (init. = 1)
 
@@ -470,7 +470,7 @@ void func_0804a014(MidiBus *mChnlBus, const InstrumentBank *instBank) {
 
 
 // [func_0804a018] SOUND BUFFER - Update & Calculate Pitch Envelope
-u32 func_0804a018(struct SoundBuffer *pcmBuf) {
+u32 func_0804a018(SoundChannel *pcmBuf) {
     MidiBus *mChnlBus;
     MidiChannel *mChnl;
     s32 result;
@@ -568,7 +568,7 @@ u32 func_0804a018(struct SoundBuffer *pcmBuf) {
 }
 
 // [func_0804a1f4] SOUND BUFFER - Calculate Volume Envelope
-u32 func_0804a1f4(struct SoundBuffer *pcmBuf) {
+u32 func_0804a1f4(SoundChannel *pcmBuf) {
     u32 volumeEnv;
     if (pcmBuf->midiChannel == NULL) {
         return (pcmBuf->velocity * (pcmBuf->adsr.envelope >> 0x10)) >> 7;
@@ -579,7 +579,7 @@ u32 func_0804a1f4(struct SoundBuffer *pcmBuf) {
 }
 
 // [func_0804a224] SOUND BUFFER - Update ADSR Envelope
-u32 func_0804a224(struct SoundBuffer *pcmBuf) {
+u32 func_0804a224(SoundChannel *pcmBuf) {
     struct InstrumentPCM *inst;
     struct BufferADSR *adsr;
     u32 finished;
@@ -669,7 +669,7 @@ u32 func_0804a224(struct SoundBuffer *pcmBuf) {
 
 // [func_0804a2c4] PCM BUFFER - Update PCM Buffer
 void func_0804a2c4(u32 id) {
-    struct SoundBuffer *pcmBuf = &D_030064bc[id];
+    SoundChannel *pcmBuf = &D_030064bc[id];
 
     if (!pcmBuf->active) return;
 
@@ -694,7 +694,7 @@ void func_0804a334(void) {
 }
 
 // [func_0804a360] PCM BUFFER - Stop PCM Buffer Channels
-void func_0804a360(u32 total, struct SoundBuffer *pcmBuf) {
+void func_0804a360(u32 total, SoundChannel *pcmBuf) {
     u32 i;
 
     D_03005b8c = total;
@@ -707,8 +707,8 @@ void func_0804a360(u32 total, struct SoundBuffer *pcmBuf) {
 
 // [func_0804a3a0] PCM BUFFER - Return ID of first active PCM Buffer which is not at ADSR Stage 3.
 s32 func_0804a3a0(MidiChannel *mChnl, u8 key) {
-    struct SoundBuffer *pcmBuf = D_030064bc;
-    struct SoundBuffer *tempBuf;
+    SoundChannel *pcmBuf = D_030064bc;
+    SoundChannel *tempBuf;
     s32 i;
 
     for (i = 0; i < D_03005b8c;) {
@@ -734,7 +734,7 @@ s32 func_0804a3fc(void) {
 
 // [func_0804a434] PCM BUFFER - Return PCM Buffer with Lowest Volume
 s32 func_0804a434(void) {
-    struct SoundBuffer *sndBuf;
+    SoundChannel *sndBuf;
     s32 id = -1;
     u32 currentVol = 0x10000;
     u32 bufferVol;
@@ -759,7 +759,7 @@ s32 func_0804a434(void) {
 
 // [func_0804a48c] PCM BUFFER - Return PCM Buffer with Lowest Volume (exclude ADSR)
 s32 func_0804a48c(void) {
-    struct SoundBuffer *sndBuf;
+    SoundChannel *sndBuf;
     s32 id = -1;
     u32 currentVol = 0x10000;
     u32 bufferVol;
@@ -781,8 +781,8 @@ s32 func_0804a48c(void) {
 
 // [func_0804a5b4] SOUND BUFFER - 'Note Off' Event
 void func_0804a5b4(MidiBus *mChnlBus, u32 id, u8 key) {
-    struct SoundBuffer *psgBuf;
-    struct SoundBuffer *pcmBuf;
+    SoundChannel *psgBuf;
+    SoundChannel *pcmBuf;
     s32 three;
     s32 i;
 
@@ -892,7 +892,7 @@ void func_0804aae0(MidiBus *mChnlBus, u32 id) {
     MidiChannel *mChnl = &mChnlBus->midiChannel[id];
     u32 isStereo = (mChnl->stereo) ? -1 : 1;
     s32 i = 0;
-    struct SoundBuffer *sndBuf = D_030064bc;
+    SoundChannel *sndBuf = D_030064bc;
 
     while (i < D_03005b8c) {
         if (sndBuf->active && (sndBuf->midiChannel == mChnl)) {
@@ -1188,7 +1188,7 @@ u32 func_0804afd8(u32 volumeEnv) {
 
 // [func_0804b2c4] PSG BUFFER - Update All
 void func_0804b2c4(void) {
-    struct SoundBuffer *psgBuf = &D_030056a0[0];
+    SoundChannel *psgBuf = &D_030056a0[0];
     u16 controller = 0;
     u32 i;
 

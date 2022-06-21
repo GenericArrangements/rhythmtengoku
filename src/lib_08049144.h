@@ -49,12 +49,12 @@ extern void func_0804a014(MidiBus *, const InstrumentBank *); // [func_0804a014]
 
   // // //  SOUND BUFFER OPERATIONS  // // //
 
-extern u32  func_0804a018(struct SoundBuffer *); // [func_0804a018] SOUND BUFFER - Update & Calculate Pitch Envelope
-extern u32  func_0804a1f4(struct SoundBuffer *); // [func_0804a1f4] SOUND BUFFER - Calculate Volume Envelope
-extern u32  func_0804a224(struct SoundBuffer *); // [func_0804a224] SOUND BUFFER - Update ADSR Envelope
+extern u32  func_0804a018(SoundChannel *); // [func_0804a018] SOUND BUFFER - Update & Calculate Pitch Envelope
+extern u32  func_0804a1f4(SoundChannel *); // [func_0804a1f4] SOUND BUFFER - Calculate Volume Envelope
+extern u32  func_0804a224(SoundChannel *); // [func_0804a224] SOUND BUFFER - Update ADSR Envelope
 extern void func_0804a2c4(u32); // [func_0804a2c4] PCM BUFFER - Update PCM Buffer
 extern void func_0804a334(void); // [func_0804a334] SOUND BUFFER - Update Sound Buffers
-extern void func_0804a360(u32, struct SoundBuffer *); // [func_0804a360] PCM BUFFER - Stop PCM Buffer Channels
+extern void func_0804a360(u32, SoundChannel *); // [func_0804a360] PCM BUFFER - Stop PCM Buffer Channels
 extern s32  func_0804a3a0(MidiChannel *, u8); // [func_0804a3a0] PCM BUFFER - Return ID of first active PCM Buffer which is not at ADSR Stage 3.
 extern s32  func_0804a3fc(void); // [func_0804a3fc] PCM BUFFER - Return First Inactive PCM Buffer
 extern s32  func_0804a434(void); // [func_0804a434] PCM BUFFER - Return PCM Buffer with Lowest Volume

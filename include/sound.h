@@ -184,7 +184,6 @@ typedef struct MidiReader {
     u32 deltaTime;      // Time until next instruction? (already parsed from variable-length quantity)
 } MidiReader;
 
-// Audio Device Channel
 typedef struct SoundPlayer {
     u32 nTracksMax:5;   // Maximum number of MIDI Tracks this Audio Channel is able to process.
     u32 nTracksUsed:5;  // Total number of MIDI Tracks used by the given Sound Sequence.
@@ -217,7 +216,7 @@ typedef struct SoundPlayer {
     u32 unk34;      // ??: (is set to midiReader->deltaTime upon hitting a loop start marker) [default = 0]
 } SoundPlayer;
 
-struct SoundBuffer {
+typedef struct SoundChannel {
     u32 active:1;
     u32 key:7; // MIDI Key
     u32 velocity:7; // MIDI Velocity
@@ -240,7 +239,7 @@ struct SoundBuffer {
         u32 stage:8;
         u32 envelope:24;
     } adsr;
-};
+} SoundChannel;
 
 typedef struct DmaSampleReader { // Sample Buffer?
     u32 active:1;
@@ -276,12 +275,12 @@ typedef struct MidiNote {
     u32 velocity:7;
 } MidiNote;
 
+ // // // Misc. ROM Structures // // //
 
-
-// Sequence Data Audio Channel table.
+// SongTable
 struct {
-    SongInfo *songInfo; // Sound Sequence.
-    u16 channelID; // Audio Channel to play the given Sound Sequence in. { 0..12 }
+    SongInfo *songInfo; // Song
+    u16 channelID; // Sound Player to play the given Sound Sequence in { 0..12 }
 } D_08aa06f8[1924];
 
 u32 D_08aa4318; // Total number of Audio Channels - 1. [12]
@@ -291,7 +290,9 @@ u8  D_08aa431e; // Unknown: Volume [0x7f]
 u8  D_08aa431f; // Unknown: Priority [0]
 u8  D_08aa4320; // Unknown: Tempo [0x96]
 
-SoundPlayer *D_08aa4324[13]; // Array of Audio Channel pointers.
+SoundPlayer *D_08aa4324[13]; // Array of Audio Channel pointers
+
+// SoundPlayerTable
 struct {
     u32 id:5;
     u32 nTracksMax:5;
@@ -302,9 +303,9 @@ struct {
     SoundPlayer *audioChannel;
 } D_08aa4358[13];
 
-u8 D_08aa445c; // Total number of Audio Channels. [13]
+u8 D_08aa445c; // Total number of Audio Channels [13]
 
-// Audio Channel index, with other information.
+// SoundPlayerTable (simplified)
 struct {
     SoundPlayer *audioChannel;
     u32 null4;  // Empty
