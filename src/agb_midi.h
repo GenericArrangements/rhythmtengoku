@@ -237,15 +237,13 @@ extern u32  func_0804b898(SoundPlayer *, MidiStream *); // [func_0804b898] MIDI 
 extern void func_0804b95c(SoundPlayer *, u32, u8, u8); // [func_0804b95c] MIDI - Controller Change [Evnt_B]
 extern void func_0804bc5c(u32, u32, u32); // [func_0804bc5c] MIDI - Note Off/On [Evnt_8; Evnt_9]
 extern u32  func_0804bcc0(SoundPlayer *, u32); // [func_0804bcc0] MIDI - Messages/Events
-
-
-
 extern void func_0804bed0(SoundPlayer *, u32); // [func_0804bed0] ?? (something about speed and midi trackers and notes)
 extern void func_0804c040(SoundPlayer *); // [func_0804c040] Apply Volume (Real-Time)
 extern void func_0804c0f8(SoundPlayer *); // [func_0804c0f8] ?? (relates to speed)
 extern void func_0804c170(void); // [func_0804c170] MAIN UPDATE
 extern void func_0804c340(u32, u32, u32, u32); // [func_0804c340] Set Reverb
 extern void func_0804c358(void); // [func_0804c358] STUB
+
 extern void func_0804c35c(SoundPlayer *, MidiBus *, u32, MidiReader *, u32); // [func_0804c35c] INITIALISE - Audio Channels
 extern u32  func_0804c398(MidiStream *); // [func_0804c398] MIDI - Parse Variable-Length Quantity
 extern void func_0804c3c0(SoundPlayer *, MidiReader *, u32, MidiBus *, MidiChannel *, u8 *); // [func_0804c3c0] Initialise... an audio channel that don't exist.
