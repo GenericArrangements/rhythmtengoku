@@ -1,4 +1,4 @@
-// Data transfer registers still do not care to label
+// Data transfer registers, still do not care to label
 
 #define REG_RCNT       *(volatile u16*)(IORAMBase + 0x134)
 #define REG_JOYCNT     *(volatile u16*)(IORAMBase + 0x140)
