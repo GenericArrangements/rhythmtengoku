@@ -1,10 +1,10 @@
-  //  //  //  //   MIDI CHANNEL BUS UPDATE OPERATIONS   //  //  //  //
+  //  //  //  //   MIDI BUS UPDATE OPERATIONS   //  //  //  //
 
 
 // [func_08049c34] MIDI CHANNEL - Update Modulation
 #include "asm/agb_midi/asm_08049c34.s"
 
-// [func_08049d08] MIDI CHANNEL BUS - Update Modulation
+// [func_08049d08] MIDI BUS - Update Modulation
 void func_08049d08(MidiBus *mChnlBus) {
     u32 i;
 
@@ -53,7 +53,7 @@ void func_08049db8(MidiBus *mChnlBus, u32 id) {
     }
 }
 
-// [func_08049e3c] MIDI CHANNEL BUS - Update All Sound Buffers for 'Note Cut' Event
+// [func_08049e3c] MIDI BUS - Update All Sound Buffers for 'Note Cut' Event
 void func_08049e3c(MidiBus *mChnlBus) {
     u32 i;
 
@@ -62,7 +62,7 @@ void func_08049e3c(MidiBus *mChnlBus) {
     }
 }
 
-// [func_08049e64] MIDI CHANNEL BUS - Close All Sound Buffers
+// [func_08049e64] MIDI BUS - Close All Sound Buffers
 void func_08049e64(MidiBus *mChnlBus) {
     u32 i;
     for (i = 0; i < mChnlBus->totalChannels; i++) {
@@ -71,10 +71,10 @@ void func_08049e64(MidiBus *mChnlBus) {
 }
 
 
-  //  //  //  //   MIDI CHANNEL BUS INITIALISATION OPERATIONS   //  //  //  //
+  //  //  //  //   MIDI BUS INITIALISATION OPERATIONS   //  //  //  //
 
 
-// [func_08049e8c] MIDI CHANNEL BUS - Set Priority
+// [func_08049e8c] MIDI BUS - Set Priority
 void func_08049e8c(MidiBus *mChnlBus, u8 priority) {
     u32 i;
 
@@ -84,7 +84,7 @@ void func_08049e8c(MidiBus *mChnlBus, u8 priority) {
     }
 }
 
-// [func_08049ec4] MIDI CHANNEL BUS - Set Selected Track Volume & Track Selection
+// [func_08049ec4] MIDI BUS - Set Selected Track Volume & Track Selection
 void func_08049ec4(MidiBus *mChnlBus, u8 volume, u16 selection) {
     mChnlBus->trackVolume = volume;
     mChnlBus->trackSelect = selection;
@@ -121,7 +121,7 @@ void func_08049ecc(MidiChannel *mChnl) {
     mChnl->unk1E = 0;
 }
 
-// [func_08049fa0] MIDI CHANNEL BUS - Initialise
+// [func_08049fa0] MIDI BUS - Initialise
 void func_08049fa0(MidiBus *mChnlBus, u32 totalChannels, MidiChannel *mChnl) {
     u32 i;
 
@@ -146,16 +146,16 @@ void func_08049fa0(MidiBus *mChnlBus, u32 totalChannels, MidiChannel *mChnl) {
     }
 }
 
-// [func_0804a014] MIDI CHANNEL BUS - Set Sound Bank
+// [func_0804a014] MIDI BUS - Set Sound Bank
 void func_0804a014(MidiBus *mChnlBus, const InstrumentBank *instBank) {
     mChnlBus->soundBank = instBank;
 }
 
 
-  //  //  //  //   SOUND BUFFER OPERATIONS   //  //  //  //
+  //  //  //  //   SOUND CHANNEL OPERATIONS   //  //  //  //
 
 
-// [func_0804a018] SOUND BUFFER - Update & Calculate Pitch Envelope
+// [func_0804a018] SOUND CHANNEL - Update & Calculate Pitch Envelope
 u32 func_0804a018(SoundChannel *pcmBuf) {
     MidiBus *mChnlBus;
     MidiChannel *mChnl;
@@ -253,7 +253,7 @@ u32 func_0804a018(SoundChannel *pcmBuf) {
     return result;
 }
 
-// [func_0804a1f4] SOUND BUFFER - Calculate Volume Envelope
+// [func_0804a1f4] SOUND CHANNEL - Calculate Volume Envelope
 u32 func_0804a1f4(SoundChannel *pcmBuf) {
     u32 volumeEnv;
     if (pcmBuf->midiChannel == NULL) {
@@ -264,7 +264,7 @@ u32 func_0804a1f4(SoundChannel *pcmBuf) {
     }
 }
 
-// [func_0804a224] SOUND BUFFER - Update ADSR Envelope
+// [func_0804a224] SOUND CHANNEL - Update ADSR Envelope
 u32 func_0804a224(SoundChannel *pcmBuf) {
     struct InstrumentPCM *inst;
     struct BufferADSR *adsr;
@@ -371,7 +371,7 @@ void func_0804a2c4(u32 id) {
     pcmBuf->active = FALSE;
 }
 
-// [func_0804a334] SOUND BUFFER - Update Sound Buffers
+// [func_0804a334] SOUND CHANNEL - Update Sound Buffers
 void func_0804a334(void) {
     u32 i;
 
@@ -465,7 +465,7 @@ s32 func_0804a48c(void) {
 
 #include "asm/agb_midi/asm_0804a4e0.s"
 
-// [func_0804a5b4] SOUND BUFFER - 'Note Off' Event
+// [func_0804a5b4] SOUND CHANNEL - 'Note Off' Event
 void func_0804a5b4(MidiBus *mChnlBus, u32 id, u8 key) {
     SoundChannel *psgBuf;
     SoundChannel *pcmBuf;
@@ -522,7 +522,7 @@ u8 func_0804a674(u8 panning) {
     else return (0x7f - panning) * 2;
 }
 
-// [func_0804a690] MIDI CHANNEL BUS - Get unkC Value At Index
+// [func_0804a690] MIDI BUS - Get unkC Value At Index
 u32 func_0804a690(MidiBus *mChnlBus, u32 index) {
     u8 u = index;
     s8 s = index;
@@ -535,7 +535,7 @@ u32 func_0804a690(MidiBus *mChnlBus, u32 index) {
     return mChnlBus->unkC[u];
 }
 
-// [func_0804a6b0] SOUND BUFFER - 'Note On' Event
+// [func_0804a6b0] SOUND CHANNEL - 'Note On' Event
 #include "asm/agb_midi/asm_0804a6b0.s"
 
 
@@ -698,20 +698,20 @@ void func_0804ad9c(MidiBus *mChnlBus, u32 id, u8 var) {
 }
 
 
-  //  //  //  //   MIDI CHANNEL BUS OPERATIONS   //  //  //  //
+  //  //  //  //   MIDI BUS OPERATIONS   //  //  //  //
 
 
-// [func_0804adb0] MIDI CHANNEL BUS - Set unk4
+// [func_0804adb0] MIDI BUS - Set unk4
 void func_0804adb0(MidiBus *mChnlBus, s8 var) {
     mChnlBus->unk4 = var;
 }
 
-// [func_0804adb4] MIDI CHANNEL BUS - Set Volume
+// [func_0804adb4] MIDI BUS - Set Volume
 void func_0804adb4(MidiBus *mChnlBus, u8 volume) {
     mChnlBus->busVolume = volume;
 }
 
-// [func_0804adb8] MIDI CHANNEL BUS - Set Panning
+// [func_0804adb8] MIDI BUS - Set Panning
 void func_0804adb8(MidiBus *mChnlBus, s8 panning) {
     u32 i;
     mChnlBus->panning = panning;
@@ -721,12 +721,12 @@ void func_0804adb8(MidiBus *mChnlBus, s8 panning) {
     }
 }
 
-// [func_0804ade4] MIDI CHANNEL BUS - Set Pitch
+// [func_0804ade4] MIDI BUS - Set Pitch
 void func_0804ade4(MidiBus *mChnlBus, s16 pitch) {
     mChnlBus->pitch = pitch;
 }
 
-// [func_0804ade8] MIDI CHANNEL BUS - Set Modulation Range
+// [func_0804ade8] MIDI BUS - Set Modulation Range
 void func_0804ade8(MidiBus *mChnlBus, u8 range) {
     u32 i;
 
@@ -735,12 +735,12 @@ void func_0804ade8(MidiBus *mChnlBus, u8 range) {
     }
 }
 
-// [func_0804ae14] MIDI CHANNEL BUS - Set unk8
+// [func_0804ae14] MIDI BUS - Set unk8
 void func_0804ae14(MidiBus *mChnlBus, u16 var) {
     mChnlBus->unk8 = var;
 }
 
-// [func_0804ae18] MIDI CHANNEL BUS - Set unkC
+// [func_0804ae18] MIDI BUS - Set unkC
 void func_0804ae18(MidiBus *mChnlBus, u16 *var) {
     mChnlBus->unkC = var;
 }

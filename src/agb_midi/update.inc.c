@@ -1,7 +1,7 @@
   //  //  //  //   MIDI SEQUENCE OPERATIONS   //  //  //  //
 
 
-// [func_0804b80c] MIDI - System-Exclusive Message [Evnt_F0]
+// [func_0804b80c] MIDI STREAM - System-Exclusive Message [Evnt_F0]
 void func_0804b80c(SoundPlayer *channel, MidiStream stream) {
     MidiBus *mChnlBus = channel->midiBus;
     u8 type = *stream;
@@ -26,7 +26,7 @@ void func_0804b80c(SoundPlayer *channel, MidiStream stream) {
     }
 }
 
-// [func_0804b898] MIDI - Meta Event (Loop Start, Loop End, Track End, Set Tempo)
+// [func_0804b898] MIDI STREAM - Meta Event (Loop Start, Loop End, Track End, Set Tempo)
 u32 func_0804b898(SoundPlayer *channel, MidiStream *upstream) {
     MidiStream stream = *upstream;
     u8 event = *stream;
@@ -67,7 +67,7 @@ u32 func_0804b898(SoundPlayer *channel, MidiStream *upstream) {
     }
 }
 
-// [func_0804b95c] MIDI - Controller Change [Evnt_B]
+// [func_0804b95c] MIDI STREAM - Controller Change [Evnt_B]
 void func_0804b95c(SoundPlayer *channel, u32 id, u8 ctrl, u8 var) {
     MidiBus *mChnlBus = channel->midiBus;
 
@@ -110,7 +110,7 @@ void func_0804b95c(SoundPlayer *channel, u32 id, u8 ctrl, u8 var) {
     }
 }
 
-// [func_0804bc5c] MIDI - Note Off/On [Evnt_8; Evnt_9]
+// [func_0804bc5c] MIDI STREAM - Note Off/On [Evnt_8; Evnt_9]
 void func_0804bc5c(u32 id, u32 key, u32 vel) {
     MidiNote *midiNote;
 
@@ -122,7 +122,7 @@ void func_0804bc5c(u32 id, u32 key, u32 vel) {
     }
 }
 
-// [func_0804bcc0] MIDI - Messages/Events
+// [func_0804bcc0] MIDI STREAM - Messages/Events
 u32 func_0804bcc0(SoundPlayer *channel, u32 id) {
     u32 trackEndType = 0;
     MidiReader *reader = &channel->midiReader[id];
@@ -248,69 +248,67 @@ u32 func_0804bcc0(SoundPlayer *channel, u32 id) {
     return trackEndType;
 }
 
-// [func_0804bed0] ?? (something about speed and midi trackers and notes)
-void func_0804bed0(SoundPlayer *channel, u32 id) {
-    MidiReader *mTrkReader;
-    MidiChannel *mChnl;
+// [func_0804bed0] MIDI STREAM - Update
+void func_0804bed0(SoundPlayer *player, u32 id) {
+    MidiReader *reader;
+    MidiChannel *channel;
     MidiNote *note;
     u32 anyNotePlayed;
     u32 deltaTime;
     u32 i;
 
-    mTrkReader = &channel->midiReader[id];
-    if (!mTrkReader->active_curr) return;
+    reader = &player->midiReader[id];
+    if (!reader->active_curr) return;
 
     anyNotePlayed = FALSE;
     D_03005b78 = 0; // Reset "Current Note To Modify" counter.
 
-    while (mTrkReader->unkC < channel->channelSpeed) {
-        if (channel->inLoop && !mTrkReader->inLoop && (mTrkReader->deltaTime >= channel->unk34)) {
-            mTrkReader->active_loop = mTrkReader->active_curr;
-            mTrkReader->command_loop = mTrkReader->command_curr;
-            mTrkReader->stream_loop = mTrkReader->stream_curr;
-            mTrkReader->inLoop = TRUE;
+    while (reader->unkC < player->channelSpeed) {
+        if (player->inLoop && !reader->inLoop && (reader->deltaTime >= player->unk34)) {
+            reader->active_loop = reader->active_curr;
+            reader->command_loop = reader->command_curr;
+            reader->stream_loop = reader->stream_curr;
+            reader->inLoop = TRUE;
         }
 
-        if (func_0804bcc0(channel, id) == 1) {
-            mTrkReader->active_curr = FALSE;
-            func_08049d30(channel->midiBus, id);
+        if (func_0804bcc0(player, id) == 1) {
+            reader->active_curr = FALSE;
+            func_08049d30(player->midiBus, id);
             return;
         }
 
-        deltaTime = func_0804c398(&mTrkReader->stream_curr);
+        deltaTime = func_0804c398(&reader->stream_curr);
         if (deltaTime != 0) {
             note = &D_03005650[0];
-            i = 0;
-            while (i < D_03005b78) {
+
+            for (i = 0; i < D_03005b78; i++, note++) {
                 if (note->velocity != 0) { // Note has non-zero velocity.
-                    func_0804a6b0(channel->midiBus, note->channel, note->key, note->velocity);
+                    func_0804a6b0(player->midiBus, note->channel, note->key, note->velocity);
                     anyNotePlayed = TRUE;
                 } else { // Note is muted.
-                    func_0804a5b4(channel->midiBus, note->channel, note->key);
+                    func_0804a5b4(player->midiBus, note->channel, note->key);
                 }
-                i++;
-                note++;
             }
             D_03005b78 = 0; // Reset "Current Note To Modify" counter.
         }
 
-        mTrkReader->unkC += (deltaTime << 8);
-        mTrkReader->deltaTime += deltaTime;
+        reader->unkC += (deltaTime << 8);
+        reader->deltaTime += deltaTime;
     }
 
-    mTrkReader->unkC -= channel->channelSpeed;
+    reader->unkC -= player->channelSpeed;
 
     // If any note had a non-zero velocity, and the given MIDI Channel's unk0_b30 is set:
     if (anyNotePlayed) {
-        mChnl = &channel->midiBus->midiChannel[id];
-        if (mChnl->unk0_b30 && (D_03005b3c == 1)) {
+        channel = &player->midiBus->midiChannel[id];
+        if (channel->unk0_b30 && (D_03005b3c == 1)) {
             func_08049be4();
             func_0804ae54(&D_03005b30);
         }
     }
 }
 
-// [func_0804c040] Apply Volume (Real-Time)
+// [func_0804c040] SOUND PLAYER - Update Volume
 void func_0804c040(SoundPlayer *channel) {
     u32 volume;
     u32 volumeAsByte;
@@ -355,13 +353,13 @@ void func_0804c040(SoundPlayer *channel) {
     func_08049ec4(channel->midiBus, volumeAsByte, channel->trackSelect);
 }
 
-// [func_0804c0f8] ?? (relates to speed)
+// [func_0804c0f8] SOUND PLAYER - Update MIDI Stream
 void func_0804c0f8(SoundPlayer *channel) {
     MidiReader *mTrkReader;
     u32 noActiveReader;
     u32 i;
 
-    // If the Audio Channel is stopped or paused, do not proceed.
+    // If the SoundPlayer is stopped or paused, do not proceed.
     if ((channel->songInfo == NULL) || channel->isPaused) return;
 
     D_0300562c = 0;

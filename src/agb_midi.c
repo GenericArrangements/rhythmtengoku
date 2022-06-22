@@ -16,14 +16,14 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 #include "src/agb_midi/update.inc.c"
 
-// [func_0804c35c] INITIALISE - Audio Channels
-void func_0804c35c(SoundPlayer *channel, MidiBus *mChnlBus, u32 nTracksMax, MidiReader *mTrkReader, u32 type) {
+// [func_0804c35c] Initialise Sound Players
+void func_0804c35c(SoundPlayer *channel, MidiBus *mChnlBus, u32 nTracksMax, MidiReader *midiReader, u32 type) {
     channel->songInfo = NULL;
     channel->midiBus = mChnlBus;
     channel->nTracksMax = nTracksMax;
-    channel->midiReader = mTrkReader;
+    channel->midiReader = midiReader;
     channel->unk0_b21 = type;
-    channel->channelVolume = 0x64;
+    channel->channelVolume = 100;
 }
 
 // [func_0804c398] MIDI - Parse Variable-Length Quantity
