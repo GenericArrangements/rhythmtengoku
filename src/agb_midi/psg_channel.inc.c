@@ -1,7 +1,7 @@
-  //  //  //  //   PSG SOUND BUFFER OPERATIONS   //  //  //  //
+  //  //  //  //   PSG CHANNEL OPERATIONS   //  //  //  //
 
 
-// [func_0804af30] PSG BUFFER - Stop All PSG Buffer Channels
+// [func_0804af30] PSG CHANNEL - Stop All PSG Buffer Channels
 void func_0804af30(void) {
     u32 i;
 
@@ -15,14 +15,14 @@ void func_0804af30(void) {
     *D_03001590 = 0;
 }
 
-// [func_0804af74] PSG BUFFER - Initialise
+// [func_0804af74] PSG CHANNEL - Initialise
 void func_0804af74(u32 id) {
     D_03001578[id] = 1;
     D_03001580[id] = -1;
     D_03001588[id] = -1;
 }
 
-// [func_0804afa4] PSG BUFFER - Convert Pitch Envelope to PSG Frequency Register Variable
+// [func_0804afa4] PSG CHANNEL - Convert Pitch Envelope to PSG Frequency Register Variable
 u32 func_0804afa4(u32 pitchEnv) {
     s32 var;
 
@@ -33,7 +33,7 @@ u32 func_0804afa4(u32 pitchEnv) {
     return var;
 }
 
-// [func_0804afd8] PSG BUFFER - Convert Volume Envelope to PSG Volume Register Variable
+// [func_0804afd8] PSG CHANNEL - Convert Volume Envelope to PSG Volume Register Variable
 u32 func_0804afd8(u32 volumeEnv) {
     u32 var = volumeEnv;
 
@@ -47,7 +47,7 @@ u32 func_0804afd8(u32 volumeEnv) {
 // [func_0804aff0] Update PSG Buffer Channel
 #include "asm/agb_midi/asm_0804aff0.s"
 
-// [func_0804b2c4] PSG BUFFER - Update All
+// [func_0804b2c4] PSG CHANNEL - Update All
 void func_0804b2c4(void) {
     SoundChannel *psgBuf = &D_030056a0[0];
     u16 controller = 0;
