@@ -1,7 +1,7 @@
   //  //  //  //   SYSTEM-EXCLUSIVE MESSAGE OPERATIONS   //  //  //  //
 
 
-// [func_0804ae1c] ??
+// [func_0804ae1c] SYSTEM-EXCLUSIVE MESSAGE HANDLER - Initialise
 void func_0804ae1c(struct SysExcMsgHandler* SysExcMsgHandler, u8 arg1, u8 arg2, u8 arg3, u8 arg4, u8 arg5) {
     SysExcMsgHandler->unk6 = 0;
     SysExcMsgHandler->unk7 = 0;
@@ -27,7 +27,7 @@ void func_0804ae60(struct SysExcMsgHandler *arg0) {
     arg0->unk7 = 0;
 }
 
-// [func_0804ae6c] ?? (relates to speed)
+// [func_0804ae6c] SYSTEM-EXCLUSIVE MESSAGE HANDLER - Update
 void func_0804ae6c(struct SysExcMsgHandler *SysExcMsgHandler, u32 speed) {
     s32 temp;
     s32 temp2;

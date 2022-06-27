@@ -18,13 +18,13 @@ extern volatile u16 D_030015a4;
 extern u8  D_030015a6;
 extern u8  D_030015a7; // Initial value at D_03005b7c
 
-extern u32 D_03001888; // ?? (this is like, sample data or something)
+extern u32 D_03001888; // DMA Source Addresses { &this[0] = Right; &this[D_03005b24] = Left }
 extern u32 D_030024c8; // ?? (sample envelope or something)
 extern DmaSampleReader D_030028c8; // DMA Sample Readers (12 Channels)
 extern SoundChannel D_03002a48;    // DirectSound Channels (12 Channels)
 
 extern u16 D_030055f0;
-extern u32 D_030055f4; // ?? (init. = 0) { 0..2 }
+extern u32 D_030055f4; // Sound Mode { 0 = Stereo; 1 = Mono (One Channel); 2 = Mono (Two Channels) }
 
 extern u32 D_03005600[4];
 extern u16 D_03005610; // Total DMA Sample Readers at D_03005b88 ( = 12)
@@ -33,7 +33,7 @@ extern u32 D_0300562c; // Current Speed (NOT Tempo)
 extern u32 D_03005630; // ?? (init. = 0)
 extern u32 D_03005634; // ?? (init. = 4)
 extern u32 D_03005638;
-extern volatile u32 *D_0300563c; // &D_03001888
+extern volatile u32 *D_0300563c; // REG_DMA1SAD; Right Audio Source ( = &D_03001888)
 extern u8  D_03005640; // ?? (Byte 0 of MIDI Event F0) [mCtrl4C]
 extern SoundPlayer *D_03005644; // Channel which most recently called MIDI Event F0 (System-Exclusive Message)
 extern u16 D_03005648; // Current byte in D_03005b7c to set [mCtrl0E]
@@ -42,12 +42,12 @@ extern MidiNote D_03005650[20]; // MIDI Note Buffer
 extern SoundChannel D_030056a0[4]; // PSG Channels { 0 = Tone+Sweep; 1 = Tone; 2 = Wave; 3 = Noise }
 extern u8  D_03005720[0x400]; // ???? (it's a line or curve or something idk)
 extern u16 D_03005b20; // Total Bytes in array at D_03005b7c
-extern volatile u32 D_03005b24; // Offset of *D_030064b8 from D_03001888 ( = 0x620)
+extern volatile u32 D_03005b24; // Number of 32-bit samples per DMA Source Address ( = 0x620 / 4 ( = 392))
 extern u8  D_03005b28; // ?? (Set by MIDI Controller 4D; Only set if D_03005b44 == 0)
 
 extern struct SysExcMsgHandler D_03005b30;
 extern u8  D_03005b3c; // ?? (Set by MIDI Controller 49; Cleared by MIDI Controller 4A and MIDI Event F0)
-extern u32 D_03005b40;
+extern volatile u32 D_03005b40;
 extern u8  D_03005b44; // ?? (Must be clear for certain operations to work; Affects MIDI Controllers 49, 4A and 4D)
 extern u32 D_03005b48; // ?? (init. = 2)
 
@@ -66,7 +66,7 @@ extern u32 D_030064a8; // 13379Hz / 60
 
 extern u32 *D_030064b0; // &D_030024c8
 extern u32 D_030064b4; // 16776921 / 13379Hz
-extern volatile u32 *D_030064b8; // &D_03001888[D_03005b24] (D_03001ea8)
+extern volatile u32 *D_030064b8; // REG_DMA2SAD; Left Audio Source ( = &D_03001888[D_03005b24] ( = &D_03001ea8))
 extern SoundChannel *D_030064bc; // DirectSound Channels (12 Channels, at D_03002a48)
 extern u8  D_030064c0; // ?? (Set to 0 alongside all elements in D_03005620)
 extern u16 D_030064c4; // ?? (init. = 1)
@@ -75,7 +75,8 @@ extern u16 D_030064c4; // ?? (init. = 1)
 
 extern u16 D_08a86008[]; // Note Frequency Table
 extern u32 D_08a86108[]; // ?? (honestly idk how to even describe this one)
-extern s16 D_08a86140[]; // ?? (another curve table)
+extern s16 D_08a86140[]; // Sine Table (s = 0; max = 0x100; min = -0x100)
+// extern s16 D_08a86340[]; // Cosine Table (s = 0x100; max = 0x100; min = -0x100)
 extern InstrumentBank *instrumentBanks[]; // Instrument Bank Index
 extern char D_08a865a4[]; // MIDI "Loop Start" Marker: '['
 extern char D_08a865a8[]; // MIDI "Loop End" Marker: ']'
@@ -188,10 +189,10 @@ extern void func_0804ae18(MidiBus *, u16 *);  // [func_0804ae18] MIDI BUS - Set 
 
   // // //  SYSTEM-EXCLUSIVE MESSAGE OPERATIONS  // // //
 
-extern void func_0804ae1c(struct SysExcMsgHandler*, u8, u8, u8, u8, u8); // [func_0804ae1c] SYSTEM MESSAGE HANDLER - ??
+extern void func_0804ae1c(struct SysExcMsgHandler*, u8, u8, u8, u8, u8); // [func_0804ae1c] SYSTEM MESSAGE HANDLER - Initialise
 extern void func_0804ae54(struct SysExcMsgHandler *); // [func_0804ae54] SYSTEM MESSAGE HANDLER - Set ?? [Ctrl_49]
 extern void func_0804ae60(struct SysExcMsgHandler *); // [func_0804ae60] SYSTEM MESSAGE HANDLER - Set ?? [Ctrl_49; Ctrl_4A]
-extern void func_0804ae6c(struct SysExcMsgHandler *, u32); // [func_0804ae6c] SYSTEM MESSAGE HANDLER - ?? (relates to speed)
+extern void func_0804ae6c(struct SysExcMsgHandler *, u32); // [func_0804ae6c] SYSTEM MESSAGE HANDLER - Update
 extern u32  func_0804af0c(u16); // [func_0804af0c] UTIL - Pseudo-Random Number Generator
 
   // // //  PSG CHANNEL OPERATIONS  // // //

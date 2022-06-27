@@ -157,18 +157,18 @@ void func_08049ad8(void) {
 
     D_030064c4 = 0;
     if (D_030055f4 != 1) {
-        REG_DMA1CNT = ((DMACNT_ENABLE | DMACNT_SIZE | DMACNT_DEST_INC_TYPE_UNCHANGED) << 0x10) + 4;
+        REG_DMA1CNT = ((DMACNT_ENABLE | DMACNT_SIZE | DMACNT_DEST_INC_TYPE_UNCHANGED) << 16) + (16 / 4);
         dummy = 0;
         dummy = 1;
         REG_DMA1CNT_H = DMACNT_SIZE;
     }
-    REG_DMA2CNT = ((DMACNT_ENABLE | DMACNT_SIZE | DMACNT_DEST_INC_TYPE_UNCHANGED) << 0x10) + 4;
+    REG_DMA2CNT = ((DMACNT_ENABLE | DMACNT_SIZE | DMACNT_DEST_INC_TYPE_UNCHANGED) << 16) + (16 / 4);
     dummy = 0;
     dummy = 1;
     REG_DMA2CNT_H = DMACNT_SIZE;
 }
 
-// [func_08049b34] ??
+// [func_08049b34] Set Reverb Controllers
 void func_08049b34(u32 arg0, u32 arg1, u32 arg2, u32 arg3) {
     D_030064a4 = arg0;
     D_03005630 = arg1;

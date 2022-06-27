@@ -1,6 +1,8 @@
 OUTPUT_ARCH(arm)
 
 D_03001338 = 0x03001338;
+
+/* AGB MIDI Library - Miscellaneous Global Variables */
 D_03001570 = 0x03001570;
 D_03001578 = 0x03001578;
 D_03001580 = 0x03001580;
@@ -13,7 +15,7 @@ D_030015a4 = 0x030015a4;
 D_030015a6 = 0x030015a6;
 D_030015a7 = 0x030015a7;
 
-/* Sound Players */
+/* AGB MIDI Library - Sound Players */
 D_030015ac = 0x030015ac;
 D_030015e4 = 0x030015e4;
 D_0300161c = 0x0300161c;
@@ -28,12 +30,13 @@ D_030017dc = 0x030017dc;
 D_03001814 = 0x03001814;
 D_0300184c = 0x0300184c;
 
+/* AGB MIDI Library - DirectSound Structures */
 D_03001888 = 0x03001888;
 D_030024c8 = 0x030024c8;
 D_030028c8 = 0x030028c8;
 D_03002a48 = 0x03002a48;
 
-/* AGB MIDI Interpreters */
+/* AGB MIDI Library - MIDI Structures */
 D_03002bc8 = 0x03002bc8;
 D_03002da8 = 0x03002da8;
 D_03002dd0 = 0x03002dd0;
@@ -129,7 +132,7 @@ D_030055d4 = 0x030055d4;
 D_030055d8 = 0x030055d8;
 D_030055e0 = 0x030055e0;
 
-/* AGB MIDI Library */
+/* AGB MIDI Library - Global Variables */
 D_030055f0 = 0x030055f0;
 D_030055f4 = 0x030055f4;
 D_03005600 = 0x03005600;
