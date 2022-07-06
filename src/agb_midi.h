@@ -4,6 +4,17 @@
 
   // // // // // // // // // // // // // // // // // // // //
 
+#define Q24(x) ((s32)((x) * 256))
+#define Q24_TO_INT(x) ((s32)((x) >> 8))
+#define Q16(x) ((s32)((x) * 65536))
+#define Q16_TO_INT(x) ((s32)((x) >> 16))
+
+#define MOD_TYPE_VIBRATO 0
+#define MOD_TYPE_TREMOLO 1
+#define MOD_TYPE_PANNING 2
+
+  // // // // // // // // // // // // // // // // // // // //
+
 extern u16 D_03001570; // Pseudo-RNG Variable
 
 extern u8  D_03001578[4]; // PSG CHANNEL - ?? (checked by TONE 1 and WAVE)
@@ -30,8 +41,8 @@ extern u32 D_03005600[4];
 extern u16 D_03005610; // Total DMA Sample Readers at D_03005b88 ( = 12)
 extern u32 D_03005620[3];
 extern u32 D_0300562c; // Current Speed (NOT Tempo)
-extern u32 D_03005630; // ?? (init. = 0)
-extern u32 D_03005634; // ?? (init. = 4)
+extern u32 D_03005630; // gRVBCNT2 (init. = 0)
+extern u32 D_03005634; // gRVBCNT4 (init. = 4)
 extern u32 D_03005638;
 extern volatile u32 *D_0300563c; // REG_DMA1SAD; Right Audio Source ( = &D_03001888)
 extern u8  D_03005640; // ?? (Byte 0 of MIDI Event F0) [mCtrl4C]
@@ -48,8 +59,8 @@ extern u8  D_03005b28; // ?? (Set by MIDI Controller 4D; Only set if D_03005b44 
 extern struct SysExcMsgHandler D_03005b30;
 extern u8  D_03005b3c; // ?? (Set by MIDI Controller 49; Cleared by MIDI Controller 4A and MIDI Event F0)
 extern volatile u32 D_03005b40;
-extern u8  D_03005b44; // ?? (Must be clear for certain operations to work; Affects MIDI Controllers 49, 4A and 4D)
-extern u32 D_03005b48; // ?? (init. = 2)
+extern u8  D_03005b44; // ?? (Must be false for certain operations to work; Affects MIDI Controllers 49, 4A and 4D)
+extern u32 D_03005b48; // gRVBCNT3 (init. = 2)
 
 extern u16 D_03005b78; // Current Available MIDI Note Slot
 extern u8 *D_03005b7c; // ?? (Byte at offset D_03005648 set by MIDI Controller 10)
@@ -61,7 +72,7 @@ extern s8  D_03005b90[]; // Reverb controller..?
 extern u32 D_03005b94; // Global Sample Rate ( = 13379Hz)
 
 extern volatile u32 D_030064a0; // Offset from *D_0300563c and *D_030064b8 to operate on.
-extern u32 D_030064a4; // ?? (init. = 0)
+extern u32 D_030064a4; // gRVBCNT1 (init. = 0)
 extern u32 D_030064a8; // 13379Hz / 60
 
 extern u32 *D_030064b0; // &D_030024c8
@@ -73,10 +84,10 @@ extern u16 D_030064c4; // ?? (init. = 1)
 
   // // // // // // // // // // // // // // // // // // // //
 
-extern u16 D_08a86008[]; // Note Frequency Table
-extern u32 D_08a86108[]; // ?? (honestly idk how to even describe this one)
-extern s16 D_08a86140[]; // Sine Table (s = 0; max = 0x100; min = -0x100)
-// extern s16 D_08a86340[]; // Cosine Table (s = 0x100; max = 0x100; min = -0x100)
+extern u16 D_08a86008[]; // MIDI Note to Frequency Table (A4 = 440Hz)
+extern u32 D_08a86108[]; // Semitones to Frequency Table ((2^(p/12) - 1) << 10)
+extern s16 D_08a86140[]; // Sine Table (init = 0; size = 0x100; max = 0x100; min = -0x100)
+// extern s16 D_08a86340[]; // Cosine Table (init = 0x100; size = 0x100; max = 0x100; min = -0x100)
 extern InstrumentBank *instrumentBanks[]; // Instrument Bank Index
 extern char D_08a865a4[]; // MIDI "Loop Start" Marker: '['
 extern char D_08a865a8[]; // MIDI "Loop End" Marker: ']'
@@ -149,7 +160,7 @@ extern void func_0804a5b4(MidiBus *, u32, u8); // [func_0804a5b4] SOUND CHANNEL 
 extern s32  func_0804a628(MidiBus *, u32, u8, u8); // [func_0804a628] DIRECTSOUND CHANNEL - Return First Most Replaceable PCM Buffer
 extern u8   func_0804a65c(u8); // [func_0804a65c] ?? (something about left panning)
 extern u8   func_0804a674(u8); // [func_0804a674] ?? (something about right panning)
-extern u32  func_0804a690(MidiBus *, u32); // [func_0804a690] MIDI BUS - Get unkC Value At Index
+extern u32  func_0804a690(MidiBus *, u32); // [func_0804a690] MIDI BUS - Convert Midi Key to Frequency
 extern void func_0804a6b0(MidiBus *, u32, u8, u8); // [func_0804a6b0] SOUND CHANNEL - 'Note On' Event
 
   // // //  MIDI CHANNEL OPERATIONS  // // //
@@ -179,13 +190,13 @@ extern void func_0804ad9c(MidiBus *, u32, u8);  // [func_0804ad9c] MIDI CHANNEL 
 
   // // //  MIDI BUS OPERATIONS  // // //
 
-extern void func_0804adb0(MidiBus *, s8);     // [func_0804adb0] MIDI BUS - Set unk4
+extern void func_0804adb0(MidiBus *, s8);     // [func_0804adb0] MIDI BUS - Set Key
 extern void func_0804adb4(MidiBus *, u8);     // [func_0804adb4] MIDI BUS - Set Volume
 extern void func_0804adb8(MidiBus *, s8);     // [func_0804adb8] MIDI BUS - Set Panning
 extern void func_0804ade4(MidiBus *, s16);    // [func_0804ade4] MIDI BUS - Set Pitch
 extern void func_0804ade8(MidiBus *, u8);     // [func_0804ade8] MIDI BUS - Set Modulation Range
 extern void func_0804ae14(MidiBus *, u16);    // [func_0804ae14] MIDI BUS - Set unk8
-extern void func_0804ae18(MidiBus *, u16 *);  // [func_0804ae18] MIDI BUS - Set unkC
+extern void func_0804ae18(MidiBus *, u16 *);  // [func_0804ae18] MIDI BUS - Set Tuning
 
   // // //  SYSTEM-EXCLUSIVE MESSAGE OPERATIONS  // // //
 

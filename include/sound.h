@@ -158,11 +158,11 @@ typedef struct MidiBus {
     u8  busVolume;
     u8  trackVolume;
     u16 trackSelect;
-    s8  unk4;
+    s8  key;
     s8  panning;
     s16 pitch;
     u16 unk8;
-    u16 *unkC;      // ROM Pointer to a curve table(?) in the sound data section.
+    u16 *tuningTable;   // Note Frequency Table in the sound data section.
     const InstrumentBank *soundBank;
     u32 totalChannels:5;
     u32 priority:27;
@@ -220,7 +220,7 @@ typedef struct SoundChannel {
     u32 active:1;
     u32 key:7; // MIDI Key
     u32 velocity:7; // MIDI Velocity
-    u32 unk0_b15:17;
+    u32 frequency:17;
     union {
         struct InstrumentPCM *pcm;
         struct InstrumentPSG *psg;

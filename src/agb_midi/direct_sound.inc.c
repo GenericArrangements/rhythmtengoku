@@ -41,17 +41,43 @@ void func_08049144(void) {
             REG_DMA2CNT_H = 0;
             REG_DMA1SAD = (u32) &D_0300563c[D_030064a0];
             REG_DMA2SAD = (u32) &D_030064b8[D_030064a0];
-            REG_DMA1CNT_H = 0xB600;
+            REG_DMA1CNT_H = (
+                DMACNT_DEST_INC_TYPE_INCREMENT
+                | DMACNT_SRC_INC_TYPE_INCREMENT
+                | DMACNT_REPEAT
+                | DMACNT_SIZE
+                | DMACNT_START_MODE_VBLANK
+                | DMACNT_START_MODE_FIFO_EMPTY
+                | DMACNT_ENABLE
+            ); // ( = 0xB600)
             dummy = 0;
             dummy = 0;
-            REG_DMA2CNT_H = 0xF600;
+            REG_DMA2CNT_H = (
+                DMACNT_DEST_INC_TYPE_INCREMENT
+                | DMACNT_SRC_INC_TYPE_INCREMENT
+                | DMACNT_REPEAT
+                | DMACNT_SIZE
+                | DMACNT_START_MODE_VBLANK
+                | DMACNT_START_MODE_FIFO_EMPTY
+                | DMACNT_IRQ
+                | DMACNT_ENABLE
+            ); // ( = 0xF600)
             dummy = 0;
             dummy = 0;
             break;
         case 1:
             REG_DMA2CNT_H = 0;
             REG_DMA2SAD = (u32) &D_0300563c[D_030064a0];
-            REG_DMA2CNT_H = 0xF600;
+            REG_DMA2CNT_H = (
+                DMACNT_DEST_INC_TYPE_INCREMENT
+                | DMACNT_SRC_INC_TYPE_INCREMENT
+                | DMACNT_REPEAT
+                | DMACNT_SIZE
+                | DMACNT_START_MODE_VBLANK
+                | DMACNT_START_MODE_FIFO_EMPTY
+                | DMACNT_IRQ
+                | DMACNT_ENABLE
+            ); // ( = 0xF600)
             dummy = 0;
             dummy = 0;
             break;
@@ -60,10 +86,27 @@ void func_08049144(void) {
             REG_DMA2CNT_H = 0;
             REG_DMA1SAD = (u32) &D_0300563c[D_030064a0];
             REG_DMA2SAD = (u32) &D_0300563c[D_030064a0];
-            REG_DMA1CNT_H = 0xB600;
+            REG_DMA1CNT_H = (
+                DMACNT_DEST_INC_TYPE_INCREMENT
+                | DMACNT_SRC_INC_TYPE_INCREMENT
+                | DMACNT_REPEAT
+                | DMACNT_SIZE
+                | DMACNT_START_MODE_VBLANK
+                | DMACNT_START_MODE_FIFO_EMPTY
+                | DMACNT_ENABLE
+            ); // ( = 0xB600)
             dummy = 0;
             dummy = 0;
-            REG_DMA2CNT_H = 0xF600;
+            REG_DMA2CNT_H = (
+                DMACNT_DEST_INC_TYPE_INCREMENT
+                | DMACNT_SRC_INC_TYPE_INCREMENT
+                | DMACNT_REPEAT
+                | DMACNT_SIZE
+                | DMACNT_START_MODE_VBLANK
+                | DMACNT_START_MODE_FIFO_EMPTY
+                | DMACNT_IRQ
+                | DMACNT_ENABLE
+            ); // ( = 0xF600)
             dummy = 0;
             dummy = 0;
             break;
@@ -76,7 +119,7 @@ void func_08049144(void) {
 
 // [func_0804930c] SAMPLE READER - Initialise Channel
 void func_0804930c(u32 id, struct SampleInfo *sample) {
-    DmaSampleReader *comms = &D_03005b88[id]; // r6
+    DmaSampleReader *comms = &D_03005b88[id];
     u32 keySampleRate;
     u32 keyFreq;
     u64 sampleRate;
@@ -94,7 +137,7 @@ void func_0804930c(u32 id, struct SampleInfo *sample) {
     }
 
     keyFreq = D_08a86008[sample->baseKey];
-    keySampleRate = D_03005b94 * keyFreq; // r2
+    keySampleRate = D_03005b94 * keyFreq;
     sampleRate = (u64) sample->sampleRate << 28;
     comms->unk1C = __udivmoddi4((sampleRate + keySampleRate) - 1, keySampleRate);
 }
@@ -126,7 +169,7 @@ void func_080493f4(u32 id, u32 pitchEnv) {
     DmaSampleReader *comms = &D_03005b88[id];
     if (pitchEnv == 0) {
         comms->pitch = 0x80 << 7;
-        comms->unk0_b1 = 0;
+        comms->unk0_b1 = FALSE;
     } else {
         comms->pitch = ((u64) comms->unk1C * pitchEnv) >> 14;
         comms->unk0_b1 = (-(0x4000 ^ comms->pitch) | (0x4000 ^ comms->pitch)) >> 0x1f;
@@ -183,12 +226,12 @@ u32 func_08049b5c(u32 id) {
 
 // [func_08049b70] (SUB) MIDI Controller 4A - ??
 void func_08049b70(u32 arg0) {
-    if (D_03005b44 == 0) D_03005620[0] = arg0;
+    if (!D_03005b44) D_03005620[0] = arg0;
 }
 
 // [func_08049b8c] MIDI Controller 4D - ??
 void func_08049b8c(u8 arg0) {
-    if (D_03005b44 == 0) D_03005b28 = arg0;
+    if (!D_03005b44) D_03005b28 = arg0;
 }
 
 // [func_08049bac] ??
@@ -202,12 +245,12 @@ void func_08049bac(void) {
 
 // [func_08049be4] MIDI Controller 49 - ??; MIDI Controller 4A - ??
 void func_08049be4(void) {
-    if (D_03005b44 == 0) func_08049bac();
+    if (!D_03005b44) func_08049bac();
 }
 
 // [func_08049bfc] ??
 void func_08049bfc(u32 arg0, u32 arg1, u32 arg2) {
-    if (arg0 != 0) arg0 = 1;
+    if (arg0 != FALSE) arg0 = TRUE;
     if (D_03005b44 != arg0) {
         func_08049bac();
         D_03005b44 = arg0;
