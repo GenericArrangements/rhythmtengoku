@@ -182,7 +182,7 @@ u32 func_0804a018(SoundChannel *sndChnl) {
     // Pitch Envelope: ???
     unk1C = mChnl->unk1C;
     if ((unk1C != 0) && (mChnl->unk1D != 0) && (mChnl->unk1E == 0)) {
-        r5 = sndChnl->key + func_0804af0c((unk1C * 2) + 1) - unk1C + midiBus->key; // r5
+        r5 = sndChnl->key + func_0804af0c((unk1C * 2) + 1) - unk1C + midiBus->key;
 
         what = r5;
         while (what < 0) r5 += 12; // ????????
