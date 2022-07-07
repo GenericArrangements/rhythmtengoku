@@ -209,10 +209,10 @@ typedef struct SoundPlayer {
     u16 volumeFadeEnv;  // BeatScript: Volume Multiplier Envelope used for fade-out and mute effects. [default = 0x8000]
     u16 volumeFadeSpd;  // BeatScript: Higher values for faster fade-out. Is set to 1 when track is muted instantly. [default = 0]
     u8  channelVolume;  // SequenceData: Volume
-    s8  midiController4E;   // ??: [default = 0x40]
-    s8  midiController4F;   // ??: [default = 0x40]
-    s8  midiController50;   // ??: [default = 0x40]
-    s8  midiController51;   // ??: [default = 0x40]
+    s8  midiController4E;   // ??: [default = 64]
+    s8  midiController4F;   // ??: [default = 64]
+    s8  midiController50;   // ??: [default = 64]
+    s8  midiController51;   // ??: [default = 64]
     u32 unk34;      // ??: (is set to midiReader->deltaTime upon hitting a loop start marker) [default = 0]
 } SoundPlayer;
 
@@ -233,8 +233,7 @@ typedef struct SoundChannel {
     u8 unk16;
     u8 unk17_b0:7;
     u8 unk17_b7:1;
-    s16 unk18; // ?? Panning
-    u16 unk1A;
+    s16 panning;
     struct BufferADSR {
         u32 stage:8;
         u32 envelope:24;

@@ -72,21 +72,65 @@ void func_0804b95c(SoundPlayer *soundPlayer, u32 id, u8 controller, u8 var) {
     MidiBus *midiBus = soundPlayer->midiBus;
 
     switch (controller) {
-        case 0x00: func_0804abc8(midiBus, id, var | 0x8000); break;
-        case 0x01: func_0804ac40(midiBus, id, var); break;
-        case 0x07: func_0804aa5c(midiBus, id, var); break;
-        case 0x0A: func_0804aa7c(midiBus, id, var); break;
-        case 0x0B: func_0804aba8(midiBus, id, var); break;
-        case 0x14: func_0804ace4(midiBus, id, var); break;
-        case 0x15: func_0804accc(midiBus, id, var); break;
-        case 0x16: func_0804aca0(midiBus, id, var); break;
-        case 0x1A: func_0804acd8(midiBus, id, var); break;
-        case 0x20: func_0804abc8(midiBus, id, var); break;
-        case 0x21: func_0804ad18(midiBus, id, var); break;
-        case 0x0E: D_03005648 = var; break;
-        case 0x10: if (D_03005648 < D_03005b20) D_03005b7c[D_03005648] = var; break;
-        case 0x48: func_0804ac80(midiBus, id, var); break;
-        case 0x49:
+        case M_CONTROLLER_BANK_SELECT_MSB:
+            func_0804abc8(midiBus, id, var | 0x8000);
+            break;
+
+        case M_CONTROLLER_MOD_DEPTH:
+            func_0804ac40(midiBus, id, var);
+            break;
+
+        case M_CONTROLLER_VOLUME:
+            func_0804aa5c(midiBus, id, var);
+            break;
+
+        case M_CONTROLLER_PANNING:
+            func_0804aa7c(midiBus, id, var);
+            break;
+
+        case M_CONTROLLER_EXPRESSION:
+            func_0804aba8(midiBus, id, var);
+            break;
+
+        case M_CONTROLLER_MOD_RANGE:
+            func_0804ace4(midiBus, id, var);
+            break;
+
+        case M_CONTROLLER_MOD_SPEED:
+            func_0804accc(midiBus, id, var);
+            break;
+
+        case M_CONTROLLER_MOD_TYPE:
+            func_0804aca0(midiBus, id, var);
+            break;
+
+        case M_CONTROLLER_MOD_DELAY:
+            func_0804acd8(midiBus, id, var);
+            break;
+
+        case M_CONTROLLER_BANK_SELECT_LSB:
+            func_0804abc8(midiBus, id, var);
+            break;
+
+        case M_CONTROLLER_PRIORITY:
+            func_0804ad18(midiBus, id, var);
+            break;
+
+        case M_CONTROLLER_UNK_0E:
+            D_03005648 = var;
+            break;
+
+        case M_CONTROLLER_UNK_10:
+            if (D_03005648 < D_03005b20) {
+                D_03005b7c[D_03005648] = var;
+            }
+            break;
+
+        case M_CONTROLLER_DAMPEN:
+            func_0804ac80(midiBus, id, var);
+            break;
+
+        case M_CONTROLLER_UNK_49:
             D_03005b3c = var;
             switch (var) {
                 case 0:
@@ -99,22 +143,53 @@ void func_0804b95c(SoundPlayer *soundPlayer, u32 id, u8 controller, u8 var) {
                     break;
             }
             break;
-        case 0x4A:
+
+        case M_CONTROLLER_UNK_4A:
             D_03005b3c = 0;
             func_0804ae60(&D_03005b30);
             func_08049be4();
             func_08049b70((var * 2) - 0x80);
             break;
-        case 0x4C: D_03005640 = var * 2; break;
-        case 0x4D: func_08049b8c(var); break;
-        case 0x4B: func_0804acf0(midiBus, id, var); break;
-        case 0x4E: soundPlayer->midiController4E = var; break;
-        case 0x4F: soundPlayer->midiController4F = var; break;
-        case 0x50: soundPlayer->midiController50 = var; break;
-        case 0x51: soundPlayer->midiController51 = var; break;
-        case 0x52: func_0804ad38(midiBus, id, var); break;
-        case 0x53: func_0804ad90(midiBus, id, var); break;
-        case 0x54: func_0804ad9c(midiBus, id, var); break;
+
+        case M_CONTROLLER_UNK_4C:
+            D_03005640 = var * 2;
+            break;
+
+        case M_CONTROLLER_UNK_4D:
+            func_08049b8c(var);
+            break;
+
+        case M_CONTROLLER_STEREO:
+            func_0804acf0(midiBus, id, var);
+            break;
+
+        case M_CONTROLLER_RVB1:
+            soundPlayer->midiController4E = var;
+            break;
+
+        case M_CONTROLLER_RVB2:
+            soundPlayer->midiController4F = var;
+            break;
+
+        case M_CONTROLLER_RVB3:
+            soundPlayer->midiController50 = var;
+            break;
+
+        case M_CONTROLLER_RVB4:
+            soundPlayer->midiController51 = var;
+            break;
+
+        case M_CONTROLLER_RANDOM_PITCH:
+            func_0804ad38(midiBus, id, var);
+            break;
+
+        case M_CONTROLLER_RANDOM_53:
+            func_0804ad90(midiBus, id, var);
+            break;
+
+        case M_CONTROLLER_RANDOM_54:
+            func_0804ad9c(midiBus, id, var);
+            break;
     }
 }
 

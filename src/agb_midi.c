@@ -91,8 +91,7 @@ void func_0804c6c8(void) {
     func_0804c508();
 
     note = &D_03005650[0];
-    i = 0;
-    while (i < D_03005b78) {
+    for (i = 0; i < D_03005b78; i++, note++) {
         if (note->velocity != 0) { // Note has non-zero velocity.
             func_0804a6b0(D_0300159c, note->channel, note->key, note->velocity);
             mChnl = &D_0300159c->midiChannel[note->channel];
@@ -102,8 +101,6 @@ void func_0804c6c8(void) {
         } else { // Note is muted.
             func_0804a5b4(D_0300159c, note->channel, note->key);
         }
-        i++;
-        note++;
     }
     if (anyNotePlayed) {
         func_08049be4();

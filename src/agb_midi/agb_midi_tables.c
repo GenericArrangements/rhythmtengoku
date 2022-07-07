@@ -42,7 +42,7 @@ const u32 gFreqTable[] =
 // Assumptive.
 // Used for modulation updates and the System-Exclusive Message.
 // D_08a86140
-const s16 gSineTable[] =
+const s16 gMidiSineTable[] =
 {
     0,    6,    12,   18,   25,   31,   37,   43,   50,   56,   62,   68,   74,   80,   86,   92,
     98,   103,  109,  115,  120,  126,  131,  137,  142,  147,  152,  157,  162,  167,  172,  176,
@@ -65,7 +65,7 @@ const s16 gSineTable[] =
 // Assumptive.
 // Never used.
 // D_08a86340
-const s16 gCosineTable[] =
+const s16 gMidiCosineTable[] =
 {
     256,  256,  256,  255,  255,  254,  253,  252,  251,  250,  248,  247,  245,  243,  241,  239,
     236,  234,  231,  229,  226,  223,  220,  216,  213,  209,  206,  202,  198,  194,  190,  185,

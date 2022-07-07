@@ -1050,6 +1050,7 @@ SECTIONS {
         build/data/beatscript_data_089ce344.c.o(.rodata*);
         build/bin/bindata_089cea24.bin.o(.rodata*);
         build/bin/bindata_089d3984.bin.o(.rodata*);
+        build/bin/bindata_08a86008.bin.o(.rodata*);
         build/audio/audio_data.c.o(.rodata*);
         build/bin/bindata_08a9e8e0.bin.o(.rodata*);
         build/bin/bindata_08aa06f8.bin.o(.rodata*);

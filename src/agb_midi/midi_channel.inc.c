@@ -574,7 +574,7 @@ void func_0804aae0(MidiBus *midiBus, u32 id) {
 
     while (i < D_03005b8c) {
         if (sndBuf->active && (sndBuf->midiChannel == mChnl)) {
-            pan += sndBuf->unk18;
+            pan += sndBuf->panning;
             // Clamp to 7 bits.
             Clamp(pan, 0, 127);
             func_080493c8(i, func_0804a674(pan), func_0804a65c(pan) * isStereo);
