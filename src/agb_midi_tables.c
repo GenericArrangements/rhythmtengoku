@@ -1,5 +1,6 @@
 #include "global.h"
 #include "sound.h"
+#include "agb_midi_internal.h"
 
 // Convert MIDI Note values to standard frequency values.
 // D_08a86008
@@ -92,7 +93,7 @@ const u16 gPsgWaveVol[] = {
 
 // PSG hardware registers (length & envelope).
 // D_08a86548
-const volatile u16 *gPsgEnvRegTable[] = {
+const IOReg gPsgEnvRegTable[] = {
     &REG_SOUND1CNT_H,
     &REG_SOUND2CNT_L,
     &REG_SOUND3CNT_H,
@@ -101,7 +102,7 @@ const volatile u16 *gPsgEnvRegTable[] = {
 
 // PSG hardware registers (frequency).
 // D_08a86558
-const volatile u16 *gPsgFreqRegTable[] = {
+const IOReg gPsgFreqRegTable[] = {
     &REG_SOUND1CNT_X,
     &REG_SOUND2CNT_H,
     &REG_SOUND3CNT_X,

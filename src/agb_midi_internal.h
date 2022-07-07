@@ -5,6 +5,8 @@
 
   // // // // // // // // // // // // // // // // // // // //
 
+typedef volatile u16 *IOReg;
+
 #define Q24(x) ((s32)((x) * 256))
 #define Q24_TO_INT(x) ((s32)((x) >> 8))
 #define Q16(x) ((s32)((x) * 65536))
