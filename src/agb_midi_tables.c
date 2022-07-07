@@ -3,8 +3,7 @@
 
 // Convert MIDI Note values to standard frequency values.
 // D_08a86008
-const u16 gMidiTuningTable[] =
-{
+const u16 gMidiTuningTable[] = {
     8,     8,     9,     10,    10,    11,    12,    12,    13,    14,    15,    15,        // C-1 .. B-1
     16,    17,    18,    19,    21,    22,    23,    25,    26,    28,    29,    31,        //  C0 .. B0
     33,    35,    37,    39,    41,    44,    46,    49,    52,    55,    58,    62,        //  C1 .. B1
@@ -21,8 +20,7 @@ const u16 gMidiTuningTable[] =
 // Convert step increments (in semitones) to frequency increments.
 //      f = (1 - 2^(steps/12)) << 0x10
 // D_08a86108
-const u32 gFreqTable[] =
-{
+const u32 gFreqTable[] = {
     0,
     3913,
     8015,
@@ -42,8 +40,7 @@ const u32 gFreqTable[] =
 // Assumptive.
 // Used for modulation updates and the System-Exclusive Message.
 // D_08a86140
-const s16 gMidiSineTable[] =
-{
+const s16 gMidiSineTable[] = {
     0,    6,    12,   18,   25,   31,   37,   43,   50,   56,   62,   68,   74,   80,   86,   92,
     98,   103,  109,  115,  120,  126,  131,  137,  142,  147,  152,  157,  162,  167,  172,  176,
     181,  185,  190,  194,  198,  202,  206,  209,  213,  216,  220,  223,  226,  229,  231,  234,
@@ -65,8 +62,7 @@ const s16 gMidiSineTable[] =
 // Assumptive.
 // Never used.
 // D_08a86340
-const s16 gMidiCosineTable[] =
-{
+const s16 gMidiCosineTable[] = {
     256,  256,  256,  255,  255,  254,  253,  252,  251,  250,  248,  247,  245,  243,  241,  239,
     236,  234,  231,  229,  226,  223,  220,  216,  213,  209,  206,  202,  198,  194,  190,  185,
     181,  176,  172,  167,  162,  157,  152,  147,  142,  137,  131,  126,  120,  115,  109,  103,
@@ -87,8 +83,7 @@ const s16 gMidiCosineTable[] =
 
 // Convert standard volume for PSG Channel 3 (Wave).
 // D_08a86540
-const u16 gPsgWaveVol[] =
-{
+const u16 gPsgWaveVol[] = {
     0x60 << 8,
     0x40 << 8,
     0x80 << 8,
@@ -97,8 +92,7 @@ const u16 gPsgWaveVol[] =
 
 // PSG hardware registers (length & envelope).
 // D_08a86548
-const volatile u16 *gPsgEnvRegTable[] =
-{
+const volatile u16 *gPsgEnvRegTable[] = {
     &REG_SOUND1CNT_H,
     &REG_SOUND2CNT_L,
     &REG_SOUND3CNT_H,
@@ -107,8 +101,7 @@ const volatile u16 *gPsgEnvRegTable[] =
 
 // PSG hardware registers (frequency).
 // D_08a86558
-const volatile u16 *gPsgFreqRegTable[] =
-{
+const volatile u16 *gPsgFreqRegTable[] = {
     &REG_SOUND1CNT_X,
     &REG_SOUND2CNT_H,
     &REG_SOUND3CNT_X,
@@ -117,8 +110,7 @@ const volatile u16 *gPsgFreqRegTable[] =
 
 // Convert standard frequency for PSG Channel 4 (Noise).
 // D_08a86568
-const u8 gPsgNoiseFreq[] =
-{
+const u8 gPsgNoiseFreq[] = {
     0xD7, 0xD6, 0xD5, 0xD4,
     0xC7, 0xC6, 0xC5, 0xC4,
     0xB7, 0xB6, 0xB5, 0xB4,
