@@ -20,8 +20,8 @@ u32 func_0804b348(char *label) {
 }
 
 // [func_0804b368] SOUND PLAYER - Store Sound Sequence
-void func_0804b368(SoundPlayer *channel, const SongInfo *seqData) {
-    MidiBus *mChnlBus;
+void func_0804b368(SoundPlayer *soundPlayer, const SongInfo *song) {
+    MidiBus *midiBus;
     MidiReader *mTrkReader;
     MidiStream mTrkStream;
     MidiStream mTrkStart;
@@ -31,40 +31,40 @@ void func_0804b368(SoundPlayer *channel, const SongInfo *seqData) {
     u32 i;
 
     // Reading Sequence Data:
-    if (func_0804b5a0(channel)) {
-        if (channel->unk0_b21 && !channel->isPaused) {
-            if (channel->songInfo->priority > seqData->priority) return;
+    if (func_0804b5a0(soundPlayer)) {
+        if (soundPlayer->unk0_b21 && !soundPlayer->isPaused) {
+            if (soundPlayer->songInfo->priority > song->priority) return;
         }
     }
 
-    mChnlBus = channel->midiBus;
-    func_08049e64(mChnlBus);
-    func_08049fa0(mChnlBus, mChnlBus->totalChannels, mChnlBus->midiChannel);
-    func_0804a014(mChnlBus, instrumentBanks[seqData->soundBank]);
-    func_0804adb4(mChnlBus, seqData->volume);
-    func_08049e8c(mChnlBus, seqData->priority);
-    channel->songInfo = seqData;
-    channel->channelVolume = seqData->volume;
+    midiBus = soundPlayer->midiBus;
+    func_08049e64(midiBus);
+    func_08049fa0(midiBus, midiBus->totalChannels, midiBus->midiChannel);
+    func_0804a014(midiBus, instrumentBanks[song->soundBank]);
+    func_0804adb4(midiBus, song->volume);
+    func_08049e8c(midiBus, song->priority);
+    soundPlayer->songInfo = song;
+    soundPlayer->channelVolume = song->volume;
 
     // Reading MIDI Data:
-    mTrkStream = seqData->midiSequence;
+    mTrkStream = song->midiSequence;
 
     // Header:
     mTrkStream += 4; // Skip (Header: "MThd")
     chunkLength = func_0804b330(mTrkStream);
     mTrkStream += 4; // Skip (Header: Length)
     trackTotal = func_0804b324(mTrkStream + 2); // Header: Number of MIDI Tracks
-    channel->nTracksUsed = trackTotal;
+    soundPlayer->nTracksUsed = trackTotal;
 
-    if (channel->nTracksUsed > channel->nTracksMax) {
-        channel->nTracksUsed = channel->nTracksMax;
+    if (soundPlayer->nTracksUsed > soundPlayer->nTracksMax) {
+        soundPlayer->nTracksUsed = soundPlayer->nTracksMax;
     }
-    channel->midiQuarterNote = func_0804b324(mTrkStream + 4); // Header: Division
+    soundPlayer->midiQuarterNote = func_0804b324(mTrkStream + 4); // Header: Division
     mTrkStream += chunkLength; // Skip (Header: Data)
 
     // Track:
-    mTrkReader = channel->midiReader;
-    for (i = 0; i < channel->nTracksUsed; i++) {
+    mTrkReader = soundPlayer->midiReader;
+    for (i = 0; i < soundPlayer->nTracksUsed; i++) {
         mTrkStream += 4; // Skip (Track: Header)
         chunkLength = func_0804b330(mTrkStream);
         mTrkStream += 4; // Skip (Track: Length)
@@ -73,7 +73,7 @@ void func_0804b368(SoundPlayer *channel, const SongInfo *seqData) {
         mTrkReader->active_curr = TRUE;
         mTrkReader->stream_start = mTrkStart;
         deltaTime = func_0804c398(&mTrkStart);
-        mTrkReader->unkC = deltaTime << 8;
+        mTrkReader->unkC = Q24(deltaTime);
         mTrkReader->stream_curr = mTrkStart;
         mTrkReader->deltaTime = deltaTime;
         mTrkReader->active_loop = FALSE;
@@ -82,67 +82,67 @@ void func_0804b368(SoundPlayer *channel, const SongInfo *seqData) {
     }
 
     // Other Data:
-    channel->inLoop = FALSE;
-    channel->isPaused = FALSE;
-    channel->channelSpeed = 1;
-    channel->channelGain = 0x100;
-    channel->speedMulti = 0x100;
-    channel->trackGain = 0x100;
-    channel->volumeFadeType = 0;
-    channel->volumeFadeEnv = 0x8000;
-    channel->volumeFadeSpd = 0;
-    channel->loopStartSym = &D_08a865a4[0];
-    channel->loopStartSymSize = func_0804b348(D_08a865a4);
-    channel->loopEndSym = &D_08a865a8[0];
-    channel->loopEndSymSize = func_0804b348(D_08a865a8);
-    channel->midiController4E = 0x40;
-    channel->midiController4F = 0x40;
-    channel->midiController50 = 0x40;
-    channel->midiController51 = 0x40;
-    channel->unk34 = 0;
+    soundPlayer->inLoop = FALSE;
+    soundPlayer->isPaused = FALSE;
+    soundPlayer->channelSpeed = 1;
+    soundPlayer->channelGain = 0x100;
+    soundPlayer->speedMulti = 0x100;
+    soundPlayer->trackGain = 0x100;
+    soundPlayer->volumeFadeType = 0;
+    soundPlayer->volumeFadeEnv = 0x8000;
+    soundPlayer->volumeFadeSpd = 0;
+    soundPlayer->loopStartSym = &D_08a865a4[0];
+    soundPlayer->loopStartSymSize = func_0804b348(D_08a865a4);
+    soundPlayer->loopEndSym = &D_08a865a8[0];
+    soundPlayer->loopEndSymSize = func_0804b348(D_08a865a8);
+    soundPlayer->midiController4E = 64;
+    soundPlayer->midiController4F = 64;
+    soundPlayer->midiController50 = 64;
+    soundPlayer->midiController51 = 64;
+    soundPlayer->unk34 = 0;
 }
 
 // [func_0804b534] SOUND PLAYER - Load & Store Sound Sequence from Index
 void func_0804b534(u16 index) {
-    SoundPlayer *channel;
-    const SongInfo *seqData;
+    SoundPlayer *soundPlayer;
+    const SongInfo *song;
 
-    channel = D_08aa4460[D_08aa06f8[index].channelID].audioChannel;
-    seqData = D_08aa06f8[index].songInfo;
-    func_0804b368(channel, seqData);
+    soundPlayer = D_08aa4460[D_08aa06f8[index].channelID].audioChannel;
+    song = D_08aa06f8[index].songInfo;
+    func_0804b368(soundPlayer, song);
 }
 
 // [func_0804b560] SOUND PLAYER - Remove Sound Sequence
-void func_0804b560(SoundPlayer *channel) {
-    func_08049e3c(channel->midiBus);
-    channel->songInfo = NULL;
+void func_0804b560(SoundPlayer *soundPlayer) {
+    func_08049e3c(soundPlayer->midiBus);
+    soundPlayer->songInfo = NULL;
 }
 
 // [func_0804b574] SOUND PLAYER - Pause/Unpause Sound Sequence { 0 = Unpause; 1 = Pause }
-void func_0804b574(SoundPlayer *channel, u8 pause) {
-    channel->isPaused = pause;
-    if (pause) func_08049e64(channel->midiBus);
+void func_0804b574(SoundPlayer *soundPlayer, u8 pause) {
+    soundPlayer->isPaused = pause;
+    if (pause) func_08049e64(soundPlayer->midiBus);
 }
 
 // [func_0804b5a0] SOUND PLAYER - Check for Active MIDI Readers
-u32 func_0804b5a0(SoundPlayer *channel) {
+u32 func_0804b5a0(SoundPlayer *soundPlayer) {
     u32 i;
 
-    if (channel->songInfo == NULL) return FALSE;
-    for (i = 0; i < channel->nTracksUsed; i++) {
-        if (channel->midiReader[i].active_curr) return TRUE;
+    if (soundPlayer->songInfo == NULL) return FALSE;
+    for (i = 0; i < soundPlayer->nTracksUsed; i++) {
+        if (soundPlayer->midiReader[i].active_curr) return TRUE;
     }
     return FALSE;
 }
 
 // [func_0804b5d8] SOUND PLAYER - Pause Channel
-void func_0804b5d8(SoundPlayer *channel) {
-    func_0804b574(channel, TRUE);
+void func_0804b5d8(SoundPlayer *soundPlayer) {
+    func_0804b574(soundPlayer, TRUE);
 }
 
 // [func_0804b5e4] SOUND PLAYER - Unpause Channel
-void func_0804b5e4(SoundPlayer *channel) {
-    func_0804b574(channel, FALSE);
+void func_0804b5e4(SoundPlayer *soundPlayer) {
+    func_0804b574(soundPlayer, FALSE);
 }
 
 // [func_0804b5f0] SOUND PLAYER - Pause All Channels
@@ -164,109 +164,109 @@ void func_0804b620(void) {
 }
 
 // [func_0804b650] SOUND PLAYER - Set Gain (Volume)
-void func_0804b650(SoundPlayer *channel, u16 gain) {
-    channel->channelGain = gain;
+void func_0804b650(SoundPlayer *soundPlayer, u16 gain) {
+    soundPlayer->channelGain = gain;
 }
 
 // [func_0804b654] SOUND PLAYER - Set Gain (Volume) for Selected Tracks
-void func_0804b654(SoundPlayer *channel, u16 tracks, u16 gain) {
-    channel->trackGain = gain;
-    channel->trackSelect = tracks;
+void func_0804b654(SoundPlayer *soundPlayer, u16 tracks, u16 gain) {
+    soundPlayer->trackGain = gain;
+    soundPlayer->trackSelect = tracks;
 }
 
 // [func_0804b65c] SOUND PLAYER - Set Pitch
-void func_0804b65c(SoundPlayer *channel, u16 unused, s16 pitch) {
-    func_0804ade4(channel->midiBus, pitch);
+void func_0804b65c(SoundPlayer *soundPlayer, u16 unused, s16 pitch) {
+    func_0804ade4(soundPlayer->midiBus, pitch);
 }
 
 // [func_0804b66c] SOUND PLAYER - Set Panning
-void func_0804b66c(SoundPlayer *channel, u16 unused, s8 panning) {
-    func_0804adb8(channel->midiBus, panning);
+void func_0804b66c(SoundPlayer *soundPlayer, u16 unused, s8 panning) {
+    func_0804adb8(soundPlayer->midiBus, panning);
 }
 
 // [func_0804b67c] SOUND PLAYER - Pause Sound Sequence from Index
 void func_0804b67c(u16 offset) {
-    SongInfo *seqData = D_08aa06f8[offset].songInfo;
+    SongInfo *song = D_08aa06f8[offset].songInfo;
     u32 i;
 
     for (i = 0; i <= D_08aa4318; i++) {
-        if ((D_08aa4324[i] != NULL) && (D_08aa4324[i]->songInfo == seqData)) {
+        if ((D_08aa4324[i] != NULL) && (D_08aa4324[i]->songInfo == song)) {
             func_0804b5d8(D_08aa4324[i]);
         }
     }
 }
 
-// [func_0804b6c4] UTIL - String.equals()
-u32 func_0804b6c4(MidiStream byteStream0, MidiStream byteStream1, u32 length) {
+// [func_0804b6c4] UTIL - Stream.equals()
+u32 func_0804b6c4(MidiStream stream0, MidiStream stream1, u32 length) {
     u32 i;
 
     for (i = 0; i < length; i++) {
-        if (byteStream0[i] != byteStream1[i]) return FALSE;
+        if (stream0[i] != stream1[i]) return FALSE;
     }
     return TRUE;
 }
 
 // [func_0804b6f0] UTIL - Playback Speed Formula
 u32 func_0804b6f0(u16 tempo, u16 speedEnv, u16 quarterNote) {
-    return (u32) (tempo * speedEnv * quarterNote) / 3600;
+    return (u32) (tempo * speedEnv * quarterNote) / (60 * 60);
 }
 
 // [func_0804b710] SOUND PLAYER - Align Channel Speed with BeatScript
-void func_0804b710(SoundPlayer *channel, u16 speedEnv) {
+void func_0804b710(SoundPlayer *soundPlayer, u16 speedEnv) {
     u32 speed;
 
-    channel->speedMulti = speedEnv;
-    speed = func_0804b6f0(channel->midiTempo, speedEnv, channel->midiQuarterNote);
+    soundPlayer->speedMulti = speedEnv;
+    speed = func_0804b6f0(soundPlayer->midiTempo, speedEnv, soundPlayer->midiQuarterNote);
     if (speed == 0) speed = 1;
-    channel->channelSpeed = speed;
+    soundPlayer->channelSpeed = speed;
 }
 
 // [func_0804b734] SOUND PLAYER - Apply Volume Fade { type = 0..3 }
-void func_0804b734(SoundPlayer *channel, u16 type, u16 time) {
+void func_0804b734(SoundPlayer *soundPlayer, u16 type, u16 time) {
     switch (type) {
-        case 0: // Reset Fade
-            channel->volumeFadeEnv = 0x8000;
-            channel->volumeFadeSpd = 0;
+        case VOL_FADE_RESET: // Reset Fade
+            soundPlayer->volumeFadeEnv = 0x8000;
+            soundPlayer->volumeFadeSpd = 0;
             break;
 
-        case 1: // Fade In
+        case VOL_FADE_IN: // Fade In
             if (time == 0) time = 1;
-            if (channel->volumeFadeType == 0) channel->volumeFadeEnv = 0;
-            channel->volumeFadeSpd = 0x8000 / time;
-            channel->isPaused = 0;
+            if (soundPlayer->volumeFadeType == 0) soundPlayer->volumeFadeEnv = 0;
+            soundPlayer->volumeFadeSpd = 0x8000 / time;
+            soundPlayer->isPaused = 0;
             break;
 
-        case 2: // Fade Out & Clear
-        case 3: // Fade Out & Pause
-            if (channel->volumeFadeType == 0) channel->volumeFadeEnv = 0x8000;
+        case VOL_FADE_OUT_CLEAR: // Fade Out & Clear
+        case VOL_FADE_OUT_PAUSE: // Fade Out & Pause
+            if (soundPlayer->volumeFadeType == 0) soundPlayer->volumeFadeEnv = 0x8000;
             if (time != 0) {
-                channel->volumeFadeSpd = 0x8000 / time;
+                soundPlayer->volumeFadeSpd = 0x8000 / time;
             } else {
-                channel->volumeFadeEnv = 0;
-                channel->volumeFadeSpd = 1;
+                soundPlayer->volumeFadeEnv = 0;
+                soundPlayer->volumeFadeSpd = 1;
                 if (type == 2) {
                     type = 0;
-                    func_0804b560(channel);
+                    func_0804b560(soundPlayer);
                 } else {
-                    func_0804b574(channel, 1);
+                    func_0804b574(soundPlayer, 1);
                 }
             }
             break;
     }
-    channel->volumeFadeType = type;
+    soundPlayer->volumeFadeType = type;
 }
 
 // [func_0804b7dc] SOUND PLAYER - Volume Fade-Out & Clear
-void func_0804b7dc(SoundPlayer *channel, u16 time) {
-    func_0804b734(channel, 2, time);
+void func_0804b7dc(SoundPlayer *soundPlayer, u16 time) {
+    func_0804b734(soundPlayer, VOL_FADE_OUT_CLEAR, time);
 }
 
 // [func_0804b7ec] SOUND PLAYER - Volume Fade-Out & Pause
-void func_0804b7ec(SoundPlayer *channel, u16 time) {
-    func_0804b734(channel, 3, time);
+void func_0804b7ec(SoundPlayer *soundPlayer, u16 time) {
+    func_0804b734(soundPlayer, VOL_FADE_OUT_PAUSE, time);
 }
 
 // [func_0804b7fc] SOUND PLAYER - Volume Fade-In
-void func_0804b7fc(SoundPlayer *channel, u16 time) {
-    func_0804b734(channel, 1, time);
+void func_0804b7fc(SoundPlayer *soundPlayer, u16 time) {
+    func_0804b734(soundPlayer, VOL_FADE_IN, time);
 }

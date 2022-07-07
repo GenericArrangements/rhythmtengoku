@@ -1,17 +1,12 @@
 #pragma once
 
 #include "global.h"
+#include "sound.h"
+#include "src/agb_midi_internal.h"
 
   // // // // // // // // // // // // // // // // // // // //
 
-#define Q24(x) ((s32)((x) * 256))
-#define Q24_TO_INT(x) ((s32)((x) >> 8))
-#define Q16(x) ((s32)((x) * 65536))
-#define Q16_TO_INT(x) ((s32)((x) >> 16))
 
-#define MOD_TYPE_VIBRATO 0
-#define MOD_TYPE_TREMOLO 1
-#define MOD_TYPE_PANNING 2
 
   // // // // // // // // // // // // // // // // // // // //
 

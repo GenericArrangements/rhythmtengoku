@@ -2,6 +2,7 @@
 #include "sound.h"
 
 // Convert MIDI Note values to standard frequency values.
+// D_08a86008
 const u16 gMidiTuningTable[] =
 {
     8,     8,     9,     10,    10,    11,    12,    12,    13,    14,    15,    15,        // C-1 .. B-1
@@ -18,7 +19,8 @@ const u16 gMidiTuningTable[] =
 };
 
 // Convert step increments (in semitones) to frequency increments.
-// Uses the following formula: (1 - 2^(steps/12)) << 0x10
+//      f = (1 - 2^(steps/12)) << 0x10
+// D_08a86108
 const u32 gFreqTable[] =
 {
     0,
@@ -39,6 +41,7 @@ const u32 gFreqTable[] =
 
 // Assumptive.
 // Used for modulation updates and the System-Exclusive Message.
+// D_08a86140
 const s16 gSineTable[] =
 {
     0,    6,    12,   18,   25,   31,   37,   43,   50,   56,   62,   68,   74,   80,   86,   92,
@@ -61,6 +64,7 @@ const s16 gSineTable[] =
 
 // Assumptive.
 // Never used.
+// D_08a86340
 const s16 gCosineTable[] =
 {
     256,  256,  256,  255,  255,  254,  253,  252,  251,  250,  248,  247,  245,  243,  241,  239,
@@ -82,6 +86,7 @@ const s16 gCosineTable[] =
 };
 
 // Convert standard volume for PSG Channel 3 (Wave).
+// D_08a86540
 const u16 gPsgWaveVol[] =
 {
     0x60 << 8,
@@ -91,6 +96,7 @@ const u16 gPsgWaveVol[] =
 };
 
 // PSG hardware registers (length & envelope).
+// D_08a86548
 const volatile u16 *gPsgEnvRegTable[] =
 {
     &REG_SOUND1CNT_H,
@@ -100,6 +106,7 @@ const volatile u16 *gPsgEnvRegTable[] =
 };
 
 // PSG hardware registers (frequency).
+// D_08a86558
 const volatile u16 *gPsgFreqRegTable[] =
 {
     &REG_SOUND1CNT_X,
@@ -109,6 +116,7 @@ const volatile u16 *gPsgFreqRegTable[] =
 };
 
 // Convert standard frequency for PSG Channel 4 (Noise).
+// D_08a86568
 const u8 gPsgNoiseFreq[] =
 {
     0xD7, 0xD6, 0xD5, 0xD4,
@@ -128,5 +136,8 @@ const u8 gPsgNoiseFreq[] =
     0x03, 0x02, 0x01, 0x00
 };
 
-const char gLoopStartMarker[] = "[";
-const char gLoopEndMarker[] = "]";
+// Loop start/end markers used in MIDI sequences.
+// D_08a865a4
+const char gMidiLoopStartSym[] = "[";
+// D_08a865a8
+const char gMidiLoopEndSym[] = "]";

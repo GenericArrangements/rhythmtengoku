@@ -2,8 +2,8 @@
 
 
 // [func_0804b80c] MIDI STREAM - System-Exclusive Message [Evnt_F0]
-void func_0804b80c(SoundPlayer *channel, MidiStream stream) {
-    MidiBus *mChnlBus = channel->midiBus;
+void func_0804b80c(SoundPlayer *soundPlayer, MidiStream stream) {
+    MidiBus *midiBus = soundPlayer->midiBus;
     u8 type = *stream;
     u32 i;
 
@@ -15,19 +15,19 @@ void func_0804b80c(SoundPlayer *channel, MidiStream stream) {
             D_03005640 = stream[0] * 2;
             func_0804ae1c(&D_03005b30, stream[1] * 2, stream[2] * 2, stream[3] * 2, stream[4] * 2, stream[5] * 2);
             func_08049b8c(stream[6]);
-            D_03005644 = channel;
+            D_03005644 = soundPlayer;
             break;
 
         case 1:
             for (i = 0; i < 12; i++) {
-                mChnlBus->unk1C[i] = stream[i] - 0x40;
+                midiBus->unk1C[i] = stream[i] - 64;
             }
             break;
     }
 }
 
 // [func_0804b898] MIDI STREAM - Meta Event (Loop Start, Loop End, Track End, Set Tempo)
-u32 func_0804b898(SoundPlayer *channel, MidiStream *upstream) {
+u32 func_0804b898(SoundPlayer *soundPlayer, MidiStream *upstream) {
     MidiStream stream = *upstream;
     u8 event = *stream;
     u32 length;
@@ -39,74 +39,82 @@ u32 func_0804b898(SoundPlayer *channel, MidiStream *upstream) {
 
     switch (event) {
         // Text Marker
-        case 0x06:
-            if (length == channel->loopStartSymSize) {
-                if (func_0804b6c4(channel->loopStartSym, stream, length))
-                    return 2;
+        case META_TEXT_MARKER:
+            if (length == soundPlayer->loopStartSymSize) {
+                if (func_0804b6c4(soundPlayer->loopStartSym, stream, length))
+                    return META_EVENT_LOOP_START;
             }
-            if (length == channel->loopEndSymSize) {
-                if (func_0804b6c4(channel->loopEndSym, stream, length))
-                    return 3;
+            if (length == soundPlayer->loopEndSymSize) {
+                if (func_0804b6c4(soundPlayer->loopEndSym, stream, length))
+                    return META_EVENT_LOOP_END;
             }
-            return 0;
+            return META_EVENT_OTHER;
 
         // End of Track
-        case 0x2F:
-            return 1;
+        case META_END_OF_TRACK:
+            return META_EVENT_TRACK_END;
 
         // Set Tempo
-        case 0x51:
+        case META_SET_TEMPO:
             tempo = (u32) 60000000 / ((stream[0] << 0x10) | (stream[1] << 0x8) | stream[2]);
-            channel->midiTempo = tempo;
-            D_0300562c = func_0804b6f0(tempo, channel->speedMulti, channel->midiQuarterNote);
-            return 0;
+            soundPlayer->midiTempo = tempo;
+            D_0300562c = func_0804b6f0(tempo, soundPlayer->speedMulti, soundPlayer->midiQuarterNote);
+            return META_EVENT_OTHER;
 
         // Else, do nothing.
         default:
-            return 0;
+            return META_EVENT_OTHER;
     }
 }
 
 // [func_0804b95c] MIDI STREAM - Controller Change [Evnt_B]
-void func_0804b95c(SoundPlayer *channel, u32 id, u8 ctrl, u8 var) {
-    MidiBus *mChnlBus = channel->midiBus;
+void func_0804b95c(SoundPlayer *soundPlayer, u32 id, u8 controller, u8 var) {
+    MidiBus *midiBus = soundPlayer->midiBus;
 
-    switch (ctrl) {
-        case 0x00: func_0804abc8(mChnlBus, id, var | 0x8000); break;
-        case 0x01: func_0804ac40(mChnlBus, id, var); break;
-        case 0x07: func_0804aa5c(mChnlBus, id, var); break;
-        case 0x0A: func_0804aa7c(mChnlBus, id, var); break;
-        case 0x0B: func_0804aba8(mChnlBus, id, var); break;
-        case 0x14: func_0804ace4(mChnlBus, id, var); break;
-        case 0x15: func_0804accc(mChnlBus, id, var); break;
-        case 0x16: func_0804aca0(mChnlBus, id, var); break;
-        case 0x1A: func_0804acd8(mChnlBus, id, var); break;
-        case 0x20: func_0804abc8(mChnlBus, id, var); break;
-        case 0x21: func_0804ad18(mChnlBus, id, var); break;
+    switch (controller) {
+        case 0x00: func_0804abc8(midiBus, id, var | 0x8000); break;
+        case 0x01: func_0804ac40(midiBus, id, var); break;
+        case 0x07: func_0804aa5c(midiBus, id, var); break;
+        case 0x0A: func_0804aa7c(midiBus, id, var); break;
+        case 0x0B: func_0804aba8(midiBus, id, var); break;
+        case 0x14: func_0804ace4(midiBus, id, var); break;
+        case 0x15: func_0804accc(midiBus, id, var); break;
+        case 0x16: func_0804aca0(midiBus, id, var); break;
+        case 0x1A: func_0804acd8(midiBus, id, var); break;
+        case 0x20: func_0804abc8(midiBus, id, var); break;
+        case 0x21: func_0804ad18(midiBus, id, var); break;
         case 0x0E: D_03005648 = var; break;
         case 0x10: if (D_03005648 < D_03005b20) D_03005b7c[D_03005648] = var; break;
-        case 0x48: func_0804ac80(mChnlBus, id, var); break;
-        case 0x49: D_03005b3c = var;
+        case 0x48: func_0804ac80(midiBus, id, var); break;
+        case 0x49:
+            D_03005b3c = var;
             switch (var) {
                 case 0:
-                case 1: func_0804ae60(&D_03005b30); break;
-                case 2: func_08049be4(); func_0804ae54(&D_03005b30); break;
-            } break;
-        case 0x4A: D_03005b3c = 0;
+                case 1:
+                    func_0804ae60(&D_03005b30);
+                    break;
+                case 2:
+                    func_08049be4();
+                    func_0804ae54(&D_03005b30);
+                    break;
+            }
+            break;
+        case 0x4A:
+            D_03005b3c = 0;
             func_0804ae60(&D_03005b30);
             func_08049be4();
             func_08049b70((var * 2) - 0x80);
             break;
         case 0x4C: D_03005640 = var * 2; break;
         case 0x4D: func_08049b8c(var); break;
-        case 0x4B: func_0804acf0(mChnlBus, id, var); break;
-        case 0x4E: channel->midiController4E = var; break;
-        case 0x4F: channel->midiController4F = var; break;
-        case 0x50: channel->midiController50 = var; break;
-        case 0x51: channel->midiController51 = var; break;
-        case 0x52: func_0804ad38(mChnlBus, id, var); break;
-        case 0x53: func_0804ad90(mChnlBus, id, var); break;
-        case 0x54: func_0804ad9c(mChnlBus, id, var); break;
+        case 0x4B: func_0804acf0(midiBus, id, var); break;
+        case 0x4E: soundPlayer->midiController4E = var; break;
+        case 0x4F: soundPlayer->midiController4F = var; break;
+        case 0x50: soundPlayer->midiController50 = var; break;
+        case 0x51: soundPlayer->midiController51 = var; break;
+        case 0x52: func_0804ad38(midiBus, id, var); break;
+        case 0x53: func_0804ad90(midiBus, id, var); break;
+        case 0x54: func_0804ad9c(midiBus, id, var); break;
     }
 }
 
@@ -123,9 +131,9 @@ void func_0804bc5c(u32 id, u32 key, u32 vel) {
 }
 
 // [func_0804bcc0] MIDI STREAM - Messages/Events
-u32 func_0804bcc0(SoundPlayer *channel, u32 id) {
-    u32 trackEndType = 0;
-    MidiReader *reader = &channel->midiReader[id];
+u32 func_0804bcc0(SoundPlayer *soundPlayer, u32 id) {
+    u32 trackEndType = M_TRACK_STREAM_CONTINUE;
+    MidiReader *reader = &soundPlayer->midiReader[id];
     MidiReader *tempReader;
     MidiStream byteStream = reader->stream_curr;
     u8 command;
@@ -141,39 +149,39 @@ u32 func_0804bcc0(SoundPlayer *channel, u32 id) {
     command = reader->command_curr;
 
     // MIDI Meta Events & System Messages
-    if (command > 0xEF) {
+    if (command >= 0xF0) {
         switch (command & 0x0F) {
             // MIDI System Exclusive Message (F0)
             case 0x00:
                 i = func_0804c398(&byteStream);
-                func_0804b80c(channel, byteStream);
+                func_0804b80c(soundPlayer, byteStream);
                 byteStream += i;
                 break;
 
             // MIDI Meta Events (FF)
             case 0x0F:
-                switch (func_0804b898(channel, &byteStream)) {
+                switch (func_0804b898(soundPlayer, &byteStream)) {
                     // End of Track
-                    case 1:
-                        func_0804accc(channel->midiBus, id, 0);
-                        return 1;
+                    case META_EVENT_TRACK_END:
+                        func_0804accc(soundPlayer->midiBus, id, 0);
+                        return M_TRACK_STREAM_STOP;
 
                     // Marker: Loop Start
-                    case 2:
-                        if (channel->inLoop) break;
+                    case META_EVENT_LOOP_START:
+                        if (soundPlayer->inLoop) break;
                         reader->active_loop = reader->active_curr;
                         reader->command_loop = reader->command_curr;
                         reader->stream_loop = byteStream;
-                        reader->inLoop = 1;
-                        channel->unk34 = reader->deltaTime;
-                        channel->inLoop = 1;
+                        reader->inLoop = TRUE;
+                        soundPlayer->unk34 = reader->deltaTime;
+                        soundPlayer->inLoop = TRUE;
                         break;
 
                     // Marker: Loop End
-                    case 3:
-                        if (!channel->inLoop) break;
-                        for (i = 0; i < channel->nTracksUsed; i++) {
-                            tempReader = &channel->midiReader[i];
+                    case META_EVENT_LOOP_END:
+                        if (!soundPlayer->inLoop) break;
+                        for (i = 0; i < soundPlayer->nTracksUsed; i++) {
+                            tempReader = &soundPlayer->midiReader[i];
                             tempReader->active_curr = tempReader->active_loop;
                             tempReader->command_curr = tempReader->command_loop;
                             if (reader == tempReader) {
@@ -182,9 +190,9 @@ u32 func_0804bcc0(SoundPlayer *channel, u32 id) {
                                 tempReader->stream_curr = tempReader->stream_loop;
                                 tempReader->unkC = reader->unkC;
                             }
-                            func_08049d30(channel->midiBus, i);
+                            func_08049d30(soundPlayer->midiBus, i);
                         }
-                        trackEndType = 2;
+                        trackEndType = M_TRACK_STREAM_LOOP;
                         break;
                 }
                 break;
@@ -201,43 +209,43 @@ u32 func_0804bcc0(SoundPlayer *channel, u32 id) {
     else {
         switch (command & 0xF0) {
             // Note Off
-            case 0x80:
+            case MSG_NOTE_OFF:
                 func_0804bc5c(id, byteStream[0], 0);
                 byteStream += 2;
                 break;
 
             // Note On
-            case 0x90:
+            case MSG_NOTE_ON:
                 func_0804bc5c(id, byteStream[0], byteStream[1]);
                 byteStream += 2;
                 break;
 
             // Polyphonic Key Pressure (Aftertouch) [Not Supported]
-            case 0xA0:
+            case MSG_POLYPHONIC_KEY_PRESSURE:
                 byteStream += 2;
                 break;
 
             // MIDI Controller Change
-            case 0xB0:
-                func_0804b95c(channel, id, byteStream[0], byteStream[1]);
+            case MSG_CONTROLLER_CHANGE:
+                func_0804b95c(soundPlayer, id, byteStream[0], byteStream[1]);
                 byteStream += 2;
                 break;
 
             // Program Change
-            case 0xC0:
-                func_0804ab88(channel->midiBus, id, byteStream[0]);
+            case MSG_PROGRAM_CHANGE:
+                func_0804ab88(soundPlayer->midiBus, id, byteStream[0]);
                 byteStream += 1;
                 break;
 
             // Channel Pressure (Aftertouch) [Not Supported]
-            case 0xD0:
+            case MSG_CHANNEL_PRESSURE:
                 byteStream += 1;
                 break;
 
             // Pitch Wheel Change
-            case 0xE0:
+            case MSG_PITCH_WHEEL_CHANGE:
                 mod = (byteStream[0] & 0x7f) | ((byteStream[1] & 0x7f) << 7);
-                func_0804aa40(channel->midiBus, id, mod);
+                func_0804aa40(soundPlayer->midiBus, id, mod);
                 byteStream += 2;
                 break;
         }
@@ -249,7 +257,7 @@ u32 func_0804bcc0(SoundPlayer *channel, u32 id) {
 }
 
 // [func_0804bed0] MIDI STREAM - Update
-void func_0804bed0(SoundPlayer *player, u32 id) {
+void func_0804bed0(SoundPlayer *soundPlayer, u32 id) {
     MidiReader *reader;
     MidiChannel *channel;
     MidiNote *note;
@@ -257,23 +265,23 @@ void func_0804bed0(SoundPlayer *player, u32 id) {
     u32 deltaTime;
     u32 i;
 
-    reader = &player->midiReader[id];
+    reader = &soundPlayer->midiReader[id];
     if (!reader->active_curr) return;
 
     anyNotePlayed = FALSE;
     D_03005b78 = 0; // Reset "Current Note To Modify" counter.
 
-    while (reader->unkC < player->channelSpeed) {
-        if (player->inLoop && !reader->inLoop && (reader->deltaTime >= player->unk34)) {
+    while (reader->unkC < soundPlayer->channelSpeed) {
+        if (soundPlayer->inLoop && !reader->inLoop && (reader->deltaTime >= soundPlayer->unk34)) {
             reader->active_loop = reader->active_curr;
             reader->command_loop = reader->command_curr;
             reader->stream_loop = reader->stream_curr;
             reader->inLoop = TRUE;
         }
 
-        if (func_0804bcc0(player, id) == 1) {
+        if (func_0804bcc0(soundPlayer, id) == 1) {
             reader->active_curr = FALSE;
-            func_08049d30(player->midiBus, id);
+            func_08049d30(soundPlayer->midiBus, id);
             return;
         }
 
@@ -283,24 +291,24 @@ void func_0804bed0(SoundPlayer *player, u32 id) {
 
             for (i = 0; i < D_03005b78; i++, note++) {
                 if (note->velocity != 0) { // Note has non-zero velocity.
-                    func_0804a6b0(player->midiBus, note->channel, note->key, note->velocity);
+                    func_0804a6b0(soundPlayer->midiBus, note->channel, note->key, note->velocity);
                     anyNotePlayed = TRUE;
                 } else { // Note is muted.
-                    func_0804a5b4(player->midiBus, note->channel, note->key);
+                    func_0804a5b4(soundPlayer->midiBus, note->channel, note->key);
                 }
             }
             D_03005b78 = 0; // Reset "Current Note To Modify" counter.
         }
 
-        reader->unkC += (deltaTime << 8);
+        reader->unkC += Q24(deltaTime);
         reader->deltaTime += deltaTime;
     }
 
-    reader->unkC -= player->channelSpeed;
+    reader->unkC -= soundPlayer->channelSpeed;
 
     // If any note had a non-zero velocity, and the given MIDI Channel's unk0_b30 is set:
     if (anyNotePlayed) {
-        channel = &player->midiBus->midiChannel[id];
+        channel = &soundPlayer->midiBus->midiChannel[id];
         if (channel->unk0_b30 && (D_03005b3c == 1)) {
             func_08049be4();
             func_0804ae54(&D_03005b30);
@@ -309,83 +317,83 @@ void func_0804bed0(SoundPlayer *player, u32 id) {
 }
 
 // [func_0804c040] SOUND PLAYER - Update Volume
-void func_0804c040(SoundPlayer *channel) {
+void func_0804c040(SoundPlayer *soundPlayer) {
     u32 volume;
     u32 volumeAsByte;
 
-    switch (channel->volumeFadeType) {
-        case 0: // Reset Fade / None
+    switch (soundPlayer->volumeFadeType) {
+        case VOL_FADE_RESET: // Reset Fade / None
             break;
-        case 1: // Fade In
-            channel->volumeFadeEnv += channel->volumeFadeSpd;
-            if ((s16) channel->volumeFadeEnv < 0) {
-                channel->volumeFadeType = 0;
-                channel->volumeFadeEnv = 0x8000;
-                channel->volumeFadeSpd = 0;
+        case VOL_FADE_IN: // Fade In
+            soundPlayer->volumeFadeEnv += soundPlayer->volumeFadeSpd;
+            if ((s16) soundPlayer->volumeFadeEnv < 0) {
+                soundPlayer->volumeFadeType = VOL_FADE_RESET;
+                soundPlayer->volumeFadeEnv = 0x8000;
+                soundPlayer->volumeFadeSpd = 0;
             }
             break;
-        case 2: // Fade Out & Clear
-            if (channel->volumeFadeEnv < channel->volumeFadeSpd) {
-                channel->volumeFadeType = 0;
-                channel->volumeFadeEnv = 0;
-                func_0804b560(channel); // Stop Channel
+        case VOL_FADE_OUT_CLEAR: // Fade Out & Clear
+            if (soundPlayer->volumeFadeEnv < soundPlayer->volumeFadeSpd) {
+                soundPlayer->volumeFadeType = VOL_FADE_RESET;
+                soundPlayer->volumeFadeEnv = 0;
+                func_0804b560(soundPlayer); // Stop Channel
             } else {
-                channel->volumeFadeEnv -= channel->volumeFadeSpd;
+                soundPlayer->volumeFadeEnv -= soundPlayer->volumeFadeSpd;
             }
             break;
-        case 3: // Fade Out & Pause
-            if (channel->volumeFadeEnv < channel->volumeFadeSpd) {
-                channel->volumeFadeEnv = 0;
-                func_0804b574(channel, TRUE); // Pause Channel
+        case VOL_FADE_OUT_PAUSE: // Fade Out & Pause
+            if (soundPlayer->volumeFadeEnv < soundPlayer->volumeFadeSpd) {
+                soundPlayer->volumeFadeEnv = 0;
+                func_0804b574(soundPlayer, TRUE); // Pause Channel
             } else {
-                channel->volumeFadeEnv -= channel->volumeFadeSpd;
+                soundPlayer->volumeFadeEnv -= soundPlayer->volumeFadeSpd;
             }
             break;
     }
 
-    volume = (channel->channelVolume * channel->channelGain * channel->volumeFadeEnv) >> 8;
+    volume = Q24_TO_INT(soundPlayer->channelVolume * soundPlayer->channelGain * soundPlayer->volumeFadeEnv);
     volumeAsByte = volume >> 15;
-    if (volumeAsByte > 0xff) volumeAsByte = 0xff;
-    func_0804adb4(channel->midiBus, volumeAsByte);
+    Ceil(volumeAsByte, 0xff);
+    func_0804adb4(soundPlayer->midiBus, volumeAsByte);
 
-    volumeAsByte = ((volume >> 8) * channel->trackGain) >> 15;
-    if (volumeAsByte > 0xff) volumeAsByte = 0xff;
-    func_08049ec4(channel->midiBus, volumeAsByte, channel->trackSelect);
+    volumeAsByte = ((volume >> 8) * soundPlayer->trackGain) >> 15;
+    Ceil(volumeAsByte, 0xff);
+    func_08049ec4(soundPlayer->midiBus, volumeAsByte, soundPlayer->trackSelect);
 }
 
 // [func_0804c0f8] SOUND PLAYER - Update MIDI Stream
-void func_0804c0f8(SoundPlayer *channel) {
+void func_0804c0f8(SoundPlayer *soundPlayer) {
     MidiReader *mTrkReader;
     u32 noActiveReader;
     u32 i;
 
     // If the SoundPlayer is stopped or paused, do not proceed.
-    if ((channel->songInfo == NULL) || channel->isPaused) return;
+    if ((soundPlayer->songInfo == NULL) || soundPlayer->isPaused) return;
 
     D_0300562c = 0;
 
     // ???
-    for (i = 0; i < channel->nTracksUsed; i++) {
-        func_0804bed0(channel, i);
+    for (i = 0; i < soundPlayer->nTracksUsed; i++) {
+        func_0804bed0(soundPlayer, i);
     }
 
     // If the above loop modifies the value of D_0300562c, apply to channel as speed envelope.
-    if (D_0300562c != 0) channel->channelSpeed = D_0300562c;
+    if (D_0300562c != 0) soundPlayer->channelSpeed = D_0300562c;
 
     // Check if any MIDI Track Readers are currently operating.
-    mTrkReader = channel->midiReader;
+    mTrkReader = soundPlayer->midiReader;
     noActiveReader = TRUE;
-    for (i = 0; (i < channel->nTracksUsed) && noActiveReader; i++, mTrkReader++) {
+    for (i = 0; (i < soundPlayer->nTracksUsed) && noActiveReader; i++, mTrkReader++) {
         if (mTrkReader->active_curr) noActiveReader = FALSE;
     }
 
     // If none are active, remove the Sound Sequence from the Audio Channel.
-    if (noActiveReader) channel->songInfo = NULL;
+    if (noActiveReader) soundPlayer->songInfo = NULL;
 }
 
 // [func_0804c170] MAIN UPDATE
 void func_0804c170(void) {
-    SoundPlayer *channel;
+    SoundPlayer *soundPlayer;
     u32 speed;
     u32 i;
     s32 rvb0 = D_03005b90[0];
@@ -396,57 +404,53 @@ void func_0804c170(void) {
     D_030055f0 = REG_VCOUNT;
 
     for (i = 0; i <= D_08aa4318; i++) {
-        channel = D_08aa4324[i];
-        if (channel != NULL) {
-            func_0804c040(channel);
-            func_0804c0f8(channel);
-            func_08049d08(channel->midiBus);
-            if (channel->songInfo != NULL) {
-                rvb0 -= 0x80 - (channel->midiController4E * 2);
-                rvb1 -= 0x40 - (channel->midiController4F);
-                rvb2 -= 0x40 - (channel->midiController50);
-                rvb3 -= 0x40 - (channel->midiController51);
+        soundPlayer = D_08aa4324[i];
+        if (soundPlayer != NULL) {
+            func_0804c040(soundPlayer);
+            func_0804c0f8(soundPlayer);
+            func_08049d08(soundPlayer->midiBus);
+            if (soundPlayer->songInfo != NULL) {
+                rvb0 -= (64 * 2) - (soundPlayer->midiController4E * 2);
+                rvb1 -= 64 - (soundPlayer->midiController4F);
+                rvb2 -= 64 - (soundPlayer->midiController50);
+                rvb3 -= 64 - (soundPlayer->midiController51);
             }
         }
     }
 
-    channel = D_03001598;
-    if ((D_08aa431c != 0) && (channel != NULL)) {
+    soundPlayer = D_03001598;
+    if ((D_08aa431c != 0) && (soundPlayer != NULL)) {
         func_0804c6c8();
-        rvb0 -= 0x80 - (channel->midiController4E * 2);
-        rvb1 -= 0x40 - (channel->midiController4F);
-        rvb2 -= 0x40 - (channel->midiController50);
-        rvb3 -= 0x40 - (channel->midiController51);
+        rvb0 -= (64 * 2) - (soundPlayer->midiController4E * 2);
+        rvb1 -= 64 - (soundPlayer->midiController4F);
+        rvb2 -= 64 - (soundPlayer->midiController50);
+        rvb3 -= 64 - (soundPlayer->midiController51);
     }
 
     if ((D_03005644 != NULL) && (D_03005b3c != 0)) {
         speed = func_0804b6f0(D_03005644->midiTempo, D_03005644->speedMulti, 0x18);
         func_0804ae6c(&D_03005b30, speed);
-        func_08049b70((D_03005b30.unk7 * D_03005640) >> 8);
+        func_08049b70(Q24_TO_INT(D_03005b30.unk7 * D_03005640));
     }
 
     func_0804a334();
     D_03005b80 = REG_VCOUNT;
 
-    if (rvb0 < 0) rvb0 = 0;
-    if (rvb0 > 0x7f) rvb0 = 0x7f;
-    if (rvb1 < 0) rvb1 = 0;
-    if (rvb1 > 0x7f) rvb1 = 0x7f;
-    if (rvb2 < 0) rvb2 = 0;
-    if (rvb2 > 0x7f) rvb2 = 0x7f;
-    if (rvb3 < 0) rvb3 = 0;
-    if (rvb3 > 0x7f) rvb3 = 0x7f;
+    Clamp(rvb0, 0, 127);
+    Clamp(rvb1, 0, 127);
+    Clamp(rvb2, 0, 127);
+    Clamp(rvb3, 0, 127);
 
     func_08049b34(rvb0, rvb1, rvb2, rvb3);
     func_080497f8();
 }
 
 // [func_0804c340] Set Reverb
-void func_0804c340(u32 arg0, u32 arg1, u32 arg2, u32 arg3) {
-    D_03005b90[0] = arg0;
-    D_03005b90[1] = arg1;
-    D_03005b90[2] = arg2;
-    D_03005b90[3] = arg3;
+void func_0804c340(u32 rvb0, u32 rvb1, u32 rvb2, u32 rvb3) {
+    D_03005b90[0] = rvb0;
+    D_03005b90[1] = rvb1;
+    D_03005b90[2] = rvb2;
+    D_03005b90[3] = rvb3;
 }
 
 // [func_0804c358] STUB

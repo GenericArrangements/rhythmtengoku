@@ -119,27 +119,27 @@ void func_08049144(void) {
 
 // [func_0804930c] SAMPLE READER - Initialise Channel
 void func_0804930c(u32 id, struct SampleInfo *sample) {
-    DmaSampleReader *comms = &D_03005b88[id];
+    DmaSampleReader *reader = &D_03005b88[id];
     u32 keySampleRate;
     u32 keyFreq;
     u64 sampleRate;
 
-    comms->active = FALSE;
-    comms->sample = sample->waveform;
-    comms->length = sample->length >> 2;
+    reader->active = FALSE;
+    reader->sample = sample->waveform;
+    reader->length = sample->length >> 2;
 
     if ((sample->loopStart | sample->loopEnd) != 0) {
-        comms->loopStart = sample->loopStart << 14;
-        comms->loopEnd = sample->loopEnd << 14;
+        reader->loopStart = sample->loopStart << 14;
+        reader->loopEnd = sample->loopEnd << 14;
     } else {
-        comms->loopStart = sample->length << 14;
-        comms->loopEnd = sample->length << 14;
+        reader->loopStart = sample->length << 14;
+        reader->loopEnd = sample->length << 14;
     }
 
     keyFreq = D_08a86008[sample->baseKey];
     keySampleRate = D_03005b94 * keyFreq;
     sampleRate = (u64) sample->sampleRate << 28;
-    comms->unk1C = __udivmoddi4((sampleRate + keySampleRate) - 1, keySampleRate);
+    reader->unk1C = __udivmoddi4((sampleRate + keySampleRate) - 1, keySampleRate);
 }
 
 // [func_08049394] SAMPLE READER - Reset Channel
@@ -166,13 +166,13 @@ void func_080493e4(u32 id, u32 volumeEnv) {
 
 // [func_080493f4] SAMPLE READER - Set Pitch Envelope
 void func_080493f4(u32 id, u32 pitchEnv) {
-    DmaSampleReader *comms = &D_03005b88[id];
+    DmaSampleReader *reader = &D_03005b88[id];
     if (pitchEnv == 0) {
-        comms->pitch = 0x80 << 7;
-        comms->unk0_b1 = FALSE;
+        reader->pitch = 0x80 << 7;
+        reader->unk0_b1 = FALSE;
     } else {
-        comms->pitch = ((u64) comms->unk1C * pitchEnv) >> 14;
-        comms->unk0_b1 = (-(0x4000 ^ comms->pitch) | (0x4000 ^ comms->pitch)) >> 0x1f;
+        reader->pitch = ((u64) reader->unk1C * pitchEnv) >> 14;
+        reader->unk0_b1 = (-(0x4000 ^ reader->pitch) | (0x4000 ^ reader->pitch)) >> 0x1f;
     }
 }
 

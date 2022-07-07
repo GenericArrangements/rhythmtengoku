@@ -1,7 +1,7 @@
   //  //  //  //   PSG CHANNEL OPERATIONS   //  //  //  //
 
 
-// [func_0804af30] PSG CHANNEL - Stop All PSG Buffer Channels
+// [func_0804af30] PSG CHANNEL - Stop All PSG Channels
 void func_0804af30(void) {
     u32 i;
 
@@ -24,56 +24,55 @@ void func_0804af74(u32 id) {
 
 // [func_0804afa4] PSG CHANNEL - Convert Pitch Envelope to PSG Frequency Register Variable
 u32 func_0804afa4(u32 pitchEnv) {
-    s32 var;
+    s32 psgFreq;
 
     if (pitchEnv == 0) return 0;
-    var = 0x800 - ((0x400000 / pitchEnv) >> 5);
-    if (var < 0) var = 0;
-    if (var > 0x7ff) var = 0x7ff;
-    return var;
+    psgFreq = 0x800 - ((0x400000 / pitchEnv) >> 5);
+    Clamp(psgFreq, 0, 0x7ff);
+    return psgFreq;
 }
 
 // [func_0804afd8] PSG CHANNEL - Convert Volume Envelope to PSG Volume Register Variable
-u32 func_0804afd8(u32 volumeEnv) {
-    u32 var = volumeEnv;
+u32 func_0804afd8(u32 vol) {
+    u32 psgEnv = vol;
 
-    var = (volumeEnv >> 3);
-    volumeEnv = var >> 1;
-    var += var >> 1;
-    if (var > 0xf) var = 0xf;
-    return var;
+    psgEnv = (vol >> 3);
+    vol = psgEnv >> 1;
+    psgEnv += psgEnv >> 1;
+    Ceil(psgEnv, 15);
+    return psgEnv;
 }
 
-// [func_0804aff0] Update PSG Buffer Channel
+// [func_0804aff0] Update PSG Channel
 #include "asm/agb_midi/asm_0804aff0.s"
 
 // [func_0804b2c4] PSG CHANNEL - Update All
 void func_0804b2c4(void) {
-    SoundChannel *psgBuf = &D_030056a0[0];
-    u16 controller = 0;
+    SoundChannel *psgChnl = &D_030056a0[0];
+    u16 regControls = 0;
     u32 i;
 
     for (i = 0; i < 4; i++) {
-        // Update PSG Buffer Channel
+        // Update PSG Channel
         func_0804aff0(i);
 
         // Set Panning
-        controller >>= 1;
-        if (psgBuf->active) {
+        regControls >>= 1;
+        if (psgChnl->active) {
             // Set Enable Flag LEFT
-            if (psgBuf->midiChannel->panning <= 0x40) {
-                controller |= 0x8000;
+            if (psgChnl->midiChannel->panning <= 64) {
+                regControls |= 0x8000;
             }
             // Set Enable Flag RIGHT
-            if (psgBuf->midiChannel->panning >= 0x40) {
-                controller |= 0x800;
+            if (psgChnl->midiChannel->panning >= 64) {
+                regControls |= 0x800;
             }
         }
-        psgBuf++;
+        psgChnl++;
     }
 
     // Set Master Volume to 7 (LEFT & RIGHT)
-    controller |= 0x77;
+    regControls |= (SOUNDCNT_DMG_LEFT_VOLUME_MASK | SOUNDCNT_DMG_RIGHT_VOLUME_MASK);
     // Store to IO Register
-    REG_SOUNDCNT_L = controller;
+    REG_SOUNDCNT_L = regControls;
 }
