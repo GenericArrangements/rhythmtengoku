@@ -13,6 +13,8 @@ typedef volatile u16 *IOReg;
 #define Q16_TO_INT(x) ((s32)((x) >> 16))
 #define UQ24(x) ((u32)((x) * 256))
 #define UQ24_TO_INT(x) ((u32)((x) / 256))
+#define UQ16(x) ((u32)((x) * 65536))
+#define UQ16_TO_INT(x) ((u32)((x) / 65536))
 
 #define Clamp(x, min, max)      \
 {                               \

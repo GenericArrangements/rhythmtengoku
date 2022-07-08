@@ -15,13 +15,13 @@ const u16 gMidiTuningTable[] = {
     1047,  1109,  1175,  1245,  1319,  1397,  1480,  1568,  1661,  1760,  1865,  1976,      //  C6 .. B6
     2093,  2218,  2349,  2489,  2637,  2794,  2960,  3136,  3322,  3520,  3729,  3951,      //  C7 .. B7
     4186,  4435,  4699,  4978,  5274,  5588,  5920,  6272,  6645,  7040,  7459,  7902,      //  C8 .. B8
-    8372,  8870,  9397,  9956,  10548, 11175, 11840, 12544                                  //  C9 .. B9
+    8372,  8870,  9397,  9956,  10548, 11175, 11840, 12544                                  //  C9 .. G9
 };
 
 // Convert step increments (in semitones) to frequency increments.
 //      f = (1 - 2^(steps/12)) << 0x10
 // D_08a86108
-const u32 gFreqTable[] = {
+const u32 gStepFreqTable[] = {
     0,
     3913,
     8015,
@@ -38,7 +38,6 @@ const u32 gFreqTable[] = {
     73301
 };
 
-// Assumptive.
 // Used for modulation updates and the System-Exclusive Message.
 // D_08a86140
 const s16 gMidiSineTable[] = {
@@ -60,7 +59,6 @@ const s16 gMidiSineTable[] = {
     -98,  -92,  -86,  -80,  -74,  -68,  -62,  -56,  -50,  -43,  -37,  -31,  -25,  -18,  -12,  -6
 };
 
-// Assumptive.
 // Never used.
 // D_08a86340
 const s16 gMidiCosineTable[] = {
@@ -84,7 +82,7 @@ const s16 gMidiCosineTable[] = {
 
 // Convert standard volume for PSG Channel 3 (Wave).
 // D_08a86540
-const u16 gPsgWaveVol[] = {
+const u16 gPsgWaveVolTable[] = {
     0x60 << 8,
     0x40 << 8,
     0x80 << 8,
@@ -111,7 +109,7 @@ const IOReg gPsgFreqRegTable[] = {
 
 // Convert standard frequency for PSG Channel 4 (Noise).
 // D_08a86568
-const u8 gPsgNoiseFreq[] = {
+const u8 gPsgNoiseFreqTable[] = {
     0xD7, 0xD6, 0xD5, 0xD4,
     0xC7, 0xC6, 0xC5, 0xC4,
     0xB7, 0xB6, 0xB5, 0xB4,

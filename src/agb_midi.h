@@ -79,13 +79,13 @@ extern u16 D_030064c4; // ?? (init. = 1)
 
   // // // // // // // // // // // // // // // // // // // //
 
-extern u16 D_08a86008[]; // MIDI Note to Frequency Table (A4 = 440Hz)
-extern u32 D_08a86108[]; // Semitones to Frequency Table ((2^(p/12) - 1) << 10)
-extern s16 D_08a86140[]; // Sine Table (init = 0; size = 0x100; max = 0x100; min = -0x100)
+extern u16 gMidiTuningTable[]; // MIDI Note to Frequency Table (A4 = 440Hz)
+extern u32 gStepFreqTable[]; // Semitones to Frequency Table ((2^(p/12) - 1) << 10)
+extern s16 gMidiSineTable[]; // Sine Table (init = 0; size = 0x100; max = 0x100; min = -0x100)
 // extern s16 D_08a86340[]; // Cosine Table (init = 0x100; size = 0x100; max = 0x100; min = -0x100)
 extern InstrumentBank *instrumentBanks[]; // Instrument Bank Index
-extern char D_08a865a4[]; // MIDI "Loop Start" Marker: '['
-extern char D_08a865a8[]; // MIDI "Loop End" Marker: ']'
+extern char gMidiLoopStartSym[]; // MIDI "Loop Start" Marker: '['
+extern char gMidiLoopEndSym[]; // MIDI "Loop End" Marker: ']'
 
 extern u32 __udivmoddi4(u64, u64);
 

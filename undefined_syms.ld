@@ -15020,15 +15020,8 @@ D_08a85de0 = 0x08a85de0;
 D_08a85e10 = 0x08a85e10;
 D_08a85e88 = 0x08a85e88;
 D_08a85f00 = 0x08a85f00;
-D_08a86008 = 0x08a86008;
-D_08a86108 = 0x08a86108;
-D_08a86140 = 0x08a86140;
-D_08a86540 = 0x08a86540;
-D_08a86548 = 0x08a86548;
-D_08a86558 = 0x08a86558;
-D_08a86568 = 0x08a86568;
-D_08a865a4 = 0x08a865a4;
-D_08a865a8 = 0x08a865a8;
+
+/* Audio Data - Key Splits */
 D_08a865ac = 0x08a865ac;
 D_08a8660c = 0x08a8660c;
 D_08a8666c = 0x08a8666c;
@@ -15038,6 +15031,8 @@ D_08a8678c = 0x08a8678c;
 D_08a867c8 = 0x08a867c8;
 D_08a867ec = 0x08a867ec;
 D_08a86828 = 0x08a86828;
+
+/* Audio Data - PSG Wavedata */
 D_08a86870 = 0x08a86870;
 D_08a86880 = 0x08a86880;
 D_08a86890 = 0x08a86890;
@@ -15046,12 +15041,10 @@ D_08a868b0 = 0x08a868b0;
 D_08a868c0 = 0x08a868c0;
 D_08a868d0 = 0x08a868d0;
 
-/* bindata_08a9e8e0 (bad split?) */
+/* bindata_08a9e8e0 */
 
-/* bindata_08aa06f8 */
+/* bindata_08aa06f4 */
 D_08aa06f8 = 0x08aa06f8;
-D_08aa082d = 0x08aa082d;
-D_08aa08ab = 0x08aa08ab;
 D_08aa4318 = 0x08aa4318;
 D_08aa431c = 0x08aa431c;
 D_08aa431d = 0x08aa431d;
@@ -15062,7 +15055,6 @@ D_08aa4324 = 0x08aa4324;
 D_08aa4358 = 0x08aa4358;
 D_08aa445c = 0x08aa445c;
 D_08aa4460 = 0x08aa4460;
-D_08aa9f2c = 0x08aa9f2c;
 
 /* bindata_08bd0cac */
 D_08bd0cac = 0x08bd0cac;

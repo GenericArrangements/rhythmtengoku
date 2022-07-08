@@ -132,7 +132,7 @@ void func_08049fa0(MidiBus *midiBus, u32 totalChannels, MidiChannel *mChnl) {
     midiBus->panning = 0;
     midiBus->pitch = 0;
     midiBus->unk8 = 0x1400;
-    midiBus->tuningTable = D_08a86008;
+    midiBus->tuningTable = gMidiTuningTable;
 
     midiBus->totalChannels = totalChannels;
     midiBus->midiChannel = mChnl;
@@ -212,8 +212,8 @@ u32 func_0804a018(SoundChannel *sndChnl) {
 
         index = (r5 / 682);
         r3 = r5 - (index * 682); // pitchWheel - ((pitchWheel / 682) * 682) = margin of error?
-        r5 = D_08a86108[index];
-        r0 = D_08a86108[index + 1] - r5;
+        r5 = gStepFreqTable[index];
+        r0 = gStepFreqTable[index + 1] - r5;
         r0 = r5 + ((r0 * r3) / 682);
         freq += Q16_TO_INT(r0 * r8);
     }
@@ -231,8 +231,8 @@ u32 func_0804a018(SoundChannel *sndChnl) {
                 index -= 12;
             }
         }
-        r5 = D_08a86108[index];
-        r0 = D_08a86108[index + 1] - r5;
+        r5 = gStepFreqTable[index];
+        r0 = gStepFreqTable[index + 1] - r5;
         r0 = r5 + Q24_TO_INT(r0 * r3);
         freq += Q16_TO_INT(r0 * freq);
     }

@@ -136,7 +136,7 @@ void func_0804930c(u32 id, struct SampleInfo *sample) {
         reader->loopEnd = sample->length << 14;
     }
 
-    keyFreq = D_08a86008[sample->baseKey];
+    keyFreq = gMidiTuningTable[sample->baseKey];
     keySampleRate = D_03005b94 * keyFreq;
     sampleRate = (u64) sample->sampleRate << 28;
     reader->unk1C = __udivmoddi4((sampleRate + keySampleRate) - 1, keySampleRate);

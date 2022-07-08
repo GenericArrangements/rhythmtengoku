@@ -1056,12 +1056,13 @@ SECTIONS {
         build/audio/psg_wave_samples/triangle.pcm.o(.rodata*);
         build/audio/psg_wave_samples/sawtooth.pcm.o(.rodata*);
         build/audio/psg_wave_samples/cotangent.pcm.o(.rodata*);
-        build/audio/psg_wave_samples/pulse_12.5.pcm.o(.rodata*);
+        build/audio/psg_wave_samples/pulse_12_5.pcm.o(.rodata*);
         build/audio/psg_wave_samples/pulse_25.pcm.o(.rodata*);
         build/audio/psg_wave_samples/pulse_50.pcm.o(.rodata*);
         build/audio/audio_data.c.o(.rodata*);
         build/bin/bindata_08a9e8e0.bin.o(.rodata*);
-        build/bin/bindata_08aa06f8.bin.o(.rodata*);
+        build/bin/bindata_08aa06f4.bin.o(.rodata*);
+        build/bin/bindata_08aa4318.bin.o(.rodata*);
 		build/audio/sample_table.json.c.o(.rodata*);
         
         build/audio/sequences/Lesson1.mid.o(.rodata*);

@@ -53,7 +53,7 @@ void func_0804ae6c(struct SysExcMsgHandler *SysExcMsgHandler, u32 speed) {
                 temp = SysExcMsgHandler->unk5;
             }
             temp += SysExcMsgHandler->unk4;
-            temp = D_08a86140[temp & 0xff] >> 1;
+            temp = gMidiSineTable[temp & 0xff] >> 1;
             if (temp > 0x7f) temp = 0x7f;
             if (temp < -0x80) temp = -0x80;
             if (SysExcMsgHandler->unk6 == 2) {
