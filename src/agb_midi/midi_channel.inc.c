@@ -170,7 +170,7 @@ u32 func_0804a018(SoundChannel *sndChnl) {
     s32 what;
 
     // Do not calculate pitch envelope for unpitched instruments.
-    if (sndChnl->instrument.pcm->header.type == INSTRUMENT_PCM_FIXED) return 0;
+    if (sndChnl->instrument.pcm->type == INSTRUMENT_PCM_FIXED) return 0;
 
     midiBus = sndChnl->midiBus;
     mChnl = sndChnl->midiChannel;

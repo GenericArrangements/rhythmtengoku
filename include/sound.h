@@ -61,14 +61,21 @@ struct WaveData {
 	const u32 *waveform;
 };
 
-struct InstrumentHeader {
-	u8 type;
-	u8 unk1;
-	u16 unk2;
+union Instrument {
+    const u8 *type;
+    const struct InstrumentPCM *pcm;
+    const struct InstrumentPSG *psg;
+    const struct InstrumentSubRhythm *rhy;
+    const struct InstrumentSubSplit *spl;
 };
 
+typedef union Instrument InstrumentBank[];
+
 struct InstrumentPCM {
-	struct InstrumentHeader header;
+	u8 type;
+	u8 key:7;
+    u8 distort:1;
+	s16 panning;
 	const struct WaveData *sample;
 	s32 initial;
 	s32 sustain;
@@ -79,7 +86,9 @@ struct InstrumentPCM {
 };
 
 struct InstrumentPSG {
-	struct InstrumentHeader header;
+	u8 type;
+	u8 key;
+	s16 panning;
 	const u32 *wavetable;
 	s32 initial;
 	s32 sustain;
@@ -87,31 +96,25 @@ struct InstrumentPSG {
 	s32 decay;
 	s32 fade;
 	s32 release;
-	u8 channel;
-	u8 unk21;
-	u8 unk22;
+	u32 channel:2;
+	u32 length:8;
+	u32 sweep:7;
+    u32 dutyTone:2;
+    u32 dutyNoise:13;
 };
 
 struct InstrumentSubRhythm {
-	struct InstrumentHeader header;
-	void *subbank;
+	u32 type:8;
+	u32 total:24;
+	const InstrumentBank *subbank;
 };
 
 struct InstrumentSubSplit {
-	struct InstrumentHeader header;
-	void *keySplitTable;
-	void *subbank;
+    u32 type:8;
+	u32 total:24;
+	const u8 *keySplitTable;
+	const InstrumentBank *subbank;
 };
-
-union Instrument {
-    const u8 *type;
-    const struct InstrumentPCM *pcm;
-    const struct InstrumentPSG *psg;
-    const struct InstrumentSubRhythm *rhy;
-    const struct InstrumentSubSplit *spl;
-};
-
-typedef union Instrument InstrumentBank[];
 
 typedef const u8 MidiSeq;
 typedef MidiSeq *MidiStream;
