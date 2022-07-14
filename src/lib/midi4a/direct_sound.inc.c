@@ -118,7 +118,7 @@ void func_08049144(void) {
 
 
 // [func_0804930c] SAMPLE READER - Initialise Channel
-void func_0804930c(u32 id, struct WaveData *sample) {
+void func_0804930c(u32 id, const struct WaveData *sample) {
     DmaSampleReader *reader = &D_03005b88[id];
     u32 keySampleRate;
     u32 keyFreq;

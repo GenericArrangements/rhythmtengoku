@@ -98,7 +98,7 @@ extern void func_08049144(void); // [func_08049144] INTERRUPT_DMA2
 
   // // //  SAMPLE READER OPERATIONS  // // //
 
-extern void func_0804930c(u32, struct WaveData *); // [func_0804930c] SAMPLE READER - Initialise Channel
+extern void func_0804930c(u32, const struct WaveData *); // [func_0804930c] SAMPLE READER - Initialise Channel
 extern void func_08049394(u32); // [func_08049394] SAMPLE READER - Reset Channel
 extern void func_080493b0(u32); // [func_080493b0] SAMPLE READER - Close Channel
 extern void func_080493c8(u32, u32, u32); // [func_080493c8] SAMPLE READER - Set Panning

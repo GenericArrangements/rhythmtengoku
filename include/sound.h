@@ -348,17 +348,16 @@ typedef struct SoundChannel {
     u32 velocity:7; // MIDI Velocity
     u32 frequency:17;
     union {
-        struct InstrumentPCM *pcm;
-        struct InstrumentPSG *psg;
+        const struct InstrumentPCM *pcm;
+        const struct InstrumentPSG *psg;
     } instrument;
     MidiBus *midiBus;
     MidiChannel *midiChannel;
     u16 unk10;
     u16 unk12;
     s16 unk14;
-    u8 unk16;
-    u8 unk17_b0:7;
-    u8 unk17_b7:1;
+    u16 priority:15;
+    u16 unk17_b7:1;
     s16 panning;
     struct BufferADSR {
         u32 stage:8;
