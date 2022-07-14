@@ -1,20 +1,20 @@
 #include "global.h"
 #include "sound.h"
-#include "agb_midi.h"
+#include "midi4a.h"
 
 asm(".include \"include/gba.inc\"");//Temporary
 
-#include "agb_midi/direct_sound.inc.c"
+#include "midi4a/direct_sound.inc.c"
 
-#include "agb_midi/midi_channel.inc.c"
+#include "midi4a/midi_channel.inc.c"
 
-#include "agb_midi/sys_exc_message.inc.c"
+#include "midi4a/sys_exc_message.inc.c"
 
-#include "agb_midi/psg_channel.inc.c"
+#include "midi4a/psg_channel.inc.c"
 
-#include "agb_midi/song_player.inc.c"
+#include "midi4a/song_player.inc.c"
 
-#include "agb_midi/update.inc.c"
+#include "midi4a/update.inc.c"
 
 // [func_0804c35c] Initialise Sound Players
 void func_0804c35c(SoundPlayer *channel, MidiBus *mChnlBus, u32 nTracksMax, MidiReader *midiReader, u32 type) {
@@ -74,9 +74,9 @@ void func_0804c3c0(SoundPlayer *channel, MidiReader *mTrkReader, u32 nTracksMax,
     D_030015a6 = 0;
 }
 
-#include "asm/agb_midi/asm_0804c4bc.s"
+#include "asm/midi4a/asm_0804c4bc.s"
 
-#include "asm/agb_midi/asm_0804c508.s"
+#include "asm/midi4a/asm_0804c508.s"
 
 // [func_0804c6c8] ?? (something about midi channels and notes and a midi channel bus that doesn't exist after startup?)
 void func_0804c6c8(void) {

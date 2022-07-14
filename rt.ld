@@ -51,7 +51,7 @@ SECTIONS {
         build/src/scenes.c.o(.text);
 		build/src/code_08047e50.c.o(.text);
         build/bin/bindata_080482e0.bin.o(.rodata*); /* More ARM assembly */
-        build/src/agb_midi.c.o(.text);
+        build/src/lib/midi4a.c.o(.text);
         build/asm/libagbsyscall.s.o(.text);
         build/src/lib_0804c870.c.o(.text);
         build/bin/bindata_0804e418.bin.o(.rodata*); /* More ARM assembly */
@@ -1050,7 +1050,8 @@ SECTIONS {
         build/data/beatscript_data_089ce344.c.o(.rodata*);
         build/bin/bindata_089cea24.bin.o(.rodata*);
         build/bin/bindata_089d3984.bin.o(.rodata*);
-        build/src/agb_midi_tables.c.o(.rodata*);
+
+        build/src/lib/midi4a_tables.c.o(.rodata*);
         build/audio/keysplit_tables.c.o(.rodata*);
         build/audio/psg_wave_samples/sine.psg.o(.rodata*);
         build/audio/psg_wave_samples/triangle.psg.o(.rodata*);
@@ -1059,7 +1060,8 @@ SECTIONS {
         build/audio/psg_wave_samples/pulse_12_5.psg.o(.rodata*);
         build/audio/psg_wave_samples/pulse_25.psg.o(.rodata*);
         build/audio/psg_wave_samples/pulse_50.psg.o(.rodata*);
-        build/audio/audio_data.c.o(.rodata*);
+        build/audio/instruments.c.o(.rodata*);
+        build/audio/songs.c.o(.rodata*);
         build/bin/bindata_08a9e8e0.bin.o(.rodata*);
         build/bin/bindata_08aa06f4.bin.o(.rodata*);
         build/bin/bindata_08aa4318.bin.o(.rodata*);

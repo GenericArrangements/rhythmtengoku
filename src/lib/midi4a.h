@@ -2,7 +2,7 @@
 
 #include "global.h"
 #include "sound.h"
-#include "src/agb_midi_internal.h"
+#include "midi4a_internal.h"
 
   // // // // // // // // // // // // // // // // // // // //
 

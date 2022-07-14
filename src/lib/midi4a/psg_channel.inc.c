@@ -44,7 +44,7 @@ u32 func_0804afd8(u32 vol) {
 }
 
 // [func_0804aff0] Update PSG Channel
-#include "asm/agb_midi/asm_0804aff0.s"
+#include "asm/midi4a/asm_0804aff0.s"
 
 // [func_0804b2c4] PSG CHANNEL - Update All
 void func_0804b2c4(void) {

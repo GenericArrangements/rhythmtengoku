@@ -40,6 +40,7 @@ endif
 TARGET		   := rhythmtengoku
 BUILD		   := build
 SOURCES		   := src
+LIB_SRC	       := $(SOURCES)/lib
 ASM            := asm
 INCLUDES	   := include
 DATA		   := data
@@ -48,7 +49,7 @@ AUDIO		   := audio
 MUSIC		   := $(AUDIO)/sequences
 SFX            := $(AUDIO)/samples
 PSG_WAVE       := $(AUDIO)/psg_wave_samples
-BUILD_DIRS     := $(BUILD) $(BUILD)/$(DATA) $(BUILD)/$(ASM) $(BUILD)/$(SOURCES) $(BUILD)/$(BIN) $(BUILD)/$(MUSIC) $(BUILD)/$(SFX) $(BUILD)/$(PSG_WAVE)
+BUILD_DIRS     := $(BUILD) $(BUILD)/$(DATA) $(BUILD)/$(ASM) $(BUILD)/$(SOURCES) $(BUILD)/$(LIB_SRC) $(BUILD)/$(BIN) $(BUILD)/$(MUSIC) $(BUILD)/$(SFX) $(BUILD)/$(PSG_WAVE)
 LD_SCRIPT      := rt.ld
 UNDEFINED_SYMS := undefined_syms.ld
 
@@ -91,7 +92,7 @@ UNDEFINED_SYMS := undefined_syms.ld
 
 export OUTPUT	:=	$(BUILD)/$(TARGET)
 
-CFILES		:=	$(foreach dir,$(SOURCES),$(wildcard $(dir)/*.c))  $(foreach dir,$(AUDIO),$(wildcard $(dir)/*.c))  $(foreach dir,$(DATA),$(wildcard $(dir)/*.c))
+CFILES		:=	$(foreach dir,$(SOURCES),$(wildcard $(dir)/*.c))  $(foreach dir,$(LIB_SRC),$(wildcard $(dir)/*.c))  $(foreach dir,$(AUDIO),$(wildcard $(dir)/*.c))  $(foreach dir,$(DATA),$(wildcard $(dir)/*.c))
 CPPFILES	:=	$(foreach dir,$(SOURCES),$(wildcard $(dir)/*.cpp))
 SFILES		:=	$(foreach dir,$(ASM),$(wildcard $(dir)/*.s)) $(foreach dir,$(DATA),$(wildcard $(dir)/*.s))
 BINFILES	:=	$(foreach dir,$(BIN),$(wildcard $(dir)/*.bin)) $(foreach dir,$(MUSIC),$(wildcard $(dir)/*.mid)) $(foreach dir,$(PSG_WAVE),$(wildcard $(dir)/*.psg))

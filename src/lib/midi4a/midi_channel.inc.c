@@ -2,7 +2,7 @@
 
 
 // [func_08049c34] MIDI CHANNEL - Update Modulation
-#include "asm/agb_midi/asm_08049c34.s"
+#include "asm/midi4a/asm_08049c34.s"
 
 // [func_08049d08] MIDI BUS - Update Modulation
 void func_08049d08(MidiBus *midiBus) {
@@ -458,7 +458,7 @@ s32 func_0804a48c(void) {
     return id;
 }
 
-#include "asm/agb_midi/asm_0804a4e0.s"
+#include "asm/midi4a/asm_0804a4e0.s"
 
 // [func_0804a5b4] SOUND CHANNEL - 'Note Off' Event
 void func_0804a5b4(MidiBus *midiBus, u32 id, u8 key) {
@@ -529,7 +529,7 @@ u32 func_0804a690(MidiBus *midiBus, u32 key) {
 }
 
 // [func_0804a6b0] SOUND CHANNEL - 'Note On' Event
-#include "asm/agb_midi/asm_0804a6b0.s"
+#include "asm/midi4a/asm_0804a6b0.s"
 
 
   //  //  //  //   MIDI CHANNEL OPERATIONS   //  //  //  //

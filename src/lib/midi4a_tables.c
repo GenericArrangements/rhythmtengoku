@@ -1,6 +1,6 @@
 #include "global.h"
 #include "sound.h"
-#include "agb_midi_internal.h"
+#include "midi4a_internal.h"
 
 // Convert MIDI Note values to standard frequency values.
 // D_08a86008

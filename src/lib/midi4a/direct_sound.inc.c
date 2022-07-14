@@ -190,9 +190,9 @@ void func_08049470(u32 id, u32 arg1) {
   //  //  //  //   ??? OPERATIONS   //  //  //  //
 
 
-#include "asm/agb_midi/asm_08049490.s"
+#include "asm/midi4a/asm_08049490.s"
 
-#include "asm/agb_midi/asm_080497f8.s"
+#include "asm/midi4a/asm_080497f8.s"
 
 // [func_08049ad8] Initialise(?) REG_DMA1CNT & REG_DMA2CNT
 void func_08049ad8(void) {
