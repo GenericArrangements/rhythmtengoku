@@ -82,10 +82,9 @@ extern u16 D_030064c4; // ?? (init. = 1)
 extern u16 gMidiTuningTable[]; // MIDI Note to Frequency Table (A4 = 440Hz)
 extern u32 gStepFreqTable[]; // Semitones to Frequency Table ((2^(p/12) - 1) << 10)
 extern s16 gMidiSineTable[]; // Sine Table (init = 0; size = 0x100; max = 0x100; min = -0x100)
-// extern s16 D_08a86340[]; // Cosine Table (init = 0x100; size = 0x100; max = 0x100; min = -0x100)
-extern InstrumentBank *instrumentBanks[]; // Instrument Bank Index
 extern char gMidiLoopStartSym[]; // MIDI "Loop Start" Marker: '['
 extern char gMidiLoopEndSym[]; // MIDI "Loop End" Marker: ']'
+extern const InstrumentBank *instrumentBanks[]; // Instrument Bank Index
 
 extern u32 __udivmoddi4(u64, u64);
 
@@ -99,7 +98,7 @@ extern void func_08049144(void); // [func_08049144] INTERRUPT_DMA2
 
   // // //  SAMPLE READER OPERATIONS  // // //
 
-extern void func_0804930c(u32, struct SampleInfo *); // [func_0804930c] SAMPLE READER - Initialise Channel
+extern void func_0804930c(u32, struct WaveData *); // [func_0804930c] SAMPLE READER - Initialise Channel
 extern void func_08049394(u32); // [func_08049394] SAMPLE READER - Reset Channel
 extern void func_080493b0(u32); // [func_080493b0] SAMPLE READER - Close Channel
 extern void func_080493c8(u32, u32, u32); // [func_080493c8] SAMPLE READER - Set Panning
@@ -107,13 +106,13 @@ extern void func_080493e4(u32, u32); // [func_080493e4] SAMPLE READER - Set Volu
 extern void func_080493f4(u32, u32); // [func_080493f4] SAMPLE READER - Set Pitch Envelope
 extern void func_08049450(u32, u32); // [func_08049450] SAMPLE READER - Set unk0_b2
 extern void func_08049470(u32, u32); // [func_08049470] SAMPLE READER - Set unk0_b3
+extern void func_08049490(u32, u32, u32, u32 *, u32, u32 *, u16, DmaSampleReader *); // [func_08049490] SAMPLE READER - Main Init.
+// extern ? func_080497f8(?); // [func_080497f8] SAMPLE READER - Main Update
+extern void func_08049ad8(void); // [func_08049ad8] Initialise(?) REG_DMA1CNT & REG_DMA2CNT
 
   // // //  ??? OPERATIONS  // // //
 
-extern void func_08049490(u32, u32, u32, u32 *, u32, u32 *, u16, DmaSampleReader *); // [func_08049490] Initialise... a lot...
-// extern ? func_080497f8(?);
-extern void func_08049ad8(void); // [func_08049ad8] Initialise(?) REG_DMA1CNT & REG_DMA2CNT
-extern void func_08049b34(u32, u32, u32, u32); // [func_08049b34] ??
+extern void func_08049b34(u32, u32, u32, u32); // [func_08049b34] Set Reverb Controllers
 extern u32  func_08049b5c(u32); // [func_08049b5c] SAMPLE READER - Check If Active
 extern void func_08049b70(u32); // [func_08049b70] (SUB) MIDI Controller 4A - ??
 extern void func_08049b8c(u8); // [func_08049b8c] MIDI Controller 4D - ??

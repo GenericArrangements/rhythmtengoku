@@ -52,7 +52,7 @@
 
 
 
-struct SampleInfo {
+struct WaveData {
 	u32 length;
 	u32 sampleRate;
 	u32 baseKey;
@@ -69,7 +69,7 @@ struct InstrumentHeader {
 
 struct InstrumentPCM {
 	struct InstrumentHeader header;
-	const struct SampleInfo *sample;
+	const struct WaveData *sample;
 	s32 initial;
 	s32 sustain;
 	s32 attack;
@@ -99,24 +99,32 @@ struct InstrumentSubRhythm {
 
 struct InstrumentSubSplit {
 	struct InstrumentHeader header;
-	void *unk4;
+	void *keySplitTable;
 	void *subbank;
 };
 
-typedef const struct InstrumentHeader *InstrumentBank[];
+union Instrument {
+    const u8 *type;
+    const struct InstrumentPCM *pcm;
+    const struct InstrumentPSG *psg;
+    const struct InstrumentSubRhythm *rhy;
+    const struct InstrumentSubSplit *spl;
+};
+
+typedef union Instrument InstrumentBank[];
 
 typedef const u8 MidiSeq;
 typedef MidiSeq *MidiStream;
 
 typedef struct SongInfo {
     MidiSeq *midiSequence;
-    u32 unk4f1:5;
+    u32 soundPlayer:5;
     u32 soundBank:10;
     u32 volume:7;
     u32 priority:10;
     u32 unk8;
     const char *title;
-    u32 soundPlayerIndex;
+    u32 songNum;
 } SongInfo;
 
  // // // RAM Structures // // //

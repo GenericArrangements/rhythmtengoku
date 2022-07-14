@@ -36,7 +36,7 @@ void func_08049144(void) {
     if (!flag) return;
 
     switch (D_030055f4) {
-        case 0:
+        case DIRECTSOUND_MODE_STEREO:
             REG_DMA1CNT_H = 0;
             REG_DMA2CNT_H = 0;
             REG_DMA1SAD = (u32) &D_0300563c[D_030064a0];
@@ -65,7 +65,7 @@ void func_08049144(void) {
             dummy = 0;
             dummy = 0;
             break;
-        case 1:
+        case DIRECTSOUND_MODE_MONO1:
             REG_DMA2CNT_H = 0;
             REG_DMA2SAD = (u32) &D_0300563c[D_030064a0];
             REG_DMA2CNT_H = (
@@ -81,7 +81,7 @@ void func_08049144(void) {
             dummy = 0;
             dummy = 0;
             break;
-        case 2:
+        case DIRECTSOUND_MODE_MONO2:
             REG_DMA1CNT_H = 0;
             REG_DMA2CNT_H = 0;
             REG_DMA1SAD = (u32) &D_0300563c[D_030064a0];
@@ -118,7 +118,7 @@ void func_08049144(void) {
 
 
 // [func_0804930c] SAMPLE READER - Initialise Channel
-void func_0804930c(u32 id, struct SampleInfo *sample) {
+void func_0804930c(u32 id, struct WaveData *sample) {
     DmaSampleReader *reader = &D_03005b88[id];
     u32 keySampleRate;
     u32 keyFreq;
@@ -199,7 +199,7 @@ void func_08049ad8(void) {
     volatile u32 dummy;
 
     D_030064c4 = 0;
-    if (D_030055f4 != 1) {
+    if (D_030055f4 != DIRECTSOUND_MODE_MONO1) {
         REG_DMA1CNT = ((DMACNT_ENABLE | DMACNT_SIZE | DMACNT_DEST_INC_TYPE_UNCHANGED) << 16) + (16 / 4);
         dummy = 0;
         dummy = 1;
@@ -249,12 +249,12 @@ void func_08049be4(void) {
 }
 
 // [func_08049bfc] ??
-void func_08049bfc(u32 arg0, u32 arg1, u32 arg2) {
-    if (arg0 != FALSE) arg0 = TRUE;
-    if (D_03005b44 != arg0) {
+void func_08049bfc(u32 enableFilter, u32 eq, u32 gain) {
+    if (enableFilter != FALSE) enableFilter = TRUE;
+    if (D_03005b44 != enableFilter) {
         func_08049bac();
-        D_03005b44 = arg0;
-        D_03005620[0] = arg1;
-        D_03005b28 = arg2;
+        D_03005b44 = enableFilter;
+        D_03005620[0] = eq;
+        D_03005b28 = gain;
     }
 }

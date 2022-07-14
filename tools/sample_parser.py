@@ -30,7 +30,7 @@ def write_sfx_entry(fileLines, sfxEntry):
         loopEnd = 0
     
     fileLines.append("extern const u32 %s_pcm;\n" % (sfxEntry["sample"].split(".")[0]))
-    fileLines.append("const struct SampleInfo %sSampleInfo = {\n" % (sfxEntry["sample"].split(".")[0]))
+    fileLines.append("const struct WaveData %sWaveData = {\n" % (sfxEntry["sample"].split(".")[0]))
     fileLines.append("    /* Length */      %d,\n" % (wavFile.getnframes()-1))
     fileLines.append("    /* Sample Rate */ %d,\n" % (wavFile.getframerate()))
     fileLines.append("    /* Pitch */       %d,\n" % pitchNum)

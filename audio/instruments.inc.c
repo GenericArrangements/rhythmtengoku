@@ -1,14 +1,14 @@
 #include "global.h"
 #include "sound.h"
 
-extern const struct SampleInfo sfx_001SampleInfo;
-const struct InstrumentPCM instrumentPCMData1 = {
+extern const struct WaveData sfx_001WaveData;
+const struct InstrumentPCM instrumentPCM1 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_001SampleInfo,
+    /* Sample */ &sfx_001WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0059cc48,
     /* unk10  */ 0x00600000,
@@ -17,14 +17,14 @@ const struct InstrumentPCM instrumentPCMData1 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_002SampleInfo;
-const struct InstrumentPCM instrumentPCMData2 = {
+extern const struct WaveData sfx_002WaveData;
+const struct InstrumentPCM instrumentPCM2 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_002SampleInfo,
+    /* Sample */ &sfx_002WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -33,14 +33,14 @@ const struct InstrumentPCM instrumentPCMData2 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_002SampleInfo;
-const struct InstrumentPCM instrumentPCMData3 = {
+extern const struct WaveData sfx_002WaveData;
+const struct InstrumentPCM instrumentPCM3 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_002SampleInfo,
+    /* Sample */ &sfx_002WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00402433,
     /* unk10  */ 0x00600000,
@@ -49,14 +49,14 @@ const struct InstrumentPCM instrumentPCMData3 = {
     /* unk1C  */ 0x00055552,
 };
 
-extern const struct SampleInfo sfx_003SampleInfo;
-const struct InstrumentPCM instrumentPCMData4 = {
+extern const struct WaveData sfx_003WaveData;
+const struct InstrumentPCM instrumentPCM4 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_003SampleInfo,
+    /* Sample */ &sfx_003WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -65,14 +65,14 @@ const struct InstrumentPCM instrumentPCMData4 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_004SampleInfo;
-const struct InstrumentPCM instrumentPCMData5 = {
+extern const struct WaveData sfx_004WaveData;
+const struct InstrumentPCM instrumentPCM5 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_004SampleInfo,
+    /* Sample */ &sfx_004WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -81,14 +81,14 @@ const struct InstrumentPCM instrumentPCMData5 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_005SampleInfo;
-const struct InstrumentPCM instrumentPCMData6 = {
+extern const struct WaveData sfx_005WaveData;
+const struct InstrumentPCM instrumentPCM6 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_005SampleInfo,
+    /* Sample */ &sfx_005WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -97,14 +97,14 @@ const struct InstrumentPCM instrumentPCMData6 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_006SampleInfo;
-const struct InstrumentPCM instrumentPCMData7 = {
+extern const struct WaveData sfx_006WaveData;
+const struct InstrumentPCM instrumentPCM7 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_006SampleInfo,
+    /* Sample */ &sfx_006WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -113,14 +113,14 @@ const struct InstrumentPCM instrumentPCMData7 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_007SampleInfo;
-const struct InstrumentPCM instrumentPCMData8 = {
+extern const struct WaveData sfx_007WaveData;
+const struct InstrumentPCM instrumentPCM8 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_007SampleInfo,
+    /* Sample */ &sfx_007WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -129,14 +129,14 @@ const struct InstrumentPCM instrumentPCMData8 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_008SampleInfo;
-const struct InstrumentPCM instrumentPCMData9 = {
+extern const struct WaveData sfx_008WaveData;
+const struct InstrumentPCM instrumentPCM9 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_008SampleInfo,
+    /* Sample */ &sfx_008WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -145,14 +145,14 @@ const struct InstrumentPCM instrumentPCMData9 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_009SampleInfo;
-const struct InstrumentPCM instrumentPCMData10 = {
+extern const struct WaveData sfx_009WaveData;
+const struct InstrumentPCM instrumentPCM10 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_009SampleInfo,
+    /* Sample */ &sfx_009WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x004d9364,
@@ -161,7 +161,7 @@ const struct InstrumentPCM instrumentPCMData10 = {
     /* unk1C  */ 0x00055552,
 };
 
-const struct InstrumentSubSplit instrumentSubbankMultiKeyData11 = {
+const struct InstrumentSubSplit instrumentSubSplit11 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -171,14 +171,14 @@ const struct InstrumentSubSplit instrumentSubbankMultiKeyData11 = {
     /* Sub-bank */ (void *)0x08a98a0c, // POINTER
 };
 
-extern const struct SampleInfo sfx_010SampleInfo;
-const struct InstrumentPCM instrumentPCMData12 = {
+extern const struct WaveData sfx_010WaveData;
+const struct InstrumentPCM instrumentPCM12 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_010SampleInfo,
+    /* Sample */ &sfx_010WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0066a052,
     /* unk10  */ 0x00600000,
@@ -187,14 +187,14 @@ const struct InstrumentPCM instrumentPCMData12 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_011SampleInfo;
-const struct InstrumentPCM instrumentPCMData13 = {
+extern const struct WaveData sfx_011WaveData;
+const struct InstrumentPCM instrumentPCM13 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_011SampleInfo,
+    /* Sample */ &sfx_011WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -203,7 +203,7 @@ const struct InstrumentPCM instrumentPCMData13 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData14 = {
+const struct InstrumentSubRhythm instrumentSubRhythm14 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -212,7 +212,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData14 = {
     /* Sub-bank */ (void *)0x08a998e4, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData15 = {
+const struct InstrumentSubRhythm instrumentSubRhythm15 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -221,7 +221,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData15 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData16 = {
+const struct InstrumentSubRhythm instrumentSubRhythm16 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -230,14 +230,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData16 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_012SampleInfo;
-const struct InstrumentPCM instrumentPCMData17 = {
+extern const struct WaveData sfx_012WaveData;
+const struct InstrumentPCM instrumentPCM17 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_012SampleInfo,
+    /* Sample */ &sfx_012WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -246,14 +246,14 @@ const struct InstrumentPCM instrumentPCMData17 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_013SampleInfo;
-const struct InstrumentPCM instrumentPCMData18 = {
+extern const struct WaveData sfx_013WaveData;
+const struct InstrumentPCM instrumentPCM18 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_013SampleInfo,
+    /* Sample */ &sfx_013WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -262,14 +262,14 @@ const struct InstrumentPCM instrumentPCMData18 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_014SampleInfo;
-const struct InstrumentPCM instrumentPCMData19 = {
+extern const struct WaveData sfx_014WaveData;
+const struct InstrumentPCM instrumentPCM19 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_014SampleInfo,
+    /* Sample */ &sfx_014WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -278,14 +278,14 @@ const struct InstrumentPCM instrumentPCMData19 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_015SampleInfo;
-const struct InstrumentPCM instrumentPCMData20 = {
+extern const struct WaveData sfx_015WaveData;
+const struct InstrumentPCM instrumentPCM20 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_015SampleInfo,
+    /* Sample */ &sfx_015WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -294,14 +294,14 @@ const struct InstrumentPCM instrumentPCMData20 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_016SampleInfo;
-const struct InstrumentPCM instrumentPCMData21 = {
+extern const struct WaveData sfx_016WaveData;
+const struct InstrumentPCM instrumentPCM21 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_016SampleInfo,
+    /* Sample */ &sfx_016WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -310,14 +310,14 @@ const struct InstrumentPCM instrumentPCMData21 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_017SampleInfo;
-const struct InstrumentPCM instrumentPCMData22 = {
+extern const struct WaveData sfx_017WaveData;
+const struct InstrumentPCM instrumentPCM22 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_017SampleInfo,
+    /* Sample */ &sfx_017WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -326,14 +326,14 @@ const struct InstrumentPCM instrumentPCMData22 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_018SampleInfo;
-const struct InstrumentPCM instrumentPCMData23 = {
+extern const struct WaveData sfx_018WaveData;
+const struct InstrumentPCM instrumentPCM23 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_018SampleInfo,
+    /* Sample */ &sfx_018WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -342,14 +342,14 @@ const struct InstrumentPCM instrumentPCMData23 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_019SampleInfo;
-const struct InstrumentPCM instrumentPCMData24 = {
+extern const struct WaveData sfx_019WaveData;
+const struct InstrumentPCM instrumentPCM24 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_019SampleInfo,
+    /* Sample */ &sfx_019WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -358,14 +358,14 @@ const struct InstrumentPCM instrumentPCMData24 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_020SampleInfo;
-const struct InstrumentPCM instrumentPCMData25 = {
+extern const struct WaveData sfx_020WaveData;
+const struct InstrumentPCM instrumentPCM25 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_020SampleInfo,
+    /* Sample */ &sfx_020WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -374,14 +374,14 @@ const struct InstrumentPCM instrumentPCMData25 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_021SampleInfo;
-const struct InstrumentPCM instrumentPCMData26 = {
+extern const struct WaveData sfx_021WaveData;
+const struct InstrumentPCM instrumentPCM26 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_021SampleInfo,
+    /* Sample */ &sfx_021WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -390,14 +390,14 @@ const struct InstrumentPCM instrumentPCMData26 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_022SampleInfo;
-const struct InstrumentPCM instrumentPCMData27 = {
+extern const struct WaveData sfx_022WaveData;
+const struct InstrumentPCM instrumentPCM27 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_022SampleInfo,
+    /* Sample */ &sfx_022WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x003a2e8b,
@@ -406,14 +406,14 @@ const struct InstrumentPCM instrumentPCMData27 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_023SampleInfo;
-const struct InstrumentPCM instrumentPCMData28 = {
+extern const struct WaveData sfx_023WaveData;
+const struct InstrumentPCM instrumentPCM28 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_023SampleInfo,
+    /* Sample */ &sfx_023WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -422,14 +422,14 @@ const struct InstrumentPCM instrumentPCMData28 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_024SampleInfo;
-const struct InstrumentPCM instrumentPCMData29 = {
+extern const struct WaveData sfx_024WaveData;
+const struct InstrumentPCM instrumentPCM29 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_024SampleInfo,
+    /* Sample */ &sfx_024WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -438,14 +438,14 @@ const struct InstrumentPCM instrumentPCMData29 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_025SampleInfo;
-const struct InstrumentPCM instrumentPCMData30 = {
+extern const struct WaveData sfx_025WaveData;
+const struct InstrumentPCM instrumentPCM30 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_025SampleInfo,
+    /* Sample */ &sfx_025WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -454,14 +454,14 @@ const struct InstrumentPCM instrumentPCMData30 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_026SampleInfo;
-const struct InstrumentPCM instrumentPCMData31 = {
+extern const struct WaveData sfx_026WaveData;
+const struct InstrumentPCM instrumentPCM31 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_026SampleInfo,
+    /* Sample */ &sfx_026WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -470,14 +470,14 @@ const struct InstrumentPCM instrumentPCMData31 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_015SampleInfo;
-const struct InstrumentPCM instrumentPCMData32 = {
+extern const struct WaveData sfx_015WaveData;
+const struct InstrumentPCM instrumentPCM32 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_015SampleInfo,
+    /* Sample */ &sfx_015WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00307c1f,
@@ -486,14 +486,14 @@ const struct InstrumentPCM instrumentPCMData32 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_027SampleInfo;
-const struct InstrumentPCM instrumentPCMData33 = {
+extern const struct WaveData sfx_027WaveData;
+const struct InstrumentPCM instrumentPCM33 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_027SampleInfo,
+    /* Sample */ &sfx_027WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -502,14 +502,14 @@ const struct InstrumentPCM instrumentPCMData33 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_028SampleInfo;
-const struct InstrumentPCM instrumentPCMData34 = {
+extern const struct WaveData sfx_028WaveData;
+const struct InstrumentPCM instrumentPCM34 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_028SampleInfo,
+    /* Sample */ &sfx_028WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -518,14 +518,14 @@ const struct InstrumentPCM instrumentPCMData34 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_029SampleInfo;
-const struct InstrumentPCM instrumentPCMData35 = {
+extern const struct WaveData sfx_029WaveData;
+const struct InstrumentPCM instrumentPCM35 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_029SampleInfo,
+    /* Sample */ &sfx_029WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -534,14 +534,14 @@ const struct InstrumentPCM instrumentPCMData35 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_030SampleInfo;
-const struct InstrumentPCM instrumentPCMData36 = {
+extern const struct WaveData sfx_030WaveData;
+const struct InstrumentPCM instrumentPCM36 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_030SampleInfo,
+    /* Sample */ &sfx_030WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -550,7 +550,7 @@ const struct InstrumentPCM instrumentPCMData36 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentPSG instrumentPSGData37 = {
+const struct InstrumentPSG instrumentPSG37 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -568,14 +568,14 @@ const struct InstrumentPSG instrumentPSGData37 = {
     /* unk22        */ 0x2,
 };
 
-extern const struct SampleInfo sfx_031SampleInfo;
-const struct InstrumentPCM instrumentPCMData38 = {
+extern const struct WaveData sfx_031WaveData;
+const struct InstrumentPCM instrumentPCM38 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_031SampleInfo,
+    /* Sample */ &sfx_031WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -584,14 +584,14 @@ const struct InstrumentPCM instrumentPCMData38 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_032SampleInfo;
-const struct InstrumentPCM instrumentPCMData39 = {
+extern const struct WaveData sfx_032WaveData;
+const struct InstrumentPCM instrumentPCM39 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_032SampleInfo,
+    /* Sample */ &sfx_032WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -600,14 +600,14 @@ const struct InstrumentPCM instrumentPCMData39 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_033SampleInfo;
-const struct InstrumentPCM instrumentPCMData40 = {
+extern const struct WaveData sfx_033WaveData;
+const struct InstrumentPCM instrumentPCM40 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_033SampleInfo,
+    /* Sample */ &sfx_033WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -616,14 +616,14 @@ const struct InstrumentPCM instrumentPCMData40 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_034SampleInfo;
-const struct InstrumentPCM instrumentPCMData41 = {
+extern const struct WaveData sfx_034WaveData;
+const struct InstrumentPCM instrumentPCM41 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_034SampleInfo,
+    /* Sample */ &sfx_034WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -632,14 +632,14 @@ const struct InstrumentPCM instrumentPCMData41 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_035SampleInfo;
-const struct InstrumentPCM instrumentPCMData42 = {
+extern const struct WaveData sfx_035WaveData;
+const struct InstrumentPCM instrumentPCM42 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_035SampleInfo,
+    /* Sample */ &sfx_035WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -648,14 +648,14 @@ const struct InstrumentPCM instrumentPCMData42 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_036SampleInfo;
-const struct InstrumentPCM instrumentPCMData43 = {
+extern const struct WaveData sfx_036WaveData;
+const struct InstrumentPCM instrumentPCM43 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_036SampleInfo,
+    /* Sample */ &sfx_036WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -664,14 +664,14 @@ const struct InstrumentPCM instrumentPCMData43 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_037SampleInfo;
-const struct InstrumentPCM instrumentPCMData44 = {
+extern const struct WaveData sfx_037WaveData;
+const struct InstrumentPCM instrumentPCM44 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_037SampleInfo,
+    /* Sample */ &sfx_037WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -680,14 +680,14 @@ const struct InstrumentPCM instrumentPCMData44 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_038SampleInfo;
-const struct InstrumentPCM instrumentPCMData45 = {
+extern const struct WaveData sfx_038WaveData;
+const struct InstrumentPCM instrumentPCM45 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_038SampleInfo,
+    /* Sample */ &sfx_038WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -696,14 +696,14 @@ const struct InstrumentPCM instrumentPCMData45 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_039SampleInfo;
-const struct InstrumentPCM instrumentPCMData46 = {
+extern const struct WaveData sfx_039WaveData;
+const struct InstrumentPCM instrumentPCM46 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_039SampleInfo,
+    /* Sample */ &sfx_039WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -712,14 +712,14 @@ const struct InstrumentPCM instrumentPCMData46 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_040SampleInfo;
-const struct InstrumentPCM instrumentPCMData47 = {
+extern const struct WaveData sfx_040WaveData;
+const struct InstrumentPCM instrumentPCM47 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_040SampleInfo,
+    /* Sample */ &sfx_040WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -728,14 +728,14 @@ const struct InstrumentPCM instrumentPCMData47 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_041SampleInfo;
-const struct InstrumentPCM instrumentPCMData48 = {
+extern const struct WaveData sfx_041WaveData;
+const struct InstrumentPCM instrumentPCM48 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_041SampleInfo,
+    /* Sample */ &sfx_041WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0060364d,
     /* unk10  */ 0x00600000,
@@ -744,14 +744,14 @@ const struct InstrumentPCM instrumentPCMData48 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_015SampleInfo;
-const struct InstrumentPCM instrumentPCMData49 = {
+extern const struct WaveData sfx_015WaveData;
+const struct InstrumentPCM instrumentPCM49 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_015SampleInfo,
+    /* Sample */ &sfx_015WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00307c1f,
@@ -760,14 +760,14 @@ const struct InstrumentPCM instrumentPCMData49 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_042SampleInfo;
-const struct InstrumentPCM instrumentPCMData50 = {
+extern const struct WaveData sfx_042WaveData;
+const struct InstrumentPCM instrumentPCM50 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_042SampleInfo,
+    /* Sample */ &sfx_042WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -776,14 +776,14 @@ const struct InstrumentPCM instrumentPCMData50 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_043SampleInfo;
-const struct InstrumentPCM instrumentPCMData51 = {
+extern const struct WaveData sfx_043WaveData;
+const struct InstrumentPCM instrumentPCM51 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_043SampleInfo,
+    /* Sample */ &sfx_043WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -792,7 +792,7 @@ const struct InstrumentPCM instrumentPCMData51 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData52 = {
+const struct InstrumentSubRhythm instrumentSubRhythm52 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -801,7 +801,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData52 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData53 = {
+const struct InstrumentSubRhythm instrumentSubRhythm53 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -810,7 +810,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData53 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData54 = {
+const struct InstrumentSubRhythm instrumentSubRhythm54 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -819,7 +819,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData54 = {
     /* Sub-bank */ (void *)0x08a996e4, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData55 = {
+const struct InstrumentSubRhythm instrumentSubRhythm55 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -828,14 +828,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData55 = {
     /* Sub-bank */ (void *)0x08a99d3c, // POINTER
 };
 
-extern const struct SampleInfo sfx_044SampleInfo;
-const struct InstrumentPCM instrumentPCMData56 = {
+extern const struct WaveData sfx_044WaveData;
+const struct InstrumentPCM instrumentPCM56 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_044SampleInfo,
+    /* Sample */ &sfx_044WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -844,14 +844,14 @@ const struct InstrumentPCM instrumentPCMData56 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_045SampleInfo;
-const struct InstrumentPCM instrumentPCMData57 = {
+extern const struct WaveData sfx_045WaveData;
+const struct InstrumentPCM instrumentPCM57 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_045SampleInfo,
+    /* Sample */ &sfx_045WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -860,14 +860,14 @@ const struct InstrumentPCM instrumentPCMData57 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_046SampleInfo;
-const struct InstrumentPCM instrumentPCMData58 = {
+extern const struct WaveData sfx_046WaveData;
+const struct InstrumentPCM instrumentPCM58 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_046SampleInfo,
+    /* Sample */ &sfx_046WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -876,14 +876,14 @@ const struct InstrumentPCM instrumentPCMData58 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_047SampleInfo;
-const struct InstrumentPCM instrumentPCMData59 = {
+extern const struct WaveData sfx_047WaveData;
+const struct InstrumentPCM instrumentPCM59 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_047SampleInfo,
+    /* Sample */ &sfx_047WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -892,14 +892,14 @@ const struct InstrumentPCM instrumentPCMData59 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_048SampleInfo;
-const struct InstrumentPCM instrumentPCMData60 = {
+extern const struct WaveData sfx_048WaveData;
+const struct InstrumentPCM instrumentPCM60 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_048SampleInfo,
+    /* Sample */ &sfx_048WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -908,14 +908,14 @@ const struct InstrumentPCM instrumentPCMData60 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_049SampleInfo;
-const struct InstrumentPCM instrumentPCMData61 = {
+extern const struct WaveData sfx_049WaveData;
+const struct InstrumentPCM instrumentPCM61 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_049SampleInfo,
+    /* Sample */ &sfx_049WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -924,14 +924,14 @@ const struct InstrumentPCM instrumentPCMData61 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_050SampleInfo;
-const struct InstrumentPCM instrumentPCMData62 = {
+extern const struct WaveData sfx_050WaveData;
+const struct InstrumentPCM instrumentPCM62 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_050SampleInfo,
+    /* Sample */ &sfx_050WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -940,14 +940,14 @@ const struct InstrumentPCM instrumentPCMData62 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_051SampleInfo;
-const struct InstrumentPCM instrumentPCMData63 = {
+extern const struct WaveData sfx_051WaveData;
+const struct InstrumentPCM instrumentPCM63 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_051SampleInfo,
+    /* Sample */ &sfx_051WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -956,14 +956,14 @@ const struct InstrumentPCM instrumentPCMData63 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_052SampleInfo;
-const struct InstrumentPCM instrumentPCMData64 = {
+extern const struct WaveData sfx_052WaveData;
+const struct InstrumentPCM instrumentPCM64 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_052SampleInfo,
+    /* Sample */ &sfx_052WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -972,14 +972,14 @@ const struct InstrumentPCM instrumentPCMData64 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_053SampleInfo;
-const struct InstrumentPCM instrumentPCMData65 = {
+extern const struct WaveData sfx_053WaveData;
+const struct InstrumentPCM instrumentPCM65 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_053SampleInfo,
+    /* Sample */ &sfx_053WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -988,14 +988,14 @@ const struct InstrumentPCM instrumentPCMData65 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_054SampleInfo;
-const struct InstrumentPCM instrumentPCMData66 = {
+extern const struct WaveData sfx_054WaveData;
+const struct InstrumentPCM instrumentPCM66 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_054SampleInfo,
+    /* Sample */ &sfx_054WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1004,14 +1004,14 @@ const struct InstrumentPCM instrumentPCMData66 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_055SampleInfo;
-const struct InstrumentPCM instrumentPCMData67 = {
+extern const struct WaveData sfx_055WaveData;
+const struct InstrumentPCM instrumentPCM67 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_055SampleInfo,
+    /* Sample */ &sfx_055WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1020,14 +1020,14 @@ const struct InstrumentPCM instrumentPCMData67 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_056SampleInfo;
-const struct InstrumentPCM instrumentPCMData68 = {
+extern const struct WaveData sfx_056WaveData;
+const struct InstrumentPCM instrumentPCM68 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_056SampleInfo,
+    /* Sample */ &sfx_056WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1036,14 +1036,14 @@ const struct InstrumentPCM instrumentPCMData68 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_057SampleInfo;
-const struct InstrumentPCM instrumentPCMData69 = {
+extern const struct WaveData sfx_057WaveData;
+const struct InstrumentPCM instrumentPCM69 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_057SampleInfo,
+    /* Sample */ &sfx_057WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1052,7 +1052,7 @@ const struct InstrumentPCM instrumentPCMData69 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentPSG instrumentPSGData70 = {
+const struct InstrumentPSG instrumentPSG70 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -1070,14 +1070,14 @@ const struct InstrumentPSG instrumentPSGData70 = {
     /* unk22        */ 0x0,
 };
 
-extern const struct SampleInfo sfx_016SampleInfo;
-const struct InstrumentPCM instrumentPCMData71 = {
+extern const struct WaveData sfx_016WaveData;
+const struct InstrumentPCM instrumentPCM71 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_016SampleInfo,
+    /* Sample */ &sfx_016WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -1086,14 +1086,14 @@ const struct InstrumentPCM instrumentPCMData71 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_027SampleInfo;
-const struct InstrumentPCM instrumentPCMData72 = {
+extern const struct WaveData sfx_027WaveData;
+const struct InstrumentPCM instrumentPCM72 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_027SampleInfo,
+    /* Sample */ &sfx_027WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x003a2e8b,
@@ -1102,14 +1102,14 @@ const struct InstrumentPCM instrumentPCMData72 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_015SampleInfo;
-const struct InstrumentPCM instrumentPCMData73 = {
+extern const struct WaveData sfx_015WaveData;
+const struct InstrumentPCM instrumentPCM73 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_015SampleInfo,
+    /* Sample */ &sfx_015WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1118,14 +1118,14 @@ const struct InstrumentPCM instrumentPCMData73 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_058SampleInfo;
-const struct InstrumentPCM instrumentPCMData74 = {
+extern const struct WaveData sfx_058WaveData;
+const struct InstrumentPCM instrumentPCM74 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_058SampleInfo,
+    /* Sample */ &sfx_058WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -1134,14 +1134,14 @@ const struct InstrumentPCM instrumentPCMData74 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_059SampleInfo;
-const struct InstrumentPCM instrumentPCMData75 = {
+extern const struct WaveData sfx_059WaveData;
+const struct InstrumentPCM instrumentPCM75 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_059SampleInfo,
+    /* Sample */ &sfx_059WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1150,14 +1150,14 @@ const struct InstrumentPCM instrumentPCMData75 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_008SampleInfo;
-const struct InstrumentPCM instrumentPCMData76 = {
+extern const struct WaveData sfx_008WaveData;
+const struct InstrumentPCM instrumentPCM76 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_008SampleInfo,
+    /* Sample */ &sfx_008WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1166,14 +1166,14 @@ const struct InstrumentPCM instrumentPCMData76 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_015SampleInfo;
-const struct InstrumentPCM instrumentPCMData77 = {
+extern const struct WaveData sfx_015WaveData;
+const struct InstrumentPCM instrumentPCM77 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_015SampleInfo,
+    /* Sample */ &sfx_015WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x0009b26c,
@@ -1182,14 +1182,14 @@ const struct InstrumentPCM instrumentPCMData77 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_060SampleInfo;
-const struct InstrumentPCM instrumentPCMData78 = {
+extern const struct WaveData sfx_060WaveData;
+const struct InstrumentPCM instrumentPCM78 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_060SampleInfo,
+    /* Sample */ &sfx_060WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00402433,
     /* unk10  */ 0x00600000,
@@ -1198,14 +1198,14 @@ const struct InstrumentPCM instrumentPCMData78 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_061SampleInfo;
-const struct InstrumentPCM instrumentPCMData79 = {
+extern const struct WaveData sfx_061WaveData;
+const struct InstrumentPCM instrumentPCM79 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_061SampleInfo,
+    /* Sample */ &sfx_061WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -1214,14 +1214,14 @@ const struct InstrumentPCM instrumentPCMData79 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_062SampleInfo;
-const struct InstrumentPCM instrumentPCMData80 = {
+extern const struct WaveData sfx_062WaveData;
+const struct InstrumentPCM instrumentPCM80 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_062SampleInfo,
+    /* Sample */ &sfx_062WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -1230,7 +1230,7 @@ const struct InstrumentPCM instrumentPCMData80 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData81 = {
+const struct InstrumentSubRhythm instrumentSubRhythm81 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -1239,14 +1239,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData81 = {
     /* Sub-bank */ (void *)0x08a99d3c, // POINTER
 };
 
-extern const struct SampleInfo sfx_028SampleInfo;
-const struct InstrumentPCM instrumentPCMData82 = {
+extern const struct WaveData sfx_028WaveData;
+const struct InstrumentPCM instrumentPCM82 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_028SampleInfo,
+    /* Sample */ &sfx_028WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00402433,
     /* unk10  */ 0x00600000,
@@ -1255,14 +1255,14 @@ const struct InstrumentPCM instrumentPCMData82 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_028SampleInfo;
-const struct InstrumentPCM instrumentPCMData83 = {
+extern const struct WaveData sfx_028WaveData;
+const struct InstrumentPCM instrumentPCM83 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_028SampleInfo,
+    /* Sample */ &sfx_028WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -1271,14 +1271,14 @@ const struct InstrumentPCM instrumentPCMData83 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_060SampleInfo;
-const struct InstrumentPCM instrumentPCMData84 = {
+extern const struct WaveData sfx_060WaveData;
+const struct InstrumentPCM instrumentPCM84 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_060SampleInfo,
+    /* Sample */ &sfx_060WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00402433,
     /* unk10  */ 0x00600000,
@@ -1287,14 +1287,14 @@ const struct InstrumentPCM instrumentPCMData84 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_043SampleInfo;
-const struct InstrumentPCM instrumentPCMData85 = {
+extern const struct WaveData sfx_043WaveData;
+const struct InstrumentPCM instrumentPCM85 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_043SampleInfo,
+    /* Sample */ &sfx_043WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1303,14 +1303,14 @@ const struct InstrumentPCM instrumentPCMData85 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_027SampleInfo;
-const struct InstrumentPCM instrumentPCMData86 = {
+extern const struct WaveData sfx_027WaveData;
+const struct InstrumentPCM instrumentPCM86 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_027SampleInfo,
+    /* Sample */ &sfx_027WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -1319,14 +1319,14 @@ const struct InstrumentPCM instrumentPCMData86 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_058SampleInfo;
-const struct InstrumentPCM instrumentPCMData87 = {
+extern const struct WaveData sfx_058WaveData;
+const struct InstrumentPCM instrumentPCM87 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_058SampleInfo,
+    /* Sample */ &sfx_058WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -1335,14 +1335,14 @@ const struct InstrumentPCM instrumentPCMData87 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_008SampleInfo;
-const struct InstrumentPCM instrumentPCMData88 = {
+extern const struct WaveData sfx_008WaveData;
+const struct InstrumentPCM instrumentPCM88 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_008SampleInfo,
+    /* Sample */ &sfx_008WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1351,7 +1351,7 @@ const struct InstrumentPCM instrumentPCMData88 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentPSG instrumentPSGData89 = {
+const struct InstrumentPSG instrumentPSG89 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -1369,7 +1369,7 @@ const struct InstrumentPSG instrumentPSGData89 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData90 = {
+const struct InstrumentPSG instrumentPSG90 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -1387,14 +1387,14 @@ const struct InstrumentPSG instrumentPSGData90 = {
     /* unk22        */ 0x4,
 };
 
-extern const struct SampleInfo sfx_016SampleInfo;
-const struct InstrumentPCM instrumentPCMData91 = {
+extern const struct WaveData sfx_016WaveData;
+const struct InstrumentPCM instrumentPCM91 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_016SampleInfo,
+    /* Sample */ &sfx_016WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -1403,14 +1403,14 @@ const struct InstrumentPCM instrumentPCMData91 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_059SampleInfo;
-const struct InstrumentPCM instrumentPCMData92 = {
+extern const struct WaveData sfx_059WaveData;
+const struct InstrumentPCM instrumentPCM92 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_059SampleInfo,
+    /* Sample */ &sfx_059WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1419,7 +1419,7 @@ const struct InstrumentPCM instrumentPCMData92 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentPSG instrumentPSGData93 = {
+const struct InstrumentPSG instrumentPSG93 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -1437,14 +1437,14 @@ const struct InstrumentPSG instrumentPSGData93 = {
     /* unk22        */ 0x0,
 };
 
-extern const struct SampleInfo sfx_031SampleInfo;
-const struct InstrumentPCM instrumentPCMData94 = {
+extern const struct WaveData sfx_031WaveData;
+const struct InstrumentPCM instrumentPCM94 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_031SampleInfo,
+    /* Sample */ &sfx_031WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1453,14 +1453,14 @@ const struct InstrumentPCM instrumentPCMData94 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_041SampleInfo;
-const struct InstrumentPCM instrumentPCMData95 = {
+extern const struct WaveData sfx_041WaveData;
+const struct InstrumentPCM instrumentPCM95 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_041SampleInfo,
+    /* Sample */ &sfx_041WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0060364d,
     /* unk10  */ 0x00600000,
@@ -1469,14 +1469,14 @@ const struct InstrumentPCM instrumentPCMData95 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_063SampleInfo;
-const struct InstrumentPCM instrumentPCMData96 = {
+extern const struct WaveData sfx_063WaveData;
+const struct InstrumentPCM instrumentPCM96 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_063SampleInfo,
+    /* Sample */ &sfx_063WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1485,14 +1485,14 @@ const struct InstrumentPCM instrumentPCMData96 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_064SampleInfo;
-const struct InstrumentPCM instrumentPCMData97 = {
+extern const struct WaveData sfx_064WaveData;
+const struct InstrumentPCM instrumentPCM97 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_064SampleInfo,
+    /* Sample */ &sfx_064WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1501,14 +1501,14 @@ const struct InstrumentPCM instrumentPCMData97 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_065SampleInfo;
-const struct InstrumentPCM instrumentPCMData98 = {
+extern const struct WaveData sfx_065WaveData;
+const struct InstrumentPCM instrumentPCM98 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_065SampleInfo,
+    /* Sample */ &sfx_065WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1517,14 +1517,14 @@ const struct InstrumentPCM instrumentPCMData98 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_066SampleInfo;
-const struct InstrumentPCM instrumentPCMData99 = {
+extern const struct WaveData sfx_066WaveData;
+const struct InstrumentPCM instrumentPCM99 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_066SampleInfo,
+    /* Sample */ &sfx_066WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1533,14 +1533,14 @@ const struct InstrumentPCM instrumentPCMData99 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_067SampleInfo;
-const struct InstrumentPCM instrumentPCMData100 = {
+extern const struct WaveData sfx_067WaveData;
+const struct InstrumentPCM instrumentPCM100 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_067SampleInfo,
+    /* Sample */ &sfx_067WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1549,14 +1549,14 @@ const struct InstrumentPCM instrumentPCMData100 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_068SampleInfo;
-const struct InstrumentPCM instrumentPCMData101 = {
+extern const struct WaveData sfx_068WaveData;
+const struct InstrumentPCM instrumentPCM101 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_068SampleInfo,
+    /* Sample */ &sfx_068WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1565,14 +1565,14 @@ const struct InstrumentPCM instrumentPCMData101 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_069SampleInfo;
-const struct InstrumentPCM instrumentPCMData102 = {
+extern const struct WaveData sfx_069WaveData;
+const struct InstrumentPCM instrumentPCM102 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_069SampleInfo,
+    /* Sample */ &sfx_069WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1581,14 +1581,14 @@ const struct InstrumentPCM instrumentPCMData102 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_070SampleInfo;
-const struct InstrumentPCM instrumentPCMData103 = {
+extern const struct WaveData sfx_070WaveData;
+const struct InstrumentPCM instrumentPCM103 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_070SampleInfo,
+    /* Sample */ &sfx_070WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1597,14 +1597,14 @@ const struct InstrumentPCM instrumentPCMData103 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_071SampleInfo;
-const struct InstrumentPCM instrumentPCMData104 = {
+extern const struct WaveData sfx_071WaveData;
+const struct InstrumentPCM instrumentPCM104 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_071SampleInfo,
+    /* Sample */ &sfx_071WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1613,14 +1613,14 @@ const struct InstrumentPCM instrumentPCMData104 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_072SampleInfo;
-const struct InstrumentPCM instrumentPCMData105 = {
+extern const struct WaveData sfx_072WaveData;
+const struct InstrumentPCM instrumentPCM105 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_072SampleInfo,
+    /* Sample */ &sfx_072WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1629,14 +1629,14 @@ const struct InstrumentPCM instrumentPCMData105 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_073SampleInfo;
-const struct InstrumentPCM instrumentPCMData106 = {
+extern const struct WaveData sfx_073WaveData;
+const struct InstrumentPCM instrumentPCM106 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_073SampleInfo,
+    /* Sample */ &sfx_073WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1645,14 +1645,14 @@ const struct InstrumentPCM instrumentPCMData106 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_074SampleInfo;
-const struct InstrumentPCM instrumentPCMData107 = {
+extern const struct WaveData sfx_074WaveData;
+const struct InstrumentPCM instrumentPCM107 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_074SampleInfo,
+    /* Sample */ &sfx_074WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1661,14 +1661,14 @@ const struct InstrumentPCM instrumentPCMData107 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_075SampleInfo;
-const struct InstrumentPCM instrumentPCMData108 = {
+extern const struct WaveData sfx_075WaveData;
+const struct InstrumentPCM instrumentPCM108 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_075SampleInfo,
+    /* Sample */ &sfx_075WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1677,14 +1677,14 @@ const struct InstrumentPCM instrumentPCMData108 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_076SampleInfo;
-const struct InstrumentPCM instrumentPCMData109 = {
+extern const struct WaveData sfx_076WaveData;
+const struct InstrumentPCM instrumentPCM109 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_076SampleInfo,
+    /* Sample */ &sfx_076WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1693,14 +1693,14 @@ const struct InstrumentPCM instrumentPCMData109 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_077SampleInfo;
-const struct InstrumentPCM instrumentPCMData110 = {
+extern const struct WaveData sfx_077WaveData;
+const struct InstrumentPCM instrumentPCM110 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_077SampleInfo,
+    /* Sample */ &sfx_077WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1709,14 +1709,14 @@ const struct InstrumentPCM instrumentPCMData110 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_078SampleInfo;
-const struct InstrumentPCM instrumentPCMData111 = {
+extern const struct WaveData sfx_078WaveData;
+const struct InstrumentPCM instrumentPCM111 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_078SampleInfo,
+    /* Sample */ &sfx_078WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1725,14 +1725,14 @@ const struct InstrumentPCM instrumentPCMData111 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_079SampleInfo;
-const struct InstrumentPCM instrumentPCMData112 = {
+extern const struct WaveData sfx_079WaveData;
+const struct InstrumentPCM instrumentPCM112 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_079SampleInfo,
+    /* Sample */ &sfx_079WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1741,14 +1741,14 @@ const struct InstrumentPCM instrumentPCMData112 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_080SampleInfo;
-const struct InstrumentPCM instrumentPCMData113 = {
+extern const struct WaveData sfx_080WaveData;
+const struct InstrumentPCM instrumentPCM113 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_080SampleInfo,
+    /* Sample */ &sfx_080WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1757,14 +1757,14 @@ const struct InstrumentPCM instrumentPCMData113 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_081SampleInfo;
-const struct InstrumentPCM instrumentPCMData114 = {
+extern const struct WaveData sfx_081WaveData;
+const struct InstrumentPCM instrumentPCM114 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_081SampleInfo,
+    /* Sample */ &sfx_081WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1773,14 +1773,14 @@ const struct InstrumentPCM instrumentPCMData114 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_082SampleInfo;
-const struct InstrumentPCM instrumentPCMData115 = {
+extern const struct WaveData sfx_082WaveData;
+const struct InstrumentPCM instrumentPCM115 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_082SampleInfo,
+    /* Sample */ &sfx_082WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1789,14 +1789,14 @@ const struct InstrumentPCM instrumentPCMData115 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_083SampleInfo;
-const struct InstrumentPCM instrumentPCMData116 = {
+extern const struct WaveData sfx_083WaveData;
+const struct InstrumentPCM instrumentPCM116 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_083SampleInfo,
+    /* Sample */ &sfx_083WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1805,14 +1805,14 @@ const struct InstrumentPCM instrumentPCMData116 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_084SampleInfo;
-const struct InstrumentPCM instrumentPCMData117 = {
+extern const struct WaveData sfx_084WaveData;
+const struct InstrumentPCM instrumentPCM117 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_084SampleInfo,
+    /* Sample */ &sfx_084WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1821,14 +1821,14 @@ const struct InstrumentPCM instrumentPCMData117 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_085SampleInfo;
-const struct InstrumentPCM instrumentPCMData118 = {
+extern const struct WaveData sfx_085WaveData;
+const struct InstrumentPCM instrumentPCM118 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_085SampleInfo,
+    /* Sample */ &sfx_085WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1837,7 +1837,7 @@ const struct InstrumentPCM instrumentPCMData118 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData119 = {
+const struct InstrumentSubRhythm instrumentSubRhythm119 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -1846,7 +1846,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData119 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData120 = {
+const struct InstrumentSubRhythm instrumentSubRhythm120 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -1855,14 +1855,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData120 = {
     /* Sub-bank */ (void *)0x08a99d3c, // POINTER
 };
 
-extern const struct SampleInfo sfx_086SampleInfo;
-const struct InstrumentPCM instrumentPCMData121 = {
+extern const struct WaveData sfx_086WaveData;
+const struct InstrumentPCM instrumentPCM121 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_086SampleInfo,
+    /* Sample */ &sfx_086WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1871,14 +1871,14 @@ const struct InstrumentPCM instrumentPCMData121 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_087SampleInfo;
-const struct InstrumentPCM instrumentPCMData122 = {
+extern const struct WaveData sfx_087WaveData;
+const struct InstrumentPCM instrumentPCM122 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_087SampleInfo,
+    /* Sample */ &sfx_087WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1887,7 +1887,7 @@ const struct InstrumentPCM instrumentPCMData122 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentPSG instrumentPSGData123 = {
+const struct InstrumentPSG instrumentPSG123 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -1905,14 +1905,14 @@ const struct InstrumentPSG instrumentPSGData123 = {
     /* unk22        */ 0x4,
 };
 
-extern const struct SampleInfo sfx_034SampleInfo;
-const struct InstrumentPCM instrumentPCMData124 = {
+extern const struct WaveData sfx_034WaveData;
+const struct InstrumentPCM instrumentPCM124 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_034SampleInfo,
+    /* Sample */ &sfx_034WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1921,14 +1921,14 @@ const struct InstrumentPCM instrumentPCMData124 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_088SampleInfo;
-const struct InstrumentPCM instrumentPCMData125 = {
+extern const struct WaveData sfx_088WaveData;
+const struct InstrumentPCM instrumentPCM125 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_088SampleInfo,
+    /* Sample */ &sfx_088WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1937,14 +1937,14 @@ const struct InstrumentPCM instrumentPCMData125 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_089SampleInfo;
-const struct InstrumentPCM instrumentPCMData126 = {
+extern const struct WaveData sfx_089WaveData;
+const struct InstrumentPCM instrumentPCM126 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_089SampleInfo,
+    /* Sample */ &sfx_089WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1953,14 +1953,14 @@ const struct InstrumentPCM instrumentPCMData126 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_090SampleInfo;
-const struct InstrumentPCM instrumentPCMData127 = {
+extern const struct WaveData sfx_090WaveData;
+const struct InstrumentPCM instrumentPCM127 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_090SampleInfo,
+    /* Sample */ &sfx_090WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1969,14 +1969,14 @@ const struct InstrumentPCM instrumentPCMData127 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_091SampleInfo;
-const struct InstrumentPCM instrumentPCMData128 = {
+extern const struct WaveData sfx_091WaveData;
+const struct InstrumentPCM instrumentPCM128 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_091SampleInfo,
+    /* Sample */ &sfx_091WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -1985,14 +1985,14 @@ const struct InstrumentPCM instrumentPCMData128 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_092SampleInfo;
-const struct InstrumentPCM instrumentPCMData129 = {
+extern const struct WaveData sfx_092WaveData;
+const struct InstrumentPCM instrumentPCM129 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_092SampleInfo,
+    /* Sample */ &sfx_092WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2001,14 +2001,14 @@ const struct InstrumentPCM instrumentPCMData129 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_093SampleInfo;
-const struct InstrumentPCM instrumentPCMData130 = {
+extern const struct WaveData sfx_093WaveData;
+const struct InstrumentPCM instrumentPCM130 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_093SampleInfo,
+    /* Sample */ &sfx_093WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -2017,14 +2017,14 @@ const struct InstrumentPCM instrumentPCMData130 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_094SampleInfo;
-const struct InstrumentPCM instrumentPCMData131 = {
+extern const struct WaveData sfx_094WaveData;
+const struct InstrumentPCM instrumentPCM131 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_094SampleInfo,
+    /* Sample */ &sfx_094WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2033,14 +2033,14 @@ const struct InstrumentPCM instrumentPCMData131 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_095SampleInfo;
-const struct InstrumentPCM instrumentPCMData132 = {
+extern const struct WaveData sfx_095WaveData;
+const struct InstrumentPCM instrumentPCM132 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_095SampleInfo,
+    /* Sample */ &sfx_095WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2049,14 +2049,14 @@ const struct InstrumentPCM instrumentPCMData132 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_096SampleInfo;
-const struct InstrumentPCM instrumentPCMData133 = {
+extern const struct WaveData sfx_096WaveData;
+const struct InstrumentPCM instrumentPCM133 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_096SampleInfo,
+    /* Sample */ &sfx_096WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2065,14 +2065,14 @@ const struct InstrumentPCM instrumentPCMData133 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_097SampleInfo;
-const struct InstrumentPCM instrumentPCMData134 = {
+extern const struct WaveData sfx_097WaveData;
+const struct InstrumentPCM instrumentPCM134 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_097SampleInfo,
+    /* Sample */ &sfx_097WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2081,14 +2081,14 @@ const struct InstrumentPCM instrumentPCMData134 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_098SampleInfo;
-const struct InstrumentPCM instrumentPCMData135 = {
+extern const struct WaveData sfx_098WaveData;
+const struct InstrumentPCM instrumentPCM135 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_098SampleInfo,
+    /* Sample */ &sfx_098WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2097,14 +2097,14 @@ const struct InstrumentPCM instrumentPCMData135 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_099SampleInfo;
-const struct InstrumentPCM instrumentPCMData136 = {
+extern const struct WaveData sfx_099WaveData;
+const struct InstrumentPCM instrumentPCM136 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_099SampleInfo,
+    /* Sample */ &sfx_099WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2113,14 +2113,14 @@ const struct InstrumentPCM instrumentPCMData136 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_100SampleInfo;
-const struct InstrumentPCM instrumentPCMData137 = {
+extern const struct WaveData sfx_100WaveData;
+const struct InstrumentPCM instrumentPCM137 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_100SampleInfo,
+    /* Sample */ &sfx_100WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -2129,14 +2129,14 @@ const struct InstrumentPCM instrumentPCMData137 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_101SampleInfo;
-const struct InstrumentPCM instrumentPCMData138 = {
+extern const struct WaveData sfx_101WaveData;
+const struct InstrumentPCM instrumentPCM138 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_101SampleInfo,
+    /* Sample */ &sfx_101WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2145,14 +2145,14 @@ const struct InstrumentPCM instrumentPCMData138 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_102SampleInfo;
-const struct InstrumentPCM instrumentPCMData139 = {
+extern const struct WaveData sfx_102WaveData;
+const struct InstrumentPCM instrumentPCM139 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_102SampleInfo,
+    /* Sample */ &sfx_102WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -2161,14 +2161,14 @@ const struct InstrumentPCM instrumentPCMData139 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_103SampleInfo;
-const struct InstrumentPCM instrumentPCMData140 = {
+extern const struct WaveData sfx_103WaveData;
+const struct InstrumentPCM instrumentPCM140 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_103SampleInfo,
+    /* Sample */ &sfx_103WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2177,14 +2177,14 @@ const struct InstrumentPCM instrumentPCMData140 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_104SampleInfo;
-const struct InstrumentPCM instrumentPCMData141 = {
+extern const struct WaveData sfx_104WaveData;
+const struct InstrumentPCM instrumentPCM141 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_104SampleInfo,
+    /* Sample */ &sfx_104WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2193,14 +2193,14 @@ const struct InstrumentPCM instrumentPCMData141 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_105SampleInfo;
-const struct InstrumentPCM instrumentPCMData142 = {
+extern const struct WaveData sfx_105WaveData;
+const struct InstrumentPCM instrumentPCM142 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_105SampleInfo,
+    /* Sample */ &sfx_105WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2209,14 +2209,14 @@ const struct InstrumentPCM instrumentPCMData142 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_106SampleInfo;
-const struct InstrumentPCM instrumentPCMData143 = {
+extern const struct WaveData sfx_106WaveData;
+const struct InstrumentPCM instrumentPCM143 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_106SampleInfo,
+    /* Sample */ &sfx_106WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2225,14 +2225,14 @@ const struct InstrumentPCM instrumentPCMData143 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_107SampleInfo;
-const struct InstrumentPCM instrumentPCMData144 = {
+extern const struct WaveData sfx_107WaveData;
+const struct InstrumentPCM instrumentPCM144 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_107SampleInfo,
+    /* Sample */ &sfx_107WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -2241,7 +2241,7 @@ const struct InstrumentPCM instrumentPCMData144 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData145 = {
+const struct InstrumentSubRhythm instrumentSubRhythm145 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -2250,14 +2250,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData145 = {
     /* Sub-bank */ (void *)0x08a99d3c, // POINTER
 };
 
-extern const struct SampleInfo sfx_016SampleInfo;
-const struct InstrumentPCM instrumentPCMData146 = {
+extern const struct WaveData sfx_016WaveData;
+const struct InstrumentPCM instrumentPCM146 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_016SampleInfo,
+    /* Sample */ &sfx_016WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -2266,14 +2266,14 @@ const struct InstrumentPCM instrumentPCMData146 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_108SampleInfo;
-const struct InstrumentPCM instrumentPCMData147 = {
+extern const struct WaveData sfx_108WaveData;
+const struct InstrumentPCM instrumentPCM147 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_108SampleInfo,
+    /* Sample */ &sfx_108WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -2282,14 +2282,14 @@ const struct InstrumentPCM instrumentPCMData147 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_015SampleInfo;
-const struct InstrumentPCM instrumentPCMData148 = {
+extern const struct WaveData sfx_015WaveData;
+const struct InstrumentPCM instrumentPCM148 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_015SampleInfo,
+    /* Sample */ &sfx_015WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2298,14 +2298,14 @@ const struct InstrumentPCM instrumentPCMData148 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_109SampleInfo;
-const struct InstrumentPCM instrumentPCMData149 = {
+extern const struct WaveData sfx_109WaveData;
+const struct InstrumentPCM instrumentPCM149 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_109SampleInfo,
+    /* Sample */ &sfx_109WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -2314,14 +2314,14 @@ const struct InstrumentPCM instrumentPCMData149 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_008SampleInfo;
-const struct InstrumentPCM instrumentPCMData150 = {
+extern const struct WaveData sfx_008WaveData;
+const struct InstrumentPCM instrumentPCM150 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_008SampleInfo,
+    /* Sample */ &sfx_008WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2330,14 +2330,14 @@ const struct InstrumentPCM instrumentPCMData150 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_110SampleInfo;
-const struct InstrumentPCM instrumentPCMData151 = {
+extern const struct WaveData sfx_110WaveData;
+const struct InstrumentPCM instrumentPCM151 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_110SampleInfo,
+    /* Sample */ &sfx_110WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0066a052,
     /* unk10  */ 0x00600000,
@@ -2346,14 +2346,14 @@ const struct InstrumentPCM instrumentPCMData151 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_111SampleInfo;
-const struct InstrumentPCM instrumentPCMData152 = {
+extern const struct WaveData sfx_111WaveData;
+const struct InstrumentPCM instrumentPCM152 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_111SampleInfo,
+    /* Sample */ &sfx_111WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0066a052,
     /* unk10  */ 0x00600000,
@@ -2362,14 +2362,14 @@ const struct InstrumentPCM instrumentPCMData152 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_112SampleInfo;
-const struct InstrumentPCM instrumentPCMData153 = {
+extern const struct WaveData sfx_112WaveData;
+const struct InstrumentPCM instrumentPCM153 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_112SampleInfo,
+    /* Sample */ &sfx_112WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0066a052,
     /* unk10  */ 0x00600000,
@@ -2378,14 +2378,14 @@ const struct InstrumentPCM instrumentPCMData153 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_060SampleInfo;
-const struct InstrumentPCM instrumentPCMData154 = {
+extern const struct WaveData sfx_060WaveData;
+const struct InstrumentPCM instrumentPCM154 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_060SampleInfo,
+    /* Sample */ &sfx_060WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00402433,
     /* unk10  */ 0x00600000,
@@ -2394,14 +2394,14 @@ const struct InstrumentPCM instrumentPCMData154 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_113SampleInfo;
-const struct InstrumentPCM instrumentPCMData155 = {
+extern const struct WaveData sfx_113WaveData;
+const struct InstrumentPCM instrumentPCM155 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_113SampleInfo,
+    /* Sample */ &sfx_113WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2410,14 +2410,14 @@ const struct InstrumentPCM instrumentPCMData155 = {
     /* unk1C  */ 0x00235dd1,
 };
 
-extern const struct SampleInfo sfx_114SampleInfo;
-const struct InstrumentPCM instrumentPCMData156 = {
+extern const struct WaveData sfx_114WaveData;
+const struct InstrumentPCM instrumentPCM156 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_114SampleInfo,
+    /* Sample */ &sfx_114WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2426,7 +2426,7 @@ const struct InstrumentPCM instrumentPCMData156 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubSplit instrumentSubbankMultiKeyData157 = {
+const struct InstrumentSubSplit instrumentSubSplit157 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -2436,14 +2436,14 @@ const struct InstrumentSubSplit instrumentSubbankMultiKeyData157 = {
     /* Sub-bank */ (void *)0x08a94448, // POINTER
 };
 
-extern const struct SampleInfo sfx_043SampleInfo;
-const struct InstrumentPCM instrumentPCMData158 = {
+extern const struct WaveData sfx_043WaveData;
+const struct InstrumentPCM instrumentPCM158 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_043SampleInfo,
+    /* Sample */ &sfx_043WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2452,14 +2452,14 @@ const struct InstrumentPCM instrumentPCMData158 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_042SampleInfo;
-const struct InstrumentPCM instrumentPCMData159 = {
+extern const struct WaveData sfx_042WaveData;
+const struct InstrumentPCM instrumentPCM159 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_042SampleInfo,
+    /* Sample */ &sfx_042WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2468,14 +2468,14 @@ const struct InstrumentPCM instrumentPCMData159 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_015SampleInfo;
-const struct InstrumentPCM instrumentPCMData160 = {
+extern const struct WaveData sfx_015WaveData;
+const struct InstrumentPCM instrumentPCM160 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_015SampleInfo,
+    /* Sample */ &sfx_015WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00307c1f,
@@ -2484,14 +2484,14 @@ const struct InstrumentPCM instrumentPCMData160 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_058SampleInfo;
-const struct InstrumentPCM instrumentPCMData161 = {
+extern const struct WaveData sfx_058WaveData;
+const struct InstrumentPCM instrumentPCM161 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_058SampleInfo,
+    /* Sample */ &sfx_058WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -2500,14 +2500,14 @@ const struct InstrumentPCM instrumentPCMData161 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_027SampleInfo;
-const struct InstrumentPCM instrumentPCMData162 = {
+extern const struct WaveData sfx_027WaveData;
+const struct InstrumentPCM instrumentPCM162 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_027SampleInfo,
+    /* Sample */ &sfx_027WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -2516,14 +2516,14 @@ const struct InstrumentPCM instrumentPCMData162 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_017SampleInfo;
-const struct InstrumentPCM instrumentPCMData163 = {
+extern const struct WaveData sfx_017WaveData;
+const struct InstrumentPCM instrumentPCM163 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_017SampleInfo,
+    /* Sample */ &sfx_017WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -2532,14 +2532,14 @@ const struct InstrumentPCM instrumentPCMData163 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_115SampleInfo;
-const struct InstrumentPCM instrumentPCMData164 = {
+extern const struct WaveData sfx_115WaveData;
+const struct InstrumentPCM instrumentPCM164 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_115SampleInfo,
+    /* Sample */ &sfx_115WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -2548,14 +2548,14 @@ const struct InstrumentPCM instrumentPCMData164 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_116SampleInfo;
-const struct InstrumentPCM instrumentPCMData165 = {
+extern const struct WaveData sfx_116WaveData;
+const struct InstrumentPCM instrumentPCM165 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_116SampleInfo,
+    /* Sample */ &sfx_116WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2564,14 +2564,14 @@ const struct InstrumentPCM instrumentPCMData165 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_028SampleInfo;
-const struct InstrumentPCM instrumentPCMData166 = {
+extern const struct WaveData sfx_028WaveData;
+const struct InstrumentPCM instrumentPCM166 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_028SampleInfo,
+    /* Sample */ &sfx_028WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -2580,14 +2580,14 @@ const struct InstrumentPCM instrumentPCMData166 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_117SampleInfo;
-const struct InstrumentPCM instrumentPCMData167 = {
+extern const struct WaveData sfx_117WaveData;
+const struct InstrumentPCM instrumentPCM167 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_117SampleInfo,
+    /* Sample */ &sfx_117WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2596,14 +2596,14 @@ const struct InstrumentPCM instrumentPCMData167 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_118SampleInfo;
-const struct InstrumentPCM instrumentPCMData168 = {
+extern const struct WaveData sfx_118WaveData;
+const struct InstrumentPCM instrumentPCM168 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_118SampleInfo,
+    /* Sample */ &sfx_118WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2612,14 +2612,14 @@ const struct InstrumentPCM instrumentPCMData168 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_119SampleInfo;
-const struct InstrumentPCM instrumentPCMData169 = {
+extern const struct WaveData sfx_119WaveData;
+const struct InstrumentPCM instrumentPCM169 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_119SampleInfo,
+    /* Sample */ &sfx_119WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2628,14 +2628,14 @@ const struct InstrumentPCM instrumentPCMData169 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_120SampleInfo;
-const struct InstrumentPCM instrumentPCMData170 = {
+extern const struct WaveData sfx_120WaveData;
+const struct InstrumentPCM instrumentPCM170 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_120SampleInfo,
+    /* Sample */ &sfx_120WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2644,14 +2644,14 @@ const struct InstrumentPCM instrumentPCMData170 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_121SampleInfo;
-const struct InstrumentPCM instrumentPCMData171 = {
+extern const struct WaveData sfx_121WaveData;
+const struct InstrumentPCM instrumentPCM171 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_121SampleInfo,
+    /* Sample */ &sfx_121WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2660,7 +2660,7 @@ const struct InstrumentPCM instrumentPCMData171 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentPSG instrumentPSGData172 = {
+const struct InstrumentPSG instrumentPSG172 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -2678,7 +2678,7 @@ const struct InstrumentPSG instrumentPSGData172 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData173 = {
+const struct InstrumentPSG instrumentPSG173 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -2696,14 +2696,14 @@ const struct InstrumentPSG instrumentPSGData173 = {
     /* unk22        */ 0x2,
 };
 
-extern const struct SampleInfo sfx_122SampleInfo;
-const struct InstrumentPCM instrumentPCMData174 = {
+extern const struct WaveData sfx_122WaveData;
+const struct InstrumentPCM instrumentPCM174 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_122SampleInfo,
+    /* Sample */ &sfx_122WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2712,14 +2712,14 @@ const struct InstrumentPCM instrumentPCMData174 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_121SampleInfo;
-const struct InstrumentPCM instrumentPCMData175 = {
+extern const struct WaveData sfx_121WaveData;
+const struct InstrumentPCM instrumentPCM175 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_121SampleInfo,
+    /* Sample */ &sfx_121WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2728,14 +2728,14 @@ const struct InstrumentPCM instrumentPCMData175 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_123SampleInfo;
-const struct InstrumentPCM instrumentPCMData176 = {
+extern const struct WaveData sfx_123WaveData;
+const struct InstrumentPCM instrumentPCM176 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_123SampleInfo,
+    /* Sample */ &sfx_123WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2744,14 +2744,14 @@ const struct InstrumentPCM instrumentPCMData176 = {
     /* unk1C  */ 0x00055552,
 };
 
-extern const struct SampleInfo sfx_124SampleInfo;
-const struct InstrumentPCM instrumentPCMData177 = {
+extern const struct WaveData sfx_124WaveData;
+const struct InstrumentPCM instrumentPCM177 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_124SampleInfo,
+    /* Sample */ &sfx_124WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x0026c9b2,
@@ -2760,14 +2760,14 @@ const struct InstrumentPCM instrumentPCMData177 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_125SampleInfo;
-const struct InstrumentPCM instrumentPCMData178 = {
+extern const struct WaveData sfx_125WaveData;
+const struct InstrumentPCM instrumentPCM178 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_125SampleInfo,
+    /* Sample */ &sfx_125WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -2776,7 +2776,7 @@ const struct InstrumentPCM instrumentPCMData178 = {
     /* unk1C  */ 0x000b8000,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData179 = {
+const struct InstrumentSubRhythm instrumentSubRhythm179 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -2785,7 +2785,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData179 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData180 = {
+const struct InstrumentSubRhythm instrumentSubRhythm180 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -2794,7 +2794,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData180 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData181 = {
+const struct InstrumentSubRhythm instrumentSubRhythm181 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -2803,14 +2803,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData181 = {
     /* Sub-bank */ (void *)0x08a99d3c, // POINTER
 };
 
-extern const struct SampleInfo sfx_126SampleInfo;
-const struct InstrumentPCM instrumentPCMData182 = {
+extern const struct WaveData sfx_126WaveData;
+const struct InstrumentPCM instrumentPCM182 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_126SampleInfo,
+    /* Sample */ &sfx_126WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -2819,14 +2819,14 @@ const struct InstrumentPCM instrumentPCMData182 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_127SampleInfo;
-const struct InstrumentPCM instrumentPCMData183 = {
+extern const struct WaveData sfx_127WaveData;
+const struct InstrumentPCM instrumentPCM183 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_127SampleInfo,
+    /* Sample */ &sfx_127WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2835,14 +2835,14 @@ const struct InstrumentPCM instrumentPCMData183 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_128SampleInfo;
-const struct InstrumentPCM instrumentPCMData184 = {
+extern const struct WaveData sfx_128WaveData;
+const struct InstrumentPCM instrumentPCM184 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_128SampleInfo,
+    /* Sample */ &sfx_128WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2851,14 +2851,14 @@ const struct InstrumentPCM instrumentPCMData184 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_129SampleInfo;
-const struct InstrumentPCM instrumentPCMData185 = {
+extern const struct WaveData sfx_129WaveData;
+const struct InstrumentPCM instrumentPCM185 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_129SampleInfo,
+    /* Sample */ &sfx_129WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2867,14 +2867,14 @@ const struct InstrumentPCM instrumentPCMData185 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_130SampleInfo;
-const struct InstrumentPCM instrumentPCMData186 = {
+extern const struct WaveData sfx_130WaveData;
+const struct InstrumentPCM instrumentPCM186 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_130SampleInfo,
+    /* Sample */ &sfx_130WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2883,14 +2883,14 @@ const struct InstrumentPCM instrumentPCMData186 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_131SampleInfo;
-const struct InstrumentPCM instrumentPCMData187 = {
+extern const struct WaveData sfx_131WaveData;
+const struct InstrumentPCM instrumentPCM187 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_131SampleInfo,
+    /* Sample */ &sfx_131WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2899,14 +2899,14 @@ const struct InstrumentPCM instrumentPCMData187 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_132SampleInfo;
-const struct InstrumentPCM instrumentPCMData188 = {
+extern const struct WaveData sfx_132WaveData;
+const struct InstrumentPCM instrumentPCM188 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_132SampleInfo,
+    /* Sample */ &sfx_132WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2915,14 +2915,14 @@ const struct InstrumentPCM instrumentPCMData188 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_133SampleInfo;
-const struct InstrumentPCM instrumentPCMData189 = {
+extern const struct WaveData sfx_133WaveData;
+const struct InstrumentPCM instrumentPCM189 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_133SampleInfo,
+    /* Sample */ &sfx_133WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2931,14 +2931,14 @@ const struct InstrumentPCM instrumentPCMData189 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_134SampleInfo;
-const struct InstrumentPCM instrumentPCMData190 = {
+extern const struct WaveData sfx_134WaveData;
+const struct InstrumentPCM instrumentPCM190 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_134SampleInfo,
+    /* Sample */ &sfx_134WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2947,14 +2947,14 @@ const struct InstrumentPCM instrumentPCMData190 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_135SampleInfo;
-const struct InstrumentPCM instrumentPCMData191 = {
+extern const struct WaveData sfx_135WaveData;
+const struct InstrumentPCM instrumentPCM191 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_135SampleInfo,
+    /* Sample */ &sfx_135WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2963,14 +2963,14 @@ const struct InstrumentPCM instrumentPCMData191 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_136SampleInfo;
-const struct InstrumentPCM instrumentPCMData192 = {
+extern const struct WaveData sfx_136WaveData;
+const struct InstrumentPCM instrumentPCM192 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_136SampleInfo,
+    /* Sample */ &sfx_136WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2979,14 +2979,14 @@ const struct InstrumentPCM instrumentPCMData192 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_137SampleInfo;
-const struct InstrumentPCM instrumentPCMData193 = {
+extern const struct WaveData sfx_137WaveData;
+const struct InstrumentPCM instrumentPCM193 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_137SampleInfo,
+    /* Sample */ &sfx_137WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -2995,14 +2995,14 @@ const struct InstrumentPCM instrumentPCMData193 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_138SampleInfo;
-const struct InstrumentPCM instrumentPCMData194 = {
+extern const struct WaveData sfx_138WaveData;
+const struct InstrumentPCM instrumentPCM194 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_138SampleInfo,
+    /* Sample */ &sfx_138WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3011,14 +3011,14 @@ const struct InstrumentPCM instrumentPCMData194 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_139SampleInfo;
-const struct InstrumentPCM instrumentPCMData195 = {
+extern const struct WaveData sfx_139WaveData;
+const struct InstrumentPCM instrumentPCM195 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_139SampleInfo,
+    /* Sample */ &sfx_139WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3027,14 +3027,14 @@ const struct InstrumentPCM instrumentPCMData195 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_140SampleInfo;
-const struct InstrumentPCM instrumentPCMData196 = {
+extern const struct WaveData sfx_140WaveData;
+const struct InstrumentPCM instrumentPCM196 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_140SampleInfo,
+    /* Sample */ &sfx_140WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3043,7 +3043,7 @@ const struct InstrumentPCM instrumentPCMData196 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData197 = {
+const struct InstrumentSubRhythm instrumentSubRhythm197 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -3052,14 +3052,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData197 = {
     /* Sub-bank */ (void *)0x08a99d3c, // POINTER
 };
 
-extern const struct SampleInfo sfx_141SampleInfo;
-const struct InstrumentPCM instrumentPCMData198 = {
+extern const struct WaveData sfx_141WaveData;
+const struct InstrumentPCM instrumentPCM198 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_141SampleInfo,
+    /* Sample */ &sfx_141WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3068,14 +3068,14 @@ const struct InstrumentPCM instrumentPCMData198 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_142SampleInfo;
-const struct InstrumentPCM instrumentPCMData199 = {
+extern const struct WaveData sfx_142WaveData;
+const struct InstrumentPCM instrumentPCM199 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_142SampleInfo,
+    /* Sample */ &sfx_142WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3084,14 +3084,14 @@ const struct InstrumentPCM instrumentPCMData199 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_143SampleInfo;
-const struct InstrumentPCM instrumentPCMData200 = {
+extern const struct WaveData sfx_143WaveData;
+const struct InstrumentPCM instrumentPCM200 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_143SampleInfo,
+    /* Sample */ &sfx_143WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3100,14 +3100,14 @@ const struct InstrumentPCM instrumentPCMData200 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_144SampleInfo;
-const struct InstrumentPCM instrumentPCMData201 = {
+extern const struct WaveData sfx_144WaveData;
+const struct InstrumentPCM instrumentPCM201 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_144SampleInfo,
+    /* Sample */ &sfx_144WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3116,14 +3116,14 @@ const struct InstrumentPCM instrumentPCMData201 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_145SampleInfo;
-const struct InstrumentPCM instrumentPCMData202 = {
+extern const struct WaveData sfx_145WaveData;
+const struct InstrumentPCM instrumentPCM202 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_145SampleInfo,
+    /* Sample */ &sfx_145WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3132,14 +3132,14 @@ const struct InstrumentPCM instrumentPCMData202 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_146SampleInfo;
-const struct InstrumentPCM instrumentPCMData203 = {
+extern const struct WaveData sfx_146WaveData;
+const struct InstrumentPCM instrumentPCM203 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_146SampleInfo,
+    /* Sample */ &sfx_146WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3148,14 +3148,14 @@ const struct InstrumentPCM instrumentPCMData203 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_147SampleInfo;
-const struct InstrumentPCM instrumentPCMData204 = {
+extern const struct WaveData sfx_147WaveData;
+const struct InstrumentPCM instrumentPCM204 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_147SampleInfo,
+    /* Sample */ &sfx_147WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3164,7 +3164,7 @@ const struct InstrumentPCM instrumentPCMData204 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData205 = {
+const struct InstrumentSubRhythm instrumentSubRhythm205 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -3173,14 +3173,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData205 = {
     /* Sub-bank */ (void *)0x08a99d3c, // POINTER
 };
 
-extern const struct SampleInfo sfx_148SampleInfo;
-const struct InstrumentPCM instrumentPCMData206 = {
+extern const struct WaveData sfx_148WaveData;
+const struct InstrumentPCM instrumentPCM206 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_148SampleInfo,
+    /* Sample */ &sfx_148WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3189,14 +3189,14 @@ const struct InstrumentPCM instrumentPCMData206 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_149SampleInfo;
-const struct InstrumentPCM instrumentPCMData207 = {
+extern const struct WaveData sfx_149WaveData;
+const struct InstrumentPCM instrumentPCM207 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_149SampleInfo,
+    /* Sample */ &sfx_149WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3205,14 +3205,14 @@ const struct InstrumentPCM instrumentPCMData207 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_150SampleInfo;
-const struct InstrumentPCM instrumentPCMData208 = {
+extern const struct WaveData sfx_150WaveData;
+const struct InstrumentPCM instrumentPCM208 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_150SampleInfo,
+    /* Sample */ &sfx_150WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3221,14 +3221,14 @@ const struct InstrumentPCM instrumentPCMData208 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_151SampleInfo;
-const struct InstrumentPCM instrumentPCMData209 = {
+extern const struct WaveData sfx_151WaveData;
+const struct InstrumentPCM instrumentPCM209 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_151SampleInfo,
+    /* Sample */ &sfx_151WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3237,14 +3237,14 @@ const struct InstrumentPCM instrumentPCMData209 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_152SampleInfo;
-const struct InstrumentPCM instrumentPCMData210 = {
+extern const struct WaveData sfx_152WaveData;
+const struct InstrumentPCM instrumentPCM210 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_152SampleInfo,
+    /* Sample */ &sfx_152WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3253,14 +3253,14 @@ const struct InstrumentPCM instrumentPCMData210 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_153SampleInfo;
-const struct InstrumentPCM instrumentPCMData211 = {
+extern const struct WaveData sfx_153WaveData;
+const struct InstrumentPCM instrumentPCM211 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_153SampleInfo,
+    /* Sample */ &sfx_153WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -3269,14 +3269,14 @@ const struct InstrumentPCM instrumentPCMData211 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_154SampleInfo;
-const struct InstrumentPCM instrumentPCMData212 = {
+extern const struct WaveData sfx_154WaveData;
+const struct InstrumentPCM instrumentPCM212 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_154SampleInfo,
+    /* Sample */ &sfx_154WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3285,14 +3285,14 @@ const struct InstrumentPCM instrumentPCMData212 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_155SampleInfo;
-const struct InstrumentPCM instrumentPCMData213 = {
+extern const struct WaveData sfx_155WaveData;
+const struct InstrumentPCM instrumentPCM213 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_155SampleInfo,
+    /* Sample */ &sfx_155WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3301,14 +3301,14 @@ const struct InstrumentPCM instrumentPCMData213 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_156SampleInfo;
-const struct InstrumentPCM instrumentPCMData214 = {
+extern const struct WaveData sfx_156WaveData;
+const struct InstrumentPCM instrumentPCM214 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_156SampleInfo,
+    /* Sample */ &sfx_156WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3317,14 +3317,14 @@ const struct InstrumentPCM instrumentPCMData214 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_157SampleInfo;
-const struct InstrumentPCM instrumentPCMData215 = {
+extern const struct WaveData sfx_157WaveData;
+const struct InstrumentPCM instrumentPCM215 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_157SampleInfo,
+    /* Sample */ &sfx_157WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3333,14 +3333,14 @@ const struct InstrumentPCM instrumentPCMData215 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_158SampleInfo;
-const struct InstrumentPCM instrumentPCMData216 = {
+extern const struct WaveData sfx_158WaveData;
+const struct InstrumentPCM instrumentPCM216 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_158SampleInfo,
+    /* Sample */ &sfx_158WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3349,14 +3349,14 @@ const struct InstrumentPCM instrumentPCMData216 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_159SampleInfo;
-const struct InstrumentPCM instrumentPCMData217 = {
+extern const struct WaveData sfx_159WaveData;
+const struct InstrumentPCM instrumentPCM217 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_159SampleInfo,
+    /* Sample */ &sfx_159WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3365,14 +3365,14 @@ const struct InstrumentPCM instrumentPCMData217 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_160SampleInfo;
-const struct InstrumentPCM instrumentPCMData218 = {
+extern const struct WaveData sfx_160WaveData;
+const struct InstrumentPCM instrumentPCM218 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_160SampleInfo,
+    /* Sample */ &sfx_160WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3381,14 +3381,14 @@ const struct InstrumentPCM instrumentPCMData218 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_161SampleInfo;
-const struct InstrumentPCM instrumentPCMData219 = {
+extern const struct WaveData sfx_161WaveData;
+const struct InstrumentPCM instrumentPCM219 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_161SampleInfo,
+    /* Sample */ &sfx_161WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3397,14 +3397,14 @@ const struct InstrumentPCM instrumentPCMData219 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_162SampleInfo;
-const struct InstrumentPCM instrumentPCMData220 = {
+extern const struct WaveData sfx_162WaveData;
+const struct InstrumentPCM instrumentPCM220 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_162SampleInfo,
+    /* Sample */ &sfx_162WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3413,14 +3413,14 @@ const struct InstrumentPCM instrumentPCMData220 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_163SampleInfo;
-const struct InstrumentPCM instrumentPCMData221 = {
+extern const struct WaveData sfx_163WaveData;
+const struct InstrumentPCM instrumentPCM221 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_163SampleInfo,
+    /* Sample */ &sfx_163WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3429,14 +3429,14 @@ const struct InstrumentPCM instrumentPCMData221 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_164SampleInfo;
-const struct InstrumentPCM instrumentPCMData222 = {
+extern const struct WaveData sfx_164WaveData;
+const struct InstrumentPCM instrumentPCM222 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_164SampleInfo,
+    /* Sample */ &sfx_164WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3445,14 +3445,14 @@ const struct InstrumentPCM instrumentPCMData222 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_165SampleInfo;
-const struct InstrumentPCM instrumentPCMData223 = {
+extern const struct WaveData sfx_165WaveData;
+const struct InstrumentPCM instrumentPCM223 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_165SampleInfo,
+    /* Sample */ &sfx_165WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3461,14 +3461,14 @@ const struct InstrumentPCM instrumentPCMData223 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_166SampleInfo;
-const struct InstrumentPCM instrumentPCMData224 = {
+extern const struct WaveData sfx_166WaveData;
+const struct InstrumentPCM instrumentPCM224 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_166SampleInfo,
+    /* Sample */ &sfx_166WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3477,14 +3477,14 @@ const struct InstrumentPCM instrumentPCMData224 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_167SampleInfo;
-const struct InstrumentPCM instrumentPCMData225 = {
+extern const struct WaveData sfx_167WaveData;
+const struct InstrumentPCM instrumentPCM225 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_167SampleInfo,
+    /* Sample */ &sfx_167WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3493,14 +3493,14 @@ const struct InstrumentPCM instrumentPCMData225 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_168SampleInfo;
-const struct InstrumentPCM instrumentPCMData226 = {
+extern const struct WaveData sfx_168WaveData;
+const struct InstrumentPCM instrumentPCM226 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_168SampleInfo,
+    /* Sample */ &sfx_168WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3509,14 +3509,14 @@ const struct InstrumentPCM instrumentPCMData226 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_169SampleInfo;
-const struct InstrumentPCM instrumentPCMData227 = {
+extern const struct WaveData sfx_169WaveData;
+const struct InstrumentPCM instrumentPCM227 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_169SampleInfo,
+    /* Sample */ &sfx_169WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3525,14 +3525,14 @@ const struct InstrumentPCM instrumentPCMData227 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_170SampleInfo;
-const struct InstrumentPCM instrumentPCMData228 = {
+extern const struct WaveData sfx_170WaveData;
+const struct InstrumentPCM instrumentPCM228 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_170SampleInfo,
+    /* Sample */ &sfx_170WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3541,14 +3541,14 @@ const struct InstrumentPCM instrumentPCMData228 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_171SampleInfo;
-const struct InstrumentPCM instrumentPCMData229 = {
+extern const struct WaveData sfx_171WaveData;
+const struct InstrumentPCM instrumentPCM229 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_171SampleInfo,
+    /* Sample */ &sfx_171WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3557,14 +3557,14 @@ const struct InstrumentPCM instrumentPCMData229 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_172SampleInfo;
-const struct InstrumentPCM instrumentPCMData230 = {
+extern const struct WaveData sfx_172WaveData;
+const struct InstrumentPCM instrumentPCM230 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_172SampleInfo,
+    /* Sample */ &sfx_172WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3573,14 +3573,14 @@ const struct InstrumentPCM instrumentPCMData230 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_173SampleInfo;
-const struct InstrumentPCM instrumentPCMData231 = {
+extern const struct WaveData sfx_173WaveData;
+const struct InstrumentPCM instrumentPCM231 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_173SampleInfo,
+    /* Sample */ &sfx_173WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3589,14 +3589,14 @@ const struct InstrumentPCM instrumentPCMData231 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_174SampleInfo;
-const struct InstrumentPCM instrumentPCMData232 = {
+extern const struct WaveData sfx_174WaveData;
+const struct InstrumentPCM instrumentPCM232 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_174SampleInfo,
+    /* Sample */ &sfx_174WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3605,14 +3605,14 @@ const struct InstrumentPCM instrumentPCMData232 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_175SampleInfo;
-const struct InstrumentPCM instrumentPCMData233 = {
+extern const struct WaveData sfx_175WaveData;
+const struct InstrumentPCM instrumentPCM233 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_175SampleInfo,
+    /* Sample */ &sfx_175WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3621,14 +3621,14 @@ const struct InstrumentPCM instrumentPCMData233 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_176SampleInfo;
-const struct InstrumentPCM instrumentPCMData234 = {
+extern const struct WaveData sfx_176WaveData;
+const struct InstrumentPCM instrumentPCM234 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_176SampleInfo,
+    /* Sample */ &sfx_176WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3637,14 +3637,14 @@ const struct InstrumentPCM instrumentPCMData234 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_177SampleInfo;
-const struct InstrumentPCM instrumentPCMData235 = {
+extern const struct WaveData sfx_177WaveData;
+const struct InstrumentPCM instrumentPCM235 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_177SampleInfo,
+    /* Sample */ &sfx_177WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3653,14 +3653,14 @@ const struct InstrumentPCM instrumentPCMData235 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_178SampleInfo;
-const struct InstrumentPCM instrumentPCMData236 = {
+extern const struct WaveData sfx_178WaveData;
+const struct InstrumentPCM instrumentPCM236 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_178SampleInfo,
+    /* Sample */ &sfx_178WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3669,14 +3669,14 @@ const struct InstrumentPCM instrumentPCMData236 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_179SampleInfo;
-const struct InstrumentPCM instrumentPCMData237 = {
+extern const struct WaveData sfx_179WaveData;
+const struct InstrumentPCM instrumentPCM237 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_179SampleInfo,
+    /* Sample */ &sfx_179WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3685,14 +3685,14 @@ const struct InstrumentPCM instrumentPCMData237 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_180SampleInfo;
-const struct InstrumentPCM instrumentPCMData238 = {
+extern const struct WaveData sfx_180WaveData;
+const struct InstrumentPCM instrumentPCM238 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_180SampleInfo,
+    /* Sample */ &sfx_180WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3701,14 +3701,14 @@ const struct InstrumentPCM instrumentPCMData238 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_181SampleInfo;
-const struct InstrumentPCM instrumentPCMData239 = {
+extern const struct WaveData sfx_181WaveData;
+const struct InstrumentPCM instrumentPCM239 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_181SampleInfo,
+    /* Sample */ &sfx_181WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3717,14 +3717,14 @@ const struct InstrumentPCM instrumentPCMData239 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_182SampleInfo;
-const struct InstrumentPCM instrumentPCMData240 = {
+extern const struct WaveData sfx_182WaveData;
+const struct InstrumentPCM instrumentPCM240 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_182SampleInfo,
+    /* Sample */ &sfx_182WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3733,14 +3733,14 @@ const struct InstrumentPCM instrumentPCMData240 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_183SampleInfo;
-const struct InstrumentPCM instrumentPCMData241 = {
+extern const struct WaveData sfx_183WaveData;
+const struct InstrumentPCM instrumentPCM241 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_183SampleInfo,
+    /* Sample */ &sfx_183WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3749,7 +3749,7 @@ const struct InstrumentPCM instrumentPCMData241 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData242 = {
+const struct InstrumentSubRhythm instrumentSubRhythm242 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -3758,14 +3758,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData242 = {
     /* Sub-bank */ (void *)0x08a99d3c, // POINTER
 };
 
-extern const struct SampleInfo sfx_184SampleInfo;
-const struct InstrumentPCM instrumentPCMData243 = {
+extern const struct WaveData sfx_184WaveData;
+const struct InstrumentPCM instrumentPCM243 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_184SampleInfo,
+    /* Sample */ &sfx_184WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3774,14 +3774,14 @@ const struct InstrumentPCM instrumentPCMData243 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_185SampleInfo;
-const struct InstrumentPCM instrumentPCMData244 = {
+extern const struct WaveData sfx_185WaveData;
+const struct InstrumentPCM instrumentPCM244 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_185SampleInfo,
+    /* Sample */ &sfx_185WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3790,14 +3790,14 @@ const struct InstrumentPCM instrumentPCMData244 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_186SampleInfo;
-const struct InstrumentPCM instrumentPCMData245 = {
+extern const struct WaveData sfx_186WaveData;
+const struct InstrumentPCM instrumentPCM245 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_186SampleInfo,
+    /* Sample */ &sfx_186WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3806,14 +3806,14 @@ const struct InstrumentPCM instrumentPCMData245 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_187SampleInfo;
-const struct InstrumentPCM instrumentPCMData246 = {
+extern const struct WaveData sfx_187WaveData;
+const struct InstrumentPCM instrumentPCM246 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_187SampleInfo,
+    /* Sample */ &sfx_187WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3822,14 +3822,14 @@ const struct InstrumentPCM instrumentPCMData246 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_188SampleInfo;
-const struct InstrumentPCM instrumentPCMData247 = {
+extern const struct WaveData sfx_188WaveData;
+const struct InstrumentPCM instrumentPCM247 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_188SampleInfo,
+    /* Sample */ &sfx_188WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3838,14 +3838,14 @@ const struct InstrumentPCM instrumentPCMData247 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_189SampleInfo;
-const struct InstrumentPCM instrumentPCMData248 = {
+extern const struct WaveData sfx_189WaveData;
+const struct InstrumentPCM instrumentPCM248 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_189SampleInfo,
+    /* Sample */ &sfx_189WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3854,14 +3854,14 @@ const struct InstrumentPCM instrumentPCMData248 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_190SampleInfo;
-const struct InstrumentPCM instrumentPCMData249 = {
+extern const struct WaveData sfx_190WaveData;
+const struct InstrumentPCM instrumentPCM249 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_190SampleInfo,
+    /* Sample */ &sfx_190WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3870,14 +3870,14 @@ const struct InstrumentPCM instrumentPCMData249 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_191SampleInfo;
-const struct InstrumentPCM instrumentPCMData250 = {
+extern const struct WaveData sfx_191WaveData;
+const struct InstrumentPCM instrumentPCM250 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_191SampleInfo,
+    /* Sample */ &sfx_191WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3886,14 +3886,14 @@ const struct InstrumentPCM instrumentPCMData250 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_192SampleInfo;
-const struct InstrumentPCM instrumentPCMData251 = {
+extern const struct WaveData sfx_192WaveData;
+const struct InstrumentPCM instrumentPCM251 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_192SampleInfo,
+    /* Sample */ &sfx_192WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3902,14 +3902,14 @@ const struct InstrumentPCM instrumentPCMData251 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_193SampleInfo;
-const struct InstrumentPCM instrumentPCMData252 = {
+extern const struct WaveData sfx_193WaveData;
+const struct InstrumentPCM instrumentPCM252 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_193SampleInfo,
+    /* Sample */ &sfx_193WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -3918,14 +3918,14 @@ const struct InstrumentPCM instrumentPCMData252 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_003SampleInfo;
-const struct InstrumentPCM instrumentPCMData253 = {
+extern const struct WaveData sfx_003WaveData;
+const struct InstrumentPCM instrumentPCM253 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_003SampleInfo,
+    /* Sample */ &sfx_003WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3934,14 +3934,14 @@ const struct InstrumentPCM instrumentPCMData253 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_009SampleInfo;
-const struct InstrumentPCM instrumentPCMData254 = {
+extern const struct WaveData sfx_009WaveData;
+const struct InstrumentPCM instrumentPCM254 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_009SampleInfo,
+    /* Sample */ &sfx_009WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -3950,14 +3950,14 @@ const struct InstrumentPCM instrumentPCMData254 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_041SampleInfo;
-const struct InstrumentPCM instrumentPCMData255 = {
+extern const struct WaveData sfx_041WaveData;
+const struct InstrumentPCM instrumentPCM255 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_041SampleInfo,
+    /* Sample */ &sfx_041WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0060364d,
     /* unk10  */ 0x00600000,
@@ -3966,14 +3966,14 @@ const struct InstrumentPCM instrumentPCMData255 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_058SampleInfo;
-const struct InstrumentPCM instrumentPCMData256 = {
+extern const struct WaveData sfx_058WaveData;
+const struct InstrumentPCM instrumentPCM256 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_058SampleInfo,
+    /* Sample */ &sfx_058WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -3982,14 +3982,14 @@ const struct InstrumentPCM instrumentPCMData256 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_194SampleInfo;
-const struct InstrumentPCM instrumentPCMData257 = {
+extern const struct WaveData sfx_194WaveData;
+const struct InstrumentPCM instrumentPCM257 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_194SampleInfo,
+    /* Sample */ &sfx_194WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -3998,14 +3998,14 @@ const struct InstrumentPCM instrumentPCMData257 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_108SampleInfo;
-const struct InstrumentPCM instrumentPCMData258 = {
+extern const struct WaveData sfx_108WaveData;
+const struct InstrumentPCM instrumentPCM258 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_108SampleInfo,
+    /* Sample */ &sfx_108WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -4014,14 +4014,14 @@ const struct InstrumentPCM instrumentPCMData258 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_195SampleInfo;
-const struct InstrumentPCM instrumentPCMData259 = {
+extern const struct WaveData sfx_195WaveData;
+const struct InstrumentPCM instrumentPCM259 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_195SampleInfo,
+    /* Sample */ &sfx_195WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -4030,14 +4030,14 @@ const struct InstrumentPCM instrumentPCMData259 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_196SampleInfo;
-const struct InstrumentPCM instrumentPCMData260 = {
+extern const struct WaveData sfx_196WaveData;
+const struct InstrumentPCM instrumentPCM260 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_196SampleInfo,
+    /* Sample */ &sfx_196WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -4046,14 +4046,14 @@ const struct InstrumentPCM instrumentPCMData260 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_191SampleInfo;
-const struct InstrumentPCM instrumentPCMData261 = {
+extern const struct WaveData sfx_191WaveData;
+const struct InstrumentPCM instrumentPCM261 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_191SampleInfo,
+    /* Sample */ &sfx_191WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4062,14 +4062,14 @@ const struct InstrumentPCM instrumentPCMData261 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_197SampleInfo;
-const struct InstrumentPCM instrumentPCMData262 = {
+extern const struct WaveData sfx_197WaveData;
+const struct InstrumentPCM instrumentPCM262 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_197SampleInfo,
+    /* Sample */ &sfx_197WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4078,14 +4078,14 @@ const struct InstrumentPCM instrumentPCMData262 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_198SampleInfo;
-const struct InstrumentPCM instrumentPCMData263 = {
+extern const struct WaveData sfx_198WaveData;
+const struct InstrumentPCM instrumentPCM263 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_198SampleInfo,
+    /* Sample */ &sfx_198WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4094,14 +4094,14 @@ const struct InstrumentPCM instrumentPCMData263 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_199SampleInfo;
-const struct InstrumentPCM instrumentPCMData264 = {
+extern const struct WaveData sfx_199WaveData;
+const struct InstrumentPCM instrumentPCM264 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_199SampleInfo,
+    /* Sample */ &sfx_199WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4110,14 +4110,14 @@ const struct InstrumentPCM instrumentPCMData264 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_200SampleInfo;
-const struct InstrumentPCM instrumentPCMData265 = {
+extern const struct WaveData sfx_200WaveData;
+const struct InstrumentPCM instrumentPCM265 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_200SampleInfo,
+    /* Sample */ &sfx_200WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -4126,14 +4126,14 @@ const struct InstrumentPCM instrumentPCMData265 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_201SampleInfo;
-const struct InstrumentPCM instrumentPCMData266 = {
+extern const struct WaveData sfx_201WaveData;
+const struct InstrumentPCM instrumentPCM266 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_201SampleInfo,
+    /* Sample */ &sfx_201WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -4142,14 +4142,14 @@ const struct InstrumentPCM instrumentPCMData266 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_202SampleInfo;
-const struct InstrumentPCM instrumentPCMData267 = {
+extern const struct WaveData sfx_202WaveData;
+const struct InstrumentPCM instrumentPCM267 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_202SampleInfo,
+    /* Sample */ &sfx_202WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0060364d,
     /* unk10  */ 0x00600000,
@@ -4158,14 +4158,14 @@ const struct InstrumentPCM instrumentPCMData267 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_008SampleInfo;
-const struct InstrumentPCM instrumentPCMData268 = {
+extern const struct WaveData sfx_008WaveData;
+const struct InstrumentPCM instrumentPCM268 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_008SampleInfo,
+    /* Sample */ &sfx_008WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4174,14 +4174,14 @@ const struct InstrumentPCM instrumentPCMData268 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_013SampleInfo;
-const struct InstrumentPCM instrumentPCMData269 = {
+extern const struct WaveData sfx_013WaveData;
+const struct InstrumentPCM instrumentPCM269 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_013SampleInfo,
+    /* Sample */ &sfx_013WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -4190,14 +4190,14 @@ const struct InstrumentPCM instrumentPCMData269 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_203SampleInfo;
-const struct InstrumentPCM instrumentPCMData270 = {
+extern const struct WaveData sfx_203WaveData;
+const struct InstrumentPCM instrumentPCM270 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_203SampleInfo,
+    /* Sample */ &sfx_203WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -4206,14 +4206,14 @@ const struct InstrumentPCM instrumentPCMData270 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_114SampleInfo;
-const struct InstrumentPCM instrumentPCMData271 = {
+extern const struct WaveData sfx_114WaveData;
+const struct InstrumentPCM instrumentPCM271 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_114SampleInfo,
+    /* Sample */ &sfx_114WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4222,14 +4222,14 @@ const struct InstrumentPCM instrumentPCMData271 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_204SampleInfo;
-const struct InstrumentPCM instrumentPCMData272 = {
+extern const struct WaveData sfx_204WaveData;
+const struct InstrumentPCM instrumentPCM272 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_204SampleInfo,
+    /* Sample */ &sfx_204WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -4238,14 +4238,14 @@ const struct InstrumentPCM instrumentPCMData272 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_113SampleInfo;
-const struct InstrumentPCM instrumentPCMData273 = {
+extern const struct WaveData sfx_113WaveData;
+const struct InstrumentPCM instrumentPCM273 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_113SampleInfo,
+    /* Sample */ &sfx_113WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4254,14 +4254,14 @@ const struct InstrumentPCM instrumentPCMData273 = {
     /* unk1C  */ 0x00235dd1,
 };
 
-extern const struct SampleInfo sfx_017SampleInfo;
-const struct InstrumentPCM instrumentPCMData274 = {
+extern const struct WaveData sfx_017WaveData;
+const struct InstrumentPCM instrumentPCM274 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_017SampleInfo,
+    /* Sample */ &sfx_017WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -4270,14 +4270,14 @@ const struct InstrumentPCM instrumentPCMData274 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_205SampleInfo;
-const struct InstrumentPCM instrumentPCMData275 = {
+extern const struct WaveData sfx_205WaveData;
+const struct InstrumentPCM instrumentPCM275 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_205SampleInfo,
+    /* Sample */ &sfx_205WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -4286,14 +4286,14 @@ const struct InstrumentPCM instrumentPCMData275 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_042SampleInfo;
-const struct InstrumentPCM instrumentPCMData276 = {
+extern const struct WaveData sfx_042WaveData;
+const struct InstrumentPCM instrumentPCM276 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_042SampleInfo,
+    /* Sample */ &sfx_042WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4302,14 +4302,14 @@ const struct InstrumentPCM instrumentPCMData276 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_206SampleInfo;
-const struct InstrumentPCM instrumentPCMData277 = {
+extern const struct WaveData sfx_206WaveData;
+const struct InstrumentPCM instrumentPCM277 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_206SampleInfo,
+    /* Sample */ &sfx_206WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4318,14 +4318,14 @@ const struct InstrumentPCM instrumentPCMData277 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_207SampleInfo;
-const struct InstrumentPCM instrumentPCMData278 = {
+extern const struct WaveData sfx_207WaveData;
+const struct InstrumentPCM instrumentPCM278 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_207SampleInfo,
+    /* Sample */ &sfx_207WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4334,14 +4334,14 @@ const struct InstrumentPCM instrumentPCMData278 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_015SampleInfo;
-const struct InstrumentPCM instrumentPCMData279 = {
+extern const struct WaveData sfx_015WaveData;
+const struct InstrumentPCM instrumentPCM279 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_015SampleInfo,
+    /* Sample */ &sfx_015WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x001d1745,
@@ -4350,14 +4350,14 @@ const struct InstrumentPCM instrumentPCMData279 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_208SampleInfo;
-const struct InstrumentPCM instrumentPCMData280 = {
+extern const struct WaveData sfx_208WaveData;
+const struct InstrumentPCM instrumentPCM280 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_208SampleInfo,
+    /* Sample */ &sfx_208WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -4366,14 +4366,14 @@ const struct InstrumentPCM instrumentPCMData280 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_112SampleInfo;
-const struct InstrumentPCM instrumentPCMData281 = {
+extern const struct WaveData sfx_112WaveData;
+const struct InstrumentPCM instrumentPCM281 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_112SampleInfo,
+    /* Sample */ &sfx_112WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0066a052,
     /* unk10  */ 0x00600000,
@@ -4382,7 +4382,7 @@ const struct InstrumentPCM instrumentPCMData281 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubSplit instrumentSubbankMultiKeyData282 = {
+const struct InstrumentSubSplit instrumentSubSplit282 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -4392,14 +4392,14 @@ const struct InstrumentSubSplit instrumentSubbankMultiKeyData282 = {
     /* Sub-bank */ (void *)0x08a97010, // POINTER
 };
 
-extern const struct SampleInfo sfx_015SampleInfo;
-const struct InstrumentPCM instrumentPCMData283 = {
+extern const struct WaveData sfx_015WaveData;
+const struct InstrumentPCM instrumentPCM283 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_015SampleInfo,
+    /* Sample */ &sfx_015WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x004d9364,
@@ -4408,14 +4408,14 @@ const struct InstrumentPCM instrumentPCMData283 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_209SampleInfo;
-const struct InstrumentPCM instrumentPCMData284 = {
+extern const struct WaveData sfx_209WaveData;
+const struct InstrumentPCM instrumentPCM284 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_209SampleInfo,
+    /* Sample */ &sfx_209WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4424,14 +4424,14 @@ const struct InstrumentPCM instrumentPCMData284 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_210SampleInfo;
-const struct InstrumentPCM instrumentPCMData285 = {
+extern const struct WaveData sfx_210WaveData;
+const struct InstrumentPCM instrumentPCM285 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_210SampleInfo,
+    /* Sample */ &sfx_210WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4440,14 +4440,14 @@ const struct InstrumentPCM instrumentPCMData285 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_211SampleInfo;
-const struct InstrumentPCM instrumentPCMData286 = {
+extern const struct WaveData sfx_211WaveData;
+const struct InstrumentPCM instrumentPCM286 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_211SampleInfo,
+    /* Sample */ &sfx_211WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4456,7 +4456,7 @@ const struct InstrumentPCM instrumentPCMData286 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData287 = {
+const struct InstrumentSubRhythm instrumentSubRhythm287 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -4465,7 +4465,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData287 = {
     /* Sub-bank */ (void *)0x08a998e4, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData288 = {
+const struct InstrumentSubRhythm instrumentSubRhythm288 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -4474,7 +4474,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData288 = {
     /* Sub-bank */ (void *)0x08a996e4, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData289 = {
+const struct InstrumentSubRhythm instrumentSubRhythm289 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -4483,14 +4483,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData289 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_212SampleInfo;
-const struct InstrumentPCM instrumentPCMData290 = {
+extern const struct WaveData sfx_212WaveData;
+const struct InstrumentPCM instrumentPCM290 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_212SampleInfo,
+    /* Sample */ &sfx_212WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x00600000,
@@ -4499,14 +4499,14 @@ const struct InstrumentPCM instrumentPCMData290 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_117SampleInfo;
-const struct InstrumentPCM instrumentPCMData291 = {
+extern const struct WaveData sfx_117WaveData;
+const struct InstrumentPCM instrumentPCM291 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_117SampleInfo,
+    /* Sample */ &sfx_117WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4515,14 +4515,14 @@ const struct InstrumentPCM instrumentPCMData291 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_015SampleInfo;
-const struct InstrumentPCM instrumentPCMData292 = {
+extern const struct WaveData sfx_015WaveData;
+const struct InstrumentPCM instrumentPCM292 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_015SampleInfo,
+    /* Sample */ &sfx_015WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x001d1745,
@@ -4531,14 +4531,14 @@ const struct InstrumentPCM instrumentPCMData292 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_008SampleInfo;
-const struct InstrumentPCM instrumentPCMData293 = {
+extern const struct WaveData sfx_008WaveData;
+const struct InstrumentPCM instrumentPCM293 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_008SampleInfo,
+    /* Sample */ &sfx_008WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4547,14 +4547,14 @@ const struct InstrumentPCM instrumentPCMData293 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_023SampleInfo;
-const struct InstrumentPCM instrumentPCMData294 = {
+extern const struct WaveData sfx_023WaveData;
+const struct InstrumentPCM instrumentPCM294 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_023SampleInfo,
+    /* Sample */ &sfx_023WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4563,14 +4563,14 @@ const struct InstrumentPCM instrumentPCMData294 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_213SampleInfo;
-const struct InstrumentPCM instrumentPCMData295 = {
+extern const struct WaveData sfx_213WaveData;
+const struct InstrumentPCM instrumentPCM295 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_213SampleInfo,
+    /* Sample */ &sfx_213WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -4579,14 +4579,14 @@ const struct InstrumentPCM instrumentPCMData295 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_214SampleInfo;
-const struct InstrumentPCM instrumentPCMData296 = {
+extern const struct WaveData sfx_214WaveData;
+const struct InstrumentPCM instrumentPCM296 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_214SampleInfo,
+    /* Sample */ &sfx_214WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4595,14 +4595,14 @@ const struct InstrumentPCM instrumentPCMData296 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_122SampleInfo;
-const struct InstrumentPCM instrumentPCMData297 = {
+extern const struct WaveData sfx_122WaveData;
+const struct InstrumentPCM instrumentPCM297 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_122SampleInfo,
+    /* Sample */ &sfx_122WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4611,14 +4611,14 @@ const struct InstrumentPCM instrumentPCMData297 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_215SampleInfo;
-const struct InstrumentPCM instrumentPCMData298 = {
+extern const struct WaveData sfx_215WaveData;
+const struct InstrumentPCM instrumentPCM298 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_215SampleInfo,
+    /* Sample */ &sfx_215WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x0043e0f8,
@@ -4627,14 +4627,14 @@ const struct InstrumentPCM instrumentPCMData298 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_216SampleInfo;
-const struct InstrumentPCM instrumentPCMData299 = {
+extern const struct WaveData sfx_216WaveData;
+const struct InstrumentPCM instrumentPCM299 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_216SampleInfo,
+    /* Sample */ &sfx_216WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4643,14 +4643,14 @@ const struct InstrumentPCM instrumentPCMData299 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_217SampleInfo;
-const struct InstrumentPCM instrumentPCMData300 = {
+extern const struct WaveData sfx_217WaveData;
+const struct InstrumentPCM instrumentPCM300 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_217SampleInfo,
+    /* Sample */ &sfx_217WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4659,14 +4659,14 @@ const struct InstrumentPCM instrumentPCMData300 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_107SampleInfo;
-const struct InstrumentPCM instrumentPCMData301 = {
+extern const struct WaveData sfx_107WaveData;
+const struct InstrumentPCM instrumentPCM301 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_107SampleInfo,
+    /* Sample */ &sfx_107WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -4675,14 +4675,14 @@ const struct InstrumentPCM instrumentPCMData301 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_215SampleInfo;
-const struct InstrumentPCM instrumentPCMData302 = {
+extern const struct WaveData sfx_215WaveData;
+const struct InstrumentPCM instrumentPCM302 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_215SampleInfo,
+    /* Sample */ &sfx_215WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00307c1f,
@@ -4691,14 +4691,14 @@ const struct InstrumentPCM instrumentPCMData302 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_218SampleInfo;
-const struct InstrumentPCM instrumentPCMData303 = {
+extern const struct WaveData sfx_218WaveData;
+const struct InstrumentPCM instrumentPCM303 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_218SampleInfo,
+    /* Sample */ &sfx_218WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4707,14 +4707,14 @@ const struct InstrumentPCM instrumentPCMData303 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_219SampleInfo;
-const struct InstrumentPCM instrumentPCMData304 = {
+extern const struct WaveData sfx_219WaveData;
+const struct InstrumentPCM instrumentPCM304 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_219SampleInfo,
+    /* Sample */ &sfx_219WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4723,14 +4723,14 @@ const struct InstrumentPCM instrumentPCMData304 = {
     /* unk1C  */ 0x0001638c,
 };
 
-extern const struct SampleInfo sfx_220SampleInfo;
-const struct InstrumentPCM instrumentPCMData305 = {
+extern const struct WaveData sfx_220WaveData;
+const struct InstrumentPCM instrumentPCM305 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_220SampleInfo,
+    /* Sample */ &sfx_220WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4739,7 +4739,7 @@ const struct InstrumentPCM instrumentPCMData305 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData306 = {
+const struct InstrumentSubRhythm instrumentSubRhythm306 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -4748,14 +4748,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData306 = {
     /* Sub-bank */ (void *)0x08a99d3c, // POINTER
 };
 
-extern const struct SampleInfo sfx_221SampleInfo;
-const struct InstrumentPCM instrumentPCMData307 = {
+extern const struct WaveData sfx_221WaveData;
+const struct InstrumentPCM instrumentPCM307 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_221SampleInfo,
+    /* Sample */ &sfx_221WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4764,14 +4764,14 @@ const struct InstrumentPCM instrumentPCMData307 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_222SampleInfo;
-const struct InstrumentPCM instrumentPCMData308 = {
+extern const struct WaveData sfx_222WaveData;
+const struct InstrumentPCM instrumentPCM308 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_222SampleInfo,
+    /* Sample */ &sfx_222WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4780,14 +4780,14 @@ const struct InstrumentPCM instrumentPCMData308 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_093SampleInfo;
-const struct InstrumentPCM instrumentPCMData309 = {
+extern const struct WaveData sfx_093WaveData;
+const struct InstrumentPCM instrumentPCM309 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_093SampleInfo,
+    /* Sample */ &sfx_093WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -4796,14 +4796,14 @@ const struct InstrumentPCM instrumentPCMData309 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_094SampleInfo;
-const struct InstrumentPCM instrumentPCMData310 = {
+extern const struct WaveData sfx_094WaveData;
+const struct InstrumentPCM instrumentPCM310 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_094SampleInfo,
+    /* Sample */ &sfx_094WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4812,14 +4812,14 @@ const struct InstrumentPCM instrumentPCMData310 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_095SampleInfo;
-const struct InstrumentPCM instrumentPCMData311 = {
+extern const struct WaveData sfx_095WaveData;
+const struct InstrumentPCM instrumentPCM311 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_095SampleInfo,
+    /* Sample */ &sfx_095WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -4828,14 +4828,14 @@ const struct InstrumentPCM instrumentPCMData311 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_096SampleInfo;
-const struct InstrumentPCM instrumentPCMData312 = {
+extern const struct WaveData sfx_096WaveData;
+const struct InstrumentPCM instrumentPCM312 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_096SampleInfo,
+    /* Sample */ &sfx_096WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4844,14 +4844,14 @@ const struct InstrumentPCM instrumentPCMData312 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_097SampleInfo;
-const struct InstrumentPCM instrumentPCMData313 = {
+extern const struct WaveData sfx_097WaveData;
+const struct InstrumentPCM instrumentPCM313 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_097SampleInfo,
+    /* Sample */ &sfx_097WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4860,14 +4860,14 @@ const struct InstrumentPCM instrumentPCMData313 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_098SampleInfo;
-const struct InstrumentPCM instrumentPCMData314 = {
+extern const struct WaveData sfx_098WaveData;
+const struct InstrumentPCM instrumentPCM314 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_098SampleInfo,
+    /* Sample */ &sfx_098WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4876,14 +4876,14 @@ const struct InstrumentPCM instrumentPCMData314 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_099SampleInfo;
-const struct InstrumentPCM instrumentPCMData315 = {
+extern const struct WaveData sfx_099WaveData;
+const struct InstrumentPCM instrumentPCM315 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_099SampleInfo,
+    /* Sample */ &sfx_099WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4892,14 +4892,14 @@ const struct InstrumentPCM instrumentPCMData315 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_100SampleInfo;
-const struct InstrumentPCM instrumentPCMData316 = {
+extern const struct WaveData sfx_100WaveData;
+const struct InstrumentPCM instrumentPCM316 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_100SampleInfo,
+    /* Sample */ &sfx_100WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -4908,14 +4908,14 @@ const struct InstrumentPCM instrumentPCMData316 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_101SampleInfo;
-const struct InstrumentPCM instrumentPCMData317 = {
+extern const struct WaveData sfx_101WaveData;
+const struct InstrumentPCM instrumentPCM317 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_101SampleInfo,
+    /* Sample */ &sfx_101WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4924,14 +4924,14 @@ const struct InstrumentPCM instrumentPCMData317 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_102SampleInfo;
-const struct InstrumentPCM instrumentPCMData318 = {
+extern const struct WaveData sfx_102WaveData;
+const struct InstrumentPCM instrumentPCM318 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_102SampleInfo,
+    /* Sample */ &sfx_102WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -4940,14 +4940,14 @@ const struct InstrumentPCM instrumentPCMData318 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_103SampleInfo;
-const struct InstrumentPCM instrumentPCMData319 = {
+extern const struct WaveData sfx_103WaveData;
+const struct InstrumentPCM instrumentPCM319 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_103SampleInfo,
+    /* Sample */ &sfx_103WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4956,14 +4956,14 @@ const struct InstrumentPCM instrumentPCMData319 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_104SampleInfo;
-const struct InstrumentPCM instrumentPCMData320 = {
+extern const struct WaveData sfx_104WaveData;
+const struct InstrumentPCM instrumentPCM320 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_104SampleInfo,
+    /* Sample */ &sfx_104WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4972,14 +4972,14 @@ const struct InstrumentPCM instrumentPCMData320 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_105SampleInfo;
-const struct InstrumentPCM instrumentPCMData321 = {
+extern const struct WaveData sfx_105WaveData;
+const struct InstrumentPCM instrumentPCM321 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_105SampleInfo,
+    /* Sample */ &sfx_105WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -4988,14 +4988,14 @@ const struct InstrumentPCM instrumentPCMData321 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_106SampleInfo;
-const struct InstrumentPCM instrumentPCMData322 = {
+extern const struct WaveData sfx_106WaveData;
+const struct InstrumentPCM instrumentPCM322 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_106SampleInfo,
+    /* Sample */ &sfx_106WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -5004,14 +5004,14 @@ const struct InstrumentPCM instrumentPCMData322 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_223SampleInfo;
-const struct InstrumentPCM instrumentPCMData323 = {
+extern const struct WaveData sfx_223WaveData;
+const struct InstrumentPCM instrumentPCM323 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_223SampleInfo,
+    /* Sample */ &sfx_223WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -5020,14 +5020,14 @@ const struct InstrumentPCM instrumentPCMData323 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_224SampleInfo;
-const struct InstrumentPCM instrumentPCMData324 = {
+extern const struct WaveData sfx_224WaveData;
+const struct InstrumentPCM instrumentPCM324 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_224SampleInfo,
+    /* Sample */ &sfx_224WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -5036,14 +5036,14 @@ const struct InstrumentPCM instrumentPCMData324 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_225SampleInfo;
-const struct InstrumentPCM instrumentPCMData325 = {
+extern const struct WaveData sfx_225WaveData;
+const struct InstrumentPCM instrumentPCM325 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_225SampleInfo,
+    /* Sample */ &sfx_225WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -5052,7 +5052,7 @@ const struct InstrumentPCM instrumentPCMData325 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData326 = {
+const struct InstrumentSubRhythm instrumentSubRhythm326 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -5061,14 +5061,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData326 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_226SampleInfo;
-const struct InstrumentPCM instrumentPCMData327 = {
+extern const struct WaveData sfx_226WaveData;
+const struct InstrumentPCM instrumentPCM327 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_226SampleInfo,
+    /* Sample */ &sfx_226WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -5077,14 +5077,14 @@ const struct InstrumentPCM instrumentPCMData327 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_114SampleInfo;
-const struct InstrumentPCM instrumentPCMData328 = {
+extern const struct WaveData sfx_114WaveData;
+const struct InstrumentPCM instrumentPCM328 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_114SampleInfo,
+    /* Sample */ &sfx_114WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -5093,14 +5093,14 @@ const struct InstrumentPCM instrumentPCMData328 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_200SampleInfo;
-const struct InstrumentPCM instrumentPCMData329 = {
+extern const struct WaveData sfx_200WaveData;
+const struct InstrumentPCM instrumentPCM329 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_200SampleInfo,
+    /* Sample */ &sfx_200WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -5109,14 +5109,14 @@ const struct InstrumentPCM instrumentPCMData329 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_227SampleInfo;
-const struct InstrumentPCM instrumentPCMData330 = {
+extern const struct WaveData sfx_227WaveData;
+const struct InstrumentPCM instrumentPCM330 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_227SampleInfo,
+    /* Sample */ &sfx_227WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -5125,14 +5125,14 @@ const struct InstrumentPCM instrumentPCMData330 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_228SampleInfo;
-const struct InstrumentPCM instrumentPCMData331 = {
+extern const struct WaveData sfx_228WaveData;
+const struct InstrumentPCM instrumentPCM331 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_228SampleInfo,
+    /* Sample */ &sfx_228WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -5141,14 +5141,14 @@ const struct InstrumentPCM instrumentPCMData331 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_110SampleInfo;
-const struct InstrumentPCM instrumentPCMData332 = {
+extern const struct WaveData sfx_110WaveData;
+const struct InstrumentPCM instrumentPCM332 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_110SampleInfo,
+    /* Sample */ &sfx_110WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0066a052,
     /* unk10  */ 0x00600000,
@@ -5157,14 +5157,14 @@ const struct InstrumentPCM instrumentPCMData332 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_111SampleInfo;
-const struct InstrumentPCM instrumentPCMData333 = {
+extern const struct WaveData sfx_111WaveData;
+const struct InstrumentPCM instrumentPCM333 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_111SampleInfo,
+    /* Sample */ &sfx_111WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0066a052,
     /* unk10  */ 0x00600000,
@@ -5173,14 +5173,14 @@ const struct InstrumentPCM instrumentPCMData333 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_229SampleInfo;
-const struct InstrumentPCM instrumentPCMData334 = {
+extern const struct WaveData sfx_229WaveData;
+const struct InstrumentPCM instrumentPCM334 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_229SampleInfo,
+    /* Sample */ &sfx_229WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -5189,14 +5189,14 @@ const struct InstrumentPCM instrumentPCMData334 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_230SampleInfo;
-const struct InstrumentPCM instrumentPCMData335 = {
+extern const struct WaveData sfx_230WaveData;
+const struct InstrumentPCM instrumentPCM335 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_230SampleInfo,
+    /* Sample */ &sfx_230WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -5205,14 +5205,14 @@ const struct InstrumentPCM instrumentPCMData335 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_113SampleInfo;
-const struct InstrumentPCM instrumentPCMData336 = {
+extern const struct WaveData sfx_113WaveData;
+const struct InstrumentPCM instrumentPCM336 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_113SampleInfo,
+    /* Sample */ &sfx_113WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -5221,14 +5221,14 @@ const struct InstrumentPCM instrumentPCMData336 = {
     /* unk1C  */ 0x00235dd1,
 };
 
-extern const struct SampleInfo sfx_207SampleInfo;
-const struct InstrumentPCM instrumentPCMData337 = {
+extern const struct WaveData sfx_207WaveData;
+const struct InstrumentPCM instrumentPCM337 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_207SampleInfo,
+    /* Sample */ &sfx_207WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -5237,14 +5237,14 @@ const struct InstrumentPCM instrumentPCMData337 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_206SampleInfo;
-const struct InstrumentPCM instrumentPCMData338 = {
+extern const struct WaveData sfx_206WaveData;
+const struct InstrumentPCM instrumentPCM338 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_206SampleInfo,
+    /* Sample */ &sfx_206WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -5253,7 +5253,7 @@ const struct InstrumentPCM instrumentPCMData338 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubSplit instrumentSubbankMultiKeyData339 = {
+const struct InstrumentSubSplit instrumentSubSplit339 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -5263,14 +5263,14 @@ const struct InstrumentSubSplit instrumentSubbankMultiKeyData339 = {
     /* Sub-bank */ (void *)0x08a95248, // POINTER
 };
 
-extern const struct SampleInfo sfx_211SampleInfo;
-const struct InstrumentPCM instrumentPCMData340 = {
+extern const struct WaveData sfx_211WaveData;
+const struct InstrumentPCM instrumentPCM340 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_211SampleInfo,
+    /* Sample */ &sfx_211WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -5279,14 +5279,14 @@ const struct InstrumentPCM instrumentPCMData340 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_231SampleInfo;
-const struct InstrumentPCM instrumentPCMData341 = {
+extern const struct WaveData sfx_231WaveData;
+const struct InstrumentPCM instrumentPCM341 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_231SampleInfo,
+    /* Sample */ &sfx_231WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -5295,14 +5295,14 @@ const struct InstrumentPCM instrumentPCMData341 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_232SampleInfo;
-const struct InstrumentPCM instrumentPCMData342 = {
+extern const struct WaveData sfx_232WaveData;
+const struct InstrumentPCM instrumentPCM342 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_232SampleInfo,
+    /* Sample */ &sfx_232WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -5311,14 +5311,14 @@ const struct InstrumentPCM instrumentPCMData342 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_233SampleInfo;
-const struct InstrumentPCM instrumentPCMData343 = {
+extern const struct WaveData sfx_233WaveData;
+const struct InstrumentPCM instrumentPCM343 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_233SampleInfo,
+    /* Sample */ &sfx_233WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -5327,14 +5327,14 @@ const struct InstrumentPCM instrumentPCMData343 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_234SampleInfo;
-const struct InstrumentPCM instrumentPCMData344 = {
+extern const struct WaveData sfx_234WaveData;
+const struct InstrumentPCM instrumentPCM344 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_234SampleInfo,
+    /* Sample */ &sfx_234WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -5343,14 +5343,14 @@ const struct InstrumentPCM instrumentPCMData344 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_235SampleInfo;
-const struct InstrumentPCM instrumentPCMData345 = {
+extern const struct WaveData sfx_235WaveData;
+const struct InstrumentPCM instrumentPCM345 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_235SampleInfo,
+    /* Sample */ &sfx_235WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -5359,7 +5359,7 @@ const struct InstrumentPCM instrumentPCMData345 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData346 = {
+const struct InstrumentSubRhythm instrumentSubRhythm346 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -5368,7 +5368,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData346 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData347 = {
+const struct InstrumentSubRhythm instrumentSubRhythm347 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -5377,7 +5377,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData347 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-const struct InstrumentPSG instrumentPSGData348 = {
+const struct InstrumentPSG instrumentPSG348 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5395,7 +5395,7 @@ const struct InstrumentPSG instrumentPSGData348 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData349 = {
+const struct InstrumentPSG instrumentPSG349 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5413,7 +5413,7 @@ const struct InstrumentPSG instrumentPSGData349 = {
     /* unk22        */ 0x2,
 };
 
-const struct InstrumentPSG instrumentPSGData350 = {
+const struct InstrumentPSG instrumentPSG350 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5431,7 +5431,7 @@ const struct InstrumentPSG instrumentPSGData350 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData351 = {
+const struct InstrumentPSG instrumentPSG351 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5449,7 +5449,7 @@ const struct InstrumentPSG instrumentPSGData351 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData352 = {
+const struct InstrumentPSG instrumentPSG352 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5467,7 +5467,7 @@ const struct InstrumentPSG instrumentPSGData352 = {
     /* unk22        */ 0x2,
 };
 
-const struct InstrumentPSG instrumentPSGData353 = {
+const struct InstrumentPSG instrumentPSG353 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5485,7 +5485,7 @@ const struct InstrumentPSG instrumentPSGData353 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData354 = {
+const struct InstrumentPSG instrumentPSG354 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5503,7 +5503,7 @@ const struct InstrumentPSG instrumentPSGData354 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData355 = {
+const struct InstrumentPSG instrumentPSG355 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5521,7 +5521,7 @@ const struct InstrumentPSG instrumentPSGData355 = {
     /* unk22        */ 0x2,
 };
 
-const struct InstrumentPSG instrumentPSGData356 = {
+const struct InstrumentPSG instrumentPSG356 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5539,7 +5539,7 @@ const struct InstrumentPSG instrumentPSGData356 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData357 = {
+const struct InstrumentPSG instrumentPSG357 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5557,7 +5557,7 @@ const struct InstrumentPSG instrumentPSGData357 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData358 = {
+const struct InstrumentPSG instrumentPSG358 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5575,7 +5575,7 @@ const struct InstrumentPSG instrumentPSGData358 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData359 = {
+const struct InstrumentPSG instrumentPSG359 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5593,7 +5593,7 @@ const struct InstrumentPSG instrumentPSGData359 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData360 = {
+const struct InstrumentPSG instrumentPSG360 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5611,7 +5611,7 @@ const struct InstrumentPSG instrumentPSGData360 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData361 = {
+const struct InstrumentPSG instrumentPSG361 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5629,7 +5629,7 @@ const struct InstrumentPSG instrumentPSGData361 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData362 = {
+const struct InstrumentPSG instrumentPSG362 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5647,7 +5647,7 @@ const struct InstrumentPSG instrumentPSGData362 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData363 = {
+const struct InstrumentPSG instrumentPSG363 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5665,7 +5665,7 @@ const struct InstrumentPSG instrumentPSGData363 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData364 = {
+const struct InstrumentPSG instrumentPSG364 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5683,7 +5683,7 @@ const struct InstrumentPSG instrumentPSGData364 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData365 = {
+const struct InstrumentPSG instrumentPSG365 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5701,7 +5701,7 @@ const struct InstrumentPSG instrumentPSGData365 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData366 = {
+const struct InstrumentPSG instrumentPSG366 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5719,7 +5719,7 @@ const struct InstrumentPSG instrumentPSGData366 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData367 = {
+const struct InstrumentPSG instrumentPSG367 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5737,7 +5737,7 @@ const struct InstrumentPSG instrumentPSGData367 = {
     /* unk22        */ 0x5,
 };
 
-const struct InstrumentPSG instrumentPSGData368 = {
+const struct InstrumentPSG instrumentPSG368 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5755,7 +5755,7 @@ const struct InstrumentPSG instrumentPSGData368 = {
     /* unk22        */ 0x5,
 };
 
-const struct InstrumentPSG instrumentPSGData369 = {
+const struct InstrumentPSG instrumentPSG369 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5773,7 +5773,7 @@ const struct InstrumentPSG instrumentPSGData369 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData370 = {
+const struct InstrumentPSG instrumentPSG370 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5791,7 +5791,7 @@ const struct InstrumentPSG instrumentPSGData370 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData371 = {
+const struct InstrumentPSG instrumentPSG371 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5809,7 +5809,7 @@ const struct InstrumentPSG instrumentPSGData371 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData372 = {
+const struct InstrumentPSG instrumentPSG372 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5827,7 +5827,7 @@ const struct InstrumentPSG instrumentPSGData372 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData373 = {
+const struct InstrumentPSG instrumentPSG373 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5845,7 +5845,7 @@ const struct InstrumentPSG instrumentPSGData373 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData374 = {
+const struct InstrumentPSG instrumentPSG374 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5863,7 +5863,7 @@ const struct InstrumentPSG instrumentPSGData374 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData375 = {
+const struct InstrumentPSG instrumentPSG375 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5881,7 +5881,7 @@ const struct InstrumentPSG instrumentPSGData375 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData376 = {
+const struct InstrumentPSG instrumentPSG376 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5899,7 +5899,7 @@ const struct InstrumentPSG instrumentPSGData376 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData377 = {
+const struct InstrumentPSG instrumentPSG377 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5917,7 +5917,7 @@ const struct InstrumentPSG instrumentPSGData377 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData378 = {
+const struct InstrumentPSG instrumentPSG378 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5935,7 +5935,7 @@ const struct InstrumentPSG instrumentPSGData378 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData379 = {
+const struct InstrumentPSG instrumentPSG379 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5953,7 +5953,7 @@ const struct InstrumentPSG instrumentPSGData379 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData380 = {
+const struct InstrumentPSG instrumentPSG380 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5971,7 +5971,7 @@ const struct InstrumentPSG instrumentPSGData380 = {
     /* unk22        */ 0x2,
 };
 
-const struct InstrumentPSG instrumentPSGData381 = {
+const struct InstrumentPSG instrumentPSG381 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -5989,7 +5989,7 @@ const struct InstrumentPSG instrumentPSGData381 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData382 = {
+const struct InstrumentPSG instrumentPSG382 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6007,7 +6007,7 @@ const struct InstrumentPSG instrumentPSGData382 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData383 = {
+const struct InstrumentPSG instrumentPSG383 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6025,7 +6025,7 @@ const struct InstrumentPSG instrumentPSGData383 = {
     /* unk22        */ 0x2,
 };
 
-const struct InstrumentPSG instrumentPSGData384 = {
+const struct InstrumentPSG instrumentPSG384 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6043,7 +6043,7 @@ const struct InstrumentPSG instrumentPSGData384 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData385 = {
+const struct InstrumentPSG instrumentPSG385 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6061,7 +6061,7 @@ const struct InstrumentPSG instrumentPSGData385 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData386 = {
+const struct InstrumentPSG instrumentPSG386 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6079,7 +6079,7 @@ const struct InstrumentPSG instrumentPSGData386 = {
     /* unk22        */ 0x2,
 };
 
-const struct InstrumentPSG instrumentPSGData387 = {
+const struct InstrumentPSG instrumentPSG387 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6097,7 +6097,7 @@ const struct InstrumentPSG instrumentPSGData387 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData388 = {
+const struct InstrumentPSG instrumentPSG388 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6115,7 +6115,7 @@ const struct InstrumentPSG instrumentPSGData388 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData389 = {
+const struct InstrumentPSG instrumentPSG389 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6133,7 +6133,7 @@ const struct InstrumentPSG instrumentPSGData389 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData390 = {
+const struct InstrumentPSG instrumentPSG390 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6151,7 +6151,7 @@ const struct InstrumentPSG instrumentPSGData390 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData391 = {
+const struct InstrumentPSG instrumentPSG391 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6169,7 +6169,7 @@ const struct InstrumentPSG instrumentPSGData391 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData392 = {
+const struct InstrumentPSG instrumentPSG392 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6187,7 +6187,7 @@ const struct InstrumentPSG instrumentPSGData392 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData393 = {
+const struct InstrumentPSG instrumentPSG393 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6205,7 +6205,7 @@ const struct InstrumentPSG instrumentPSGData393 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData394 = {
+const struct InstrumentPSG instrumentPSG394 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6223,7 +6223,7 @@ const struct InstrumentPSG instrumentPSGData394 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData395 = {
+const struct InstrumentPSG instrumentPSG395 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6241,7 +6241,7 @@ const struct InstrumentPSG instrumentPSGData395 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData396 = {
+const struct InstrumentPSG instrumentPSG396 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6259,7 +6259,7 @@ const struct InstrumentPSG instrumentPSGData396 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData397 = {
+const struct InstrumentPSG instrumentPSG397 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6277,7 +6277,7 @@ const struct InstrumentPSG instrumentPSGData397 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData398 = {
+const struct InstrumentPSG instrumentPSG398 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6295,7 +6295,7 @@ const struct InstrumentPSG instrumentPSGData398 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData399 = {
+const struct InstrumentPSG instrumentPSG399 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6313,7 +6313,7 @@ const struct InstrumentPSG instrumentPSGData399 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData400 = {
+const struct InstrumentPSG instrumentPSG400 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6331,7 +6331,7 @@ const struct InstrumentPSG instrumentPSGData400 = {
     /* unk22        */ 0x8,
 };
 
-const struct InstrumentPSG instrumentPSGData401 = {
+const struct InstrumentPSG instrumentPSG401 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6349,7 +6349,7 @@ const struct InstrumentPSG instrumentPSGData401 = {
     /* unk22        */ 0x8,
 };
 
-const struct InstrumentPSG instrumentPSGData402 = {
+const struct InstrumentPSG instrumentPSG402 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6367,7 +6367,7 @@ const struct InstrumentPSG instrumentPSGData402 = {
     /* unk22        */ 0x8,
 };
 
-const struct InstrumentPSG instrumentPSGData403 = {
+const struct InstrumentPSG instrumentPSG403 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6385,7 +6385,7 @@ const struct InstrumentPSG instrumentPSGData403 = {
     /* unk22        */ 0x2,
 };
 
-const struct InstrumentPSG instrumentPSGData404 = {
+const struct InstrumentPSG instrumentPSG404 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6403,7 +6403,7 @@ const struct InstrumentPSG instrumentPSGData404 = {
     /* unk22        */ 0x2,
 };
 
-const struct InstrumentPSG instrumentPSGData405 = {
+const struct InstrumentPSG instrumentPSG405 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6421,7 +6421,7 @@ const struct InstrumentPSG instrumentPSGData405 = {
     /* unk22        */ 0x2,
 };
 
-const struct InstrumentPSG instrumentPSGData406 = {
+const struct InstrumentPSG instrumentPSG406 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6439,7 +6439,7 @@ const struct InstrumentPSG instrumentPSGData406 = {
     /* unk22        */ 0x2,
 };
 
-const struct InstrumentPSG instrumentPSGData407 = {
+const struct InstrumentPSG instrumentPSG407 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6457,7 +6457,7 @@ const struct InstrumentPSG instrumentPSGData407 = {
     /* unk22        */ 0x3,
 };
 
-const struct InstrumentPSG instrumentPSGData408 = {
+const struct InstrumentPSG instrumentPSG408 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6475,7 +6475,7 @@ const struct InstrumentPSG instrumentPSGData408 = {
     /* unk22        */ 0x3,
 };
 
-const struct InstrumentPSG instrumentPSGData409 = {
+const struct InstrumentPSG instrumentPSG409 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6493,7 +6493,7 @@ const struct InstrumentPSG instrumentPSGData409 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData410 = {
+const struct InstrumentPSG instrumentPSG410 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6511,7 +6511,7 @@ const struct InstrumentPSG instrumentPSGData410 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData411 = {
+const struct InstrumentPSG instrumentPSG411 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6529,7 +6529,7 @@ const struct InstrumentPSG instrumentPSGData411 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData412 = {
+const struct InstrumentPSG instrumentPSG412 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6547,7 +6547,7 @@ const struct InstrumentPSG instrumentPSGData412 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData413 = {
+const struct InstrumentPSG instrumentPSG413 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6565,7 +6565,7 @@ const struct InstrumentPSG instrumentPSGData413 = {
     /* unk22        */ 0x1,
 };
 
-const struct InstrumentPSG instrumentPSGData414 = {
+const struct InstrumentPSG instrumentPSG414 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6583,7 +6583,7 @@ const struct InstrumentPSG instrumentPSGData414 = {
     /* unk22        */ 0x1,
 };
 
-const struct InstrumentPSG instrumentPSGData415 = {
+const struct InstrumentPSG instrumentPSG415 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6601,7 +6601,7 @@ const struct InstrumentPSG instrumentPSGData415 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData416 = {
+const struct InstrumentPSG instrumentPSG416 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -6619,14 +6619,14 @@ const struct InstrumentPSG instrumentPSGData416 = {
     /* unk22        */ 0x4,
 };
 
-extern const struct SampleInfo sfx_236SampleInfo;
-const struct InstrumentPCM instrumentPCMData417 = {
+extern const struct WaveData sfx_236WaveData;
+const struct InstrumentPCM instrumentPCM417 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_236SampleInfo,
+    /* Sample */ &sfx_236WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -6635,14 +6635,14 @@ const struct InstrumentPCM instrumentPCMData417 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_237SampleInfo;
-const struct InstrumentPCM instrumentPCMData418 = {
+extern const struct WaveData sfx_237WaveData;
+const struct InstrumentPCM instrumentPCM418 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_237SampleInfo,
+    /* Sample */ &sfx_237WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -6651,14 +6651,14 @@ const struct InstrumentPCM instrumentPCMData418 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_202SampleInfo;
-const struct InstrumentPCM instrumentPCMData419 = {
+extern const struct WaveData sfx_202WaveData;
+const struct InstrumentPCM instrumentPCM419 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_202SampleInfo,
+    /* Sample */ &sfx_202WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0060364d,
     /* unk10  */ 0x00600000,
@@ -6667,14 +6667,14 @@ const struct InstrumentPCM instrumentPCMData419 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_003SampleInfo;
-const struct InstrumentPCM instrumentPCMData420 = {
+extern const struct WaveData sfx_003WaveData;
+const struct InstrumentPCM instrumentPCM420 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_003SampleInfo,
+    /* Sample */ &sfx_003WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -6683,14 +6683,14 @@ const struct InstrumentPCM instrumentPCMData420 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_204SampleInfo;
-const struct InstrumentPCM instrumentPCMData421 = {
+extern const struct WaveData sfx_204WaveData;
+const struct InstrumentPCM instrumentPCM421 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_204SampleInfo,
+    /* Sample */ &sfx_204WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -6699,14 +6699,14 @@ const struct InstrumentPCM instrumentPCMData421 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_196SampleInfo;
-const struct InstrumentPCM instrumentPCMData422 = {
+extern const struct WaveData sfx_196WaveData;
+const struct InstrumentPCM instrumentPCM422 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_196SampleInfo,
+    /* Sample */ &sfx_196WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -6715,14 +6715,14 @@ const struct InstrumentPCM instrumentPCMData422 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_238SampleInfo;
-const struct InstrumentPCM instrumentPCMData423 = {
+extern const struct WaveData sfx_238WaveData;
+const struct InstrumentPCM instrumentPCM423 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_238SampleInfo,
+    /* Sample */ &sfx_238WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x00600000,
@@ -6731,14 +6731,14 @@ const struct InstrumentPCM instrumentPCMData423 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_239SampleInfo;
-const struct InstrumentPCM instrumentPCMData424 = {
+extern const struct WaveData sfx_239WaveData;
+const struct InstrumentPCM instrumentPCM424 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_239SampleInfo,
+    /* Sample */ &sfx_239WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -6747,14 +6747,14 @@ const struct InstrumentPCM instrumentPCMData424 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_240SampleInfo;
-const struct InstrumentPCM instrumentPCMData425 = {
+extern const struct WaveData sfx_240WaveData;
+const struct InstrumentPCM instrumentPCM425 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_240SampleInfo,
+    /* Sample */ &sfx_240WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -6763,14 +6763,14 @@ const struct InstrumentPCM instrumentPCMData425 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_241SampleInfo;
-const struct InstrumentPCM instrumentPCMData426 = {
+extern const struct WaveData sfx_241WaveData;
+const struct InstrumentPCM instrumentPCM426 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_241SampleInfo,
+    /* Sample */ &sfx_241WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -6779,14 +6779,14 @@ const struct InstrumentPCM instrumentPCMData426 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_242SampleInfo;
-const struct InstrumentPCM instrumentPCMData427 = {
+extern const struct WaveData sfx_242WaveData;
+const struct InstrumentPCM instrumentPCM427 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_242SampleInfo,
+    /* Sample */ &sfx_242WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -6795,14 +6795,14 @@ const struct InstrumentPCM instrumentPCMData427 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_243SampleInfo;
-const struct InstrumentPCM instrumentPCMData428 = {
+extern const struct WaveData sfx_243WaveData;
+const struct InstrumentPCM instrumentPCM428 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_243SampleInfo,
+    /* Sample */ &sfx_243WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -6811,14 +6811,14 @@ const struct InstrumentPCM instrumentPCMData428 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_244SampleInfo;
-const struct InstrumentPCM instrumentPCMData429 = {
+extern const struct WaveData sfx_244WaveData;
+const struct InstrumentPCM instrumentPCM429 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_244SampleInfo,
+    /* Sample */ &sfx_244WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -6827,14 +6827,14 @@ const struct InstrumentPCM instrumentPCMData429 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_245SampleInfo;
-const struct InstrumentPCM instrumentPCMData430 = {
+extern const struct WaveData sfx_245WaveData;
+const struct InstrumentPCM instrumentPCM430 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_245SampleInfo,
+    /* Sample */ &sfx_245WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -6843,14 +6843,14 @@ const struct InstrumentPCM instrumentPCMData430 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_246SampleInfo;
-const struct InstrumentPCM instrumentPCMData431 = {
+extern const struct WaveData sfx_246WaveData;
+const struct InstrumentPCM instrumentPCM431 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_246SampleInfo,
+    /* Sample */ &sfx_246WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -6859,14 +6859,14 @@ const struct InstrumentPCM instrumentPCMData431 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_247SampleInfo;
-const struct InstrumentPCM instrumentPCMData432 = {
+extern const struct WaveData sfx_247WaveData;
+const struct InstrumentPCM instrumentPCM432 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_247SampleInfo,
+    /* Sample */ &sfx_247WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -6875,14 +6875,14 @@ const struct InstrumentPCM instrumentPCMData432 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_248SampleInfo;
-const struct InstrumentPCM instrumentPCMData433 = {
+extern const struct WaveData sfx_248WaveData;
+const struct InstrumentPCM instrumentPCM433 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_248SampleInfo,
+    /* Sample */ &sfx_248WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -6891,14 +6891,14 @@ const struct InstrumentPCM instrumentPCMData433 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_249SampleInfo;
-const struct InstrumentPCM instrumentPCMData434 = {
+extern const struct WaveData sfx_249WaveData;
+const struct InstrumentPCM instrumentPCM434 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_249SampleInfo,
+    /* Sample */ &sfx_249WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -6907,14 +6907,14 @@ const struct InstrumentPCM instrumentPCMData434 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_250SampleInfo;
-const struct InstrumentPCM instrumentPCMData435 = {
+extern const struct WaveData sfx_250WaveData;
+const struct InstrumentPCM instrumentPCM435 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_250SampleInfo,
+    /* Sample */ &sfx_250WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -6923,14 +6923,14 @@ const struct InstrumentPCM instrumentPCMData435 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_251SampleInfo;
-const struct InstrumentPCM instrumentPCMData436 = {
+extern const struct WaveData sfx_251WaveData;
+const struct InstrumentPCM instrumentPCM436 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_251SampleInfo,
+    /* Sample */ &sfx_251WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -6939,14 +6939,14 @@ const struct InstrumentPCM instrumentPCMData436 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_252SampleInfo;
-const struct InstrumentPCM instrumentPCMData437 = {
+extern const struct WaveData sfx_252WaveData;
+const struct InstrumentPCM instrumentPCM437 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_252SampleInfo,
+    /* Sample */ &sfx_252WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -6955,14 +6955,14 @@ const struct InstrumentPCM instrumentPCMData437 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_253SampleInfo;
-const struct InstrumentPCM instrumentPCMData438 = {
+extern const struct WaveData sfx_253WaveData;
+const struct InstrumentPCM instrumentPCM438 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_253SampleInfo,
+    /* Sample */ &sfx_253WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -6971,14 +6971,14 @@ const struct InstrumentPCM instrumentPCMData438 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_254SampleInfo;
-const struct InstrumentPCM instrumentPCMData439 = {
+extern const struct WaveData sfx_254WaveData;
+const struct InstrumentPCM instrumentPCM439 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_254SampleInfo,
+    /* Sample */ &sfx_254WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -6987,14 +6987,14 @@ const struct InstrumentPCM instrumentPCMData439 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_255SampleInfo;
-const struct InstrumentPCM instrumentPCMData440 = {
+extern const struct WaveData sfx_255WaveData;
+const struct InstrumentPCM instrumentPCM440 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_255SampleInfo,
+    /* Sample */ &sfx_255WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7003,14 +7003,14 @@ const struct InstrumentPCM instrumentPCMData440 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_256SampleInfo;
-const struct InstrumentPCM instrumentPCMData441 = {
+extern const struct WaveData sfx_256WaveData;
+const struct InstrumentPCM instrumentPCM441 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_256SampleInfo,
+    /* Sample */ &sfx_256WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7019,14 +7019,14 @@ const struct InstrumentPCM instrumentPCMData441 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_257SampleInfo;
-const struct InstrumentPCM instrumentPCMData442 = {
+extern const struct WaveData sfx_257WaveData;
+const struct InstrumentPCM instrumentPCM442 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_257SampleInfo,
+    /* Sample */ &sfx_257WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7035,14 +7035,14 @@ const struct InstrumentPCM instrumentPCMData442 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_258SampleInfo;
-const struct InstrumentPCM instrumentPCMData443 = {
+extern const struct WaveData sfx_258WaveData;
+const struct InstrumentPCM instrumentPCM443 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_258SampleInfo,
+    /* Sample */ &sfx_258WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7051,14 +7051,14 @@ const struct InstrumentPCM instrumentPCMData443 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_259SampleInfo;
-const struct InstrumentPCM instrumentPCMData444 = {
+extern const struct WaveData sfx_259WaveData;
+const struct InstrumentPCM instrumentPCM444 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_259SampleInfo,
+    /* Sample */ &sfx_259WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7067,14 +7067,14 @@ const struct InstrumentPCM instrumentPCMData444 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_260SampleInfo;
-const struct InstrumentPCM instrumentPCMData445 = {
+extern const struct WaveData sfx_260WaveData;
+const struct InstrumentPCM instrumentPCM445 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_260SampleInfo,
+    /* Sample */ &sfx_260WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7083,14 +7083,14 @@ const struct InstrumentPCM instrumentPCMData445 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_229SampleInfo;
-const struct InstrumentPCM instrumentPCMData446 = {
+extern const struct WaveData sfx_229WaveData;
+const struct InstrumentPCM instrumentPCM446 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_229SampleInfo,
+    /* Sample */ &sfx_229WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -7099,14 +7099,14 @@ const struct InstrumentPCM instrumentPCMData446 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_017SampleInfo;
-const struct InstrumentPCM instrumentPCMData447 = {
+extern const struct WaveData sfx_017WaveData;
+const struct InstrumentPCM instrumentPCM447 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_017SampleInfo,
+    /* Sample */ &sfx_017WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -7115,14 +7115,14 @@ const struct InstrumentPCM instrumentPCMData447 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_261SampleInfo;
-const struct InstrumentPCM instrumentPCMData448 = {
+extern const struct WaveData sfx_261WaveData;
+const struct InstrumentPCM instrumentPCM448 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_261SampleInfo,
+    /* Sample */ &sfx_261WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -7131,14 +7131,14 @@ const struct InstrumentPCM instrumentPCMData448 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_262SampleInfo;
-const struct InstrumentPCM instrumentPCMData449 = {
+extern const struct WaveData sfx_262WaveData;
+const struct InstrumentPCM instrumentPCM449 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_262SampleInfo,
+    /* Sample */ &sfx_262WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -7147,14 +7147,14 @@ const struct InstrumentPCM instrumentPCMData449 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_263SampleInfo;
-const struct InstrumentPCM instrumentPCMData450 = {
+extern const struct WaveData sfx_263WaveData;
+const struct InstrumentPCM instrumentPCM450 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_263SampleInfo,
+    /* Sample */ &sfx_263WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7163,7 +7163,7 @@ const struct InstrumentPCM instrumentPCMData450 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubSplit instrumentSubbankMultiKeyData451 = {
+const struct InstrumentSubSplit instrumentSubSplit451 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -7173,14 +7173,14 @@ const struct InstrumentSubSplit instrumentSubbankMultiKeyData451 = {
     /* Sub-bank */ (void *)0x08a95248, // POINTER
 };
 
-extern const struct SampleInfo sfx_264SampleInfo;
-const struct InstrumentPCM instrumentPCMData452 = {
+extern const struct WaveData sfx_264WaveData;
+const struct InstrumentPCM instrumentPCM452 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_264SampleInfo,
+    /* Sample */ &sfx_264WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -7189,14 +7189,14 @@ const struct InstrumentPCM instrumentPCMData452 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_265SampleInfo;
-const struct InstrumentPCM instrumentPCMData453 = {
+extern const struct WaveData sfx_265WaveData;
+const struct InstrumentPCM instrumentPCM453 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_265SampleInfo,
+    /* Sample */ &sfx_265WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -7205,14 +7205,14 @@ const struct InstrumentPCM instrumentPCMData453 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_266SampleInfo;
-const struct InstrumentPCM instrumentPCMData454 = {
+extern const struct WaveData sfx_266WaveData;
+const struct InstrumentPCM instrumentPCM454 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_266SampleInfo,
+    /* Sample */ &sfx_266WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7221,14 +7221,14 @@ const struct InstrumentPCM instrumentPCMData454 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_267SampleInfo;
-const struct InstrumentPCM instrumentPCMData455 = {
+extern const struct WaveData sfx_267WaveData;
+const struct InstrumentPCM instrumentPCM455 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_267SampleInfo,
+    /* Sample */ &sfx_267WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7237,14 +7237,14 @@ const struct InstrumentPCM instrumentPCMData455 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_268SampleInfo;
-const struct InstrumentPCM instrumentPCMData456 = {
+extern const struct WaveData sfx_268WaveData;
+const struct InstrumentPCM instrumentPCM456 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_268SampleInfo,
+    /* Sample */ &sfx_268WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7253,14 +7253,14 @@ const struct InstrumentPCM instrumentPCMData456 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_269SampleInfo;
-const struct InstrumentPCM instrumentPCMData457 = {
+extern const struct WaveData sfx_269WaveData;
+const struct InstrumentPCM instrumentPCM457 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_269SampleInfo,
+    /* Sample */ &sfx_269WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7269,14 +7269,14 @@ const struct InstrumentPCM instrumentPCMData457 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_270SampleInfo;
-const struct InstrumentPCM instrumentPCMData458 = {
+extern const struct WaveData sfx_270WaveData;
+const struct InstrumentPCM instrumentPCM458 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_270SampleInfo,
+    /* Sample */ &sfx_270WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7285,14 +7285,14 @@ const struct InstrumentPCM instrumentPCMData458 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_271SampleInfo;
-const struct InstrumentPCM instrumentPCMData459 = {
+extern const struct WaveData sfx_271WaveData;
+const struct InstrumentPCM instrumentPCM459 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_271SampleInfo,
+    /* Sample */ &sfx_271WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7301,14 +7301,14 @@ const struct InstrumentPCM instrumentPCMData459 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_272SampleInfo;
-const struct InstrumentPCM instrumentPCMData460 = {
+extern const struct WaveData sfx_272WaveData;
+const struct InstrumentPCM instrumentPCM460 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_272SampleInfo,
+    /* Sample */ &sfx_272WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7317,14 +7317,14 @@ const struct InstrumentPCM instrumentPCMData460 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_273SampleInfo;
-const struct InstrumentPCM instrumentPCMData461 = {
+extern const struct WaveData sfx_273WaveData;
+const struct InstrumentPCM instrumentPCM461 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_273SampleInfo,
+    /* Sample */ &sfx_273WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7333,14 +7333,14 @@ const struct InstrumentPCM instrumentPCMData461 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_274SampleInfo;
-const struct InstrumentPCM instrumentPCMData462 = {
+extern const struct WaveData sfx_274WaveData;
+const struct InstrumentPCM instrumentPCM462 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_274SampleInfo,
+    /* Sample */ &sfx_274WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7349,14 +7349,14 @@ const struct InstrumentPCM instrumentPCMData462 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_275SampleInfo;
-const struct InstrumentPCM instrumentPCMData463 = {
+extern const struct WaveData sfx_275WaveData;
+const struct InstrumentPCM instrumentPCM463 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_275SampleInfo,
+    /* Sample */ &sfx_275WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7365,7 +7365,7 @@ const struct InstrumentPCM instrumentPCMData463 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData464 = {
+const struct InstrumentSubRhythm instrumentSubRhythm464 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -7374,14 +7374,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData464 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_221SampleInfo;
-const struct InstrumentPCM instrumentPCMData465 = {
+extern const struct WaveData sfx_221WaveData;
+const struct InstrumentPCM instrumentPCM465 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_221SampleInfo,
+    /* Sample */ &sfx_221WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7390,14 +7390,14 @@ const struct InstrumentPCM instrumentPCMData465 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_122SampleInfo;
-const struct InstrumentPCM instrumentPCMData466 = {
+extern const struct WaveData sfx_122WaveData;
+const struct InstrumentPCM instrumentPCM466 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_122SampleInfo,
+    /* Sample */ &sfx_122WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7406,7 +7406,7 @@ const struct InstrumentPCM instrumentPCMData466 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData467 = {
+const struct InstrumentSubRhythm instrumentSubRhythm467 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -7415,14 +7415,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData467 = {
     /* Sub-bank */ (void *)0x08a99d3c, // POINTER
 };
 
-extern const struct SampleInfo sfx_276SampleInfo;
-const struct InstrumentPCM instrumentPCMData468 = {
+extern const struct WaveData sfx_276WaveData;
+const struct InstrumentPCM instrumentPCM468 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_276SampleInfo,
+    /* Sample */ &sfx_276WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7431,14 +7431,14 @@ const struct InstrumentPCM instrumentPCMData468 = {
     /* unk1C  */ 0x00031548,
 };
 
-extern const struct SampleInfo sfx_277SampleInfo;
-const struct InstrumentPCM instrumentPCMData469 = {
+extern const struct WaveData sfx_277WaveData;
+const struct InstrumentPCM instrumentPCM469 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_277SampleInfo,
+    /* Sample */ &sfx_277WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7447,14 +7447,14 @@ const struct InstrumentPCM instrumentPCMData469 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_200SampleInfo;
-const struct InstrumentPCM instrumentPCMData470 = {
+extern const struct WaveData sfx_200WaveData;
+const struct InstrumentPCM instrumentPCM470 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_200SampleInfo,
+    /* Sample */ &sfx_200WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -7463,14 +7463,14 @@ const struct InstrumentPCM instrumentPCMData470 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_194SampleInfo;
-const struct InstrumentPCM instrumentPCMData471 = {
+extern const struct WaveData sfx_194WaveData;
+const struct InstrumentPCM instrumentPCM471 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_194SampleInfo,
+    /* Sample */ &sfx_194WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -7479,14 +7479,14 @@ const struct InstrumentPCM instrumentPCMData471 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_195SampleInfo;
-const struct InstrumentPCM instrumentPCMData472 = {
+extern const struct WaveData sfx_195WaveData;
+const struct InstrumentPCM instrumentPCM472 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_195SampleInfo,
+    /* Sample */ &sfx_195WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -7495,14 +7495,14 @@ const struct InstrumentPCM instrumentPCMData472 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_278SampleInfo;
-const struct InstrumentPCM instrumentPCMData473 = {
+extern const struct WaveData sfx_278WaveData;
+const struct InstrumentPCM instrumentPCM473 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_278SampleInfo,
+    /* Sample */ &sfx_278WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -7511,14 +7511,14 @@ const struct InstrumentPCM instrumentPCMData473 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_197SampleInfo;
-const struct InstrumentPCM instrumentPCMData474 = {
+extern const struct WaveData sfx_197WaveData;
+const struct InstrumentPCM instrumentPCM474 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_197SampleInfo,
+    /* Sample */ &sfx_197WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7527,14 +7527,14 @@ const struct InstrumentPCM instrumentPCMData474 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_279SampleInfo;
-const struct InstrumentPCM instrumentPCMData475 = {
+extern const struct WaveData sfx_279WaveData;
+const struct InstrumentPCM instrumentPCM475 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_279SampleInfo,
+    /* Sample */ &sfx_279WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -7543,14 +7543,14 @@ const struct InstrumentPCM instrumentPCMData475 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_280SampleInfo;
-const struct InstrumentPCM instrumentPCMData476 = {
+extern const struct WaveData sfx_280WaveData;
+const struct InstrumentPCM instrumentPCM476 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_280SampleInfo,
+    /* Sample */ &sfx_280WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7559,14 +7559,14 @@ const struct InstrumentPCM instrumentPCMData476 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_281SampleInfo;
-const struct InstrumentPCM instrumentPCMData477 = {
+extern const struct WaveData sfx_281WaveData;
+const struct InstrumentPCM instrumentPCM477 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_281SampleInfo,
+    /* Sample */ &sfx_281WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7575,14 +7575,14 @@ const struct InstrumentPCM instrumentPCMData477 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_198SampleInfo;
-const struct InstrumentPCM instrumentPCMData478 = {
+extern const struct WaveData sfx_198WaveData;
+const struct InstrumentPCM instrumentPCM478 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_198SampleInfo,
+    /* Sample */ &sfx_198WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7591,14 +7591,14 @@ const struct InstrumentPCM instrumentPCMData478 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_282SampleInfo;
-const struct InstrumentPCM instrumentPCMData479 = {
+extern const struct WaveData sfx_282WaveData;
+const struct InstrumentPCM instrumentPCM479 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_282SampleInfo,
+    /* Sample */ &sfx_282WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7607,14 +7607,14 @@ const struct InstrumentPCM instrumentPCMData479 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_283SampleInfo;
-const struct InstrumentPCM instrumentPCMData480 = {
+extern const struct WaveData sfx_283WaveData;
+const struct InstrumentPCM instrumentPCM480 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_283SampleInfo,
+    /* Sample */ &sfx_283WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7623,14 +7623,14 @@ const struct InstrumentPCM instrumentPCMData480 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_284SampleInfo;
-const struct InstrumentPCM instrumentPCMData481 = {
+extern const struct WaveData sfx_284WaveData;
+const struct InstrumentPCM instrumentPCM481 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_284SampleInfo,
+    /* Sample */ &sfx_284WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7639,14 +7639,14 @@ const struct InstrumentPCM instrumentPCMData481 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_285SampleInfo;
-const struct InstrumentPCM instrumentPCMData482 = {
+extern const struct WaveData sfx_285WaveData;
+const struct InstrumentPCM instrumentPCM482 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_285SampleInfo,
+    /* Sample */ &sfx_285WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7655,14 +7655,14 @@ const struct InstrumentPCM instrumentPCMData482 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_117SampleInfo;
-const struct InstrumentPCM instrumentPCMData483 = {
+extern const struct WaveData sfx_117WaveData;
+const struct InstrumentPCM instrumentPCM483 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_117SampleInfo,
+    /* Sample */ &sfx_117WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7671,7 +7671,7 @@ const struct InstrumentPCM instrumentPCMData483 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData484 = {
+const struct InstrumentSubRhythm instrumentSubRhythm484 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -7680,7 +7680,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData484 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData485 = {
+const struct InstrumentSubRhythm instrumentSubRhythm485 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -7689,14 +7689,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData485 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_118SampleInfo;
-const struct InstrumentPCM instrumentPCMData486 = {
+extern const struct WaveData sfx_118WaveData;
+const struct InstrumentPCM instrumentPCM486 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_118SampleInfo,
+    /* Sample */ &sfx_118WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7705,14 +7705,14 @@ const struct InstrumentPCM instrumentPCMData486 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_286SampleInfo;
-const struct InstrumentPCM instrumentPCMData487 = {
+extern const struct WaveData sfx_286WaveData;
+const struct InstrumentPCM instrumentPCM487 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_286SampleInfo,
+    /* Sample */ &sfx_286WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x0043e0f8,
@@ -7721,14 +7721,14 @@ const struct InstrumentPCM instrumentPCMData487 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_287SampleInfo;
-const struct InstrumentPCM instrumentPCMData488 = {
+extern const struct WaveData sfx_287WaveData;
+const struct InstrumentPCM instrumentPCM488 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_287SampleInfo,
+    /* Sample */ &sfx_287WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -7737,14 +7737,14 @@ const struct InstrumentPCM instrumentPCMData488 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_003SampleInfo;
-const struct InstrumentPCM instrumentPCMData489 = {
+extern const struct WaveData sfx_003WaveData;
+const struct InstrumentPCM instrumentPCM489 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_003SampleInfo,
+    /* Sample */ &sfx_003WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7753,14 +7753,14 @@ const struct InstrumentPCM instrumentPCMData489 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_226SampleInfo;
-const struct InstrumentPCM instrumentPCMData490 = {
+extern const struct WaveData sfx_226WaveData;
+const struct InstrumentPCM instrumentPCM490 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_226SampleInfo,
+    /* Sample */ &sfx_226WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -7769,14 +7769,14 @@ const struct InstrumentPCM instrumentPCMData490 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_288SampleInfo;
-const struct InstrumentPCM instrumentPCMData491 = {
+extern const struct WaveData sfx_288WaveData;
+const struct InstrumentPCM instrumentPCM491 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_288SampleInfo,
+    /* Sample */ &sfx_288WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -7785,14 +7785,14 @@ const struct InstrumentPCM instrumentPCMData491 = {
     /* unk1C  */ 0x00235dd1,
 };
 
-extern const struct SampleInfo sfx_289SampleInfo;
-const struct InstrumentPCM instrumentPCMData492 = {
+extern const struct WaveData sfx_289WaveData;
+const struct InstrumentPCM instrumentPCM492 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_289SampleInfo,
+    /* Sample */ &sfx_289WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7801,14 +7801,14 @@ const struct InstrumentPCM instrumentPCMData492 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_200SampleInfo;
-const struct InstrumentPCM instrumentPCMData493 = {
+extern const struct WaveData sfx_200WaveData;
+const struct InstrumentPCM instrumentPCM493 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_200SampleInfo,
+    /* Sample */ &sfx_200WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -7817,7 +7817,7 @@ const struct InstrumentPCM instrumentPCMData493 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData494 = {
+const struct InstrumentSubRhythm instrumentSubRhythm494 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -7826,14 +7826,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData494 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_290SampleInfo;
-const struct InstrumentPCM instrumentPCMData495 = {
+extern const struct WaveData sfx_290WaveData;
+const struct InstrumentPCM instrumentPCM495 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_290SampleInfo,
+    /* Sample */ &sfx_290WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -7842,14 +7842,14 @@ const struct InstrumentPCM instrumentPCMData495 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_291SampleInfo;
-const struct InstrumentPCM instrumentPCMData496 = {
+extern const struct WaveData sfx_291WaveData;
+const struct InstrumentPCM instrumentPCM496 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_291SampleInfo,
+    /* Sample */ &sfx_291WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7858,14 +7858,14 @@ const struct InstrumentPCM instrumentPCMData496 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_006SampleInfo;
-const struct InstrumentPCM instrumentPCMData497 = {
+extern const struct WaveData sfx_006WaveData;
+const struct InstrumentPCM instrumentPCM497 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_006SampleInfo,
+    /* Sample */ &sfx_006WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7874,14 +7874,14 @@ const struct InstrumentPCM instrumentPCMData497 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_292SampleInfo;
-const struct InstrumentPCM instrumentPCMData498 = {
+extern const struct WaveData sfx_292WaveData;
+const struct InstrumentPCM instrumentPCM498 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_292SampleInfo,
+    /* Sample */ &sfx_292WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -7890,14 +7890,14 @@ const struct InstrumentPCM instrumentPCMData498 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_293SampleInfo;
-const struct InstrumentPCM instrumentPCMData499 = {
+extern const struct WaveData sfx_293WaveData;
+const struct InstrumentPCM instrumentPCM499 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_293SampleInfo,
+    /* Sample */ &sfx_293WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -7906,14 +7906,14 @@ const struct InstrumentPCM instrumentPCMData499 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_294SampleInfo;
-const struct InstrumentPCM instrumentPCMData500 = {
+extern const struct WaveData sfx_294WaveData;
+const struct InstrumentPCM instrumentPCM500 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_294SampleInfo,
+    /* Sample */ &sfx_294WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -7922,14 +7922,14 @@ const struct InstrumentPCM instrumentPCMData500 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_232SampleInfo;
-const struct InstrumentPCM instrumentPCMData501 = {
+extern const struct WaveData sfx_232WaveData;
+const struct InstrumentPCM instrumentPCM501 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_232SampleInfo,
+    /* Sample */ &sfx_232WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7938,14 +7938,14 @@ const struct InstrumentPCM instrumentPCMData501 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_206SampleInfo;
-const struct InstrumentPCM instrumentPCMData502 = {
+extern const struct WaveData sfx_206WaveData;
+const struct InstrumentPCM instrumentPCM502 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_206SampleInfo,
+    /* Sample */ &sfx_206WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -7954,14 +7954,14 @@ const struct InstrumentPCM instrumentPCMData502 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_295SampleInfo;
-const struct InstrumentPCM instrumentPCMData503 = {
+extern const struct WaveData sfx_295WaveData;
+const struct InstrumentPCM instrumentPCM503 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_295SampleInfo,
+    /* Sample */ &sfx_295WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -7970,7 +7970,7 @@ const struct InstrumentPCM instrumentPCMData503 = {
     /* unk1C  */ 0x000b8000,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData504 = {
+const struct InstrumentSubRhythm instrumentSubRhythm504 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -7979,7 +7979,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData504 = {
     /* Sub-bank */ (void *)0x08a998e4, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData505 = {
+const struct InstrumentSubRhythm instrumentSubRhythm505 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -7988,14 +7988,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData505 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_296SampleInfo;
-const struct InstrumentPCM instrumentPCMData506 = {
+extern const struct WaveData sfx_296WaveData;
+const struct InstrumentPCM instrumentPCM506 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_296SampleInfo,
+    /* Sample */ &sfx_296WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8004,14 +8004,14 @@ const struct InstrumentPCM instrumentPCMData506 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_297SampleInfo;
-const struct InstrumentPCM instrumentPCMData507 = {
+extern const struct WaveData sfx_297WaveData;
+const struct InstrumentPCM instrumentPCM507 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_297SampleInfo,
+    /* Sample */ &sfx_297WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x00600000,
@@ -8020,14 +8020,14 @@ const struct InstrumentPCM instrumentPCMData507 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_298SampleInfo;
-const struct InstrumentPCM instrumentPCMData508 = {
+extern const struct WaveData sfx_298WaveData;
+const struct InstrumentPCM instrumentPCM508 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_298SampleInfo,
+    /* Sample */ &sfx_298WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8036,14 +8036,14 @@ const struct InstrumentPCM instrumentPCMData508 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_299SampleInfo;
-const struct InstrumentPCM instrumentPCMData509 = {
+extern const struct WaveData sfx_299WaveData;
+const struct InstrumentPCM instrumentPCM509 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_299SampleInfo,
+    /* Sample */ &sfx_299WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8052,14 +8052,14 @@ const struct InstrumentPCM instrumentPCMData509 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_204SampleInfo;
-const struct InstrumentPCM instrumentPCMData510 = {
+extern const struct WaveData sfx_204WaveData;
+const struct InstrumentPCM instrumentPCM510 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_204SampleInfo,
+    /* Sample */ &sfx_204WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8068,14 +8068,14 @@ const struct InstrumentPCM instrumentPCMData510 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_230SampleInfo;
-const struct InstrumentPCM instrumentPCMData511 = {
+extern const struct WaveData sfx_230WaveData;
+const struct InstrumentPCM instrumentPCM511 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_230SampleInfo,
+    /* Sample */ &sfx_230WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x0043e0f8,
@@ -8084,7 +8084,7 @@ const struct InstrumentPCM instrumentPCMData511 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData512 = {
+const struct InstrumentSubRhythm instrumentSubRhythm512 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -8093,14 +8093,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData512 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_300SampleInfo;
-const struct InstrumentPCM instrumentPCMData513 = {
+extern const struct WaveData sfx_300WaveData;
+const struct InstrumentPCM instrumentPCM513 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_300SampleInfo,
+    /* Sample */ &sfx_300WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8109,14 +8109,14 @@ const struct InstrumentPCM instrumentPCMData513 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_301SampleInfo;
-const struct InstrumentPCM instrumentPCMData514 = {
+extern const struct WaveData sfx_301WaveData;
+const struct InstrumentPCM instrumentPCM514 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_301SampleInfo,
+    /* Sample */ &sfx_301WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8125,14 +8125,14 @@ const struct InstrumentPCM instrumentPCMData514 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_302SampleInfo;
-const struct InstrumentPCM instrumentPCMData515 = {
+extern const struct WaveData sfx_302WaveData;
+const struct InstrumentPCM instrumentPCM515 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_302SampleInfo,
+    /* Sample */ &sfx_302WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8141,14 +8141,14 @@ const struct InstrumentPCM instrumentPCMData515 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_303SampleInfo;
-const struct InstrumentPCM instrumentPCMData516 = {
+extern const struct WaveData sfx_303WaveData;
+const struct InstrumentPCM instrumentPCM516 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_303SampleInfo,
+    /* Sample */ &sfx_303WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8157,14 +8157,14 @@ const struct InstrumentPCM instrumentPCMData516 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_304SampleInfo;
-const struct InstrumentPCM instrumentPCMData517 = {
+extern const struct WaveData sfx_304WaveData;
+const struct InstrumentPCM instrumentPCM517 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_304SampleInfo,
+    /* Sample */ &sfx_304WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8173,14 +8173,14 @@ const struct InstrumentPCM instrumentPCMData517 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_234SampleInfo;
-const struct InstrumentPCM instrumentPCMData518 = {
+extern const struct WaveData sfx_234WaveData;
+const struct InstrumentPCM instrumentPCM518 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_234SampleInfo,
+    /* Sample */ &sfx_234WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8189,14 +8189,14 @@ const struct InstrumentPCM instrumentPCMData518 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_229SampleInfo;
-const struct InstrumentPCM instrumentPCMData519 = {
+extern const struct WaveData sfx_229WaveData;
+const struct InstrumentPCM instrumentPCM519 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_229SampleInfo,
+    /* Sample */ &sfx_229WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -8205,14 +8205,14 @@ const struct InstrumentPCM instrumentPCMData519 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_114SampleInfo;
-const struct InstrumentPCM instrumentPCMData520 = {
+extern const struct WaveData sfx_114WaveData;
+const struct InstrumentPCM instrumentPCM520 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_114SampleInfo,
+    /* Sample */ &sfx_114WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -8221,14 +8221,14 @@ const struct InstrumentPCM instrumentPCMData520 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_194SampleInfo;
-const struct InstrumentPCM instrumentPCMData521 = {
+extern const struct WaveData sfx_194WaveData;
+const struct InstrumentPCM instrumentPCM521 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_194SampleInfo,
+    /* Sample */ &sfx_194WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8237,14 +8237,14 @@ const struct InstrumentPCM instrumentPCMData521 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_110SampleInfo;
-const struct InstrumentPCM instrumentPCMData522 = {
+extern const struct WaveData sfx_110WaveData;
+const struct InstrumentPCM instrumentPCM522 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_110SampleInfo,
+    /* Sample */ &sfx_110WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8253,14 +8253,14 @@ const struct InstrumentPCM instrumentPCMData522 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_111SampleInfo;
-const struct InstrumentPCM instrumentPCMData523 = {
+extern const struct WaveData sfx_111WaveData;
+const struct InstrumentPCM instrumentPCM523 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_111SampleInfo,
+    /* Sample */ &sfx_111WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8269,7 +8269,7 @@ const struct InstrumentPCM instrumentPCMData523 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubSplit instrumentSubbankMultiKeyData524 = {
+const struct InstrumentSubSplit instrumentSubSplit524 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -8279,14 +8279,14 @@ const struct InstrumentSubSplit instrumentSubbankMultiKeyData524 = {
     /* Sub-bank */ (void *)0x08a95248, // POINTER
 };
 
-extern const struct SampleInfo sfx_015SampleInfo;
-const struct InstrumentPCM instrumentPCMData525 = {
+extern const struct WaveData sfx_015WaveData;
+const struct InstrumentPCM instrumentPCM525 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_015SampleInfo,
+    /* Sample */ &sfx_015WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00307c1f,
@@ -8295,14 +8295,14 @@ const struct InstrumentPCM instrumentPCMData525 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_305SampleInfo;
-const struct InstrumentPCM instrumentPCMData526 = {
+extern const struct WaveData sfx_305WaveData;
+const struct InstrumentPCM instrumentPCM526 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_305SampleInfo,
+    /* Sample */ &sfx_305WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -8311,14 +8311,14 @@ const struct InstrumentPCM instrumentPCMData526 = {
     /* unk1C  */ 0x00235dd1,
 };
 
-extern const struct SampleInfo sfx_306SampleInfo;
-const struct InstrumentPCM instrumentPCMData527 = {
+extern const struct WaveData sfx_306WaveData;
+const struct InstrumentPCM instrumentPCM527 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_306SampleInfo,
+    /* Sample */ &sfx_306WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x0009b26c,
@@ -8327,14 +8327,14 @@ const struct InstrumentPCM instrumentPCMData527 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_307SampleInfo;
-const struct InstrumentPCM instrumentPCMData528 = {
+extern const struct WaveData sfx_307WaveData;
+const struct InstrumentPCM instrumentPCM528 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_307SampleInfo,
+    /* Sample */ &sfx_307WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8343,7 +8343,7 @@ const struct InstrumentPCM instrumentPCMData528 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData529 = {
+const struct InstrumentSubRhythm instrumentSubRhythm529 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -8352,14 +8352,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData529 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_308SampleInfo;
-const struct InstrumentPCM instrumentPCMData530 = {
+extern const struct WaveData sfx_308WaveData;
+const struct InstrumentPCM instrumentPCM530 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_308SampleInfo,
+    /* Sample */ &sfx_308WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -8368,14 +8368,14 @@ const struct InstrumentPCM instrumentPCMData530 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_238SampleInfo;
-const struct InstrumentPCM instrumentPCMData531 = {
+extern const struct WaveData sfx_238WaveData;
+const struct InstrumentPCM instrumentPCM531 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_238SampleInfo,
+    /* Sample */ &sfx_238WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x00600000,
@@ -8384,14 +8384,14 @@ const struct InstrumentPCM instrumentPCMData531 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_309SampleInfo;
-const struct InstrumentPCM instrumentPCMData532 = {
+extern const struct WaveData sfx_309WaveData;
+const struct InstrumentPCM instrumentPCM532 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_309SampleInfo,
+    /* Sample */ &sfx_309WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x00600000,
@@ -8400,14 +8400,14 @@ const struct InstrumentPCM instrumentPCMData532 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_114SampleInfo;
-const struct InstrumentPCM instrumentPCMData533 = {
+extern const struct WaveData sfx_114WaveData;
+const struct InstrumentPCM instrumentPCM533 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_114SampleInfo,
+    /* Sample */ &sfx_114WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -8416,14 +8416,14 @@ const struct InstrumentPCM instrumentPCMData533 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_310SampleInfo;
-const struct InstrumentPCM instrumentPCMData534 = {
+extern const struct WaveData sfx_310WaveData;
+const struct InstrumentPCM instrumentPCM534 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_310SampleInfo,
+    /* Sample */ &sfx_310WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8432,14 +8432,14 @@ const struct InstrumentPCM instrumentPCMData534 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_203SampleInfo;
-const struct InstrumentPCM instrumentPCMData535 = {
+extern const struct WaveData sfx_203WaveData;
+const struct InstrumentPCM instrumentPCM535 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_203SampleInfo,
+    /* Sample */ &sfx_203WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8448,14 +8448,14 @@ const struct InstrumentPCM instrumentPCMData535 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_311SampleInfo;
-const struct InstrumentPCM instrumentPCMData536 = {
+extern const struct WaveData sfx_311WaveData;
+const struct InstrumentPCM instrumentPCM536 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_311SampleInfo,
+    /* Sample */ &sfx_311WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8464,14 +8464,14 @@ const struct InstrumentPCM instrumentPCMData536 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_209SampleInfo;
-const struct InstrumentPCM instrumentPCMData537 = {
+extern const struct WaveData sfx_209WaveData;
+const struct InstrumentPCM instrumentPCM537 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_209SampleInfo,
+    /* Sample */ &sfx_209WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -8480,14 +8480,14 @@ const struct InstrumentPCM instrumentPCMData537 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_210SampleInfo;
-const struct InstrumentPCM instrumentPCMData538 = {
+extern const struct WaveData sfx_210WaveData;
+const struct InstrumentPCM instrumentPCM538 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_210SampleInfo,
+    /* Sample */ &sfx_210WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -8496,14 +8496,14 @@ const struct InstrumentPCM instrumentPCMData538 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_229SampleInfo;
-const struct InstrumentPCM instrumentPCMData539 = {
+extern const struct WaveData sfx_229WaveData;
+const struct InstrumentPCM instrumentPCM539 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_229SampleInfo,
+    /* Sample */ &sfx_229WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -8512,14 +8512,14 @@ const struct InstrumentPCM instrumentPCMData539 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_211SampleInfo;
-const struct InstrumentPCM instrumentPCMData540 = {
+extern const struct WaveData sfx_211WaveData;
+const struct InstrumentPCM instrumentPCM540 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_211SampleInfo,
+    /* Sample */ &sfx_211WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -8528,14 +8528,14 @@ const struct InstrumentPCM instrumentPCMData540 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_262SampleInfo;
-const struct InstrumentPCM instrumentPCMData541 = {
+extern const struct WaveData sfx_262WaveData;
+const struct InstrumentPCM instrumentPCM541 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_262SampleInfo,
+    /* Sample */ &sfx_262WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -8544,14 +8544,14 @@ const struct InstrumentPCM instrumentPCMData541 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_232SampleInfo;
-const struct InstrumentPCM instrumentPCMData542 = {
+extern const struct WaveData sfx_232WaveData;
+const struct InstrumentPCM instrumentPCM542 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_232SampleInfo,
+    /* Sample */ &sfx_232WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -8560,14 +8560,14 @@ const struct InstrumentPCM instrumentPCMData542 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_312SampleInfo;
-const struct InstrumentPCM instrumentPCMData543 = {
+extern const struct WaveData sfx_312WaveData;
+const struct InstrumentPCM instrumentPCM543 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_312SampleInfo,
+    /* Sample */ &sfx_312WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x00600000,
@@ -8576,14 +8576,14 @@ const struct InstrumentPCM instrumentPCMData543 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_313SampleInfo;
-const struct InstrumentPCM instrumentPCMData544 = {
+extern const struct WaveData sfx_313WaveData;
+const struct InstrumentPCM instrumentPCM544 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_313SampleInfo,
+    /* Sample */ &sfx_313WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8592,14 +8592,14 @@ const struct InstrumentPCM instrumentPCMData544 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_277SampleInfo;
-const struct InstrumentPCM instrumentPCMData545 = {
+extern const struct WaveData sfx_277WaveData;
+const struct InstrumentPCM instrumentPCM545 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_277SampleInfo,
+    /* Sample */ &sfx_277WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -8608,14 +8608,14 @@ const struct InstrumentPCM instrumentPCMData545 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_314SampleInfo;
-const struct InstrumentPCM instrumentPCMData546 = {
+extern const struct WaveData sfx_314WaveData;
+const struct InstrumentPCM instrumentPCM546 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_314SampleInfo,
+    /* Sample */ &sfx_314WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8624,14 +8624,14 @@ const struct InstrumentPCM instrumentPCMData546 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_205SampleInfo;
-const struct InstrumentPCM instrumentPCMData547 = {
+extern const struct WaveData sfx_205WaveData;
+const struct InstrumentPCM instrumentPCM547 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_205SampleInfo,
+    /* Sample */ &sfx_205WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8640,14 +8640,14 @@ const struct InstrumentPCM instrumentPCMData547 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_122SampleInfo;
-const struct InstrumentPCM instrumentPCMData548 = {
+extern const struct WaveData sfx_122WaveData;
+const struct InstrumentPCM instrumentPCM548 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_122SampleInfo,
+    /* Sample */ &sfx_122WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -8656,14 +8656,14 @@ const struct InstrumentPCM instrumentPCMData548 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_109SampleInfo;
-const struct InstrumentPCM instrumentPCMData549 = {
+extern const struct WaveData sfx_109WaveData;
+const struct InstrumentPCM instrumentPCM549 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_109SampleInfo,
+    /* Sample */ &sfx_109WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8672,7 +8672,7 @@ const struct InstrumentPCM instrumentPCMData549 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData550 = {
+const struct InstrumentSubRhythm instrumentSubRhythm550 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -8681,14 +8681,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData550 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_240SampleInfo;
-const struct InstrumentPCM instrumentPCMData551 = {
+extern const struct WaveData sfx_240WaveData;
+const struct InstrumentPCM instrumentPCM551 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_240SampleInfo,
+    /* Sample */ &sfx_240WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8697,14 +8697,14 @@ const struct InstrumentPCM instrumentPCMData551 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_315SampleInfo;
-const struct InstrumentPCM instrumentPCMData552 = {
+extern const struct WaveData sfx_315WaveData;
+const struct InstrumentPCM instrumentPCM552 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_315SampleInfo,
+    /* Sample */ &sfx_315WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x000cd40a,
     /* unk10  */ 0x00600000,
@@ -8713,14 +8713,14 @@ const struct InstrumentPCM instrumentPCMData552 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_316SampleInfo;
-const struct InstrumentPCM instrumentPCMData553 = {
+extern const struct WaveData sfx_316WaveData;
+const struct InstrumentPCM instrumentPCM553 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_316SampleInfo,
+    /* Sample */ &sfx_316WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -8729,14 +8729,14 @@ const struct InstrumentPCM instrumentPCMData553 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_317SampleInfo;
-const struct InstrumentPCM instrumentPCMData554 = {
+extern const struct WaveData sfx_317WaveData;
+const struct InstrumentPCM instrumentPCM554 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_317SampleInfo,
+    /* Sample */ &sfx_317WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -8745,14 +8745,14 @@ const struct InstrumentPCM instrumentPCMData554 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_239SampleInfo;
-const struct InstrumentPCM instrumentPCMData555 = {
+extern const struct WaveData sfx_239WaveData;
+const struct InstrumentPCM instrumentPCM555 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_239SampleInfo,
+    /* Sample */ &sfx_239WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8761,14 +8761,14 @@ const struct InstrumentPCM instrumentPCMData555 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_318SampleInfo;
-const struct InstrumentPCM instrumentPCMData556 = {
+extern const struct WaveData sfx_318WaveData;
+const struct InstrumentPCM instrumentPCM556 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_318SampleInfo,
+    /* Sample */ &sfx_318WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x001d1745,
@@ -8777,14 +8777,14 @@ const struct InstrumentPCM instrumentPCMData556 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_005SampleInfo;
-const struct InstrumentPCM instrumentPCMData557 = {
+extern const struct WaveData sfx_005WaveData;
+const struct InstrumentPCM instrumentPCM557 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_005SampleInfo,
+    /* Sample */ &sfx_005WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -8793,14 +8793,14 @@ const struct InstrumentPCM instrumentPCMData557 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_319SampleInfo;
-const struct InstrumentPCM instrumentPCMData558 = {
+extern const struct WaveData sfx_319WaveData;
+const struct InstrumentPCM instrumentPCM558 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_319SampleInfo,
+    /* Sample */ &sfx_319WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -8809,14 +8809,14 @@ const struct InstrumentPCM instrumentPCMData558 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_320SampleInfo;
-const struct InstrumentPCM instrumentPCMData559 = {
+extern const struct WaveData sfx_320WaveData;
+const struct InstrumentPCM instrumentPCM559 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_320SampleInfo,
+    /* Sample */ &sfx_320WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -8825,7 +8825,7 @@ const struct InstrumentPCM instrumentPCMData559 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData560 = {
+const struct InstrumentSubRhythm instrumentSubRhythm560 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -8834,7 +8834,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData560 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData561 = {
+const struct InstrumentSubRhythm instrumentSubRhythm561 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -8843,14 +8843,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData561 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_321SampleInfo;
-const struct InstrumentPCM instrumentPCMData562 = {
+extern const struct WaveData sfx_321WaveData;
+const struct InstrumentPCM instrumentPCM562 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_321SampleInfo,
+    /* Sample */ &sfx_321WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -8859,14 +8859,14 @@ const struct InstrumentPCM instrumentPCMData562 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_322SampleInfo;
-const struct InstrumentPCM instrumentPCMData563 = {
+extern const struct WaveData sfx_322WaveData;
+const struct InstrumentPCM instrumentPCM563 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_322SampleInfo,
+    /* Sample */ &sfx_322WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0066a052,
     /* unk10  */ 0x00600000,
@@ -8875,14 +8875,14 @@ const struct InstrumentPCM instrumentPCMData563 = {
     /* unk1C  */ 0x00235dd1,
 };
 
-extern const struct SampleInfo sfx_196SampleInfo;
-const struct InstrumentPCM instrumentPCMData564 = {
+extern const struct WaveData sfx_196WaveData;
+const struct InstrumentPCM instrumentPCM564 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_196SampleInfo,
+    /* Sample */ &sfx_196WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8891,14 +8891,14 @@ const struct InstrumentPCM instrumentPCMData564 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_314SampleInfo;
-const struct InstrumentPCM instrumentPCMData565 = {
+extern const struct WaveData sfx_314WaveData;
+const struct InstrumentPCM instrumentPCM565 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_314SampleInfo,
+    /* Sample */ &sfx_314WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8907,14 +8907,14 @@ const struct InstrumentPCM instrumentPCMData565 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_009SampleInfo;
-const struct InstrumentPCM instrumentPCMData566 = {
+extern const struct WaveData sfx_009WaveData;
+const struct InstrumentPCM instrumentPCM566 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_009SampleInfo,
+    /* Sample */ &sfx_009WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x004d9364,
@@ -8923,14 +8923,14 @@ const struct InstrumentPCM instrumentPCMData566 = {
     /* unk1C  */ 0x00055552,
 };
 
-extern const struct SampleInfo sfx_229SampleInfo;
-const struct InstrumentPCM instrumentPCMData567 = {
+extern const struct WaveData sfx_229WaveData;
+const struct InstrumentPCM instrumentPCM567 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_229SampleInfo,
+    /* Sample */ &sfx_229WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -8939,14 +8939,14 @@ const struct InstrumentPCM instrumentPCMData567 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_321SampleInfo;
-const struct InstrumentPCM instrumentPCMData568 = {
+extern const struct WaveData sfx_321WaveData;
+const struct InstrumentPCM instrumentPCM568 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_321SampleInfo,
+    /* Sample */ &sfx_321WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -8955,14 +8955,14 @@ const struct InstrumentPCM instrumentPCMData568 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_114SampleInfo;
-const struct InstrumentPCM instrumentPCMData569 = {
+extern const struct WaveData sfx_114WaveData;
+const struct InstrumentPCM instrumentPCM569 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_114SampleInfo,
+    /* Sample */ &sfx_114WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -8971,7 +8971,7 @@ const struct InstrumentPCM instrumentPCMData569 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData570 = {
+const struct InstrumentSubRhythm instrumentSubRhythm570 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -8980,14 +8980,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData570 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_323SampleInfo;
-const struct InstrumentPCM instrumentPCMData571 = {
+extern const struct WaveData sfx_323WaveData;
+const struct InstrumentPCM instrumentPCM571 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_323SampleInfo,
+    /* Sample */ &sfx_323WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -8996,14 +8996,14 @@ const struct InstrumentPCM instrumentPCMData571 = {
     /* unk1C  */ 0x00055552,
 };
 
-extern const struct SampleInfo sfx_324SampleInfo;
-const struct InstrumentPCM instrumentPCMData572 = {
+extern const struct WaveData sfx_324WaveData;
+const struct InstrumentPCM instrumentPCM572 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_324SampleInfo,
+    /* Sample */ &sfx_324WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -9012,14 +9012,14 @@ const struct InstrumentPCM instrumentPCMData572 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_013SampleInfo;
-const struct InstrumentPCM instrumentPCMData573 = {
+extern const struct WaveData sfx_013WaveData;
+const struct InstrumentPCM instrumentPCM573 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_013SampleInfo,
+    /* Sample */ &sfx_013WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -9028,14 +9028,14 @@ const struct InstrumentPCM instrumentPCMData573 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_325SampleInfo;
-const struct InstrumentPCM instrumentPCMData574 = {
+extern const struct WaveData sfx_325WaveData;
+const struct InstrumentPCM instrumentPCM574 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_325SampleInfo,
+    /* Sample */ &sfx_325WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -9044,14 +9044,14 @@ const struct InstrumentPCM instrumentPCMData574 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_326SampleInfo;
-const struct InstrumentPCM instrumentPCMData575 = {
+extern const struct WaveData sfx_326WaveData;
+const struct InstrumentPCM instrumentPCM575 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_326SampleInfo,
+    /* Sample */ &sfx_326WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x004cf83e,
     /* unk10  */ 0x0009b26c,
@@ -9060,14 +9060,14 @@ const struct InstrumentPCM instrumentPCMData575 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_327SampleInfo;
-const struct InstrumentPCM instrumentPCMData576 = {
+extern const struct WaveData sfx_327WaveData;
+const struct InstrumentPCM instrumentPCM576 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_327SampleInfo,
+    /* Sample */ &sfx_327WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x00402433,
     /* unk10  */ 0x00307c1f,
@@ -9076,14 +9076,14 @@ const struct InstrumentPCM instrumentPCMData576 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_328SampleInfo;
-const struct InstrumentPCM instrumentPCMData577 = {
+extern const struct WaveData sfx_328WaveData;
+const struct InstrumentPCM instrumentPCM577 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_328SampleInfo,
+    /* Sample */ &sfx_328WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00307c1f,
@@ -9092,14 +9092,14 @@ const struct InstrumentPCM instrumentPCMData577 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_329SampleInfo;
-const struct InstrumentPCM instrumentPCMData578 = {
+extern const struct WaveData sfx_329WaveData;
+const struct InstrumentPCM instrumentPCM578 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_329SampleInfo,
+    /* Sample */ &sfx_329WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -9108,14 +9108,14 @@ const struct InstrumentPCM instrumentPCMData578 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_321SampleInfo;
-const struct InstrumentPCM instrumentPCMData579 = {
+extern const struct WaveData sfx_321WaveData;
+const struct InstrumentPCM instrumentPCM579 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_321SampleInfo,
+    /* Sample */ &sfx_321WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -9124,14 +9124,14 @@ const struct InstrumentPCM instrumentPCMData579 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_330SampleInfo;
-const struct InstrumentPCM instrumentPCMData580 = {
+extern const struct WaveData sfx_330WaveData;
+const struct InstrumentPCM instrumentPCM580 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_330SampleInfo,
+    /* Sample */ &sfx_330WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -9140,14 +9140,14 @@ const struct InstrumentPCM instrumentPCMData580 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_331SampleInfo;
-const struct InstrumentPCM instrumentPCMData581 = {
+extern const struct WaveData sfx_331WaveData;
+const struct InstrumentPCM instrumentPCM581 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_331SampleInfo,
+    /* Sample */ &sfx_331WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -9156,14 +9156,14 @@ const struct InstrumentPCM instrumentPCMData581 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_332SampleInfo;
-const struct InstrumentPCM instrumentPCMData582 = {
+extern const struct WaveData sfx_332WaveData;
+const struct InstrumentPCM instrumentPCM582 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_332SampleInfo,
+    /* Sample */ &sfx_332WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -9172,14 +9172,14 @@ const struct InstrumentPCM instrumentPCMData582 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_333SampleInfo;
-const struct InstrumentPCM instrumentPCMData583 = {
+extern const struct WaveData sfx_333WaveData;
+const struct InstrumentPCM instrumentPCM583 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_333SampleInfo,
+    /* Sample */ &sfx_333WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -9188,7 +9188,7 @@ const struct InstrumentPCM instrumentPCMData583 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData584 = {
+const struct InstrumentSubRhythm instrumentSubRhythm584 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -9197,14 +9197,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData584 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_334SampleInfo;
-const struct InstrumentPCM instrumentPCMData585 = {
+extern const struct WaveData sfx_334WaveData;
+const struct InstrumentPCM instrumentPCM585 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_334SampleInfo,
+    /* Sample */ &sfx_334WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0060364d,
     /* unk10  */ 0x00600000,
@@ -9213,14 +9213,14 @@ const struct InstrumentPCM instrumentPCMData585 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_335SampleInfo;
-const struct InstrumentPCM instrumentPCMData586 = {
+extern const struct WaveData sfx_335WaveData;
+const struct InstrumentPCM instrumentPCM586 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_335SampleInfo,
+    /* Sample */ &sfx_335WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -9229,14 +9229,14 @@ const struct InstrumentPCM instrumentPCMData586 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_336SampleInfo;
-const struct InstrumentPCM instrumentPCMData587 = {
+extern const struct WaveData sfx_336WaveData;
+const struct InstrumentPCM instrumentPCM587 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_336SampleInfo,
+    /* Sample */ &sfx_336WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0060364d,
     /* unk10  */ 0x00600000,
@@ -9245,14 +9245,14 @@ const struct InstrumentPCM instrumentPCMData587 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_337SampleInfo;
-const struct InstrumentPCM instrumentPCMData588 = {
+extern const struct WaveData sfx_337WaveData;
+const struct InstrumentPCM instrumentPCM588 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_337SampleInfo,
+    /* Sample */ &sfx_337WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -9261,14 +9261,14 @@ const struct InstrumentPCM instrumentPCMData588 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_330SampleInfo;
-const struct InstrumentPCM instrumentPCMData589 = {
+extern const struct WaveData sfx_330WaveData;
+const struct InstrumentPCM instrumentPCM589 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_330SampleInfo,
+    /* Sample */ &sfx_330WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0059cc48,
     /* unk10  */ 0x00600000,
@@ -9277,14 +9277,14 @@ const struct InstrumentPCM instrumentPCMData589 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_226SampleInfo;
-const struct InstrumentPCM instrumentPCMData590 = {
+extern const struct WaveData sfx_226WaveData;
+const struct InstrumentPCM instrumentPCM590 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_226SampleInfo,
+    /* Sample */ &sfx_226WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -9293,14 +9293,14 @@ const struct InstrumentPCM instrumentPCMData590 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_041SampleInfo;
-const struct InstrumentPCM instrumentPCMData591 = {
+extern const struct WaveData sfx_041WaveData;
+const struct InstrumentPCM instrumentPCM591 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_041SampleInfo,
+    /* Sample */ &sfx_041WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0060364d,
     /* unk10  */ 0x00600000,
@@ -9309,7 +9309,7 @@ const struct InstrumentPCM instrumentPCMData591 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentPSG instrumentPSGData592 = {
+const struct InstrumentPSG instrumentPSG592 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -9327,7 +9327,7 @@ const struct InstrumentPSG instrumentPSGData592 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData593 = {
+const struct InstrumentPSG instrumentPSG593 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -9345,14 +9345,14 @@ const struct InstrumentPSG instrumentPSGData593 = {
     /* unk22        */ 0x4,
 };
 
-extern const struct SampleInfo sfx_315SampleInfo;
-const struct InstrumentPCM instrumentPCMData594 = {
+extern const struct WaveData sfx_315WaveData;
+const struct InstrumentPCM instrumentPCM594 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_315SampleInfo,
+    /* Sample */ &sfx_315WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x000cd40a,
     /* unk10  */ 0x00600000,
@@ -9361,14 +9361,14 @@ const struct InstrumentPCM instrumentPCMData594 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_321SampleInfo;
-const struct InstrumentPCM instrumentPCMData595 = {
+extern const struct WaveData sfx_321WaveData;
+const struct InstrumentPCM instrumentPCM595 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_321SampleInfo,
+    /* Sample */ &sfx_321WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -9377,7 +9377,7 @@ const struct InstrumentPCM instrumentPCMData595 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-const struct InstrumentSubSplit instrumentSubbankMultiKeyData596 = {
+const struct InstrumentSubSplit instrumentSubSplit596 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -9387,7 +9387,7 @@ const struct InstrumentSubSplit instrumentSubbankMultiKeyData596 = {
     /* Sub-bank */ (void *)0x08a96c10, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData597 = {
+const struct InstrumentSubRhythm instrumentSubRhythm597 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -9396,14 +9396,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData597 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_338SampleInfo;
-const struct InstrumentPCM instrumentPCMData598 = {
+extern const struct WaveData sfx_338WaveData;
+const struct InstrumentPCM instrumentPCM598 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_338SampleInfo,
+    /* Sample */ &sfx_338WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0060364d,
     /* unk10  */ 0x00600000,
@@ -9412,14 +9412,14 @@ const struct InstrumentPCM instrumentPCMData598 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_202SampleInfo;
-const struct InstrumentPCM instrumentPCMData599 = {
+extern const struct WaveData sfx_202WaveData;
+const struct InstrumentPCM instrumentPCM599 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_202SampleInfo,
+    /* Sample */ &sfx_202WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0060364d,
     /* unk10  */ 0x00600000,
@@ -9428,14 +9428,14 @@ const struct InstrumentPCM instrumentPCMData599 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_339SampleInfo;
-const struct InstrumentPCM instrumentPCMData600 = {
+extern const struct WaveData sfx_339WaveData;
+const struct InstrumentPCM instrumentPCM600 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_339SampleInfo,
+    /* Sample */ &sfx_339WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -9444,14 +9444,14 @@ const struct InstrumentPCM instrumentPCMData600 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_340SampleInfo;
-const struct InstrumentPCM instrumentPCMData601 = {
+extern const struct WaveData sfx_340WaveData;
+const struct InstrumentPCM instrumentPCM601 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_340SampleInfo,
+    /* Sample */ &sfx_340WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -9460,14 +9460,14 @@ const struct InstrumentPCM instrumentPCMData601 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_341SampleInfo;
-const struct InstrumentPCM instrumentPCMData602 = {
+extern const struct WaveData sfx_341WaveData;
+const struct InstrumentPCM instrumentPCM602 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_341SampleInfo,
+    /* Sample */ &sfx_341WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -9476,14 +9476,14 @@ const struct InstrumentPCM instrumentPCMData602 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_342SampleInfo;
-const struct InstrumentPCM instrumentPCMData603 = {
+extern const struct WaveData sfx_342WaveData;
+const struct InstrumentPCM instrumentPCM603 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_342SampleInfo,
+    /* Sample */ &sfx_342WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0060364d,
     /* unk10  */ 0x00600000,
@@ -9492,14 +9492,14 @@ const struct InstrumentPCM instrumentPCMData603 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_321SampleInfo;
-const struct InstrumentPCM instrumentPCMData604 = {
+extern const struct WaveData sfx_321WaveData;
+const struct InstrumentPCM instrumentPCM604 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_321SampleInfo,
+    /* Sample */ &sfx_321WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -9508,14 +9508,14 @@ const struct InstrumentPCM instrumentPCMData604 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_009SampleInfo;
-const struct InstrumentPCM instrumentPCMData605 = {
+extern const struct WaveData sfx_009WaveData;
+const struct InstrumentPCM instrumentPCM605 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_009SampleInfo,
+    /* Sample */ &sfx_009WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00307c1f,
@@ -9524,14 +9524,14 @@ const struct InstrumentPCM instrumentPCMData605 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_308SampleInfo;
-const struct InstrumentPCM instrumentPCMData606 = {
+extern const struct WaveData sfx_308WaveData;
+const struct InstrumentPCM instrumentPCM606 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_308SampleInfo,
+    /* Sample */ &sfx_308WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -9540,14 +9540,14 @@ const struct InstrumentPCM instrumentPCMData606 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_238SampleInfo;
-const struct InstrumentPCM instrumentPCMData607 = {
+extern const struct WaveData sfx_238WaveData;
+const struct InstrumentPCM instrumentPCM607 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_238SampleInfo,
+    /* Sample */ &sfx_238WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x00600000,
@@ -9556,14 +9556,14 @@ const struct InstrumentPCM instrumentPCMData607 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_311SampleInfo;
-const struct InstrumentPCM instrumentPCMData608 = {
+extern const struct WaveData sfx_311WaveData;
+const struct InstrumentPCM instrumentPCM608 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_311SampleInfo,
+    /* Sample */ &sfx_311WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -9572,7 +9572,7 @@ const struct InstrumentPCM instrumentPCMData608 = {
     /* unk1C  */ 0x000b8000,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData609 = {
+const struct InstrumentSubRhythm instrumentSubRhythm609 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -9581,14 +9581,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData609 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_124SampleInfo;
-const struct InstrumentPCM instrumentPCMData610 = {
+extern const struct WaveData sfx_124WaveData;
+const struct InstrumentPCM instrumentPCM610 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_124SampleInfo,
+    /* Sample */ &sfx_124WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x0026c9b2,
@@ -9597,14 +9597,14 @@ const struct InstrumentPCM instrumentPCMData610 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_313SampleInfo;
-const struct InstrumentPCM instrumentPCMData611 = {
+extern const struct WaveData sfx_313WaveData;
+const struct InstrumentPCM instrumentPCM611 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_313SampleInfo,
+    /* Sample */ &sfx_313WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -9613,14 +9613,14 @@ const struct InstrumentPCM instrumentPCMData611 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_343SampleInfo;
-const struct InstrumentPCM instrumentPCMData612 = {
+extern const struct WaveData sfx_343WaveData;
+const struct InstrumentPCM instrumentPCM612 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_343SampleInfo,
+    /* Sample */ &sfx_343WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -9629,14 +9629,14 @@ const struct InstrumentPCM instrumentPCMData612 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_289SampleInfo;
-const struct InstrumentPCM instrumentPCMData613 = {
+extern const struct WaveData sfx_289WaveData;
+const struct InstrumentPCM instrumentPCM613 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_289SampleInfo,
+    /* Sample */ &sfx_289WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -9645,14 +9645,14 @@ const struct InstrumentPCM instrumentPCMData613 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_200SampleInfo;
-const struct InstrumentPCM instrumentPCMData614 = {
+extern const struct WaveData sfx_200WaveData;
+const struct InstrumentPCM instrumentPCM614 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_200SampleInfo,
+    /* Sample */ &sfx_200WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -9661,14 +9661,14 @@ const struct InstrumentPCM instrumentPCMData614 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_110SampleInfo;
-const struct InstrumentPCM instrumentPCMData615 = {
+extern const struct WaveData sfx_110WaveData;
+const struct InstrumentPCM instrumentPCM615 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_110SampleInfo,
+    /* Sample */ &sfx_110WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -9677,14 +9677,14 @@ const struct InstrumentPCM instrumentPCMData615 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_111SampleInfo;
-const struct InstrumentPCM instrumentPCMData616 = {
+extern const struct WaveData sfx_111WaveData;
+const struct InstrumentPCM instrumentPCM616 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_111SampleInfo,
+    /* Sample */ &sfx_111WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -9693,14 +9693,14 @@ const struct InstrumentPCM instrumentPCMData616 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_344SampleInfo;
-const struct InstrumentPCM instrumentPCMData617 = {
+extern const struct WaveData sfx_344WaveData;
+const struct InstrumentPCM instrumentPCM617 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_344SampleInfo,
+    /* Sample */ &sfx_344WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x0000f83e,
@@ -9709,14 +9709,14 @@ const struct InstrumentPCM instrumentPCMData617 = {
     /* unk1C  */ 0x0000c000,
 };
 
-extern const struct SampleInfo sfx_345SampleInfo;
-const struct InstrumentPCM instrumentPCMData618 = {
+extern const struct WaveData sfx_345WaveData;
+const struct InstrumentPCM instrumentPCM618 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_345SampleInfo,
+    /* Sample */ &sfx_345WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -9725,14 +9725,14 @@ const struct InstrumentPCM instrumentPCMData618 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_346SampleInfo;
-const struct InstrumentPCM instrumentPCMData619 = {
+extern const struct WaveData sfx_346WaveData;
+const struct InstrumentPCM instrumentPCM619 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_346SampleInfo,
+    /* Sample */ &sfx_346WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -9741,14 +9741,14 @@ const struct InstrumentPCM instrumentPCMData619 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_033SampleInfo;
-const struct InstrumentPCM instrumentPCMData620 = {
+extern const struct WaveData sfx_033WaveData;
+const struct InstrumentPCM instrumentPCM620 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_033SampleInfo,
+    /* Sample */ &sfx_033WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -9757,7 +9757,7 @@ const struct InstrumentPCM instrumentPCMData620 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubSplit instrumentSubbankMultiKeyData621 = {
+const struct InstrumentSubSplit instrumentSubSplit621 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -9767,7 +9767,7 @@ const struct InstrumentSubSplit instrumentSubbankMultiKeyData621 = {
     /* Sub-bank */ (void *)0x08a97010, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData622 = {
+const struct InstrumentSubRhythm instrumentSubRhythm622 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -9776,14 +9776,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData622 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_347SampleInfo;
-const struct InstrumentPCM instrumentPCMData623 = {
+extern const struct WaveData sfx_347WaveData;
+const struct InstrumentPCM instrumentPCM623 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_347SampleInfo,
+    /* Sample */ &sfx_347WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -9792,14 +9792,14 @@ const struct InstrumentPCM instrumentPCMData623 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_201SampleInfo;
-const struct InstrumentPCM instrumentPCMData624 = {
+extern const struct WaveData sfx_201WaveData;
+const struct InstrumentPCM instrumentPCM624 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_201SampleInfo,
+    /* Sample */ &sfx_201WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -9808,14 +9808,14 @@ const struct InstrumentPCM instrumentPCMData624 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_348SampleInfo;
-const struct InstrumentPCM instrumentPCMData625 = {
+extern const struct WaveData sfx_348WaveData;
+const struct InstrumentPCM instrumentPCM625 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_348SampleInfo,
+    /* Sample */ &sfx_348WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -9824,14 +9824,14 @@ const struct InstrumentPCM instrumentPCMData625 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_199SampleInfo;
-const struct InstrumentPCM instrumentPCMData626 = {
+extern const struct WaveData sfx_199WaveData;
+const struct InstrumentPCM instrumentPCM626 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_199SampleInfo,
+    /* Sample */ &sfx_199WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -9840,14 +9840,14 @@ const struct InstrumentPCM instrumentPCMData626 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_349SampleInfo;
-const struct InstrumentPCM instrumentPCMData627 = {
+extern const struct WaveData sfx_349WaveData;
+const struct InstrumentPCM instrumentPCM627 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_349SampleInfo,
+    /* Sample */ &sfx_349WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -9856,14 +9856,14 @@ const struct InstrumentPCM instrumentPCMData627 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_350SampleInfo;
-const struct InstrumentPCM instrumentPCMData628 = {
+extern const struct WaveData sfx_350WaveData;
+const struct InstrumentPCM instrumentPCM628 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_350SampleInfo,
+    /* Sample */ &sfx_350WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -9872,14 +9872,14 @@ const struct InstrumentPCM instrumentPCMData628 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_351SampleInfo;
-const struct InstrumentPCM instrumentPCMData629 = {
+extern const struct WaveData sfx_351WaveData;
+const struct InstrumentPCM instrumentPCM629 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_351SampleInfo,
+    /* Sample */ &sfx_351WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -9888,14 +9888,14 @@ const struct InstrumentPCM instrumentPCMData629 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_352SampleInfo;
-const struct InstrumentPCM instrumentPCMData630 = {
+extern const struct WaveData sfx_352WaveData;
+const struct InstrumentPCM instrumentPCM630 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_352SampleInfo,
+    /* Sample */ &sfx_352WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -9904,14 +9904,14 @@ const struct InstrumentPCM instrumentPCMData630 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_353SampleInfo;
-const struct InstrumentPCM instrumentPCMData631 = {
+extern const struct WaveData sfx_353WaveData;
+const struct InstrumentPCM instrumentPCM631 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_353SampleInfo,
+    /* Sample */ &sfx_353WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -9920,14 +9920,14 @@ const struct InstrumentPCM instrumentPCMData631 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_229SampleInfo;
-const struct InstrumentPCM instrumentPCMData632 = {
+extern const struct WaveData sfx_229WaveData;
+const struct InstrumentPCM instrumentPCM632 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_229SampleInfo,
+    /* Sample */ &sfx_229WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -9936,14 +9936,14 @@ const struct InstrumentPCM instrumentPCMData632 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_354SampleInfo;
-const struct InstrumentPCM instrumentPCMData633 = {
+extern const struct WaveData sfx_354WaveData;
+const struct InstrumentPCM instrumentPCM633 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_354SampleInfo,
+    /* Sample */ &sfx_354WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -9952,14 +9952,14 @@ const struct InstrumentPCM instrumentPCMData633 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_015SampleInfo;
-const struct InstrumentPCM instrumentPCMData634 = {
+extern const struct WaveData sfx_015WaveData;
+const struct InstrumentPCM instrumentPCM634 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_015SampleInfo,
+    /* Sample */ &sfx_015WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x004cf83e,
     /* unk10  */ 0x00307c1f,
@@ -9968,7 +9968,7 @@ const struct InstrumentPCM instrumentPCMData634 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubSplit instrumentSubbankMultiKeyData635 = {
+const struct InstrumentSubSplit instrumentSubSplit635 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -9978,7 +9978,7 @@ const struct InstrumentSubSplit instrumentSubbankMultiKeyData635 = {
     /* Sub-bank */ (void *)0x08a97210, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData636 = {
+const struct InstrumentSubRhythm instrumentSubRhythm636 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -9987,14 +9987,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData636 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_355SampleInfo;
-const struct InstrumentPCM instrumentPCMData637 = {
+extern const struct WaveData sfx_355WaveData;
+const struct InstrumentPCM instrumentPCM637 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_355SampleInfo,
+    /* Sample */ &sfx_355WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10003,14 +10003,14 @@ const struct InstrumentPCM instrumentPCMData637 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_356SampleInfo;
-const struct InstrumentPCM instrumentPCMData638 = {
+extern const struct WaveData sfx_356WaveData;
+const struct InstrumentPCM instrumentPCM638 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_356SampleInfo,
+    /* Sample */ &sfx_356WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10019,14 +10019,14 @@ const struct InstrumentPCM instrumentPCMData638 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_300SampleInfo;
-const struct InstrumentPCM instrumentPCMData639 = {
+extern const struct WaveData sfx_300WaveData;
+const struct InstrumentPCM instrumentPCM639 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_300SampleInfo,
+    /* Sample */ &sfx_300WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10035,14 +10035,14 @@ const struct InstrumentPCM instrumentPCMData639 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_354SampleInfo;
-const struct InstrumentPCM instrumentPCMData640 = {
+extern const struct WaveData sfx_354WaveData;
+const struct InstrumentPCM instrumentPCM640 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_354SampleInfo,
+    /* Sample */ &sfx_354WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -10051,14 +10051,14 @@ const struct InstrumentPCM instrumentPCMData640 = {
     /* unk1C  */ 0x001faea0,
 };
 
-extern const struct SampleInfo sfx_113SampleInfo;
-const struct InstrumentPCM instrumentPCMData641 = {
+extern const struct WaveData sfx_113WaveData;
+const struct InstrumentPCM instrumentPCM641 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_113SampleInfo,
+    /* Sample */ &sfx_113WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -10067,14 +10067,14 @@ const struct InstrumentPCM instrumentPCMData641 = {
     /* unk1C  */ 0x00235dd1,
 };
 
-extern const struct SampleInfo sfx_262SampleInfo;
-const struct InstrumentPCM instrumentPCMData642 = {
+extern const struct WaveData sfx_262WaveData;
+const struct InstrumentPCM instrumentPCM642 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_262SampleInfo,
+    /* Sample */ &sfx_262WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -10083,14 +10083,14 @@ const struct InstrumentPCM instrumentPCMData642 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_206SampleInfo;
-const struct InstrumentPCM instrumentPCMData643 = {
+extern const struct WaveData sfx_206WaveData;
+const struct InstrumentPCM instrumentPCM643 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_206SampleInfo,
+    /* Sample */ &sfx_206WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -10099,14 +10099,14 @@ const struct InstrumentPCM instrumentPCMData643 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_290SampleInfo;
-const struct InstrumentPCM instrumentPCMData644 = {
+extern const struct WaveData sfx_290WaveData;
+const struct InstrumentPCM instrumentPCM644 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_290SampleInfo,
+    /* Sample */ &sfx_290WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10115,14 +10115,14 @@ const struct InstrumentPCM instrumentPCMData644 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_207SampleInfo;
-const struct InstrumentPCM instrumentPCMData645 = {
+extern const struct WaveData sfx_207WaveData;
+const struct InstrumentPCM instrumentPCM645 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_207SampleInfo,
+    /* Sample */ &sfx_207WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -10131,14 +10131,14 @@ const struct InstrumentPCM instrumentPCMData645 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_291SampleInfo;
-const struct InstrumentPCM instrumentPCMData646 = {
+extern const struct WaveData sfx_291WaveData;
+const struct InstrumentPCM instrumentPCM646 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_291SampleInfo,
+    /* Sample */ &sfx_291WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -10147,14 +10147,14 @@ const struct InstrumentPCM instrumentPCMData646 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_262SampleInfo;
-const struct InstrumentPCM instrumentPCMData647 = {
+extern const struct WaveData sfx_262WaveData;
+const struct InstrumentPCM instrumentPCM647 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_262SampleInfo,
+    /* Sample */ &sfx_262WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0066a052,
     /* unk10  */ 0x00600000,
@@ -10163,7 +10163,7 @@ const struct InstrumentPCM instrumentPCMData647 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubSplit instrumentSubbankMultiKeyData648 = {
+const struct InstrumentSubSplit instrumentSubSplit648 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -10173,7 +10173,7 @@ const struct InstrumentSubSplit instrumentSubbankMultiKeyData648 = {
     /* Sub-bank */ (void *)0x08a97010, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData649 = {
+const struct InstrumentSubRhythm instrumentSubRhythm649 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -10182,14 +10182,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData649 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_357SampleInfo;
-const struct InstrumentPCM instrumentPCMData650 = {
+extern const struct WaveData sfx_357WaveData;
+const struct InstrumentPCM instrumentPCM650 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_357SampleInfo,
+    /* Sample */ &sfx_357WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10198,14 +10198,14 @@ const struct InstrumentPCM instrumentPCMData650 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_358SampleInfo;
-const struct InstrumentPCM instrumentPCMData651 = {
+extern const struct WaveData sfx_358WaveData;
+const struct InstrumentPCM instrumentPCM651 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_358SampleInfo,
+    /* Sample */ &sfx_358WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10214,14 +10214,14 @@ const struct InstrumentPCM instrumentPCMData651 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_359SampleInfo;
-const struct InstrumentPCM instrumentPCMData652 = {
+extern const struct WaveData sfx_359WaveData;
+const struct InstrumentPCM instrumentPCM652 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_359SampleInfo,
+    /* Sample */ &sfx_359WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x003a2e8b,
@@ -10230,14 +10230,14 @@ const struct InstrumentPCM instrumentPCMData652 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_060SampleInfo;
-const struct InstrumentPCM instrumentPCMData653 = {
+extern const struct WaveData sfx_060WaveData;
+const struct InstrumentPCM instrumentPCM653 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_060SampleInfo,
+    /* Sample */ &sfx_060WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10246,14 +10246,14 @@ const struct InstrumentPCM instrumentPCMData653 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_061SampleInfo;
-const struct InstrumentPCM instrumentPCMData654 = {
+extern const struct WaveData sfx_061WaveData;
+const struct InstrumentPCM instrumentPCM654 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_061SampleInfo,
+    /* Sample */ &sfx_061WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10262,14 +10262,14 @@ const struct InstrumentPCM instrumentPCMData654 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_360SampleInfo;
-const struct InstrumentPCM instrumentPCMData655 = {
+extern const struct WaveData sfx_360WaveData;
+const struct InstrumentPCM instrumentPCM655 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_360SampleInfo,
+    /* Sample */ &sfx_360WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10278,14 +10278,14 @@ const struct InstrumentPCM instrumentPCMData655 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_361SampleInfo;
-const struct InstrumentPCM instrumentPCMData656 = {
+extern const struct WaveData sfx_361WaveData;
+const struct InstrumentPCM instrumentPCM656 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_361SampleInfo,
+    /* Sample */ &sfx_361WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10294,14 +10294,14 @@ const struct InstrumentPCM instrumentPCMData656 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_196SampleInfo;
-const struct InstrumentPCM instrumentPCMData657 = {
+extern const struct WaveData sfx_196WaveData;
+const struct InstrumentPCM instrumentPCM657 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_196SampleInfo,
+    /* Sample */ &sfx_196WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10310,14 +10310,14 @@ const struct InstrumentPCM instrumentPCMData657 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_362SampleInfo;
-const struct InstrumentPCM instrumentPCMData658 = {
+extern const struct WaveData sfx_362WaveData;
+const struct InstrumentPCM instrumentPCM658 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_362SampleInfo,
+    /* Sample */ &sfx_362WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10326,14 +10326,14 @@ const struct InstrumentPCM instrumentPCMData658 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_017SampleInfo;
-const struct InstrumentPCM instrumentPCMData659 = {
+extern const struct WaveData sfx_017WaveData;
+const struct InstrumentPCM instrumentPCM659 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_017SampleInfo,
+    /* Sample */ &sfx_017WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10342,7 +10342,7 @@ const struct InstrumentPCM instrumentPCMData659 = {
     /* unk1C  */ 0x00082378,
 };
 
-const struct InstrumentSubSplit instrumentSubbankMultiKeyData660 = {
+const struct InstrumentSubSplit instrumentSubSplit660 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -10352,7 +10352,7 @@ const struct InstrumentSubSplit instrumentSubbankMultiKeyData660 = {
     /* Sub-bank */ (void *)0x08a97610, // POINTER
 };
 
-const struct InstrumentSubSplit instrumentSubbankMultiKeyData661 = {
+const struct InstrumentSubSplit instrumentSubSplit661 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -10362,7 +10362,7 @@ const struct InstrumentSubSplit instrumentSubbankMultiKeyData661 = {
     /* Sub-bank */ (void *)0x08a97610, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData662 = {
+const struct InstrumentSubRhythm instrumentSubRhythm662 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -10371,14 +10371,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData662 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_006SampleInfo;
-const struct InstrumentPCM instrumentPCMData663 = {
+extern const struct WaveData sfx_006WaveData;
+const struct InstrumentPCM instrumentPCM663 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_006SampleInfo,
+    /* Sample */ &sfx_006WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -10387,14 +10387,14 @@ const struct InstrumentPCM instrumentPCMData663 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_229SampleInfo;
-const struct InstrumentPCM instrumentPCMData664 = {
+extern const struct WaveData sfx_229WaveData;
+const struct InstrumentPCM instrumentPCM664 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_229SampleInfo,
+    /* Sample */ &sfx_229WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -10403,14 +10403,14 @@ const struct InstrumentPCM instrumentPCMData664 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_363SampleInfo;
-const struct InstrumentPCM instrumentPCMData665 = {
+extern const struct WaveData sfx_363WaveData;
+const struct InstrumentPCM instrumentPCM665 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_363SampleInfo,
+    /* Sample */ &sfx_363WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -10419,14 +10419,14 @@ const struct InstrumentPCM instrumentPCMData665 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_364SampleInfo;
-const struct InstrumentPCM instrumentPCMData666 = {
+extern const struct WaveData sfx_364WaveData;
+const struct InstrumentPCM instrumentPCM666 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_364SampleInfo,
+    /* Sample */ &sfx_364WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -10435,14 +10435,14 @@ const struct InstrumentPCM instrumentPCMData666 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_028SampleInfo;
-const struct InstrumentPCM instrumentPCMData667 = {
+extern const struct WaveData sfx_028WaveData;
+const struct InstrumentPCM instrumentPCM667 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_028SampleInfo,
+    /* Sample */ &sfx_028WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10451,14 +10451,14 @@ const struct InstrumentPCM instrumentPCMData667 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_262SampleInfo;
-const struct InstrumentPCM instrumentPCMData668 = {
+extern const struct WaveData sfx_262WaveData;
+const struct InstrumentPCM instrumentPCM668 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_262SampleInfo,
+    /* Sample */ &sfx_262WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -10467,14 +10467,14 @@ const struct InstrumentPCM instrumentPCMData668 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_260SampleInfo;
-const struct InstrumentPCM instrumentPCMData669 = {
+extern const struct WaveData sfx_260WaveData;
+const struct InstrumentPCM instrumentPCM669 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_260SampleInfo,
+    /* Sample */ &sfx_260WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -10483,14 +10483,14 @@ const struct InstrumentPCM instrumentPCMData669 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_262SampleInfo;
-const struct InstrumentPCM instrumentPCMData670 = {
+extern const struct WaveData sfx_262WaveData;
+const struct InstrumentPCM instrumentPCM670 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_262SampleInfo,
+    /* Sample */ &sfx_262WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -10499,14 +10499,14 @@ const struct InstrumentPCM instrumentPCMData670 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_365SampleInfo;
-const struct InstrumentPCM instrumentPCMData671 = {
+extern const struct WaveData sfx_365WaveData;
+const struct InstrumentPCM instrumentPCM671 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_365SampleInfo,
+    /* Sample */ &sfx_365WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -10515,14 +10515,14 @@ const struct InstrumentPCM instrumentPCMData671 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_366SampleInfo;
-const struct InstrumentPCM instrumentPCMData672 = {
+extern const struct WaveData sfx_366WaveData;
+const struct InstrumentPCM instrumentPCM672 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_366SampleInfo,
+    /* Sample */ &sfx_366WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10531,14 +10531,14 @@ const struct InstrumentPCM instrumentPCMData672 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_367SampleInfo;
-const struct InstrumentPCM instrumentPCMData673 = {
+extern const struct WaveData sfx_367WaveData;
+const struct InstrumentPCM instrumentPCM673 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_367SampleInfo,
+    /* Sample */ &sfx_367WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -10547,14 +10547,14 @@ const struct InstrumentPCM instrumentPCMData673 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_368SampleInfo;
-const struct InstrumentPCM instrumentPCMData674 = {
+extern const struct WaveData sfx_368WaveData;
+const struct InstrumentPCM instrumentPCM674 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_368SampleInfo,
+    /* Sample */ &sfx_368WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10563,14 +10563,14 @@ const struct InstrumentPCM instrumentPCMData674 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_369SampleInfo;
-const struct InstrumentPCM instrumentPCMData675 = {
+extern const struct WaveData sfx_369WaveData;
+const struct InstrumentPCM instrumentPCM675 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_369SampleInfo,
+    /* Sample */ &sfx_369WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10579,14 +10579,14 @@ const struct InstrumentPCM instrumentPCMData675 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_370SampleInfo;
-const struct InstrumentPCM instrumentPCMData676 = {
+extern const struct WaveData sfx_370WaveData;
+const struct InstrumentPCM instrumentPCM676 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_370SampleInfo,
+    /* Sample */ &sfx_370WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10595,7 +10595,7 @@ const struct InstrumentPCM instrumentPCMData676 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData677 = {
+const struct InstrumentSubRhythm instrumentSubRhythm677 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -10604,7 +10604,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData677 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData678 = {
+const struct InstrumentSubRhythm instrumentSubRhythm678 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -10613,14 +10613,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData678 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_371SampleInfo;
-const struct InstrumentPCM instrumentPCMData679 = {
+extern const struct WaveData sfx_371WaveData;
+const struct InstrumentPCM instrumentPCM679 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_371SampleInfo,
+    /* Sample */ &sfx_371WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10629,14 +10629,14 @@ const struct InstrumentPCM instrumentPCMData679 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_229SampleInfo;
-const struct InstrumentPCM instrumentPCMData680 = {
+extern const struct WaveData sfx_229WaveData;
+const struct InstrumentPCM instrumentPCM680 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_229SampleInfo,
+    /* Sample */ &sfx_229WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10645,14 +10645,14 @@ const struct InstrumentPCM instrumentPCMData680 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_372SampleInfo;
-const struct InstrumentPCM instrumentPCMData681 = {
+extern const struct WaveData sfx_372WaveData;
+const struct InstrumentPCM instrumentPCM681 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_372SampleInfo,
+    /* Sample */ &sfx_372WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -10661,14 +10661,14 @@ const struct InstrumentPCM instrumentPCMData681 = {
     /* unk1C  */ 0x00055552,
 };
 
-extern const struct SampleInfo sfx_262SampleInfo;
-const struct InstrumentPCM instrumentPCMData682 = {
+extern const struct WaveData sfx_262WaveData;
+const struct InstrumentPCM instrumentPCM682 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_262SampleInfo,
+    /* Sample */ &sfx_262WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -10677,14 +10677,14 @@ const struct InstrumentPCM instrumentPCMData682 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_015SampleInfo;
-const struct InstrumentPCM instrumentPCMData683 = {
+extern const struct WaveData sfx_015WaveData;
+const struct InstrumentPCM instrumentPCM683 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_015SampleInfo,
+    /* Sample */ &sfx_015WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00307c1f,
@@ -10693,14 +10693,14 @@ const struct InstrumentPCM instrumentPCMData683 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_018SampleInfo;
-const struct InstrumentPCM instrumentPCMData684 = {
+extern const struct WaveData sfx_018WaveData;
+const struct InstrumentPCM instrumentPCM684 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_018SampleInfo,
+    /* Sample */ &sfx_018WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10709,7 +10709,7 @@ const struct InstrumentPCM instrumentPCMData684 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData685 = {
+const struct InstrumentSubRhythm instrumentSubRhythm685 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -10718,7 +10718,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData685 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData686 = {
+const struct InstrumentSubRhythm instrumentSubRhythm686 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -10727,14 +10727,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData686 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_373SampleInfo;
-const struct InstrumentPCM instrumentPCMData687 = {
+extern const struct WaveData sfx_373WaveData;
+const struct InstrumentPCM instrumentPCM687 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_373SampleInfo,
+    /* Sample */ &sfx_373WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10743,14 +10743,14 @@ const struct InstrumentPCM instrumentPCMData687 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_374SampleInfo;
-const struct InstrumentPCM instrumentPCMData688 = {
+extern const struct WaveData sfx_374WaveData;
+const struct InstrumentPCM instrumentPCM688 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_374SampleInfo,
+    /* Sample */ &sfx_374WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10759,14 +10759,14 @@ const struct InstrumentPCM instrumentPCMData688 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_375SampleInfo;
-const struct InstrumentPCM instrumentPCMData689 = {
+extern const struct WaveData sfx_375WaveData;
+const struct InstrumentPCM instrumentPCM689 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_375SampleInfo,
+    /* Sample */ &sfx_375WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10775,14 +10775,14 @@ const struct InstrumentPCM instrumentPCMData689 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_376SampleInfo;
-const struct InstrumentPCM instrumentPCMData690 = {
+extern const struct WaveData sfx_376WaveData;
+const struct InstrumentPCM instrumentPCM690 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_376SampleInfo,
+    /* Sample */ &sfx_376WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10791,14 +10791,14 @@ const struct InstrumentPCM instrumentPCMData690 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_260SampleInfo;
-const struct InstrumentPCM instrumentPCMData691 = {
+extern const struct WaveData sfx_260WaveData;
+const struct InstrumentPCM instrumentPCM691 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_260SampleInfo,
+    /* Sample */ &sfx_260WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -10807,14 +10807,14 @@ const struct InstrumentPCM instrumentPCMData691 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_377SampleInfo;
-const struct InstrumentPCM instrumentPCMData692 = {
+extern const struct WaveData sfx_377WaveData;
+const struct InstrumentPCM instrumentPCM692 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_377SampleInfo,
+    /* Sample */ &sfx_377WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -10823,14 +10823,14 @@ const struct InstrumentPCM instrumentPCMData692 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_378SampleInfo;
-const struct InstrumentPCM instrumentPCMData693 = {
+extern const struct WaveData sfx_378WaveData;
+const struct InstrumentPCM instrumentPCM693 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_378SampleInfo,
+    /* Sample */ &sfx_378WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -10839,14 +10839,14 @@ const struct InstrumentPCM instrumentPCMData693 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_379SampleInfo;
-const struct InstrumentPCM instrumentPCMData694 = {
+extern const struct WaveData sfx_379WaveData;
+const struct InstrumentPCM instrumentPCM694 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_379SampleInfo,
+    /* Sample */ &sfx_379WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10855,14 +10855,14 @@ const struct InstrumentPCM instrumentPCMData694 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_261SampleInfo;
-const struct InstrumentPCM instrumentPCMData695 = {
+extern const struct WaveData sfx_261WaveData;
+const struct InstrumentPCM instrumentPCM695 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_261SampleInfo,
+    /* Sample */ &sfx_261WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10871,14 +10871,14 @@ const struct InstrumentPCM instrumentPCMData695 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_261SampleInfo;
-const struct InstrumentPCM instrumentPCMData696 = {
+extern const struct WaveData sfx_261WaveData;
+const struct InstrumentPCM instrumentPCM696 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_261SampleInfo,
+    /* Sample */ &sfx_261WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -10887,14 +10887,14 @@ const struct InstrumentPCM instrumentPCMData696 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_113SampleInfo;
-const struct InstrumentPCM instrumentPCMData697 = {
+extern const struct WaveData sfx_113WaveData;
+const struct InstrumentPCM instrumentPCM697 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_113SampleInfo,
+    /* Sample */ &sfx_113WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -10903,14 +10903,14 @@ const struct InstrumentPCM instrumentPCMData697 = {
     /* unk1C  */ 0x00235dd1,
 };
 
-extern const struct SampleInfo sfx_028SampleInfo;
-const struct InstrumentPCM instrumentPCMData698 = {
+extern const struct WaveData sfx_028WaveData;
+const struct InstrumentPCM instrumentPCM698 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_028SampleInfo,
+    /* Sample */ &sfx_028WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x0026c9b2,
@@ -10919,14 +10919,14 @@ const struct InstrumentPCM instrumentPCMData698 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_380SampleInfo;
-const struct InstrumentPCM instrumentPCMData699 = {
+extern const struct WaveData sfx_380WaveData;
+const struct InstrumentPCM instrumentPCM699 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_380SampleInfo,
+    /* Sample */ &sfx_380WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10935,14 +10935,14 @@ const struct InstrumentPCM instrumentPCMData699 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_381SampleInfo;
-const struct InstrumentPCM instrumentPCMData700 = {
+extern const struct WaveData sfx_381WaveData;
+const struct InstrumentPCM instrumentPCM700 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_381SampleInfo,
+    /* Sample */ &sfx_381WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10951,14 +10951,14 @@ const struct InstrumentPCM instrumentPCMData700 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_293SampleInfo;
-const struct InstrumentPCM instrumentPCMData701 = {
+extern const struct WaveData sfx_293WaveData;
+const struct InstrumentPCM instrumentPCM701 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_293SampleInfo,
+    /* Sample */ &sfx_293WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -10967,14 +10967,14 @@ const struct InstrumentPCM instrumentPCMData701 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_289SampleInfo;
-const struct InstrumentPCM instrumentPCMData702 = {
+extern const struct WaveData sfx_289WaveData;
+const struct InstrumentPCM instrumentPCM702 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_289SampleInfo,
+    /* Sample */ &sfx_289WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -10983,14 +10983,14 @@ const struct InstrumentPCM instrumentPCMData702 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_346SampleInfo;
-const struct InstrumentPCM instrumentPCMData703 = {
+extern const struct WaveData sfx_346WaveData;
+const struct InstrumentPCM instrumentPCM703 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_346SampleInfo,
+    /* Sample */ &sfx_346WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -10999,14 +10999,14 @@ const struct InstrumentPCM instrumentPCMData703 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_375SampleInfo;
-const struct InstrumentPCM instrumentPCMData704 = {
+extern const struct WaveData sfx_375WaveData;
+const struct InstrumentPCM instrumentPCM704 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_375SampleInfo,
+    /* Sample */ &sfx_375WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -11015,7 +11015,7 @@ const struct InstrumentPCM instrumentPCMData704 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubSplit instrumentSubbankMultiKeyData705 = {
+const struct InstrumentSubSplit instrumentSubSplit705 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -11025,7 +11025,7 @@ const struct InstrumentSubSplit instrumentSubbankMultiKeyData705 = {
     /* Sub-bank */ (void *)0x08a97010, // POINTER
 };
 
-const struct InstrumentSubSplit instrumentSubbankMultiKeyData706 = {
+const struct InstrumentSubSplit instrumentSubSplit706 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0x30,
@@ -11035,7 +11035,7 @@ const struct InstrumentSubSplit instrumentSubbankMultiKeyData706 = {
     /* Sub-bank */ (void *)0x08a97c10, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData707 = {
+const struct InstrumentSubRhythm instrumentSubRhythm707 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -11044,7 +11044,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData707 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData708 = {
+const struct InstrumentSubRhythm instrumentSubRhythm708 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -11053,14 +11053,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData708 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_382SampleInfo;
-const struct InstrumentPCM instrumentPCMData709 = {
+extern const struct WaveData sfx_382WaveData;
+const struct InstrumentPCM instrumentPCM709 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_382SampleInfo,
+    /* Sample */ &sfx_382WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -11069,7 +11069,7 @@ const struct InstrumentPCM instrumentPCMData709 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentPSG instrumentPSGData710 = {
+const struct InstrumentPSG instrumentPSG710 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -11087,7 +11087,7 @@ const struct InstrumentPSG instrumentPSGData710 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData711 = {
+const struct InstrumentPSG instrumentPSG711 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -11105,14 +11105,14 @@ const struct InstrumentPSG instrumentPSGData711 = {
     /* unk22        */ 0x4,
 };
 
-extern const struct SampleInfo sfx_383SampleInfo;
-const struct InstrumentPCM instrumentPCMData712 = {
+extern const struct WaveData sfx_383WaveData;
+const struct InstrumentPCM instrumentPCM712 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_383SampleInfo,
+    /* Sample */ &sfx_383WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -11121,14 +11121,14 @@ const struct InstrumentPCM instrumentPCMData712 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_384SampleInfo;
-const struct InstrumentPCM instrumentPCMData713 = {
+extern const struct WaveData sfx_384WaveData;
+const struct InstrumentPCM instrumentPCM713 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_384SampleInfo,
+    /* Sample */ &sfx_384WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -11137,14 +11137,14 @@ const struct InstrumentPCM instrumentPCMData713 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_309SampleInfo;
-const struct InstrumentPCM instrumentPCMData714 = {
+extern const struct WaveData sfx_309WaveData;
+const struct InstrumentPCM instrumentPCM714 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_309SampleInfo,
+    /* Sample */ &sfx_309WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x00600000,
@@ -11153,14 +11153,14 @@ const struct InstrumentPCM instrumentPCMData714 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_321SampleInfo;
-const struct InstrumentPCM instrumentPCMData715 = {
+extern const struct WaveData sfx_321WaveData;
+const struct InstrumentPCM instrumentPCM715 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_321SampleInfo,
+    /* Sample */ &sfx_321WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -11169,14 +11169,14 @@ const struct InstrumentPCM instrumentPCMData715 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_385SampleInfo;
-const struct InstrumentPCM instrumentPCMData716 = {
+extern const struct WaveData sfx_385WaveData;
+const struct InstrumentPCM instrumentPCM716 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_385SampleInfo,
+    /* Sample */ &sfx_385WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -11185,14 +11185,14 @@ const struct InstrumentPCM instrumentPCMData716 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_348SampleInfo;
-const struct InstrumentPCM instrumentPCMData717 = {
+extern const struct WaveData sfx_348WaveData;
+const struct InstrumentPCM instrumentPCM717 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_348SampleInfo,
+    /* Sample */ &sfx_348WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -11201,14 +11201,14 @@ const struct InstrumentPCM instrumentPCMData717 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_015SampleInfo;
-const struct InstrumentPCM instrumentPCMData718 = {
+extern const struct WaveData sfx_015WaveData;
+const struct InstrumentPCM instrumentPCM718 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_015SampleInfo,
+    /* Sample */ &sfx_015WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x004cf83e,
     /* unk10  */ 0x00307c1f,
@@ -11217,14 +11217,14 @@ const struct InstrumentPCM instrumentPCMData718 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_226SampleInfo;
-const struct InstrumentPCM instrumentPCMData719 = {
+extern const struct WaveData sfx_226WaveData;
+const struct InstrumentPCM instrumentPCM719 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_226SampleInfo,
+    /* Sample */ &sfx_226WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -11233,14 +11233,14 @@ const struct InstrumentPCM instrumentPCMData719 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_386SampleInfo;
-const struct InstrumentPCM instrumentPCMData720 = {
+extern const struct WaveData sfx_386WaveData;
+const struct InstrumentPCM instrumentPCM720 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_386SampleInfo,
+    /* Sample */ &sfx_386WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x000cd40a,
     /* unk10  */ 0x00600000,
@@ -11249,14 +11249,14 @@ const struct InstrumentPCM instrumentPCMData720 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_313SampleInfo;
-const struct InstrumentPCM instrumentPCMData721 = {
+extern const struct WaveData sfx_313WaveData;
+const struct InstrumentPCM instrumentPCM721 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_313SampleInfo,
+    /* Sample */ &sfx_313WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -11265,14 +11265,14 @@ const struct InstrumentPCM instrumentPCMData721 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_017SampleInfo;
-const struct InstrumentPCM instrumentPCMData722 = {
+extern const struct WaveData sfx_017WaveData;
+const struct InstrumentPCM instrumentPCM722 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_017SampleInfo,
+    /* Sample */ &sfx_017WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -11281,14 +11281,14 @@ const struct InstrumentPCM instrumentPCMData722 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_293SampleInfo;
-const struct InstrumentPCM instrumentPCMData723 = {
+extern const struct WaveData sfx_293WaveData;
+const struct InstrumentPCM instrumentPCM723 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_293SampleInfo,
+    /* Sample */ &sfx_293WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -11297,14 +11297,14 @@ const struct InstrumentPCM instrumentPCMData723 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_387SampleInfo;
-const struct InstrumentPCM instrumentPCMData724 = {
+extern const struct WaveData sfx_387WaveData;
+const struct InstrumentPCM instrumentPCM724 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_387SampleInfo,
+    /* Sample */ &sfx_387WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -11313,14 +11313,14 @@ const struct InstrumentPCM instrumentPCMData724 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_342SampleInfo;
-const struct InstrumentPCM instrumentPCMData725 = {
+extern const struct WaveData sfx_342WaveData;
+const struct InstrumentPCM instrumentPCM725 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_342SampleInfo,
+    /* Sample */ &sfx_342WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0060364d,
     /* unk10  */ 0x00600000,
@@ -11329,14 +11329,14 @@ const struct InstrumentPCM instrumentPCMData725 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_043SampleInfo;
-const struct InstrumentPCM instrumentPCMData726 = {
+extern const struct WaveData sfx_043WaveData;
+const struct InstrumentPCM instrumentPCM726 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_043SampleInfo,
+    /* Sample */ &sfx_043WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -11345,7 +11345,7 @@ const struct InstrumentPCM instrumentPCMData726 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData727 = {
+const struct InstrumentSubRhythm instrumentSubRhythm727 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -11354,7 +11354,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData727 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData728 = {
+const struct InstrumentSubRhythm instrumentSubRhythm728 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -11363,7 +11363,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData728 = {
     /* Sub-bank */ (void *)0x08a996e4, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData729 = {
+const struct InstrumentSubRhythm instrumentSubRhythm729 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -11372,14 +11372,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData729 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_388SampleInfo;
-const struct InstrumentPCM instrumentPCMData730 = {
+extern const struct WaveData sfx_388WaveData;
+const struct InstrumentPCM instrumentPCM730 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_388SampleInfo,
+    /* Sample */ &sfx_388WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -11388,14 +11388,14 @@ const struct InstrumentPCM instrumentPCMData730 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_028SampleInfo;
-const struct InstrumentPCM instrumentPCMData731 = {
+extern const struct WaveData sfx_028WaveData;
+const struct InstrumentPCM instrumentPCM731 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_028SampleInfo,
+    /* Sample */ &sfx_028WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x0026c9b2,
@@ -11404,14 +11404,14 @@ const struct InstrumentPCM instrumentPCMData731 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_389SampleInfo;
-const struct InstrumentPCM instrumentPCMData732 = {
+extern const struct WaveData sfx_389WaveData;
+const struct InstrumentPCM instrumentPCM732 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_389SampleInfo,
+    /* Sample */ &sfx_389WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -11420,14 +11420,14 @@ const struct InstrumentPCM instrumentPCMData732 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_015SampleInfo;
-const struct InstrumentPCM instrumentPCMData733 = {
+extern const struct WaveData sfx_015WaveData;
+const struct InstrumentPCM instrumentPCM733 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_015SampleInfo,
+    /* Sample */ &sfx_015WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -11436,14 +11436,14 @@ const struct InstrumentPCM instrumentPCMData733 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_348SampleInfo;
-const struct InstrumentPCM instrumentPCMData734 = {
+extern const struct WaveData sfx_348WaveData;
+const struct InstrumentPCM instrumentPCM734 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_348SampleInfo,
+    /* Sample */ &sfx_348WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -11452,14 +11452,14 @@ const struct InstrumentPCM instrumentPCMData734 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_301SampleInfo;
-const struct InstrumentPCM instrumentPCMData735 = {
+extern const struct WaveData sfx_301WaveData;
+const struct InstrumentPCM instrumentPCM735 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_301SampleInfo,
+    /* Sample */ &sfx_301WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -11468,14 +11468,14 @@ const struct InstrumentPCM instrumentPCMData735 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_302SampleInfo;
-const struct InstrumentPCM instrumentPCMData736 = {
+extern const struct WaveData sfx_302WaveData;
+const struct InstrumentPCM instrumentPCM736 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_302SampleInfo,
+    /* Sample */ &sfx_302WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -11484,14 +11484,14 @@ const struct InstrumentPCM instrumentPCMData736 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_390SampleInfo;
-const struct InstrumentPCM instrumentPCMData737 = {
+extern const struct WaveData sfx_390WaveData;
+const struct InstrumentPCM instrumentPCM737 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_390SampleInfo,
+    /* Sample */ &sfx_390WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -11500,14 +11500,14 @@ const struct InstrumentPCM instrumentPCMData737 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_043SampleInfo;
-const struct InstrumentPCM instrumentPCMData738 = {
+extern const struct WaveData sfx_043WaveData;
+const struct InstrumentPCM instrumentPCM738 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_043SampleInfo,
+    /* Sample */ &sfx_043WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -11516,14 +11516,14 @@ const struct InstrumentPCM instrumentPCMData738 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_355SampleInfo;
-const struct InstrumentPCM instrumentPCMData739 = {
+extern const struct WaveData sfx_355WaveData;
+const struct InstrumentPCM instrumentPCM739 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_355SampleInfo,
+    /* Sample */ &sfx_355WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -11532,14 +11532,14 @@ const struct InstrumentPCM instrumentPCMData739 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_356SampleInfo;
-const struct InstrumentPCM instrumentPCMData740 = {
+extern const struct WaveData sfx_356WaveData;
+const struct InstrumentPCM instrumentPCM740 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_356SampleInfo,
+    /* Sample */ &sfx_356WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -11548,14 +11548,14 @@ const struct InstrumentPCM instrumentPCMData740 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_300SampleInfo;
-const struct InstrumentPCM instrumentPCMData741 = {
+extern const struct WaveData sfx_300WaveData;
+const struct InstrumentPCM instrumentPCM741 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_300SampleInfo,
+    /* Sample */ &sfx_300WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -11564,14 +11564,14 @@ const struct InstrumentPCM instrumentPCMData741 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_354SampleInfo;
-const struct InstrumentPCM instrumentPCMData742 = {
+extern const struct WaveData sfx_354WaveData;
+const struct InstrumentPCM instrumentPCM742 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_354SampleInfo,
+    /* Sample */ &sfx_354WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -11580,14 +11580,14 @@ const struct InstrumentPCM instrumentPCMData742 = {
     /* unk1C  */ 0x001faea0,
 };
 
-extern const struct SampleInfo sfx_113SampleInfo;
-const struct InstrumentPCM instrumentPCMData743 = {
+extern const struct WaveData sfx_113WaveData;
+const struct InstrumentPCM instrumentPCM743 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_113SampleInfo,
+    /* Sample */ &sfx_113WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -11596,14 +11596,14 @@ const struct InstrumentPCM instrumentPCMData743 = {
     /* unk1C  */ 0x00235dd1,
 };
 
-extern const struct SampleInfo sfx_262SampleInfo;
-const struct InstrumentPCM instrumentPCMData744 = {
+extern const struct WaveData sfx_262WaveData;
+const struct InstrumentPCM instrumentPCM744 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_262SampleInfo,
+    /* Sample */ &sfx_262WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -11612,14 +11612,14 @@ const struct InstrumentPCM instrumentPCMData744 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_206SampleInfo;
-const struct InstrumentPCM instrumentPCMData745 = {
+extern const struct WaveData sfx_206WaveData;
+const struct InstrumentPCM instrumentPCM745 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_206SampleInfo,
+    /* Sample */ &sfx_206WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -11628,14 +11628,14 @@ const struct InstrumentPCM instrumentPCMData745 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_290SampleInfo;
-const struct InstrumentPCM instrumentPCMData746 = {
+extern const struct WaveData sfx_290WaveData;
+const struct InstrumentPCM instrumentPCM746 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_290SampleInfo,
+    /* Sample */ &sfx_290WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -11644,14 +11644,14 @@ const struct InstrumentPCM instrumentPCMData746 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_207SampleInfo;
-const struct InstrumentPCM instrumentPCMData747 = {
+extern const struct WaveData sfx_207WaveData;
+const struct InstrumentPCM instrumentPCM747 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_207SampleInfo,
+    /* Sample */ &sfx_207WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -11660,14 +11660,14 @@ const struct InstrumentPCM instrumentPCMData747 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_291SampleInfo;
-const struct InstrumentPCM instrumentPCMData748 = {
+extern const struct WaveData sfx_291WaveData;
+const struct InstrumentPCM instrumentPCM748 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_291SampleInfo,
+    /* Sample */ &sfx_291WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -11676,14 +11676,14 @@ const struct InstrumentPCM instrumentPCMData748 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_262SampleInfo;
-const struct InstrumentPCM instrumentPCMData749 = {
+extern const struct WaveData sfx_262WaveData;
+const struct InstrumentPCM instrumentPCM749 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_262SampleInfo,
+    /* Sample */ &sfx_262WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0066a052,
     /* unk10  */ 0x00600000,
@@ -11692,7 +11692,7 @@ const struct InstrumentPCM instrumentPCMData749 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubSplit instrumentSubbankMultiKeyData750 = {
+const struct InstrumentSubSplit instrumentSubSplit750 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -11702,14 +11702,14 @@ const struct InstrumentSubSplit instrumentSubbankMultiKeyData750 = {
     /* Sub-bank */ (void *)0x08a97010, // POINTER
 };
 
-extern const struct SampleInfo sfx_322SampleInfo;
-const struct InstrumentPCM instrumentPCMData751 = {
+extern const struct WaveData sfx_322WaveData;
+const struct InstrumentPCM instrumentPCM751 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_322SampleInfo,
+    /* Sample */ &sfx_322WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0066a052,
     /* unk10  */ 0x00600000,
@@ -11718,14 +11718,14 @@ const struct InstrumentPCM instrumentPCMData751 = {
     /* unk1C  */ 0x00235dd1,
 };
 
-extern const struct SampleInfo sfx_289SampleInfo;
-const struct InstrumentPCM instrumentPCMData752 = {
+extern const struct WaveData sfx_289WaveData;
+const struct InstrumentPCM instrumentPCM752 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_289SampleInfo,
+    /* Sample */ &sfx_289WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -11734,14 +11734,14 @@ const struct InstrumentPCM instrumentPCMData752 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_201SampleInfo;
-const struct InstrumentPCM instrumentPCMData753 = {
+extern const struct WaveData sfx_201WaveData;
+const struct InstrumentPCM instrumentPCM753 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_201SampleInfo,
+    /* Sample */ &sfx_201WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -11750,14 +11750,14 @@ const struct InstrumentPCM instrumentPCMData753 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_194SampleInfo;
-const struct InstrumentPCM instrumentPCMData754 = {
+extern const struct WaveData sfx_194WaveData;
+const struct InstrumentPCM instrumentPCM754 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_194SampleInfo,
+    /* Sample */ &sfx_194WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -11766,14 +11766,14 @@ const struct InstrumentPCM instrumentPCMData754 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_359SampleInfo;
-const struct InstrumentPCM instrumentPCMData755 = {
+extern const struct WaveData sfx_359WaveData;
+const struct InstrumentPCM instrumentPCM755 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_359SampleInfo,
+    /* Sample */ &sfx_359WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x003a2e8b,
@@ -11782,14 +11782,14 @@ const struct InstrumentPCM instrumentPCMData755 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_391SampleInfo;
-const struct InstrumentPCM instrumentPCMData756 = {
+extern const struct WaveData sfx_391WaveData;
+const struct InstrumentPCM instrumentPCM756 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_391SampleInfo,
+    /* Sample */ &sfx_391WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -11798,7 +11798,7 @@ const struct InstrumentPCM instrumentPCMData756 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentPSG instrumentPSGData757 = {
+const struct InstrumentPSG instrumentPSG757 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -11816,7 +11816,7 @@ const struct InstrumentPSG instrumentPSGData757 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData758 = {
+const struct InstrumentPSG instrumentPSG758 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -11834,7 +11834,7 @@ const struct InstrumentPSG instrumentPSGData758 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData759 = {
+const struct InstrumentPSG instrumentPSG759 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -11852,7 +11852,7 @@ const struct InstrumentPSG instrumentPSGData759 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData760 = {
+const struct InstrumentPSG instrumentPSG760 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -11870,7 +11870,7 @@ const struct InstrumentPSG instrumentPSGData760 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData761 = {
+const struct InstrumentPSG instrumentPSG761 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -11888,7 +11888,7 @@ const struct InstrumentPSG instrumentPSGData761 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData762 = {
+const struct InstrumentPSG instrumentPSG762 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -11906,7 +11906,7 @@ const struct InstrumentPSG instrumentPSGData762 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData763 = {
+const struct InstrumentPSG instrumentPSG763 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -11924,7 +11924,7 @@ const struct InstrumentPSG instrumentPSGData763 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData764 = {
+const struct InstrumentPSG instrumentPSG764 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -11942,7 +11942,7 @@ const struct InstrumentPSG instrumentPSGData764 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData765 = {
+const struct InstrumentPSG instrumentPSG765 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -11960,7 +11960,7 @@ const struct InstrumentPSG instrumentPSGData765 = {
     /* unk22        */ 0x0,
 };
 
-const struct InstrumentPSG instrumentPSGData766 = {
+const struct InstrumentPSG instrumentPSG766 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -11978,14 +11978,14 @@ const struct InstrumentPSG instrumentPSGData766 = {
     /* unk22        */ 0x0,
 };
 
-extern const struct SampleInfo sfx_392SampleInfo;
-const struct InstrumentPCM instrumentPCMData767 = {
+extern const struct WaveData sfx_392WaveData;
+const struct InstrumentPCM instrumentPCM767 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_392SampleInfo,
+    /* Sample */ &sfx_392WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -11994,14 +11994,14 @@ const struct InstrumentPCM instrumentPCMData767 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_393SampleInfo;
-const struct InstrumentPCM instrumentPCMData768 = {
+extern const struct WaveData sfx_393WaveData;
+const struct InstrumentPCM instrumentPCM768 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_393SampleInfo,
+    /* Sample */ &sfx_393WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12010,7 +12010,7 @@ const struct InstrumentPCM instrumentPCMData768 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubSplit instrumentSubbankMultiKeyData769 = {
+const struct InstrumentSubSplit instrumentSubSplit769 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0x30,
@@ -12020,7 +12020,7 @@ const struct InstrumentSubSplit instrumentSubbankMultiKeyData769 = {
     /* Sub-bank */ (void *)0x08a98010, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData770 = {
+const struct InstrumentSubRhythm instrumentSubRhythm770 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12029,7 +12029,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData770 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData771 = {
+const struct InstrumentSubRhythm instrumentSubRhythm771 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12038,14 +12038,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData771 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_394SampleInfo;
-const struct InstrumentPCM instrumentPCMData772 = {
+extern const struct WaveData sfx_394WaveData;
+const struct InstrumentPCM instrumentPCM772 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_394SampleInfo,
+    /* Sample */ &sfx_394WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12054,14 +12054,14 @@ const struct InstrumentPCM instrumentPCMData772 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_395SampleInfo;
-const struct InstrumentPCM instrumentPCMData773 = {
+extern const struct WaveData sfx_395WaveData;
+const struct InstrumentPCM instrumentPCM773 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_395SampleInfo,
+    /* Sample */ &sfx_395WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12070,14 +12070,14 @@ const struct InstrumentPCM instrumentPCMData773 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_396SampleInfo;
-const struct InstrumentPCM instrumentPCMData774 = {
+extern const struct WaveData sfx_396WaveData;
+const struct InstrumentPCM instrumentPCM774 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_396SampleInfo,
+    /* Sample */ &sfx_396WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12086,14 +12086,14 @@ const struct InstrumentPCM instrumentPCMData774 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_397SampleInfo;
-const struct InstrumentPCM instrumentPCMData775 = {
+extern const struct WaveData sfx_397WaveData;
+const struct InstrumentPCM instrumentPCM775 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_397SampleInfo,
+    /* Sample */ &sfx_397WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12102,14 +12102,14 @@ const struct InstrumentPCM instrumentPCMData775 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_398SampleInfo;
-const struct InstrumentPCM instrumentPCMData776 = {
+extern const struct WaveData sfx_398WaveData;
+const struct InstrumentPCM instrumentPCM776 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_398SampleInfo,
+    /* Sample */ &sfx_398WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12118,14 +12118,14 @@ const struct InstrumentPCM instrumentPCMData776 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_015SampleInfo;
-const struct InstrumentPCM instrumentPCMData777 = {
+extern const struct WaveData sfx_015WaveData;
+const struct InstrumentPCM instrumentPCM777 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_015SampleInfo,
+    /* Sample */ &sfx_015WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x004d9364,
@@ -12134,14 +12134,14 @@ const struct InstrumentPCM instrumentPCMData777 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_399SampleInfo;
-const struct InstrumentPCM instrumentPCMData778 = {
+extern const struct WaveData sfx_399WaveData;
+const struct InstrumentPCM instrumentPCM778 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_399SampleInfo,
+    /* Sample */ &sfx_399WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12150,14 +12150,14 @@ const struct InstrumentPCM instrumentPCMData778 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_126SampleInfo;
-const struct InstrumentPCM instrumentPCMData779 = {
+extern const struct WaveData sfx_126WaveData;
+const struct InstrumentPCM instrumentPCM779 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_126SampleInfo,
+    /* Sample */ &sfx_126WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12166,14 +12166,14 @@ const struct InstrumentPCM instrumentPCMData779 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_127SampleInfo;
-const struct InstrumentPCM instrumentPCMData780 = {
+extern const struct WaveData sfx_127WaveData;
+const struct InstrumentPCM instrumentPCM780 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_127SampleInfo,
+    /* Sample */ &sfx_127WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -12182,7 +12182,7 @@ const struct InstrumentPCM instrumentPCMData780 = {
     /* unk1C  */ 0x0013e350,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData781 = {
+const struct InstrumentSubRhythm instrumentSubRhythm781 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12191,7 +12191,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData781 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData782 = {
+const struct InstrumentSubRhythm instrumentSubRhythm782 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12200,14 +12200,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData782 = {
     /* Sub-bank */ (void *)0x08a99a14, // POINTER
 };
 
-extern const struct SampleInfo sfx_400SampleInfo;
-const struct InstrumentPCM instrumentPCMData783 = {
+extern const struct WaveData sfx_400WaveData;
+const struct InstrumentPCM instrumentPCM783 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_400SampleInfo,
+    /* Sample */ &sfx_400WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12216,14 +12216,14 @@ const struct InstrumentPCM instrumentPCMData783 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_398SampleInfo;
-const struct InstrumentPCM instrumentPCMData784 = {
+extern const struct WaveData sfx_398WaveData;
+const struct InstrumentPCM instrumentPCM784 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_398SampleInfo,
+    /* Sample */ &sfx_398WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12232,14 +12232,14 @@ const struct InstrumentPCM instrumentPCMData784 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_235SampleInfo;
-const struct InstrumentPCM instrumentPCMData785 = {
+extern const struct WaveData sfx_235WaveData;
+const struct InstrumentPCM instrumentPCM785 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_235SampleInfo,
+    /* Sample */ &sfx_235WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -12248,14 +12248,14 @@ const struct InstrumentPCM instrumentPCMData785 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_401SampleInfo;
-const struct InstrumentPCM instrumentPCMData786 = {
+extern const struct WaveData sfx_401WaveData;
+const struct InstrumentPCM instrumentPCM786 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_401SampleInfo,
+    /* Sample */ &sfx_401WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -12264,14 +12264,14 @@ const struct InstrumentPCM instrumentPCMData786 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_260SampleInfo;
-const struct InstrumentPCM instrumentPCMData787 = {
+extern const struct WaveData sfx_260WaveData;
+const struct InstrumentPCM instrumentPCM787 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_260SampleInfo,
+    /* Sample */ &sfx_260WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -12280,14 +12280,14 @@ const struct InstrumentPCM instrumentPCMData787 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_399SampleInfo;
-const struct InstrumentPCM instrumentPCMData788 = {
+extern const struct WaveData sfx_399WaveData;
+const struct InstrumentPCM instrumentPCM788 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_399SampleInfo,
+    /* Sample */ &sfx_399WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12296,7 +12296,7 @@ const struct InstrumentPCM instrumentPCMData788 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData789 = {
+const struct InstrumentSubRhythm instrumentSubRhythm789 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12305,7 +12305,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData789 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData790 = {
+const struct InstrumentSubRhythm instrumentSubRhythm790 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12314,7 +12314,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData790 = {
     /* Sub-bank */ (void *)0x08a99a14, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData791 = {
+const struct InstrumentSubRhythm instrumentSubRhythm791 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12323,14 +12323,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData791 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_263SampleInfo;
-const struct InstrumentPCM instrumentPCMData792 = {
+extern const struct WaveData sfx_263WaveData;
+const struct InstrumentPCM instrumentPCM792 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_263SampleInfo,
+    /* Sample */ &sfx_263WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -12339,14 +12339,14 @@ const struct InstrumentPCM instrumentPCMData792 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_229SampleInfo;
-const struct InstrumentPCM instrumentPCMData793 = {
+extern const struct WaveData sfx_229WaveData;
+const struct InstrumentPCM instrumentPCM793 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_229SampleInfo,
+    /* Sample */ &sfx_229WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -12355,14 +12355,14 @@ const struct InstrumentPCM instrumentPCMData793 = {
     /* unk1C  */ 0x001ba35f,
 };
 
-extern const struct SampleInfo sfx_194SampleInfo;
-const struct InstrumentPCM instrumentPCMData794 = {
+extern const struct WaveData sfx_194WaveData;
+const struct InstrumentPCM instrumentPCM794 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_194SampleInfo,
+    /* Sample */ &sfx_194WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12371,14 +12371,14 @@ const struct InstrumentPCM instrumentPCMData794 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_399SampleInfo;
-const struct InstrumentPCM instrumentPCMData795 = {
+extern const struct WaveData sfx_399WaveData;
+const struct InstrumentPCM instrumentPCM795 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_399SampleInfo,
+    /* Sample */ &sfx_399WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12387,14 +12387,14 @@ const struct InstrumentPCM instrumentPCMData795 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_402SampleInfo;
-const struct InstrumentPCM instrumentPCMData796 = {
+extern const struct WaveData sfx_402WaveData;
+const struct InstrumentPCM instrumentPCM796 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_402SampleInfo,
+    /* Sample */ &sfx_402WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -12403,14 +12403,14 @@ const struct InstrumentPCM instrumentPCMData796 = {
     /* unk1C  */ 0x00235dd1,
 };
 
-extern const struct SampleInfo sfx_403SampleInfo;
-const struct InstrumentPCM instrumentPCMData797 = {
+extern const struct WaveData sfx_403WaveData;
+const struct InstrumentPCM instrumentPCM797 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_403SampleInfo,
+    /* Sample */ &sfx_403WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -12419,14 +12419,14 @@ const struct InstrumentPCM instrumentPCMData797 = {
     /* unk1C  */ 0x00235dd1,
 };
 
-extern const struct SampleInfo sfx_404SampleInfo;
-const struct InstrumentPCM instrumentPCMData798 = {
+extern const struct WaveData sfx_404WaveData;
+const struct InstrumentPCM instrumentPCM798 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_404SampleInfo,
+    /* Sample */ &sfx_404WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -12435,7 +12435,7 @@ const struct InstrumentPCM instrumentPCMData798 = {
     /* unk1C  */ 0x00235dd1,
 };
 
-const struct InstrumentSubSplit instrumentSubbankMultiKeyData799 = {
+const struct InstrumentSubSplit instrumentSubSplit799 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0x24,
@@ -12445,7 +12445,7 @@ const struct InstrumentSubSplit instrumentSubbankMultiKeyData799 = {
     /* Sub-bank */ (void *)0x08a9860c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData800 = {
+const struct InstrumentSubRhythm instrumentSubRhythm800 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12454,7 +12454,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData800 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData801 = {
+const struct InstrumentSubRhythm instrumentSubRhythm801 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12463,14 +12463,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData801 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_405SampleInfo;
-const struct InstrumentPCM instrumentPCMData802 = {
+extern const struct WaveData sfx_405WaveData;
+const struct InstrumentPCM instrumentPCM802 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_405SampleInfo,
+    /* Sample */ &sfx_405WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -12479,14 +12479,14 @@ const struct InstrumentPCM instrumentPCMData802 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_406SampleInfo;
-const struct InstrumentPCM instrumentPCMData803 = {
+extern const struct WaveData sfx_406WaveData;
+const struct InstrumentPCM instrumentPCM803 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_406SampleInfo,
+    /* Sample */ &sfx_406WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -12495,14 +12495,14 @@ const struct InstrumentPCM instrumentPCMData803 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_407SampleInfo;
-const struct InstrumentPCM instrumentPCMData804 = {
+extern const struct WaveData sfx_407WaveData;
+const struct InstrumentPCM instrumentPCM804 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_407SampleInfo,
+    /* Sample */ &sfx_407WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -12511,14 +12511,14 @@ const struct InstrumentPCM instrumentPCMData804 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_408SampleInfo;
-const struct InstrumentPCM instrumentPCMData805 = {
+extern const struct WaveData sfx_408WaveData;
+const struct InstrumentPCM instrumentPCM805 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_408SampleInfo,
+    /* Sample */ &sfx_408WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -12527,14 +12527,14 @@ const struct InstrumentPCM instrumentPCMData805 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_409SampleInfo;
-const struct InstrumentPCM instrumentPCMData806 = {
+extern const struct WaveData sfx_409WaveData;
+const struct InstrumentPCM instrumentPCM806 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_409SampleInfo,
+    /* Sample */ &sfx_409WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -12543,14 +12543,14 @@ const struct InstrumentPCM instrumentPCMData806 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_202SampleInfo;
-const struct InstrumentPCM instrumentPCMData807 = {
+extern const struct WaveData sfx_202WaveData;
+const struct InstrumentPCM instrumentPCM807 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_202SampleInfo,
+    /* Sample */ &sfx_202WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0060364d,
     /* unk10  */ 0x00600000,
@@ -12559,14 +12559,14 @@ const struct InstrumentPCM instrumentPCMData807 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_410SampleInfo;
-const struct InstrumentPCM instrumentPCMData808 = {
+extern const struct WaveData sfx_410WaveData;
+const struct InstrumentPCM instrumentPCM808 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_410SampleInfo,
+    /* Sample */ &sfx_410WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -12575,7 +12575,7 @@ const struct InstrumentPCM instrumentPCMData808 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData809 = {
+const struct InstrumentSubRhythm instrumentSubRhythm809 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12584,7 +12584,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData809 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData810 = {
+const struct InstrumentSubRhythm instrumentSubRhythm810 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12593,14 +12593,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData810 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_300SampleInfo;
-const struct InstrumentPCM instrumentPCMData811 = {
+extern const struct WaveData sfx_300WaveData;
+const struct InstrumentPCM instrumentPCM811 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_300SampleInfo,
+    /* Sample */ &sfx_300WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12609,14 +12609,14 @@ const struct InstrumentPCM instrumentPCMData811 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_058SampleInfo;
-const struct InstrumentPCM instrumentPCMData812 = {
+extern const struct WaveData sfx_058WaveData;
+const struct InstrumentPCM instrumentPCM812 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_058SampleInfo,
+    /* Sample */ &sfx_058WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12625,14 +12625,14 @@ const struct InstrumentPCM instrumentPCMData812 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_306SampleInfo;
-const struct InstrumentPCM instrumentPCMData813 = {
+extern const struct WaveData sfx_306WaveData;
+const struct InstrumentPCM instrumentPCM813 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_306SampleInfo,
+    /* Sample */ &sfx_306WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -12641,14 +12641,14 @@ const struct InstrumentPCM instrumentPCMData813 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_391SampleInfo;
-const struct InstrumentPCM instrumentPCMData814 = {
+extern const struct WaveData sfx_391WaveData;
+const struct InstrumentPCM instrumentPCM814 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_391SampleInfo,
+    /* Sample */ &sfx_391WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -12657,14 +12657,14 @@ const struct InstrumentPCM instrumentPCMData814 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_373SampleInfo;
-const struct InstrumentPCM instrumentPCMData815 = {
+extern const struct WaveData sfx_373WaveData;
+const struct InstrumentPCM instrumentPCM815 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_373SampleInfo,
+    /* Sample */ &sfx_373WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12673,14 +12673,14 @@ const struct InstrumentPCM instrumentPCMData815 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_110SampleInfo;
-const struct InstrumentPCM instrumentPCMData816 = {
+extern const struct WaveData sfx_110WaveData;
+const struct InstrumentPCM instrumentPCM816 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_110SampleInfo,
+    /* Sample */ &sfx_110WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12689,14 +12689,14 @@ const struct InstrumentPCM instrumentPCMData816 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_363SampleInfo;
-const struct InstrumentPCM instrumentPCMData817 = {
+extern const struct WaveData sfx_363WaveData;
+const struct InstrumentPCM instrumentPCM817 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_363SampleInfo,
+    /* Sample */ &sfx_363WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -12705,14 +12705,14 @@ const struct InstrumentPCM instrumentPCMData817 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_005SampleInfo;
-const struct InstrumentPCM instrumentPCMData818 = {
+extern const struct WaveData sfx_005WaveData;
+const struct InstrumentPCM instrumentPCM818 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_005SampleInfo,
+    /* Sample */ &sfx_005WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -12721,14 +12721,14 @@ const struct InstrumentPCM instrumentPCMData818 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_293SampleInfo;
-const struct InstrumentPCM instrumentPCMData819 = {
+extern const struct WaveData sfx_293WaveData;
+const struct InstrumentPCM instrumentPCM819 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_293SampleInfo,
+    /* Sample */ &sfx_293WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12737,14 +12737,14 @@ const struct InstrumentPCM instrumentPCMData819 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_411SampleInfo;
-const struct InstrumentPCM instrumentPCMData820 = {
+extern const struct WaveData sfx_411WaveData;
+const struct InstrumentPCM instrumentPCM820 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_411SampleInfo,
+    /* Sample */ &sfx_411WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12753,14 +12753,14 @@ const struct InstrumentPCM instrumentPCMData820 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_412SampleInfo;
-const struct InstrumentPCM instrumentPCMData821 = {
+extern const struct WaveData sfx_412WaveData;
+const struct InstrumentPCM instrumentPCM821 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_412SampleInfo,
+    /* Sample */ &sfx_412WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12769,14 +12769,14 @@ const struct InstrumentPCM instrumentPCMData821 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_413SampleInfo;
-const struct InstrumentPCM instrumentPCMData822 = {
+extern const struct WaveData sfx_413WaveData;
+const struct InstrumentPCM instrumentPCM822 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_413SampleInfo,
+    /* Sample */ &sfx_413WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12785,14 +12785,14 @@ const struct InstrumentPCM instrumentPCMData822 = {
     /* unk1C  */ 0x0022bd20,
 };
 
-extern const struct SampleInfo sfx_414SampleInfo;
-const struct InstrumentPCM instrumentPCMData823 = {
+extern const struct WaveData sfx_414WaveData;
+const struct InstrumentPCM instrumentPCM823 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_414SampleInfo,
+    /* Sample */ &sfx_414WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12801,14 +12801,14 @@ const struct InstrumentPCM instrumentPCMData823 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_415SampleInfo;
-const struct InstrumentPCM instrumentPCMData824 = {
+extern const struct WaveData sfx_415WaveData;
+const struct InstrumentPCM instrumentPCM824 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_415SampleInfo,
+    /* Sample */ &sfx_415WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -12817,14 +12817,14 @@ const struct InstrumentPCM instrumentPCMData824 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_416SampleInfo;
-const struct InstrumentPCM instrumentPCMData825 = {
+extern const struct WaveData sfx_416WaveData;
+const struct InstrumentPCM instrumentPCM825 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_416SampleInfo,
+    /* Sample */ &sfx_416WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12833,14 +12833,14 @@ const struct InstrumentPCM instrumentPCMData825 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_417SampleInfo;
-const struct InstrumentPCM instrumentPCMData826 = {
+extern const struct WaveData sfx_417WaveData;
+const struct InstrumentPCM instrumentPCM826 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_417SampleInfo,
+    /* Sample */ &sfx_417WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12849,14 +12849,14 @@ const struct InstrumentPCM instrumentPCMData826 = {
     /* unk1C  */ 0x00055552,
 };
 
-extern const struct SampleInfo sfx_418SampleInfo;
-const struct InstrumentPCM instrumentPCMData827 = {
+extern const struct WaveData sfx_418WaveData;
+const struct InstrumentPCM instrumentPCM827 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_418SampleInfo,
+    /* Sample */ &sfx_418WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12865,14 +12865,14 @@ const struct InstrumentPCM instrumentPCMData827 = {
     /* unk1C  */ 0x00055552,
 };
 
-extern const struct SampleInfo sfx_419SampleInfo;
-const struct InstrumentPCM instrumentPCMData828 = {
+extern const struct WaveData sfx_419WaveData;
+const struct InstrumentPCM instrumentPCM828 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_419SampleInfo,
+    /* Sample */ &sfx_419WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12881,14 +12881,14 @@ const struct InstrumentPCM instrumentPCMData828 = {
     /* unk1C  */ 0x00055552,
 };
 
-extern const struct SampleInfo sfx_420SampleInfo;
-const struct InstrumentPCM instrumentPCMData829 = {
+extern const struct WaveData sfx_420WaveData;
+const struct InstrumentPCM instrumentPCM829 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_420SampleInfo,
+    /* Sample */ &sfx_420WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12897,14 +12897,14 @@ const struct InstrumentPCM instrumentPCMData829 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_421SampleInfo;
-const struct InstrumentPCM instrumentPCMData830 = {
+extern const struct WaveData sfx_421WaveData;
+const struct InstrumentPCM instrumentPCM830 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_421SampleInfo,
+    /* Sample */ &sfx_421WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12913,7 +12913,7 @@ const struct InstrumentPCM instrumentPCMData830 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubSplit instrumentSubbankMultiKeyData831 = {
+const struct InstrumentSubSplit instrumentSubSplit831 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -12923,7 +12923,7 @@ const struct InstrumentSubSplit instrumentSubbankMultiKeyData831 = {
     /* Sub-bank */ (void *)0x08a97010, // POINTER
 };
 
-const struct InstrumentSubSplit instrumentSubbankMultiKeyData832 = {
+const struct InstrumentSubSplit instrumentSubSplit832 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -12933,7 +12933,7 @@ const struct InstrumentSubSplit instrumentSubbankMultiKeyData832 = {
     /* Sub-bank */ (void *)0x08a98a0c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData833 = {
+const struct InstrumentSubRhythm instrumentSubRhythm833 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12942,7 +12942,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData833 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData834 = {
+const struct InstrumentSubRhythm instrumentSubRhythm834 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12951,7 +12951,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData834 = {
     /* Sub-bank */ (void *)0x08a99b4c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData835 = {
+const struct InstrumentSubRhythm instrumentSubRhythm835 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -12960,14 +12960,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData835 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_422SampleInfo;
-const struct InstrumentPCM instrumentPCMData836 = {
+extern const struct WaveData sfx_422WaveData;
+const struct InstrumentPCM instrumentPCM836 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_422SampleInfo,
+    /* Sample */ &sfx_422WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -12976,14 +12976,14 @@ const struct InstrumentPCM instrumentPCMData836 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_423SampleInfo;
-const struct InstrumentPCM instrumentPCMData837 = {
+extern const struct WaveData sfx_423WaveData;
+const struct InstrumentPCM instrumentPCM837 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_423SampleInfo,
+    /* Sample */ &sfx_423WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -12992,14 +12992,14 @@ const struct InstrumentPCM instrumentPCMData837 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_313SampleInfo;
-const struct InstrumentPCM instrumentPCMData838 = {
+extern const struct WaveData sfx_313WaveData;
+const struct InstrumentPCM instrumentPCM838 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_313SampleInfo,
+    /* Sample */ &sfx_313WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -13008,14 +13008,14 @@ const struct InstrumentPCM instrumentPCMData838 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_292SampleInfo;
-const struct InstrumentPCM instrumentPCMData839 = {
+extern const struct WaveData sfx_292WaveData;
+const struct InstrumentPCM instrumentPCM839 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_292SampleInfo,
+    /* Sample */ &sfx_292WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -13024,14 +13024,14 @@ const struct InstrumentPCM instrumentPCMData839 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_387SampleInfo;
-const struct InstrumentPCM instrumentPCMData840 = {
+extern const struct WaveData sfx_387WaveData;
+const struct InstrumentPCM instrumentPCM840 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_387SampleInfo,
+    /* Sample */ &sfx_387WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -13040,14 +13040,14 @@ const struct InstrumentPCM instrumentPCMData840 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_424SampleInfo;
-const struct InstrumentPCM instrumentPCMData841 = {
+extern const struct WaveData sfx_424WaveData;
+const struct InstrumentPCM instrumentPCM841 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_424SampleInfo,
+    /* Sample */ &sfx_424WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -13056,14 +13056,14 @@ const struct InstrumentPCM instrumentPCMData841 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_421SampleInfo;
-const struct InstrumentPCM instrumentPCMData842 = {
+extern const struct WaveData sfx_421WaveData;
+const struct InstrumentPCM instrumentPCM842 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_421SampleInfo,
+    /* Sample */ &sfx_421WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -13072,14 +13072,14 @@ const struct InstrumentPCM instrumentPCMData842 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_425SampleInfo;
-const struct InstrumentPCM instrumentPCMData843 = {
+extern const struct WaveData sfx_425WaveData;
+const struct InstrumentPCM instrumentPCM843 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_425SampleInfo,
+    /* Sample */ &sfx_425WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -13088,14 +13088,14 @@ const struct InstrumentPCM instrumentPCMData843 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_320SampleInfo;
-const struct InstrumentPCM instrumentPCMData844 = {
+extern const struct WaveData sfx_320WaveData;
+const struct InstrumentPCM instrumentPCM844 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_320SampleInfo,
+    /* Sample */ &sfx_320WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -13104,14 +13104,14 @@ const struct InstrumentPCM instrumentPCMData844 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_420SampleInfo;
-const struct InstrumentPCM instrumentPCMData845 = {
+extern const struct WaveData sfx_420WaveData;
+const struct InstrumentPCM instrumentPCM845 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_420SampleInfo,
+    /* Sample */ &sfx_420WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -13120,14 +13120,14 @@ const struct InstrumentPCM instrumentPCMData845 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_421SampleInfo;
-const struct InstrumentPCM instrumentPCMData846 = {
+extern const struct WaveData sfx_421WaveData;
+const struct InstrumentPCM instrumentPCM846 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_421SampleInfo,
+    /* Sample */ &sfx_421WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -13136,14 +13136,14 @@ const struct InstrumentPCM instrumentPCMData846 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_426SampleInfo;
-const struct InstrumentPCM instrumentPCMData847 = {
+extern const struct WaveData sfx_426WaveData;
+const struct InstrumentPCM instrumentPCM847 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_426SampleInfo,
+    /* Sample */ &sfx_426WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -13152,7 +13152,7 @@ const struct InstrumentPCM instrumentPCMData847 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubSplit instrumentSubbankMultiKeyData848 = {
+const struct InstrumentSubSplit instrumentSubSplit848 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -13162,7 +13162,7 @@ const struct InstrumentSubSplit instrumentSubbankMultiKeyData848 = {
     /* Sub-bank */ (void *)0x08a98a0c, // POINTER
 };
 
-const struct InstrumentSubSplit instrumentSubbankMultiKeyData849 = {
+const struct InstrumentSubSplit instrumentSubSplit849 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0x24,
@@ -13172,7 +13172,7 @@ const struct InstrumentSubSplit instrumentSubbankMultiKeyData849 = {
     /* Sub-bank */ (void *)0x08a9860c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData850 = {
+const struct InstrumentSubRhythm instrumentSubRhythm850 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -13181,7 +13181,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData850 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData851 = {
+const struct InstrumentSubRhythm instrumentSubRhythm851 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -13190,7 +13190,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData851 = {
     /* Sub-bank */ (void *)0x08a99c60, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData852 = {
+const struct InstrumentSubRhythm instrumentSubRhythm852 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -13199,14 +13199,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData852 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_039SampleInfo;
-const struct InstrumentPCM instrumentPCMData853 = {
+extern const struct WaveData sfx_039WaveData;
+const struct InstrumentPCM instrumentPCM853 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_039SampleInfo,
+    /* Sample */ &sfx_039WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -13215,14 +13215,14 @@ const struct InstrumentPCM instrumentPCMData853 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_398SampleInfo;
-const struct InstrumentPCM instrumentPCMData854 = {
+extern const struct WaveData sfx_398WaveData;
+const struct InstrumentPCM instrumentPCM854 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_398SampleInfo,
+    /* Sample */ &sfx_398WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -13231,14 +13231,14 @@ const struct InstrumentPCM instrumentPCMData854 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_007SampleInfo;
-const struct InstrumentPCM instrumentPCMData855 = {
+extern const struct WaveData sfx_007WaveData;
+const struct InstrumentPCM instrumentPCM855 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_007SampleInfo,
+    /* Sample */ &sfx_007WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -13247,14 +13247,14 @@ const struct InstrumentPCM instrumentPCMData855 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_001SampleInfo;
-const struct InstrumentPCM instrumentPCMData856 = {
+extern const struct WaveData sfx_001WaveData;
+const struct InstrumentPCM instrumentPCM856 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_001SampleInfo,
+    /* Sample */ &sfx_001WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0059cc48,
     /* unk10  */ 0x00600000,
@@ -13263,14 +13263,14 @@ const struct InstrumentPCM instrumentPCMData856 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_003SampleInfo;
-const struct InstrumentPCM instrumentPCMData857 = {
+extern const struct WaveData sfx_003WaveData;
+const struct InstrumentPCM instrumentPCM857 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_003SampleInfo,
+    /* Sample */ &sfx_003WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -13279,7 +13279,7 @@ const struct InstrumentPCM instrumentPCMData857 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentPSG instrumentPSGData858 = {
+const struct InstrumentPSG instrumentPSG858 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -13297,7 +13297,7 @@ const struct InstrumentPSG instrumentPSGData858 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData859 = {
+const struct InstrumentPSG instrumentPSG859 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -13315,14 +13315,14 @@ const struct InstrumentPSG instrumentPSGData859 = {
     /* unk22        */ 0x4,
 };
 
-extern const struct SampleInfo sfx_203SampleInfo;
-const struct InstrumentPCM instrumentPCMData860 = {
+extern const struct WaveData sfx_203WaveData;
+const struct InstrumentPCM instrumentPCM860 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_203SampleInfo,
+    /* Sample */ &sfx_203WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -13331,14 +13331,14 @@ const struct InstrumentPCM instrumentPCMData860 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_239SampleInfo;
-const struct InstrumentPCM instrumentPCMData861 = {
+extern const struct WaveData sfx_239WaveData;
+const struct InstrumentPCM instrumentPCM861 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_239SampleInfo,
+    /* Sample */ &sfx_239WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -13347,14 +13347,14 @@ const struct InstrumentPCM instrumentPCMData861 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_012SampleInfo;
-const struct InstrumentPCM instrumentPCMData862 = {
+extern const struct WaveData sfx_012WaveData;
+const struct InstrumentPCM instrumentPCM862 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_012SampleInfo,
+    /* Sample */ &sfx_012WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -13363,14 +13363,14 @@ const struct InstrumentPCM instrumentPCMData862 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_386SampleInfo;
-const struct InstrumentPCM instrumentPCMData863 = {
+extern const struct WaveData sfx_386WaveData;
+const struct InstrumentPCM instrumentPCM863 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_386SampleInfo,
+    /* Sample */ &sfx_386WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x000cd40a,
     /* unk10  */ 0x00600000,
@@ -13379,14 +13379,14 @@ const struct InstrumentPCM instrumentPCMData863 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_008SampleInfo;
-const struct InstrumentPCM instrumentPCMData864 = {
+extern const struct WaveData sfx_008WaveData;
+const struct InstrumentPCM instrumentPCM864 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_008SampleInfo,
+    /* Sample */ &sfx_008WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -13395,14 +13395,14 @@ const struct InstrumentPCM instrumentPCMData864 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_383SampleInfo;
-const struct InstrumentPCM instrumentPCMData865 = {
+extern const struct WaveData sfx_383WaveData;
+const struct InstrumentPCM instrumentPCM865 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_383SampleInfo,
+    /* Sample */ &sfx_383WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -13411,14 +13411,14 @@ const struct InstrumentPCM instrumentPCMData865 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_329SampleInfo;
-const struct InstrumentPCM instrumentPCMData866 = {
+extern const struct WaveData sfx_329WaveData;
+const struct InstrumentPCM instrumentPCM866 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_329SampleInfo,
+    /* Sample */ &sfx_329WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -13427,14 +13427,14 @@ const struct InstrumentPCM instrumentPCMData866 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_005SampleInfo;
-const struct InstrumentPCM instrumentPCMData867 = {
+extern const struct WaveData sfx_005WaveData;
+const struct InstrumentPCM instrumentPCM867 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_005SampleInfo,
+    /* Sample */ &sfx_005WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -13443,14 +13443,14 @@ const struct InstrumentPCM instrumentPCMData867 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_321SampleInfo;
-const struct InstrumentPCM instrumentPCMData868 = {
+extern const struct WaveData sfx_321WaveData;
+const struct InstrumentPCM instrumentPCM868 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_321SampleInfo,
+    /* Sample */ &sfx_321WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -13459,14 +13459,14 @@ const struct InstrumentPCM instrumentPCMData868 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_235SampleInfo;
-const struct InstrumentPCM instrumentPCMData869 = {
+extern const struct WaveData sfx_235WaveData;
+const struct InstrumentPCM instrumentPCM869 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_235SampleInfo,
+    /* Sample */ &sfx_235WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -13475,14 +13475,14 @@ const struct InstrumentPCM instrumentPCMData869 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_342SampleInfo;
-const struct InstrumentPCM instrumentPCMData870 = {
+extern const struct WaveData sfx_342WaveData;
+const struct InstrumentPCM instrumentPCM870 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_342SampleInfo,
+    /* Sample */ &sfx_342WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0060364d,
     /* unk10  */ 0x00600000,
@@ -13491,14 +13491,14 @@ const struct InstrumentPCM instrumentPCMData870 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_401SampleInfo;
-const struct InstrumentPCM instrumentPCMData871 = {
+extern const struct WaveData sfx_401WaveData;
+const struct InstrumentPCM instrumentPCM871 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_401SampleInfo,
+    /* Sample */ &sfx_401WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -13507,14 +13507,14 @@ const struct InstrumentPCM instrumentPCMData871 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_114SampleInfo;
-const struct InstrumentPCM instrumentPCMData872 = {
+extern const struct WaveData sfx_114WaveData;
+const struct InstrumentPCM instrumentPCM872 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_114SampleInfo,
+    /* Sample */ &sfx_114WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -13523,14 +13523,14 @@ const struct InstrumentPCM instrumentPCMData872 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_196SampleInfo;
-const struct InstrumentPCM instrumentPCMData873 = {
+extern const struct WaveData sfx_196WaveData;
+const struct InstrumentPCM instrumentPCM873 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_196SampleInfo,
+    /* Sample */ &sfx_196WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -13539,14 +13539,14 @@ const struct InstrumentPCM instrumentPCMData873 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_310SampleInfo;
-const struct InstrumentPCM instrumentPCMData874 = {
+extern const struct WaveData sfx_310WaveData;
+const struct InstrumentPCM instrumentPCM874 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_310SampleInfo,
+    /* Sample */ &sfx_310WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -13555,14 +13555,14 @@ const struct InstrumentPCM instrumentPCMData874 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_303SampleInfo;
-const struct InstrumentPCM instrumentPCMData875 = {
+extern const struct WaveData sfx_303WaveData;
+const struct InstrumentPCM instrumentPCM875 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_303SampleInfo,
+    /* Sample */ &sfx_303WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -13571,14 +13571,14 @@ const struct InstrumentPCM instrumentPCMData875 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_423SampleInfo;
-const struct InstrumentPCM instrumentPCMData876 = {
+extern const struct WaveData sfx_423WaveData;
+const struct InstrumentPCM instrumentPCM876 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_423SampleInfo,
+    /* Sample */ &sfx_423WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -13587,14 +13587,14 @@ const struct InstrumentPCM instrumentPCMData876 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_226SampleInfo;
-const struct InstrumentPCM instrumentPCMData877 = {
+extern const struct WaveData sfx_226WaveData;
+const struct InstrumentPCM instrumentPCM877 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_226SampleInfo,
+    /* Sample */ &sfx_226WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -13603,14 +13603,14 @@ const struct InstrumentPCM instrumentPCMData877 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_203SampleInfo;
-const struct InstrumentPCM instrumentPCMData878 = {
+extern const struct WaveData sfx_203WaveData;
+const struct InstrumentPCM instrumentPCM878 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_203SampleInfo,
+    /* Sample */ &sfx_203WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -13619,14 +13619,14 @@ const struct InstrumentPCM instrumentPCMData878 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_309SampleInfo;
-const struct InstrumentPCM instrumentPCMData879 = {
+extern const struct WaveData sfx_309WaveData;
+const struct InstrumentPCM instrumentPCM879 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_309SampleInfo,
+    /* Sample */ &sfx_309WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x00600000,
@@ -13635,14 +13635,14 @@ const struct InstrumentPCM instrumentPCMData879 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_124SampleInfo;
-const struct InstrumentPCM instrumentPCMData880 = {
+extern const struct WaveData sfx_124WaveData;
+const struct InstrumentPCM instrumentPCM880 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_124SampleInfo,
+    /* Sample */ &sfx_124WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x0026c9b2,
@@ -13651,14 +13651,14 @@ const struct InstrumentPCM instrumentPCMData880 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_313SampleInfo;
-const struct InstrumentPCM instrumentPCMData881 = {
+extern const struct WaveData sfx_313WaveData;
+const struct InstrumentPCM instrumentPCM881 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_313SampleInfo,
+    /* Sample */ &sfx_313WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -13667,14 +13667,14 @@ const struct InstrumentPCM instrumentPCMData881 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_354SampleInfo;
-const struct InstrumentPCM instrumentPCMData882 = {
+extern const struct WaveData sfx_354WaveData;
+const struct InstrumentPCM instrumentPCM882 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_354SampleInfo,
+    /* Sample */ &sfx_354WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -13683,14 +13683,14 @@ const struct InstrumentPCM instrumentPCMData882 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_118SampleInfo;
-const struct InstrumentPCM instrumentPCMData883 = {
+extern const struct WaveData sfx_118WaveData;
+const struct InstrumentPCM instrumentPCM883 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_118SampleInfo,
+    /* Sample */ &sfx_118WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -13699,14 +13699,14 @@ const struct InstrumentPCM instrumentPCMData883 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_322SampleInfo;
-const struct InstrumentPCM instrumentPCMData884 = {
+extern const struct WaveData sfx_322WaveData;
+const struct InstrumentPCM instrumentPCM884 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_322SampleInfo,
+    /* Sample */ &sfx_322WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0066a052,
     /* unk10  */ 0x00600000,
@@ -13715,14 +13715,14 @@ const struct InstrumentPCM instrumentPCMData884 = {
     /* unk1C  */ 0x00235dd1,
 };
 
-extern const struct SampleInfo sfx_335SampleInfo;
-const struct InstrumentPCM instrumentPCMData885 = {
+extern const struct WaveData sfx_335WaveData;
+const struct InstrumentPCM instrumentPCM885 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_335SampleInfo,
+    /* Sample */ &sfx_335WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -13731,14 +13731,14 @@ const struct InstrumentPCM instrumentPCMData885 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_297SampleInfo;
-const struct InstrumentPCM instrumentPCMData886 = {
+extern const struct WaveData sfx_297WaveData;
+const struct InstrumentPCM instrumentPCM886 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_297SampleInfo,
+    /* Sample */ &sfx_297WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x00600000,
@@ -13747,14 +13747,14 @@ const struct InstrumentPCM instrumentPCMData886 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_308SampleInfo;
-const struct InstrumentPCM instrumentPCMData887 = {
+extern const struct WaveData sfx_308WaveData;
+const struct InstrumentPCM instrumentPCM887 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_308SampleInfo,
+    /* Sample */ &sfx_308WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -13763,14 +13763,14 @@ const struct InstrumentPCM instrumentPCMData887 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_238SampleInfo;
-const struct InstrumentPCM instrumentPCMData888 = {
+extern const struct WaveData sfx_238WaveData;
+const struct InstrumentPCM instrumentPCM888 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_238SampleInfo,
+    /* Sample */ &sfx_238WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x00600000,
@@ -13779,14 +13779,14 @@ const struct InstrumentPCM instrumentPCMData888 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_305SampleInfo;
-const struct InstrumentPCM instrumentPCMData889 = {
+extern const struct WaveData sfx_305WaveData;
+const struct InstrumentPCM instrumentPCM889 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_305SampleInfo,
+    /* Sample */ &sfx_305WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -13795,14 +13795,14 @@ const struct InstrumentPCM instrumentPCMData889 = {
     /* unk1C  */ 0x00235dd1,
 };
 
-extern const struct SampleInfo sfx_410SampleInfo;
-const struct InstrumentPCM instrumentPCMData890 = {
+extern const struct WaveData sfx_410WaveData;
+const struct InstrumentPCM instrumentPCM890 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_410SampleInfo,
+    /* Sample */ &sfx_410WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -13811,14 +13811,14 @@ const struct InstrumentPCM instrumentPCMData890 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_315SampleInfo;
-const struct InstrumentPCM instrumentPCMData891 = {
+extern const struct WaveData sfx_315WaveData;
+const struct InstrumentPCM instrumentPCM891 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_315SampleInfo,
+    /* Sample */ &sfx_315WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x000cd40a,
     /* unk10  */ 0x00600000,
@@ -13827,14 +13827,14 @@ const struct InstrumentPCM instrumentPCMData891 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_015SampleInfo;
-const struct InstrumentPCM instrumentPCMData892 = {
+extern const struct WaveData sfx_015WaveData;
+const struct InstrumentPCM instrumentPCM892 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_015SampleInfo,
+    /* Sample */ &sfx_015WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x004cf83e,
     /* unk10  */ 0x00307c1f,
@@ -13843,14 +13843,14 @@ const struct InstrumentPCM instrumentPCMData892 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_320SampleInfo;
-const struct InstrumentPCM instrumentPCMData893 = {
+extern const struct WaveData sfx_320WaveData;
+const struct InstrumentPCM instrumentPCM893 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_320SampleInfo,
+    /* Sample */ &sfx_320WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -13859,14 +13859,14 @@ const struct InstrumentPCM instrumentPCMData893 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_113SampleInfo;
-const struct InstrumentPCM instrumentPCMData894 = {
+extern const struct WaveData sfx_113WaveData;
+const struct InstrumentPCM instrumentPCM894 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_113SampleInfo,
+    /* Sample */ &sfx_113WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -13875,14 +13875,14 @@ const struct InstrumentPCM instrumentPCMData894 = {
     /* unk1C  */ 0x00235dd1,
 };
 
-extern const struct SampleInfo sfx_399SampleInfo;
-const struct InstrumentPCM instrumentPCMData895 = {
+extern const struct WaveData sfx_399WaveData;
+const struct InstrumentPCM instrumentPCM895 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_399SampleInfo,
+    /* Sample */ &sfx_399WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -13891,14 +13891,14 @@ const struct InstrumentPCM instrumentPCMData895 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_190SampleInfo;
-const struct InstrumentPCM instrumentPCMData896 = {
+extern const struct WaveData sfx_190WaveData;
+const struct InstrumentPCM instrumentPCM896 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_190SampleInfo,
+    /* Sample */ &sfx_190WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -13907,14 +13907,14 @@ const struct InstrumentPCM instrumentPCMData896 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_011SampleInfo;
-const struct InstrumentPCM instrumentPCMData897 = {
+extern const struct WaveData sfx_011WaveData;
+const struct InstrumentPCM instrumentPCM897 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_011SampleInfo,
+    /* Sample */ &sfx_011WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -13923,14 +13923,14 @@ const struct InstrumentPCM instrumentPCMData897 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_006SampleInfo;
-const struct InstrumentPCM instrumentPCMData898 = {
+extern const struct WaveData sfx_006WaveData;
+const struct InstrumentPCM instrumentPCM898 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_006SampleInfo,
+    /* Sample */ &sfx_006WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -13939,7 +13939,7 @@ const struct InstrumentPCM instrumentPCMData898 = {
     /* unk1C  */ 0x00218000,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData899 = {
+const struct InstrumentSubRhythm instrumentSubRhythm899 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -13948,7 +13948,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData899 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData900 = {
+const struct InstrumentSubRhythm instrumentSubRhythm900 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -13957,7 +13957,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData900 = {
     /* Sub-bank */ (void *)0x08a99a14, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData901 = {
+const struct InstrumentSubRhythm instrumentSubRhythm901 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -13966,14 +13966,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData901 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_292SampleInfo;
-const struct InstrumentPCM instrumentPCMData902 = {
+extern const struct WaveData sfx_292WaveData;
+const struct InstrumentPCM instrumentPCM902 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_292SampleInfo,
+    /* Sample */ &sfx_292WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -13982,14 +13982,14 @@ const struct InstrumentPCM instrumentPCMData902 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_226SampleInfo;
-const struct InstrumentPCM instrumentPCMData903 = {
+extern const struct WaveData sfx_226WaveData;
+const struct InstrumentPCM instrumentPCM903 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_226SampleInfo,
+    /* Sample */ &sfx_226WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -13998,14 +13998,14 @@ const struct InstrumentPCM instrumentPCMData903 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_293SampleInfo;
-const struct InstrumentPCM instrumentPCMData904 = {
+extern const struct WaveData sfx_293WaveData;
+const struct InstrumentPCM instrumentPCM904 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_293SampleInfo,
+    /* Sample */ &sfx_293WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -14014,14 +14014,14 @@ const struct InstrumentPCM instrumentPCMData904 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_302SampleInfo;
-const struct InstrumentPCM instrumentPCMData905 = {
+extern const struct WaveData sfx_302WaveData;
+const struct InstrumentPCM instrumentPCM905 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_302SampleInfo,
+    /* Sample */ &sfx_302WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -14030,14 +14030,14 @@ const struct InstrumentPCM instrumentPCMData905 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_400SampleInfo;
-const struct InstrumentPCM instrumentPCMData906 = {
+extern const struct WaveData sfx_400WaveData;
+const struct InstrumentPCM instrumentPCM906 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_400SampleInfo,
+    /* Sample */ &sfx_400WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -14046,14 +14046,14 @@ const struct InstrumentPCM instrumentPCMData906 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_338SampleInfo;
-const struct InstrumentPCM instrumentPCMData907 = {
+extern const struct WaveData sfx_338WaveData;
+const struct InstrumentPCM instrumentPCM907 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_338SampleInfo,
+    /* Sample */ &sfx_338WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0060364d,
     /* unk10  */ 0x00600000,
@@ -14062,14 +14062,14 @@ const struct InstrumentPCM instrumentPCMData907 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_335SampleInfo;
-const struct InstrumentPCM instrumentPCMData908 = {
+extern const struct WaveData sfx_335WaveData;
+const struct InstrumentPCM instrumentPCM908 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_335SampleInfo,
+    /* Sample */ &sfx_335WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -14078,14 +14078,14 @@ const struct InstrumentPCM instrumentPCMData908 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_427SampleInfo;
-const struct InstrumentPCM instrumentPCMData909 = {
+extern const struct WaveData sfx_427WaveData;
+const struct InstrumentPCM instrumentPCM909 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_427SampleInfo,
+    /* Sample */ &sfx_427WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14094,14 +14094,14 @@ const struct InstrumentPCM instrumentPCMData909 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_428SampleInfo;
-const struct InstrumentPCM instrumentPCMData910 = {
+extern const struct WaveData sfx_428WaveData;
+const struct InstrumentPCM instrumentPCM910 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_428SampleInfo,
+    /* Sample */ &sfx_428WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -14110,7 +14110,7 @@ const struct InstrumentPCM instrumentPCMData910 = {
     /* unk1C  */ 0x001fc000,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData911 = {
+const struct InstrumentSubRhythm instrumentSubRhythm911 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -14119,7 +14119,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData911 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData912 = {
+const struct InstrumentSubRhythm instrumentSubRhythm912 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -14128,14 +14128,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData912 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_429SampleInfo;
-const struct InstrumentPCM instrumentPCMData913 = {
+extern const struct WaveData sfx_429WaveData;
+const struct InstrumentPCM instrumentPCM913 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_429SampleInfo,
+    /* Sample */ &sfx_429WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14144,14 +14144,14 @@ const struct InstrumentPCM instrumentPCMData913 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_217SampleInfo;
-const struct InstrumentPCM instrumentPCMData914 = {
+extern const struct WaveData sfx_217WaveData;
+const struct InstrumentPCM instrumentPCM914 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_217SampleInfo,
+    /* Sample */ &sfx_217WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14160,14 +14160,14 @@ const struct InstrumentPCM instrumentPCMData914 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_430SampleInfo;
-const struct InstrumentPCM instrumentPCMData915 = {
+extern const struct WaveData sfx_430WaveData;
+const struct InstrumentPCM instrumentPCM915 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_430SampleInfo,
+    /* Sample */ &sfx_430WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14176,14 +14176,14 @@ const struct InstrumentPCM instrumentPCMData915 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_431SampleInfo;
-const struct InstrumentPCM instrumentPCMData916 = {
+extern const struct WaveData sfx_431WaveData;
+const struct InstrumentPCM instrumentPCM916 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_431SampleInfo,
+    /* Sample */ &sfx_431WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14192,14 +14192,14 @@ const struct InstrumentPCM instrumentPCMData916 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_432SampleInfo;
-const struct InstrumentPCM instrumentPCMData917 = {
+extern const struct WaveData sfx_432WaveData;
+const struct InstrumentPCM instrumentPCM917 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_432SampleInfo,
+    /* Sample */ &sfx_432WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14208,14 +14208,14 @@ const struct InstrumentPCM instrumentPCMData917 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_433SampleInfo;
-const struct InstrumentPCM instrumentPCMData918 = {
+extern const struct WaveData sfx_433WaveData;
+const struct InstrumentPCM instrumentPCM918 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_433SampleInfo,
+    /* Sample */ &sfx_433WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14224,14 +14224,14 @@ const struct InstrumentPCM instrumentPCMData918 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_026SampleInfo;
-const struct InstrumentPCM instrumentPCMData919 = {
+extern const struct WaveData sfx_026WaveData;
+const struct InstrumentPCM instrumentPCM919 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_026SampleInfo,
+    /* Sample */ &sfx_026WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -14240,14 +14240,14 @@ const struct InstrumentPCM instrumentPCMData919 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_117SampleInfo;
-const struct InstrumentPCM instrumentPCMData920 = {
+extern const struct WaveData sfx_117WaveData;
+const struct InstrumentPCM instrumentPCM920 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_117SampleInfo,
+    /* Sample */ &sfx_117WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x0004d936,
@@ -14256,14 +14256,14 @@ const struct InstrumentPCM instrumentPCMData920 = {
     /* unk1C  */ 0x0001638c,
 };
 
-extern const struct SampleInfo sfx_434SampleInfo;
-const struct InstrumentPCM instrumentPCMData921 = {
+extern const struct WaveData sfx_434WaveData;
+const struct InstrumentPCM instrumentPCM921 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_434SampleInfo,
+    /* Sample */ &sfx_434WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14272,14 +14272,14 @@ const struct InstrumentPCM instrumentPCMData921 = {
     /* unk1C  */ 0x0016554d,
 };
 
-extern const struct SampleInfo sfx_405SampleInfo;
-const struct InstrumentPCM instrumentPCMData922 = {
+extern const struct WaveData sfx_405WaveData;
+const struct InstrumentPCM instrumentPCM922 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_405SampleInfo,
+    /* Sample */ &sfx_405WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -14288,14 +14288,14 @@ const struct InstrumentPCM instrumentPCMData922 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_017SampleInfo;
-const struct InstrumentPCM instrumentPCMData923 = {
+extern const struct WaveData sfx_017WaveData;
+const struct InstrumentPCM instrumentPCM923 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_017SampleInfo,
+    /* Sample */ &sfx_017WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -14304,14 +14304,14 @@ const struct InstrumentPCM instrumentPCMData923 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_042SampleInfo;
-const struct InstrumentPCM instrumentPCMData924 = {
+extern const struct WaveData sfx_042WaveData;
+const struct InstrumentPCM instrumentPCM924 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_042SampleInfo,
+    /* Sample */ &sfx_042WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14320,14 +14320,14 @@ const struct InstrumentPCM instrumentPCMData924 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_196SampleInfo;
-const struct InstrumentPCM instrumentPCMData925 = {
+extern const struct WaveData sfx_196WaveData;
+const struct InstrumentPCM instrumentPCM925 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_196SampleInfo,
+    /* Sample */ &sfx_196WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -14336,14 +14336,14 @@ const struct InstrumentPCM instrumentPCMData925 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_041SampleInfo;
-const struct InstrumentPCM instrumentPCMData926 = {
+extern const struct WaveData sfx_041WaveData;
+const struct InstrumentPCM instrumentPCM926 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_041SampleInfo,
+    /* Sample */ &sfx_041WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0060364d,
     /* unk10  */ 0x00600000,
@@ -14352,7 +14352,7 @@ const struct InstrumentPCM instrumentPCMData926 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubSplit instrumentSubbankMultiKeyData927 = {
+const struct InstrumentSubSplit instrumentSubSplit927 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -14362,14 +14362,14 @@ const struct InstrumentSubSplit instrumentSubbankMultiKeyData927 = {
     /* Sub-bank */ (void *)0x08a97210, // POINTER
 };
 
-extern const struct SampleInfo sfx_203SampleInfo;
-const struct InstrumentPCM instrumentPCMData928 = {
+extern const struct WaveData sfx_203WaveData;
+const struct InstrumentPCM instrumentPCM928 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_203SampleInfo,
+    /* Sample */ &sfx_203WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -14378,14 +14378,14 @@ const struct InstrumentPCM instrumentPCMData928 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_038SampleInfo;
-const struct InstrumentPCM instrumentPCMData929 = {
+extern const struct WaveData sfx_038WaveData;
+const struct InstrumentPCM instrumentPCM929 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_038SampleInfo,
+    /* Sample */ &sfx_038WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14394,14 +14394,14 @@ const struct InstrumentPCM instrumentPCMData929 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_028SampleInfo;
-const struct InstrumentPCM instrumentPCMData930 = {
+extern const struct WaveData sfx_028WaveData;
+const struct InstrumentPCM instrumentPCM930 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_028SampleInfo,
+    /* Sample */ &sfx_028WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x0043e0f8,
@@ -14410,14 +14410,14 @@ const struct InstrumentPCM instrumentPCMData930 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_400SampleInfo;
-const struct InstrumentPCM instrumentPCMData931 = {
+extern const struct WaveData sfx_400WaveData;
+const struct InstrumentPCM instrumentPCM931 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_400SampleInfo,
+    /* Sample */ &sfx_400WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -14426,14 +14426,14 @@ const struct InstrumentPCM instrumentPCMData931 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_230SampleInfo;
-const struct InstrumentPCM instrumentPCMData932 = {
+extern const struct WaveData sfx_230WaveData;
+const struct InstrumentPCM instrumentPCM932 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_230SampleInfo,
+    /* Sample */ &sfx_230WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x000cd40a,
     /* unk10  */ 0x00600000,
@@ -14442,14 +14442,14 @@ const struct InstrumentPCM instrumentPCMData932 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_293SampleInfo;
-const struct InstrumentPCM instrumentPCMData933 = {
+extern const struct WaveData sfx_293WaveData;
+const struct InstrumentPCM instrumentPCM933 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_293SampleInfo,
+    /* Sample */ &sfx_293WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -14458,7 +14458,7 @@ const struct InstrumentPCM instrumentPCMData933 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-const struct InstrumentSubSplit instrumentSubbankMultiKeyData934 = {
+const struct InstrumentSubSplit instrumentSubSplit934 = {
     {
         /* Type */ INSTRUMENT_SUB_SPLIT,
         /* unk1 */ 0xc,
@@ -14468,14 +14468,14 @@ const struct InstrumentSubSplit instrumentSubbankMultiKeyData934 = {
     /* Sub-bank */ (void *)0x08a97010, // POINTER
 };
 
-extern const struct SampleInfo sfx_230SampleInfo;
-const struct InstrumentPCM instrumentPCMData935 = {
+extern const struct WaveData sfx_230WaveData;
+const struct InstrumentPCM instrumentPCM935 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_230SampleInfo,
+    /* Sample */ &sfx_230WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x000cd40a,
     /* unk10  */ 0x00600000,
@@ -14484,14 +14484,14 @@ const struct InstrumentPCM instrumentPCMData935 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_435SampleInfo;
-const struct InstrumentPCM instrumentPCMData936 = {
+extern const struct WaveData sfx_435WaveData;
+const struct InstrumentPCM instrumentPCM936 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_435SampleInfo,
+    /* Sample */ &sfx_435WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14500,14 +14500,14 @@ const struct InstrumentPCM instrumentPCMData936 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_226SampleInfo;
-const struct InstrumentPCM instrumentPCMData937 = {
+extern const struct WaveData sfx_226WaveData;
+const struct InstrumentPCM instrumentPCM937 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_226SampleInfo,
+    /* Sample */ &sfx_226WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14516,14 +14516,14 @@ const struct InstrumentPCM instrumentPCMData937 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_289SampleInfo;
-const struct InstrumentPCM instrumentPCMData938 = {
+extern const struct WaveData sfx_289WaveData;
+const struct InstrumentPCM instrumentPCM938 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_289SampleInfo,
+    /* Sample */ &sfx_289WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14532,14 +14532,14 @@ const struct InstrumentPCM instrumentPCMData938 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_436SampleInfo;
-const struct InstrumentPCM instrumentPCMData939 = {
+extern const struct WaveData sfx_436WaveData;
+const struct InstrumentPCM instrumentPCM939 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_436SampleInfo,
+    /* Sample */ &sfx_436WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -14548,14 +14548,14 @@ const struct InstrumentPCM instrumentPCMData939 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_437SampleInfo;
-const struct InstrumentPCM instrumentPCMData940 = {
+extern const struct WaveData sfx_437WaveData;
+const struct InstrumentPCM instrumentPCM940 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_437SampleInfo,
+    /* Sample */ &sfx_437WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14564,14 +14564,14 @@ const struct InstrumentPCM instrumentPCMData940 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_438SampleInfo;
-const struct InstrumentPCM instrumentPCMData941 = {
+extern const struct WaveData sfx_438WaveData;
+const struct InstrumentPCM instrumentPCM941 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_438SampleInfo,
+    /* Sample */ &sfx_438WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14580,14 +14580,14 @@ const struct InstrumentPCM instrumentPCMData941 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_006SampleInfo;
-const struct InstrumentPCM instrumentPCMData942 = {
+extern const struct WaveData sfx_006WaveData;
+const struct InstrumentPCM instrumentPCM942 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_006SampleInfo,
+    /* Sample */ &sfx_006WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14596,14 +14596,14 @@ const struct InstrumentPCM instrumentPCMData942 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_309SampleInfo;
-const struct InstrumentPCM instrumentPCMData943 = {
+extern const struct WaveData sfx_309WaveData;
+const struct InstrumentPCM instrumentPCM943 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_309SampleInfo,
+    /* Sample */ &sfx_309WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x00600000,
@@ -14612,14 +14612,14 @@ const struct InstrumentPCM instrumentPCMData943 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_439SampleInfo;
-const struct InstrumentPCM instrumentPCMData944 = {
+extern const struct WaveData sfx_439WaveData;
+const struct InstrumentPCM instrumentPCM944 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_439SampleInfo,
+    /* Sample */ &sfx_439WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14628,14 +14628,14 @@ const struct InstrumentPCM instrumentPCMData944 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_237SampleInfo;
-const struct InstrumentPCM instrumentPCMData945 = {
+extern const struct WaveData sfx_237WaveData;
+const struct InstrumentPCM instrumentPCM945 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_237SampleInfo,
+    /* Sample */ &sfx_237WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14644,14 +14644,14 @@ const struct InstrumentPCM instrumentPCMData945 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_344SampleInfo;
-const struct InstrumentPCM instrumentPCMData946 = {
+extern const struct WaveData sfx_344WaveData;
+const struct InstrumentPCM instrumentPCM946 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_344SampleInfo,
+    /* Sample */ &sfx_344WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14660,14 +14660,14 @@ const struct InstrumentPCM instrumentPCMData946 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_122SampleInfo;
-const struct InstrumentPCM instrumentPCMData947 = {
+extern const struct WaveData sfx_122WaveData;
+const struct InstrumentPCM instrumentPCM947 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_122SampleInfo,
+    /* Sample */ &sfx_122WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14676,14 +14676,14 @@ const struct InstrumentPCM instrumentPCMData947 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_217SampleInfo;
-const struct InstrumentPCM instrumentPCMData948 = {
+extern const struct WaveData sfx_217WaveData;
+const struct InstrumentPCM instrumentPCM948 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_217SampleInfo,
+    /* Sample */ &sfx_217WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14692,14 +14692,14 @@ const struct InstrumentPCM instrumentPCMData948 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_136SampleInfo;
-const struct InstrumentPCM instrumentPCMData949 = {
+extern const struct WaveData sfx_136WaveData;
+const struct InstrumentPCM instrumentPCM949 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_136SampleInfo,
+    /* Sample */ &sfx_136WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14708,14 +14708,14 @@ const struct InstrumentPCM instrumentPCMData949 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_107SampleInfo;
-const struct InstrumentPCM instrumentPCMData950 = {
+extern const struct WaveData sfx_107WaveData;
+const struct InstrumentPCM instrumentPCM950 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_107SampleInfo,
+    /* Sample */ &sfx_107WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -14724,14 +14724,14 @@ const struct InstrumentPCM instrumentPCMData950 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_129SampleInfo;
-const struct InstrumentPCM instrumentPCMData951 = {
+extern const struct WaveData sfx_129WaveData;
+const struct InstrumentPCM instrumentPCM951 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_129SampleInfo,
+    /* Sample */ &sfx_129WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14740,14 +14740,14 @@ const struct InstrumentPCM instrumentPCMData951 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_214SampleInfo;
-const struct InstrumentPCM instrumentPCMData952 = {
+extern const struct WaveData sfx_214WaveData;
+const struct InstrumentPCM instrumentPCM952 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_214SampleInfo,
+    /* Sample */ &sfx_214WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14756,7 +14756,7 @@ const struct InstrumentPCM instrumentPCMData952 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData953 = {
+const struct InstrumentSubRhythm instrumentSubRhythm953 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -14765,7 +14765,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData953 = {
     /* Sub-bank */ (void *)0x08a99b4c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData954 = {
+const struct InstrumentSubRhythm instrumentSubRhythm954 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -14774,7 +14774,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData954 = {
     /* Sub-bank */ (void *)0x08a998e4, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData955 = {
+const struct InstrumentSubRhythm instrumentSubRhythm955 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -14783,7 +14783,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData955 = {
     /* Sub-bank */ (void *)0x08a9957c, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData956 = {
+const struct InstrumentSubRhythm instrumentSubRhythm956 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -14792,7 +14792,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData956 = {
     /* Sub-bank */ (void *)0x08a996e4, // POINTER
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData957 = {
+const struct InstrumentSubRhythm instrumentSubRhythm957 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -14801,14 +14801,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData957 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-extern const struct SampleInfo sfx_440SampleInfo;
-const struct InstrumentPCM instrumentPCMData958 = {
+extern const struct WaveData sfx_440WaveData;
+const struct InstrumentPCM instrumentPCM958 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_440SampleInfo,
+    /* Sample */ &sfx_440WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14817,14 +14817,14 @@ const struct InstrumentPCM instrumentPCMData958 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_441SampleInfo;
-const struct InstrumentPCM instrumentPCMData959 = {
+extern const struct WaveData sfx_441WaveData;
+const struct InstrumentPCM instrumentPCM959 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_441SampleInfo,
+    /* Sample */ &sfx_441WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14833,14 +14833,14 @@ const struct InstrumentPCM instrumentPCMData959 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_442SampleInfo;
-const struct InstrumentPCM instrumentPCMData960 = {
+extern const struct WaveData sfx_442WaveData;
+const struct InstrumentPCM instrumentPCM960 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_442SampleInfo,
+    /* Sample */ &sfx_442WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14849,14 +14849,14 @@ const struct InstrumentPCM instrumentPCMData960 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_443SampleInfo;
-const struct InstrumentPCM instrumentPCMData961 = {
+extern const struct WaveData sfx_443WaveData;
+const struct InstrumentPCM instrumentPCM961 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xfff0,
     },
-    /* Sample */ &sfx_443SampleInfo,
+    /* Sample */ &sfx_443WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14865,14 +14865,14 @@ const struct InstrumentPCM instrumentPCMData961 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_444SampleInfo;
-const struct InstrumentPCM instrumentPCMData962 = {
+extern const struct WaveData sfx_444WaveData;
+const struct InstrumentPCM instrumentPCM962 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffe0,
     },
-    /* Sample */ &sfx_444SampleInfo,
+    /* Sample */ &sfx_444WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14881,14 +14881,14 @@ const struct InstrumentPCM instrumentPCMData962 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_445SampleInfo;
-const struct InstrumentPCM instrumentPCMData963 = {
+extern const struct WaveData sfx_445WaveData;
+const struct InstrumentPCM instrumentPCM963 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffe0,
     },
-    /* Sample */ &sfx_445SampleInfo,
+    /* Sample */ &sfx_445WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14897,14 +14897,14 @@ const struct InstrumentPCM instrumentPCMData963 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_446SampleInfo;
-const struct InstrumentPCM instrumentPCMData964 = {
+extern const struct WaveData sfx_446WaveData;
+const struct InstrumentPCM instrumentPCM964 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffe0,
     },
-    /* Sample */ &sfx_446SampleInfo,
+    /* Sample */ &sfx_446WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14913,14 +14913,14 @@ const struct InstrumentPCM instrumentPCMData964 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_447SampleInfo;
-const struct InstrumentPCM instrumentPCMData965 = {
+extern const struct WaveData sfx_447WaveData;
+const struct InstrumentPCM instrumentPCM965 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_447SampleInfo,
+    /* Sample */ &sfx_447WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14929,14 +14929,14 @@ const struct InstrumentPCM instrumentPCMData965 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_448SampleInfo;
-const struct InstrumentPCM instrumentPCMData966 = {
+extern const struct WaveData sfx_448WaveData;
+const struct InstrumentPCM instrumentPCM966 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffe0,
     },
-    /* Sample */ &sfx_448SampleInfo,
+    /* Sample */ &sfx_448WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14945,14 +14945,14 @@ const struct InstrumentPCM instrumentPCMData966 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_449SampleInfo;
-const struct InstrumentPCM instrumentPCMData967 = {
+extern const struct WaveData sfx_449WaveData;
+const struct InstrumentPCM instrumentPCM967 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffe0,
     },
-    /* Sample */ &sfx_449SampleInfo,
+    /* Sample */ &sfx_449WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14961,14 +14961,14 @@ const struct InstrumentPCM instrumentPCMData967 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_450SampleInfo;
-const struct InstrumentPCM instrumentPCMData968 = {
+extern const struct WaveData sfx_450WaveData;
+const struct InstrumentPCM instrumentPCM968 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffe0,
     },
-    /* Sample */ &sfx_450SampleInfo,
+    /* Sample */ &sfx_450WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14977,14 +14977,14 @@ const struct InstrumentPCM instrumentPCMData968 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_451SampleInfo;
-const struct InstrumentPCM instrumentPCMData969 = {
+extern const struct WaveData sfx_451WaveData;
+const struct InstrumentPCM instrumentPCM969 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffe0,
     },
-    /* Sample */ &sfx_451SampleInfo,
+    /* Sample */ &sfx_451WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -14993,14 +14993,14 @@ const struct InstrumentPCM instrumentPCMData969 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_452SampleInfo;
-const struct InstrumentPCM instrumentPCMData970 = {
+extern const struct WaveData sfx_452WaveData;
+const struct InstrumentPCM instrumentPCM970 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_452SampleInfo,
+    /* Sample */ &sfx_452WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15009,14 +15009,14 @@ const struct InstrumentPCM instrumentPCMData970 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_087SampleInfo;
-const struct InstrumentPCM instrumentPCMData971 = {
+extern const struct WaveData sfx_087WaveData;
+const struct InstrumentPCM instrumentPCM971 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3e,
         /* unk2 */ 0x3f,
     },
-    /* Sample */ &sfx_087SampleInfo,
+    /* Sample */ &sfx_087WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15025,14 +15025,14 @@ const struct InstrumentPCM instrumentPCMData971 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_087SampleInfo;
-const struct InstrumentPCM instrumentPCMData972 = {
+extern const struct WaveData sfx_087WaveData;
+const struct InstrumentPCM instrumentPCM972 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x41,
         /* unk2 */ 0x10,
     },
-    /* Sample */ &sfx_087SampleInfo,
+    /* Sample */ &sfx_087WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15041,14 +15041,14 @@ const struct InstrumentPCM instrumentPCMData972 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_453SampleInfo;
-const struct InstrumentPCM instrumentPCMData973 = {
+extern const struct WaveData sfx_453WaveData;
+const struct InstrumentPCM instrumentPCM973 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_453SampleInfo,
+    /* Sample */ &sfx_453WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -15057,14 +15057,14 @@ const struct InstrumentPCM instrumentPCMData973 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_454SampleInfo;
-const struct InstrumentPCM instrumentPCMData974 = {
+extern const struct WaveData sfx_454WaveData;
+const struct InstrumentPCM instrumentPCM974 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_454SampleInfo,
+    /* Sample */ &sfx_454WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15073,14 +15073,14 @@ const struct InstrumentPCM instrumentPCMData974 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_455SampleInfo;
-const struct InstrumentPCM instrumentPCMData975 = {
+extern const struct WaveData sfx_455WaveData;
+const struct InstrumentPCM instrumentPCM975 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_455SampleInfo,
+    /* Sample */ &sfx_455WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15089,14 +15089,14 @@ const struct InstrumentPCM instrumentPCMData975 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_087SampleInfo;
-const struct InstrumentPCM instrumentPCMData976 = {
+extern const struct WaveData sfx_087WaveData;
+const struct InstrumentPCM instrumentPCM976 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffc1,
     },
-    /* Sample */ &sfx_087SampleInfo,
+    /* Sample */ &sfx_087WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15105,14 +15105,14 @@ const struct InstrumentPCM instrumentPCMData976 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_456SampleInfo;
-const struct InstrumentPCM instrumentPCMData977 = {
+extern const struct WaveData sfx_456WaveData;
+const struct InstrumentPCM instrumentPCM977 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_456SampleInfo,
+    /* Sample */ &sfx_456WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15121,14 +15121,14 @@ const struct InstrumentPCM instrumentPCMData977 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_457SampleInfo;
-const struct InstrumentPCM instrumentPCMData978 = {
+extern const struct WaveData sfx_457WaveData;
+const struct InstrumentPCM instrumentPCM978 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_457SampleInfo,
+    /* Sample */ &sfx_457WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -15137,14 +15137,14 @@ const struct InstrumentPCM instrumentPCMData978 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_458SampleInfo;
-const struct InstrumentPCM instrumentPCMData979 = {
+extern const struct WaveData sfx_458WaveData;
+const struct InstrumentPCM instrumentPCM979 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_458SampleInfo,
+    /* Sample */ &sfx_458WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15153,14 +15153,14 @@ const struct InstrumentPCM instrumentPCMData979 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_459SampleInfo;
-const struct InstrumentPCM instrumentPCMData980 = {
+extern const struct WaveData sfx_459WaveData;
+const struct InstrumentPCM instrumentPCM980 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_459SampleInfo,
+    /* Sample */ &sfx_459WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15169,14 +15169,14 @@ const struct InstrumentPCM instrumentPCMData980 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_460SampleInfo;
-const struct InstrumentPCM instrumentPCMData981 = {
+extern const struct WaveData sfx_460WaveData;
+const struct InstrumentPCM instrumentPCM981 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_460SampleInfo,
+    /* Sample */ &sfx_460WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15185,14 +15185,14 @@ const struct InstrumentPCM instrumentPCMData981 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_461SampleInfo;
-const struct InstrumentPCM instrumentPCMData982 = {
+extern const struct WaveData sfx_461WaveData;
+const struct InstrumentPCM instrumentPCM982 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_461SampleInfo,
+    /* Sample */ &sfx_461WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15201,14 +15201,14 @@ const struct InstrumentPCM instrumentPCMData982 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_462SampleInfo;
-const struct InstrumentPCM instrumentPCMData983 = {
+extern const struct WaveData sfx_462WaveData;
+const struct InstrumentPCM instrumentPCM983 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_462SampleInfo,
+    /* Sample */ &sfx_462WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15217,14 +15217,14 @@ const struct InstrumentPCM instrumentPCMData983 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_463SampleInfo;
-const struct InstrumentPCM instrumentPCMData984 = {
+extern const struct WaveData sfx_463WaveData;
+const struct InstrumentPCM instrumentPCM984 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_463SampleInfo,
+    /* Sample */ &sfx_463WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15233,14 +15233,14 @@ const struct InstrumentPCM instrumentPCMData984 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_464SampleInfo;
-const struct InstrumentPCM instrumentPCMData985 = {
+extern const struct WaveData sfx_464WaveData;
+const struct InstrumentPCM instrumentPCM985 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_464SampleInfo,
+    /* Sample */ &sfx_464WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15249,14 +15249,14 @@ const struct InstrumentPCM instrumentPCMData985 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_465SampleInfo;
-const struct InstrumentPCM instrumentPCMData986 = {
+extern const struct WaveData sfx_465WaveData;
+const struct InstrumentPCM instrumentPCM986 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_465SampleInfo,
+    /* Sample */ &sfx_465WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15265,14 +15265,14 @@ const struct InstrumentPCM instrumentPCMData986 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_466SampleInfo;
-const struct InstrumentPCM instrumentPCMData987 = {
+extern const struct WaveData sfx_466WaveData;
+const struct InstrumentPCM instrumentPCM987 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_466SampleInfo,
+    /* Sample */ &sfx_466WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15281,14 +15281,14 @@ const struct InstrumentPCM instrumentPCMData987 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_086SampleInfo;
-const struct InstrumentPCM instrumentPCMData988 = {
+extern const struct WaveData sfx_086WaveData;
+const struct InstrumentPCM instrumentPCM988 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_086SampleInfo,
+    /* Sample */ &sfx_086WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15297,14 +15297,14 @@ const struct InstrumentPCM instrumentPCMData988 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_467SampleInfo;
-const struct InstrumentPCM instrumentPCMData989 = {
+extern const struct WaveData sfx_467WaveData;
+const struct InstrumentPCM instrumentPCM989 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_467SampleInfo,
+    /* Sample */ &sfx_467WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15313,14 +15313,14 @@ const struct InstrumentPCM instrumentPCMData989 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_385SampleInfo;
-const struct InstrumentPCM instrumentPCMData990 = {
+extern const struct WaveData sfx_385WaveData;
+const struct InstrumentPCM instrumentPCM990 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_385SampleInfo,
+    /* Sample */ &sfx_385WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15329,14 +15329,14 @@ const struct InstrumentPCM instrumentPCMData990 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_468SampleInfo;
-const struct InstrumentPCM instrumentPCMData991 = {
+extern const struct WaveData sfx_468WaveData;
+const struct InstrumentPCM instrumentPCM991 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x34,
         /* unk2 */ 0xffe0,
     },
-    /* Sample */ &sfx_468SampleInfo,
+    /* Sample */ &sfx_468WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15345,14 +15345,14 @@ const struct InstrumentPCM instrumentPCMData991 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_450SampleInfo;
-const struct InstrumentPCM instrumentPCMData992 = {
+extern const struct WaveData sfx_450WaveData;
+const struct InstrumentPCM instrumentPCM992 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffe0,
     },
-    /* Sample */ &sfx_450SampleInfo,
+    /* Sample */ &sfx_450WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15361,14 +15361,14 @@ const struct InstrumentPCM instrumentPCMData992 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_468SampleInfo;
-const struct InstrumentPCM instrumentPCMData993 = {
+extern const struct WaveData sfx_468WaveData;
+const struct InstrumentPCM instrumentPCM993 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x38,
         /* unk2 */ 0xfff0,
     },
-    /* Sample */ &sfx_468SampleInfo,
+    /* Sample */ &sfx_468WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15377,14 +15377,14 @@ const struct InstrumentPCM instrumentPCMData993 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_468SampleInfo;
-const struct InstrumentPCM instrumentPCMData994 = {
+extern const struct WaveData sfx_468WaveData;
+const struct InstrumentPCM instrumentPCM994 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x0,
     },
-    /* Sample */ &sfx_468SampleInfo,
+    /* Sample */ &sfx_468WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15393,14 +15393,14 @@ const struct InstrumentPCM instrumentPCMData994 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_469SampleInfo;
-const struct InstrumentPCM instrumentPCMData995 = {
+extern const struct WaveData sfx_469WaveData;
+const struct InstrumentPCM instrumentPCM995 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3e,
         /* unk2 */ 0xffc0,
     },
-    /* Sample */ &sfx_469SampleInfo,
+    /* Sample */ &sfx_469WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15409,14 +15409,14 @@ const struct InstrumentPCM instrumentPCMData995 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_470SampleInfo;
-const struct InstrumentPCM instrumentPCMData996 = {
+extern const struct WaveData sfx_470WaveData;
+const struct InstrumentPCM instrumentPCM996 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_470SampleInfo,
+    /* Sample */ &sfx_470WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15425,14 +15425,14 @@ const struct InstrumentPCM instrumentPCMData996 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_471SampleInfo;
-const struct InstrumentPCM instrumentPCMData997 = {
+extern const struct WaveData sfx_471WaveData;
+const struct InstrumentPCM instrumentPCM997 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_471SampleInfo,
+    /* Sample */ &sfx_471WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -15441,14 +15441,14 @@ const struct InstrumentPCM instrumentPCMData997 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_472SampleInfo;
-const struct InstrumentPCM instrumentPCMData998 = {
+extern const struct WaveData sfx_472WaveData;
+const struct InstrumentPCM instrumentPCM998 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_472SampleInfo,
+    /* Sample */ &sfx_472WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15457,14 +15457,14 @@ const struct InstrumentPCM instrumentPCMData998 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_473SampleInfo;
-const struct InstrumentPCM instrumentPCMData999 = {
+extern const struct WaveData sfx_473WaveData;
+const struct InstrumentPCM instrumentPCM999 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffc0,
     },
-    /* Sample */ &sfx_473SampleInfo,
+    /* Sample */ &sfx_473WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15473,14 +15473,14 @@ const struct InstrumentPCM instrumentPCMData999 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_474SampleInfo;
-const struct InstrumentPCM instrumentPCMData1000 = {
+extern const struct WaveData sfx_474WaveData;
+const struct InstrumentPCM instrumentPCM1000 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffe0,
     },
-    /* Sample */ &sfx_474SampleInfo,
+    /* Sample */ &sfx_474WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -15489,14 +15489,14 @@ const struct InstrumentPCM instrumentPCMData1000 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_475SampleInfo;
-const struct InstrumentPCM instrumentPCMData1001 = {
+extern const struct WaveData sfx_475WaveData;
+const struct InstrumentPCM instrumentPCM1001 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_475SampleInfo,
+    /* Sample */ &sfx_475WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15505,14 +15505,14 @@ const struct InstrumentPCM instrumentPCMData1001 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_476SampleInfo;
-const struct InstrumentPCM instrumentPCMData1002 = {
+extern const struct WaveData sfx_476WaveData;
+const struct InstrumentPCM instrumentPCM1002 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_476SampleInfo,
+    /* Sample */ &sfx_476WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15521,14 +15521,14 @@ const struct InstrumentPCM instrumentPCMData1002 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_477SampleInfo;
-const struct InstrumentPCM instrumentPCMData1003 = {
+extern const struct WaveData sfx_477WaveData;
+const struct InstrumentPCM instrumentPCM1003 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x60,
     },
-    /* Sample */ &sfx_477SampleInfo,
+    /* Sample */ &sfx_477WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15537,14 +15537,14 @@ const struct InstrumentPCM instrumentPCMData1003 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_478SampleInfo;
-const struct InstrumentPCM instrumentPCMData1004 = {
+extern const struct WaveData sfx_478WaveData;
+const struct InstrumentPCM instrumentPCM1004 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_478SampleInfo,
+    /* Sample */ &sfx_478WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15553,14 +15553,14 @@ const struct InstrumentPCM instrumentPCMData1004 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_477SampleInfo;
-const struct InstrumentPCM instrumentPCMData1005 = {
+extern const struct WaveData sfx_477WaveData;
+const struct InstrumentPCM instrumentPCM1005 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x35,
         /* unk2 */ 0x60,
     },
-    /* Sample */ &sfx_477SampleInfo,
+    /* Sample */ &sfx_477WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15569,14 +15569,14 @@ const struct InstrumentPCM instrumentPCMData1005 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_479SampleInfo;
-const struct InstrumentPCM instrumentPCMData1006 = {
+extern const struct WaveData sfx_479WaveData;
+const struct InstrumentPCM instrumentPCM1006 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_479SampleInfo,
+    /* Sample */ &sfx_479WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15585,14 +15585,14 @@ const struct InstrumentPCM instrumentPCMData1006 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_480SampleInfo;
-const struct InstrumentPCM instrumentPCMData1007 = {
+extern const struct WaveData sfx_480WaveData;
+const struct InstrumentPCM instrumentPCM1007 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x10,
     },
-    /* Sample */ &sfx_480SampleInfo,
+    /* Sample */ &sfx_480WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15601,14 +15601,14 @@ const struct InstrumentPCM instrumentPCMData1007 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_450SampleInfo;
-const struct InstrumentPCM instrumentPCMData1008 = {
+extern const struct WaveData sfx_450WaveData;
+const struct InstrumentPCM instrumentPCM1008 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffe0,
     },
-    /* Sample */ &sfx_450SampleInfo,
+    /* Sample */ &sfx_450WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -15617,14 +15617,14 @@ const struct InstrumentPCM instrumentPCMData1008 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_481SampleInfo;
-const struct InstrumentPCM instrumentPCMData1009 = {
+extern const struct WaveData sfx_481WaveData;
+const struct InstrumentPCM instrumentPCM1009 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xfff0,
     },
-    /* Sample */ &sfx_481SampleInfo,
+    /* Sample */ &sfx_481WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15633,14 +15633,14 @@ const struct InstrumentPCM instrumentPCMData1009 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_482SampleInfo;
-const struct InstrumentPCM instrumentPCMData1010 = {
+extern const struct WaveData sfx_482WaveData;
+const struct InstrumentPCM instrumentPCM1010 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_482SampleInfo,
+    /* Sample */ &sfx_482WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15649,14 +15649,14 @@ const struct InstrumentPCM instrumentPCMData1010 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_483SampleInfo;
-const struct InstrumentPCM instrumentPCMData1011 = {
+extern const struct WaveData sfx_483WaveData;
+const struct InstrumentPCM instrumentPCM1011 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_483SampleInfo,
+    /* Sample */ &sfx_483WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15665,14 +15665,14 @@ const struct InstrumentPCM instrumentPCMData1011 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_484SampleInfo;
-const struct InstrumentPCM instrumentPCMData1012 = {
+extern const struct WaveData sfx_484WaveData;
+const struct InstrumentPCM instrumentPCM1012 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffc1,
     },
-    /* Sample */ &sfx_484SampleInfo,
+    /* Sample */ &sfx_484WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15681,14 +15681,14 @@ const struct InstrumentPCM instrumentPCMData1012 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_485SampleInfo;
-const struct InstrumentPCM instrumentPCMData1013 = {
+extern const struct WaveData sfx_485WaveData;
+const struct InstrumentPCM instrumentPCM1013 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_485SampleInfo,
+    /* Sample */ &sfx_485WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15697,14 +15697,14 @@ const struct InstrumentPCM instrumentPCMData1013 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_216SampleInfo;
-const struct InstrumentPCM instrumentPCMData1014 = {
+extern const struct WaveData sfx_216WaveData;
+const struct InstrumentPCM instrumentPCM1014 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x3f,
     },
-    /* Sample */ &sfx_216SampleInfo,
+    /* Sample */ &sfx_216WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15713,14 +15713,14 @@ const struct InstrumentPCM instrumentPCMData1014 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_486SampleInfo;
-const struct InstrumentPCM instrumentPCMData1015 = {
+extern const struct WaveData sfx_486WaveData;
+const struct InstrumentPCM instrumentPCM1015 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xc,
     },
-    /* Sample */ &sfx_486SampleInfo,
+    /* Sample */ &sfx_486WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15729,14 +15729,14 @@ const struct InstrumentPCM instrumentPCMData1015 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_487SampleInfo;
-const struct InstrumentPCM instrumentPCMData1016 = {
+extern const struct WaveData sfx_487WaveData;
+const struct InstrumentPCM instrumentPCM1016 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffc1,
     },
-    /* Sample */ &sfx_487SampleInfo,
+    /* Sample */ &sfx_487WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15745,14 +15745,14 @@ const struct InstrumentPCM instrumentPCMData1016 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_488SampleInfo;
-const struct InstrumentPCM instrumentPCMData1017 = {
+extern const struct WaveData sfx_488WaveData;
+const struct InstrumentPCM instrumentPCM1017 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xc,
     },
-    /* Sample */ &sfx_488SampleInfo,
+    /* Sample */ &sfx_488WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15761,14 +15761,14 @@ const struct InstrumentPCM instrumentPCMData1017 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_489SampleInfo;
-const struct InstrumentPCM instrumentPCMData1018 = {
+extern const struct WaveData sfx_489WaveData;
+const struct InstrumentPCM instrumentPCM1018 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_489SampleInfo,
+    /* Sample */ &sfx_489WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15777,14 +15777,14 @@ const struct InstrumentPCM instrumentPCMData1018 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_490SampleInfo;
-const struct InstrumentPCM instrumentPCMData1019 = {
+extern const struct WaveData sfx_490WaveData;
+const struct InstrumentPCM instrumentPCM1019 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_490SampleInfo,
+    /* Sample */ &sfx_490WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15793,14 +15793,14 @@ const struct InstrumentPCM instrumentPCMData1019 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_491SampleInfo;
-const struct InstrumentPCM instrumentPCMData1020 = {
+extern const struct WaveData sfx_491WaveData;
+const struct InstrumentPCM instrumentPCM1020 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_491SampleInfo,
+    /* Sample */ &sfx_491WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15809,14 +15809,14 @@ const struct InstrumentPCM instrumentPCMData1020 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_492SampleInfo;
-const struct InstrumentPCM instrumentPCMData1021 = {
+extern const struct WaveData sfx_492WaveData;
+const struct InstrumentPCM instrumentPCM1021 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_492SampleInfo,
+    /* Sample */ &sfx_492WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15825,14 +15825,14 @@ const struct InstrumentPCM instrumentPCMData1021 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_493SampleInfo;
-const struct InstrumentPCM instrumentPCMData1022 = {
+extern const struct WaveData sfx_493WaveData;
+const struct InstrumentPCM instrumentPCM1022 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_493SampleInfo,
+    /* Sample */ &sfx_493WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15841,14 +15841,14 @@ const struct InstrumentPCM instrumentPCMData1022 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_494SampleInfo;
-const struct InstrumentPCM instrumentPCMData1023 = {
+extern const struct WaveData sfx_494WaveData;
+const struct InstrumentPCM instrumentPCM1023 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_494SampleInfo,
+    /* Sample */ &sfx_494WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15857,14 +15857,14 @@ const struct InstrumentPCM instrumentPCMData1023 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_487SampleInfo;
-const struct InstrumentPCM instrumentPCMData1024 = {
+extern const struct WaveData sfx_487WaveData;
+const struct InstrumentPCM instrumentPCM1024 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffc1,
     },
-    /* Sample */ &sfx_487SampleInfo,
+    /* Sample */ &sfx_487WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -15873,14 +15873,14 @@ const struct InstrumentPCM instrumentPCMData1024 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_495SampleInfo;
-const struct InstrumentPCM instrumentPCMData1025 = {
+extern const struct WaveData sfx_495WaveData;
+const struct InstrumentPCM instrumentPCM1025 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_495SampleInfo,
+    /* Sample */ &sfx_495WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15889,14 +15889,14 @@ const struct InstrumentPCM instrumentPCMData1025 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_496SampleInfo;
-const struct InstrumentPCM instrumentPCMData1026 = {
+extern const struct WaveData sfx_496WaveData;
+const struct InstrumentPCM instrumentPCM1026 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_496SampleInfo,
+    /* Sample */ &sfx_496WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15905,14 +15905,14 @@ const struct InstrumentPCM instrumentPCMData1026 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_497SampleInfo;
-const struct InstrumentPCM instrumentPCMData1027 = {
+extern const struct WaveData sfx_497WaveData;
+const struct InstrumentPCM instrumentPCM1027 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffe0,
     },
-    /* Sample */ &sfx_497SampleInfo,
+    /* Sample */ &sfx_497WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15921,14 +15921,14 @@ const struct InstrumentPCM instrumentPCMData1027 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_498SampleInfo;
-const struct InstrumentPCM instrumentPCMData1028 = {
+extern const struct WaveData sfx_498WaveData;
+const struct InstrumentPCM instrumentPCM1028 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x20,
     },
-    /* Sample */ &sfx_498SampleInfo,
+    /* Sample */ &sfx_498WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15937,14 +15937,14 @@ const struct InstrumentPCM instrumentPCMData1028 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_499SampleInfo;
-const struct InstrumentPCM instrumentPCMData1029 = {
+extern const struct WaveData sfx_499WaveData;
+const struct InstrumentPCM instrumentPCM1029 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_499SampleInfo,
+    /* Sample */ &sfx_499WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15953,14 +15953,14 @@ const struct InstrumentPCM instrumentPCMData1029 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_500SampleInfo;
-const struct InstrumentPCM instrumentPCMData1030 = {
+extern const struct WaveData sfx_500WaveData;
+const struct InstrumentPCM instrumentPCM1030 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_500SampleInfo,
+    /* Sample */ &sfx_500WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15969,14 +15969,14 @@ const struct InstrumentPCM instrumentPCMData1030 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_501SampleInfo;
-const struct InstrumentPCM instrumentPCMData1031 = {
+extern const struct WaveData sfx_501WaveData;
+const struct InstrumentPCM instrumentPCM1031 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_501SampleInfo,
+    /* Sample */ &sfx_501WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -15985,14 +15985,14 @@ const struct InstrumentPCM instrumentPCMData1031 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_502SampleInfo;
-const struct InstrumentPCM instrumentPCMData1032 = {
+extern const struct WaveData sfx_502WaveData;
+const struct InstrumentPCM instrumentPCM1032 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_502SampleInfo,
+    /* Sample */ &sfx_502WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16001,14 +16001,14 @@ const struct InstrumentPCM instrumentPCMData1032 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_503SampleInfo;
-const struct InstrumentPCM instrumentPCMData1033 = {
+extern const struct WaveData sfx_503WaveData;
+const struct InstrumentPCM instrumentPCM1033 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x30,
     },
-    /* Sample */ &sfx_503SampleInfo,
+    /* Sample */ &sfx_503WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16017,14 +16017,14 @@ const struct InstrumentPCM instrumentPCMData1033 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_504SampleInfo;
-const struct InstrumentPCM instrumentPCMData1034 = {
+extern const struct WaveData sfx_504WaveData;
+const struct InstrumentPCM instrumentPCM1034 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_504SampleInfo,
+    /* Sample */ &sfx_504WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16033,14 +16033,14 @@ const struct InstrumentPCM instrumentPCMData1034 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_505SampleInfo;
-const struct InstrumentPCM instrumentPCMData1035 = {
+extern const struct WaveData sfx_505WaveData;
+const struct InstrumentPCM instrumentPCM1035 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffe0,
     },
-    /* Sample */ &sfx_505SampleInfo,
+    /* Sample */ &sfx_505WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16049,14 +16049,14 @@ const struct InstrumentPCM instrumentPCMData1035 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_506SampleInfo;
-const struct InstrumentPCM instrumentPCMData1036 = {
+extern const struct WaveData sfx_506WaveData;
+const struct InstrumentPCM instrumentPCM1036 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_506SampleInfo,
+    /* Sample */ &sfx_506WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16065,14 +16065,14 @@ const struct InstrumentPCM instrumentPCMData1036 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_507SampleInfo;
-const struct InstrumentPCM instrumentPCMData1037 = {
+extern const struct WaveData sfx_507WaveData;
+const struct InstrumentPCM instrumentPCM1037 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_507SampleInfo,
+    /* Sample */ &sfx_507WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16081,14 +16081,14 @@ const struct InstrumentPCM instrumentPCMData1037 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_508SampleInfo;
-const struct InstrumentPCM instrumentPCMData1038 = {
+extern const struct WaveData sfx_508WaveData;
+const struct InstrumentPCM instrumentPCM1038 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_508SampleInfo,
+    /* Sample */ &sfx_508WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16097,14 +16097,14 @@ const struct InstrumentPCM instrumentPCMData1038 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_509SampleInfo;
-const struct InstrumentPCM instrumentPCMData1039 = {
+extern const struct WaveData sfx_509WaveData;
+const struct InstrumentPCM instrumentPCM1039 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_509SampleInfo,
+    /* Sample */ &sfx_509WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16113,14 +16113,14 @@ const struct InstrumentPCM instrumentPCMData1039 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_510SampleInfo;
-const struct InstrumentPCM instrumentPCMData1040 = {
+extern const struct WaveData sfx_510WaveData;
+const struct InstrumentPCM instrumentPCM1040 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_510SampleInfo,
+    /* Sample */ &sfx_510WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16129,14 +16129,14 @@ const struct InstrumentPCM instrumentPCMData1040 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_511SampleInfo;
-const struct InstrumentPCM instrumentPCMData1041 = {
+extern const struct WaveData sfx_511WaveData;
+const struct InstrumentPCM instrumentPCM1041 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_511SampleInfo,
+    /* Sample */ &sfx_511WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16145,14 +16145,14 @@ const struct InstrumentPCM instrumentPCMData1041 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_512SampleInfo;
-const struct InstrumentPCM instrumentPCMData1042 = {
+extern const struct WaveData sfx_512WaveData;
+const struct InstrumentPCM instrumentPCM1042 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_512SampleInfo,
+    /* Sample */ &sfx_512WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16161,14 +16161,14 @@ const struct InstrumentPCM instrumentPCMData1042 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_513SampleInfo;
-const struct InstrumentPCM instrumentPCMData1043 = {
+extern const struct WaveData sfx_513WaveData;
+const struct InstrumentPCM instrumentPCM1043 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_513SampleInfo,
+    /* Sample */ &sfx_513WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16177,14 +16177,14 @@ const struct InstrumentPCM instrumentPCMData1043 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_514SampleInfo;
-const struct InstrumentPCM instrumentPCMData1044 = {
+extern const struct WaveData sfx_514WaveData;
+const struct InstrumentPCM instrumentPCM1044 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_514SampleInfo,
+    /* Sample */ &sfx_514WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16193,14 +16193,14 @@ const struct InstrumentPCM instrumentPCMData1044 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_515SampleInfo;
-const struct InstrumentPCM instrumentPCMData1045 = {
+extern const struct WaveData sfx_515WaveData;
+const struct InstrumentPCM instrumentPCM1045 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_515SampleInfo,
+    /* Sample */ &sfx_515WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16209,14 +16209,14 @@ const struct InstrumentPCM instrumentPCMData1045 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_516SampleInfo;
-const struct InstrumentPCM instrumentPCMData1046 = {
+extern const struct WaveData sfx_516WaveData;
+const struct InstrumentPCM instrumentPCM1046 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_516SampleInfo,
+    /* Sample */ &sfx_516WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16225,14 +16225,14 @@ const struct InstrumentPCM instrumentPCMData1046 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_517SampleInfo;
-const struct InstrumentPCM instrumentPCMData1047 = {
+extern const struct WaveData sfx_517WaveData;
+const struct InstrumentPCM instrumentPCM1047 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_517SampleInfo,
+    /* Sample */ &sfx_517WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -16241,14 +16241,14 @@ const struct InstrumentPCM instrumentPCMData1047 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_518SampleInfo;
-const struct InstrumentPCM instrumentPCMData1048 = {
+extern const struct WaveData sfx_518WaveData;
+const struct InstrumentPCM instrumentPCM1048 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_518SampleInfo,
+    /* Sample */ &sfx_518WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -16257,14 +16257,14 @@ const struct InstrumentPCM instrumentPCMData1048 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_518SampleInfo;
-const struct InstrumentPCM instrumentPCMData1049 = {
+extern const struct WaveData sfx_518WaveData;
+const struct InstrumentPCM instrumentPCM1049 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x39,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_518SampleInfo,
+    /* Sample */ &sfx_518WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -16273,14 +16273,14 @@ const struct InstrumentPCM instrumentPCMData1049 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_489SampleInfo;
-const struct InstrumentPCM instrumentPCMData1050 = {
+extern const struct WaveData sfx_489WaveData;
+const struct InstrumentPCM instrumentPCM1050 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_489SampleInfo,
+    /* Sample */ &sfx_489WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16289,14 +16289,14 @@ const struct InstrumentPCM instrumentPCMData1050 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_519SampleInfo;
-const struct InstrumentPCM instrumentPCMData1051 = {
+extern const struct WaveData sfx_519WaveData;
+const struct InstrumentPCM instrumentPCM1051 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_519SampleInfo,
+    /* Sample */ &sfx_519WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16305,14 +16305,14 @@ const struct InstrumentPCM instrumentPCMData1051 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_520SampleInfo;
-const struct InstrumentPCM instrumentPCMData1052 = {
+extern const struct WaveData sfx_520WaveData;
+const struct InstrumentPCM instrumentPCM1052 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_520SampleInfo,
+    /* Sample */ &sfx_520WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16321,14 +16321,14 @@ const struct InstrumentPCM instrumentPCMData1052 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_521SampleInfo;
-const struct InstrumentPCM instrumentPCMData1053 = {
+extern const struct WaveData sfx_521WaveData;
+const struct InstrumentPCM instrumentPCM1053 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3e,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_521SampleInfo,
+    /* Sample */ &sfx_521WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16337,14 +16337,14 @@ const struct InstrumentPCM instrumentPCMData1053 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_522SampleInfo;
-const struct InstrumentPCM instrumentPCMData1054 = {
+extern const struct WaveData sfx_522WaveData;
+const struct InstrumentPCM instrumentPCM1054 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_522SampleInfo,
+    /* Sample */ &sfx_522WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -16353,14 +16353,14 @@ const struct InstrumentPCM instrumentPCMData1054 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_523SampleInfo;
-const struct InstrumentPCM instrumentPCMData1055 = {
+extern const struct WaveData sfx_523WaveData;
+const struct InstrumentPCM instrumentPCM1055 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_523SampleInfo,
+    /* Sample */ &sfx_523WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -16369,14 +16369,14 @@ const struct InstrumentPCM instrumentPCMData1055 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_524SampleInfo;
-const struct InstrumentPCM instrumentPCMData1056 = {
+extern const struct WaveData sfx_524WaveData;
+const struct InstrumentPCM instrumentPCM1056 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x40,
     },
-    /* Sample */ &sfx_524SampleInfo,
+    /* Sample */ &sfx_524WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -16385,14 +16385,14 @@ const struct InstrumentPCM instrumentPCMData1056 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_525SampleInfo;
-const struct InstrumentPCM instrumentPCMData1057 = {
+extern const struct WaveData sfx_525WaveData;
+const struct InstrumentPCM instrumentPCM1057 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffc1,
     },
-    /* Sample */ &sfx_525SampleInfo,
+    /* Sample */ &sfx_525WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16401,14 +16401,14 @@ const struct InstrumentPCM instrumentPCMData1057 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_526SampleInfo;
-const struct InstrumentPCM instrumentPCMData1058 = {
+extern const struct WaveData sfx_526WaveData;
+const struct InstrumentPCM instrumentPCM1058 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_526SampleInfo,
+    /* Sample */ &sfx_526WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -16417,14 +16417,14 @@ const struct InstrumentPCM instrumentPCMData1058 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_527SampleInfo;
-const struct InstrumentPCM instrumentPCMData1059 = {
+extern const struct WaveData sfx_527WaveData;
+const struct InstrumentPCM instrumentPCM1059 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_527SampleInfo,
+    /* Sample */ &sfx_527WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -16433,14 +16433,14 @@ const struct InstrumentPCM instrumentPCMData1059 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_528SampleInfo;
-const struct InstrumentPCM instrumentPCMData1060 = {
+extern const struct WaveData sfx_528WaveData;
+const struct InstrumentPCM instrumentPCM1060 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_528SampleInfo,
+    /* Sample */ &sfx_528WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -16449,14 +16449,14 @@ const struct InstrumentPCM instrumentPCMData1060 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_529SampleInfo;
-const struct InstrumentPCM instrumentPCMData1061 = {
+extern const struct WaveData sfx_529WaveData;
+const struct InstrumentPCM instrumentPCM1061 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x39,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_529SampleInfo,
+    /* Sample */ &sfx_529WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16465,14 +16465,14 @@ const struct InstrumentPCM instrumentPCMData1061 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_529SampleInfo;
-const struct InstrumentPCM instrumentPCMData1062 = {
+extern const struct WaveData sfx_529WaveData;
+const struct InstrumentPCM instrumentPCM1062 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_529SampleInfo,
+    /* Sample */ &sfx_529WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16481,14 +16481,14 @@ const struct InstrumentPCM instrumentPCMData1062 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_506SampleInfo;
-const struct InstrumentPCM instrumentPCMData1063 = {
+extern const struct WaveData sfx_506WaveData;
+const struct InstrumentPCM instrumentPCM1063 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_506SampleInfo,
+    /* Sample */ &sfx_506WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16497,14 +16497,14 @@ const struct InstrumentPCM instrumentPCMData1063 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_530SampleInfo;
-const struct InstrumentPCM instrumentPCMData1064 = {
+extern const struct WaveData sfx_530WaveData;
+const struct InstrumentPCM instrumentPCM1064 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x38,
         /* unk2 */ 0x30,
     },
-    /* Sample */ &sfx_530SampleInfo,
+    /* Sample */ &sfx_530WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16513,14 +16513,14 @@ const struct InstrumentPCM instrumentPCMData1064 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_531SampleInfo;
-const struct InstrumentPCM instrumentPCMData1065 = {
+extern const struct WaveData sfx_531WaveData;
+const struct InstrumentPCM instrumentPCM1065 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_531SampleInfo,
+    /* Sample */ &sfx_531WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16529,14 +16529,14 @@ const struct InstrumentPCM instrumentPCMData1065 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_530SampleInfo;
-const struct InstrumentPCM instrumentPCMData1066 = {
+extern const struct WaveData sfx_530WaveData;
+const struct InstrumentPCM instrumentPCM1066 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x20,
     },
-    /* Sample */ &sfx_530SampleInfo,
+    /* Sample */ &sfx_530WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16545,14 +16545,14 @@ const struct InstrumentPCM instrumentPCMData1066 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_532SampleInfo;
-const struct InstrumentPCM instrumentPCMData1067 = {
+extern const struct WaveData sfx_532WaveData;
+const struct InstrumentPCM instrumentPCM1067 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_532SampleInfo,
+    /* Sample */ &sfx_532WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16561,14 +16561,14 @@ const struct InstrumentPCM instrumentPCMData1067 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_533SampleInfo;
-const struct InstrumentPCM instrumentPCMData1068 = {
+extern const struct WaveData sfx_533WaveData;
+const struct InstrumentPCM instrumentPCM1068 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_533SampleInfo,
+    /* Sample */ &sfx_533WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16577,14 +16577,14 @@ const struct InstrumentPCM instrumentPCMData1068 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_534SampleInfo;
-const struct InstrumentPCM instrumentPCMData1069 = {
+extern const struct WaveData sfx_534WaveData;
+const struct InstrumentPCM instrumentPCM1069 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_534SampleInfo,
+    /* Sample */ &sfx_534WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16593,14 +16593,14 @@ const struct InstrumentPCM instrumentPCMData1069 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_535SampleInfo;
-const struct InstrumentPCM instrumentPCMData1070 = {
+extern const struct WaveData sfx_535WaveData;
+const struct InstrumentPCM instrumentPCM1070 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_535SampleInfo,
+    /* Sample */ &sfx_535WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16609,14 +16609,14 @@ const struct InstrumentPCM instrumentPCMData1070 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_536SampleInfo;
-const struct InstrumentPCM instrumentPCMData1071 = {
+extern const struct WaveData sfx_536WaveData;
+const struct InstrumentPCM instrumentPCM1071 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffe0,
     },
-    /* Sample */ &sfx_536SampleInfo,
+    /* Sample */ &sfx_536WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -16625,14 +16625,14 @@ const struct InstrumentPCM instrumentPCMData1071 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_435SampleInfo;
-const struct InstrumentPCM instrumentPCMData1072 = {
+extern const struct WaveData sfx_435WaveData;
+const struct InstrumentPCM instrumentPCM1072 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_435SampleInfo,
+    /* Sample */ &sfx_435WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16641,14 +16641,14 @@ const struct InstrumentPCM instrumentPCMData1072 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_537SampleInfo;
-const struct InstrumentPCM instrumentPCMData1073 = {
+extern const struct WaveData sfx_537WaveData;
+const struct InstrumentPCM instrumentPCM1073 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x20,
     },
-    /* Sample */ &sfx_537SampleInfo,
+    /* Sample */ &sfx_537WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16657,14 +16657,14 @@ const struct InstrumentPCM instrumentPCMData1073 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_538SampleInfo;
-const struct InstrumentPCM instrumentPCMData1074 = {
+extern const struct WaveData sfx_538WaveData;
+const struct InstrumentPCM instrumentPCM1074 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_538SampleInfo,
+    /* Sample */ &sfx_538WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -16673,14 +16673,14 @@ const struct InstrumentPCM instrumentPCMData1074 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_539SampleInfo;
-const struct InstrumentPCM instrumentPCMData1075 = {
+extern const struct WaveData sfx_539WaveData;
+const struct InstrumentPCM instrumentPCM1075 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_539SampleInfo,
+    /* Sample */ &sfx_539WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16689,14 +16689,14 @@ const struct InstrumentPCM instrumentPCMData1075 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_540SampleInfo;
-const struct InstrumentPCM instrumentPCMData1076 = {
+extern const struct WaveData sfx_540WaveData;
+const struct InstrumentPCM instrumentPCM1076 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_540SampleInfo,
+    /* Sample */ &sfx_540WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16705,14 +16705,14 @@ const struct InstrumentPCM instrumentPCMData1076 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_541SampleInfo;
-const struct InstrumentPCM instrumentPCMData1077 = {
+extern const struct WaveData sfx_541WaveData;
+const struct InstrumentPCM instrumentPCM1077 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_541SampleInfo,
+    /* Sample */ &sfx_541WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16721,14 +16721,14 @@ const struct InstrumentPCM instrumentPCMData1077 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_542SampleInfo;
-const struct InstrumentPCM instrumentPCMData1078 = {
+extern const struct WaveData sfx_542WaveData;
+const struct InstrumentPCM instrumentPCM1078 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_542SampleInfo,
+    /* Sample */ &sfx_542WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16737,14 +16737,14 @@ const struct InstrumentPCM instrumentPCMData1078 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_543SampleInfo;
-const struct InstrumentPCM instrumentPCMData1079 = {
+extern const struct WaveData sfx_543WaveData;
+const struct InstrumentPCM instrumentPCM1079 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x40,
     },
-    /* Sample */ &sfx_543SampleInfo,
+    /* Sample */ &sfx_543WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16753,14 +16753,14 @@ const struct InstrumentPCM instrumentPCMData1079 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_544SampleInfo;
-const struct InstrumentPCM instrumentPCMData1080 = {
+extern const struct WaveData sfx_544WaveData;
+const struct InstrumentPCM instrumentPCM1080 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_544SampleInfo,
+    /* Sample */ &sfx_544WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16769,14 +16769,14 @@ const struct InstrumentPCM instrumentPCMData1080 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_545SampleInfo;
-const struct InstrumentPCM instrumentPCMData1081 = {
+extern const struct WaveData sfx_545WaveData;
+const struct InstrumentPCM instrumentPCM1081 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_545SampleInfo,
+    /* Sample */ &sfx_545WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16785,14 +16785,14 @@ const struct InstrumentPCM instrumentPCMData1081 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_546SampleInfo;
-const struct InstrumentPCM instrumentPCMData1082 = {
+extern const struct WaveData sfx_546WaveData;
+const struct InstrumentPCM instrumentPCM1082 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x30,
     },
-    /* Sample */ &sfx_546SampleInfo,
+    /* Sample */ &sfx_546WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16801,14 +16801,14 @@ const struct InstrumentPCM instrumentPCMData1082 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_547SampleInfo;
-const struct InstrumentPCM instrumentPCMData1083 = {
+extern const struct WaveData sfx_547WaveData;
+const struct InstrumentPCM instrumentPCM1083 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffd0,
     },
-    /* Sample */ &sfx_547SampleInfo,
+    /* Sample */ &sfx_547WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16817,14 +16817,14 @@ const struct InstrumentPCM instrumentPCMData1083 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_548SampleInfo;
-const struct InstrumentPCM instrumentPCMData1084 = {
+extern const struct WaveData sfx_548WaveData;
+const struct InstrumentPCM instrumentPCM1084 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_548SampleInfo,
+    /* Sample */ &sfx_548WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16833,14 +16833,14 @@ const struct InstrumentPCM instrumentPCMData1084 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_549SampleInfo;
-const struct InstrumentPCM instrumentPCMData1085 = {
+extern const struct WaveData sfx_549WaveData;
+const struct InstrumentPCM instrumentPCM1085 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x30,
     },
-    /* Sample */ &sfx_549SampleInfo,
+    /* Sample */ &sfx_549WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -16849,14 +16849,14 @@ const struct InstrumentPCM instrumentPCMData1085 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_550SampleInfo;
-const struct InstrumentPCM instrumentPCMData1086 = {
+extern const struct WaveData sfx_550WaveData;
+const struct InstrumentPCM instrumentPCM1086 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_550SampleInfo,
+    /* Sample */ &sfx_550WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16865,14 +16865,14 @@ const struct InstrumentPCM instrumentPCMData1086 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_220SampleInfo;
-const struct InstrumentPCM instrumentPCMData1087 = {
+extern const struct WaveData sfx_220WaveData;
+const struct InstrumentPCM instrumentPCM1087 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_220SampleInfo,
+    /* Sample */ &sfx_220WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16881,14 +16881,14 @@ const struct InstrumentPCM instrumentPCMData1087 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_218SampleInfo;
-const struct InstrumentPCM instrumentPCMData1088 = {
+extern const struct WaveData sfx_218WaveData;
+const struct InstrumentPCM instrumentPCM1088 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_218SampleInfo,
+    /* Sample */ &sfx_218WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16897,14 +16897,14 @@ const struct InstrumentPCM instrumentPCMData1088 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_551SampleInfo;
-const struct InstrumentPCM instrumentPCMData1089 = {
+extern const struct WaveData sfx_551WaveData;
+const struct InstrumentPCM instrumentPCM1089 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_551SampleInfo,
+    /* Sample */ &sfx_551WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16913,14 +16913,14 @@ const struct InstrumentPCM instrumentPCMData1089 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_552SampleInfo;
-const struct InstrumentPCM instrumentPCMData1090 = {
+extern const struct WaveData sfx_552WaveData;
+const struct InstrumentPCM instrumentPCM1090 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_552SampleInfo,
+    /* Sample */ &sfx_552WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16929,14 +16929,14 @@ const struct InstrumentPCM instrumentPCMData1090 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_553SampleInfo;
-const struct InstrumentPCM instrumentPCMData1091 = {
+extern const struct WaveData sfx_553WaveData;
+const struct InstrumentPCM instrumentPCM1091 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_553SampleInfo,
+    /* Sample */ &sfx_553WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16945,14 +16945,14 @@ const struct InstrumentPCM instrumentPCMData1091 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_554SampleInfo;
-const struct InstrumentPCM instrumentPCMData1092 = {
+extern const struct WaveData sfx_554WaveData;
+const struct InstrumentPCM instrumentPCM1092 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_554SampleInfo,
+    /* Sample */ &sfx_554WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16961,14 +16961,14 @@ const struct InstrumentPCM instrumentPCMData1092 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_555SampleInfo;
-const struct InstrumentPCM instrumentPCMData1093 = {
+extern const struct WaveData sfx_555WaveData;
+const struct InstrumentPCM instrumentPCM1093 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_555SampleInfo,
+    /* Sample */ &sfx_555WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16977,14 +16977,14 @@ const struct InstrumentPCM instrumentPCMData1093 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_556SampleInfo;
-const struct InstrumentPCM instrumentPCMData1094 = {
+extern const struct WaveData sfx_556WaveData;
+const struct InstrumentPCM instrumentPCM1094 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_556SampleInfo,
+    /* Sample */ &sfx_556WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -16993,14 +16993,14 @@ const struct InstrumentPCM instrumentPCMData1094 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_557SampleInfo;
-const struct InstrumentPCM instrumentPCMData1095 = {
+extern const struct WaveData sfx_557WaveData;
+const struct InstrumentPCM instrumentPCM1095 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_557SampleInfo,
+    /* Sample */ &sfx_557WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17009,14 +17009,14 @@ const struct InstrumentPCM instrumentPCMData1095 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_558SampleInfo;
-const struct InstrumentPCM instrumentPCMData1096 = {
+extern const struct WaveData sfx_558WaveData;
+const struct InstrumentPCM instrumentPCM1096 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_558SampleInfo,
+    /* Sample */ &sfx_558WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17025,14 +17025,14 @@ const struct InstrumentPCM instrumentPCMData1096 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_559SampleInfo;
-const struct InstrumentPCM instrumentPCMData1097 = {
+extern const struct WaveData sfx_559WaveData;
+const struct InstrumentPCM instrumentPCM1097 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_559SampleInfo,
+    /* Sample */ &sfx_559WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17041,14 +17041,14 @@ const struct InstrumentPCM instrumentPCMData1097 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_560SampleInfo;
-const struct InstrumentPCM instrumentPCMData1098 = {
+extern const struct WaveData sfx_560WaveData;
+const struct InstrumentPCM instrumentPCM1098 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_560SampleInfo,
+    /* Sample */ &sfx_560WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17057,14 +17057,14 @@ const struct InstrumentPCM instrumentPCMData1098 = {
     /* unk1C  */ 0x00218000,
 };
 
-extern const struct SampleInfo sfx_561SampleInfo;
-const struct InstrumentPCM instrumentPCMData1099 = {
+extern const struct WaveData sfx_561WaveData;
+const struct InstrumentPCM instrumentPCM1099 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_561SampleInfo,
+    /* Sample */ &sfx_561WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17073,14 +17073,14 @@ const struct InstrumentPCM instrumentPCMData1099 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_562SampleInfo;
-const struct InstrumentPCM instrumentPCMData1100 = {
+extern const struct WaveData sfx_562WaveData;
+const struct InstrumentPCM instrumentPCM1100 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_562SampleInfo,
+    /* Sample */ &sfx_562WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17089,14 +17089,14 @@ const struct InstrumentPCM instrumentPCMData1100 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_233SampleInfo;
-const struct InstrumentPCM instrumentPCMData1101 = {
+extern const struct WaveData sfx_233WaveData;
+const struct InstrumentPCM instrumentPCM1101 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_233SampleInfo,
+    /* Sample */ &sfx_233WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17105,14 +17105,14 @@ const struct InstrumentPCM instrumentPCMData1101 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_563SampleInfo;
-const struct InstrumentPCM instrumentPCMData1102 = {
+extern const struct WaveData sfx_563WaveData;
+const struct InstrumentPCM instrumentPCM1102 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_563SampleInfo,
+    /* Sample */ &sfx_563WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17121,14 +17121,14 @@ const struct InstrumentPCM instrumentPCMData1102 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_564SampleInfo;
-const struct InstrumentPCM instrumentPCMData1103 = {
+extern const struct WaveData sfx_564WaveData;
+const struct InstrumentPCM instrumentPCM1103 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x3f,
     },
-    /* Sample */ &sfx_564SampleInfo,
+    /* Sample */ &sfx_564WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17137,14 +17137,14 @@ const struct InstrumentPCM instrumentPCMData1103 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_565SampleInfo;
-const struct InstrumentPCM instrumentPCMData1104 = {
+extern const struct WaveData sfx_565WaveData;
+const struct InstrumentPCM instrumentPCM1104 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x39,
         /* unk2 */ 0xffc8,
     },
-    /* Sample */ &sfx_565SampleInfo,
+    /* Sample */ &sfx_565WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -17153,14 +17153,14 @@ const struct InstrumentPCM instrumentPCMData1104 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_565SampleInfo;
-const struct InstrumentPCM instrumentPCMData1105 = {
+extern const struct WaveData sfx_565WaveData;
+const struct InstrumentPCM instrumentPCM1105 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffc1,
     },
-    /* Sample */ &sfx_565SampleInfo,
+    /* Sample */ &sfx_565WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -17169,14 +17169,14 @@ const struct InstrumentPCM instrumentPCMData1105 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_566SampleInfo;
-const struct InstrumentPCM instrumentPCMData1106 = {
+extern const struct WaveData sfx_566WaveData;
+const struct InstrumentPCM instrumentPCM1106 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x20,
     },
-    /* Sample */ &sfx_566SampleInfo,
+    /* Sample */ &sfx_566WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17185,14 +17185,14 @@ const struct InstrumentPCM instrumentPCMData1106 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_567SampleInfo;
-const struct InstrumentPCM instrumentPCMData1107 = {
+extern const struct WaveData sfx_567WaveData;
+const struct InstrumentPCM instrumentPCM1107 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x30,
     },
-    /* Sample */ &sfx_567SampleInfo,
+    /* Sample */ &sfx_567WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17201,14 +17201,14 @@ const struct InstrumentPCM instrumentPCMData1107 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_087SampleInfo;
-const struct InstrumentPCM instrumentPCMData1108 = {
+extern const struct WaveData sfx_087WaveData;
+const struct InstrumentPCM instrumentPCM1108 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_087SampleInfo,
+    /* Sample */ &sfx_087WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17217,14 +17217,14 @@ const struct InstrumentPCM instrumentPCMData1108 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_446SampleInfo;
-const struct InstrumentPCM instrumentPCMData1109 = {
+extern const struct WaveData sfx_446WaveData;
+const struct InstrumentPCM instrumentPCM1109 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x30,
     },
-    /* Sample */ &sfx_446SampleInfo,
+    /* Sample */ &sfx_446WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17233,14 +17233,14 @@ const struct InstrumentPCM instrumentPCMData1109 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_474SampleInfo;
-const struct InstrumentPCM instrumentPCMData1110 = {
+extern const struct WaveData sfx_474WaveData;
+const struct InstrumentPCM instrumentPCM1110 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x30,
     },
-    /* Sample */ &sfx_474SampleInfo,
+    /* Sample */ &sfx_474WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -17249,14 +17249,14 @@ const struct InstrumentPCM instrumentPCMData1110 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_216SampleInfo;
-const struct InstrumentPCM instrumentPCMData1111 = {
+extern const struct WaveData sfx_216WaveData;
+const struct InstrumentPCM instrumentPCM1111 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffc1,
     },
-    /* Sample */ &sfx_216SampleInfo,
+    /* Sample */ &sfx_216WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17265,14 +17265,14 @@ const struct InstrumentPCM instrumentPCMData1111 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_568SampleInfo;
-const struct InstrumentPCM instrumentPCMData1112 = {
+extern const struct WaveData sfx_568WaveData;
+const struct InstrumentPCM instrumentPCM1112 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_568SampleInfo,
+    /* Sample */ &sfx_568WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17281,14 +17281,14 @@ const struct InstrumentPCM instrumentPCMData1112 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_569SampleInfo;
-const struct InstrumentPCM instrumentPCMData1113 = {
+extern const struct WaveData sfx_569WaveData;
+const struct InstrumentPCM instrumentPCM1113 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_569SampleInfo,
+    /* Sample */ &sfx_569WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17297,14 +17297,14 @@ const struct InstrumentPCM instrumentPCMData1113 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_570SampleInfo;
-const struct InstrumentPCM instrumentPCMData1114 = {
+extern const struct WaveData sfx_570WaveData;
+const struct InstrumentPCM instrumentPCM1114 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_570SampleInfo,
+    /* Sample */ &sfx_570WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17313,14 +17313,14 @@ const struct InstrumentPCM instrumentPCMData1114 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_571SampleInfo;
-const struct InstrumentPCM instrumentPCMData1115 = {
+extern const struct WaveData sfx_571WaveData;
+const struct InstrumentPCM instrumentPCM1115 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x20,
     },
-    /* Sample */ &sfx_571SampleInfo,
+    /* Sample */ &sfx_571WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17329,14 +17329,14 @@ const struct InstrumentPCM instrumentPCMData1115 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_572SampleInfo;
-const struct InstrumentPCM instrumentPCMData1116 = {
+extern const struct WaveData sfx_572WaveData;
+const struct InstrumentPCM instrumentPCM1116 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_572SampleInfo,
+    /* Sample */ &sfx_572WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17345,14 +17345,14 @@ const struct InstrumentPCM instrumentPCMData1116 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_573SampleInfo;
-const struct InstrumentPCM instrumentPCMData1117 = {
+extern const struct WaveData sfx_573WaveData;
+const struct InstrumentPCM instrumentPCM1117 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_573SampleInfo,
+    /* Sample */ &sfx_573WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17361,14 +17361,14 @@ const struct InstrumentPCM instrumentPCMData1117 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_574SampleInfo;
-const struct InstrumentPCM instrumentPCMData1118 = {
+extern const struct WaveData sfx_574WaveData;
+const struct InstrumentPCM instrumentPCM1118 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_574SampleInfo,
+    /* Sample */ &sfx_574WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17377,14 +17377,14 @@ const struct InstrumentPCM instrumentPCMData1118 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_575SampleInfo;
-const struct InstrumentPCM instrumentPCMData1119 = {
+extern const struct WaveData sfx_575WaveData;
+const struct InstrumentPCM instrumentPCM1119 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_575SampleInfo,
+    /* Sample */ &sfx_575WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17393,14 +17393,14 @@ const struct InstrumentPCM instrumentPCMData1119 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_576SampleInfo;
-const struct InstrumentPCM instrumentPCMData1120 = {
+extern const struct WaveData sfx_576WaveData;
+const struct InstrumentPCM instrumentPCM1120 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_576SampleInfo,
+    /* Sample */ &sfx_576WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17409,14 +17409,14 @@ const struct InstrumentPCM instrumentPCMData1120 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_577SampleInfo;
-const struct InstrumentPCM instrumentPCMData1121 = {
+extern const struct WaveData sfx_577WaveData;
+const struct InstrumentPCM instrumentPCM1121 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_577SampleInfo,
+    /* Sample */ &sfx_577WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17425,14 +17425,14 @@ const struct InstrumentPCM instrumentPCMData1121 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_578SampleInfo;
-const struct InstrumentPCM instrumentPCMData1122 = {
+extern const struct WaveData sfx_578WaveData;
+const struct InstrumentPCM instrumentPCM1122 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_578SampleInfo,
+    /* Sample */ &sfx_578WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17441,14 +17441,14 @@ const struct InstrumentPCM instrumentPCMData1122 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_579SampleInfo;
-const struct InstrumentPCM instrumentPCMData1123 = {
+extern const struct WaveData sfx_579WaveData;
+const struct InstrumentPCM instrumentPCM1123 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_579SampleInfo,
+    /* Sample */ &sfx_579WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17457,14 +17457,14 @@ const struct InstrumentPCM instrumentPCMData1123 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_580SampleInfo;
-const struct InstrumentPCM instrumentPCMData1124 = {
+extern const struct WaveData sfx_580WaveData;
+const struct InstrumentPCM instrumentPCM1124 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_580SampleInfo,
+    /* Sample */ &sfx_580WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17473,14 +17473,14 @@ const struct InstrumentPCM instrumentPCMData1124 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_581SampleInfo;
-const struct InstrumentPCM instrumentPCMData1125 = {
+extern const struct WaveData sfx_581WaveData;
+const struct InstrumentPCM instrumentPCM1125 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_581SampleInfo,
+    /* Sample */ &sfx_581WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17489,14 +17489,14 @@ const struct InstrumentPCM instrumentPCMData1125 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_582SampleInfo;
-const struct InstrumentPCM instrumentPCMData1126 = {
+extern const struct WaveData sfx_582WaveData;
+const struct InstrumentPCM instrumentPCM1126 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_582SampleInfo,
+    /* Sample */ &sfx_582WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17505,14 +17505,14 @@ const struct InstrumentPCM instrumentPCMData1126 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_583SampleInfo;
-const struct InstrumentPCM instrumentPCMData1127 = {
+extern const struct WaveData sfx_583WaveData;
+const struct InstrumentPCM instrumentPCM1127 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_583SampleInfo,
+    /* Sample */ &sfx_583WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17521,14 +17521,14 @@ const struct InstrumentPCM instrumentPCMData1127 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_584SampleInfo;
-const struct InstrumentPCM instrumentPCMData1128 = {
+extern const struct WaveData sfx_584WaveData;
+const struct InstrumentPCM instrumentPCM1128 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_584SampleInfo,
+    /* Sample */ &sfx_584WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17537,14 +17537,14 @@ const struct InstrumentPCM instrumentPCMData1128 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_585SampleInfo;
-const struct InstrumentPCM instrumentPCMData1129 = {
+extern const struct WaveData sfx_585WaveData;
+const struct InstrumentPCM instrumentPCM1129 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_585SampleInfo,
+    /* Sample */ &sfx_585WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17553,14 +17553,14 @@ const struct InstrumentPCM instrumentPCMData1129 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_586SampleInfo;
-const struct InstrumentPCM instrumentPCMData1130 = {
+extern const struct WaveData sfx_586WaveData;
+const struct InstrumentPCM instrumentPCM1130 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_586SampleInfo,
+    /* Sample */ &sfx_586WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17569,14 +17569,14 @@ const struct InstrumentPCM instrumentPCMData1130 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_587SampleInfo;
-const struct InstrumentPCM instrumentPCMData1131 = {
+extern const struct WaveData sfx_587WaveData;
+const struct InstrumentPCM instrumentPCM1131 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_587SampleInfo,
+    /* Sample */ &sfx_587WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17585,14 +17585,14 @@ const struct InstrumentPCM instrumentPCMData1131 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_440SampleInfo;
-const struct InstrumentPCM instrumentPCMData1132 = {
+extern const struct WaveData sfx_440WaveData;
+const struct InstrumentPCM instrumentPCM1132 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_440SampleInfo,
+    /* Sample */ &sfx_440WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17601,14 +17601,14 @@ const struct InstrumentPCM instrumentPCMData1132 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_441SampleInfo;
-const struct InstrumentPCM instrumentPCMData1133 = {
+extern const struct WaveData sfx_441WaveData;
+const struct InstrumentPCM instrumentPCM1133 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_441SampleInfo,
+    /* Sample */ &sfx_441WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17617,14 +17617,14 @@ const struct InstrumentPCM instrumentPCMData1133 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_442SampleInfo;
-const struct InstrumentPCM instrumentPCMData1134 = {
+extern const struct WaveData sfx_442WaveData;
+const struct InstrumentPCM instrumentPCM1134 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_442SampleInfo,
+    /* Sample */ &sfx_442WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17633,14 +17633,14 @@ const struct InstrumentPCM instrumentPCMData1134 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_443SampleInfo;
-const struct InstrumentPCM instrumentPCMData1135 = {
+extern const struct WaveData sfx_443WaveData;
+const struct InstrumentPCM instrumentPCM1135 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_443SampleInfo,
+    /* Sample */ &sfx_443WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17649,14 +17649,14 @@ const struct InstrumentPCM instrumentPCMData1135 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_444SampleInfo;
-const struct InstrumentPCM instrumentPCMData1136 = {
+extern const struct WaveData sfx_444WaveData;
+const struct InstrumentPCM instrumentPCM1136 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_444SampleInfo,
+    /* Sample */ &sfx_444WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17665,14 +17665,14 @@ const struct InstrumentPCM instrumentPCMData1136 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_445SampleInfo;
-const struct InstrumentPCM instrumentPCMData1137 = {
+extern const struct WaveData sfx_445WaveData;
+const struct InstrumentPCM instrumentPCM1137 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_445SampleInfo,
+    /* Sample */ &sfx_445WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17681,14 +17681,14 @@ const struct InstrumentPCM instrumentPCMData1137 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_446SampleInfo;
-const struct InstrumentPCM instrumentPCMData1138 = {
+extern const struct WaveData sfx_446WaveData;
+const struct InstrumentPCM instrumentPCM1138 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_446SampleInfo,
+    /* Sample */ &sfx_446WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17697,14 +17697,14 @@ const struct InstrumentPCM instrumentPCMData1138 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_447SampleInfo;
-const struct InstrumentPCM instrumentPCMData1139 = {
+extern const struct WaveData sfx_447WaveData;
+const struct InstrumentPCM instrumentPCM1139 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_447SampleInfo,
+    /* Sample */ &sfx_447WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17713,14 +17713,14 @@ const struct InstrumentPCM instrumentPCMData1139 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_448SampleInfo;
-const struct InstrumentPCM instrumentPCMData1140 = {
+extern const struct WaveData sfx_448WaveData;
+const struct InstrumentPCM instrumentPCM1140 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_448SampleInfo,
+    /* Sample */ &sfx_448WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17729,14 +17729,14 @@ const struct InstrumentPCM instrumentPCMData1140 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_449SampleInfo;
-const struct InstrumentPCM instrumentPCMData1141 = {
+extern const struct WaveData sfx_449WaveData;
+const struct InstrumentPCM instrumentPCM1141 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_449SampleInfo,
+    /* Sample */ &sfx_449WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17745,14 +17745,14 @@ const struct InstrumentPCM instrumentPCMData1141 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_450SampleInfo;
-const struct InstrumentPCM instrumentPCMData1142 = {
+extern const struct WaveData sfx_450WaveData;
+const struct InstrumentPCM instrumentPCM1142 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_450SampleInfo,
+    /* Sample */ &sfx_450WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17761,14 +17761,14 @@ const struct InstrumentPCM instrumentPCMData1142 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_451SampleInfo;
-const struct InstrumentPCM instrumentPCMData1143 = {
+extern const struct WaveData sfx_451WaveData;
+const struct InstrumentPCM instrumentPCM1143 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_451SampleInfo,
+    /* Sample */ &sfx_451WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17777,14 +17777,14 @@ const struct InstrumentPCM instrumentPCMData1143 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_452SampleInfo;
-const struct InstrumentPCM instrumentPCMData1144 = {
+extern const struct WaveData sfx_452WaveData;
+const struct InstrumentPCM instrumentPCM1144 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_452SampleInfo,
+    /* Sample */ &sfx_452WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17793,14 +17793,14 @@ const struct InstrumentPCM instrumentPCMData1144 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_087SampleInfo;
-const struct InstrumentPCM instrumentPCMData1145 = {
+extern const struct WaveData sfx_087WaveData;
+const struct InstrumentPCM instrumentPCM1145 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_087SampleInfo,
+    /* Sample */ &sfx_087WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17809,14 +17809,14 @@ const struct InstrumentPCM instrumentPCMData1145 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_087SampleInfo;
-const struct InstrumentPCM instrumentPCMData1146 = {
+extern const struct WaveData sfx_087WaveData;
+const struct InstrumentPCM instrumentPCM1146 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_087SampleInfo,
+    /* Sample */ &sfx_087WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17825,14 +17825,14 @@ const struct InstrumentPCM instrumentPCMData1146 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_453SampleInfo;
-const struct InstrumentPCM instrumentPCMData1147 = {
+extern const struct WaveData sfx_453WaveData;
+const struct InstrumentPCM instrumentPCM1147 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_453SampleInfo,
+    /* Sample */ &sfx_453WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -17841,14 +17841,14 @@ const struct InstrumentPCM instrumentPCMData1147 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_454SampleInfo;
-const struct InstrumentPCM instrumentPCMData1148 = {
+extern const struct WaveData sfx_454WaveData;
+const struct InstrumentPCM instrumentPCM1148 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_454SampleInfo,
+    /* Sample */ &sfx_454WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17857,14 +17857,14 @@ const struct InstrumentPCM instrumentPCMData1148 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_455SampleInfo;
-const struct InstrumentPCM instrumentPCMData1149 = {
+extern const struct WaveData sfx_455WaveData;
+const struct InstrumentPCM instrumentPCM1149 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_455SampleInfo,
+    /* Sample */ &sfx_455WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17873,14 +17873,14 @@ const struct InstrumentPCM instrumentPCMData1149 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_087SampleInfo;
-const struct InstrumentPCM instrumentPCMData1150 = {
+extern const struct WaveData sfx_087WaveData;
+const struct InstrumentPCM instrumentPCM1150 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_087SampleInfo,
+    /* Sample */ &sfx_087WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17889,14 +17889,14 @@ const struct InstrumentPCM instrumentPCMData1150 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_456SampleInfo;
-const struct InstrumentPCM instrumentPCMData1151 = {
+extern const struct WaveData sfx_456WaveData;
+const struct InstrumentPCM instrumentPCM1151 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_456SampleInfo,
+    /* Sample */ &sfx_456WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17905,14 +17905,14 @@ const struct InstrumentPCM instrumentPCMData1151 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_457SampleInfo;
-const struct InstrumentPCM instrumentPCMData1152 = {
+extern const struct WaveData sfx_457WaveData;
+const struct InstrumentPCM instrumentPCM1152 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_457SampleInfo,
+    /* Sample */ &sfx_457WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -17921,14 +17921,14 @@ const struct InstrumentPCM instrumentPCMData1152 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_458SampleInfo;
-const struct InstrumentPCM instrumentPCMData1153 = {
+extern const struct WaveData sfx_458WaveData;
+const struct InstrumentPCM instrumentPCM1153 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_458SampleInfo,
+    /* Sample */ &sfx_458WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17937,14 +17937,14 @@ const struct InstrumentPCM instrumentPCMData1153 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_459SampleInfo;
-const struct InstrumentPCM instrumentPCMData1154 = {
+extern const struct WaveData sfx_459WaveData;
+const struct InstrumentPCM instrumentPCM1154 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_459SampleInfo,
+    /* Sample */ &sfx_459WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17953,14 +17953,14 @@ const struct InstrumentPCM instrumentPCMData1154 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_460SampleInfo;
-const struct InstrumentPCM instrumentPCMData1155 = {
+extern const struct WaveData sfx_460WaveData;
+const struct InstrumentPCM instrumentPCM1155 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_460SampleInfo,
+    /* Sample */ &sfx_460WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17969,14 +17969,14 @@ const struct InstrumentPCM instrumentPCMData1155 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_461SampleInfo;
-const struct InstrumentPCM instrumentPCMData1156 = {
+extern const struct WaveData sfx_461WaveData;
+const struct InstrumentPCM instrumentPCM1156 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_461SampleInfo,
+    /* Sample */ &sfx_461WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -17985,14 +17985,14 @@ const struct InstrumentPCM instrumentPCMData1156 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_462SampleInfo;
-const struct InstrumentPCM instrumentPCMData1157 = {
+extern const struct WaveData sfx_462WaveData;
+const struct InstrumentPCM instrumentPCM1157 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_462SampleInfo,
+    /* Sample */ &sfx_462WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18001,14 +18001,14 @@ const struct InstrumentPCM instrumentPCMData1157 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_463SampleInfo;
-const struct InstrumentPCM instrumentPCMData1158 = {
+extern const struct WaveData sfx_463WaveData;
+const struct InstrumentPCM instrumentPCM1158 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_463SampleInfo,
+    /* Sample */ &sfx_463WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18017,14 +18017,14 @@ const struct InstrumentPCM instrumentPCMData1158 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_518SampleInfo;
-const struct InstrumentPCM instrumentPCMData1159 = {
+extern const struct WaveData sfx_518WaveData;
+const struct InstrumentPCM instrumentPCM1159 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_518SampleInfo,
+    /* Sample */ &sfx_518WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -18033,14 +18033,14 @@ const struct InstrumentPCM instrumentPCMData1159 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_465SampleInfo;
-const struct InstrumentPCM instrumentPCMData1160 = {
+extern const struct WaveData sfx_465WaveData;
+const struct InstrumentPCM instrumentPCM1160 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_465SampleInfo,
+    /* Sample */ &sfx_465WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18049,14 +18049,14 @@ const struct InstrumentPCM instrumentPCMData1160 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_466SampleInfo;
-const struct InstrumentPCM instrumentPCMData1161 = {
+extern const struct WaveData sfx_466WaveData;
+const struct InstrumentPCM instrumentPCM1161 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_466SampleInfo,
+    /* Sample */ &sfx_466WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18065,14 +18065,14 @@ const struct InstrumentPCM instrumentPCMData1161 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_086SampleInfo;
-const struct InstrumentPCM instrumentPCMData1162 = {
+extern const struct WaveData sfx_086WaveData;
+const struct InstrumentPCM instrumentPCM1162 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_086SampleInfo,
+    /* Sample */ &sfx_086WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18081,14 +18081,14 @@ const struct InstrumentPCM instrumentPCMData1162 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_467SampleInfo;
-const struct InstrumentPCM instrumentPCMData1163 = {
+extern const struct WaveData sfx_467WaveData;
+const struct InstrumentPCM instrumentPCM1163 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_467SampleInfo,
+    /* Sample */ &sfx_467WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18097,14 +18097,14 @@ const struct InstrumentPCM instrumentPCMData1163 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_385SampleInfo;
-const struct InstrumentPCM instrumentPCMData1164 = {
+extern const struct WaveData sfx_385WaveData;
+const struct InstrumentPCM instrumentPCM1164 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_385SampleInfo,
+    /* Sample */ &sfx_385WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18113,14 +18113,14 @@ const struct InstrumentPCM instrumentPCMData1164 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_468SampleInfo;
-const struct InstrumentPCM instrumentPCMData1165 = {
+extern const struct WaveData sfx_468WaveData;
+const struct InstrumentPCM instrumentPCM1165 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_468SampleInfo,
+    /* Sample */ &sfx_468WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18129,14 +18129,14 @@ const struct InstrumentPCM instrumentPCMData1165 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_450SampleInfo;
-const struct InstrumentPCM instrumentPCMData1166 = {
+extern const struct WaveData sfx_450WaveData;
+const struct InstrumentPCM instrumentPCM1166 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_450SampleInfo,
+    /* Sample */ &sfx_450WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18145,14 +18145,14 @@ const struct InstrumentPCM instrumentPCMData1166 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_468SampleInfo;
-const struct InstrumentPCM instrumentPCMData1167 = {
+extern const struct WaveData sfx_468WaveData;
+const struct InstrumentPCM instrumentPCM1167 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_468SampleInfo,
+    /* Sample */ &sfx_468WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18161,14 +18161,14 @@ const struct InstrumentPCM instrumentPCMData1167 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_468SampleInfo;
-const struct InstrumentPCM instrumentPCMData1168 = {
+extern const struct WaveData sfx_468WaveData;
+const struct InstrumentPCM instrumentPCM1168 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_468SampleInfo,
+    /* Sample */ &sfx_468WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18177,14 +18177,14 @@ const struct InstrumentPCM instrumentPCMData1168 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_469SampleInfo;
-const struct InstrumentPCM instrumentPCMData1169 = {
+extern const struct WaveData sfx_469WaveData;
+const struct InstrumentPCM instrumentPCM1169 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_469SampleInfo,
+    /* Sample */ &sfx_469WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18193,14 +18193,14 @@ const struct InstrumentPCM instrumentPCMData1169 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_470SampleInfo;
-const struct InstrumentPCM instrumentPCMData1170 = {
+extern const struct WaveData sfx_470WaveData;
+const struct InstrumentPCM instrumentPCM1170 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_470SampleInfo,
+    /* Sample */ &sfx_470WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18209,14 +18209,14 @@ const struct InstrumentPCM instrumentPCMData1170 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_471SampleInfo;
-const struct InstrumentPCM instrumentPCMData1171 = {
+extern const struct WaveData sfx_471WaveData;
+const struct InstrumentPCM instrumentPCM1171 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_471SampleInfo,
+    /* Sample */ &sfx_471WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -18225,14 +18225,14 @@ const struct InstrumentPCM instrumentPCMData1171 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_472SampleInfo;
-const struct InstrumentPCM instrumentPCMData1172 = {
+extern const struct WaveData sfx_472WaveData;
+const struct InstrumentPCM instrumentPCM1172 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_472SampleInfo,
+    /* Sample */ &sfx_472WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18241,14 +18241,14 @@ const struct InstrumentPCM instrumentPCMData1172 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_473SampleInfo;
-const struct InstrumentPCM instrumentPCMData1173 = {
+extern const struct WaveData sfx_473WaveData;
+const struct InstrumentPCM instrumentPCM1173 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_473SampleInfo,
+    /* Sample */ &sfx_473WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18257,14 +18257,14 @@ const struct InstrumentPCM instrumentPCMData1173 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_474SampleInfo;
-const struct InstrumentPCM instrumentPCMData1174 = {
+extern const struct WaveData sfx_474WaveData;
+const struct InstrumentPCM instrumentPCM1174 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_474SampleInfo,
+    /* Sample */ &sfx_474WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -18273,14 +18273,14 @@ const struct InstrumentPCM instrumentPCMData1174 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_475SampleInfo;
-const struct InstrumentPCM instrumentPCMData1175 = {
+extern const struct WaveData sfx_475WaveData;
+const struct InstrumentPCM instrumentPCM1175 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_475SampleInfo,
+    /* Sample */ &sfx_475WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18289,14 +18289,14 @@ const struct InstrumentPCM instrumentPCMData1175 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_476SampleInfo;
-const struct InstrumentPCM instrumentPCMData1176 = {
+extern const struct WaveData sfx_476WaveData;
+const struct InstrumentPCM instrumentPCM1176 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_476SampleInfo,
+    /* Sample */ &sfx_476WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18305,14 +18305,14 @@ const struct InstrumentPCM instrumentPCMData1176 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_477SampleInfo;
-const struct InstrumentPCM instrumentPCMData1177 = {
+extern const struct WaveData sfx_477WaveData;
+const struct InstrumentPCM instrumentPCM1177 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_477SampleInfo,
+    /* Sample */ &sfx_477WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18321,14 +18321,14 @@ const struct InstrumentPCM instrumentPCMData1177 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_478SampleInfo;
-const struct InstrumentPCM instrumentPCMData1178 = {
+extern const struct WaveData sfx_478WaveData;
+const struct InstrumentPCM instrumentPCM1178 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_478SampleInfo,
+    /* Sample */ &sfx_478WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18337,14 +18337,14 @@ const struct InstrumentPCM instrumentPCMData1178 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_477SampleInfo;
-const struct InstrumentPCM instrumentPCMData1179 = {
+extern const struct WaveData sfx_477WaveData;
+const struct InstrumentPCM instrumentPCM1179 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_477SampleInfo,
+    /* Sample */ &sfx_477WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18353,14 +18353,14 @@ const struct InstrumentPCM instrumentPCMData1179 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_479SampleInfo;
-const struct InstrumentPCM instrumentPCMData1180 = {
+extern const struct WaveData sfx_479WaveData;
+const struct InstrumentPCM instrumentPCM1180 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_479SampleInfo,
+    /* Sample */ &sfx_479WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18369,14 +18369,14 @@ const struct InstrumentPCM instrumentPCMData1180 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_480SampleInfo;
-const struct InstrumentPCM instrumentPCMData1181 = {
+extern const struct WaveData sfx_480WaveData;
+const struct InstrumentPCM instrumentPCM1181 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_480SampleInfo,
+    /* Sample */ &sfx_480WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18385,14 +18385,14 @@ const struct InstrumentPCM instrumentPCMData1181 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_450SampleInfo;
-const struct InstrumentPCM instrumentPCMData1182 = {
+extern const struct WaveData sfx_450WaveData;
+const struct InstrumentPCM instrumentPCM1182 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_450SampleInfo,
+    /* Sample */ &sfx_450WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -18401,14 +18401,14 @@ const struct InstrumentPCM instrumentPCMData1182 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_481SampleInfo;
-const struct InstrumentPCM instrumentPCMData1183 = {
+extern const struct WaveData sfx_481WaveData;
+const struct InstrumentPCM instrumentPCM1183 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_481SampleInfo,
+    /* Sample */ &sfx_481WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18417,14 +18417,14 @@ const struct InstrumentPCM instrumentPCMData1183 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_482SampleInfo;
-const struct InstrumentPCM instrumentPCMData1184 = {
+extern const struct WaveData sfx_482WaveData;
+const struct InstrumentPCM instrumentPCM1184 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_482SampleInfo,
+    /* Sample */ &sfx_482WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18433,14 +18433,14 @@ const struct InstrumentPCM instrumentPCMData1184 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_483SampleInfo;
-const struct InstrumentPCM instrumentPCMData1185 = {
+extern const struct WaveData sfx_483WaveData;
+const struct InstrumentPCM instrumentPCM1185 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_483SampleInfo,
+    /* Sample */ &sfx_483WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18449,14 +18449,14 @@ const struct InstrumentPCM instrumentPCMData1185 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_484SampleInfo;
-const struct InstrumentPCM instrumentPCMData1186 = {
+extern const struct WaveData sfx_484WaveData;
+const struct InstrumentPCM instrumentPCM1186 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_484SampleInfo,
+    /* Sample */ &sfx_484WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18465,14 +18465,14 @@ const struct InstrumentPCM instrumentPCMData1186 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_216SampleInfo;
-const struct InstrumentPCM instrumentPCMData1187 = {
+extern const struct WaveData sfx_216WaveData;
+const struct InstrumentPCM instrumentPCM1187 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_216SampleInfo,
+    /* Sample */ &sfx_216WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18481,14 +18481,14 @@ const struct InstrumentPCM instrumentPCMData1187 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_486SampleInfo;
-const struct InstrumentPCM instrumentPCMData1188 = {
+extern const struct WaveData sfx_486WaveData;
+const struct InstrumentPCM instrumentPCM1188 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_486SampleInfo,
+    /* Sample */ &sfx_486WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18497,14 +18497,14 @@ const struct InstrumentPCM instrumentPCMData1188 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_487SampleInfo;
-const struct InstrumentPCM instrumentPCMData1189 = {
+extern const struct WaveData sfx_487WaveData;
+const struct InstrumentPCM instrumentPCM1189 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_487SampleInfo,
+    /* Sample */ &sfx_487WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18513,14 +18513,14 @@ const struct InstrumentPCM instrumentPCMData1189 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_488SampleInfo;
-const struct InstrumentPCM instrumentPCMData1190 = {
+extern const struct WaveData sfx_488WaveData;
+const struct InstrumentPCM instrumentPCM1190 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_488SampleInfo,
+    /* Sample */ &sfx_488WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18529,14 +18529,14 @@ const struct InstrumentPCM instrumentPCMData1190 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_489SampleInfo;
-const struct InstrumentPCM instrumentPCMData1191 = {
+extern const struct WaveData sfx_489WaveData;
+const struct InstrumentPCM instrumentPCM1191 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_489SampleInfo,
+    /* Sample */ &sfx_489WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18545,14 +18545,14 @@ const struct InstrumentPCM instrumentPCMData1191 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_490SampleInfo;
-const struct InstrumentPCM instrumentPCMData1192 = {
+extern const struct WaveData sfx_490WaveData;
+const struct InstrumentPCM instrumentPCM1192 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_490SampleInfo,
+    /* Sample */ &sfx_490WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18561,14 +18561,14 @@ const struct InstrumentPCM instrumentPCMData1192 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_491SampleInfo;
-const struct InstrumentPCM instrumentPCMData1193 = {
+extern const struct WaveData sfx_491WaveData;
+const struct InstrumentPCM instrumentPCM1193 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_491SampleInfo,
+    /* Sample */ &sfx_491WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18577,14 +18577,14 @@ const struct InstrumentPCM instrumentPCMData1193 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_492SampleInfo;
-const struct InstrumentPCM instrumentPCMData1194 = {
+extern const struct WaveData sfx_492WaveData;
+const struct InstrumentPCM instrumentPCM1194 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_492SampleInfo,
+    /* Sample */ &sfx_492WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18593,14 +18593,14 @@ const struct InstrumentPCM instrumentPCMData1194 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_493SampleInfo;
-const struct InstrumentPCM instrumentPCMData1195 = {
+extern const struct WaveData sfx_493WaveData;
+const struct InstrumentPCM instrumentPCM1195 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_493SampleInfo,
+    /* Sample */ &sfx_493WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18609,14 +18609,14 @@ const struct InstrumentPCM instrumentPCMData1195 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_494SampleInfo;
-const struct InstrumentPCM instrumentPCMData1196 = {
+extern const struct WaveData sfx_494WaveData;
+const struct InstrumentPCM instrumentPCM1196 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_494SampleInfo,
+    /* Sample */ &sfx_494WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18625,14 +18625,14 @@ const struct InstrumentPCM instrumentPCMData1196 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_495SampleInfo;
-const struct InstrumentPCM instrumentPCMData1197 = {
+extern const struct WaveData sfx_495WaveData;
+const struct InstrumentPCM instrumentPCM1197 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_495SampleInfo,
+    /* Sample */ &sfx_495WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18641,14 +18641,14 @@ const struct InstrumentPCM instrumentPCMData1197 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_496SampleInfo;
-const struct InstrumentPCM instrumentPCMData1198 = {
+extern const struct WaveData sfx_496WaveData;
+const struct InstrumentPCM instrumentPCM1198 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_496SampleInfo,
+    /* Sample */ &sfx_496WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18657,14 +18657,14 @@ const struct InstrumentPCM instrumentPCMData1198 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_497SampleInfo;
-const struct InstrumentPCM instrumentPCMData1199 = {
+extern const struct WaveData sfx_497WaveData;
+const struct InstrumentPCM instrumentPCM1199 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_497SampleInfo,
+    /* Sample */ &sfx_497WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18673,14 +18673,14 @@ const struct InstrumentPCM instrumentPCMData1199 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_498SampleInfo;
-const struct InstrumentPCM instrumentPCMData1200 = {
+extern const struct WaveData sfx_498WaveData;
+const struct InstrumentPCM instrumentPCM1200 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_498SampleInfo,
+    /* Sample */ &sfx_498WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18689,14 +18689,14 @@ const struct InstrumentPCM instrumentPCMData1200 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_499SampleInfo;
-const struct InstrumentPCM instrumentPCMData1201 = {
+extern const struct WaveData sfx_499WaveData;
+const struct InstrumentPCM instrumentPCM1201 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_499SampleInfo,
+    /* Sample */ &sfx_499WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18705,14 +18705,14 @@ const struct InstrumentPCM instrumentPCMData1201 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_500SampleInfo;
-const struct InstrumentPCM instrumentPCMData1202 = {
+extern const struct WaveData sfx_500WaveData;
+const struct InstrumentPCM instrumentPCM1202 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_500SampleInfo,
+    /* Sample */ &sfx_500WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18721,14 +18721,14 @@ const struct InstrumentPCM instrumentPCMData1202 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_501SampleInfo;
-const struct InstrumentPCM instrumentPCMData1203 = {
+extern const struct WaveData sfx_501WaveData;
+const struct InstrumentPCM instrumentPCM1203 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_501SampleInfo,
+    /* Sample */ &sfx_501WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18737,14 +18737,14 @@ const struct InstrumentPCM instrumentPCMData1203 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_502SampleInfo;
-const struct InstrumentPCM instrumentPCMData1204 = {
+extern const struct WaveData sfx_502WaveData;
+const struct InstrumentPCM instrumentPCM1204 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_502SampleInfo,
+    /* Sample */ &sfx_502WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18753,14 +18753,14 @@ const struct InstrumentPCM instrumentPCMData1204 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_503SampleInfo;
-const struct InstrumentPCM instrumentPCMData1205 = {
+extern const struct WaveData sfx_503WaveData;
+const struct InstrumentPCM instrumentPCM1205 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_503SampleInfo,
+    /* Sample */ &sfx_503WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18769,14 +18769,14 @@ const struct InstrumentPCM instrumentPCMData1205 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_504SampleInfo;
-const struct InstrumentPCM instrumentPCMData1206 = {
+extern const struct WaveData sfx_504WaveData;
+const struct InstrumentPCM instrumentPCM1206 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_504SampleInfo,
+    /* Sample */ &sfx_504WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18785,14 +18785,14 @@ const struct InstrumentPCM instrumentPCMData1206 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_505SampleInfo;
-const struct InstrumentPCM instrumentPCMData1207 = {
+extern const struct WaveData sfx_505WaveData;
+const struct InstrumentPCM instrumentPCM1207 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_505SampleInfo,
+    /* Sample */ &sfx_505WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18801,14 +18801,14 @@ const struct InstrumentPCM instrumentPCMData1207 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_506SampleInfo;
-const struct InstrumentPCM instrumentPCMData1208 = {
+extern const struct WaveData sfx_506WaveData;
+const struct InstrumentPCM instrumentPCM1208 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_506SampleInfo,
+    /* Sample */ &sfx_506WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18817,14 +18817,14 @@ const struct InstrumentPCM instrumentPCMData1208 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_507SampleInfo;
-const struct InstrumentPCM instrumentPCMData1209 = {
+extern const struct WaveData sfx_507WaveData;
+const struct InstrumentPCM instrumentPCM1209 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_507SampleInfo,
+    /* Sample */ &sfx_507WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18833,14 +18833,14 @@ const struct InstrumentPCM instrumentPCMData1209 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_508SampleInfo;
-const struct InstrumentPCM instrumentPCMData1210 = {
+extern const struct WaveData sfx_508WaveData;
+const struct InstrumentPCM instrumentPCM1210 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_508SampleInfo,
+    /* Sample */ &sfx_508WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18849,14 +18849,14 @@ const struct InstrumentPCM instrumentPCMData1210 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_509SampleInfo;
-const struct InstrumentPCM instrumentPCMData1211 = {
+extern const struct WaveData sfx_509WaveData;
+const struct InstrumentPCM instrumentPCM1211 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_509SampleInfo,
+    /* Sample */ &sfx_509WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18865,14 +18865,14 @@ const struct InstrumentPCM instrumentPCMData1211 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_510SampleInfo;
-const struct InstrumentPCM instrumentPCMData1212 = {
+extern const struct WaveData sfx_510WaveData;
+const struct InstrumentPCM instrumentPCM1212 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_510SampleInfo,
+    /* Sample */ &sfx_510WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18881,14 +18881,14 @@ const struct InstrumentPCM instrumentPCMData1212 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_511SampleInfo;
-const struct InstrumentPCM instrumentPCMData1213 = {
+extern const struct WaveData sfx_511WaveData;
+const struct InstrumentPCM instrumentPCM1213 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_511SampleInfo,
+    /* Sample */ &sfx_511WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18897,14 +18897,14 @@ const struct InstrumentPCM instrumentPCMData1213 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_512SampleInfo;
-const struct InstrumentPCM instrumentPCMData1214 = {
+extern const struct WaveData sfx_512WaveData;
+const struct InstrumentPCM instrumentPCM1214 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_512SampleInfo,
+    /* Sample */ &sfx_512WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18913,14 +18913,14 @@ const struct InstrumentPCM instrumentPCMData1214 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_513SampleInfo;
-const struct InstrumentPCM instrumentPCMData1215 = {
+extern const struct WaveData sfx_513WaveData;
+const struct InstrumentPCM instrumentPCM1215 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_513SampleInfo,
+    /* Sample */ &sfx_513WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18929,14 +18929,14 @@ const struct InstrumentPCM instrumentPCMData1215 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_514SampleInfo;
-const struct InstrumentPCM instrumentPCMData1216 = {
+extern const struct WaveData sfx_514WaveData;
+const struct InstrumentPCM instrumentPCM1216 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_514SampleInfo,
+    /* Sample */ &sfx_514WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18945,14 +18945,14 @@ const struct InstrumentPCM instrumentPCMData1216 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_515SampleInfo;
-const struct InstrumentPCM instrumentPCMData1217 = {
+extern const struct WaveData sfx_515WaveData;
+const struct InstrumentPCM instrumentPCM1217 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_515SampleInfo,
+    /* Sample */ &sfx_515WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18961,14 +18961,14 @@ const struct InstrumentPCM instrumentPCMData1217 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_516SampleInfo;
-const struct InstrumentPCM instrumentPCMData1218 = {
+extern const struct WaveData sfx_516WaveData;
+const struct InstrumentPCM instrumentPCM1218 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_516SampleInfo,
+    /* Sample */ &sfx_516WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -18977,7 +18977,7 @@ const struct InstrumentPCM instrumentPCMData1218 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData1219 = {
+const struct InstrumentSubRhythm instrumentSubRhythm1219 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -18986,14 +18986,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData1219 = {
     /* Sub-bank */ (void *)0x08a996e4, // POINTER
 };
 
-extern const struct SampleInfo sfx_588SampleInfo;
-const struct InstrumentPCM instrumentPCMData1220 = {
+extern const struct WaveData sfx_588WaveData;
+const struct InstrumentPCM instrumentPCM1220 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x20,
     },
-    /* Sample */ &sfx_588SampleInfo,
+    /* Sample */ &sfx_588WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19002,14 +19002,14 @@ const struct InstrumentPCM instrumentPCMData1220 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_589SampleInfo;
-const struct InstrumentPCM instrumentPCMData1221 = {
+extern const struct WaveData sfx_589WaveData;
+const struct InstrumentPCM instrumentPCM1221 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x20,
     },
-    /* Sample */ &sfx_589SampleInfo,
+    /* Sample */ &sfx_589WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19018,14 +19018,14 @@ const struct InstrumentPCM instrumentPCMData1221 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_590SampleInfo;
-const struct InstrumentPCM instrumentPCMData1222 = {
+extern const struct WaveData sfx_590WaveData;
+const struct InstrumentPCM instrumentPCM1222 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x20,
     },
-    /* Sample */ &sfx_590SampleInfo,
+    /* Sample */ &sfx_590WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19034,14 +19034,14 @@ const struct InstrumentPCM instrumentPCMData1222 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_591SampleInfo;
-const struct InstrumentPCM instrumentPCMData1223 = {
+extern const struct WaveData sfx_591WaveData;
+const struct InstrumentPCM instrumentPCM1223 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_591SampleInfo,
+    /* Sample */ &sfx_591WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19050,14 +19050,14 @@ const struct InstrumentPCM instrumentPCMData1223 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_190SampleInfo;
-const struct InstrumentPCM instrumentPCMData1224 = {
+extern const struct WaveData sfx_190WaveData;
+const struct InstrumentPCM instrumentPCM1224 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_190SampleInfo,
+    /* Sample */ &sfx_190WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19066,14 +19066,14 @@ const struct InstrumentPCM instrumentPCMData1224 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_449SampleInfo;
-const struct InstrumentPCM instrumentPCMData1225 = {
+extern const struct WaveData sfx_449WaveData;
+const struct InstrumentPCM instrumentPCM1225 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffe0,
     },
-    /* Sample */ &sfx_449SampleInfo,
+    /* Sample */ &sfx_449WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19082,14 +19082,14 @@ const struct InstrumentPCM instrumentPCMData1225 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_592SampleInfo;
-const struct InstrumentPCM instrumentPCMData1226 = {
+extern const struct WaveData sfx_592WaveData;
+const struct InstrumentPCM instrumentPCM1226 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffd0,
     },
-    /* Sample */ &sfx_592SampleInfo,
+    /* Sample */ &sfx_592WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19098,14 +19098,14 @@ const struct InstrumentPCM instrumentPCMData1226 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_593SampleInfo;
-const struct InstrumentPCM instrumentPCMData1227 = {
+extern const struct WaveData sfx_593WaveData;
+const struct InstrumentPCM instrumentPCM1227 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffd0,
     },
-    /* Sample */ &sfx_593SampleInfo,
+    /* Sample */ &sfx_593WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19114,14 +19114,14 @@ const struct InstrumentPCM instrumentPCMData1227 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_594SampleInfo;
-const struct InstrumentPCM instrumentPCMData1228 = {
+extern const struct WaveData sfx_594WaveData;
+const struct InstrumentPCM instrumentPCM1228 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x30,
     },
-    /* Sample */ &sfx_594SampleInfo,
+    /* Sample */ &sfx_594WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19130,14 +19130,14 @@ const struct InstrumentPCM instrumentPCMData1228 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_594SampleInfo;
-const struct InstrumentPCM instrumentPCMData1229 = {
+extern const struct WaveData sfx_594WaveData;
+const struct InstrumentPCM instrumentPCM1229 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x35,
         /* unk2 */ 0x30,
     },
-    /* Sample */ &sfx_594SampleInfo,
+    /* Sample */ &sfx_594WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19146,14 +19146,14 @@ const struct InstrumentPCM instrumentPCMData1229 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_590SampleInfo;
-const struct InstrumentPCM instrumentPCMData1230 = {
+extern const struct WaveData sfx_590WaveData;
+const struct InstrumentPCM instrumentPCM1230 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x30,
         /* unk2 */ 0xffe0,
     },
-    /* Sample */ &sfx_590SampleInfo,
+    /* Sample */ &sfx_590WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19162,14 +19162,14 @@ const struct InstrumentPCM instrumentPCMData1230 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_588SampleInfo;
-const struct InstrumentPCM instrumentPCMData1231 = {
+extern const struct WaveData sfx_588WaveData;
+const struct InstrumentPCM instrumentPCM1231 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x37,
         /* unk2 */ 0x20,
     },
-    /* Sample */ &sfx_588SampleInfo,
+    /* Sample */ &sfx_588WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19178,14 +19178,14 @@ const struct InstrumentPCM instrumentPCMData1231 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_588SampleInfo;
-const struct InstrumentPCM instrumentPCMData1232 = {
+extern const struct WaveData sfx_588WaveData;
+const struct InstrumentPCM instrumentPCM1232 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3e,
         /* unk2 */ 0x20,
     },
-    /* Sample */ &sfx_588SampleInfo,
+    /* Sample */ &sfx_588WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19194,14 +19194,14 @@ const struct InstrumentPCM instrumentPCMData1232 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_588SampleInfo;
-const struct InstrumentPCM instrumentPCMData1233 = {
+extern const struct WaveData sfx_588WaveData;
+const struct InstrumentPCM instrumentPCM1233 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x40,
         /* unk2 */ 0x20,
     },
-    /* Sample */ &sfx_588SampleInfo,
+    /* Sample */ &sfx_588WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19210,14 +19210,14 @@ const struct InstrumentPCM instrumentPCMData1233 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_595SampleInfo;
-const struct InstrumentPCM instrumentPCMData1234 = {
+extern const struct WaveData sfx_595WaveData;
+const struct InstrumentPCM instrumentPCM1234 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x40,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_595SampleInfo,
+    /* Sample */ &sfx_595WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19226,14 +19226,14 @@ const struct InstrumentPCM instrumentPCMData1234 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_596SampleInfo;
-const struct InstrumentPCM instrumentPCMData1235 = {
+extern const struct WaveData sfx_596WaveData;
+const struct InstrumentPCM instrumentPCM1235 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x40,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_596SampleInfo,
+    /* Sample */ &sfx_596WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19242,30 +19242,14 @@ const struct InstrumentPCM instrumentPCMData1235 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_597SampleInfo;
-const struct InstrumentPCM instrumentPCMData1236 = {
-    {
-        /* Type */ INSTRUMENT_PCM_ALIGNED,
-        /* unk1 */ 0x40,
-        /* unk2 */ 0xffe0,
-    },
-    /* Sample */ &sfx_597SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x000f6a90,
-};
-
-extern const struct SampleInfo sfx_598SampleInfo;
-const struct InstrumentPCM instrumentPCMData1237 = {
+extern const struct WaveData sfx_597WaveData;
+const struct InstrumentPCM instrumentPCM1236 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x40,
         /* unk2 */ 0xffe0,
     },
-    /* Sample */ &sfx_598SampleInfo,
+    /* Sample */ &sfx_597WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19274,14 +19258,30 @@ const struct InstrumentPCM instrumentPCMData1237 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_141SampleInfo;
-const struct InstrumentPCM instrumentPCMData1238 = {
+extern const struct WaveData sfx_598WaveData;
+const struct InstrumentPCM instrumentPCM1237 = {
+    {
+        /* Type */ INSTRUMENT_PCM_ALIGNED,
+        /* unk1 */ 0x40,
+        /* unk2 */ 0xffe0,
+    },
+    /* Sample */ &sfx_598WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x000f6a90,
+};
+
+extern const struct WaveData sfx_141WaveData;
+const struct InstrumentPCM instrumentPCM1238 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_141SampleInfo,
+    /* Sample */ &sfx_141WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19290,14 +19290,14 @@ const struct InstrumentPCM instrumentPCMData1238 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_142SampleInfo;
-const struct InstrumentPCM instrumentPCMData1239 = {
+extern const struct WaveData sfx_142WaveData;
+const struct InstrumentPCM instrumentPCM1239 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_142SampleInfo,
+    /* Sample */ &sfx_142WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19306,14 +19306,14 @@ const struct InstrumentPCM instrumentPCMData1239 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_143SampleInfo;
-const struct InstrumentPCM instrumentPCMData1240 = {
+extern const struct WaveData sfx_143WaveData;
+const struct InstrumentPCM instrumentPCM1240 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_143SampleInfo,
+    /* Sample */ &sfx_143WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19322,14 +19322,14 @@ const struct InstrumentPCM instrumentPCMData1240 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_599SampleInfo;
-const struct InstrumentPCM instrumentPCMData1241 = {
+extern const struct WaveData sfx_599WaveData;
+const struct InstrumentPCM instrumentPCM1241 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x40,
         /* unk2 */ 0x3f,
     },
-    /* Sample */ &sfx_599SampleInfo,
+    /* Sample */ &sfx_599WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19338,14 +19338,14 @@ const struct InstrumentPCM instrumentPCMData1241 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_600SampleInfo;
-const struct InstrumentPCM instrumentPCMData1242 = {
+extern const struct WaveData sfx_600WaveData;
+const struct InstrumentPCM instrumentPCM1242 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_600SampleInfo,
+    /* Sample */ &sfx_600WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19354,14 +19354,14 @@ const struct InstrumentPCM instrumentPCMData1242 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_131SampleInfo;
-const struct InstrumentPCM instrumentPCMData1243 = {
+extern const struct WaveData sfx_131WaveData;
+const struct InstrumentPCM instrumentPCM1243 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_131SampleInfo,
+    /* Sample */ &sfx_131WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19370,14 +19370,14 @@ const struct InstrumentPCM instrumentPCMData1243 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_132SampleInfo;
-const struct InstrumentPCM instrumentPCMData1244 = {
+extern const struct WaveData sfx_132WaveData;
+const struct InstrumentPCM instrumentPCM1244 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_132SampleInfo,
+    /* Sample */ &sfx_132WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19386,14 +19386,14 @@ const struct InstrumentPCM instrumentPCMData1244 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_133SampleInfo;
-const struct InstrumentPCM instrumentPCMData1245 = {
+extern const struct WaveData sfx_133WaveData;
+const struct InstrumentPCM instrumentPCM1245 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_133SampleInfo,
+    /* Sample */ &sfx_133WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19402,14 +19402,14 @@ const struct InstrumentPCM instrumentPCMData1245 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_134SampleInfo;
-const struct InstrumentPCM instrumentPCMData1246 = {
+extern const struct WaveData sfx_134WaveData;
+const struct InstrumentPCM instrumentPCM1246 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_134SampleInfo,
+    /* Sample */ &sfx_134WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19418,14 +19418,14 @@ const struct InstrumentPCM instrumentPCMData1246 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_135SampleInfo;
-const struct InstrumentPCM instrumentPCMData1247 = {
+extern const struct WaveData sfx_135WaveData;
+const struct InstrumentPCM instrumentPCM1247 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_135SampleInfo,
+    /* Sample */ &sfx_135WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19434,14 +19434,14 @@ const struct InstrumentPCM instrumentPCMData1247 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_136SampleInfo;
-const struct InstrumentPCM instrumentPCMData1248 = {
+extern const struct WaveData sfx_136WaveData;
+const struct InstrumentPCM instrumentPCM1248 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_136SampleInfo,
+    /* Sample */ &sfx_136WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19450,14 +19450,14 @@ const struct InstrumentPCM instrumentPCMData1248 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_601SampleInfo;
-const struct InstrumentPCM instrumentPCMData1249 = {
+extern const struct WaveData sfx_601WaveData;
+const struct InstrumentPCM instrumentPCM1249 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_601SampleInfo,
+    /* Sample */ &sfx_601WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19466,14 +19466,14 @@ const struct InstrumentPCM instrumentPCMData1249 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_602SampleInfo;
-const struct InstrumentPCM instrumentPCMData1250 = {
+extern const struct WaveData sfx_602WaveData;
+const struct InstrumentPCM instrumentPCM1250 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_602SampleInfo,
+    /* Sample */ &sfx_602WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19482,14 +19482,14 @@ const struct InstrumentPCM instrumentPCMData1250 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_603SampleInfo;
-const struct InstrumentPCM instrumentPCMData1251 = {
+extern const struct WaveData sfx_603WaveData;
+const struct InstrumentPCM instrumentPCM1251 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_603SampleInfo,
+    /* Sample */ &sfx_603WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19498,14 +19498,14 @@ const struct InstrumentPCM instrumentPCMData1251 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_604SampleInfo;
-const struct InstrumentPCM instrumentPCMData1252 = {
+extern const struct WaveData sfx_604WaveData;
+const struct InstrumentPCM instrumentPCM1252 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_604SampleInfo,
+    /* Sample */ &sfx_604WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19514,14 +19514,14 @@ const struct InstrumentPCM instrumentPCMData1252 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_605SampleInfo;
-const struct InstrumentPCM instrumentPCMData1253 = {
+extern const struct WaveData sfx_605WaveData;
+const struct InstrumentPCM instrumentPCM1253 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_605SampleInfo,
+    /* Sample */ &sfx_605WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19530,14 +19530,14 @@ const struct InstrumentPCM instrumentPCMData1253 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_606SampleInfo;
-const struct InstrumentPCM instrumentPCMData1254 = {
+extern const struct WaveData sfx_606WaveData;
+const struct InstrumentPCM instrumentPCM1254 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_606SampleInfo,
+    /* Sample */ &sfx_606WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19546,14 +19546,14 @@ const struct InstrumentPCM instrumentPCMData1254 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_607SampleInfo;
-const struct InstrumentPCM instrumentPCMData1255 = {
+extern const struct WaveData sfx_607WaveData;
+const struct InstrumentPCM instrumentPCM1255 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_607SampleInfo,
+    /* Sample */ &sfx_607WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19562,14 +19562,14 @@ const struct InstrumentPCM instrumentPCMData1255 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_608SampleInfo;
-const struct InstrumentPCM instrumentPCMData1256 = {
+extern const struct WaveData sfx_608WaveData;
+const struct InstrumentPCM instrumentPCM1256 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_608SampleInfo,
+    /* Sample */ &sfx_608WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19578,14 +19578,14 @@ const struct InstrumentPCM instrumentPCMData1256 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_609SampleInfo;
-const struct InstrumentPCM instrumentPCMData1257 = {
+extern const struct WaveData sfx_609WaveData;
+const struct InstrumentPCM instrumentPCM1257 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_609SampleInfo,
+    /* Sample */ &sfx_609WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19594,14 +19594,14 @@ const struct InstrumentPCM instrumentPCMData1257 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_610SampleInfo;
-const struct InstrumentPCM instrumentPCMData1258 = {
+extern const struct WaveData sfx_610WaveData;
+const struct InstrumentPCM instrumentPCM1258 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_610SampleInfo,
+    /* Sample */ &sfx_610WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19610,14 +19610,14 @@ const struct InstrumentPCM instrumentPCMData1258 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_611SampleInfo;
-const struct InstrumentPCM instrumentPCMData1259 = {
+extern const struct WaveData sfx_611WaveData;
+const struct InstrumentPCM instrumentPCM1259 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_611SampleInfo,
+    /* Sample */ &sfx_611WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19626,14 +19626,14 @@ const struct InstrumentPCM instrumentPCMData1259 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_612SampleInfo;
-const struct InstrumentPCM instrumentPCMData1260 = {
+extern const struct WaveData sfx_612WaveData;
+const struct InstrumentPCM instrumentPCM1260 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_612SampleInfo,
+    /* Sample */ &sfx_612WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19642,14 +19642,14 @@ const struct InstrumentPCM instrumentPCMData1260 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_613SampleInfo;
-const struct InstrumentPCM instrumentPCMData1261 = {
+extern const struct WaveData sfx_613WaveData;
+const struct InstrumentPCM instrumentPCM1261 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_613SampleInfo,
+    /* Sample */ &sfx_613WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19658,14 +19658,14 @@ const struct InstrumentPCM instrumentPCMData1261 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_614SampleInfo;
-const struct InstrumentPCM instrumentPCMData1262 = {
+extern const struct WaveData sfx_614WaveData;
+const struct InstrumentPCM instrumentPCM1262 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_614SampleInfo,
+    /* Sample */ &sfx_614WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19674,14 +19674,14 @@ const struct InstrumentPCM instrumentPCMData1262 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_615SampleInfo;
-const struct InstrumentPCM instrumentPCMData1263 = {
+extern const struct WaveData sfx_615WaveData;
+const struct InstrumentPCM instrumentPCM1263 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_615SampleInfo,
+    /* Sample */ &sfx_615WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19690,14 +19690,14 @@ const struct InstrumentPCM instrumentPCMData1263 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_616SampleInfo;
-const struct InstrumentPCM instrumentPCMData1264 = {
+extern const struct WaveData sfx_616WaveData;
+const struct InstrumentPCM instrumentPCM1264 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_616SampleInfo,
+    /* Sample */ &sfx_616WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19706,14 +19706,14 @@ const struct InstrumentPCM instrumentPCMData1264 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_617SampleInfo;
-const struct InstrumentPCM instrumentPCMData1265 = {
+extern const struct WaveData sfx_617WaveData;
+const struct InstrumentPCM instrumentPCM1265 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_617SampleInfo,
+    /* Sample */ &sfx_617WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19722,14 +19722,14 @@ const struct InstrumentPCM instrumentPCMData1265 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_618SampleInfo;
-const struct InstrumentPCM instrumentPCMData1266 = {
+extern const struct WaveData sfx_618WaveData;
+const struct InstrumentPCM instrumentPCM1266 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_618SampleInfo,
+    /* Sample */ &sfx_618WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19738,14 +19738,14 @@ const struct InstrumentPCM instrumentPCMData1266 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_619SampleInfo;
-const struct InstrumentPCM instrumentPCMData1267 = {
+extern const struct WaveData sfx_619WaveData;
+const struct InstrumentPCM instrumentPCM1267 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_619SampleInfo,
+    /* Sample */ &sfx_619WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19754,14 +19754,14 @@ const struct InstrumentPCM instrumentPCMData1267 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_620SampleInfo;
-const struct InstrumentPCM instrumentPCMData1268 = {
+extern const struct WaveData sfx_620WaveData;
+const struct InstrumentPCM instrumentPCM1268 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_620SampleInfo,
+    /* Sample */ &sfx_620WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19770,14 +19770,14 @@ const struct InstrumentPCM instrumentPCMData1268 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_621SampleInfo;
-const struct InstrumentPCM instrumentPCMData1269 = {
+extern const struct WaveData sfx_621WaveData;
+const struct InstrumentPCM instrumentPCM1269 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_621SampleInfo,
+    /* Sample */ &sfx_621WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19786,14 +19786,14 @@ const struct InstrumentPCM instrumentPCMData1269 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_622SampleInfo;
-const struct InstrumentPCM instrumentPCMData1270 = {
+extern const struct WaveData sfx_622WaveData;
+const struct InstrumentPCM instrumentPCM1270 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_622SampleInfo,
+    /* Sample */ &sfx_622WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19802,14 +19802,14 @@ const struct InstrumentPCM instrumentPCMData1270 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_623SampleInfo;
-const struct InstrumentPCM instrumentPCMData1271 = {
+extern const struct WaveData sfx_623WaveData;
+const struct InstrumentPCM instrumentPCM1271 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_623SampleInfo,
+    /* Sample */ &sfx_623WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19818,14 +19818,14 @@ const struct InstrumentPCM instrumentPCMData1271 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_624SampleInfo;
-const struct InstrumentPCM instrumentPCMData1272 = {
+extern const struct WaveData sfx_624WaveData;
+const struct InstrumentPCM instrumentPCM1272 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_624SampleInfo,
+    /* Sample */ &sfx_624WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19834,14 +19834,14 @@ const struct InstrumentPCM instrumentPCMData1272 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_625SampleInfo;
-const struct InstrumentPCM instrumentPCMData1273 = {
+extern const struct WaveData sfx_625WaveData;
+const struct InstrumentPCM instrumentPCM1273 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_625SampleInfo,
+    /* Sample */ &sfx_625WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19850,14 +19850,14 @@ const struct InstrumentPCM instrumentPCMData1273 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_626SampleInfo;
-const struct InstrumentPCM instrumentPCMData1274 = {
+extern const struct WaveData sfx_626WaveData;
+const struct InstrumentPCM instrumentPCM1274 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_626SampleInfo,
+    /* Sample */ &sfx_626WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19866,14 +19866,14 @@ const struct InstrumentPCM instrumentPCMData1274 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_627SampleInfo;
-const struct InstrumentPCM instrumentPCMData1275 = {
+extern const struct WaveData sfx_627WaveData;
+const struct InstrumentPCM instrumentPCM1275 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_627SampleInfo,
+    /* Sample */ &sfx_627WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19882,14 +19882,14 @@ const struct InstrumentPCM instrumentPCMData1275 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_628SampleInfo;
-const struct InstrumentPCM instrumentPCMData1276 = {
+extern const struct WaveData sfx_628WaveData;
+const struct InstrumentPCM instrumentPCM1276 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_628SampleInfo,
+    /* Sample */ &sfx_628WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19898,14 +19898,14 @@ const struct InstrumentPCM instrumentPCMData1276 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_629SampleInfo;
-const struct InstrumentPCM instrumentPCMData1277 = {
+extern const struct WaveData sfx_629WaveData;
+const struct InstrumentPCM instrumentPCM1277 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_629SampleInfo,
+    /* Sample */ &sfx_629WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19914,14 +19914,14 @@ const struct InstrumentPCM instrumentPCMData1277 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_630SampleInfo;
-const struct InstrumentPCM instrumentPCMData1278 = {
+extern const struct WaveData sfx_630WaveData;
+const struct InstrumentPCM instrumentPCM1278 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_630SampleInfo,
+    /* Sample */ &sfx_630WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19930,14 +19930,14 @@ const struct InstrumentPCM instrumentPCMData1278 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_631SampleInfo;
-const struct InstrumentPCM instrumentPCMData1279 = {
+extern const struct WaveData sfx_631WaveData;
+const struct InstrumentPCM instrumentPCM1279 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_631SampleInfo,
+    /* Sample */ &sfx_631WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19946,14 +19946,14 @@ const struct InstrumentPCM instrumentPCMData1279 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_632SampleInfo;
-const struct InstrumentPCM instrumentPCMData1280 = {
+extern const struct WaveData sfx_632WaveData;
+const struct InstrumentPCM instrumentPCM1280 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_632SampleInfo,
+    /* Sample */ &sfx_632WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19962,14 +19962,14 @@ const struct InstrumentPCM instrumentPCMData1280 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_633SampleInfo;
-const struct InstrumentPCM instrumentPCMData1281 = {
+extern const struct WaveData sfx_633WaveData;
+const struct InstrumentPCM instrumentPCM1281 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_633SampleInfo,
+    /* Sample */ &sfx_633WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19978,14 +19978,14 @@ const struct InstrumentPCM instrumentPCMData1281 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_634SampleInfo;
-const struct InstrumentPCM instrumentPCMData1282 = {
+extern const struct WaveData sfx_634WaveData;
+const struct InstrumentPCM instrumentPCM1282 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_634SampleInfo,
+    /* Sample */ &sfx_634WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -19994,14 +19994,14 @@ const struct InstrumentPCM instrumentPCMData1282 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_635SampleInfo;
-const struct InstrumentPCM instrumentPCMData1283 = {
+extern const struct WaveData sfx_635WaveData;
+const struct InstrumentPCM instrumentPCM1283 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_635SampleInfo,
+    /* Sample */ &sfx_635WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20010,14 +20010,14 @@ const struct InstrumentPCM instrumentPCMData1283 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_636SampleInfo;
-const struct InstrumentPCM instrumentPCMData1284 = {
+extern const struct WaveData sfx_636WaveData;
+const struct InstrumentPCM instrumentPCM1284 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_636SampleInfo,
+    /* Sample */ &sfx_636WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20026,14 +20026,14 @@ const struct InstrumentPCM instrumentPCMData1284 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_637SampleInfo;
-const struct InstrumentPCM instrumentPCMData1285 = {
+extern const struct WaveData sfx_637WaveData;
+const struct InstrumentPCM instrumentPCM1285 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_637SampleInfo,
+    /* Sample */ &sfx_637WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20042,14 +20042,14 @@ const struct InstrumentPCM instrumentPCMData1285 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_638SampleInfo;
-const struct InstrumentPCM instrumentPCMData1286 = {
+extern const struct WaveData sfx_638WaveData;
+const struct InstrumentPCM instrumentPCM1286 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_638SampleInfo,
+    /* Sample */ &sfx_638WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20058,14 +20058,14 @@ const struct InstrumentPCM instrumentPCMData1286 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_639SampleInfo;
-const struct InstrumentPCM instrumentPCMData1287 = {
+extern const struct WaveData sfx_639WaveData;
+const struct InstrumentPCM instrumentPCM1287 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_639SampleInfo,
+    /* Sample */ &sfx_639WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20074,14 +20074,14 @@ const struct InstrumentPCM instrumentPCMData1287 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_640SampleInfo;
-const struct InstrumentPCM instrumentPCMData1288 = {
+extern const struct WaveData sfx_640WaveData;
+const struct InstrumentPCM instrumentPCM1288 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_640SampleInfo,
+    /* Sample */ &sfx_640WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20090,14 +20090,14 @@ const struct InstrumentPCM instrumentPCMData1288 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_641SampleInfo;
-const struct InstrumentPCM instrumentPCMData1289 = {
+extern const struct WaveData sfx_641WaveData;
+const struct InstrumentPCM instrumentPCM1289 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_641SampleInfo,
+    /* Sample */ &sfx_641WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20106,14 +20106,14 @@ const struct InstrumentPCM instrumentPCMData1289 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_642SampleInfo;
-const struct InstrumentPCM instrumentPCMData1290 = {
+extern const struct WaveData sfx_642WaveData;
+const struct InstrumentPCM instrumentPCM1290 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_642SampleInfo,
+    /* Sample */ &sfx_642WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20122,14 +20122,14 @@ const struct InstrumentPCM instrumentPCMData1290 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_643SampleInfo;
-const struct InstrumentPCM instrumentPCMData1291 = {
+extern const struct WaveData sfx_643WaveData;
+const struct InstrumentPCM instrumentPCM1291 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_643SampleInfo,
+    /* Sample */ &sfx_643WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20138,14 +20138,14 @@ const struct InstrumentPCM instrumentPCMData1291 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_644SampleInfo;
-const struct InstrumentPCM instrumentPCMData1292 = {
+extern const struct WaveData sfx_644WaveData;
+const struct InstrumentPCM instrumentPCM1292 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_644SampleInfo,
+    /* Sample */ &sfx_644WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20154,14 +20154,14 @@ const struct InstrumentPCM instrumentPCMData1292 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_645SampleInfo;
-const struct InstrumentPCM instrumentPCMData1293 = {
+extern const struct WaveData sfx_645WaveData;
+const struct InstrumentPCM instrumentPCM1293 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_645SampleInfo,
+    /* Sample */ &sfx_645WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20170,14 +20170,14 @@ const struct InstrumentPCM instrumentPCMData1293 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_646SampleInfo;
-const struct InstrumentPCM instrumentPCMData1294 = {
+extern const struct WaveData sfx_646WaveData;
+const struct InstrumentPCM instrumentPCM1294 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_646SampleInfo,
+    /* Sample */ &sfx_646WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20186,14 +20186,14 @@ const struct InstrumentPCM instrumentPCMData1294 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_647SampleInfo;
-const struct InstrumentPCM instrumentPCMData1295 = {
+extern const struct WaveData sfx_647WaveData;
+const struct InstrumentPCM instrumentPCM1295 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_647SampleInfo,
+    /* Sample */ &sfx_647WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20202,14 +20202,14 @@ const struct InstrumentPCM instrumentPCMData1295 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_648SampleInfo;
-const struct InstrumentPCM instrumentPCMData1296 = {
+extern const struct WaveData sfx_648WaveData;
+const struct InstrumentPCM instrumentPCM1296 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_648SampleInfo,
+    /* Sample */ &sfx_648WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20218,14 +20218,14 @@ const struct InstrumentPCM instrumentPCMData1296 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_649SampleInfo;
-const struct InstrumentPCM instrumentPCMData1297 = {
+extern const struct WaveData sfx_649WaveData;
+const struct InstrumentPCM instrumentPCM1297 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_649SampleInfo,
+    /* Sample */ &sfx_649WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20234,14 +20234,14 @@ const struct InstrumentPCM instrumentPCMData1297 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_650SampleInfo;
-const struct InstrumentPCM instrumentPCMData1298 = {
+extern const struct WaveData sfx_650WaveData;
+const struct InstrumentPCM instrumentPCM1298 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_650SampleInfo,
+    /* Sample */ &sfx_650WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20250,14 +20250,14 @@ const struct InstrumentPCM instrumentPCMData1298 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_651SampleInfo;
-const struct InstrumentPCM instrumentPCMData1299 = {
+extern const struct WaveData sfx_651WaveData;
+const struct InstrumentPCM instrumentPCM1299 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_651SampleInfo,
+    /* Sample */ &sfx_651WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20266,14 +20266,14 @@ const struct InstrumentPCM instrumentPCMData1299 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_652SampleInfo;
-const struct InstrumentPCM instrumentPCMData1300 = {
+extern const struct WaveData sfx_652WaveData;
+const struct InstrumentPCM instrumentPCM1300 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_652SampleInfo,
+    /* Sample */ &sfx_652WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20282,14 +20282,14 @@ const struct InstrumentPCM instrumentPCMData1300 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_653SampleInfo;
-const struct InstrumentPCM instrumentPCMData1301 = {
+extern const struct WaveData sfx_653WaveData;
+const struct InstrumentPCM instrumentPCM1301 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_653SampleInfo,
+    /* Sample */ &sfx_653WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20298,14 +20298,14 @@ const struct InstrumentPCM instrumentPCMData1301 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_654SampleInfo;
-const struct InstrumentPCM instrumentPCMData1302 = {
+extern const struct WaveData sfx_654WaveData;
+const struct InstrumentPCM instrumentPCM1302 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_654SampleInfo,
+    /* Sample */ &sfx_654WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20314,14 +20314,14 @@ const struct InstrumentPCM instrumentPCMData1302 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_655SampleInfo;
-const struct InstrumentPCM instrumentPCMData1303 = {
+extern const struct WaveData sfx_655WaveData;
+const struct InstrumentPCM instrumentPCM1303 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_655SampleInfo,
+    /* Sample */ &sfx_655WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20330,14 +20330,14 @@ const struct InstrumentPCM instrumentPCMData1303 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_656SampleInfo;
-const struct InstrumentPCM instrumentPCMData1304 = {
+extern const struct WaveData sfx_656WaveData;
+const struct InstrumentPCM instrumentPCM1304 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_656SampleInfo,
+    /* Sample */ &sfx_656WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20346,14 +20346,14 @@ const struct InstrumentPCM instrumentPCMData1304 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_657SampleInfo;
-const struct InstrumentPCM instrumentPCMData1305 = {
+extern const struct WaveData sfx_657WaveData;
+const struct InstrumentPCM instrumentPCM1305 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_657SampleInfo,
+    /* Sample */ &sfx_657WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20362,14 +20362,14 @@ const struct InstrumentPCM instrumentPCMData1305 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_658SampleInfo;
-const struct InstrumentPCM instrumentPCMData1306 = {
+extern const struct WaveData sfx_658WaveData;
+const struct InstrumentPCM instrumentPCM1306 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_658SampleInfo,
+    /* Sample */ &sfx_658WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20378,14 +20378,14 @@ const struct InstrumentPCM instrumentPCMData1306 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_659SampleInfo;
-const struct InstrumentPCM instrumentPCMData1307 = {
+extern const struct WaveData sfx_659WaveData;
+const struct InstrumentPCM instrumentPCM1307 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_659SampleInfo,
+    /* Sample */ &sfx_659WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20394,14 +20394,14 @@ const struct InstrumentPCM instrumentPCMData1307 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_660SampleInfo;
-const struct InstrumentPCM instrumentPCMData1308 = {
+extern const struct WaveData sfx_660WaveData;
+const struct InstrumentPCM instrumentPCM1308 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_660SampleInfo,
+    /* Sample */ &sfx_660WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20410,30 +20410,14 @@ const struct InstrumentPCM instrumentPCMData1308 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_661SampleInfo;
-const struct InstrumentPCM instrumentPCMData1309 = {
-    {
-        /* Type */ INSTRUMENT_PCM_ALIGNED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_661SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_662SampleInfo;
-const struct InstrumentPCM instrumentPCMData1310 = {
+extern const struct WaveData sfx_661WaveData;
+const struct InstrumentPCM instrumentPCM1309 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_662SampleInfo,
+    /* Sample */ &sfx_661WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20442,14 +20426,14 @@ const struct InstrumentPCM instrumentPCMData1310 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_663SampleInfo;
-const struct InstrumentPCM instrumentPCMData1311 = {
+extern const struct WaveData sfx_662WaveData;
+const struct InstrumentPCM instrumentPCM1310 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_663SampleInfo,
+    /* Sample */ &sfx_662WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20458,14 +20442,14 @@ const struct InstrumentPCM instrumentPCMData1311 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_664SampleInfo;
-const struct InstrumentPCM instrumentPCMData1312 = {
+extern const struct WaveData sfx_663WaveData;
+const struct InstrumentPCM instrumentPCM1311 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_664SampleInfo,
+    /* Sample */ &sfx_663WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20474,14 +20458,14 @@ const struct InstrumentPCM instrumentPCMData1312 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_665SampleInfo;
-const struct InstrumentPCM instrumentPCMData1313 = {
+extern const struct WaveData sfx_664WaveData;
+const struct InstrumentPCM instrumentPCM1312 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_665SampleInfo,
+    /* Sample */ &sfx_664WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20490,14 +20474,14 @@ const struct InstrumentPCM instrumentPCMData1313 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_666SampleInfo;
-const struct InstrumentPCM instrumentPCMData1314 = {
+extern const struct WaveData sfx_665WaveData;
+const struct InstrumentPCM instrumentPCM1313 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_666SampleInfo,
+    /* Sample */ &sfx_665WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20506,14 +20490,14 @@ const struct InstrumentPCM instrumentPCMData1314 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_667SampleInfo;
-const struct InstrumentPCM instrumentPCMData1315 = {
+extern const struct WaveData sfx_666WaveData;
+const struct InstrumentPCM instrumentPCM1314 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_667SampleInfo,
+    /* Sample */ &sfx_666WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20522,14 +20506,14 @@ const struct InstrumentPCM instrumentPCMData1315 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_668SampleInfo;
-const struct InstrumentPCM instrumentPCMData1316 = {
+extern const struct WaveData sfx_667WaveData;
+const struct InstrumentPCM instrumentPCM1315 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_668SampleInfo,
+    /* Sample */ &sfx_667WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20538,14 +20522,14 @@ const struct InstrumentPCM instrumentPCMData1316 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_669SampleInfo;
-const struct InstrumentPCM instrumentPCMData1317 = {
+extern const struct WaveData sfx_668WaveData;
+const struct InstrumentPCM instrumentPCM1316 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_669SampleInfo,
+    /* Sample */ &sfx_668WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20554,14 +20538,14 @@ const struct InstrumentPCM instrumentPCMData1317 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_670SampleInfo;
-const struct InstrumentPCM instrumentPCMData1318 = {
+extern const struct WaveData sfx_669WaveData;
+const struct InstrumentPCM instrumentPCM1317 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_670SampleInfo,
+    /* Sample */ &sfx_669WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20570,14 +20554,14 @@ const struct InstrumentPCM instrumentPCMData1318 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_671SampleInfo;
-const struct InstrumentPCM instrumentPCMData1319 = {
+extern const struct WaveData sfx_670WaveData;
+const struct InstrumentPCM instrumentPCM1318 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_671SampleInfo,
+    /* Sample */ &sfx_670WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -20586,1854 +20570,1870 @@ const struct InstrumentPCM instrumentPCMData1319 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_672SampleInfo;
-const struct InstrumentPCM instrumentPCMData1320 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_672SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_673SampleInfo;
-const struct InstrumentPCM instrumentPCMData1321 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_673SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_674SampleInfo;
-const struct InstrumentPCM instrumentPCMData1322 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_674SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_675SampleInfo;
-const struct InstrumentPCM instrumentPCMData1323 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_675SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_676SampleInfo;
-const struct InstrumentPCM instrumentPCMData1324 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_676SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_677SampleInfo;
-const struct InstrumentPCM instrumentPCMData1325 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_677SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_678SampleInfo;
-const struct InstrumentPCM instrumentPCMData1326 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_678SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_679SampleInfo;
-const struct InstrumentPCM instrumentPCMData1327 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_679SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_680SampleInfo;
-const struct InstrumentPCM instrumentPCMData1328 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_680SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_681SampleInfo;
-const struct InstrumentPCM instrumentPCMData1329 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_681SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_682SampleInfo;
-const struct InstrumentPCM instrumentPCMData1330 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_682SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_683SampleInfo;
-const struct InstrumentPCM instrumentPCMData1331 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_683SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_684SampleInfo;
-const struct InstrumentPCM instrumentPCMData1332 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_684SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_685SampleInfo;
-const struct InstrumentPCM instrumentPCMData1333 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_685SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_686SampleInfo;
-const struct InstrumentPCM instrumentPCMData1334 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_686SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_687SampleInfo;
-const struct InstrumentPCM instrumentPCMData1335 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_687SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_688SampleInfo;
-const struct InstrumentPCM instrumentPCMData1336 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_688SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_689SampleInfo;
-const struct InstrumentPCM instrumentPCMData1337 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_689SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_690SampleInfo;
-const struct InstrumentPCM instrumentPCMData1338 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_690SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_691SampleInfo;
-const struct InstrumentPCM instrumentPCMData1339 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_691SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_692SampleInfo;
-const struct InstrumentPCM instrumentPCMData1340 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_692SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_693SampleInfo;
-const struct InstrumentPCM instrumentPCMData1341 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_693SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_694SampleInfo;
-const struct InstrumentPCM instrumentPCMData1342 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_694SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_695SampleInfo;
-const struct InstrumentPCM instrumentPCMData1343 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_695SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_696SampleInfo;
-const struct InstrumentPCM instrumentPCMData1344 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_696SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_697SampleInfo;
-const struct InstrumentPCM instrumentPCMData1345 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_697SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_698SampleInfo;
-const struct InstrumentPCM instrumentPCMData1346 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_698SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_699SampleInfo;
-const struct InstrumentPCM instrumentPCMData1347 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_699SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_700SampleInfo;
-const struct InstrumentPCM instrumentPCMData1348 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_700SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_701SampleInfo;
-const struct InstrumentPCM instrumentPCMData1349 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_701SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_702SampleInfo;
-const struct InstrumentPCM instrumentPCMData1350 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_702SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_703SampleInfo;
-const struct InstrumentPCM instrumentPCMData1351 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_703SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_704SampleInfo;
-const struct InstrumentPCM instrumentPCMData1352 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_704SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_705SampleInfo;
-const struct InstrumentPCM instrumentPCMData1353 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_705SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_706SampleInfo;
-const struct InstrumentPCM instrumentPCMData1354 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_706SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_707SampleInfo;
-const struct InstrumentPCM instrumentPCMData1355 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_707SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_708SampleInfo;
-const struct InstrumentPCM instrumentPCMData1356 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_708SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_709SampleInfo;
-const struct InstrumentPCM instrumentPCMData1357 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_709SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_710SampleInfo;
-const struct InstrumentPCM instrumentPCMData1358 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_710SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_711SampleInfo;
-const struct InstrumentPCM instrumentPCMData1359 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_711SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_712SampleInfo;
-const struct InstrumentPCM instrumentPCMData1360 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_712SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_713SampleInfo;
-const struct InstrumentPCM instrumentPCMData1361 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_713SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_714SampleInfo;
-const struct InstrumentPCM instrumentPCMData1362 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_714SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_715SampleInfo;
-const struct InstrumentPCM instrumentPCMData1363 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_715SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_716SampleInfo;
-const struct InstrumentPCM instrumentPCMData1364 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_716SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_717SampleInfo;
-const struct InstrumentPCM instrumentPCMData1365 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_717SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_718SampleInfo;
-const struct InstrumentPCM instrumentPCMData1366 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_718SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_719SampleInfo;
-const struct InstrumentPCM instrumentPCMData1367 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_719SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_720SampleInfo;
-const struct InstrumentPCM instrumentPCMData1368 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_720SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_721SampleInfo;
-const struct InstrumentPCM instrumentPCMData1369 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_721SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_722SampleInfo;
-const struct InstrumentPCM instrumentPCMData1370 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_722SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_723SampleInfo;
-const struct InstrumentPCM instrumentPCMData1371 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_723SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_724SampleInfo;
-const struct InstrumentPCM instrumentPCMData1372 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_724SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_725SampleInfo;
-const struct InstrumentPCM instrumentPCMData1373 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_725SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_726SampleInfo;
-const struct InstrumentPCM instrumentPCMData1374 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_726SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_727SampleInfo;
-const struct InstrumentPCM instrumentPCMData1375 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_727SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_728SampleInfo;
-const struct InstrumentPCM instrumentPCMData1376 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_728SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_729SampleInfo;
-const struct InstrumentPCM instrumentPCMData1377 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_729SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_730SampleInfo;
-const struct InstrumentPCM instrumentPCMData1378 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_730SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_731SampleInfo;
-const struct InstrumentPCM instrumentPCMData1379 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_731SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_732SampleInfo;
-const struct InstrumentPCM instrumentPCMData1380 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_732SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_733SampleInfo;
-const struct InstrumentPCM instrumentPCMData1381 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_733SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_734SampleInfo;
-const struct InstrumentPCM instrumentPCMData1382 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_734SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_735SampleInfo;
-const struct InstrumentPCM instrumentPCMData1383 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_735SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_736SampleInfo;
-const struct InstrumentPCM instrumentPCMData1384 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_736SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_737SampleInfo;
-const struct InstrumentPCM instrumentPCMData1385 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_737SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_738SampleInfo;
-const struct InstrumentPCM instrumentPCMData1386 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_738SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_739SampleInfo;
-const struct InstrumentPCM instrumentPCMData1387 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_739SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_740SampleInfo;
-const struct InstrumentPCM instrumentPCMData1388 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_740SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_741SampleInfo;
-const struct InstrumentPCM instrumentPCMData1389 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_741SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_742SampleInfo;
-const struct InstrumentPCM instrumentPCMData1390 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_742SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_743SampleInfo;
-const struct InstrumentPCM instrumentPCMData1391 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_743SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_744SampleInfo;
-const struct InstrumentPCM instrumentPCMData1392 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_744SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_745SampleInfo;
-const struct InstrumentPCM instrumentPCMData1393 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_745SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_746SampleInfo;
-const struct InstrumentPCM instrumentPCMData1394 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_746SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_747SampleInfo;
-const struct InstrumentPCM instrumentPCMData1395 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_747SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_748SampleInfo;
-const struct InstrumentPCM instrumentPCMData1396 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_748SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_749SampleInfo;
-const struct InstrumentPCM instrumentPCMData1397 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_749SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_750SampleInfo;
-const struct InstrumentPCM instrumentPCMData1398 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_750SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_751SampleInfo;
-const struct InstrumentPCM instrumentPCMData1399 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_751SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_752SampleInfo;
-const struct InstrumentPCM instrumentPCMData1400 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_752SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_753SampleInfo;
-const struct InstrumentPCM instrumentPCMData1401 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_753SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_754SampleInfo;
-const struct InstrumentPCM instrumentPCMData1402 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_754SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_755SampleInfo;
-const struct InstrumentPCM instrumentPCMData1403 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_755SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_756SampleInfo;
-const struct InstrumentPCM instrumentPCMData1404 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_756SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_757SampleInfo;
-const struct InstrumentPCM instrumentPCMData1405 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_757SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_758SampleInfo;
-const struct InstrumentPCM instrumentPCMData1406 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_758SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_759SampleInfo;
-const struct InstrumentPCM instrumentPCMData1407 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_759SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_760SampleInfo;
-const struct InstrumentPCM instrumentPCMData1408 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_760SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_761SampleInfo;
-const struct InstrumentPCM instrumentPCMData1409 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_761SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_762SampleInfo;
-const struct InstrumentPCM instrumentPCMData1410 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_762SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_763SampleInfo;
-const struct InstrumentPCM instrumentPCMData1411 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_763SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_764SampleInfo;
-const struct InstrumentPCM instrumentPCMData1412 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_764SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_765SampleInfo;
-const struct InstrumentPCM instrumentPCMData1413 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_765SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_766SampleInfo;
-const struct InstrumentPCM instrumentPCMData1414 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_766SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_767SampleInfo;
-const struct InstrumentPCM instrumentPCMData1415 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_767SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_768SampleInfo;
-const struct InstrumentPCM instrumentPCMData1416 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_768SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_769SampleInfo;
-const struct InstrumentPCM instrumentPCMData1417 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_769SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_770SampleInfo;
-const struct InstrumentPCM instrumentPCMData1418 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_770SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_771SampleInfo;
-const struct InstrumentPCM instrumentPCMData1419 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_771SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_772SampleInfo;
-const struct InstrumentPCM instrumentPCMData1420 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_772SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_773SampleInfo;
-const struct InstrumentPCM instrumentPCMData1421 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_773SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_774SampleInfo;
-const struct InstrumentPCM instrumentPCMData1422 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_774SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_775SampleInfo;
-const struct InstrumentPCM instrumentPCMData1423 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_775SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_776SampleInfo;
-const struct InstrumentPCM instrumentPCMData1424 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_776SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_777SampleInfo;
-const struct InstrumentPCM instrumentPCMData1425 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_777SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_778SampleInfo;
-const struct InstrumentPCM instrumentPCMData1426 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_778SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_779SampleInfo;
-const struct InstrumentPCM instrumentPCMData1427 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_779SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_780SampleInfo;
-const struct InstrumentPCM instrumentPCMData1428 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_780SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_781SampleInfo;
-const struct InstrumentPCM instrumentPCMData1429 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_781SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_782SampleInfo;
-const struct InstrumentPCM instrumentPCMData1430 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_782SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_783SampleInfo;
-const struct InstrumentPCM instrumentPCMData1431 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_783SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_784SampleInfo;
-const struct InstrumentPCM instrumentPCMData1432 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_784SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_785SampleInfo;
-const struct InstrumentPCM instrumentPCMData1433 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_785SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_786SampleInfo;
-const struct InstrumentPCM instrumentPCMData1434 = {
-    {
-        /* Type */ INSTRUMENT_PCM_FIXED,
-        /* unk1 */ 0x3c,
-        /* unk2 */ 0x7f,
-    },
-    /* Sample */ &sfx_786SampleInfo,
-    /* unk8   */ 0x007f0000,
-    /* unkC   */ 0x007f0000,
-    /* unk10  */ 0x00600000,
-    /* unk14  */ 0x00208000,
-    /* unk18  */ 0x00000000,
-    /* unk1C  */ 0x001e7fba,
-};
-
-extern const struct SampleInfo sfx_787SampleInfo;
-const struct InstrumentPCM instrumentPCMData1435 = {
+extern const struct WaveData sfx_671WaveData;
+const struct InstrumentPCM instrumentPCM1319 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_787SampleInfo,
+    /* Sample */ &sfx_671WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_672WaveData;
+const struct InstrumentPCM instrumentPCM1320 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_672WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_673WaveData;
+const struct InstrumentPCM instrumentPCM1321 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_673WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_674WaveData;
+const struct InstrumentPCM instrumentPCM1322 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_674WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_675WaveData;
+const struct InstrumentPCM instrumentPCM1323 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_675WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_676WaveData;
+const struct InstrumentPCM instrumentPCM1324 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_676WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_677WaveData;
+const struct InstrumentPCM instrumentPCM1325 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_677WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_678WaveData;
+const struct InstrumentPCM instrumentPCM1326 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_678WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_679WaveData;
+const struct InstrumentPCM instrumentPCM1327 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_679WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_680WaveData;
+const struct InstrumentPCM instrumentPCM1328 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_680WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_681WaveData;
+const struct InstrumentPCM instrumentPCM1329 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_681WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_682WaveData;
+const struct InstrumentPCM instrumentPCM1330 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_682WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_683WaveData;
+const struct InstrumentPCM instrumentPCM1331 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_683WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_684WaveData;
+const struct InstrumentPCM instrumentPCM1332 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_684WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_685WaveData;
+const struct InstrumentPCM instrumentPCM1333 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_685WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_686WaveData;
+const struct InstrumentPCM instrumentPCM1334 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_686WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_687WaveData;
+const struct InstrumentPCM instrumentPCM1335 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_687WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_688WaveData;
+const struct InstrumentPCM instrumentPCM1336 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_688WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_689WaveData;
+const struct InstrumentPCM instrumentPCM1337 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_689WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_690WaveData;
+const struct InstrumentPCM instrumentPCM1338 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_690WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_691WaveData;
+const struct InstrumentPCM instrumentPCM1339 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_691WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_692WaveData;
+const struct InstrumentPCM instrumentPCM1340 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_692WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_693WaveData;
+const struct InstrumentPCM instrumentPCM1341 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_693WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_694WaveData;
+const struct InstrumentPCM instrumentPCM1342 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_694WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_695WaveData;
+const struct InstrumentPCM instrumentPCM1343 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_695WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_696WaveData;
+const struct InstrumentPCM instrumentPCM1344 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_696WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_697WaveData;
+const struct InstrumentPCM instrumentPCM1345 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_697WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_698WaveData;
+const struct InstrumentPCM instrumentPCM1346 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_698WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_699WaveData;
+const struct InstrumentPCM instrumentPCM1347 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_699WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_700WaveData;
+const struct InstrumentPCM instrumentPCM1348 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_700WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_701WaveData;
+const struct InstrumentPCM instrumentPCM1349 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_701WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_702WaveData;
+const struct InstrumentPCM instrumentPCM1350 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_702WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_703WaveData;
+const struct InstrumentPCM instrumentPCM1351 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_703WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_704WaveData;
+const struct InstrumentPCM instrumentPCM1352 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_704WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_705WaveData;
+const struct InstrumentPCM instrumentPCM1353 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_705WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_706WaveData;
+const struct InstrumentPCM instrumentPCM1354 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_706WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_707WaveData;
+const struct InstrumentPCM instrumentPCM1355 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_707WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_708WaveData;
+const struct InstrumentPCM instrumentPCM1356 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_708WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_709WaveData;
+const struct InstrumentPCM instrumentPCM1357 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_709WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_710WaveData;
+const struct InstrumentPCM instrumentPCM1358 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_710WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_711WaveData;
+const struct InstrumentPCM instrumentPCM1359 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_711WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_712WaveData;
+const struct InstrumentPCM instrumentPCM1360 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_712WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_713WaveData;
+const struct InstrumentPCM instrumentPCM1361 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_713WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_714WaveData;
+const struct InstrumentPCM instrumentPCM1362 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_714WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_715WaveData;
+const struct InstrumentPCM instrumentPCM1363 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_715WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_716WaveData;
+const struct InstrumentPCM instrumentPCM1364 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_716WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_717WaveData;
+const struct InstrumentPCM instrumentPCM1365 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_717WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_718WaveData;
+const struct InstrumentPCM instrumentPCM1366 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_718WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_719WaveData;
+const struct InstrumentPCM instrumentPCM1367 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_719WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_720WaveData;
+const struct InstrumentPCM instrumentPCM1368 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_720WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_721WaveData;
+const struct InstrumentPCM instrumentPCM1369 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_721WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_722WaveData;
+const struct InstrumentPCM instrumentPCM1370 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_722WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_723WaveData;
+const struct InstrumentPCM instrumentPCM1371 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_723WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_724WaveData;
+const struct InstrumentPCM instrumentPCM1372 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_724WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_725WaveData;
+const struct InstrumentPCM instrumentPCM1373 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_725WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_726WaveData;
+const struct InstrumentPCM instrumentPCM1374 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_726WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_727WaveData;
+const struct InstrumentPCM instrumentPCM1375 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_727WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_728WaveData;
+const struct InstrumentPCM instrumentPCM1376 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_728WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_729WaveData;
+const struct InstrumentPCM instrumentPCM1377 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_729WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_730WaveData;
+const struct InstrumentPCM instrumentPCM1378 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_730WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_731WaveData;
+const struct InstrumentPCM instrumentPCM1379 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_731WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_732WaveData;
+const struct InstrumentPCM instrumentPCM1380 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_732WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_733WaveData;
+const struct InstrumentPCM instrumentPCM1381 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_733WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_734WaveData;
+const struct InstrumentPCM instrumentPCM1382 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_734WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_735WaveData;
+const struct InstrumentPCM instrumentPCM1383 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_735WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_736WaveData;
+const struct InstrumentPCM instrumentPCM1384 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_736WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_737WaveData;
+const struct InstrumentPCM instrumentPCM1385 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_737WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_738WaveData;
+const struct InstrumentPCM instrumentPCM1386 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_738WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_739WaveData;
+const struct InstrumentPCM instrumentPCM1387 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_739WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_740WaveData;
+const struct InstrumentPCM instrumentPCM1388 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_740WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_741WaveData;
+const struct InstrumentPCM instrumentPCM1389 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_741WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_742WaveData;
+const struct InstrumentPCM instrumentPCM1390 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_742WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_743WaveData;
+const struct InstrumentPCM instrumentPCM1391 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_743WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_744WaveData;
+const struct InstrumentPCM instrumentPCM1392 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_744WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_745WaveData;
+const struct InstrumentPCM instrumentPCM1393 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_745WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_746WaveData;
+const struct InstrumentPCM instrumentPCM1394 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_746WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_747WaveData;
+const struct InstrumentPCM instrumentPCM1395 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_747WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_748WaveData;
+const struct InstrumentPCM instrumentPCM1396 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_748WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_749WaveData;
+const struct InstrumentPCM instrumentPCM1397 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_749WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_750WaveData;
+const struct InstrumentPCM instrumentPCM1398 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_750WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_751WaveData;
+const struct InstrumentPCM instrumentPCM1399 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_751WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_752WaveData;
+const struct InstrumentPCM instrumentPCM1400 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_752WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_753WaveData;
+const struct InstrumentPCM instrumentPCM1401 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_753WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_754WaveData;
+const struct InstrumentPCM instrumentPCM1402 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_754WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_755WaveData;
+const struct InstrumentPCM instrumentPCM1403 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_755WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_756WaveData;
+const struct InstrumentPCM instrumentPCM1404 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_756WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_757WaveData;
+const struct InstrumentPCM instrumentPCM1405 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_757WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_758WaveData;
+const struct InstrumentPCM instrumentPCM1406 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_758WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_759WaveData;
+const struct InstrumentPCM instrumentPCM1407 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_759WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_760WaveData;
+const struct InstrumentPCM instrumentPCM1408 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_760WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_761WaveData;
+const struct InstrumentPCM instrumentPCM1409 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_761WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_762WaveData;
+const struct InstrumentPCM instrumentPCM1410 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_762WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_763WaveData;
+const struct InstrumentPCM instrumentPCM1411 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_763WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_764WaveData;
+const struct InstrumentPCM instrumentPCM1412 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_764WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_765WaveData;
+const struct InstrumentPCM instrumentPCM1413 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_765WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_766WaveData;
+const struct InstrumentPCM instrumentPCM1414 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_766WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_767WaveData;
+const struct InstrumentPCM instrumentPCM1415 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_767WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_768WaveData;
+const struct InstrumentPCM instrumentPCM1416 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_768WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_769WaveData;
+const struct InstrumentPCM instrumentPCM1417 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_769WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_770WaveData;
+const struct InstrumentPCM instrumentPCM1418 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_770WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_771WaveData;
+const struct InstrumentPCM instrumentPCM1419 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_771WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_772WaveData;
+const struct InstrumentPCM instrumentPCM1420 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_772WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_773WaveData;
+const struct InstrumentPCM instrumentPCM1421 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_773WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_774WaveData;
+const struct InstrumentPCM instrumentPCM1422 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_774WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_775WaveData;
+const struct InstrumentPCM instrumentPCM1423 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_775WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_776WaveData;
+const struct InstrumentPCM instrumentPCM1424 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_776WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_777WaveData;
+const struct InstrumentPCM instrumentPCM1425 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_777WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_778WaveData;
+const struct InstrumentPCM instrumentPCM1426 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_778WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_779WaveData;
+const struct InstrumentPCM instrumentPCM1427 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_779WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_780WaveData;
+const struct InstrumentPCM instrumentPCM1428 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_780WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_781WaveData;
+const struct InstrumentPCM instrumentPCM1429 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_781WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_782WaveData;
+const struct InstrumentPCM instrumentPCM1430 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_782WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_783WaveData;
+const struct InstrumentPCM instrumentPCM1431 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_783WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_784WaveData;
+const struct InstrumentPCM instrumentPCM1432 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_784WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_785WaveData;
+const struct InstrumentPCM instrumentPCM1433 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_785WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_786WaveData;
+const struct InstrumentPCM instrumentPCM1434 = {
+    {
+        /* Type */ INSTRUMENT_PCM_FIXED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_786WaveData,
+    /* unk8   */ 0x007f0000,
+    /* unkC   */ 0x007f0000,
+    /* unk10  */ 0x00600000,
+    /* unk14  */ 0x00208000,
+    /* unk18  */ 0x00000000,
+    /* unk1C  */ 0x001e7fba,
+};
+
+extern const struct WaveData sfx_787WaveData;
+const struct InstrumentPCM instrumentPCM1435 = {
+    {
+        /* Type */ INSTRUMENT_PCM_ALIGNED,
+        /* unk1 */ 0x3c,
+        /* unk2 */ 0x7f,
+    },
+    /* Sample */ &sfx_787WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22442,14 +22442,14 @@ const struct InstrumentPCM instrumentPCMData1435 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_788SampleInfo;
-const struct InstrumentPCM instrumentPCMData1436 = {
+extern const struct WaveData sfx_788WaveData;
+const struct InstrumentPCM instrumentPCM1436 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_788SampleInfo,
+    /* Sample */ &sfx_788WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22458,14 +22458,14 @@ const struct InstrumentPCM instrumentPCMData1436 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_789SampleInfo;
-const struct InstrumentPCM instrumentPCMData1437 = {
+extern const struct WaveData sfx_789WaveData;
+const struct InstrumentPCM instrumentPCM1437 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_789SampleInfo,
+    /* Sample */ &sfx_789WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22474,14 +22474,14 @@ const struct InstrumentPCM instrumentPCMData1437 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_790SampleInfo;
-const struct InstrumentPCM instrumentPCMData1438 = {
+extern const struct WaveData sfx_790WaveData;
+const struct InstrumentPCM instrumentPCM1438 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_790SampleInfo,
+    /* Sample */ &sfx_790WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x00600000,
@@ -22490,14 +22490,14 @@ const struct InstrumentPCM instrumentPCMData1438 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_791SampleInfo;
-const struct InstrumentPCM instrumentPCMData1439 = {
+extern const struct WaveData sfx_791WaveData;
+const struct InstrumentPCM instrumentPCM1439 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_791SampleInfo,
+    /* Sample */ &sfx_791WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22506,14 +22506,14 @@ const struct InstrumentPCM instrumentPCMData1439 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_449SampleInfo;
-const struct InstrumentPCM instrumentPCMData1440 = {
+extern const struct WaveData sfx_449WaveData;
+const struct InstrumentPCM instrumentPCM1440 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffe0,
     },
-    /* Sample */ &sfx_449SampleInfo,
+    /* Sample */ &sfx_449WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22522,14 +22522,14 @@ const struct InstrumentPCM instrumentPCMData1440 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_792SampleInfo;
-const struct InstrumentPCM instrumentPCMData1441 = {
+extern const struct WaveData sfx_792WaveData;
+const struct InstrumentPCM instrumentPCM1441 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_792SampleInfo,
+    /* Sample */ &sfx_792WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22538,14 +22538,14 @@ const struct InstrumentPCM instrumentPCMData1441 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_451SampleInfo;
-const struct InstrumentPCM instrumentPCMData1442 = {
+extern const struct WaveData sfx_451WaveData;
+const struct InstrumentPCM instrumentPCM1442 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0xffe0,
     },
-    /* Sample */ &sfx_451SampleInfo,
+    /* Sample */ &sfx_451WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22554,14 +22554,14 @@ const struct InstrumentPCM instrumentPCMData1442 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_793SampleInfo;
-const struct InstrumentPCM instrumentPCMData1443 = {
+extern const struct WaveData sfx_793WaveData;
+const struct InstrumentPCM instrumentPCM1443 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x30,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_793SampleInfo,
+    /* Sample */ &sfx_793WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x00600000,
@@ -22570,14 +22570,14 @@ const struct InstrumentPCM instrumentPCMData1443 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_591SampleInfo;
-const struct InstrumentPCM instrumentPCMData1444 = {
+extern const struct WaveData sfx_591WaveData;
+const struct InstrumentPCM instrumentPCM1444 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_591SampleInfo,
+    /* Sample */ &sfx_591WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22586,14 +22586,14 @@ const struct InstrumentPCM instrumentPCMData1444 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_793SampleInfo;
-const struct InstrumentPCM instrumentPCMData1445 = {
+extern const struct WaveData sfx_793WaveData;
+const struct InstrumentPCM instrumentPCM1445 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x36,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_793SampleInfo,
+    /* Sample */ &sfx_793WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x00600000,
@@ -22602,14 +22602,14 @@ const struct InstrumentPCM instrumentPCMData1445 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_793SampleInfo;
-const struct InstrumentPCM instrumentPCMData1446 = {
+extern const struct WaveData sfx_793WaveData;
+const struct InstrumentPCM instrumentPCM1446 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_793SampleInfo,
+    /* Sample */ &sfx_793WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x00600000,
@@ -22618,14 +22618,14 @@ const struct InstrumentPCM instrumentPCMData1446 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_794SampleInfo;
-const struct InstrumentPCM instrumentPCMData1447 = {
+extern const struct WaveData sfx_794WaveData;
+const struct InstrumentPCM instrumentPCM1447 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_794SampleInfo,
+    /* Sample */ &sfx_794WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00014867,
     /* unk10  */ 0x00600000,
@@ -22634,14 +22634,14 @@ const struct InstrumentPCM instrumentPCMData1447 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_795SampleInfo;
-const struct InstrumentPCM instrumentPCMData1448 = {
+extern const struct WaveData sfx_795WaveData;
+const struct InstrumentPCM instrumentPCM1448 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_795SampleInfo,
+    /* Sample */ &sfx_795WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x00600000,
@@ -22650,14 +22650,14 @@ const struct InstrumentPCM instrumentPCMData1448 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_796SampleInfo;
-const struct InstrumentPCM instrumentPCMData1449 = {
+extern const struct WaveData sfx_796WaveData;
+const struct InstrumentPCM instrumentPCM1449 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x39,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_796SampleInfo,
+    /* Sample */ &sfx_796WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22666,14 +22666,14 @@ const struct InstrumentPCM instrumentPCMData1449 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_796SampleInfo;
-const struct InstrumentPCM instrumentPCMData1450 = {
+extern const struct WaveData sfx_796WaveData;
+const struct InstrumentPCM instrumentPCM1450 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3f,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_796SampleInfo,
+    /* Sample */ &sfx_796WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22682,14 +22682,14 @@ const struct InstrumentPCM instrumentPCMData1450 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_796SampleInfo;
-const struct InstrumentPCM instrumentPCMData1451 = {
+extern const struct WaveData sfx_796WaveData;
+const struct InstrumentPCM instrumentPCM1451 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x46,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_796SampleInfo,
+    /* Sample */ &sfx_796WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22698,14 +22698,14 @@ const struct InstrumentPCM instrumentPCMData1451 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_797SampleInfo;
-const struct InstrumentPCM instrumentPCMData1452 = {
+extern const struct WaveData sfx_797WaveData;
+const struct InstrumentPCM instrumentPCM1452 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_797SampleInfo,
+    /* Sample */ &sfx_797WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22714,14 +22714,14 @@ const struct InstrumentPCM instrumentPCMData1452 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_798SampleInfo;
-const struct InstrumentPCM instrumentPCMData1453 = {
+extern const struct WaveData sfx_798WaveData;
+const struct InstrumentPCM instrumentPCM1453 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_798SampleInfo,
+    /* Sample */ &sfx_798WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22730,14 +22730,14 @@ const struct InstrumentPCM instrumentPCMData1453 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_799SampleInfo;
-const struct InstrumentPCM instrumentPCMData1454 = {
+extern const struct WaveData sfx_799WaveData;
+const struct InstrumentPCM instrumentPCM1454 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_799SampleInfo,
+    /* Sample */ &sfx_799WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22746,14 +22746,14 @@ const struct InstrumentPCM instrumentPCMData1454 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_456SampleInfo;
-const struct InstrumentPCM instrumentPCMData1455 = {
+extern const struct WaveData sfx_456WaveData;
+const struct InstrumentPCM instrumentPCM1455 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_456SampleInfo,
+    /* Sample */ &sfx_456WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22762,14 +22762,14 @@ const struct InstrumentPCM instrumentPCMData1455 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_800SampleInfo;
-const struct InstrumentPCM instrumentPCMData1456 = {
+extern const struct WaveData sfx_800WaveData;
+const struct InstrumentPCM instrumentPCM1456 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_800SampleInfo,
+    /* Sample */ &sfx_800WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x004cf83e,
     /* unk10  */ 0x00600000,
@@ -22778,14 +22778,14 @@ const struct InstrumentPCM instrumentPCMData1456 = {
     /* unk1C  */ 0x00022aa4,
 };
 
-extern const struct SampleInfo sfx_801SampleInfo;
-const struct InstrumentPCM instrumentPCMData1457 = {
+extern const struct WaveData sfx_801WaveData;
+const struct InstrumentPCM instrumentPCM1457 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_801SampleInfo,
+    /* Sample */ &sfx_801WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22794,14 +22794,14 @@ const struct InstrumentPCM instrumentPCMData1457 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_600SampleInfo;
-const struct InstrumentPCM instrumentPCMData1458 = {
+extern const struct WaveData sfx_600WaveData;
+const struct InstrumentPCM instrumentPCM1458 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_600SampleInfo,
+    /* Sample */ &sfx_600WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22810,14 +22810,14 @@ const struct InstrumentPCM instrumentPCMData1458 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_588SampleInfo;
-const struct InstrumentPCM instrumentPCMData1459 = {
+extern const struct WaveData sfx_588WaveData;
+const struct InstrumentPCM instrumentPCM1459 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_588SampleInfo,
+    /* Sample */ &sfx_588WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22826,14 +22826,14 @@ const struct InstrumentPCM instrumentPCMData1459 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_589SampleInfo;
-const struct InstrumentPCM instrumentPCMData1460 = {
+extern const struct WaveData sfx_589WaveData;
+const struct InstrumentPCM instrumentPCM1460 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_589SampleInfo,
+    /* Sample */ &sfx_589WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22842,14 +22842,14 @@ const struct InstrumentPCM instrumentPCMData1460 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_802SampleInfo;
-const struct InstrumentPCM instrumentPCMData1461 = {
+extern const struct WaveData sfx_802WaveData;
+const struct InstrumentPCM instrumentPCM1461 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_802SampleInfo,
+    /* Sample */ &sfx_802WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22858,14 +22858,14 @@ const struct InstrumentPCM instrumentPCMData1461 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_803SampleInfo;
-const struct InstrumentPCM instrumentPCMData1462 = {
+extern const struct WaveData sfx_803WaveData;
+const struct InstrumentPCM instrumentPCM1462 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_803SampleInfo,
+    /* Sample */ &sfx_803WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -22874,14 +22874,14 @@ const struct InstrumentPCM instrumentPCMData1462 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_188SampleInfo;
-const struct InstrumentPCM instrumentPCMData1463 = {
+extern const struct WaveData sfx_188WaveData;
+const struct InstrumentPCM instrumentPCM1463 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x20,
     },
-    /* Sample */ &sfx_188SampleInfo,
+    /* Sample */ &sfx_188WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22890,14 +22890,14 @@ const struct InstrumentPCM instrumentPCMData1463 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_804SampleInfo;
-const struct InstrumentPCM instrumentPCMData1464 = {
+extern const struct WaveData sfx_804WaveData;
+const struct InstrumentPCM instrumentPCM1464 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_804SampleInfo,
+    /* Sample */ &sfx_804WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00267c1f,
     /* unk10  */ 0x00600000,
@@ -22906,14 +22906,14 @@ const struct InstrumentPCM instrumentPCMData1464 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_805SampleInfo;
-const struct InstrumentPCM instrumentPCMData1465 = {
+extern const struct WaveData sfx_805WaveData;
+const struct InstrumentPCM instrumentPCM1465 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_805SampleInfo,
+    /* Sample */ &sfx_805WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22922,14 +22922,14 @@ const struct InstrumentPCM instrumentPCMData1465 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_806SampleInfo;
-const struct InstrumentPCM instrumentPCMData1466 = {
+extern const struct WaveData sfx_806WaveData;
+const struct InstrumentPCM instrumentPCM1466 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_806SampleInfo,
+    /* Sample */ &sfx_806WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22938,14 +22938,14 @@ const struct InstrumentPCM instrumentPCMData1466 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_807SampleInfo;
-const struct InstrumentPCM instrumentPCMData1467 = {
+extern const struct WaveData sfx_807WaveData;
+const struct InstrumentPCM instrumentPCM1467 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_807SampleInfo,
+    /* Sample */ &sfx_807WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22954,14 +22954,14 @@ const struct InstrumentPCM instrumentPCMData1467 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_023SampleInfo;
-const struct InstrumentPCM instrumentPCMData1468 = {
+extern const struct WaveData sfx_023WaveData;
+const struct InstrumentPCM instrumentPCM1468 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_023SampleInfo,
+    /* Sample */ &sfx_023WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22970,14 +22970,14 @@ const struct InstrumentPCM instrumentPCMData1468 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_808SampleInfo;
-const struct InstrumentPCM instrumentPCMData1469 = {
+extern const struct WaveData sfx_808WaveData;
+const struct InstrumentPCM instrumentPCM1469 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_808SampleInfo,
+    /* Sample */ &sfx_808WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -22986,14 +22986,14 @@ const struct InstrumentPCM instrumentPCMData1469 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_809SampleInfo;
-const struct InstrumentPCM instrumentPCMData1470 = {
+extern const struct WaveData sfx_809WaveData;
+const struct InstrumentPCM instrumentPCM1470 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_809SampleInfo,
+    /* Sample */ &sfx_809WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0066a052,
     /* unk10  */ 0x00600000,
@@ -23002,14 +23002,14 @@ const struct InstrumentPCM instrumentPCMData1470 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_810SampleInfo;
-const struct InstrumentPCM instrumentPCMData1471 = {
+extern const struct WaveData sfx_810WaveData;
+const struct InstrumentPCM instrumentPCM1471 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_810SampleInfo,
+    /* Sample */ &sfx_810WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x00600000,
@@ -23018,14 +23018,14 @@ const struct InstrumentPCM instrumentPCMData1471 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_811SampleInfo;
-const struct InstrumentPCM instrumentPCMData1472 = {
+extern const struct WaveData sfx_811WaveData;
+const struct InstrumentPCM instrumentPCM1472 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_811SampleInfo,
+    /* Sample */ &sfx_811WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x00600000,
@@ -23034,14 +23034,14 @@ const struct InstrumentPCM instrumentPCMData1472 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_812SampleInfo;
-const struct InstrumentPCM instrumentPCMData1473 = {
+extern const struct WaveData sfx_812WaveData;
+const struct InstrumentPCM instrumentPCM1473 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_812SampleInfo,
+    /* Sample */ &sfx_812WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00133e0f,
     /* unk10  */ 0x00600000,
@@ -23050,14 +23050,14 @@ const struct InstrumentPCM instrumentPCMData1473 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_813SampleInfo;
-const struct InstrumentPCM instrumentPCMData1474 = {
+extern const struct WaveData sfx_813WaveData;
+const struct InstrumentPCM instrumentPCM1474 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_813SampleInfo,
+    /* Sample */ &sfx_813WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x00600000,
@@ -23066,14 +23066,14 @@ const struct InstrumentPCM instrumentPCMData1474 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_814SampleInfo;
-const struct InstrumentPCM instrumentPCMData1475 = {
+extern const struct WaveData sfx_814WaveData;
+const struct InstrumentPCM instrumentPCM1475 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x37,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_814SampleInfo,
+    /* Sample */ &sfx_814WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23082,14 +23082,14 @@ const struct InstrumentPCM instrumentPCMData1475 = {
     /* unk1C  */ 0x00031548,
 };
 
-extern const struct SampleInfo sfx_123SampleInfo;
-const struct InstrumentPCM instrumentPCMData1476 = {
+extern const struct WaveData sfx_123WaveData;
+const struct InstrumentPCM instrumentPCM1476 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_123SampleInfo,
+    /* Sample */ &sfx_123WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23098,14 +23098,14 @@ const struct InstrumentPCM instrumentPCMData1476 = {
     /* unk1C  */ 0x00055552,
 };
 
-extern const struct SampleInfo sfx_815SampleInfo;
-const struct InstrumentPCM instrumentPCMData1477 = {
+extern const struct WaveData sfx_815WaveData;
+const struct InstrumentPCM instrumentPCM1477 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_815SampleInfo,
+    /* Sample */ &sfx_815WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23114,14 +23114,14 @@ const struct InstrumentPCM instrumentPCMData1477 = {
     /* unk1C  */ 0x00055552,
 };
 
-extern const struct SampleInfo sfx_816SampleInfo;
-const struct InstrumentPCM instrumentPCMData1478 = {
+extern const struct WaveData sfx_816WaveData;
+const struct InstrumentPCM instrumentPCM1478 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_816SampleInfo,
+    /* Sample */ &sfx_816WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23130,14 +23130,14 @@ const struct InstrumentPCM instrumentPCMData1478 = {
     /* unk1C  */ 0x00055552,
 };
 
-extern const struct SampleInfo sfx_817SampleInfo;
-const struct InstrumentPCM instrumentPCMData1479 = {
+extern const struct WaveData sfx_817WaveData;
+const struct InstrumentPCM instrumentPCM1479 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_817SampleInfo,
+    /* Sample */ &sfx_817WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23146,14 +23146,14 @@ const struct InstrumentPCM instrumentPCMData1479 = {
     /* unk1C  */ 0x00055552,
 };
 
-extern const struct SampleInfo sfx_818SampleInfo;
-const struct InstrumentPCM instrumentPCMData1480 = {
+extern const struct WaveData sfx_818WaveData;
+const struct InstrumentPCM instrumentPCM1480 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_818SampleInfo,
+    /* Sample */ &sfx_818WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23162,14 +23162,14 @@ const struct InstrumentPCM instrumentPCMData1480 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_819SampleInfo;
-const struct InstrumentPCM instrumentPCMData1481 = {
+extern const struct WaveData sfx_819WaveData;
+const struct InstrumentPCM instrumentPCM1481 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_819SampleInfo,
+    /* Sample */ &sfx_819WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23178,14 +23178,14 @@ const struct InstrumentPCM instrumentPCMData1481 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_820SampleInfo;
-const struct InstrumentPCM instrumentPCMData1482 = {
+extern const struct WaveData sfx_820WaveData;
+const struct InstrumentPCM instrumentPCM1482 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_820SampleInfo,
+    /* Sample */ &sfx_820WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23194,14 +23194,14 @@ const struct InstrumentPCM instrumentPCMData1482 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_821SampleInfo;
-const struct InstrumentPCM instrumentPCMData1483 = {
+extern const struct WaveData sfx_821WaveData;
+const struct InstrumentPCM instrumentPCM1483 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_821SampleInfo,
+    /* Sample */ &sfx_821WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23210,14 +23210,14 @@ const struct InstrumentPCM instrumentPCMData1483 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_822SampleInfo;
-const struct InstrumentPCM instrumentPCMData1484 = {
+extern const struct WaveData sfx_822WaveData;
+const struct InstrumentPCM instrumentPCM1484 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_822SampleInfo,
+    /* Sample */ &sfx_822WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23226,14 +23226,14 @@ const struct InstrumentPCM instrumentPCMData1484 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_823SampleInfo;
-const struct InstrumentPCM instrumentPCMData1485 = {
+extern const struct WaveData sfx_823WaveData;
+const struct InstrumentPCM instrumentPCM1485 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_823SampleInfo,
+    /* Sample */ &sfx_823WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0066a052,
     /* unk10  */ 0x00600000,
@@ -23242,14 +23242,14 @@ const struct InstrumentPCM instrumentPCMData1485 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_824SampleInfo;
-const struct InstrumentPCM instrumentPCMData1486 = {
+extern const struct WaveData sfx_824WaveData;
+const struct InstrumentPCM instrumentPCM1486 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_824SampleInfo,
+    /* Sample */ &sfx_824WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23258,14 +23258,14 @@ const struct InstrumentPCM instrumentPCMData1486 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_034SampleInfo;
-const struct InstrumentPCM instrumentPCMData1487 = {
+extern const struct WaveData sfx_034WaveData;
+const struct InstrumentPCM instrumentPCM1487 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_034SampleInfo,
+    /* Sample */ &sfx_034WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23274,14 +23274,14 @@ const struct InstrumentPCM instrumentPCMData1487 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_600SampleInfo;
-const struct InstrumentPCM instrumentPCMData1488 = {
+extern const struct WaveData sfx_600WaveData;
+const struct InstrumentPCM instrumentPCM1488 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_600SampleInfo,
+    /* Sample */ &sfx_600WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23290,14 +23290,14 @@ const struct InstrumentPCM instrumentPCMData1488 = {
     /* unk1C  */ 0x00013fff,
 };
 
-extern const struct SampleInfo sfx_825SampleInfo;
-const struct InstrumentPCM instrumentPCMData1489 = {
+extern const struct WaveData sfx_825WaveData;
+const struct InstrumentPCM instrumentPCM1489 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_825SampleInfo,
+    /* Sample */ &sfx_825WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23306,14 +23306,14 @@ const struct InstrumentPCM instrumentPCMData1489 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_030SampleInfo;
-const struct InstrumentPCM instrumentPCMData1490 = {
+extern const struct WaveData sfx_030WaveData;
+const struct InstrumentPCM instrumentPCM1490 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_030SampleInfo,
+    /* Sample */ &sfx_030WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00307c1f,
@@ -23322,14 +23322,14 @@ const struct InstrumentPCM instrumentPCMData1490 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_826SampleInfo;
-const struct InstrumentPCM instrumentPCMData1491 = {
+extern const struct WaveData sfx_826WaveData;
+const struct InstrumentPCM instrumentPCM1491 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_826SampleInfo,
+    /* Sample */ &sfx_826WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23338,14 +23338,14 @@ const struct InstrumentPCM instrumentPCMData1491 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_827SampleInfo;
-const struct InstrumentPCM instrumentPCMData1492 = {
+extern const struct WaveData sfx_827WaveData;
+const struct InstrumentPCM instrumentPCM1492 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_827SampleInfo,
+    /* Sample */ &sfx_827WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23354,14 +23354,14 @@ const struct InstrumentPCM instrumentPCMData1492 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_828SampleInfo;
-const struct InstrumentPCM instrumentPCMData1493 = {
+extern const struct WaveData sfx_828WaveData;
+const struct InstrumentPCM instrumentPCM1493 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_828SampleInfo,
+    /* Sample */ &sfx_828WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23370,14 +23370,14 @@ const struct InstrumentPCM instrumentPCMData1493 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_829SampleInfo;
-const struct InstrumentPCM instrumentPCMData1494 = {
+extern const struct WaveData sfx_829WaveData;
+const struct InstrumentPCM instrumentPCM1494 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_829SampleInfo,
+    /* Sample */ &sfx_829WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23386,14 +23386,14 @@ const struct InstrumentPCM instrumentPCMData1494 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_830SampleInfo;
-const struct InstrumentPCM instrumentPCMData1495 = {
+extern const struct WaveData sfx_830WaveData;
+const struct InstrumentPCM instrumentPCM1495 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_830SampleInfo,
+    /* Sample */ &sfx_830WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23402,14 +23402,14 @@ const struct InstrumentPCM instrumentPCMData1495 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_831SampleInfo;
-const struct InstrumentPCM instrumentPCMData1496 = {
+extern const struct WaveData sfx_831WaveData;
+const struct InstrumentPCM instrumentPCM1496 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_831SampleInfo,
+    /* Sample */ &sfx_831WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23418,14 +23418,14 @@ const struct InstrumentPCM instrumentPCMData1496 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_832SampleInfo;
-const struct InstrumentPCM instrumentPCMData1497 = {
+extern const struct WaveData sfx_832WaveData;
+const struct InstrumentPCM instrumentPCM1497 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_832SampleInfo,
+    /* Sample */ &sfx_832WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23434,14 +23434,14 @@ const struct InstrumentPCM instrumentPCMData1497 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_833SampleInfo;
-const struct InstrumentPCM instrumentPCMData1498 = {
+extern const struct WaveData sfx_833WaveData;
+const struct InstrumentPCM instrumentPCM1498 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_833SampleInfo,
+    /* Sample */ &sfx_833WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23450,14 +23450,14 @@ const struct InstrumentPCM instrumentPCMData1498 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_834SampleInfo;
-const struct InstrumentPCM instrumentPCMData1499 = {
+extern const struct WaveData sfx_834WaveData;
+const struct InstrumentPCM instrumentPCM1499 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_834SampleInfo,
+    /* Sample */ &sfx_834WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23466,14 +23466,14 @@ const struct InstrumentPCM instrumentPCMData1499 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_835SampleInfo;
-const struct InstrumentPCM instrumentPCMData1500 = {
+extern const struct WaveData sfx_835WaveData;
+const struct InstrumentPCM instrumentPCM1500 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_835SampleInfo,
+    /* Sample */ &sfx_835WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23482,7 +23482,7 @@ const struct InstrumentPCM instrumentPCMData1500 = {
     /* unk1C  */ 0x001fc000,
 };
 
-const struct InstrumentPSG instrumentPSGData1501 = {
+const struct InstrumentPSG instrumentPSG1501 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -23500,14 +23500,14 @@ const struct InstrumentPSG instrumentPSGData1501 = {
     /* unk22        */ 0x0,
 };
 
-extern const struct SampleInfo sfx_824SampleInfo;
-const struct InstrumentPCM instrumentPCMData1502 = {
+extern const struct WaveData sfx_824WaveData;
+const struct InstrumentPCM instrumentPCM1502 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_824SampleInfo,
+    /* Sample */ &sfx_824WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23516,14 +23516,14 @@ const struct InstrumentPCM instrumentPCMData1502 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_836SampleInfo;
-const struct InstrumentPCM instrumentPCMData1503 = {
+extern const struct WaveData sfx_836WaveData;
+const struct InstrumentPCM instrumentPCM1503 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_836SampleInfo,
+    /* Sample */ &sfx_836WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23532,14 +23532,14 @@ const struct InstrumentPCM instrumentPCMData1503 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_791SampleInfo;
-const struct InstrumentPCM instrumentPCMData1504 = {
+extern const struct WaveData sfx_791WaveData;
+const struct InstrumentPCM instrumentPCM1504 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_791SampleInfo,
+    /* Sample */ &sfx_791WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23548,14 +23548,14 @@ const struct InstrumentPCM instrumentPCMData1504 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_837SampleInfo;
-const struct InstrumentPCM instrumentPCMData1505 = {
+extern const struct WaveData sfx_837WaveData;
+const struct InstrumentPCM instrumentPCM1505 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_837SampleInfo,
+    /* Sample */ &sfx_837WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23564,14 +23564,14 @@ const struct InstrumentPCM instrumentPCMData1505 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_838SampleInfo;
-const struct InstrumentPCM instrumentPCMData1506 = {
+extern const struct WaveData sfx_838WaveData;
+const struct InstrumentPCM instrumentPCM1506 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_838SampleInfo,
+    /* Sample */ &sfx_838WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23580,14 +23580,14 @@ const struct InstrumentPCM instrumentPCMData1506 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_839SampleInfo;
-const struct InstrumentPCM instrumentPCMData1507 = {
+extern const struct WaveData sfx_839WaveData;
+const struct InstrumentPCM instrumentPCM1507 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_839SampleInfo,
+    /* Sample */ &sfx_839WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23596,14 +23596,14 @@ const struct InstrumentPCM instrumentPCMData1507 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_824SampleInfo;
-const struct InstrumentPCM instrumentPCMData1508 = {
+extern const struct WaveData sfx_824WaveData;
+const struct InstrumentPCM instrumentPCM1508 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_824SampleInfo,
+    /* Sample */ &sfx_824WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23612,14 +23612,14 @@ const struct InstrumentPCM instrumentPCMData1508 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_509SampleInfo;
-const struct InstrumentPCM instrumentPCMData1509 = {
+extern const struct WaveData sfx_509WaveData;
+const struct InstrumentPCM instrumentPCM1509 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_509SampleInfo,
+    /* Sample */ &sfx_509WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23628,14 +23628,14 @@ const struct InstrumentPCM instrumentPCMData1509 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_840SampleInfo;
-const struct InstrumentPCM instrumentPCMData1510 = {
+extern const struct WaveData sfx_840WaveData;
+const struct InstrumentPCM instrumentPCM1510 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_840SampleInfo,
+    /* Sample */ &sfx_840WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23644,14 +23644,14 @@ const struct InstrumentPCM instrumentPCMData1510 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_832SampleInfo;
-const struct InstrumentPCM instrumentPCMData1511 = {
+extern const struct WaveData sfx_832WaveData;
+const struct InstrumentPCM instrumentPCM1511 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_832SampleInfo,
+    /* Sample */ &sfx_832WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23660,14 +23660,14 @@ const struct InstrumentPCM instrumentPCMData1511 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_818SampleInfo;
-const struct InstrumentPCM instrumentPCMData1512 = {
+extern const struct WaveData sfx_818WaveData;
+const struct InstrumentPCM instrumentPCM1512 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_818SampleInfo,
+    /* Sample */ &sfx_818WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23676,14 +23676,14 @@ const struct InstrumentPCM instrumentPCMData1512 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_841SampleInfo;
-const struct InstrumentPCM instrumentPCMData1513 = {
+extern const struct WaveData sfx_841WaveData;
+const struct InstrumentPCM instrumentPCM1513 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_841SampleInfo,
+    /* Sample */ &sfx_841WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23692,14 +23692,14 @@ const struct InstrumentPCM instrumentPCMData1513 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_823SampleInfo;
-const struct InstrumentPCM instrumentPCMData1514 = {
+extern const struct WaveData sfx_823WaveData;
+const struct InstrumentPCM instrumentPCM1514 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_823SampleInfo,
+    /* Sample */ &sfx_823WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0066a052,
     /* unk10  */ 0x00600000,
@@ -23708,14 +23708,14 @@ const struct InstrumentPCM instrumentPCMData1514 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_127SampleInfo;
-const struct InstrumentPCM instrumentPCMData1515 = {
+extern const struct WaveData sfx_127WaveData;
+const struct InstrumentPCM instrumentPCM1515 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_127SampleInfo,
+    /* Sample */ &sfx_127WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23724,14 +23724,14 @@ const struct InstrumentPCM instrumentPCMData1515 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_842SampleInfo;
-const struct InstrumentPCM instrumentPCMData1516 = {
+extern const struct WaveData sfx_842WaveData;
+const struct InstrumentPCM instrumentPCM1516 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_842SampleInfo,
+    /* Sample */ &sfx_842WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23740,14 +23740,14 @@ const struct InstrumentPCM instrumentPCMData1516 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_835SampleInfo;
-const struct InstrumentPCM instrumentPCMData1517 = {
+extern const struct WaveData sfx_835WaveData;
+const struct InstrumentPCM instrumentPCM1517 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_835SampleInfo,
+    /* Sample */ &sfx_835WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23756,7 +23756,7 @@ const struct InstrumentPCM instrumentPCMData1517 = {
     /* unk1C  */ 0x001fc000,
 };
 
-const struct InstrumentPSG instrumentPSGData1518 = {
+const struct InstrumentPSG instrumentPSG1518 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -23774,14 +23774,14 @@ const struct InstrumentPSG instrumentPSGData1518 = {
     /* unk22        */ 0x0,
 };
 
-extern const struct SampleInfo sfx_819SampleInfo;
-const struct InstrumentPCM instrumentPCMData1519 = {
+extern const struct WaveData sfx_819WaveData;
+const struct InstrumentPCM instrumentPCM1519 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_819SampleInfo,
+    /* Sample */ &sfx_819WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23790,14 +23790,14 @@ const struct InstrumentPCM instrumentPCMData1519 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_843SampleInfo;
-const struct InstrumentPCM instrumentPCMData1520 = {
+extern const struct WaveData sfx_843WaveData;
+const struct InstrumentPCM instrumentPCM1520 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_843SampleInfo,
+    /* Sample */ &sfx_843WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23806,14 +23806,14 @@ const struct InstrumentPCM instrumentPCMData1520 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_844SampleInfo;
-const struct InstrumentPCM instrumentPCMData1521 = {
+extern const struct WaveData sfx_844WaveData;
+const struct InstrumentPCM instrumentPCM1521 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_844SampleInfo,
+    /* Sample */ &sfx_844WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23822,14 +23822,14 @@ const struct InstrumentPCM instrumentPCMData1521 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_845SampleInfo;
-const struct InstrumentPCM instrumentPCMData1522 = {
+extern const struct WaveData sfx_845WaveData;
+const struct InstrumentPCM instrumentPCM1522 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_845SampleInfo,
+    /* Sample */ &sfx_845WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23838,14 +23838,14 @@ const struct InstrumentPCM instrumentPCMData1522 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_846SampleInfo;
-const struct InstrumentPCM instrumentPCMData1523 = {
+extern const struct WaveData sfx_846WaveData;
+const struct InstrumentPCM instrumentPCM1523 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_846SampleInfo,
+    /* Sample */ &sfx_846WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23854,14 +23854,14 @@ const struct InstrumentPCM instrumentPCMData1523 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_839SampleInfo;
-const struct InstrumentPCM instrumentPCMData1524 = {
+extern const struct WaveData sfx_839WaveData;
+const struct InstrumentPCM instrumentPCM1524 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_839SampleInfo,
+    /* Sample */ &sfx_839WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23870,14 +23870,14 @@ const struct InstrumentPCM instrumentPCMData1524 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_847SampleInfo;
-const struct InstrumentPCM instrumentPCMData1525 = {
+extern const struct WaveData sfx_847WaveData;
+const struct InstrumentPCM instrumentPCM1525 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_847SampleInfo,
+    /* Sample */ &sfx_847WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23886,14 +23886,14 @@ const struct InstrumentPCM instrumentPCMData1525 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_848SampleInfo;
-const struct InstrumentPCM instrumentPCMData1526 = {
+extern const struct WaveData sfx_848WaveData;
+const struct InstrumentPCM instrumentPCM1526 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_848SampleInfo,
+    /* Sample */ &sfx_848WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23902,14 +23902,14 @@ const struct InstrumentPCM instrumentPCMData1526 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_849SampleInfo;
-const struct InstrumentPCM instrumentPCMData1527 = {
+extern const struct WaveData sfx_849WaveData;
+const struct InstrumentPCM instrumentPCM1527 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_849SampleInfo,
+    /* Sample */ &sfx_849WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23918,14 +23918,14 @@ const struct InstrumentPCM instrumentPCMData1527 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_429SampleInfo;
-const struct InstrumentPCM instrumentPCMData1528 = {
+extern const struct WaveData sfx_429WaveData;
+const struct InstrumentPCM instrumentPCM1528 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_429SampleInfo,
+    /* Sample */ &sfx_429WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23934,14 +23934,14 @@ const struct InstrumentPCM instrumentPCMData1528 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_820SampleInfo;
-const struct InstrumentPCM instrumentPCMData1529 = {
+extern const struct WaveData sfx_820WaveData;
+const struct InstrumentPCM instrumentPCM1529 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_820SampleInfo,
+    /* Sample */ &sfx_820WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23950,14 +23950,14 @@ const struct InstrumentPCM instrumentPCMData1529 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_850SampleInfo;
-const struct InstrumentPCM instrumentPCMData1530 = {
+extern const struct WaveData sfx_850WaveData;
+const struct InstrumentPCM instrumentPCM1530 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_850SampleInfo,
+    /* Sample */ &sfx_850WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23966,14 +23966,14 @@ const struct InstrumentPCM instrumentPCMData1530 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_851SampleInfo;
-const struct InstrumentPCM instrumentPCMData1531 = {
+extern const struct WaveData sfx_851WaveData;
+const struct InstrumentPCM instrumentPCM1531 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_851SampleInfo,
+    /* Sample */ &sfx_851WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23982,14 +23982,14 @@ const struct InstrumentPCM instrumentPCMData1531 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_852SampleInfo;
-const struct InstrumentPCM instrumentPCMData1532 = {
+extern const struct WaveData sfx_852WaveData;
+const struct InstrumentPCM instrumentPCM1532 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_852SampleInfo,
+    /* Sample */ &sfx_852WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -23998,14 +23998,14 @@ const struct InstrumentPCM instrumentPCMData1532 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_853SampleInfo;
-const struct InstrumentPCM instrumentPCMData1533 = {
+extern const struct WaveData sfx_853WaveData;
+const struct InstrumentPCM instrumentPCM1533 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_853SampleInfo,
+    /* Sample */ &sfx_853WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24014,14 +24014,14 @@ const struct InstrumentPCM instrumentPCMData1533 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_854SampleInfo;
-const struct InstrumentPCM instrumentPCMData1534 = {
+extern const struct WaveData sfx_854WaveData;
+const struct InstrumentPCM instrumentPCM1534 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_854SampleInfo,
+    /* Sample */ &sfx_854WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24030,14 +24030,14 @@ const struct InstrumentPCM instrumentPCMData1534 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_004SampleInfo;
-const struct InstrumentPCM instrumentPCMData1535 = {
+extern const struct WaveData sfx_004WaveData;
+const struct InstrumentPCM instrumentPCM1535 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_004SampleInfo,
+    /* Sample */ &sfx_004WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24046,14 +24046,14 @@ const struct InstrumentPCM instrumentPCMData1535 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_428SampleInfo;
-const struct InstrumentPCM instrumentPCMData1536 = {
+extern const struct WaveData sfx_428WaveData;
+const struct InstrumentPCM instrumentPCM1536 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_428SampleInfo,
+    /* Sample */ &sfx_428WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -24062,14 +24062,14 @@ const struct InstrumentPCM instrumentPCMData1536 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_214SampleInfo;
-const struct InstrumentPCM instrumentPCMData1537 = {
+extern const struct WaveData sfx_214WaveData;
+const struct InstrumentPCM instrumentPCM1537 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_214SampleInfo,
+    /* Sample */ &sfx_214WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24078,14 +24078,14 @@ const struct InstrumentPCM instrumentPCMData1537 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_122SampleInfo;
-const struct InstrumentPCM instrumentPCMData1538 = {
+extern const struct WaveData sfx_122WaveData;
+const struct InstrumentPCM instrumentPCM1538 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_122SampleInfo,
+    /* Sample */ &sfx_122WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24094,14 +24094,14 @@ const struct InstrumentPCM instrumentPCMData1538 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_855SampleInfo;
-const struct InstrumentPCM instrumentPCMData1539 = {
+extern const struct WaveData sfx_855WaveData;
+const struct InstrumentPCM instrumentPCM1539 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_855SampleInfo,
+    /* Sample */ &sfx_855WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24110,14 +24110,14 @@ const struct InstrumentPCM instrumentPCMData1539 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_818SampleInfo;
-const struct InstrumentPCM instrumentPCMData1540 = {
+extern const struct WaveData sfx_818WaveData;
+const struct InstrumentPCM instrumentPCM1540 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_818SampleInfo,
+    /* Sample */ &sfx_818WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24126,14 +24126,14 @@ const struct InstrumentPCM instrumentPCMData1540 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_819SampleInfo;
-const struct InstrumentPCM instrumentPCMData1541 = {
+extern const struct WaveData sfx_819WaveData;
+const struct InstrumentPCM instrumentPCM1541 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_819SampleInfo,
+    /* Sample */ &sfx_819WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24142,14 +24142,14 @@ const struct InstrumentPCM instrumentPCMData1541 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_835SampleInfo;
-const struct InstrumentPCM instrumentPCMData1542 = {
+extern const struct WaveData sfx_835WaveData;
+const struct InstrumentPCM instrumentPCM1542 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_835SampleInfo,
+    /* Sample */ &sfx_835WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24158,14 +24158,14 @@ const struct InstrumentPCM instrumentPCMData1542 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_856SampleInfo;
-const struct InstrumentPCM instrumentPCMData1543 = {
+extern const struct WaveData sfx_856WaveData;
+const struct InstrumentPCM instrumentPCM1543 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_856SampleInfo,
+    /* Sample */ &sfx_856WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x0073745d,
     /* unk10  */ 0x005c1f07,
@@ -24174,14 +24174,14 @@ const struct InstrumentPCM instrumentPCMData1543 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_857SampleInfo;
-const struct InstrumentPCM instrumentPCMData1544 = {
+extern const struct WaveData sfx_857WaveData;
+const struct InstrumentPCM instrumentPCM1544 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_857SampleInfo,
+    /* Sample */ &sfx_857WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24190,7 +24190,7 @@ const struct InstrumentPCM instrumentPCMData1544 = {
     /* unk1C  */ 0x001fc000,
 };
 
-const struct InstrumentPSG instrumentPSGData1545 = {
+const struct InstrumentPSG instrumentPSG1545 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -24208,14 +24208,14 @@ const struct InstrumentPSG instrumentPSGData1545 = {
     /* unk22        */ 0x8,
 };
 
-extern const struct SampleInfo sfx_820SampleInfo;
-const struct InstrumentPCM instrumentPCMData1546 = {
+extern const struct WaveData sfx_820WaveData;
+const struct InstrumentPCM instrumentPCM1546 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_820SampleInfo,
+    /* Sample */ &sfx_820WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24224,14 +24224,14 @@ const struct InstrumentPCM instrumentPCMData1546 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_834SampleInfo;
-const struct InstrumentPCM instrumentPCMData1547 = {
+extern const struct WaveData sfx_834WaveData;
+const struct InstrumentPCM instrumentPCM1547 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_834SampleInfo,
+    /* Sample */ &sfx_834WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24240,14 +24240,14 @@ const struct InstrumentPCM instrumentPCMData1547 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_858SampleInfo;
-const struct InstrumentPCM instrumentPCMData1548 = {
+extern const struct WaveData sfx_858WaveData;
+const struct InstrumentPCM instrumentPCM1548 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_858SampleInfo,
+    /* Sample */ &sfx_858WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24256,14 +24256,14 @@ const struct InstrumentPCM instrumentPCMData1548 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_859SampleInfo;
-const struct InstrumentPCM instrumentPCMData1549 = {
+extern const struct WaveData sfx_859WaveData;
+const struct InstrumentPCM instrumentPCM1549 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_859SampleInfo,
+    /* Sample */ &sfx_859WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x005c1f07,
@@ -24272,14 +24272,14 @@ const struct InstrumentPCM instrumentPCMData1549 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_086SampleInfo;
-const struct InstrumentPCM instrumentPCMData1550 = {
+extern const struct WaveData sfx_086WaveData;
+const struct InstrumentPCM instrumentPCM1550 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_086SampleInfo,
+    /* Sample */ &sfx_086WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24288,14 +24288,14 @@ const struct InstrumentPCM instrumentPCMData1550 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_197SampleInfo;
-const struct InstrumentPCM instrumentPCMData1551 = {
+extern const struct WaveData sfx_197WaveData;
+const struct InstrumentPCM instrumentPCM1551 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_197SampleInfo,
+    /* Sample */ &sfx_197WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24304,14 +24304,14 @@ const struct InstrumentPCM instrumentPCMData1551 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_860SampleInfo;
-const struct InstrumentPCM instrumentPCMData1552 = {
+extern const struct WaveData sfx_860WaveData;
+const struct InstrumentPCM instrumentPCM1552 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_860SampleInfo,
+    /* Sample */ &sfx_860WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00335029,
     /* unk10  */ 0x00600000,
@@ -24320,14 +24320,14 @@ const struct InstrumentPCM instrumentPCMData1552 = {
     /* unk1C  */ 0x00031548,
 };
 
-extern const struct SampleInfo sfx_860SampleInfo;
-const struct InstrumentPCM instrumentPCMData1553 = {
+extern const struct WaveData sfx_860WaveData;
+const struct InstrumentPCM instrumentPCM1553 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_860SampleInfo,
+    /* Sample */ &sfx_860WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x004cf83e,
     /* unk10  */ 0x00600000,
@@ -24336,14 +24336,14 @@ const struct InstrumentPCM instrumentPCMData1553 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_432SampleInfo;
-const struct InstrumentPCM instrumentPCMData1554 = {
+extern const struct WaveData sfx_432WaveData;
+const struct InstrumentPCM instrumentPCM1554 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_432SampleInfo,
+    /* Sample */ &sfx_432WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24352,7 +24352,7 @@ const struct InstrumentPCM instrumentPCMData1554 = {
     /* unk1C  */ 0x001fc000,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData1555 = {
+const struct InstrumentSubRhythm instrumentSubRhythm1555 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -24361,14 +24361,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData1555 = {
     /* Sub-bank */ (void *)0x08a9a2e8, // POINTER
 };
 
-extern const struct SampleInfo sfx_832SampleInfo;
-const struct InstrumentPCM instrumentPCMData1556 = {
+extern const struct WaveData sfx_832WaveData;
+const struct InstrumentPCM instrumentPCM1556 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_832SampleInfo,
+    /* Sample */ &sfx_832WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24377,14 +24377,14 @@ const struct InstrumentPCM instrumentPCMData1556 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_222SampleInfo;
-const struct InstrumentPCM instrumentPCMData1557 = {
+extern const struct WaveData sfx_222WaveData;
+const struct InstrumentPCM instrumentPCM1557 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_222SampleInfo,
+    /* Sample */ &sfx_222WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24393,14 +24393,14 @@ const struct InstrumentPCM instrumentPCMData1557 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_829SampleInfo;
-const struct InstrumentPCM instrumentPCMData1558 = {
+extern const struct WaveData sfx_829WaveData;
+const struct InstrumentPCM instrumentPCM1558 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_829SampleInfo,
+    /* Sample */ &sfx_829WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24409,7 +24409,7 @@ const struct InstrumentPCM instrumentPCMData1558 = {
     /* unk1C  */ 0x001fc000,
 };
 
-const struct InstrumentPSG instrumentPSGData1559 = {
+const struct InstrumentPSG instrumentPSG1559 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -24427,14 +24427,14 @@ const struct InstrumentPSG instrumentPSGData1559 = {
     /* unk22        */ 0x4,
 };
 
-extern const struct SampleInfo sfx_861SampleInfo;
-const struct InstrumentPCM instrumentPCMData1560 = {
+extern const struct WaveData sfx_861WaveData;
+const struct InstrumentPCM instrumentPCM1560 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_861SampleInfo,
+    /* Sample */ &sfx_861WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24443,7 +24443,7 @@ const struct InstrumentPCM instrumentPCMData1560 = {
     /* unk1C  */ 0x001fc000,
 };
 
-const struct InstrumentPSG instrumentPSGData1561 = {
+const struct InstrumentPSG instrumentPSG1561 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -24461,14 +24461,14 @@ const struct InstrumentPSG instrumentPSGData1561 = {
     /* unk22        */ 0x4,
 };
 
-extern const struct SampleInfo sfx_824SampleInfo;
-const struct InstrumentPCM instrumentPCMData1562 = {
+extern const struct WaveData sfx_824WaveData;
+const struct InstrumentPCM instrumentPCM1562 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_824SampleInfo,
+    /* Sample */ &sfx_824WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24477,14 +24477,14 @@ const struct InstrumentPCM instrumentPCMData1562 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_862SampleInfo;
-const struct InstrumentPCM instrumentPCMData1563 = {
+extern const struct WaveData sfx_862WaveData;
+const struct InstrumentPCM instrumentPCM1563 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_862SampleInfo,
+    /* Sample */ &sfx_862WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24493,14 +24493,14 @@ const struct InstrumentPCM instrumentPCMData1563 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_279SampleInfo;
-const struct InstrumentPCM instrumentPCMData1564 = {
+extern const struct WaveData sfx_279WaveData;
+const struct InstrumentPCM instrumentPCM1564 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_279SampleInfo,
+    /* Sample */ &sfx_279WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00000000,
     /* unk10  */ 0x00600000,
@@ -24509,14 +24509,14 @@ const struct InstrumentPCM instrumentPCMData1564 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_863SampleInfo;
-const struct InstrumentPCM instrumentPCMData1565 = {
+extern const struct WaveData sfx_863WaveData;
+const struct InstrumentPCM instrumentPCM1565 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_863SampleInfo,
+    /* Sample */ &sfx_863WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24525,14 +24525,14 @@ const struct InstrumentPCM instrumentPCMData1565 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_864SampleInfo;
-const struct InstrumentPCM instrumentPCMData1566 = {
+extern const struct WaveData sfx_864WaveData;
+const struct InstrumentPCM instrumentPCM1566 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_864SampleInfo,
+    /* Sample */ &sfx_864WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24541,14 +24541,14 @@ const struct InstrumentPCM instrumentPCMData1566 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_834SampleInfo;
-const struct InstrumentPCM instrumentPCMData1567 = {
+extern const struct WaveData sfx_834WaveData;
+const struct InstrumentPCM instrumentPCM1567 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_834SampleInfo,
+    /* Sample */ &sfx_834WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24557,14 +24557,14 @@ const struct InstrumentPCM instrumentPCMData1567 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_836SampleInfo;
-const struct InstrumentPCM instrumentPCMData1568 = {
+extern const struct WaveData sfx_836WaveData;
+const struct InstrumentPCM instrumentPCM1568 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_836SampleInfo,
+    /* Sample */ &sfx_836WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24573,14 +24573,14 @@ const struct InstrumentPCM instrumentPCMData1568 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_829SampleInfo;
-const struct InstrumentPCM instrumentPCMData1569 = {
+extern const struct WaveData sfx_829WaveData;
+const struct InstrumentPCM instrumentPCM1569 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_829SampleInfo,
+    /* Sample */ &sfx_829WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24589,14 +24589,14 @@ const struct InstrumentPCM instrumentPCMData1569 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_865SampleInfo;
-const struct InstrumentPCM instrumentPCMData1570 = {
+extern const struct WaveData sfx_865WaveData;
+const struct InstrumentPCM instrumentPCM1570 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_865SampleInfo,
+    /* Sample */ &sfx_865WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24605,14 +24605,14 @@ const struct InstrumentPCM instrumentPCMData1570 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_792SampleInfo;
-const struct InstrumentPCM instrumentPCMData1571 = {
+extern const struct WaveData sfx_792WaveData;
+const struct InstrumentPCM instrumentPCM1571 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_792SampleInfo,
+    /* Sample */ &sfx_792WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24621,14 +24621,14 @@ const struct InstrumentPCM instrumentPCMData1571 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_866SampleInfo;
-const struct InstrumentPCM instrumentPCMData1572 = {
+extern const struct WaveData sfx_866WaveData;
+const struct InstrumentPCM instrumentPCM1572 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_866SampleInfo,
+    /* Sample */ &sfx_866WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24637,14 +24637,14 @@ const struct InstrumentPCM instrumentPCMData1572 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_865SampleInfo;
-const struct InstrumentPCM instrumentPCMData1573 = {
+extern const struct WaveData sfx_865WaveData;
+const struct InstrumentPCM instrumentPCM1573 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_865SampleInfo,
+    /* Sample */ &sfx_865WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24653,14 +24653,14 @@ const struct InstrumentPCM instrumentPCMData1573 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_867SampleInfo;
-const struct InstrumentPCM instrumentPCMData1574 = {
+extern const struct WaveData sfx_867WaveData;
+const struct InstrumentPCM instrumentPCM1574 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_867SampleInfo,
+    /* Sample */ &sfx_867WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x001364d9,
@@ -24669,14 +24669,14 @@ const struct InstrumentPCM instrumentPCMData1574 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_434SampleInfo;
-const struct InstrumentPCM instrumentPCMData1575 = {
+extern const struct WaveData sfx_434WaveData;
+const struct InstrumentPCM instrumentPCM1575 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_434SampleInfo,
+    /* Sample */ &sfx_434WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24685,14 +24685,14 @@ const struct InstrumentPCM instrumentPCMData1575 = {
     /* unk1C  */ 0x0016554d,
 };
 
-extern const struct SampleInfo sfx_346SampleInfo;
-const struct InstrumentPCM instrumentPCMData1576 = {
+extern const struct WaveData sfx_346WaveData;
+const struct InstrumentPCM instrumentPCM1576 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_346SampleInfo,
+    /* Sample */ &sfx_346WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24701,7 +24701,7 @@ const struct InstrumentPCM instrumentPCMData1576 = {
     /* unk1C  */ 0x0016554d,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData1577 = {
+const struct InstrumentSubRhythm instrumentSubRhythm1577 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -24710,7 +24710,7 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData1577 = {
     /* Sub-bank */ (void *)0x08a9940c, // POINTER
 };
 
-const struct InstrumentPSG instrumentPSGData1578 = {
+const struct InstrumentPSG instrumentPSG1578 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -24728,7 +24728,7 @@ const struct InstrumentPSG instrumentPSGData1578 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData1579 = {
+const struct InstrumentSubRhythm instrumentSubRhythm1579 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -24737,14 +24737,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData1579 = {
     /* Sub-bank */ (void *)0x08a9a240, // POINTER
 };
 
-extern const struct SampleInfo sfx_868SampleInfo;
-const struct InstrumentPCM instrumentPCMData1580 = {
+extern const struct WaveData sfx_868WaveData;
+const struct InstrumentPCM instrumentPCM1580 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_868SampleInfo,
+    /* Sample */ &sfx_868WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24753,14 +24753,14 @@ const struct InstrumentPCM instrumentPCMData1580 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_869SampleInfo;
-const struct InstrumentPCM instrumentPCMData1581 = {
+extern const struct WaveData sfx_869WaveData;
+const struct InstrumentPCM instrumentPCM1581 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_869SampleInfo,
+    /* Sample */ &sfx_869WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24769,14 +24769,14 @@ const struct InstrumentPCM instrumentPCMData1581 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_431SampleInfo;
-const struct InstrumentPCM instrumentPCMData1582 = {
+extern const struct WaveData sfx_431WaveData;
+const struct InstrumentPCM instrumentPCM1582 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_431SampleInfo,
+    /* Sample */ &sfx_431WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24785,14 +24785,14 @@ const struct InstrumentPCM instrumentPCMData1582 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_030SampleInfo;
-const struct InstrumentPCM instrumentPCMData1583 = {
+extern const struct WaveData sfx_030WaveData;
+const struct InstrumentPCM instrumentPCM1583 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_030SampleInfo,
+    /* Sample */ &sfx_030WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24801,14 +24801,14 @@ const struct InstrumentPCM instrumentPCMData1583 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_870SampleInfo;
-const struct InstrumentPCM instrumentPCMData1584 = {
+extern const struct WaveData sfx_870WaveData;
+const struct InstrumentPCM instrumentPCM1584 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_870SampleInfo,
+    /* Sample */ &sfx_870WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24817,14 +24817,14 @@ const struct InstrumentPCM instrumentPCMData1584 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_792SampleInfo;
-const struct InstrumentPCM instrumentPCMData1585 = {
+extern const struct WaveData sfx_792WaveData;
+const struct InstrumentPCM instrumentPCM1585 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_792SampleInfo,
+    /* Sample */ &sfx_792WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24833,14 +24833,14 @@ const struct InstrumentPCM instrumentPCMData1585 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_865SampleInfo;
-const struct InstrumentPCM instrumentPCMData1586 = {
+extern const struct WaveData sfx_865WaveData;
+const struct InstrumentPCM instrumentPCM1586 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_865SampleInfo,
+    /* Sample */ &sfx_865WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24849,14 +24849,14 @@ const struct InstrumentPCM instrumentPCMData1586 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_871SampleInfo;
-const struct InstrumentPCM instrumentPCMData1587 = {
+extern const struct WaveData sfx_871WaveData;
+const struct InstrumentPCM instrumentPCM1587 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_871SampleInfo,
+    /* Sample */ &sfx_871WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24865,14 +24865,14 @@ const struct InstrumentPCM instrumentPCMData1587 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_872SampleInfo;
-const struct InstrumentPCM instrumentPCMData1588 = {
+extern const struct WaveData sfx_872WaveData;
+const struct InstrumentPCM instrumentPCM1588 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_872SampleInfo,
+    /* Sample */ &sfx_872WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24881,14 +24881,14 @@ const struct InstrumentPCM instrumentPCMData1588 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_873SampleInfo;
-const struct InstrumentPCM instrumentPCMData1589 = {
+extern const struct WaveData sfx_873WaveData;
+const struct InstrumentPCM instrumentPCM1589 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_873SampleInfo,
+    /* Sample */ &sfx_873WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24897,14 +24897,14 @@ const struct InstrumentPCM instrumentPCMData1589 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_856SampleInfo;
-const struct InstrumentPCM instrumentPCMData1590 = {
+extern const struct WaveData sfx_856WaveData;
+const struct InstrumentPCM instrumentPCM1590 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_856SampleInfo,
+    /* Sample */ &sfx_856WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x0073745d,
     /* unk10  */ 0x005c1f07,
@@ -24913,14 +24913,14 @@ const struct InstrumentPCM instrumentPCMData1590 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_874SampleInfo;
-const struct InstrumentPCM instrumentPCMData1591 = {
+extern const struct WaveData sfx_874WaveData;
+const struct InstrumentPCM instrumentPCM1591 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_874SampleInfo,
+    /* Sample */ &sfx_874WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24929,7 +24929,7 @@ const struct InstrumentPCM instrumentPCMData1591 = {
     /* unk1C  */ 0x001fc000,
 };
 
-const struct InstrumentPSG instrumentPSGData1592 = {
+const struct InstrumentPSG instrumentPSG1592 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -24947,14 +24947,14 @@ const struct InstrumentPSG instrumentPSGData1592 = {
     /* unk22        */ 0x4,
 };
 
-extern const struct SampleInfo sfx_875SampleInfo;
-const struct InstrumentPCM instrumentPCMData1593 = {
+extern const struct WaveData sfx_875WaveData;
+const struct InstrumentPCM instrumentPCM1593 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_875SampleInfo,
+    /* Sample */ &sfx_875WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24963,14 +24963,14 @@ const struct InstrumentPCM instrumentPCMData1593 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_876SampleInfo;
-const struct InstrumentPCM instrumentPCMData1594 = {
+extern const struct WaveData sfx_876WaveData;
+const struct InstrumentPCM instrumentPCM1594 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_876SampleInfo,
+    /* Sample */ &sfx_876WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24979,14 +24979,14 @@ const struct InstrumentPCM instrumentPCMData1594 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_877SampleInfo;
-const struct InstrumentPCM instrumentPCMData1595 = {
+extern const struct WaveData sfx_877WaveData;
+const struct InstrumentPCM instrumentPCM1595 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_877SampleInfo,
+    /* Sample */ &sfx_877WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -24995,14 +24995,14 @@ const struct InstrumentPCM instrumentPCMData1595 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_791SampleInfo;
-const struct InstrumentPCM instrumentPCMData1596 = {
+extern const struct WaveData sfx_791WaveData;
+const struct InstrumentPCM instrumentPCM1596 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_791SampleInfo,
+    /* Sample */ &sfx_791WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25011,14 +25011,14 @@ const struct InstrumentPCM instrumentPCMData1596 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_878SampleInfo;
-const struct InstrumentPCM instrumentPCMData1597 = {
+extern const struct WaveData sfx_878WaveData;
+const struct InstrumentPCM instrumentPCM1597 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_878SampleInfo,
+    /* Sample */ &sfx_878WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25027,14 +25027,14 @@ const struct InstrumentPCM instrumentPCMData1597 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_879SampleInfo;
-const struct InstrumentPCM instrumentPCMData1598 = {
+extern const struct WaveData sfx_879WaveData;
+const struct InstrumentPCM instrumentPCM1598 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_879SampleInfo,
+    /* Sample */ &sfx_879WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25043,14 +25043,14 @@ const struct InstrumentPCM instrumentPCMData1598 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_791SampleInfo;
-const struct InstrumentPCM instrumentPCMData1599 = {
+extern const struct WaveData sfx_791WaveData;
+const struct InstrumentPCM instrumentPCM1599 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_791SampleInfo,
+    /* Sample */ &sfx_791WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25059,7 +25059,7 @@ const struct InstrumentPCM instrumentPCMData1599 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData1600 = {
+const struct InstrumentSubRhythm instrumentSubRhythm1600 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -25068,14 +25068,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData1600 = {
     /* Sub-bank */ (void *)0x08a9a2e8, // POINTER
 };
 
-extern const struct SampleInfo sfx_880SampleInfo;
-const struct InstrumentPCM instrumentPCMData1601 = {
+extern const struct WaveData sfx_880WaveData;
+const struct InstrumentPCM instrumentPCM1601 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_880SampleInfo,
+    /* Sample */ &sfx_880WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25084,14 +25084,14 @@ const struct InstrumentPCM instrumentPCMData1601 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_881SampleInfo;
-const struct InstrumentPCM instrumentPCMData1602 = {
+extern const struct WaveData sfx_881WaveData;
+const struct InstrumentPCM instrumentPCM1602 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_881SampleInfo,
+    /* Sample */ &sfx_881WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25100,14 +25100,14 @@ const struct InstrumentPCM instrumentPCMData1602 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_863SampleInfo;
-const struct InstrumentPCM instrumentPCMData1603 = {
+extern const struct WaveData sfx_863WaveData;
+const struct InstrumentPCM instrumentPCM1603 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_863SampleInfo,
+    /* Sample */ &sfx_863WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25116,14 +25116,14 @@ const struct InstrumentPCM instrumentPCMData1603 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_030SampleInfo;
-const struct InstrumentPCM instrumentPCMData1604 = {
+extern const struct WaveData sfx_030WaveData;
+const struct InstrumentPCM instrumentPCM1604 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_030SampleInfo,
+    /* Sample */ &sfx_030WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25132,14 +25132,14 @@ const struct InstrumentPCM instrumentPCMData1604 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_430SampleInfo;
-const struct InstrumentPCM instrumentPCMData1605 = {
+extern const struct WaveData sfx_430WaveData;
+const struct InstrumentPCM instrumentPCM1605 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_430SampleInfo,
+    /* Sample */ &sfx_430WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x005745d1,
@@ -25148,14 +25148,14 @@ const struct InstrumentPCM instrumentPCMData1605 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_842SampleInfo;
-const struct InstrumentPCM instrumentPCMData1606 = {
+extern const struct WaveData sfx_842WaveData;
+const struct InstrumentPCM instrumentPCM1606 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_842SampleInfo,
+    /* Sample */ &sfx_842WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x003a2e8b,
@@ -25164,14 +25164,14 @@ const struct InstrumentPCM instrumentPCMData1606 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_882SampleInfo;
-const struct InstrumentPCM instrumentPCMData1607 = {
+extern const struct WaveData sfx_882WaveData;
+const struct InstrumentPCM instrumentPCM1607 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_882SampleInfo,
+    /* Sample */ &sfx_882WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25180,14 +25180,14 @@ const struct InstrumentPCM instrumentPCMData1607 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_883SampleInfo;
-const struct InstrumentPCM instrumentPCMData1608 = {
+extern const struct WaveData sfx_883WaveData;
+const struct InstrumentPCM instrumentPCM1608 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_883SampleInfo,
+    /* Sample */ &sfx_883WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25196,14 +25196,14 @@ const struct InstrumentPCM instrumentPCMData1608 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_884SampleInfo;
-const struct InstrumentPCM instrumentPCMData1609 = {
+extern const struct WaveData sfx_884WaveData;
+const struct InstrumentPCM instrumentPCM1609 = {
     {
         /* Type */ INSTRUMENT_PCM_FIXED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_884SampleInfo,
+    /* Sample */ &sfx_884WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25212,14 +25212,14 @@ const struct InstrumentPCM instrumentPCMData1609 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_214SampleInfo;
-const struct InstrumentPCM instrumentPCMData1610 = {
+extern const struct WaveData sfx_214WaveData;
+const struct InstrumentPCM instrumentPCM1610 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_214SampleInfo,
+    /* Sample */ &sfx_214WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25228,14 +25228,14 @@ const struct InstrumentPCM instrumentPCMData1610 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_122SampleInfo;
-const struct InstrumentPCM instrumentPCMData1611 = {
+extern const struct WaveData sfx_122WaveData;
+const struct InstrumentPCM instrumentPCM1611 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_122SampleInfo,
+    /* Sample */ &sfx_122WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25244,14 +25244,14 @@ const struct InstrumentPCM instrumentPCMData1611 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_885SampleInfo;
-const struct InstrumentPCM instrumentPCMData1612 = {
+extern const struct WaveData sfx_885WaveData;
+const struct InstrumentPCM instrumentPCM1612 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_885SampleInfo,
+    /* Sample */ &sfx_885WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25260,14 +25260,14 @@ const struct InstrumentPCM instrumentPCMData1612 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_886SampleInfo;
-const struct InstrumentPCM instrumentPCMData1613 = {
+extern const struct WaveData sfx_886WaveData;
+const struct InstrumentPCM instrumentPCM1613 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_886SampleInfo,
+    /* Sample */ &sfx_886WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25276,14 +25276,14 @@ const struct InstrumentPCM instrumentPCMData1613 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_823SampleInfo;
-const struct InstrumentPCM instrumentPCMData1614 = {
+extern const struct WaveData sfx_823WaveData;
+const struct InstrumentPCM instrumentPCM1614 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_823SampleInfo,
+    /* Sample */ &sfx_823WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0066a052,
     /* unk10  */ 0x00600000,
@@ -25292,14 +25292,14 @@ const struct InstrumentPCM instrumentPCMData1614 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_887SampleInfo;
-const struct InstrumentPCM instrumentPCMData1615 = {
+extern const struct WaveData sfx_887WaveData;
+const struct InstrumentPCM instrumentPCM1615 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_887SampleInfo,
+    /* Sample */ &sfx_887WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25308,14 +25308,14 @@ const struct InstrumentPCM instrumentPCMData1615 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_885SampleInfo;
-const struct InstrumentPCM instrumentPCMData1616 = {
+extern const struct WaveData sfx_885WaveData;
+const struct InstrumentPCM instrumentPCM1616 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_885SampleInfo,
+    /* Sample */ &sfx_885WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25324,14 +25324,14 @@ const struct InstrumentPCM instrumentPCMData1616 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_198SampleInfo;
-const struct InstrumentPCM instrumentPCMData1617 = {
+extern const struct WaveData sfx_198WaveData;
+const struct InstrumentPCM instrumentPCM1617 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_198SampleInfo,
+    /* Sample */ &sfx_198WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25340,7 +25340,7 @@ const struct InstrumentPCM instrumentPCMData1617 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData1618 = {
+const struct InstrumentSubRhythm instrumentSubRhythm1618 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x24,
@@ -25349,14 +25349,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData1618 = {
     /* Sub-bank */ (void *)0x08a996e4, // POINTER
 };
 
-extern const struct SampleInfo sfx_197SampleInfo;
-const struct InstrumentPCM instrumentPCMData1619 = {
+extern const struct WaveData sfx_197WaveData;
+const struct InstrumentPCM instrumentPCM1619 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_197SampleInfo,
+    /* Sample */ &sfx_197WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25365,14 +25365,14 @@ const struct InstrumentPCM instrumentPCMData1619 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_030SampleInfo;
-const struct InstrumentPCM instrumentPCMData1620 = {
+extern const struct WaveData sfx_030WaveData;
+const struct InstrumentPCM instrumentPCM1620 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_030SampleInfo,
+    /* Sample */ &sfx_030WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x005745d1,
@@ -25381,14 +25381,14 @@ const struct InstrumentPCM instrumentPCMData1620 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_888SampleInfo;
-const struct InstrumentPCM instrumentPCMData1621 = {
+extern const struct WaveData sfx_888WaveData;
+const struct InstrumentPCM instrumentPCM1621 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_888SampleInfo,
+    /* Sample */ &sfx_888WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25397,7 +25397,7 @@ const struct InstrumentPCM instrumentPCMData1621 = {
     /* unk1C  */ 0x001fc000,
 };
 
-const struct InstrumentPSG instrumentPSGData1622 = {
+const struct InstrumentPSG instrumentPSG1622 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -25415,7 +25415,7 @@ const struct InstrumentPSG instrumentPSGData1622 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData1623 = {
+const struct InstrumentPSG instrumentPSG1623 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -25433,14 +25433,14 @@ const struct InstrumentPSG instrumentPSGData1623 = {
     /* unk22        */ 0x4,
 };
 
-extern const struct SampleInfo sfx_086SampleInfo;
-const struct InstrumentPCM instrumentPCMData1624 = {
+extern const struct WaveData sfx_086WaveData;
+const struct InstrumentPCM instrumentPCM1624 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_086SampleInfo,
+    /* Sample */ &sfx_086WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25449,14 +25449,14 @@ const struct InstrumentPCM instrumentPCMData1624 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_796SampleInfo;
-const struct InstrumentPCM instrumentPCMData1625 = {
+extern const struct WaveData sfx_796WaveData;
+const struct InstrumentPCM instrumentPCM1625 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x46,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_796SampleInfo,
+    /* Sample */ &sfx_796WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25465,14 +25465,14 @@ const struct InstrumentPCM instrumentPCMData1625 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_889SampleInfo;
-const struct InstrumentPCM instrumentPCMData1626 = {
+extern const struct WaveData sfx_889WaveData;
+const struct InstrumentPCM instrumentPCM1626 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_889SampleInfo,
+    /* Sample */ &sfx_889WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25481,14 +25481,14 @@ const struct InstrumentPCM instrumentPCMData1626 = {
     /* unk1C  */ 0x0016554d,
 };
 
-extern const struct SampleInfo sfx_433SampleInfo;
-const struct InstrumentPCM instrumentPCMData1627 = {
+extern const struct WaveData sfx_433WaveData;
+const struct InstrumentPCM instrumentPCM1627 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_433SampleInfo,
+    /* Sample */ &sfx_433WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25497,14 +25497,14 @@ const struct InstrumentPCM instrumentPCMData1627 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_819SampleInfo;
-const struct InstrumentPCM instrumentPCMData1628 = {
+extern const struct WaveData sfx_819WaveData;
+const struct InstrumentPCM instrumentPCM1628 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_819SampleInfo,
+    /* Sample */ &sfx_819WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25513,14 +25513,14 @@ const struct InstrumentPCM instrumentPCMData1628 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_890SampleInfo;
-const struct InstrumentPCM instrumentPCMData1629 = {
+extern const struct WaveData sfx_890WaveData;
+const struct InstrumentPCM instrumentPCM1629 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_890SampleInfo,
+    /* Sample */ &sfx_890WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x0073745d,
     /* unk10  */ 0x0043e0f8,
@@ -25529,14 +25529,14 @@ const struct InstrumentPCM instrumentPCMData1629 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_834SampleInfo;
-const struct InstrumentPCM instrumentPCMData1630 = {
+extern const struct WaveData sfx_834WaveData;
+const struct InstrumentPCM instrumentPCM1630 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_834SampleInfo,
+    /* Sample */ &sfx_834WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25545,14 +25545,14 @@ const struct InstrumentPCM instrumentPCMData1630 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_891SampleInfo;
-const struct InstrumentPCM instrumentPCMData1631 = {
+extern const struct WaveData sfx_891WaveData;
+const struct InstrumentPCM instrumentPCM1631 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_891SampleInfo,
+    /* Sample */ &sfx_891WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25561,14 +25561,14 @@ const struct InstrumentPCM instrumentPCMData1631 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_859SampleInfo;
-const struct InstrumentPCM instrumentPCMData1632 = {
+extern const struct WaveData sfx_859WaveData;
+const struct InstrumentPCM instrumentPCM1632 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_859SampleInfo,
+    /* Sample */ &sfx_859WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25577,14 +25577,14 @@ const struct InstrumentPCM instrumentPCMData1632 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_892SampleInfo;
-const struct InstrumentPCM instrumentPCMData1633 = {
+extern const struct WaveData sfx_892WaveData;
+const struct InstrumentPCM instrumentPCM1633 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_892SampleInfo,
+    /* Sample */ &sfx_892WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x00402433,
     /* unk10  */ 0x003a2e8b,
@@ -25593,14 +25593,14 @@ const struct InstrumentPCM instrumentPCMData1633 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_874SampleInfo;
-const struct InstrumentPCM instrumentPCMData1634 = {
+extern const struct WaveData sfx_874WaveData;
+const struct InstrumentPCM instrumentPCM1634 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_874SampleInfo,
+    /* Sample */ &sfx_874WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25609,7 +25609,7 @@ const struct InstrumentPCM instrumentPCMData1634 = {
     /* unk1C  */ 0x001fc000,
 };
 
-const struct InstrumentPSG instrumentPSGData1635 = {
+const struct InstrumentPSG instrumentPSG1635 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -25627,7 +25627,7 @@ const struct InstrumentPSG instrumentPSGData1635 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData1636 = {
+const struct InstrumentPSG instrumentPSG1636 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -25645,7 +25645,7 @@ const struct InstrumentPSG instrumentPSGData1636 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData1637 = {
+const struct InstrumentPSG instrumentPSG1637 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -25663,14 +25663,14 @@ const struct InstrumentPSG instrumentPSGData1637 = {
     /* unk22        */ 0x4,
 };
 
-extern const struct SampleInfo sfx_892SampleInfo;
-const struct InstrumentPCM instrumentPCMData1638 = {
+extern const struct WaveData sfx_892WaveData;
+const struct InstrumentPCM instrumentPCM1638 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_892SampleInfo,
+    /* Sample */ &sfx_892WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0066a052,
     /* unk10  */ 0x00600000,
@@ -25679,14 +25679,14 @@ const struct InstrumentPCM instrumentPCMData1638 = {
     /* unk1C  */ 0x0006aa9f,
 };
 
-extern const struct SampleInfo sfx_893SampleInfo;
-const struct InstrumentPCM instrumentPCMData1639 = {
+extern const struct WaveData sfx_893WaveData;
+const struct InstrumentPCM instrumentPCM1639 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_893SampleInfo,
+    /* Sample */ &sfx_893WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25695,14 +25695,14 @@ const struct InstrumentPCM instrumentPCMData1639 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_864SampleInfo;
-const struct InstrumentPCM instrumentPCMData1640 = {
+extern const struct WaveData sfx_864WaveData;
+const struct InstrumentPCM instrumentPCM1640 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_864SampleInfo,
+    /* Sample */ &sfx_864WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25711,14 +25711,14 @@ const struct InstrumentPCM instrumentPCMData1640 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_790SampleInfo;
-const struct InstrumentPCM instrumentPCMData1641 = {
+extern const struct WaveData sfx_790WaveData;
+const struct InstrumentPCM instrumentPCM1641 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_790SampleInfo,
+    /* Sample */ &sfx_790WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x00600000,
@@ -25727,14 +25727,14 @@ const struct InstrumentPCM instrumentPCMData1641 = {
     /* unk1C  */ 0x0013e350,
 };
 
-extern const struct SampleInfo sfx_894SampleInfo;
-const struct InstrumentPCM instrumentPCMData1642 = {
+extern const struct WaveData sfx_894WaveData;
+const struct InstrumentPCM instrumentPCM1642 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_894SampleInfo,
+    /* Sample */ &sfx_894WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25743,14 +25743,14 @@ const struct InstrumentPCM instrumentPCMData1642 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_895SampleInfo;
-const struct InstrumentPCM instrumentPCMData1643 = {
+extern const struct WaveData sfx_895WaveData;
+const struct InstrumentPCM instrumentPCM1643 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_895SampleInfo,
+    /* Sample */ &sfx_895WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25759,7 +25759,7 @@ const struct InstrumentPCM instrumentPCMData1643 = {
     /* unk1C  */ 0x001fc000,
 };
 
-const struct InstrumentPSG instrumentPSGData1644 = {
+const struct InstrumentPSG instrumentPSG1644 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -25777,14 +25777,14 @@ const struct InstrumentPSG instrumentPSGData1644 = {
     /* unk22        */ 0x4,
 };
 
-extern const struct SampleInfo sfx_896SampleInfo;
-const struct InstrumentPCM instrumentPCMData1645 = {
+extern const struct WaveData sfx_896WaveData;
+const struct InstrumentPCM instrumentPCM1645 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_896SampleInfo,
+    /* Sample */ &sfx_896WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25793,14 +25793,14 @@ const struct InstrumentPCM instrumentPCMData1645 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_897SampleInfo;
-const struct InstrumentPCM instrumentPCMData1646 = {
+extern const struct WaveData sfx_897WaveData;
+const struct InstrumentPCM instrumentPCM1646 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_897SampleInfo,
+    /* Sample */ &sfx_897WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25809,14 +25809,14 @@ const struct InstrumentPCM instrumentPCMData1646 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_898SampleInfo;
-const struct InstrumentPCM instrumentPCMData1647 = {
+extern const struct WaveData sfx_898WaveData;
+const struct InstrumentPCM instrumentPCM1647 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_898SampleInfo,
+    /* Sample */ &sfx_898WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25825,14 +25825,14 @@ const struct InstrumentPCM instrumentPCMData1647 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_899SampleInfo;
-const struct InstrumentPCM instrumentPCMData1648 = {
+extern const struct WaveData sfx_899WaveData;
+const struct InstrumentPCM instrumentPCM1648 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_899SampleInfo,
+    /* Sample */ &sfx_899WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25841,14 +25841,14 @@ const struct InstrumentPCM instrumentPCMData1648 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_900SampleInfo;
-const struct InstrumentPCM instrumentPCMData1649 = {
+extern const struct WaveData sfx_900WaveData;
+const struct InstrumentPCM instrumentPCM1649 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_900SampleInfo,
+    /* Sample */ &sfx_900WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25857,7 +25857,7 @@ const struct InstrumentPCM instrumentPCMData1649 = {
     /* unk1C  */ 0x001fc000,
 };
 
-const struct InstrumentPSG instrumentPSGData1650 = {
+const struct InstrumentPSG instrumentPSG1650 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -25875,7 +25875,7 @@ const struct InstrumentPSG instrumentPSGData1650 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData1651 = {
+const struct InstrumentPSG instrumentPSG1651 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -25893,7 +25893,7 @@ const struct InstrumentPSG instrumentPSGData1651 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData1652 = {
+const struct InstrumentPSG instrumentPSG1652 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -25911,7 +25911,7 @@ const struct InstrumentPSG instrumentPSGData1652 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData1653 = {
+const struct InstrumentPSG instrumentPSG1653 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -25929,7 +25929,7 @@ const struct InstrumentPSG instrumentPSGData1653 = {
     /* unk22        */ 0x4,
 };
 
-const struct InstrumentPSG instrumentPSGData1654 = {
+const struct InstrumentPSG instrumentPSG1654 = {
     {
         /* Type */ INSTRUMENT_PSG,
         /* unk1 */ 0x3c,
@@ -25947,14 +25947,14 @@ const struct InstrumentPSG instrumentPSGData1654 = {
     /* unk22        */ 0x4,
 };
 
-extern const struct SampleInfo sfx_439SampleInfo;
-const struct InstrumentPCM instrumentPCMData1655 = {
+extern const struct WaveData sfx_439WaveData;
+const struct InstrumentPCM instrumentPCM1655 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_439SampleInfo,
+    /* Sample */ &sfx_439WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25963,14 +25963,14 @@ const struct InstrumentPCM instrumentPCMData1655 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_901SampleInfo;
-const struct InstrumentPCM instrumentPCMData1656 = {
+extern const struct WaveData sfx_901WaveData;
+const struct InstrumentPCM instrumentPCM1656 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_901SampleInfo,
+    /* Sample */ &sfx_901WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25979,14 +25979,14 @@ const struct InstrumentPCM instrumentPCMData1656 = {
     /* unk1C  */ 0x0011952a,
 };
 
-extern const struct SampleInfo sfx_901SampleInfo;
-const struct InstrumentPCM instrumentPCMData1657 = {
+extern const struct WaveData sfx_901WaveData;
+const struct InstrumentPCM instrumentPCM1657 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_901SampleInfo,
+    /* Sample */ &sfx_901WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -25995,14 +25995,14 @@ const struct InstrumentPCM instrumentPCMData1657 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_902SampleInfo;
-const struct InstrumentPCM instrumentPCMData1658 = {
+extern const struct WaveData sfx_902WaveData;
+const struct InstrumentPCM instrumentPCM1658 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_902SampleInfo,
+    /* Sample */ &sfx_902WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26011,7 +26011,7 @@ const struct InstrumentPCM instrumentPCMData1658 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-const struct InstrumentSubRhythm instrumentSubbankSingleKeyData1659 = {
+const struct InstrumentSubRhythm instrumentSubRhythm1659 = {
     {
         /* Type */ INSTRUMENT_SUB_RHYTHM,
         /* unk1 */ 0x18,
@@ -26020,14 +26020,14 @@ const struct InstrumentSubRhythm instrumentSubbankSingleKeyData1659 = {
     /* Sub-bank */ (void *)0x08a9a240, // POINTER
 };
 
-extern const struct SampleInfo sfx_903SampleInfo;
-const struct InstrumentPCM instrumentPCMData1660 = {
+extern const struct WaveData sfx_903WaveData;
+const struct InstrumentPCM instrumentPCM1660 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_903SampleInfo,
+    /* Sample */ &sfx_903WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00402433,
     /* unk10  */ 0x00600000,
@@ -26036,14 +26036,14 @@ const struct InstrumentPCM instrumentPCMData1660 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_904SampleInfo;
-const struct InstrumentPCM instrumentPCMData1661 = {
+extern const struct WaveData sfx_904WaveData;
+const struct InstrumentPCM instrumentPCM1661 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_904SampleInfo,
+    /* Sample */ &sfx_904WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26052,14 +26052,14 @@ const struct InstrumentPCM instrumentPCMData1661 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_905SampleInfo;
-const struct InstrumentPCM instrumentPCMData1662 = {
+extern const struct WaveData sfx_905WaveData;
+const struct InstrumentPCM instrumentPCM1662 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_905SampleInfo,
+    /* Sample */ &sfx_905WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26068,14 +26068,14 @@ const struct InstrumentPCM instrumentPCMData1662 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_906SampleInfo;
-const struct InstrumentPCM instrumentPCMData1663 = {
+extern const struct WaveData sfx_906WaveData;
+const struct InstrumentPCM instrumentPCM1663 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_906SampleInfo,
+    /* Sample */ &sfx_906WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26084,14 +26084,14 @@ const struct InstrumentPCM instrumentPCMData1663 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_907SampleInfo;
-const struct InstrumentPCM instrumentPCMData1664 = {
+extern const struct WaveData sfx_907WaveData;
+const struct InstrumentPCM instrumentPCM1664 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_907SampleInfo,
+    /* Sample */ &sfx_907WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26100,14 +26100,14 @@ const struct InstrumentPCM instrumentPCMData1664 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_908SampleInfo;
-const struct InstrumentPCM instrumentPCMData1665 = {
+extern const struct WaveData sfx_908WaveData;
+const struct InstrumentPCM instrumentPCM1665 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_908SampleInfo,
+    /* Sample */ &sfx_908WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26116,14 +26116,14 @@ const struct InstrumentPCM instrumentPCMData1665 = {
     /* unk1C  */ 0x0001638c,
 };
 
-extern const struct SampleInfo sfx_909SampleInfo;
-const struct InstrumentPCM instrumentPCMData1666 = {
+extern const struct WaveData sfx_909WaveData;
+const struct InstrumentPCM instrumentPCM1666 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_909SampleInfo,
+    /* Sample */ &sfx_909WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26132,14 +26132,14 @@ const struct InstrumentPCM instrumentPCMData1666 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_910SampleInfo;
-const struct InstrumentPCM instrumentPCMData1667 = {
+extern const struct WaveData sfx_910WaveData;
+const struct InstrumentPCM instrumentPCM1667 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_910SampleInfo,
+    /* Sample */ &sfx_910WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26148,14 +26148,14 @@ const struct InstrumentPCM instrumentPCMData1667 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_911SampleInfo;
-const struct InstrumentPCM instrumentPCMData1668 = {
+extern const struct WaveData sfx_911WaveData;
+const struct InstrumentPCM instrumentPCM1668 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_911SampleInfo,
+    /* Sample */ &sfx_911WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26164,14 +26164,14 @@ const struct InstrumentPCM instrumentPCMData1668 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_912SampleInfo;
-const struct InstrumentPCM instrumentPCMData1669 = {
+extern const struct WaveData sfx_912WaveData;
+const struct InstrumentPCM instrumentPCM1669 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_912SampleInfo,
+    /* Sample */ &sfx_912WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26180,14 +26180,14 @@ const struct InstrumentPCM instrumentPCMData1669 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_913SampleInfo;
-const struct InstrumentPCM instrumentPCMData1670 = {
+extern const struct WaveData sfx_913WaveData;
+const struct InstrumentPCM instrumentPCM1670 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_913SampleInfo,
+    /* Sample */ &sfx_913WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x001364d9,
@@ -26196,14 +26196,14 @@ const struct InstrumentPCM instrumentPCMData1670 = {
     /* unk1C  */ 0x0001638c,
 };
 
-extern const struct SampleInfo sfx_914SampleInfo;
-const struct InstrumentPCM instrumentPCMData1671 = {
+extern const struct WaveData sfx_914WaveData;
+const struct InstrumentPCM instrumentPCM1671 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_914SampleInfo,
+    /* Sample */ &sfx_914WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26212,14 +26212,14 @@ const struct InstrumentPCM instrumentPCMData1671 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_915SampleInfo;
-const struct InstrumentPCM instrumentPCMData1672 = {
+extern const struct WaveData sfx_915WaveData;
+const struct InstrumentPCM instrumentPCM1672 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_915SampleInfo,
+    /* Sample */ &sfx_915WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26228,14 +26228,14 @@ const struct InstrumentPCM instrumentPCMData1672 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_916SampleInfo;
-const struct InstrumentPCM instrumentPCMData1673 = {
+extern const struct WaveData sfx_916WaveData;
+const struct InstrumentPCM instrumentPCM1673 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_916SampleInfo,
+    /* Sample */ &sfx_916WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x001364d9,
@@ -26244,14 +26244,14 @@ const struct InstrumentPCM instrumentPCMData1673 = {
     /* unk1C  */ 0x0000c000,
 };
 
-extern const struct SampleInfo sfx_917SampleInfo;
-const struct InstrumentPCM instrumentPCMData1674 = {
+extern const struct WaveData sfx_917WaveData;
+const struct InstrumentPCM instrumentPCM1674 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_917SampleInfo,
+    /* Sample */ &sfx_917WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26260,14 +26260,14 @@ const struct InstrumentPCM instrumentPCMData1674 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_918SampleInfo;
-const struct InstrumentPCM instrumentPCMData1675 = {
+extern const struct WaveData sfx_918WaveData;
+const struct InstrumentPCM instrumentPCM1675 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_918SampleInfo,
+    /* Sample */ &sfx_918WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26276,14 +26276,14 @@ const struct InstrumentPCM instrumentPCMData1675 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_919SampleInfo;
-const struct InstrumentPCM instrumentPCMData1676 = {
+extern const struct WaveData sfx_919WaveData;
+const struct InstrumentPCM instrumentPCM1676 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_919SampleInfo,
+    /* Sample */ &sfx_919WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x001364d9,
@@ -26292,14 +26292,14 @@ const struct InstrumentPCM instrumentPCMData1676 = {
     /* unk1C  */ 0x0001638c,
 };
 
-extern const struct SampleInfo sfx_919SampleInfo;
-const struct InstrumentPCM instrumentPCMData1677 = {
+extern const struct WaveData sfx_919WaveData;
+const struct InstrumentPCM instrumentPCM1677 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_919SampleInfo,
+    /* Sample */ &sfx_919WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x004d9364,
@@ -26308,14 +26308,14 @@ const struct InstrumentPCM instrumentPCMData1677 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_920SampleInfo;
-const struct InstrumentPCM instrumentPCMData1678 = {
+extern const struct WaveData sfx_920WaveData;
+const struct InstrumentPCM instrumentPCM1678 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_920SampleInfo,
+    /* Sample */ &sfx_920WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x001364d9,
@@ -26324,14 +26324,14 @@ const struct InstrumentPCM instrumentPCMData1678 = {
     /* unk1C  */ 0x00031548,
 };
 
-extern const struct SampleInfo sfx_921SampleInfo;
-const struct InstrumentPCM instrumentPCMData1679 = {
+extern const struct WaveData sfx_921WaveData;
+const struct InstrumentPCM instrumentPCM1679 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_921SampleInfo,
+    /* Sample */ &sfx_921WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26340,14 +26340,14 @@ const struct InstrumentPCM instrumentPCMData1679 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_922SampleInfo;
-const struct InstrumentPCM instrumentPCMData1680 = {
+extern const struct WaveData sfx_922WaveData;
+const struct InstrumentPCM instrumentPCM1680 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_922SampleInfo,
+    /* Sample */ &sfx_922WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26356,14 +26356,14 @@ const struct InstrumentPCM instrumentPCMData1680 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_923SampleInfo;
-const struct InstrumentPCM instrumentPCMData1681 = {
+extern const struct WaveData sfx_923WaveData;
+const struct InstrumentPCM instrumentPCM1681 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_923SampleInfo,
+    /* Sample */ &sfx_923WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26372,14 +26372,14 @@ const struct InstrumentPCM instrumentPCMData1681 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_859SampleInfo;
-const struct InstrumentPCM instrumentPCMData1682 = {
+extern const struct WaveData sfx_859WaveData;
+const struct InstrumentPCM instrumentPCM1682 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_859SampleInfo,
+    /* Sample */ &sfx_859WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x004d9364,
@@ -26388,14 +26388,14 @@ const struct InstrumentPCM instrumentPCMData1682 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_924SampleInfo;
-const struct InstrumentPCM instrumentPCMData1683 = {
+extern const struct WaveData sfx_924WaveData;
+const struct InstrumentPCM instrumentPCM1683 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_924SampleInfo,
+    /* Sample */ &sfx_924WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26404,14 +26404,14 @@ const struct InstrumentPCM instrumentPCMData1683 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_925SampleInfo;
-const struct InstrumentPCM instrumentPCMData1684 = {
+extern const struct WaveData sfx_925WaveData;
+const struct InstrumentPCM instrumentPCM1684 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_925SampleInfo,
+    /* Sample */ &sfx_925WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26420,14 +26420,14 @@ const struct InstrumentPCM instrumentPCMData1684 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_926SampleInfo;
-const struct InstrumentPCM instrumentPCMData1685 = {
+extern const struct WaveData sfx_926WaveData;
+const struct InstrumentPCM instrumentPCM1685 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_926SampleInfo,
+    /* Sample */ &sfx_926WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26436,14 +26436,14 @@ const struct InstrumentPCM instrumentPCMData1685 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_927SampleInfo;
-const struct InstrumentPCM instrumentPCMData1686 = {
+extern const struct WaveData sfx_927WaveData;
+const struct InstrumentPCM instrumentPCM1686 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_927SampleInfo,
+    /* Sample */ &sfx_927WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26452,14 +26452,14 @@ const struct InstrumentPCM instrumentPCMData1686 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_928SampleInfo;
-const struct InstrumentPCM instrumentPCMData1687 = {
+extern const struct WaveData sfx_928WaveData;
+const struct InstrumentPCM instrumentPCM1687 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_928SampleInfo,
+    /* Sample */ &sfx_928WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26468,14 +26468,14 @@ const struct InstrumentPCM instrumentPCMData1687 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_929SampleInfo;
-const struct InstrumentPCM instrumentPCMData1688 = {
+extern const struct WaveData sfx_929WaveData;
+const struct InstrumentPCM instrumentPCM1688 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x38,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_929SampleInfo,
+    /* Sample */ &sfx_929WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26484,14 +26484,14 @@ const struct InstrumentPCM instrumentPCMData1688 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_930SampleInfo;
-const struct InstrumentPCM instrumentPCMData1689 = {
+extern const struct WaveData sfx_930WaveData;
+const struct InstrumentPCM instrumentPCM1689 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_930SampleInfo,
+    /* Sample */ &sfx_930WaveData,
     /* unk8   */ 0x00000000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x001364d9,
@@ -26500,14 +26500,14 @@ const struct InstrumentPCM instrumentPCMData1689 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_931SampleInfo;
-const struct InstrumentPCM instrumentPCMData1690 = {
+extern const struct WaveData sfx_931WaveData;
+const struct InstrumentPCM instrumentPCM1690 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_931SampleInfo,
+    /* Sample */ &sfx_931WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26516,14 +26516,14 @@ const struct InstrumentPCM instrumentPCMData1690 = {
     /* unk1C  */ 0x0018ea90,
 };
 
-extern const struct SampleInfo sfx_844SampleInfo;
-const struct InstrumentPCM instrumentPCMData1691 = {
+extern const struct WaveData sfx_844WaveData;
+const struct InstrumentPCM instrumentPCM1691 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_844SampleInfo,
+    /* Sample */ &sfx_844WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26532,14 +26532,14 @@ const struct InstrumentPCM instrumentPCMData1691 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_868SampleInfo;
-const struct InstrumentPCM instrumentPCMData1692 = {
+extern const struct WaveData sfx_868WaveData;
+const struct InstrumentPCM instrumentPCM1692 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_868SampleInfo,
+    /* Sample */ &sfx_868WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26548,14 +26548,14 @@ const struct InstrumentPCM instrumentPCMData1692 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_869SampleInfo;
-const struct InstrumentPCM instrumentPCMData1693 = {
+extern const struct WaveData sfx_869WaveData;
+const struct InstrumentPCM instrumentPCM1693 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_869SampleInfo,
+    /* Sample */ &sfx_869WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26564,14 +26564,14 @@ const struct InstrumentPCM instrumentPCMData1693 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_431SampleInfo;
-const struct InstrumentPCM instrumentPCMData1694 = {
+extern const struct WaveData sfx_431WaveData;
+const struct InstrumentPCM instrumentPCM1694 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_431SampleInfo,
+    /* Sample */ &sfx_431WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26580,14 +26580,14 @@ const struct InstrumentPCM instrumentPCMData1694 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_880SampleInfo;
-const struct InstrumentPCM instrumentPCMData1695 = {
+extern const struct WaveData sfx_880WaveData;
+const struct InstrumentPCM instrumentPCM1695 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_880SampleInfo,
+    /* Sample */ &sfx_880WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26596,14 +26596,14 @@ const struct InstrumentPCM instrumentPCMData1695 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_883SampleInfo;
-const struct InstrumentPCM instrumentPCMData1696 = {
+extern const struct WaveData sfx_883WaveData;
+const struct InstrumentPCM instrumentPCM1696 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_883SampleInfo,
+    /* Sample */ &sfx_883WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26612,14 +26612,14 @@ const struct InstrumentPCM instrumentPCMData1696 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_884SampleInfo;
-const struct InstrumentPCM instrumentPCMData1697 = {
+extern const struct WaveData sfx_884WaveData;
+const struct InstrumentPCM instrumentPCM1697 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_884SampleInfo,
+    /* Sample */ &sfx_884WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26628,14 +26628,14 @@ const struct InstrumentPCM instrumentPCMData1697 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_887SampleInfo;
-const struct InstrumentPCM instrumentPCMData1698 = {
+extern const struct WaveData sfx_887WaveData;
+const struct InstrumentPCM instrumentPCM1698 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_887SampleInfo,
+    /* Sample */ &sfx_887WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26644,14 +26644,14 @@ const struct InstrumentPCM instrumentPCMData1698 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_825SampleInfo;
-const struct InstrumentPCM instrumentPCMData1699 = {
+extern const struct WaveData sfx_825WaveData;
+const struct InstrumentPCM instrumentPCM1699 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_825SampleInfo,
+    /* Sample */ &sfx_825WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26660,14 +26660,14 @@ const struct InstrumentPCM instrumentPCMData1699 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_827SampleInfo;
-const struct InstrumentPCM instrumentPCMData1700 = {
+extern const struct WaveData sfx_827WaveData;
+const struct InstrumentPCM instrumentPCM1700 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_827SampleInfo,
+    /* Sample */ &sfx_827WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26676,14 +26676,14 @@ const struct InstrumentPCM instrumentPCMData1700 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_811SampleInfo;
-const struct InstrumentPCM instrumentPCMData1701 = {
+extern const struct WaveData sfx_811WaveData;
+const struct InstrumentPCM instrumentPCM1701 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_811SampleInfo,
+    /* Sample */ &sfx_811WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x00600000,
@@ -26692,14 +26692,14 @@ const struct InstrumentPCM instrumentPCMData1701 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_812SampleInfo;
-const struct InstrumentPCM instrumentPCMData1702 = {
+extern const struct WaveData sfx_812WaveData;
+const struct InstrumentPCM instrumentPCM1702 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_812SampleInfo,
+    /* Sample */ &sfx_812WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x00133e0f,
     /* unk10  */ 0x00600000,
@@ -26708,14 +26708,14 @@ const struct InstrumentPCM instrumentPCMData1702 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_813SampleInfo;
-const struct InstrumentPCM instrumentPCMData1703 = {
+extern const struct WaveData sfx_813WaveData;
+const struct InstrumentPCM instrumentPCM1703 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_813SampleInfo,
+    /* Sample */ &sfx_813WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x0019a814,
     /* unk10  */ 0x00600000,
@@ -26724,14 +26724,14 @@ const struct InstrumentPCM instrumentPCMData1703 = {
     /* unk1C  */ 0x00082378,
 };
 
-extern const struct SampleInfo sfx_834SampleInfo;
-const struct InstrumentPCM instrumentPCMData1704 = {
+extern const struct WaveData sfx_834WaveData;
+const struct InstrumentPCM instrumentPCM1704 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_834SampleInfo,
+    /* Sample */ &sfx_834WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26740,14 +26740,14 @@ const struct InstrumentPCM instrumentPCMData1704 = {
     /* unk1C  */ 0x000f6a90,
 };
 
-extern const struct SampleInfo sfx_461SampleInfo;
-const struct InstrumentPCM instrumentPCMData1705 = {
+extern const struct WaveData sfx_461WaveData;
+const struct InstrumentPCM instrumentPCM1705 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_461SampleInfo,
+    /* Sample */ &sfx_461WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26756,14 +26756,14 @@ const struct InstrumentPCM instrumentPCMData1705 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_463SampleInfo;
-const struct InstrumentPCM instrumentPCMData1706 = {
+extern const struct WaveData sfx_463WaveData;
+const struct InstrumentPCM instrumentPCM1706 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_463SampleInfo,
+    /* Sample */ &sfx_463WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26772,14 +26772,14 @@ const struct InstrumentPCM instrumentPCMData1706 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_087SampleInfo;
-const struct InstrumentPCM instrumentPCMData1707 = {
+extern const struct WaveData sfx_087WaveData;
+const struct InstrumentPCM instrumentPCM1707 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_087SampleInfo,
+    /* Sample */ &sfx_087WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26788,14 +26788,14 @@ const struct InstrumentPCM instrumentPCMData1707 = {
     /* unk1C  */ 0x000b8000,
 };
 
-extern const struct SampleInfo sfx_468SampleInfo;
-const struct InstrumentPCM instrumentPCMData1708 = {
+extern const struct WaveData sfx_468WaveData;
+const struct InstrumentPCM instrumentPCM1708 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_468SampleInfo,
+    /* Sample */ &sfx_468WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26804,14 +26804,14 @@ const struct InstrumentPCM instrumentPCMData1708 = {
     /* unk1C  */ 0x001e7fba,
 };
 
-extern const struct SampleInfo sfx_898SampleInfo;
-const struct InstrumentPCM instrumentPCMData1709 = {
+extern const struct WaveData sfx_898WaveData;
+const struct InstrumentPCM instrumentPCM1709 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_898SampleInfo,
+    /* Sample */ &sfx_898WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26820,14 +26820,14 @@ const struct InstrumentPCM instrumentPCMData1709 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_899SampleInfo;
-const struct InstrumentPCM instrumentPCMData1710 = {
+extern const struct WaveData sfx_899WaveData;
+const struct InstrumentPCM instrumentPCM1710 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_899SampleInfo,
+    /* Sample */ &sfx_899WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26836,14 +26836,14 @@ const struct InstrumentPCM instrumentPCMData1710 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_932SampleInfo;
-const struct InstrumentPCM instrumentPCMData1711 = {
+extern const struct WaveData sfx_932WaveData;
+const struct InstrumentPCM instrumentPCM1711 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_932SampleInfo,
+    /* Sample */ &sfx_932WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26852,14 +26852,14 @@ const struct InstrumentPCM instrumentPCMData1711 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_933SampleInfo;
-const struct InstrumentPCM instrumentPCMData1712 = {
+extern const struct WaveData sfx_933WaveData;
+const struct InstrumentPCM instrumentPCM1712 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_933SampleInfo,
+    /* Sample */ &sfx_933WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26868,14 +26868,14 @@ const struct InstrumentPCM instrumentPCMData1712 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_934SampleInfo;
-const struct InstrumentPCM instrumentPCMData1713 = {
+extern const struct WaveData sfx_934WaveData;
+const struct InstrumentPCM instrumentPCM1713 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_934SampleInfo,
+    /* Sample */ &sfx_934WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26884,14 +26884,14 @@ const struct InstrumentPCM instrumentPCMData1713 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_935SampleInfo;
-const struct InstrumentPCM instrumentPCMData1714 = {
+extern const struct WaveData sfx_935WaveData;
+const struct InstrumentPCM instrumentPCM1714 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_935SampleInfo,
+    /* Sample */ &sfx_935WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26900,14 +26900,14 @@ const struct InstrumentPCM instrumentPCMData1714 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_936SampleInfo;
-const struct InstrumentPCM instrumentPCMData1715 = {
+extern const struct WaveData sfx_936WaveData;
+const struct InstrumentPCM instrumentPCM1715 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_936SampleInfo,
+    /* Sample */ &sfx_936WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26916,14 +26916,14 @@ const struct InstrumentPCM instrumentPCMData1715 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_937SampleInfo;
-const struct InstrumentPCM instrumentPCMData1716 = {
+extern const struct WaveData sfx_937WaveData;
+const struct InstrumentPCM instrumentPCM1716 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_937SampleInfo,
+    /* Sample */ &sfx_937WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26932,14 +26932,14 @@ const struct InstrumentPCM instrumentPCMData1716 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_938SampleInfo;
-const struct InstrumentPCM instrumentPCMData1717 = {
+extern const struct WaveData sfx_938WaveData;
+const struct InstrumentPCM instrumentPCM1717 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_938SampleInfo,
+    /* Sample */ &sfx_938WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26948,14 +26948,14 @@ const struct InstrumentPCM instrumentPCMData1717 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_939SampleInfo;
-const struct InstrumentPCM instrumentPCMData1718 = {
+extern const struct WaveData sfx_939WaveData;
+const struct InstrumentPCM instrumentPCM1718 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_939SampleInfo,
+    /* Sample */ &sfx_939WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26964,14 +26964,14 @@ const struct InstrumentPCM instrumentPCMData1718 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_940SampleInfo;
-const struct InstrumentPCM instrumentPCMData1719 = {
+extern const struct WaveData sfx_940WaveData;
+const struct InstrumentPCM instrumentPCM1719 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_940SampleInfo,
+    /* Sample */ &sfx_940WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26980,14 +26980,14 @@ const struct InstrumentPCM instrumentPCMData1719 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_941SampleInfo;
-const struct InstrumentPCM instrumentPCMData1720 = {
+extern const struct WaveData sfx_941WaveData;
+const struct InstrumentPCM instrumentPCM1720 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_941SampleInfo,
+    /* Sample */ &sfx_941WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -26996,14 +26996,14 @@ const struct InstrumentPCM instrumentPCMData1720 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_942SampleInfo;
-const struct InstrumentPCM instrumentPCMData1721 = {
+extern const struct WaveData sfx_942WaveData;
+const struct InstrumentPCM instrumentPCM1721 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_942SampleInfo,
+    /* Sample */ &sfx_942WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -27012,14 +27012,14 @@ const struct InstrumentPCM instrumentPCMData1721 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_943SampleInfo;
-const struct InstrumentPCM instrumentPCMData1722 = {
+extern const struct WaveData sfx_943WaveData;
+const struct InstrumentPCM instrumentPCM1722 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_943SampleInfo,
+    /* Sample */ &sfx_943WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -27028,14 +27028,14 @@ const struct InstrumentPCM instrumentPCMData1722 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_944SampleInfo;
-const struct InstrumentPCM instrumentPCMData1723 = {
+extern const struct WaveData sfx_944WaveData;
+const struct InstrumentPCM instrumentPCM1723 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_944SampleInfo,
+    /* Sample */ &sfx_944WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -27044,14 +27044,14 @@ const struct InstrumentPCM instrumentPCMData1723 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_945SampleInfo;
-const struct InstrumentPCM instrumentPCMData1724 = {
+extern const struct WaveData sfx_945WaveData;
+const struct InstrumentPCM instrumentPCM1724 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_945SampleInfo,
+    /* Sample */ &sfx_945WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -27060,14 +27060,14 @@ const struct InstrumentPCM instrumentPCMData1724 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_946SampleInfo;
-const struct InstrumentPCM instrumentPCMData1725 = {
+extern const struct WaveData sfx_946WaveData;
+const struct InstrumentPCM instrumentPCM1725 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_946SampleInfo,
+    /* Sample */ &sfx_946WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -27076,14 +27076,14 @@ const struct InstrumentPCM instrumentPCMData1725 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_947SampleInfo;
-const struct InstrumentPCM instrumentPCMData1726 = {
+extern const struct WaveData sfx_947WaveData;
+const struct InstrumentPCM instrumentPCM1726 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_947SampleInfo,
+    /* Sample */ &sfx_947WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -27092,14 +27092,14 @@ const struct InstrumentPCM instrumentPCMData1726 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_948SampleInfo;
-const struct InstrumentPCM instrumentPCMData1727 = {
+extern const struct WaveData sfx_948WaveData;
+const struct InstrumentPCM instrumentPCM1727 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_948SampleInfo,
+    /* Sample */ &sfx_948WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -27108,14 +27108,14 @@ const struct InstrumentPCM instrumentPCMData1727 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_949SampleInfo;
-const struct InstrumentPCM instrumentPCMData1728 = {
+extern const struct WaveData sfx_949WaveData;
+const struct InstrumentPCM instrumentPCM1728 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_949SampleInfo,
+    /* Sample */ &sfx_949WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -27124,14 +27124,14 @@ const struct InstrumentPCM instrumentPCMData1728 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_950SampleInfo;
-const struct InstrumentPCM instrumentPCMData1729 = {
+extern const struct WaveData sfx_950WaveData;
+const struct InstrumentPCM instrumentPCM1729 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_950SampleInfo,
+    /* Sample */ &sfx_950WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -27140,14 +27140,14 @@ const struct InstrumentPCM instrumentPCMData1729 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_951SampleInfo;
-const struct InstrumentPCM instrumentPCMData1730 = {
+extern const struct WaveData sfx_951WaveData;
+const struct InstrumentPCM instrumentPCM1730 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_951SampleInfo,
+    /* Sample */ &sfx_951WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -27156,14 +27156,14 @@ const struct InstrumentPCM instrumentPCMData1730 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_952SampleInfo;
-const struct InstrumentPCM instrumentPCMData1731 = {
+extern const struct WaveData sfx_952WaveData;
+const struct InstrumentPCM instrumentPCM1731 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_952SampleInfo,
+    /* Sample */ &sfx_952WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -27172,14 +27172,14 @@ const struct InstrumentPCM instrumentPCMData1731 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_953SampleInfo;
-const struct InstrumentPCM instrumentPCMData1732 = {
+extern const struct WaveData sfx_953WaveData;
+const struct InstrumentPCM instrumentPCM1732 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_953SampleInfo,
+    /* Sample */ &sfx_953WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -27188,14 +27188,14 @@ const struct InstrumentPCM instrumentPCMData1732 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_954SampleInfo;
-const struct InstrumentPCM instrumentPCMData1733 = {
+extern const struct WaveData sfx_954WaveData;
+const struct InstrumentPCM instrumentPCM1733 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_954SampleInfo,
+    /* Sample */ &sfx_954WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -27204,14 +27204,14 @@ const struct InstrumentPCM instrumentPCMData1733 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_955SampleInfo;
-const struct InstrumentPCM instrumentPCMData1734 = {
+extern const struct WaveData sfx_955WaveData;
+const struct InstrumentPCM instrumentPCM1734 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_955SampleInfo,
+    /* Sample */ &sfx_955WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -27220,14 +27220,14 @@ const struct InstrumentPCM instrumentPCMData1734 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_956SampleInfo;
-const struct InstrumentPCM instrumentPCMData1735 = {
+extern const struct WaveData sfx_956WaveData;
+const struct InstrumentPCM instrumentPCM1735 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_956SampleInfo,
+    /* Sample */ &sfx_956WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -27236,14 +27236,14 @@ const struct InstrumentPCM instrumentPCMData1735 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_957SampleInfo;
-const struct InstrumentPCM instrumentPCMData1736 = {
+extern const struct WaveData sfx_957WaveData;
+const struct InstrumentPCM instrumentPCM1736 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_957SampleInfo,
+    /* Sample */ &sfx_957WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -27252,14 +27252,14 @@ const struct InstrumentPCM instrumentPCMData1736 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_958SampleInfo;
-const struct InstrumentPCM instrumentPCMData1737 = {
+extern const struct WaveData sfx_958WaveData;
+const struct InstrumentPCM instrumentPCM1737 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_958SampleInfo,
+    /* Sample */ &sfx_958WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -27268,14 +27268,14 @@ const struct InstrumentPCM instrumentPCMData1737 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_959SampleInfo;
-const struct InstrumentPCM instrumentPCMData1738 = {
+extern const struct WaveData sfx_959WaveData;
+const struct InstrumentPCM instrumentPCM1738 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_959SampleInfo,
+    /* Sample */ &sfx_959WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -27284,14 +27284,14 @@ const struct InstrumentPCM instrumentPCMData1738 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_960SampleInfo;
-const struct InstrumentPCM instrumentPCMData1739 = {
+extern const struct WaveData sfx_960WaveData;
+const struct InstrumentPCM instrumentPCM1739 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_960SampleInfo,
+    /* Sample */ &sfx_960WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -27300,14 +27300,14 @@ const struct InstrumentPCM instrumentPCMData1739 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_961SampleInfo;
-const struct InstrumentPCM instrumentPCMData1740 = {
+extern const struct WaveData sfx_961WaveData;
+const struct InstrumentPCM instrumentPCM1740 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_961SampleInfo,
+    /* Sample */ &sfx_961WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,
@@ -27316,14 +27316,14 @@ const struct InstrumentPCM instrumentPCMData1740 = {
     /* unk1C  */ 0x001fc000,
 };
 
-extern const struct SampleInfo sfx_962SampleInfo;
-const struct InstrumentPCM instrumentPCMData1741 = {
+extern const struct WaveData sfx_962WaveData;
+const struct InstrumentPCM instrumentPCM1741 = {
     {
         /* Type */ INSTRUMENT_PCM_ALIGNED,
         /* unk1 */ 0x3c,
         /* unk2 */ 0x7f,
     },
-    /* Sample */ &sfx_962SampleInfo,
+    /* Sample */ &sfx_962WaveData,
     /* unk8   */ 0x007f0000,
     /* unkC   */ 0x007f0000,
     /* unk10  */ 0x00600000,

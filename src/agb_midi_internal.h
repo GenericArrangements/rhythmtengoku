@@ -34,6 +34,10 @@ typedef volatile u16 *IOReg;
 
   // // // // // // // // // // // // // // // // // // // //
 
+#define DIRECTSOUND_MODE_STEREO 0
+#define DIRECTSOUND_MODE_MONO1  1
+#define DIRECTSOUND_MODE_MONO2  2
+
 #define MOD_TYPE_VIBRATO    0
 #define MOD_TYPE_TREMOLO    1
 #define MOD_TYPE_PANNING    2
@@ -57,8 +61,6 @@ typedef volatile u16 *IOReg;
 #define M_TRACK_STREAM_CONTINUE 0
 #define M_TRACK_STREAM_STOP     1
 #define M_TRACK_STREAM_LOOP     2
-
-  // // // // // // // // // // // // // // // // // // // //
 
 #define MSG_NOTE_OFF                    0x80
 #define MSG_NOTE_ON                     0x90

@@ -4,17 +4,17 @@
 
 asm(".include \"include/gba.inc\"");//Temporary
 
-#include "src/agb_midi/direct_sound.inc.c"
+#include "agb_midi/direct_sound.inc.c"
 
-#include "src/agb_midi/midi_channel.inc.c"
+#include "agb_midi/midi_channel.inc.c"
 
-#include "src/agb_midi/sys_exc_message.inc.c"
+#include "agb_midi/sys_exc_message.inc.c"
 
-#include "src/agb_midi/psg_channel.inc.c"
+#include "agb_midi/psg_channel.inc.c"
 
-#include "src/agb_midi/song_player.inc.c"
+#include "agb_midi/song_player.inc.c"
 
-#include "src/agb_midi/update.inc.c"
+#include "agb_midi/update.inc.c"
 
 // [func_0804c35c] Initialise Sound Players
 void func_0804c35c(SoundPlayer *channel, MidiBus *mChnlBus, u32 nTracksMax, MidiReader *midiReader, u32 type) {
@@ -43,7 +43,7 @@ u32 func_0804c398(MidiStream *midiStream) {
     return time;
 }
 
-// [func_0804c3c0] Initialise... an audio channel that don't exist.
+// [func_0804c3c0] Initialise... a sound player that don't exist.
 void func_0804c3c0(SoundPlayer *channel, MidiReader *mTrkReader, u32 nTracksMax,
                         MidiBus *mChnlBus, MidiChannel *mChnl, u8 *arg5) {
 
