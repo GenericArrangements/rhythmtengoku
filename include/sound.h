@@ -289,7 +289,7 @@ typedef struct MidiBus {
     s16 pitch;
     u16 unk8;
     u16 *tuningTable;   // Note Frequency Table in the sound data section.
-    const InstrumentBank *soundBank;
+    const union Instrument *soundBank;
     u32 totalChannels:5;
     u32 priority:27;
     MidiChannel *midiChannel; // Array of MIDI Channels
@@ -376,21 +376,22 @@ typedef struct DmaSampleReader {
     const u32 *sample;  // Sample - Stream
     u32 length;         // Sample - Length
     u32 unkC;           // ??
-    u32 loopStart;      // Sample - Loop Start
-    u32 loopEnd;        // Sample - Loop End
+    u32 loopStart;      // Sample - Loop Start << 14
+    u32 loopEnd;        // Sample - Loop End << 14
     u32 pitch;  // Pitch Envelope
     u32 unk1C;  // ?? (samplerate-related)
 } DmaSampleReader;
 
-struct SysExcMsgHandler {
-    u8  unk0;
-    u8  unk1;
-    u16 unk2;
-    u8  unk4;
-    u8  unk5;
-    u8  unk6;
-    s8  unk7;
-    u32 unk8;
+// Low-Frequency Oscillator (used for an Auto-Wah)
+struct LFO {
+    u8  preDelay;   // Pre-Delay Time
+    u8  attack;     // Attack Time
+    u16 rate;       // Rate
+    u8  offset;     // Offset
+    u8  duration;   // Range
+    u8  stage;      // Current Envelope Stage { 0..3 }
+    s8  output;     // Output
+    u32 ticks;      // Running Time
 };
 
 typedef struct MidiNote {

@@ -8,7 +8,7 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 #include "midi4a/midi_channel.inc.c"
 
-#include "midi4a/sys_exc_message.inc.c"
+#include "midi4a/oscillator.inc.c"
 
 #include "midi4a/psg_channel.inc.c"
 

@@ -34,7 +34,7 @@ extern u32 D_030055f4; // Sound Mode { 0 = Stereo; 1 = Mono (One Channel); 2 = M
 
 extern u32 D_03005600[4];
 extern u16 D_03005610; // Total DMA Sample Readers at D_03005b88 ( = 12)
-extern u32 D_03005620[3];
+extern u32 D_03005620[3]; // [0] = EQ Filter Setting; [1], [2] = ?? (something related to the effect buffer thing)
 extern u32 D_0300562c; // Current Speed (NOT Tempo)
 extern u32 D_03005630; // gRVBCNT2 (init. = 0)
 extern u32 D_03005634; // gRVBCNT4 (init. = 4)
@@ -49,12 +49,12 @@ extern SoundChannel D_030056a0[4]; // PSG Channels { 0 = Tone+Sweep; 1 = Tone; 2
 extern u8  D_03005720[0x400]; // ???? (it's a line or curve or something idk)
 extern u16 D_03005b20; // Total Bytes in array at D_03005b7c
 extern volatile u32 D_03005b24; // Number of 32-bit samples per DMA Source Address ( = 0x620 / 4 ( = 392))
-extern u8  D_03005b28; // ?? (Set by MIDI Controller 4D; Only set if D_03005b44 == 0)
+extern u8  D_03005b28; // EQ Filter High(?) Gain [mCtrl4C]
 
-extern struct SysExcMsgHandler D_03005b30;
+extern struct LFO D_03005b30;
 extern u8  D_03005b3c; // ?? (Set by MIDI Controller 49; Cleared by MIDI Controller 4A and MIDI Event F0)
 extern volatile u32 D_03005b40;
-extern u8  D_03005b44; // ?? (Must be false for certain operations to work; Affects MIDI Controllers 49, 4A and 4D)
+extern u8  D_03005b44; // Enable Global EQ Filter
 extern u32 D_03005b48; // gRVBCNT3 (init. = 2)
 
 extern u16 D_03005b78; // Current Available MIDI Note Slot
@@ -68,13 +68,13 @@ extern u32 D_03005b94; // Global Sample Rate ( = 13379Hz)
 
 extern volatile u32 D_030064a0; // Offset from *D_0300563c and *D_030064b8 to operate on.
 extern u32 D_030064a4; // gRVBCNT1 (init. = 0)
-extern u32 D_030064a8; // 13379Hz / 60
+extern u32 D_030064a8; // 13379Hz / 60 (samples per frame, at 60fps)
 
 extern u32 *D_030064b0; // &D_030024c8
 extern u32 D_030064b4; // 16776921 / 13379Hz
 extern volatile u32 *D_030064b8; // REG_DMA2SAD; Left Audio Source ( = &D_03001888[D_03005b24] ( = &D_03001ea8))
 extern SoundChannel *D_030064bc; // DirectSound Channels (12 Channels, at D_03002a48)
-extern u8  D_030064c0; // ?? (Set to 0 alongside all elements in D_03005620)
+extern u8  D_030064c0; // Duplicate of D_03005620[0] used for just one (1) singular calculation.
 extern u16 D_030064c4; // ?? (init. = 1)
 
   // // // // // // // // // // // // // // // // // // // //
@@ -84,7 +84,7 @@ extern u32 gStepFreqTable[]; // Semitones to Frequency Table ((2^(p/12) - 1) << 
 extern s16 gMidiSineTable[]; // Sine Table (init = 0; size = 0x100; max = 0x100; min = -0x100)
 extern char gMidiLoopStartSym[]; // MIDI "Loop Start" Marker: '['
 extern char gMidiLoopEndSym[]; // MIDI "Loop End" Marker: ']'
-extern const InstrumentBank *instrumentBanks[]; // Instrument Bank Index
+extern const union Instrument *instrumentBanks[]; // Instrument Bank Index
 
 extern u32 __udivmoddi4(u64, u64);
 
@@ -96,29 +96,29 @@ extern u32 __udivmoddi4(u64, u64);
 
 extern void func_08049144(void); // [func_08049144] INTERRUPT_DMA2
 
-  // // //  SAMPLE READER OPERATIONS  // // //
+  // // //  DIRECTSOUND STREAM OPERATIONS  // // //
 
-extern void func_0804930c(u32, const struct WaveData *); // [func_0804930c] SAMPLE READER - Initialise Channel
-extern void func_08049394(u32); // [func_08049394] SAMPLE READER - Reset Channel
-extern void func_080493b0(u32); // [func_080493b0] SAMPLE READER - Close Channel
-extern void func_080493c8(u32, u32, u32); // [func_080493c8] SAMPLE READER - Set Panning
-extern void func_080493e4(u32, u32); // [func_080493e4] SAMPLE READER - Set Volume Envelope
-extern void func_080493f4(u32, u32); // [func_080493f4] SAMPLE READER - Set Pitch Envelope
-extern void func_08049450(u32, u32); // [func_08049450] SAMPLE READER - Set unk0_b2
-extern void func_08049470(u32, u32); // [func_08049470] SAMPLE READER - Set unk0_b3
-extern void func_08049490(u32, u32, u32, u32 *, u32, u32 *, u16, DmaSampleReader *); // [func_08049490] SAMPLE READER - Main Init.
-// extern ? func_080497f8(?); // [func_080497f8] SAMPLE READER - Main Update
-extern void func_08049ad8(void); // [func_08049ad8] Initialise(?) REG_DMA1CNT & REG_DMA2CNT
+extern void func_0804930c(u32, const struct WaveData *); // [func_0804930c] DIRECTSOUND STREAM - Initialise Stream
+extern void func_08049394(u32); // [func_08049394] DIRECTSOUND STREAM - Reset Stream
+extern void func_080493b0(u32); // [func_080493b0] DIRECTSOUND STREAM - Close Stream
+extern void func_080493c8(u32, u32, u32); // [func_080493c8] DIRECTSOUND STREAM - Set Panning
+extern void func_080493e4(u32, u32); // [func_080493e4] DIRECTSOUND STREAM - Set Volume Envelope
+extern void func_080493f4(u32, u32); // [func_080493f4] DIRECTSOUND STREAM - Set Pitch Envelope
+extern void func_08049450(u32, u32); // [func_08049450] DIRECTSOUND STREAM - Set unk0_b2
+extern void func_08049470(u32, u32); // [func_08049470] DIRECTSOUND STREAM - Set unk0_b3
 
-  // // //  ??? OPERATIONS  // // //
+  // // //  DIRECTSOUND OPERATIONS  // // //
 
-extern void func_08049b34(u32, u32, u32, u32); // [func_08049b34] Set Reverb Controllers
-extern u32  func_08049b5c(u32); // [func_08049b5c] SAMPLE READER - Check If Active
-extern void func_08049b70(u32); // [func_08049b70] (SUB) MIDI Controller 4A - ??
-extern void func_08049b8c(u8); // [func_08049b8c] MIDI Controller 4D - ??
-extern void func_08049bac(void); // [func_08049bac] ??
-extern void func_08049be4(void); // [func_08049be4] MIDI Controller 49 - ??; MIDI Controller 4A - ??
-extern void func_08049bfc(u32, u32, u32); // [func_08049bfc] ??
+extern void func_08049490(u32, u32, u32, u32 *, u32, u32 *, u16, DmaSampleReader *); // [func_08049490] DIRECTSOUND - Initialise DirectSound
+// extern ? func_080497f8(?); // [func_080497f8] DIRECTSOUND - Update DirectSound
+extern void func_08049ad8(void); // [func_08049ad8] DIRECTSOUND - Initialise(?) REG_DMA1CNT & REG_DMA2CNT (unused)
+extern void func_08049b34(u32, u32, u32, u32); // [func_08049b34] DIRECTSOUND - Set Reverb Controllers
+extern u32  func_08049b5c(u32); // [func_08049b5c] DIRECTSOUND STREAM - Check If Active
+extern void func_08049b70(u32); // [func_08049b70] DIRECTSOUND - Set Band-Pass Filter Position
+extern void func_08049b8c(u8); // [func_08049b8c] DIRECTSOUND - Set Band-Pass Filter High(?) Gain
+extern void func_08049bac(void); // [func_08049bac] DIRECTSOUND - Initialise Band-Pass Filter
+extern void func_08049be4(void); // [func_08049be4] DIRECTSOUND - Reset Band-Pass Filter
+extern void func_08049bfc(u32, u32, u32); // [func_08049bfc] DIRECTSOUND - Set Band-Pass Filter
 
   // // //  MIDI BUS UPDATE OPERATIONS  // // //
 
@@ -135,7 +135,7 @@ extern void func_08049e8c(MidiBus *, u8); // [func_08049e8c] MIDI BUS - Set Prio
 extern void func_08049ec4(MidiBus *, u8, u16); // [func_08049ec4] MIDI BUS - Set Selected Track Volume & Track Selection
 extern void func_08049ecc(MidiChannel *); // [func_08049ecc] MIDI CHANNEL - Initialise
 extern void func_08049fa0(MidiBus *, u32, MidiChannel *); // [func_08049fa0] MIDI BUS - Initialise
-extern void func_0804a014(MidiBus *, const InstrumentBank *); // [func_0804a014] MIDI BUS - Set Sound Bank
+extern void func_0804a014(MidiBus *, const union Instrument *); // [func_0804a014] MIDI BUS - Set Sound Bank
 
   // // //  SOUND CHANNEL OPERATIONS  // // //
 
@@ -192,12 +192,12 @@ extern void func_0804ade8(MidiBus *, u8);     // [func_0804ade8] MIDI BUS - Set 
 extern void func_0804ae14(MidiBus *, u16);    // [func_0804ae14] MIDI BUS - Set unk8
 extern void func_0804ae18(MidiBus *, u16 *);  // [func_0804ae18] MIDI BUS - Set Tuning
 
-  // // //  SYSTEM-EXCLUSIVE MESSAGE OPERATIONS  // // //
+  // // //  LOW-FREQUENCY OSCILLATOR OPERATIONS  // // //
 
-extern void func_0804ae1c(struct SysExcMsgHandler*, u8, u8, u8, u8, u8); // [func_0804ae1c] SYSTEM MESSAGE HANDLER - Initialise
-extern void func_0804ae54(struct SysExcMsgHandler *); // [func_0804ae54] SYSTEM MESSAGE HANDLER - Set ?? [Ctrl_49]
-extern void func_0804ae60(struct SysExcMsgHandler *); // [func_0804ae60] SYSTEM MESSAGE HANDLER - Set ?? [Ctrl_49; Ctrl_4A]
-extern void func_0804ae6c(struct SysExcMsgHandler *, u32); // [func_0804ae6c] SYSTEM MESSAGE HANDLER - Update
+extern void func_0804ae1c(struct LFO *, u8, u8, u8, u8, u8); // [func_0804ae1c] LOW-FREQUENCY OSCILLATOR - Initialise
+extern void func_0804ae54(struct LFO *);        // [func_0804ae54] LOW-FREQUENCY OSCILLATOR - Start [Ctrl_49]
+extern void func_0804ae60(struct LFO *);        // [func_0804ae60] LOW-FREQUENCY OSCILLATOR - Stop [Ctrl_49; Ctrl_4A]
+extern void func_0804ae6c(struct LFO *, u32);   // [func_0804ae6c] LOW-FREQUENCY OSCILLATOR - Update
 extern u32  func_0804af0c(u16); // [func_0804af0c] UTIL - Pseudo-Random Number Generator
 
   // // //  PSG CHANNEL OPERATIONS  // // //
@@ -228,8 +228,8 @@ extern void func_0804b654(SoundPlayer *, u16, u16); // [func_0804b654] SOUND PLA
 extern void func_0804b65c(SoundPlayer *, u16, s16); // [func_0804b65c] SOUND PLAYER - Set Pitch
 extern void func_0804b66c(SoundPlayer *, u16, s8); // [func_0804b66c] SOUND PLAYER - Set Panning
 extern void func_0804b67c(u16); // [func_0804b67c] SOUND PLAYER - Pause Sound Sequence from Index
-extern u32  func_0804b6c4(MidiStream, MidiStream, u32); // [func_0804b6c4] UTIL - String.equals()
-extern u32  func_0804b6f0(u16, u16, u16); // [func_0804b6f0] UTIL - Playback Speed Formula
+extern u32  func_0804b6c4(MidiStream, MidiStream, u32); // [func_0804b6c4] MIDI STREAM - Stream.equals()
+extern u32  func_0804b6f0(u16, u16, u16); // [func_0804b6f0] SOUND PLAYER - Get MIDI Ticks Per Frame
 extern void func_0804b710(SoundPlayer *, u16); // [func_0804b710] SOUND PLAYER - Align Channel Speed with BeatScript
 extern void func_0804b734(SoundPlayer *, u16, u16); // [func_0804b734] SOUND PLAYER - Apply Volume Fade { type = 0..3 }
 extern void func_0804b7dc(SoundPlayer *, u16); // [func_0804b7dc] SOUND PLAYER - Volume Fade-Out & Clear

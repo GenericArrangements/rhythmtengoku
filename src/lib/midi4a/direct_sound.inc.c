@@ -114,10 +114,10 @@ void func_08049144(void) {
 }
 
 
-  //  //  //  //   SAMPLE READER OPERATIONS   //  //  //  //
+  //  //  //  //   DIRECTSOUND STREAM OPERATIONS   //  //  //  //
 
 
-// [func_0804930c] SAMPLE READER - Initialise Channel
+// [func_0804930c] SAMPLE READER - Initialise Stream
 void func_0804930c(u32 id, const struct WaveData *sample) {
     DmaSampleReader *reader = &D_03005b88[id];
     u32 keySampleRate;
@@ -142,13 +142,13 @@ void func_0804930c(u32 id, const struct WaveData *sample) {
     reader->unk1C = __udivmoddi4((sampleRate + keySampleRate) - 1, keySampleRate);
 }
 
-// [func_08049394] SAMPLE READER - Reset Channel
+// [func_08049394] SAMPLE READER - Reset Stream
 void func_08049394(u32 id) {
     D_03005b88[id].unkC = 0;
     D_03005b88[id].active = TRUE;
 }
 
-// [func_080493b0] SAMPLE READER - Close Channel
+// [func_080493b0] SAMPLE READER - Close Stream
 void func_080493b0(u32 id) {
     D_03005b88[id].active = FALSE;
 }
@@ -165,13 +165,13 @@ void func_080493e4(u32 id, u32 volumeEnv) {
 }
 
 // [func_080493f4] SAMPLE READER - Set Pitch Envelope
-void func_080493f4(u32 id, u32 pitchEnv) {
+void func_080493f4(u32 id, u32 freq) {
     DmaSampleReader *reader = &D_03005b88[id];
-    if (pitchEnv == 0) {
-        reader->pitch = 0x80 << 7;
+    if (freq == 0) {
+        reader->pitch = 0x4000;
         reader->unk0_b1 = FALSE;
     } else {
-        reader->pitch = ((u64) reader->unk1C * pitchEnv) >> 14;
+        reader->pitch = ((u64) reader->unk1C * freq) >> 14;
         reader->unk0_b1 = (-(0x4000 ^ reader->pitch) | (0x4000 ^ reader->pitch)) >> 0x1f;
     }
 }
@@ -187,14 +187,14 @@ void func_08049470(u32 id, u32 arg1) {
 }
 
 
-  //  //  //  //   ??? OPERATIONS   //  //  //  //
+  //  //  //  //   DIRECTSOUND OPERATIONS   //  //  //  //
 
 
 #include "asm/midi4a/asm_08049490.s"
 
 #include "asm/midi4a/asm_080497f8.s"
 
-// [func_08049ad8] Initialise(?) REG_DMA1CNT & REG_DMA2CNT
+// [func_08049ad8] DIRECTSOUND - Initialise(?) REG_DMA1CNT & REG_DMA2CNT (unused)
 void func_08049ad8(void) {
     volatile u32 dummy;
 
@@ -211,7 +211,7 @@ void func_08049ad8(void) {
     REG_DMA2CNT_H = DMACNT_SIZE;
 }
 
-// [func_08049b34] Set Reverb Controllers
+// [func_08049b34] DIRECTSOUND - Set Reverb Controllers
 void func_08049b34(u32 arg0, u32 arg1, u32 arg2, u32 arg3) {
     D_030064a4 = arg0;
     D_03005630 = arg1;
@@ -219,22 +219,22 @@ void func_08049b34(u32 arg0, u32 arg1, u32 arg2, u32 arg3) {
     D_03005634 = arg3;
 }
 
-// [func_08049b5c] SAMPLE READER - Check If Active
+// [func_08049b5c] DIRECTSOUND STREAM - Check If Active
 u32 func_08049b5c(u32 id) {
     return D_03005b88[id].active;
 }
 
-// [func_08049b70] (SUB) MIDI Controller 4A - ??
-void func_08049b70(u32 arg0) {
-    if (!D_03005b44) D_03005620[0] = arg0;
+// [func_08049b70] DIRECTSOUND - Set Band-Pass Filter Position
+void func_08049b70(u32 eq) {
+    if (!D_03005b44) D_03005620[0] = eq;
 }
 
-// [func_08049b8c] MIDI Controller 4D - ??
-void func_08049b8c(u8 arg0) {
-    if (!D_03005b44) D_03005b28 = arg0;
+// [func_08049b8c] DIRECTSOUND - Set Band-Pass Filter High(?) Gain
+void func_08049b8c(u8 gain) {
+    if (!D_03005b44) D_03005b28 = gain;
 }
 
-// [func_08049bac] ??
+// [func_08049bac] DIRECTSOUND - Initialise Band-Pass Filter
 void func_08049bac(void) {
     D_03005620[2] = 0;
     D_03005620[1] = 0;
@@ -243,12 +243,12 @@ void func_08049bac(void) {
     D_030064b0[D_03005638 - 2] = D_030064b0[D_03005638 - 1] = 0;
 }
 
-// [func_08049be4] MIDI Controller 49 - ??; MIDI Controller 4A - ??
+// [func_08049be4] DIRECTSOUND - Reset Band-Pass Filter
 void func_08049be4(void) {
     if (!D_03005b44) func_08049bac();
 }
 
-// [func_08049bfc] ??
+// [func_08049bfc] DIRECTSOUND - Set Band-Pass Filter
 void func_08049bfc(u32 enableFilter, u32 eq, u32 gain) {
     if (enableFilter != FALSE) enableFilter = TRUE;
     if (D_03005b44 != enableFilter) {

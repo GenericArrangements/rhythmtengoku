@@ -48,6 +48,11 @@ typedef volatile u16 *IOReg;
 #define ADSR_STAGE_RELEASE      3
 #define ADSR_STAGE_FORCE_STOP   4
 
+#define LFO_STAGE_DISABLED  0
+#define LFO_STAGE_PRE_DELAY 1
+#define LFO_STAGE_ATTACK    2
+#define LFO_STAGE_SUSTAIN   3
+
 #define VOL_FADE_RESET      0
 #define VOL_FADE_IN         1
 #define VOL_FADE_OUT_CLEAR  2

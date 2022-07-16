@@ -9,7 +9,7 @@ void func_0804b80c(SoundPlayer *soundPlayer, MidiStream stream) {
 
     stream++;
     switch (type) {
-        case 0:
+        case 0: // EQ Filter Modulator
             func_08049be4();
             D_03005b3c = 0;
             D_03005640 = stream[0] * 2;
@@ -130,32 +130,32 @@ void func_0804b95c(SoundPlayer *soundPlayer, u32 id, u8 controller, u8 var) {
             func_0804ac80(midiBus, id, var);
             break;
 
-        case M_CONTROLLER_UNK_49:
+        case M_CONTROLLER_UNK_49: // Set LFO
             D_03005b3c = var;
             switch (var) {
                 case 0:
-                case 1:
+                case 1: // Stop
                     func_0804ae60(&D_03005b30);
                     break;
-                case 2:
+                case 2: // Start
                     func_08049be4();
                     func_0804ae54(&D_03005b30);
                     break;
             }
             break;
 
-        case M_CONTROLLER_UNK_4A:
+        case M_CONTROLLER_UNK_4A: // Set Band-Pass Filter
             D_03005b3c = 0;
             func_0804ae60(&D_03005b30);
             func_08049be4();
             func_08049b70((var * 2) - 0x80);
             break;
 
-        case M_CONTROLLER_UNK_4C:
+        case M_CONTROLLER_UNK_4C: // Set LFO Multiplier
             D_03005640 = var * 2;
             break;
 
-        case M_CONTROLLER_UNK_4D:
+        case M_CONTROLLER_UNK_4D: // Set Band-Pass Filter High(?) Gain
             func_08049b8c(var);
             break;
 
@@ -486,9 +486,9 @@ void func_0804c170(void) {
             func_08049d08(soundPlayer->midiBus);
             if (soundPlayer->songInfo != NULL) {
                 rvb0 -= (64 * 2) - (soundPlayer->midiController4E * 2);
-                rvb1 -= 64 - (soundPlayer->midiController4F);
-                rvb2 -= 64 - (soundPlayer->midiController50);
-                rvb3 -= 64 - (soundPlayer->midiController51);
+                rvb1 -= 64 - soundPlayer->midiController4F;
+                rvb2 -= 64 - soundPlayer->midiController50;
+                rvb3 -= 64 - soundPlayer->midiController51;
             }
         }
     }
@@ -497,15 +497,15 @@ void func_0804c170(void) {
     if ((D_08aa431c != 0) && (soundPlayer != NULL)) {
         func_0804c6c8();
         rvb0 -= (64 * 2) - (soundPlayer->midiController4E * 2);
-        rvb1 -= 64 - (soundPlayer->midiController4F);
-        rvb2 -= 64 - (soundPlayer->midiController50);
-        rvb3 -= 64 - (soundPlayer->midiController51);
+        rvb1 -= 64 - soundPlayer->midiController4F;
+        rvb2 -= 64 - soundPlayer->midiController50;
+        rvb3 -= 64 - soundPlayer->midiController51;
     }
 
     if ((D_03005644 != NULL) && (D_03005b3c != 0)) {
         speed = func_0804b6f0(D_03005644->midiTempo, D_03005644->speedMulti, 0x18);
         func_0804ae6c(&D_03005b30, speed);
-        func_08049b70(Q24_TO_INT(D_03005b30.unk7 * D_03005640));
+        func_08049b70(Q24_TO_INT(D_03005b30.output * D_03005640));
     }
 
     func_0804a334();

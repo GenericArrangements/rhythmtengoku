@@ -147,7 +147,7 @@ void func_08049fa0(MidiBus *midiBus, u32 totalChannels, MidiChannel *mChnl) {
 }
 
 // [func_0804a014] MIDI BUS - Set Sound Bank
-void func_0804a014(MidiBus *midiBus, const InstrumentBank *instBank) {
+void func_0804a014(MidiBus *midiBus, const union Instrument *instBank) {
     midiBus->soundBank = instBank;
 }
 
@@ -543,7 +543,7 @@ void func_0804a6b0(MidiBus *mChnlBus, u32 channelID, u8 key, u8 vel) {
     u32 isPSG; // stack + 0xC
     const struct InstrumentPCM *instPCM; // stack + 0x10
     const struct InstrumentPSG *instPSG; // stack + 0x14
-    u32 isSubSingle; // r4
+    u32 isSubRhythm; // r4
     u32 chnlUnk1C; // r4
     u32 modRange;
     s32 temp; // r6
@@ -561,27 +561,27 @@ void func_0804a6b0(MidiBus *mChnlBus, u32 channelID, u8 key, u8 vel) {
     mChnl = &mChnlBus->midiChannel[channelID]; // r8
     if (mChnl->unk0_b0) return;
 
-    inst = (union Instrument) (*mChnlBus->soundBank)[mChnl->instPatch]; // r2
+    inst = (union Instrument) mChnlBus->soundBank[mChnl->instPatch]; // r2
     if (inst.type == NULL) return;
 
-    isSubSingle = FALSE; // r4
+    isSubRhythm = FALSE; // r4
 
     switch (*inst.type) {
         case INSTRUMENT_SUB_RHYTHM:
-            isSubSingle = TRUE;
+            isSubRhythm = TRUE;
             inst = ((const union Instrument *)(inst.rhy->subBank))[key - inst.rhy->total];
             if (inst.type == NULL) return;
-            if ((u8) (*inst.type - 0x52) <= 1) return; // If it's another sub-bank, just give up.
+            if ((u8) (*inst.type - 0x52) < 2) return; // If it's another sub-bank, just give up.
             break;
         case INSTRUMENT_SUB_SPLIT:
             inst = ((const union Instrument *)(inst.spl->subBank))[inst.spl->keySplitTable[key - inst.spl->total]];
             if (inst.type == NULL) return;
-            if ((u8) (*inst.type - 0x52) <= 1) return; // If it's another sub-bank, just give up.
+            if ((u8) (*inst.type - 0x52) < 2) return; // If it's another sub-bank, just give up.
             break;
     }
 
     // Instantiate PSG Instrument
-    if ((u8) (*inst.type - 0x50) <= 1) {
+    if ((u8) (*inst.type - 0x50) < 2) {
         instPSG = inst.psg; // stack + 0x14
         isPSG = TRUE; // stack + 0xC
         sndBuf = &D_030056a0[inst.psg->channel]; // r7
@@ -595,7 +595,7 @@ void func_0804a6b0(MidiBus *mChnlBus, u32 channelID, u8 key, u8 vel) {
         sndBuf = &D_030064bc[bufferID]; // r7
     }
 
-    if (!isSubSingle) {
+    if (!isSubRhythm) {
         temp = key + mChnlBus->key; // r6
         panning = 0; // stack + 8
     }
@@ -653,7 +653,7 @@ void func_0804a6b0(MidiBus *mChnlBus, u32 channelID, u8 key, u8 vel) {
 
     // ADSR
     bufferADSR = &sndBuf->adsr;
-    sndBuf->adsr.stage = 0;
+    sndBuf->adsr.stage = ADSR_STAGE_ATTACK;
     if (isPSG) adsrEnv = instPSG->initial;
     else adsrEnv = instPCM->initial;
     bufferADSR->envelope = adsrEnv;

@@ -196,7 +196,7 @@ void func_0804b67c(u16 offset) {
     }
 }
 
-// [func_0804b6c4] UTIL - Stream.equals()
+// [func_0804b6c4] MIDI STREAM - Stream.equals()
 u32 func_0804b6c4(MidiStream stream0, MidiStream stream1, u32 length) {
     u32 i;
 
@@ -206,9 +206,9 @@ u32 func_0804b6c4(MidiStream stream0, MidiStream stream1, u32 length) {
     return TRUE;
 }
 
-// [func_0804b6f0] UTIL - Playback Speed Formula
-u32 func_0804b6f0(u16 tempo, u16 speedEnv, u16 quarterNote) {
-    return (u32) (tempo * speedEnv * quarterNote) / (60 * 60);
+// [func_0804b6f0] SOUND PLAYER - Get MIDI Ticks Per Frame
+u32 func_0804b6f0(u16 tempo, u16 multiplier, u16 quarterNote) {
+    return (u32) (tempo * multiplier * quarterNote) / (60 * 60);
 }
 
 // [func_0804b710] SOUND PLAYER - Align Channel Speed with BeatScript
