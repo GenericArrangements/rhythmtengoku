@@ -95,7 +95,7 @@ void func_08049ecc(MidiChannel *mChnl) {
     mChnl->unk0_b0 = FALSE;
     mChnl->unk0_b1 = FALSE;
     mChnl->instPatch = 0;
-    mChnl->unk0_b9 = 0;
+    mChnl->bankSelect = 0;
     mChnl->volume = 100;
     mChnl->panning = 64;
     mChnl->expression = 127;
@@ -111,7 +111,7 @@ void func_08049ecc(MidiChannel *mChnl) {
     mChnl->pitchWheel = 0x2000;
     mChnl->modRange = 2;
     mChnl->priority = 0;
-    mChnl->unk0_b30 = FALSE;
+    mChnl->filterEQ = FALSE;
     mChnl->stereo = FALSE;
     mChnl->rndmPitch = 0x100;
     mChnl->rndmPitchFloor = 0x100;
@@ -503,13 +503,13 @@ s32 func_0804a628(MidiBus *midiBus, u32 id, u8 key, u8 vel) {
     return -1;
 }
 
-// [func_0804a65c] ?? (something about left panning)
+// [func_0804a65c] DIRECTSOUND STREAM - Convert Panning to Right Volume
 u8 func_0804a65c(u8 pan) {
     if (pan >= 64) return 127;
     else return pan * 2;
 }
 
-// [func_0804a674] ?? (something about right panning)
+// [func_0804a674] DIRECTSOUND STREAM - Convert Panning to Left Volume
 u8 func_0804a674(u8 pan) {
     if (pan < 64) return 127;
     else return (127 - pan) * 2;
@@ -679,7 +679,7 @@ void func_0804a6b0(MidiBus *mChnlBus, u32 channelID, u8 key, u8 vel) {
         func_080493c8(bufferID, func_0804a674(panning), func_0804a65c(panning) * temp);
         func_080493f4(bufferID, func_0804a018(sndBuf));
         func_08049450(bufferID, instPCM->distort);
-        func_08049470(bufferID, mChnl->unk0_b30);
+        func_08049470(bufferID, mChnl->filterEQ);
         func_08049394(bufferID);
     }
 
@@ -750,21 +750,21 @@ void func_0804aba8(MidiBus *midiBus, u32 id, u8 exp) {
     midiBus->midiChannel[id].expression = exp;
 }
 
-// [func_0804abc8] MIDI CHANNEL - Set unk0_b9 [Ctrl_00; Ctrl_20]
+// [func_0804abc8] MIDI CHANNEL - Set Bank Select [Ctrl_00; Ctrl_20]
 void func_0804abc8(MidiBus *midiBus, u32 id, u16 var) {
-    u16 unk0_b9 = midiBus->midiChannel[id].unk0_b9;
+    u16 bank = midiBus->midiChannel[id].bankSelect;
 
     // MIDI Controller 00 - ??
     if (var & 0x8000) {
-        unk0_b9 &= 0x3f80;     // Bits 0-6  = 0
-        unk0_b9 |= (var << 7); // Bits 7-13 = var
+        bank &= 0x3f80;     // Bits 0-6  = 0
+        bank |= (var << 7); // Bits 7-13 = var
     }
     // MIDI Controller 20 - ??
     else {
-        unk0_b9 &= 0x7f; // Bits 7-13 = 0
-        unk0_b9 |= var;  // Bits 0-6  = var
+        bank &= 0x7f; // Bits 7-13 = 0
+        bank |= var;  // Bits 0-6  = var
     }
-    midiBus->midiChannel[id].unk0_b9 = unk0_b9;
+    midiBus->midiChannel[id].bankSelect = bank;
 }
 
 // [func_0804ac24] MIDI CHANNEL - Set unk0_b0
@@ -782,9 +782,9 @@ void func_0804ac60(MidiBus *midiBus, u32 id, u8 var) {
     midiBus->midiChannel[id].unk4_b21 = var;
 }
 
-// [func_0804ac80] MIDI CHANNEL - Set Compression/Dampening? [Ctrl_48]
-void func_0804ac80(MidiBus *midiBus, u32 id, u8 comp) {
-    midiBus->midiChannel[id].unk0_b30 = comp;
+// [func_0804ac80] MIDI CHANNEL - Set Filter EQ [Ctrl_48]
+void func_0804ac80(MidiBus *midiBus, u32 id, u8 useFilter) {
+    midiBus->midiChannel[id].filterEQ = useFilter;
 }
 
 // [func_0804aca0] MIDI CHANNEL - Set Modulation Type [Ctrl_16]

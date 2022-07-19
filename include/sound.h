@@ -251,9 +251,9 @@ typedef struct MidiChannel {
     u32 unk0_b0:1;      // ??? [default = 0]
     u32 unk0_b1:1;      // ??? [default = 0]
     u32 instPatch:7;    // Instrument Patch Number [mEvnt_C; default = 0]
-    u32 unk0_b9:14;     // ??? [mCtrl_00; mCtrl_20; default = 0]
+    u32 bankSelect:14;  // Bank Select? [mCtrl_00; mCtrl_20; default = 0]
     u32 volume:7;       // Channel Volume [mCtrl_07; default = 0x64]
-    u32 unk0_b30:1;     // Compression? Dampen? [mCtrl_48; default = 0]
+    u32 filterEQ:1;     // Compression? Dampen? [mCtrl_48; default = 0]
     u32 stereo:1;       // Offset/Split Stereo Effect [mCtrl_4B; default = 0]
     u32 panning:7;      // Channel Panning [mCtrl_0A; default = 0x40]
     u32 expression:7;   // Expression [mCtrl_0B; default = 0x7f]
@@ -288,11 +288,11 @@ typedef struct MidiBus {
     s8  panning;
     s16 pitch;
     u16 unk8;
-    u16 *tuningTable;   // Note Frequency Table in the sound data section.
+    const u16 *tuningTable;
     const union Instrument *soundBank;
     u32 totalChannels:5;
     u32 priority:27;
-    MidiChannel *midiChannel; // Array of MIDI Channels
+    MidiChannel *midiChannel;
     s8  unk1C[12];
 } MidiBus;
 
@@ -323,8 +323,8 @@ typedef struct SoundPlayer {
     MidiReader *midiReader;    // MIDI: Multiple structures which each keep track of a MIDI Track being processed.
     const SongInfo *songInfo;    // SequenceData: Currently-loaded Sound Sequence.
     u32 channelSpeed;       // ??: Similar but not directly tempo. [default = 1]
-    char *loopStartSym;     // MIDI: Label char denoting "Loop Start". [always D_08A865D4, '[']
-    char *loopEndSym;       // MIDI: Label char denoting "Loop End". [always D_08A865D8, ']']
+    const char *loopStartSym;     // MIDI: Label char denoting "Loop Start". [always D_08A865D4, '[']
+    const char *loopEndSym;       // MIDI: Label char denoting "Loop End". [always D_08A865D8, ']']
     u8  loopStartSymSize;   // MIDI: Value of func_0804B348(D_08A865A4). [1]
     u8  loopEndSymSize;     // MIDI: Value of func_0804B348(D_08A865A8). [1]
     u16 midiQuarterNote;    // MIDI: Value denoting 1 beat. Read upon initialisation, and for any change in tempo. [always 0x18]
@@ -369,13 +369,13 @@ typedef struct DmaSampleReader {
     u32 active:1;
     u32 unk0_b1:1;
     u32 unk0_b2:1;  // ?? ( = instPCM->unk1_b7)
-    u32 unk0_b3:1;  // ?? ( = mChnl->unk0_b30)
-    u8 volume;  // Volume Envelope
-    u8 unk2;    // ?? Panning 1
-    u8 unk3;    // ?? Panning 2
+    u32 useEQ:1;    // Use Filter EQ
+    u8 volume;  // Volume: Main
+    u8 volumeL; // Volume: Left
+    u8 volumeR; // Volume: Right
     const u32 *sample;  // Sample - Stream
-    u32 length;         // Sample - Length
-    u32 unkC;           // ??
+    u32 length;         // Sample - Length << 14
+    u32 position;       // Sample - Stream Position << 14
     u32 loopStart;      // Sample - Loop Start << 14
     u32 loopEnd;        // Sample - Loop End << 14
     u32 pitch;  // Pitch Envelope

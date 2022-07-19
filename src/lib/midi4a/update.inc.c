@@ -384,7 +384,7 @@ void func_0804bed0(SoundPlayer *soundPlayer, u32 id) {
     // If any note had a non-zero velocity, and the given MIDI Channel's unk0_b30 is set:
     if (anyNotePlayed) {
         channel = &soundPlayer->midiBus->midiChannel[id];
-        if (channel->unk0_b30 && (D_03005b3c == 1)) {
+        if (channel->filterEQ && (D_03005b3c == 1)) {
             func_08049be4();
             func_0804ae54(&D_03005b30);
         }

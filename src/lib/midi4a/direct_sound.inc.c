@@ -144,7 +144,7 @@ void func_0804930c(u32 id, const struct WaveData *sample) {
 
 // [func_08049394] SAMPLE READER - Reset Stream
 void func_08049394(u32 id) {
-    D_03005b88[id].unkC = 0;
+    D_03005b88[id].position = 0;
     D_03005b88[id].active = TRUE;
 }
 
@@ -154,9 +154,9 @@ void func_080493b0(u32 id) {
 }
 
 // [func_080493c8] SAMPLE READER - Set Panning
-void func_080493c8(u32 id, u32 pan1, u32 pan2) {
-    D_03005b88[id].unk2 = pan1;
-    D_03005b88[id].unk3 = pan2;
+void func_080493c8(u32 id, u32 left, u32 right) {
+    D_03005b88[id].volumeL = left;
+    D_03005b88[id].volumeR = right;
 }
 
 // [func_080493e4] SAMPLE READER - Set Volume Envelope
@@ -182,8 +182,8 @@ void func_08049450(u32 id, u32 arg1) {
 }
 
 // [func_08049470] SAMPLE READER - Set unk0_b3
-void func_08049470(u32 id, u32 arg1) {
-    D_03005b88[id].unk0_b3 = arg1;
+void func_08049470(u32 id, u32 useEQ) {
+    D_03005b88[id].useEQ = useEQ;
 }
 
 

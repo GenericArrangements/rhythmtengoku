@@ -12,7 +12,7 @@ u32 func_0804b330(MidiStream stream) {
 }
 
 // [func_0804b348] SOUND PLAYER - Loop Marker Symbol Length
-u32 func_0804b348(char *label) {
+u32 func_0804b348(const char *label) {
     u8 i;
 
     for (i = 0; label[i] != '\0'; i++);

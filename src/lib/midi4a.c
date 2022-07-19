@@ -95,7 +95,7 @@ void func_0804c6c8(void) {
         if (note->velocity != 0) { // Note has non-zero velocity.
             func_0804a6b0(D_0300159c, note->channel, note->key, note->velocity);
             mChnl = &D_0300159c->midiChannel[note->channel];
-            if (mChnl->unk0_b30 && (D_03005b3c == 1)) {
+            if (mChnl->filterEQ && (D_03005b3c == 1)) {
                 anyNotePlayed = TRUE;
             }
         } else { // Note is muted.
@@ -112,9 +112,9 @@ void func_0804c6c8(void) {
 void func_0804c778(void) {
     u32 i;
 
-    func_08049490(0, 13379, 0x620, &D_03001888, 0x80, &D_030024c8, 12, &D_030028c8);
+    func_08049490(0, 13379, 0x620, D_03001888, 0x80, D_030024c8, 12, D_030028c8);
     func_0804af30();
-    func_0804a360(12, &D_03002a48);
+    func_0804a360(12, D_03002a48);
 
     for (i = 0; i < 13; i++) {
         func_08049fa0(D_08aa4358[i].midiBus, D_08aa4358[i].nTracksMax, D_08aa4358[i].midiChannels);
