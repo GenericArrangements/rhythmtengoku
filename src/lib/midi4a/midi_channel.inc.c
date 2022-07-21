@@ -415,24 +415,22 @@ s32 func_0804a3fc(void) {
 
 // [func_0804a434] SOUND CHANNEL - Return PCM Buffer with Lowest Volume
 s32 func_0804a434(void) {
-    SoundChannel *sndBuf;
-    s32 id = -1;
-    u32 currentVol = 0x10000;
-    u32 bufferVol;
-    s32 i = 0;
+    SoundChannel *sndChnl;
+    s32 id, i;
+    u32 lowestVol, thisVol;
 
-    sndBuf = D_030064bc;
-    while (i < D_03005b8c) {
-        if (sndBuf->active && (sndBuf->adsr.stage == ADSR_STAGE_RELEASE)) {
-            bufferVol = sndBuf->midiChannel->volumeWheel * sndBuf->velocity;
-            if (bufferVol < currentVol) {
-                currentVol = bufferVol;
+    id = -1;
+    lowestVol = 0x10000;
+
+    for (i = 0, sndChnl = D_030064bc; i < D_03005b8c; i++, sndChnl++) {
+        if (sndChnl->active && (sndChnl->adsr.stage == ADSR_STAGE_RELEASE)) {
+            thisVol = sndChnl->midiChannel->volumeWheel * sndChnl->velocity;
+            if (thisVol < lowestVol) {
+                lowestVol = thisVol;
                 id = i;
             }
         }
 
-        i++;
-        sndBuf++;
     }
 
     return id;
@@ -440,17 +438,17 @@ s32 func_0804a434(void) {
 
 // [func_0804a48c] SOUND CHANNEL - Return PCM Buffer with Lowest Volume (exclude ADSR)
 s32 func_0804a48c(void) {
-    SoundChannel *sndBuf;
-    s32 id = -1;
-    u32 currentVol = 0x10000;
-    u32 bufferVol;
-    s32 i;
+    s32 id, i;
+    u32 lowestVol, thisVol;
+
+    id = -1;
+    lowestVol = 0x10000;
 
     for (i = 0; i < D_03005b8c; i++) {
         if (D_030064bc[i].active) {
-            bufferVol = D_030064bc[i].midiChannel->volumeWheel * D_030064bc[i].velocity;
-            if (bufferVol < currentVol) {
-                currentVol = bufferVol;
+            thisVol = D_030064bc[i].midiChannel->volumeWheel * D_030064bc[i].velocity;
+            if (thisVol < lowestVol) {
+                lowestVol = thisVol;
                 id = i;
             }
         }
@@ -462,8 +460,7 @@ s32 func_0804a48c(void) {
 
 // [func_0804a5b4] SOUND CHANNEL - 'Note Off' Event
 void func_0804a5b4(MidiBus *midiBus, u32 id, u8 key) {
-    SoundChannel *psgChnl;
-    SoundChannel *sndChnl;
+    SoundChannel *psgChnl, *sndChnl;
     s32 adsrRelease;
     s32 i;
 
@@ -473,7 +470,7 @@ void func_0804a5b4(MidiBus *midiBus, u32 id, u8 key) {
         if (i < 0) break;
         sndChnl = &D_030064bc[i];
         sndChnl->adsr.stage = ADSR_STAGE_RELEASE;
-    } while (1);
+    } while (TRUE);
 
     // Set ADSR Stage to 3 for all relevant PSG Buffers.
     psgChnl = &D_030056a0[0];
@@ -487,32 +484,30 @@ void func_0804a5b4(MidiBus *midiBus, u32 id, u8 key) {
 
 // [func_0804a628] SOUND CHANNEL - Return First Most Replaceable PCM Buffer
 s32 func_0804a628(MidiBus *midiBus, u32 id, u8 key, u8 vel) {
-    s32 buffer;
+    s32 channel;
 
     // Return the first inactive buffer.
-    buffer = func_0804a3fc();
-    if (buffer >= 0) return buffer;
+    channel = func_0804a3fc();
+    if (channel >= 0) return channel;
 
     // Return the quietest buffer (below threshold; see function).
-    buffer = func_0804a434();
-    if (buffer >= 0) return buffer;
+    channel = func_0804a434();
+    if (channel >= 0) return channel;
 
     // Return a buffer of a lower priority.
-    buffer = func_0804a4e0(midiBus, id, vel);
-    if (buffer >= 0) return buffer;
+    channel = func_0804a4e0(midiBus, id, vel);
+    if (channel >= 0) return channel;
     return -1;
 }
 
 // [func_0804a65c] DIRECTSOUND STREAM - Convert Panning to Right Volume
 u8 func_0804a65c(u8 pan) {
-    if (pan >= 64) return 127;
-    else return pan * 2;
+    return (pan >= 64) ? 127 : (pan * 2);
 }
 
 // [func_0804a674] DIRECTSOUND STREAM - Convert Panning to Left Volume
 u8 func_0804a674(u8 pan) {
-    if (pan < 64) return 127;
-    else return (127 - pan) * 2;
+    return (pan < 64) ? 127 : ((127 - pan) * 2);
 }
 
 // [func_0804a690] MIDI BUS - Convert Midi Key to Frequency
@@ -530,26 +525,26 @@ u32 func_0804a690(MidiBus *midiBus, u32 key) {
 
 // [func_0804a6b0] SOUND CHANNEL - 'Note On' Event
   /*
-    mChnlBus    MIDI Channel Bus for Relevant Audio Channel        // r9
-    channelID   MIDI Channel ID (from buffered MIDI Note)          // stack + 0
-    key         Note Pitch, Key-wise (from buffered MIDI Note)     // r5
-    vel         Note Velocity (from buffered MIDI Note)            // stack + 4
+    mChnlBus    MIDI Channel Bus for Relevant Audio Channel
+    channelID   MIDI Channel ID (from buffered MIDI Note)
+    key         Note Pitch, Key-wise (from buffered MIDI Note)
+    vel         Note Velocity (from buffered MIDI Note)
   */
 void func_0804a6b0(MidiBus *mChnlBus, u32 channelID, u8 key, u8 vel) {
-    union Instrument inst; // r2
-    struct MidiChannel *mChnl; // r8
-    SoundChannel *sndBuf; // r7
-    s32 panning; // stack + 8
-    u32 isPSG; // stack + 0xC
-    const struct InstrumentPCM *instPCM; // stack + 0x10
-    const struct InstrumentPSG *instPSG; // stack + 0x14
-    u32 isSubRhythm; // r4
-    u32 chnlUnk1C; // r4
+    union Instrument inst;
+    struct MidiChannel *mChnl;
+    SoundChannel *sndBuf;
+    s32 panning; // sp8
+    u32 isPSG; // spC
+    const struct InstrumentPCM *instPCM; // sp10
+    const struct InstrumentPSG *instPSG; // sp14
+    u32 isSubRhythm;
+    u32 chnlUnk1C;
     u32 modRange;
-    s32 temp; // r6
-    s32 temp2; // r0
-    u32 priority; // r1
-    s32 bufferID; // r10
+    s32 temp;
+    s32 temp2;
+    u32 priority;
+    s32 bufferID;
     u32 adsrEnv;
     struct BufferADSR *bufferADSR;
 
@@ -558,10 +553,10 @@ void func_0804a6b0(MidiBus *mChnlBus, u32 channelID, u8 key, u8 vel) {
         return;
     }
 
-    mChnl = &mChnlBus->midiChannel[channelID]; // r8
+    mChnl = &mChnlBus->midiChannel[channelID];
     if (mChnl->unk0_b0) return;
 
-    inst = (union Instrument) mChnlBus->soundBank[mChnl->instPatch]; // r2
+    inst = (union Instrument) mChnlBus->soundBank[mChnl->instPatch];
     if (inst.type == NULL) return;
 
     isSubRhythm = FALSE; // r4
@@ -571,40 +566,40 @@ void func_0804a6b0(MidiBus *mChnlBus, u32 channelID, u8 key, u8 vel) {
             isSubRhythm = TRUE;
             inst = ((const union Instrument *)(inst.rhy->subBank))[key - inst.rhy->total];
             if (inst.type == NULL) return;
-            if ((u8) (*inst.type - 0x52) < 2) return; // If it's another sub-bank, just give up.
+            if ((u8) (*inst.type - 0x52) < 2) return;
             break;
         case INSTRUMENT_SUB_SPLIT:
             inst = ((const union Instrument *)(inst.spl->subBank))[inst.spl->keySplitTable[key - inst.spl->total]];
             if (inst.type == NULL) return;
-            if ((u8) (*inst.type - 0x52) < 2) return; // If it's another sub-bank, just give up.
+            if ((u8) (*inst.type - 0x52) < 2) return;
             break;
     }
 
     // Instantiate PSG Instrument
     if ((u8) (*inst.type - 0x50) < 2) {
-        instPSG = inst.psg; // stack + 0x14
-        isPSG = TRUE; // stack + 0xC
-        sndBuf = &D_030056a0[inst.psg->channel]; // r7
+        instPSG = inst.psg; // sp14
+        isPSG = TRUE; // spC
+        sndBuf = &D_030056a0[inst.psg->channel];
     }
     // Instantiate PCM Instrument
     else {
-        instPCM = inst.pcm; // stack + 0x10
-        isPSG = FALSE; // stack + 0xC
+        instPCM = inst.pcm; // sp10
+        isPSG = FALSE; // spC
         bufferID = func_0804a628(mChnlBus, channelID, key, vel);
         if (bufferID < 0) return;
-        sndBuf = &D_030064bc[bufferID]; // r7
+        sndBuf = &D_030064bc[bufferID];
     }
 
     if (!isSubRhythm) {
-        temp = key + mChnlBus->key; // r6
-        panning = 0; // stack + 8
+        temp = key + mChnlBus->key;
+        panning = 0; // sp8
     }
     // Use the built-in Key/Panning parameters.
     else {
-        if (isPSG) temp = instPSG->key; // r6
-            else temp = instPCM->key; // r6
-        if (isPSG) panning = instPSG->panning; // stack + 8
-            else panning = instPCM->panning; // stack + 8
+        if (isPSG) temp = instPSG->key;
+            else temp = instPCM->key;
+        if (isPSG) panning = instPSG->panning; // sp8
+            else panning = instPCM->panning; // sp8
         if (panning == 127) panning = 0;
     }
 
@@ -612,11 +607,11 @@ void func_0804a6b0(MidiBus *mChnlBus, u32 channelID, u8 key, u8 vel) {
 
     // For "Unpitched" Instruments, use the Key from the Sample Data.
     if (!isPSG && instPCM->type == INSTRUMENT_PCM_FIXED) {
-        temp = instPCM->sample->baseKey; // r6
+        temp = instPCM->sample->baseKey;
     }
 
     sndBuf->active = FALSE;
-    chnlUnk1C = mChnl->unk1C; // r4
+    chnlUnk1C = mChnl->unk1C;
 
     // Highly similar to func_0804a018().
     if (chnlUnk1C != 0) {

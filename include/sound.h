@@ -296,7 +296,7 @@ typedef struct MidiBus {
     s8  unk1C[12];
 } MidiBus;
 
-typedef struct MidiReader {
+typedef struct MidiTrackStream {
     u32 active_curr:1;  // Active State (Current)
     u32 active_loop:1;  // Active State (At Loop Start)
     u32 command_curr:8; // Command (Current)
@@ -307,8 +307,8 @@ typedef struct MidiReader {
     u32 unkC;           // ?? ( = initial deltaTime << 8)
     MidiSeq *stream_loop;    // Stream Position: Loop Start
     u32 unk14;          // ?? (may be unused?)
-    u32 deltaTime;      // Time until next instruction? (already parsed from variable-length quantity)
-} MidiReader;
+    u32 runningTime;    // Time until next instruction? (already parsed from variable-length quantity)
+} MidiTrackStream;
 
 typedef struct SoundPlayer {
     u32 nTracksMax:5;   // Maximum number of MIDI Tracks this Audio Channel is able to process.
@@ -320,13 +320,13 @@ typedef struct SoundPlayer {
     u32 unk0_b22:5;     // (indeterminate split; may be unused entirely)
     u32 volumeFadeType:3;   // Type of currently-active Volume Fade { 0 = None; 1 = Fade-In; 2 = Fade-Out & Close; 3 = Fade-Out & Pause }
     MidiBus *midiBus;      // MIDI: Bus with effects for all MIDI Channels.
-    MidiReader *midiReader;    // MIDI: Multiple structures which each keep track of a MIDI Track being processed.
+    MidiTrackStream *midiReader;    // MIDI: Multiple structures which each keep track of a MIDI Track being processed.
     const SongInfo *songInfo;    // SequenceData: Currently-loaded Sound Sequence.
-    u32 channelSpeed;       // ??: Similar but not directly tempo. [default = 1]
+    u32 deltaTime;      // MIDI: Ticks Per Frame, using internal assumption of 60fps [default = 1]
     const char *loopStartSym;     // MIDI: Label char denoting "Loop Start". [always D_08A865D4, '[']
     const char *loopEndSym;       // MIDI: Label char denoting "Loop End". [always D_08A865D8, ']']
-    u8  loopStartSymSize;   // MIDI: Value of func_0804B348(D_08A865A4). [1]
-    u8  loopEndSymSize;     // MIDI: Value of func_0804B348(D_08A865A8). [1]
+    u8  loopStartSymSize;   // MIDI: Value of func_0804b348(D_08a865a4). [1]
+    u8  loopEndSymSize;     // MIDI: Value of func_0804b348(D_08a865a8). [1]
     u16 midiQuarterNote;    // MIDI: Value denoting 1 beat. Read upon initialisation, and for any change in tempo. [always 0x18]
     u16 channelGain;    // BeatScript: Channel Gain (Volume) Envelope. [default = 0x100]
     u16 trackGain;      // BeatScript: Gain Envelope for a selection of MIDI Tracks. [default = 0x100]
@@ -371,14 +371,14 @@ typedef struct DmaSampleReader {
     u32 unk0_b2:1;  // ?? ( = instPCM->unk1_b7)
     u32 useEQ:1;    // Use Filter EQ
     u8 volume;  // Volume: Main
-    u8 volumeL; // Volume: Left
-    u8 volumeR; // Volume: Right
+    s8 volumeL; // Volume: Left
+    s8 volumeR; // Volume: Right
     const u32 *sample;  // Sample - Stream
     u32 length;         // Sample - Length << 14
     u32 position;       // Sample - Stream Position << 14
     u32 loopStart;      // Sample - Loop Start << 14
     u32 loopEnd;        // Sample - Loop End << 14
-    u32 pitch;  // Pitch Envelope
+    u32 frequency;  // Frequency Envelope
     u32 unk1C;  // ?? (samplerate-related)
 } DmaSampleReader;
 
@@ -424,7 +424,7 @@ struct {
     u32 unk0_b10:6; // ??? (0 for music channels, 1 for sfx channels)
     MidiChannel *midiChannels;
     MidiBus *midiBus;
-    MidiReader *midiReaders;
+    MidiTrackStream *midiReaders;
     SoundPlayer *audioChannel;
 } D_08aa4358[13];
 

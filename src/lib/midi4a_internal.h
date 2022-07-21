@@ -58,6 +58,9 @@ typedef volatile u16 *IOReg;
 #define VOL_FADE_OUT_CLEAR  2
 #define VOL_FADE_OUT_PAUSE  3
 
+#define SYS_EXC_EVENT_LFO       0
+#define SYS_EXC_EVENT_R_SCALE   1
+
 #define META_EVENT_OTHER        0
 #define META_EVENT_TRACK_END    1
 #define META_EVENT_LOOP_START   2

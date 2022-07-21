@@ -28,7 +28,7 @@ void func_0804ae60(struct LFO *lfo) {
 }
 
 // [func_0804ae6c] LOW-FREQUENCY OSCILLATOR - Update
-void func_0804ae6c(struct LFO *lfo, u32 deltaTime) {
+void func_0804ae6c(struct LFO *lfo, u32 delta) {
     u32 pos;
     s32 time, result;
 
@@ -37,7 +37,7 @@ void func_0804ae6c(struct LFO *lfo, u32 deltaTime) {
             lfo->output = 0;
             break;
         case LFO_STAGE_PRE_DELAY:
-            lfo->ticks += deltaTime;
+            lfo->ticks += delta;
             lfo->output = 0;
             if (UQ24_TO_INT(lfo->ticks) >= lfo->preDelay) {
                 lfo->ticks = 0;
@@ -46,7 +46,7 @@ void func_0804ae6c(struct LFO *lfo, u32 deltaTime) {
             break;
         case LFO_STAGE_ATTACK:
         case LFO_STAGE_SUSTAIN:
-            lfo->ticks += deltaTime;
+            lfo->ticks += delta;
             time = UQ24_TO_INT(lfo->ticks);
             pos = Q24_TO_INT(time * lfo->rate);
             if (lfo->duration != 0) {

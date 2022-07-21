@@ -17,7 +17,7 @@ asm(".include \"include/gba.inc\"");//Temporary
 #include "midi4a/update.inc.c"
 
 // [func_0804c35c] Initialise Sound Players
-void func_0804c35c(SoundPlayer *channel, MidiBus *mChnlBus, u32 nTracksMax, MidiReader *midiReader, u32 type) {
+void func_0804c35c(SoundPlayer *channel, MidiBus *mChnlBus, u32 nTracksMax, MidiTrackStream *midiReader, u32 type) {
     channel->songInfo = NULL;
     channel->midiBus = mChnlBus;
     channel->nTracksMax = nTracksMax;
@@ -43,42 +43,50 @@ u32 func_0804c398(MidiStream *midiStream) {
     return time;
 }
 
-// [func_0804c3c0] Initialise... a sound player that don't exist.
-void func_0804c3c0(SoundPlayer *channel, MidiReader *mTrkReader, u32 nTracksMax,
-                        MidiBus *mChnlBus, MidiChannel *mChnl, u8 *arg5) {
+// [func_0804c3c0] TEST PLAYER - Initialise
+void func_0804c3c0(SoundPlayer *mPlayer, MidiTrackStream *mStreams, u32 numTracks,
+                        MidiBus *mBus, MidiChannel *mChannels, u8 *seq) {
 
-    if (D_08aa431c == 0) return;
+    if (!D_08aa431c) return;
 
-    func_08049fa0(mChnlBus, nTracksMax, mChnl);
-    func_0804a014(mChnlBus, instrumentBanks[D_08aa431d]);
-    func_0804adb4(mChnlBus, D_08aa431e);
-    func_08049e8c(mChnlBus, D_08aa431f);
-    func_0804c35c(channel, mChnlBus, nTracksMax, mTrkReader, D_08aa431f);
+    func_08049fa0(mBus, numTracks, mChannels);
+    func_0804a014(mBus, instrumentBanks[D_08aa431d]);
+    func_0804adb4(mBus, D_08aa431e);
+    func_08049e8c(mBus, D_08aa431f);
+    func_0804c35c(mPlayer, mBus, numTracks, mStreams, D_08aa431f);
 
-    channel->speedMulti = 0x100;
-    channel->trackGain = 0x100;
-    channel->volumeFadeType = 0;
-    channel->volumeFadeEnv = 0x8000;
-    channel->volumeFadeSpd = 0;
-    channel->midiTempo = D_08aa4320;
-    channel->channelSpeed = func_0804b6f0(D_08aa4320, 0x100, 0x18);
-    channel->midiController4E = 0x40;
-    channel->midiController4F = 0x40;
-    channel->midiController50 = 0x40;
-    channel->midiController51 = 0x40;
+    mPlayer->speedMulti = Q24(1.0);
+    mPlayer->trackGain = Q24(1.0);
+    mPlayer->volumeFadeType = 0;
+    mPlayer->volumeFadeEnv = 0x8000;
+    mPlayer->volumeFadeSpd = 0;
+    mPlayer->midiTempo = D_08aa4320;
+    mPlayer->deltaTime = func_0804b6f0(D_08aa4320, Q24(1.0), 0x18);
+    mPlayer->midiController4E = 64;
+    mPlayer->midiController4F = 64;
+    mPlayer->midiController50 = 64;
+    mPlayer->midiController51 = 64;
 
-    D_03001598 = channel;
-    D_0300159c = mChnlBus;
-    D_030015a0 = arg5;
+    D_03001598 = mPlayer;
+    D_0300159c = mBus;
+    D_030015a0 = seq;
     D_030015a4 = 0;
     D_030015a6 = 0;
 }
 
-#include "asm/midi4a/asm_0804c4bc.s"
+// [func_0804c4bc] TEST PLAYER - Append MIDI Sequence Instructions
+void func_0804c4bc(s8 *seq, u32 len) {
+    while ((len != 0) && (D_030015a4 < 0x200)) {
+        D_030015a0[D_030015a4++] = *seq;
+        seq++;
+        len--;
+    }
+}
 
+// [func_0804c508] TEST PLAYER - Parse MIDI Sequence Instructions
 #include "asm/midi4a/asm_0804c508.s"
 
-// [func_0804c6c8] ?? (something about midi channels and notes and a midi channel bus that doesn't exist after startup?)
+// [func_0804c6c8] TEST PLAYER - Update
 void func_0804c6c8(void) {
     MidiChannel *mChnl;
     MidiNote *note;
@@ -112,7 +120,7 @@ void func_0804c6c8(void) {
 void func_0804c778(void) {
     u32 i;
 
-    func_08049490(0, 13379, 0x620, D_03001888, 0x80, D_030024c8, 12, D_030028c8);
+    func_08049490(DIRECTSOUND_MODE_STEREO, 13379, 0x620, D_03001888, 0x80, D_030024c8, 12, D_030028c8);
     func_0804af30();
     func_0804a360(12, D_03002a48);
 
@@ -121,7 +129,7 @@ void func_0804c778(void) {
         func_0804c35c(D_08aa4358[i].audioChannel, D_08aa4358[i].midiBus, D_08aa4358[i].nTracksMax, D_08aa4358[i].midiReaders, D_08aa4358[i].unk0_b10);
     }
 
-    D_03005b7c = &D_030015a7;
+    D_03005b7c = D_030015a7;
     D_03005b20 = 4;
 
     for (i = 0; i < 4; i++) {

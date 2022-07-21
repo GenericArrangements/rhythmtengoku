@@ -9,7 +9,7 @@ void func_0804b80c(SoundPlayer *soundPlayer, MidiStream stream) {
 
     stream++;
     switch (type) {
-        case 0: // EQ Filter Modulator
+        case SYS_EXC_EVENT_LFO: // EQ Filter Modulator
             func_08049be4();
             D_03005b3c = 0;
             D_03005640 = stream[0] * 2;
@@ -18,7 +18,7 @@ void func_0804b80c(SoundPlayer *soundPlayer, MidiStream stream) {
             D_03005644 = soundPlayer;
             break;
 
-        case 1:
+        case SYS_EXC_EVENT_R_SCALE:
             for (i = 0; i < 12; i++) {
                 midiBus->unk1C[i] = stream[i] - 64;
             }
@@ -208,8 +208,8 @@ void func_0804bc5c(u32 id, u32 key, u32 vel) {
 // [func_0804bcc0] MIDI STREAM - Messages/Events
 u32 func_0804bcc0(SoundPlayer *soundPlayer, u32 id) {
     u32 trackEndType = M_TRACK_STREAM_CONTINUE;
-    MidiReader *reader = &soundPlayer->midiReader[id];
-    MidiReader *tempReader;
+    MidiTrackStream *reader = &soundPlayer->midiReader[id];
+    MidiTrackStream *tempReader;
     MidiStream byteStream = reader->stream_curr;
     u8 command;
     u16 mod;
@@ -248,7 +248,7 @@ u32 func_0804bcc0(SoundPlayer *soundPlayer, u32 id) {
                         reader->command_loop = reader->command_curr;
                         reader->stream_loop = byteStream;
                         reader->inLoop = TRUE;
-                        soundPlayer->unk34 = reader->deltaTime;
+                        soundPlayer->unk34 = reader->runningTime;
                         soundPlayer->inLoop = TRUE;
                         break;
 
@@ -333,11 +333,11 @@ u32 func_0804bcc0(SoundPlayer *soundPlayer, u32 id) {
 
 // [func_0804bed0] MIDI STREAM - Update
 void func_0804bed0(SoundPlayer *soundPlayer, u32 id) {
-    MidiReader *reader;
+    MidiTrackStream *reader;
     MidiChannel *channel;
     MidiNote *note;
     u32 anyNotePlayed;
-    u32 deltaTime;
+    u32 delta;
     u32 i;
 
     reader = &soundPlayer->midiReader[id];
@@ -346,22 +346,22 @@ void func_0804bed0(SoundPlayer *soundPlayer, u32 id) {
     anyNotePlayed = FALSE;
     D_03005b78 = 0; // Reset "Current Note To Modify" counter.
 
-    while (reader->unkC < soundPlayer->channelSpeed) {
-        if (soundPlayer->inLoop && !reader->inLoop && (reader->deltaTime >= soundPlayer->unk34)) {
+    while (reader->unkC < soundPlayer->deltaTime) {
+        if (soundPlayer->inLoop && !reader->inLoop && (reader->runningTime >= soundPlayer->unk34)) {
             reader->active_loop = reader->active_curr;
             reader->command_loop = reader->command_curr;
             reader->stream_loop = reader->stream_curr;
             reader->inLoop = TRUE;
         }
 
-        if (func_0804bcc0(soundPlayer, id) == 1) {
+        if (func_0804bcc0(soundPlayer, id) == M_TRACK_STREAM_STOP) {
             reader->active_curr = FALSE;
             func_08049d30(soundPlayer->midiBus, id);
             return;
         }
 
-        deltaTime = func_0804c398(&reader->stream_curr);
-        if (deltaTime != 0) {
+        delta = func_0804c398(&reader->stream_curr);
+        if (delta != 0) {
             note = &D_03005650[0];
 
             for (i = 0; i < D_03005b78; i++, note++) {
@@ -375,13 +375,13 @@ void func_0804bed0(SoundPlayer *soundPlayer, u32 id) {
             D_03005b78 = 0; // Reset "Current Note To Modify" counter.
         }
 
-        reader->unkC += Q24(deltaTime);
-        reader->deltaTime += deltaTime;
+        reader->unkC += Q24(delta);
+        reader->runningTime += delta;
     }
 
-    reader->unkC -= soundPlayer->channelSpeed;
+    reader->unkC -= soundPlayer->deltaTime;
 
-    // If any note had a non-zero velocity, and the given MIDI Channel's unk0_b30 is set:
+    // Use Filter EQ with LFO
     if (anyNotePlayed) {
         channel = &soundPlayer->midiBus->midiChannel[id];
         if (channel->filterEQ && (D_03005b3c == 1)) {
@@ -438,7 +438,7 @@ void func_0804c040(SoundPlayer *soundPlayer) {
 
 // [func_0804c0f8] SOUND PLAYER - Update MIDI Stream
 void func_0804c0f8(SoundPlayer *soundPlayer) {
-    MidiReader *mTrkReader;
+    MidiTrackStream *mTrkReader;
     u32 noActiveReader;
     u32 i;
 
@@ -453,7 +453,7 @@ void func_0804c0f8(SoundPlayer *soundPlayer) {
     }
 
     // If the above loop modifies the value of D_0300562c, apply to channel as speed envelope.
-    if (D_0300562c != 0) soundPlayer->channelSpeed = D_0300562c;
+    if (D_0300562c != 0) soundPlayer->deltaTime = D_0300562c;
 
     // Check if any MIDI Track Readers are currently operating.
     mTrkReader = soundPlayer->midiReader;
@@ -469,7 +469,7 @@ void func_0804c0f8(SoundPlayer *soundPlayer) {
 // [func_0804c170] MAIN UPDATE
 void func_0804c170(void) {
     SoundPlayer *soundPlayer;
-    u32 speed;
+    u32 delta;
     u32 i;
     s32 rvb0 = D_03005b90[0];
     s32 rvb1 = D_03005b90[1];
@@ -478,6 +478,7 @@ void func_0804c170(void) {
 
     D_030055f0 = REG_VCOUNT;
 
+    // Standard Sound Players
     for (i = 0; i <= D_08aa4318; i++) {
         soundPlayer = D_08aa4324[i];
         if (soundPlayer != NULL) {
@@ -493,6 +494,7 @@ void func_0804c170(void) {
         }
     }
 
+    // Special Sound Player
     soundPlayer = D_03001598;
     if ((D_08aa431c != 0) && (soundPlayer != NULL)) {
         func_0804c6c8();
@@ -503,8 +505,8 @@ void func_0804c170(void) {
     }
 
     if ((D_03005644 != NULL) && (D_03005b3c != 0)) {
-        speed = func_0804b6f0(D_03005644->midiTempo, D_03005644->speedMulti, 0x18);
-        func_0804ae6c(&D_03005b30, speed);
+        delta = func_0804b6f0(D_03005644->midiTempo, D_03005644->speedMulti, 0x18);
+        func_0804ae6c(&D_03005b30, delta);
         func_08049b70(Q24_TO_INT(D_03005b30.output * D_03005640));
     }
 

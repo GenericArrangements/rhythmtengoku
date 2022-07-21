@@ -19,7 +19,7 @@ const u16 gMidiTuningTable[] = {
 };
 
 // Convert step increments (in semitones) to frequency increments.
-//      f = (1 - 2^(steps/12)) << 0x10
+//      f = (2^(steps/12) - 1) << 0x10
 // D_08a86108
 const u32 gStepFreqTable[] = {
     UQ16(0.0000000000), // 0

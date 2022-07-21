@@ -160,28 +160,28 @@ void func_080493c8(u32 id, u32 left, u32 right) {
 }
 
 // [func_080493e4] SAMPLE READER - Set Volume Envelope
-void func_080493e4(u32 id, u32 volumeEnv) {
-    D_03005b88[id].volume = volumeEnv;
+void func_080493e4(u32 id, u32 volume) {
+    D_03005b88[id].volume = volume;
 }
 
 // [func_080493f4] SAMPLE READER - Set Pitch Envelope
 void func_080493f4(u32 id, u32 freq) {
     DmaSampleReader *reader = &D_03005b88[id];
     if (freq == 0) {
-        reader->pitch = 0x4000;
+        reader->frequency = 0x4000;
         reader->unk0_b1 = FALSE;
     } else {
-        reader->pitch = ((u64) reader->unk1C * freq) >> 14;
-        reader->unk0_b1 = (-(0x4000 ^ reader->pitch) | (0x4000 ^ reader->pitch)) >> 0x1f;
+        reader->frequency = ((u64) reader->unk1C * freq) >> 14;
+        reader->unk0_b1 = (-(0x4000 ^ reader->frequency) | (0x4000 ^ reader->frequency)) >> 0x1f;
     }
 }
 
-// [func_08049450] SAMPLE READER - Set unk0_b2
+// [func_08049450] SAMPLE READER - Set Flag: "unk0_b2"
 void func_08049450(u32 id, u32 arg1) {
     D_03005b88[id].unk0_b2 = arg1;
 }
 
-// [func_08049470] SAMPLE READER - Set unk0_b3
+// [func_08049470] SAMPLE READER - Set Flag: "Use EQ"
 void func_08049470(u32 id, u32 useEQ) {
     D_03005b88[id].useEQ = useEQ;
 }
