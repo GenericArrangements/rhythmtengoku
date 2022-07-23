@@ -103,7 +103,7 @@ void func_0804c6c8(void) {
         if (note->velocity != 0) { // Note has non-zero velocity.
             func_0804a6b0(D_0300159c, note->channel, note->key, note->velocity);
             mChnl = &D_0300159c->midiChannel[note->channel];
-            if (mChnl->filterEQ && (D_03005b3c == 1)) {
+            if (mChnl->filterEQ && (D_03005b3c == LFO_MODE_KEYPRESS)) {
                 anyNotePlayed = TRUE;
             }
         } else { // Note is muted.
@@ -136,7 +136,7 @@ void func_0804c778(void) {
         D_03005b7c[i] = 0;
     }
 
-    D_03005b3c = 0;
+    D_03005b3c = LFO_MODE_DISABLED;
     D_03005644 = NULL;
     D_03005b90[0] = 0;
     D_03005b90[1] = 0;

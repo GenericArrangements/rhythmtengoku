@@ -107,15 +107,15 @@ extern volatile u32 D_03005b24;     // [D_03005b24] DIRECTSOUND - Number of 32-b
 extern u8  D_03005b28;              // [D_03005b28] FILTER EQ - High Gain [mCtrl4C]
 
 extern struct LFO D_03005b30;       // [D_03005b30] LFO - Low-Frequency Oscillator
-extern u8  D_03005b3c;              // [D_03005b3c] LFO - State { 0 = Disabled; 1 = Note Triggered; 2 = Constant }
-extern volatile u32 D_03005b40;     // [D_03005b40] DIRECTSOUND - ???
-extern u8  D_03005b44;              // [D_03005b44] FILTER EQ - Enable
+extern u8  D_03005b3c;              // [D_03005b3c] LFO - Mode { 0 = Disabled; 1 = Note Triggered; 2 = Constant }
+extern volatile u32 D_03005b40;     // [D_03005b40] DIRECTSOUND - ??
+extern u8  D_03005b44;              // [D_03005b44] FILTER EQ - Enable Global Filter
 extern u32 D_03005b48;              // [D_03005b48] REVERB - gRVBCNT3 (init. = 2)
 
 extern u16 D_03005b78;              // [D_03005b78] MIDI - Next Available MIDI Note
 extern u8 *D_03005b7c;              // [D_03005b7c] UNDEFINED - (Byte at offset D_03005648 set by MIDI Controller 10)
 extern u16 D_03005b80;              // [D_03005b80] MIDI4AGB - Set to REG_VCOUNT near the end of each update.
-
+extern u16 D_03005b84;              // [D_03005b84] DIRECTSOUND - ??
 extern DmaSampleReader *D_03005b88; // [D_03005b88] DIRECTSOUND - DmaSampleReader (12 Channels, at D_030028c8)
 extern u16 D_03005b8c;              // [D_03005b8c] DIRECTSOUND - Number of DirectSound Channels ( = 12)
 extern s8  D_03005b90[4];           // [D_03005b90] REVERB - Reverb Controller Update Scratch
@@ -124,12 +124,12 @@ extern u32 D_03005b94;              // [D_03005b94] MIDI4AGB - Global Sample Rat
 extern volatile u32 D_030064a0;     // [D_030064a0] DIRECTSOUND - Offset from *D_0300563c and *D_030064b8 to operate on.
 extern u32 D_030064a4;              // [D_030064a4] REVERB - gRVBCNT1 (init. = 0)
 extern u32 D_030064a8;              // [D_030064a8] MIDI4AGB - 13379Hz / 60 (samples per frame, at 60fps)
-
-extern u32 *D_030064b0;             // [D_030064b0] DIRECTSOUND - Sample Processing ScratchPad ( = &D_030024c8)
+extern u16 D_030064ac;              // [D_030064ac] DIRECTSOUND - ??
+extern s32 *D_030064b0;             // [D_030064b0] DIRECTSOUND - Sample Processing ScratchPad ( = &D_030024c8)
 extern u32 D_030064b4;              // [D_030064b4] MIDI4AGB - 16776921 / 13379Hz
 extern volatile u32 *D_030064b8;    // [D_030064b8] DIRECTSOUND - REG_DMA2SAD (Left Audio Source) ( = &D_03001888[D_03005b24] ( = &D_03001ea8))
 extern SoundChannel *D_030064bc;    // [D_030064bc] DIRECTSOUND - DirectSound Channels (12 Channels, at D_03002a48)
-extern u8  D_030064c0;              // [D_030064c0] FILTER EQ - Duplicate of D_03005620[0] used for just one (1) singular calculation.
+extern s8  D_030064c0;              // [D_030064c0] FILTER EQ - Duplicate of D_03005620[0] used for just one (1) singular calculation.
 extern u16 D_030064c4;              // [D_030064c4] DIRECTSOUND - Enable DirectSound
 
   // // // // // // // // // // // // // // // // // // // //
@@ -153,6 +153,15 @@ extern u32 __udivmoddi4(u64, u64);
   // // // // // // // // // // // // // // // // // // // //
 
 
+
+  // // //  HAND-WRITTEN FUNCTIONS  // // //
+
+extern HandWritten func_08048b9c;
+extern HandWritten func_080483b8;
+extern HandWritten func_08048d58;
+extern HandWritten func_08048fc0;
+extern HandWritten func_08048758;
+extern HandWritten func_08048a00;
 
   // // //  INTERRUPT_DMA2  // // //
 

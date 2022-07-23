@@ -2,7 +2,44 @@
 
 
 // [func_08049c34] MIDI CHANNEL - Update Modulation
-#include "asm/midi4a/asm_08049c34.s"
+void func_08049c34(struct MidiBus *mChnlBus, u32 id) {
+    struct MidiChannel *mChnl = &mChnlBus->midiChannel[id];
+    s32 modVolume;
+    u32 busVolume;
+    u32 result;
+
+    // Update Modulation
+    if (mChnl->modDelayCount != 0) {
+        mChnl->modDelayCount--;
+        mChnl->modCount = 0;
+    } else {
+        mChnl->modCount += mChnl->modSpeed;
+    }
+    mChnl->modResult = Q24_TO_INT(mChnl->modDepth * gMidiSineTable[UQ24_TO_INT(mChnl->modCount)]);
+
+    // Update Volume Wheel
+    modVolume = 128;
+    if (mChnl->modType == MOD_TYPE_TREMOLO) {
+        modVolume += mChnl->modResult;
+        Clamp(modVolume, 0, 160);
+    }
+    if (mChnl->modType == MOD_TYPE_PANNING) {
+        func_0804aae0(mChnlBus, id);
+    }
+
+    busVolume = ((mChnlBus->trackSelect >> id) & 1) ? mChnlBus->trackVolume : mChnlBus->busVolume;
+    result = modVolume;
+
+    result = (busVolume * mChnl->volume * mChnl->expression * result) >> (7 * 3);
+    Ceil(result, 0xff);
+    mChnl->volumeWheel = result;
+
+    // Update... this other modulation thing I still haven't figured out yet.
+    if ((mChnl->unk1C != 0) && (mChnl->unk1D != 0)) {
+        if (mChnl->unk1E == 0) mChnl->unk1E = mChnl->unk1D;
+        mChnl->unk1E--;
+    }
+}
 
 // [func_08049d08] MIDI BUS - Update Modulation
 void func_08049d08(MidiBus *midiBus) {
@@ -131,7 +168,7 @@ void func_08049fa0(MidiBus *midiBus, u32 totalChannels, MidiChannel *mChnl) {
     midiBus->key = 0;
     midiBus->panning = 0;
     midiBus->pitch = 0;
-    midiBus->unk8 = 0x1400;
+    midiBus->unk8 = Q24(20.0);
     midiBus->tuningTable = gMidiTuningTable;
 
     midiBus->totalChannels = totalChannels;
@@ -243,7 +280,7 @@ u32 func_0804a018(SoundChannel *sndChnl) {
     }
 
     // Pitch Envelope: Random Pitch
-    if (mChnl->rndmPitch != Q24(1)) {
+    if (mChnl->rndmPitch != Q24(1.0)) {
         freq = Q24_TO_INT(freq * mChnl->rndmPitch);
     }
 
@@ -257,7 +294,7 @@ u32 func_0804a1f4(SoundChannel *sndChnl) {
         return (sndChnl->velocity * Q16_TO_INT(sndChnl->adsr.envelope)) >> 7;
     } else {
         volumeEnv = sndChnl->midiChannel->volumeWheel * sndChnl->velocity * Q16_TO_INT(sndChnl->adsr.envelope);
-        return volumeEnv >> 14;
+        return volumeEnv >> (7 * 2);
     }
 }
 
@@ -282,8 +319,8 @@ u32 func_0804a224(SoundChannel *sndChnl) {
         */
         case ADSR_STAGE_ATTACK:
             env += inst->attack;
-            if (env >= Q16(127)) {
-                env = Q16(127);
+            if (env >= Q16(127.0)) {
+                env = Q16(127.0);
                 adsr->stage = ADSR_STAGE_DECAY;
             }
             break;
@@ -308,8 +345,8 @@ u32 func_0804a224(SoundChannel *sndChnl) {
         */
         case ADSR_STAGE_SUSTAIN:
             env -= inst->fade;
-            if (env >= Q16(127)) {
-                env = Q16(127);
+            if (env >= Q16(127.0)) {
+                env = Q16(127.0);
             }
             else if (env <= 0) {
                 env = 0;
@@ -337,7 +374,7 @@ u32 func_0804a224(SoundChannel *sndChnl) {
         */
         case ADSR_STAGE_FORCE_STOP:
             rel = inst->release;
-            if (inst->release == 0) rel = Q16(6);
+            if (inst->release == 0) rel = Q16(6.0);
             env -= rel;
             if (env <= 0) {
                 env = 0;

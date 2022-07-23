@@ -7,6 +7,9 @@
 
 typedef volatile u16 *IOReg;
 
+typedef void (*HandWritten)();
+#define AS_THUMB(x) (HandWritten)((u32)&x|1)
+
 #define Q24(x) ((s32)((x) * 256))
 #define Q24_TO_INT(x) ((s32)((x) >> 8))
 #define Q16(x) ((s32)((x) * 65536))
@@ -52,6 +55,10 @@ typedef volatile u16 *IOReg;
 #define LFO_STAGE_PRE_DELAY 1
 #define LFO_STAGE_ATTACK    2
 #define LFO_STAGE_SUSTAIN   3
+
+#define LFO_MODE_DISABLED   0
+#define LFO_MODE_KEYPRESS   1
+#define LFO_MODE_CONSTANT   2
 
 #define VOL_FADE_RESET      0
 #define VOL_FADE_IN         1

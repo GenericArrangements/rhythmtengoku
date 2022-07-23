@@ -126,19 +126,19 @@ void func_0804930c(u32 id, const struct WaveData *sample) {
 
     reader->active = FALSE;
     reader->sample = sample->waveform;
-    reader->length = sample->length >> 2;
+    reader->length = sample->length / 4;
 
     if ((sample->loopStart | sample->loopEnd) != 0) {
-        reader->loopStart = sample->loopStart << 14;
-        reader->loopEnd = sample->loopEnd << 14;
+        reader->loopStart = sample->loopStart << (7 * 2);
+        reader->loopEnd = sample->loopEnd << (7 * 2);
     } else {
-        reader->loopStart = sample->length << 14;
-        reader->loopEnd = sample->length << 14;
+        reader->loopStart = sample->length << (7 * 2);
+        reader->loopEnd = sample->length << (7 * 2);
     }
 
     keyFreq = gMidiTuningTable[sample->baseKey];
     keySampleRate = D_03005b94 * keyFreq;
-    sampleRate = (u64) sample->sampleRate << 28;
+    sampleRate = (u64) sample->sampleRate << (7 * 4);
     reader->unk1C = __udivmoddi4((sampleRate + keySampleRate) - 1, keySampleRate);
 }
 
@@ -171,7 +171,7 @@ void func_080493f4(u32 id, u32 freq) {
         reader->frequency = 0x4000;
         reader->unk0_b1 = FALSE;
     } else {
-        reader->frequency = ((u64) reader->unk1C * freq) >> 14;
+        reader->frequency = ((u64) reader->unk1C * freq) >> (7 * 2);
         reader->unk0_b1 = (-(0x4000 ^ reader->frequency) | (0x4000 ^ reader->frequency)) >> 0x1f;
     }
 }
@@ -192,7 +192,125 @@ void func_08049470(u32 id, u32 useEQ) {
 
 #include "asm/midi4a/asm_08049490.s"
 
-#include "asm/midi4a/asm_080497f8.s"
+// [func_080497f8] Update DirectSound
+void func_080497f8(void) {
+    HandWritten func8b9c, func83b8, func8d58, func8fc0; // sp0, sp4, sp8, spC
+    u32 noSamplesProcessed; // sp10
+    DmaSampleReader *sampleReader; // sp14
+    u32 usedEQFilter; // sp18
+    s32 check; // sp1C
+
+    u32 i;
+    s32 a, b, c;
+    u32 nPhrases;
+    s32 eqPos;
+    u16 eqGain;
+    u32 eqSmoothing;
+    u32 sampleBufferPos;
+
+    if (!D_030064c4) return;
+
+    func8b9c = AS_THUMB(func_08048b9c);
+    func83b8 = AS_THUMB(func_080483b8);
+    func8d58 = AS_THUMB(func_08048d58);
+    func8fc0 = AS_THUMB(func_08048fc0);
+    sampleReader = D_03005b88;
+
+    a = (D_030064a8 + 259) / 4; // = ~120.5
+    if (a > D_03005b24) a = D_03005b24;
+
+    b = D_03005b40 - D_030064a0;
+    if (b < 0) b += D_03005b24;
+
+    c = (a > b) ? (a - b) : 0;
+
+    eqPos = (u8) D_03005620[0];
+    if (D_030064c0 >= 0) {
+        // High-Pass
+        if ((s8) eqPos < 0) {
+            D_03005620[1] = 0;
+            D_03005620[2] = 0;
+        }
+    }
+    else if (D_030064c0 < 0) {
+        // Low-Pass
+        if ((s8) eqPos >= 0) {
+            D_03005620[1] = D_030064b0[D_03005638 - 2];
+            D_03005620[2] = D_030064b0[D_03005638 - 1];
+        }
+    }
+    D_030064c0 = eqPos;
+
+    while (c != 0) {
+        nPhrases = D_03005638 / 4;
+        if (nPhrases > c) nPhrases = c;
+        (AS_THUMB(func_08048758))(nPhrases);
+
+        noSamplesProcessed = TRUE;
+        usedEQFilter = FALSE;
+        eqPos = (u8) D_03005620[0];
+        eqGain = 0;
+        i = 0;
+        check = c - nPhrases;
+
+        for (i = 0; i < D_03005610; i++) {
+            eqSmoothing = 0x100 - eqPos;
+
+            if (sampleReader[i].active) {
+                if (sampleReader[i].useEQ || D_03005b44) {
+                    noSamplesProcessed = FALSE;
+                    usedEQFilter = TRUE;
+                    if ((s8) eqPos < 0) {
+                        eqGain = (sampleReader[i].volume * eqSmoothing * D_03005b28) >> 7;
+                    }
+                    D_030064ac = eqGain;
+                    if (!sampleReader[i].unk0_b1) {
+                        func8b9c(nPhrases, &sampleReader[i]);
+                    }
+                    else if (sampleReader[i].unk0_b2) {
+                        func8d58(nPhrases, &sampleReader[i]);
+                    }
+                    else {
+                        func83b8(nPhrases, &sampleReader[i]);
+                    }
+                }
+            }
+        }
+
+        if (usedEQFilter) {
+            func8fc0(nPhrases, D_03005620);
+        }
+
+        D_030064ac = 0;
+        for (i = 0; i < D_03005610; i++) {
+            if (sampleReader[i].active) {
+                if (!sampleReader[i].useEQ && !D_03005b44) {
+                    noSamplesProcessed = FALSE;
+                    if (!sampleReader[i].unk0_b1) {
+                        func8b9c(nPhrases, &sampleReader[i]);
+                    }
+                    else if (sampleReader[i].unk0_b2) {
+                        func8d58(nPhrases, &sampleReader[i]);
+                    }
+                    else {
+                        func83b8(nPhrases, &sampleReader[i]);
+                    }
+                }
+            }
+        }
+
+        D_03005720[0x3ff] = (noSamplesProcessed) ? 0 : -1;
+        (AS_THUMB(func_08048a00))(nPhrases);
+
+        sampleBufferPos = D_03005b40 + nPhrases;
+        while (sampleBufferPos >= D_03005b24) {
+            sampleBufferPos -= D_03005b24;
+        }
+        D_03005b40 = sampleBufferPos;
+        c = check;
+        D_03005b84 = REG_VCOUNT;
+    }
+}
 
 // [func_08049ad8] DIRECTSOUND - Initialise(?) REG_DMA1CNT & REG_DMA2CNT (unused)
 void func_08049ad8(void) {

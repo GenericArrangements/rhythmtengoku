@@ -23,11 +23,11 @@ void func_0804af74(u32 id) {
 }
 
 // [func_0804afa4] PSG CHANNEL - Convert Pitch Envelope to PSG Frequency Register Variable
-u32 func_0804afa4(u32 pitchEnv) {
+u32 func_0804afa4(u32 freq) {
     s32 psgFreq;
 
-    if (pitchEnv == 0) return 0;
-    psgFreq = 0x800 - ((0x400000 / pitchEnv) >> 5);
+    if (freq == 0) return 0;
+    psgFreq = 0x800 - ((0x400000 / freq) >> 5);
     Clamp(psgFreq, 0, 0x7ff);
     return psgFreq;
 }
@@ -39,7 +39,7 @@ u32 func_0804afd8(u32 vol) {
     psgEnv = (vol >> 3);
     vol = psgEnv >> 1;
     psgEnv += psgEnv >> 1;
-    Ceil(psgEnv, 15);
+    Ceil(psgEnv, 0xf);
     return psgEnv;
 }
 
@@ -48,7 +48,7 @@ u32 func_0804afd8(u32 vol) {
 
 // [func_0804b2c4] PSG CHANNEL - Update All
 void func_0804b2c4(void) {
-    SoundChannel *psgChnl = &D_030056a0[0];
+    SoundChannel *psgChnl = D_030056a0;
     u16 regControls = 0;
     u32 i;
 

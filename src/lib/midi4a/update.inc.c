@@ -11,7 +11,7 @@ void func_0804b80c(SoundPlayer *soundPlayer, MidiStream stream) {
     switch (type) {
         case SYS_EXC_EVENT_LFO: // EQ Filter Modulator
             func_08049be4();
-            D_03005b3c = 0;
+            D_03005b3c = LFO_MODE_DISABLED;
             D_03005640 = stream[0] * 2;
             func_0804ae1c(&D_03005b30, stream[1] * 2, stream[2] * 2, stream[3] * 2, stream[4] * 2, stream[5] * 2);
             func_08049b8c(stream[6]);
@@ -133,11 +133,11 @@ void func_0804b95c(SoundPlayer *soundPlayer, u32 id, u8 controller, u8 var) {
         case M_CONTROLLER_UNK_49: // Set LFO
             D_03005b3c = var;
             switch (var) {
-                case 0:
-                case 1: // Stop
+                case LFO_MODE_DISABLED:
+                case LFO_MODE_KEYPRESS: // Stop
                     func_0804ae60(&D_03005b30);
                     break;
-                case 2: // Start
+                case LFO_MODE_CONSTANT: // Start
                     func_08049be4();
                     func_0804ae54(&D_03005b30);
                     break;
@@ -145,7 +145,7 @@ void func_0804b95c(SoundPlayer *soundPlayer, u32 id, u8 controller, u8 var) {
             break;
 
         case M_CONTROLLER_UNK_4A: // Set Band-Pass Filter
-            D_03005b3c = 0;
+            D_03005b3c = LFO_MODE_DISABLED;
             func_0804ae60(&D_03005b30);
             func_08049be4();
             func_08049b70((var * 2) - 0x80);
@@ -384,7 +384,7 @@ void func_0804bed0(SoundPlayer *soundPlayer, u32 id) {
     // Use Filter EQ with LFO
     if (anyNotePlayed) {
         channel = &soundPlayer->midiBus->midiChannel[id];
-        if (channel->filterEQ && (D_03005b3c == 1)) {
+        if (channel->filterEQ && (D_03005b3c == LFO_MODE_KEYPRESS)) {
             func_08049be4();
             func_0804ae54(&D_03005b30);
         }
@@ -504,7 +504,7 @@ void func_0804c170(void) {
         rvb3 -= 64 - soundPlayer->midiController51;
     }
 
-    if ((D_03005644 != NULL) && (D_03005b3c != 0)) {
+    if ((D_03005644 != NULL) && (D_03005b3c != LFO_MODE_DISABLED)) {
         delta = func_0804b6f0(D_03005644->midiTempo, D_03005644->speedMulti, 0x18);
         func_0804ae6c(&D_03005b30, delta);
         func_08049b70(Q24_TO_INT(D_03005b30.output * D_03005640));

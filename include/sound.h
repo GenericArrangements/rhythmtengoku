@@ -366,10 +366,10 @@ typedef struct SoundChannel {
 } SoundChannel;
 
 typedef struct DmaSampleReader {
-    u32 active:1;
-    u32 unk0_b1:1;
-    u32 unk0_b2:1;  // ?? ( = instPCM->unk1_b7)
-    u32 useEQ:1;    // Use Filter EQ
+    u8 active:1;
+    u8 unk0_b1:1;
+    u8 unk0_b2:1;  // ?? ( = instPCM->unk1_b7)
+    u8 useEQ:1;    // Use Filter EQ
     u8 volume;  // Volume: Main
     s8 volumeL; // Volume: Left
     s8 volumeR; // Volume: Right
