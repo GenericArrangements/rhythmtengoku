@@ -1062,8 +1062,6 @@ SECTIONS {
         build/audio/psg_wave_samples/pulse_50.psg.o(.rodata*);
         build/audio/instruments.c.o(.rodata*);
         build/audio/songs.c.o(.rodata*);
-        build/bin/bindata_08a9e8e0.bin.o(.rodata*);
-        build/bin/bindata_08aa06f4.bin.o(.rodata*);
         build/bin/bindata_08aa4318.bin.o(.rodata*);
 		build/audio/sample_table.json.c.o(.rodata*);
         

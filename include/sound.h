@@ -1,54 +1,39 @@
 #pragma once
 
-#define PSG_PULSE_CHANNEL_1 0
-#define PSG_PULSE_CHANNEL_2 1
-#define PSG_WAVE_CHANNEL    2
-#define PSG_NOISE_CHANNEL   3
+enum SoundPlayersEnum {
+    MUSIC_PLAYER_0,
+    MUSIC_PLAYER_1,
+    MUSIC_PLAYER_2,
+    SFX_PLAYER_0,
+    SFX_PLAYER_1,
+    SFX_PLAYER_2,
+    SFX_PLAYER_3,
+    SFX_PLAYER_4,
+    SFX_PLAYER_5,
+    SFX_PLAYER_6,
+    SFX_PLAYER_7,
+    SFX_PLAYER_8,
+    SFX_PLAYER_9
+};
 
-#define PSG_TONE_DUTY_12_5 0
-#define PSG_TONE_DUTY_25   1
-#define PSG_TONE_DUTY_50   2
-#define PSG_TONE_DUTY_75   3
-
-#define PSG_NOISE_COUNTER_15 0
-#define PSG_NOISE_COUNTER_7  1
-
-#define INSTRUMENT_PCM_ALIGNED 'A' // 0x41
-#define INSTRUMENT_PCM_FIXED   'F' // 0x46
-#define INSTRUMENT_PSG         'P' // 0x50
-#define INSTRUMENT_SUB_RHYTHM  'R' // 0x52
-#define INSTRUMENT_SUB_SPLIT   'S' // 0x53
-
-#define MUSIC_PLAYER_0 0
-#define MUSIC_PLAYER_1 1
-#define MUSIC_PLAYER_2 2
-#define SFX_PLAYER_0   3
-#define SFX_PLAYER_1   4
-#define SFX_PLAYER_2   5
-#define SFX_PLAYER_3   6
-#define SFX_PLAYER_4   7
-#define SFX_PLAYER_5   8
-#define SFX_PLAYER_6   9
-#define SFX_PLAYER_7   10
-#define SFX_PLAYER_8   11
-#define SFX_PLAYER_9   12
-
-#define MIDI_CHANNEL_0  (1 << 0)
-#define MIDI_CHANNEL_1  (1 << 1)
-#define MIDI_CHANNEL_2  (1 << 2)
-#define MIDI_CHANNEL_3  (1 << 3)
-#define MIDI_CHANNEL_4  (1 << 4)
-#define MIDI_CHANNEL_5  (1 << 5)
-#define MIDI_CHANNEL_6  (1 << 6)
-#define MIDI_CHANNEL_7  (1 << 7)
-#define MIDI_CHANNEL_8  (1 << 8)
-#define MIDI_CHANNEL_9  (1 << 9)
-#define MIDI_CHANNEL_10 (1 << 10)
-#define MIDI_CHANNEL_11 (1 << 11)
-#define MIDI_CHANNEL_12 (1 << 12)
-#define MIDI_CHANNEL_13 (1 << 13)
-#define MIDI_CHANNEL_14 (1 << 14)
-#define MIDI_CHANNEL_15 (1 << 15)
+enum MidiChannelsEnum {
+    MIDI_CHANNEL_0  = (1 << 0),
+    MIDI_CHANNEL_1  = (1 << 1),
+    MIDI_CHANNEL_2  = (1 << 2),
+    MIDI_CHANNEL_3  = (1 << 3),
+    MIDI_CHANNEL_4  = (1 << 4),
+    MIDI_CHANNEL_5  = (1 << 5),
+    MIDI_CHANNEL_6  = (1 << 6),
+    MIDI_CHANNEL_7  = (1 << 7),
+    MIDI_CHANNEL_8  = (1 << 8),
+    MIDI_CHANNEL_9  = (1 << 9),
+    MIDI_CHANNEL_10 = (1 << 10),
+    MIDI_CHANNEL_11 = (1 << 11),
+    MIDI_CHANNEL_12 = (1 << 12),
+    MIDI_CHANNEL_13 = (1 << 13),
+    MIDI_CHANNEL_14 = (1 << 14),
+    MIDI_CHANNEL_15 = (1 << 15)
+};
 
 enum InstrumentBanksEnum {
 	INST_BANK_UNUSED_0,
@@ -167,7 +152,7 @@ enum InstrumentBanksEnum {
 
 
 
-struct WaveData {
+struct SampleData {
 	u32 length;
 	u32 sampleRate;
 	u32 baseKey;
@@ -191,7 +176,7 @@ struct InstrumentPCM {
 	u8 key:7;
     u8 distort:1;
 	s16 panning;
-	const struct WaveData *sample;
+	const struct SampleData *sample;
 	s32 initial;
 	s32 sustain;
 	s32 attack;
@@ -365,7 +350,7 @@ typedef struct SoundChannel {
     } adsr;
 } SoundChannel;
 
-typedef struct DmaSampleReader {
+typedef struct SampleStream {
     u8 active:1;
     u8 unk0_b1:1;
     u8 unk0_b2:1;  // ?? ( = instPCM->unk1_b7)
@@ -380,7 +365,7 @@ typedef struct DmaSampleReader {
     u32 loopEnd;        // Sample - Loop End << 14
     u32 frequency;  // Frequency Envelope
     u32 unk1C;  // ?? (samplerate-related)
-} DmaSampleReader;
+} SampleStream;
 
 // Low-Frequency Oscillator (used for an Auto-Wah)
 struct LFO {
@@ -403,10 +388,10 @@ typedef struct MidiNote {
  // // // Misc. ROM Structures // // //
 
 // SongTable
-struct {
-    SongInfo *songInfo; // Song
-    u16 channelID; // Sound Player to play the given Sound Sequence in { 0..12 }
-} D_08aa06f8[1924];
+struct SongTableEntry {
+    const SongInfo *songInfo; // Song
+    u16 playerNum; // Sound Player to play the given Sound Sequence in { 0..12 }
+};
 
 u32 D_08aa4318; // Total number of Audio Channels - 1. [12]
 u8  D_08aa431c; // Unknown: ?? [1]
@@ -432,7 +417,7 @@ u8 D_08aa445c; // Total number of Audio Channels [13]
 
 // SoundPlayerTable (simplified)
 struct {
-    SoundPlayer *audioChannel;
+    SoundPlayer *soundPlayer;
     u32 null4;  // Empty
     u16 unk8;   // Maximum MIDI Tracks? { 5..15 }
     u16 unkC;   // ?? { 0, 1 }

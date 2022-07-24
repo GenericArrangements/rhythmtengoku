@@ -1,5 +1,6 @@
 #include "global.h"
 #include "sound.h"
+#include "src/lib/midi4a_internal.h"
 
 // D_08a865ac
 const u8 KeySplitTable1[] = {

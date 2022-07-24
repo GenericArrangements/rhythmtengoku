@@ -1,5 +1,6 @@
 #include "global.h"
 #include "sound.h"
+#include "src/lib/midi4a_internal.h"
 
 #include "instruments/instruments_bank01.inc.c"
 #include "instruments/instruments_bank02.inc.c"

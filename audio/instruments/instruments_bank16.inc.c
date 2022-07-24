@@ -1,4 +1,4 @@
-extern const struct WaveData sfx_221;
+extern const struct SampleData sfx_221;
 const struct InstrumentPCM InstPCM465 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
@@ -13,7 +13,7 @@ const struct InstrumentPCM InstPCM465 = {
     /* ADSR Rel  */ 0x0b8000,
 };
 
-extern const struct WaveData sfx_122;
+extern const struct SampleData sfx_122;
 const struct InstrumentPCM InstPCM466 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,

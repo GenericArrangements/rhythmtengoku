@@ -118,8 +118,8 @@ void func_08049144(void) {
 
 
 // [func_0804930c] SAMPLE READER - Initialise Stream
-void func_0804930c(u32 id, const struct WaveData *sample) {
-    DmaSampleReader *reader = &D_03005b88[id];
+void func_0804930c(u32 id, const struct SampleData *sample) {
+    SampleStream *reader = &D_03005b88[id];
     u32 keySampleRate;
     u32 keyFreq;
     u64 sampleRate;
@@ -166,7 +166,7 @@ void func_080493e4(u32 id, u32 volume) {
 
 // [func_080493f4] SAMPLE READER - Set Pitch Envelope
 void func_080493f4(u32 id, u32 freq) {
-    DmaSampleReader *reader = &D_03005b88[id];
+    SampleStream *reader = &D_03005b88[id];
     if (freq == 0) {
         reader->frequency = 0x4000;
         reader->unk0_b1 = FALSE;
@@ -196,7 +196,7 @@ void func_08049470(u32 id, u32 useEQ) {
 void func_080497f8(void) {
     HandWritten func8b9c, func83b8, func8d58, func8fc0; // sp0, sp4, sp8, spC
     u32 noSamplesProcessed; // sp10
-    DmaSampleReader *sampleReader; // sp14
+    SampleStream *sampleReader; // sp14
     u32 usedEQFilter; // sp18
     s32 check; // sp1C
 

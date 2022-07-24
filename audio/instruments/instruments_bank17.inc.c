@@ -1,4 +1,4 @@
-extern const struct WaveData sfx_276;
+extern const struct SampleData sfx_276;
 const struct InstrumentPCM InstPCM468 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,

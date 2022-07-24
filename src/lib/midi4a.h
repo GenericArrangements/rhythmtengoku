@@ -40,7 +40,7 @@ extern SoundPlayer D_0300184c;  // [D_0300184c] SFX PLAYER 9
 
 extern volatile s32 D_03001888[1568*2]; // [D_03001888] DIRECTSOUND - DMA Source Addresses { &D_03001888[0] = Right; &D_03001888[D_03005b24] = Left }
 extern volatile s32 D_030024c8[0x400];  // [D_030024c8] DIRECTSOUND - Sample Processing ScratchPad
-extern DmaSampleReader D_030028c8[12];  // [D_030028c8] DIRECTSOUND - DMA Sample Readers (12 Channels)
+extern SampleStream D_030028c8[12];  // [D_030028c8] DIRECTSOUND - DMA Sample Readers (12 Channels)
 extern SoundChannel D_03002a48[12];     // [D_03002a48] DIRECTSOUND - DirectSound Channels (12 Channels)
 
 extern MidiChannel D_03002bc8[15];      // [D_03002bc8] MUSIC PLAYER 0 - MIDI Channels
@@ -116,7 +116,7 @@ extern u16 D_03005b78;              // [D_03005b78] MIDI - Next Available MIDI N
 extern u8 *D_03005b7c;              // [D_03005b7c] UNDEFINED - (Byte at offset D_03005648 set by MIDI Controller 10)
 extern u16 D_03005b80;              // [D_03005b80] MIDI4AGB - Set to REG_VCOUNT near the end of each update.
 extern u16 D_03005b84;              // [D_03005b84] DIRECTSOUND - ??
-extern DmaSampleReader *D_03005b88; // [D_03005b88] DIRECTSOUND - DmaSampleReader (12 Channels, at D_030028c8)
+extern SampleStream *D_03005b88; // [D_03005b88] DIRECTSOUND - SampleStream (12 Channels, at D_030028c8)
 extern u16 D_03005b8c;              // [D_03005b8c] DIRECTSOUND - Number of DirectSound Channels ( = 12)
 extern s8  D_03005b90[4];           // [D_03005b90] REVERB - Reverb Controller Update Scratch
 extern u32 D_03005b94;              // [D_03005b94] MIDI4AGB - Global Sample Rate ( = 13379Hz)
@@ -146,7 +146,9 @@ extern const u8 gPsgNoiseFreqTable[60]; // [D_08a86568] Convert standard frequen
 
 extern const char gMidiLoopStartSym[];  // [D_08a865a4] MIDI "Loop Start" Marker: '['
 extern const char gMidiLoopEndSym[];    // [D_08a865a8] MIDI "Loop End" Marker: ']'
+
 extern const union Instrument *instrumentBanks[]; // Instrument Bank Index
+extern const struct SongTableEntry gSongTable[1924];
 
 extern u32 __udivmoddi4(u64, u64);
 
@@ -169,7 +171,7 @@ extern void func_08049144(void); // [func_08049144] INTERRUPT_DMA2
 
   // // //  DIRECTSOUND STREAM OPERATIONS  // // //
 
-extern void func_0804930c(u32, const struct WaveData *); // [func_0804930c] DIRECTSOUND STREAM - Initialise Stream
+extern void func_0804930c(u32, const struct SampleData *); // [func_0804930c] DIRECTSOUND STREAM - Initialise Stream
 extern void func_08049394(u32);             // [func_08049394] DIRECTSOUND STREAM - Reset Stream
 extern void func_080493b0(u32);             // [func_080493b0] DIRECTSOUND STREAM - Close Stream
 extern void func_080493c8(u32, u32, u32);   // [func_080493c8] DIRECTSOUND STREAM - Set Panning
@@ -180,7 +182,7 @@ extern void func_08049470(u32, u32);        // [func_08049470] DIRECTSOUND STREA
 
   // // //  DIRECTSOUND OPERATIONS  // // //
 
-extern void func_08049490(u32, u32, u32, volatile s32 *, u32, volatile s32 *, u16, DmaSampleReader *); // [func_08049490] DIRECTSOUND - Initialise DirectSound
+extern void func_08049490(u32, u32, u32, volatile s32 *, u32, volatile s32 *, u16, SampleStream *); // [func_08049490] DIRECTSOUND - Initialise DirectSound
 extern void func_080497f8(void);                // [func_080497f8] DIRECTSOUND - Update DirectSound
 extern void func_08049ad8(void);                // [func_08049ad8] DIRECTSOUND - Initialise(?) REG_DMA1CNT & REG_DMA2CNT (unused)
 extern void func_08049b34(u32, u32, u32, u32);  // [func_08049b34] DIRECTSOUND - Set Reverb Controllers

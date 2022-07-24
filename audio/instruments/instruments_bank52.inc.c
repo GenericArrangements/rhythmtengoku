@@ -1,4 +1,4 @@
-extern const struct WaveData sfx_672;
+extern const struct SampleData sfx_672;
 const struct InstrumentPCM InstPCM1320 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -13,7 +13,7 @@ const struct InstrumentPCM InstPCM1320 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_673;
+extern const struct SampleData sfx_673;
 const struct InstrumentPCM InstPCM1321 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -28,7 +28,7 @@ const struct InstrumentPCM InstPCM1321 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_674;
+extern const struct SampleData sfx_674;
 const struct InstrumentPCM InstPCM1322 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -43,7 +43,7 @@ const struct InstrumentPCM InstPCM1322 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_675;
+extern const struct SampleData sfx_675;
 const struct InstrumentPCM InstPCM1323 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -58,7 +58,7 @@ const struct InstrumentPCM InstPCM1323 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_676;
+extern const struct SampleData sfx_676;
 const struct InstrumentPCM InstPCM1324 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -73,7 +73,7 @@ const struct InstrumentPCM InstPCM1324 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_677;
+extern const struct SampleData sfx_677;
 const struct InstrumentPCM InstPCM1325 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -88,7 +88,7 @@ const struct InstrumentPCM InstPCM1325 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_678;
+extern const struct SampleData sfx_678;
 const struct InstrumentPCM InstPCM1326 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -103,7 +103,7 @@ const struct InstrumentPCM InstPCM1326 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_679;
+extern const struct SampleData sfx_679;
 const struct InstrumentPCM InstPCM1327 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -118,7 +118,7 @@ const struct InstrumentPCM InstPCM1327 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_680;
+extern const struct SampleData sfx_680;
 const struct InstrumentPCM InstPCM1328 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -133,7 +133,7 @@ const struct InstrumentPCM InstPCM1328 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_681;
+extern const struct SampleData sfx_681;
 const struct InstrumentPCM InstPCM1329 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -148,7 +148,7 @@ const struct InstrumentPCM InstPCM1329 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_682;
+extern const struct SampleData sfx_682;
 const struct InstrumentPCM InstPCM1330 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -163,7 +163,7 @@ const struct InstrumentPCM InstPCM1330 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_683;
+extern const struct SampleData sfx_683;
 const struct InstrumentPCM InstPCM1331 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -178,7 +178,7 @@ const struct InstrumentPCM InstPCM1331 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_684;
+extern const struct SampleData sfx_684;
 const struct InstrumentPCM InstPCM1332 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -193,7 +193,7 @@ const struct InstrumentPCM InstPCM1332 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_685;
+extern const struct SampleData sfx_685;
 const struct InstrumentPCM InstPCM1333 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -208,7 +208,7 @@ const struct InstrumentPCM InstPCM1333 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_686;
+extern const struct SampleData sfx_686;
 const struct InstrumentPCM InstPCM1334 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -223,7 +223,7 @@ const struct InstrumentPCM InstPCM1334 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_687;
+extern const struct SampleData sfx_687;
 const struct InstrumentPCM InstPCM1335 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -238,7 +238,7 @@ const struct InstrumentPCM InstPCM1335 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_688;
+extern const struct SampleData sfx_688;
 const struct InstrumentPCM InstPCM1336 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -253,7 +253,7 @@ const struct InstrumentPCM InstPCM1336 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_689;
+extern const struct SampleData sfx_689;
 const struct InstrumentPCM InstPCM1337 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -268,7 +268,7 @@ const struct InstrumentPCM InstPCM1337 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_690;
+extern const struct SampleData sfx_690;
 const struct InstrumentPCM InstPCM1338 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -283,7 +283,7 @@ const struct InstrumentPCM InstPCM1338 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_691;
+extern const struct SampleData sfx_691;
 const struct InstrumentPCM InstPCM1339 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -298,7 +298,7 @@ const struct InstrumentPCM InstPCM1339 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_692;
+extern const struct SampleData sfx_692;
 const struct InstrumentPCM InstPCM1340 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -313,7 +313,7 @@ const struct InstrumentPCM InstPCM1340 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_693;
+extern const struct SampleData sfx_693;
 const struct InstrumentPCM InstPCM1341 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -328,7 +328,7 @@ const struct InstrumentPCM InstPCM1341 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_694;
+extern const struct SampleData sfx_694;
 const struct InstrumentPCM InstPCM1342 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -343,7 +343,7 @@ const struct InstrumentPCM InstPCM1342 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_695;
+extern const struct SampleData sfx_695;
 const struct InstrumentPCM InstPCM1343 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -358,7 +358,7 @@ const struct InstrumentPCM InstPCM1343 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_696;
+extern const struct SampleData sfx_696;
 const struct InstrumentPCM InstPCM1344 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -373,7 +373,7 @@ const struct InstrumentPCM InstPCM1344 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_697;
+extern const struct SampleData sfx_697;
 const struct InstrumentPCM InstPCM1345 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -388,7 +388,7 @@ const struct InstrumentPCM InstPCM1345 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_698;
+extern const struct SampleData sfx_698;
 const struct InstrumentPCM InstPCM1346 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -403,7 +403,7 @@ const struct InstrumentPCM InstPCM1346 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_699;
+extern const struct SampleData sfx_699;
 const struct InstrumentPCM InstPCM1347 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -418,7 +418,7 @@ const struct InstrumentPCM InstPCM1347 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_700;
+extern const struct SampleData sfx_700;
 const struct InstrumentPCM InstPCM1348 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -433,7 +433,7 @@ const struct InstrumentPCM InstPCM1348 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_701;
+extern const struct SampleData sfx_701;
 const struct InstrumentPCM InstPCM1349 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -448,7 +448,7 @@ const struct InstrumentPCM InstPCM1349 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_702;
+extern const struct SampleData sfx_702;
 const struct InstrumentPCM InstPCM1350 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -463,7 +463,7 @@ const struct InstrumentPCM InstPCM1350 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_703;
+extern const struct SampleData sfx_703;
 const struct InstrumentPCM InstPCM1351 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -478,7 +478,7 @@ const struct InstrumentPCM InstPCM1351 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_704;
+extern const struct SampleData sfx_704;
 const struct InstrumentPCM InstPCM1352 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -493,7 +493,7 @@ const struct InstrumentPCM InstPCM1352 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_705;
+extern const struct SampleData sfx_705;
 const struct InstrumentPCM InstPCM1353 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -508,7 +508,7 @@ const struct InstrumentPCM InstPCM1353 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_706;
+extern const struct SampleData sfx_706;
 const struct InstrumentPCM InstPCM1354 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -523,7 +523,7 @@ const struct InstrumentPCM InstPCM1354 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_707;
+extern const struct SampleData sfx_707;
 const struct InstrumentPCM InstPCM1355 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -538,7 +538,7 @@ const struct InstrumentPCM InstPCM1355 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_708;
+extern const struct SampleData sfx_708;
 const struct InstrumentPCM InstPCM1356 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -553,7 +553,7 @@ const struct InstrumentPCM InstPCM1356 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_709;
+extern const struct SampleData sfx_709;
 const struct InstrumentPCM InstPCM1357 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -568,7 +568,7 @@ const struct InstrumentPCM InstPCM1357 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_710;
+extern const struct SampleData sfx_710;
 const struct InstrumentPCM InstPCM1358 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -583,7 +583,7 @@ const struct InstrumentPCM InstPCM1358 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_711;
+extern const struct SampleData sfx_711;
 const struct InstrumentPCM InstPCM1359 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -598,7 +598,7 @@ const struct InstrumentPCM InstPCM1359 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_712;
+extern const struct SampleData sfx_712;
 const struct InstrumentPCM InstPCM1360 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -613,7 +613,7 @@ const struct InstrumentPCM InstPCM1360 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_713;
+extern const struct SampleData sfx_713;
 const struct InstrumentPCM InstPCM1361 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -628,7 +628,7 @@ const struct InstrumentPCM InstPCM1361 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_714;
+extern const struct SampleData sfx_714;
 const struct InstrumentPCM InstPCM1362 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -643,7 +643,7 @@ const struct InstrumentPCM InstPCM1362 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_715;
+extern const struct SampleData sfx_715;
 const struct InstrumentPCM InstPCM1363 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -658,7 +658,7 @@ const struct InstrumentPCM InstPCM1363 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_716;
+extern const struct SampleData sfx_716;
 const struct InstrumentPCM InstPCM1364 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -673,7 +673,7 @@ const struct InstrumentPCM InstPCM1364 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_717;
+extern const struct SampleData sfx_717;
 const struct InstrumentPCM InstPCM1365 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -688,7 +688,7 @@ const struct InstrumentPCM InstPCM1365 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_718;
+extern const struct SampleData sfx_718;
 const struct InstrumentPCM InstPCM1366 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -703,7 +703,7 @@ const struct InstrumentPCM InstPCM1366 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_719;
+extern const struct SampleData sfx_719;
 const struct InstrumentPCM InstPCM1367 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -718,7 +718,7 @@ const struct InstrumentPCM InstPCM1367 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_720;
+extern const struct SampleData sfx_720;
 const struct InstrumentPCM InstPCM1368 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -733,7 +733,7 @@ const struct InstrumentPCM InstPCM1368 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_721;
+extern const struct SampleData sfx_721;
 const struct InstrumentPCM InstPCM1369 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -748,7 +748,7 @@ const struct InstrumentPCM InstPCM1369 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_722;
+extern const struct SampleData sfx_722;
 const struct InstrumentPCM InstPCM1370 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -763,7 +763,7 @@ const struct InstrumentPCM InstPCM1370 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_723;
+extern const struct SampleData sfx_723;
 const struct InstrumentPCM InstPCM1371 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -778,7 +778,7 @@ const struct InstrumentPCM InstPCM1371 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_724;
+extern const struct SampleData sfx_724;
 const struct InstrumentPCM InstPCM1372 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -793,7 +793,7 @@ const struct InstrumentPCM InstPCM1372 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_725;
+extern const struct SampleData sfx_725;
 const struct InstrumentPCM InstPCM1373 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -808,7 +808,7 @@ const struct InstrumentPCM InstPCM1373 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_726;
+extern const struct SampleData sfx_726;
 const struct InstrumentPCM InstPCM1374 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -823,7 +823,7 @@ const struct InstrumentPCM InstPCM1374 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_727;
+extern const struct SampleData sfx_727;
 const struct InstrumentPCM InstPCM1375 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -838,7 +838,7 @@ const struct InstrumentPCM InstPCM1375 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_728;
+extern const struct SampleData sfx_728;
 const struct InstrumentPCM InstPCM1376 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -853,7 +853,7 @@ const struct InstrumentPCM InstPCM1376 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_729;
+extern const struct SampleData sfx_729;
 const struct InstrumentPCM InstPCM1377 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -868,7 +868,7 @@ const struct InstrumentPCM InstPCM1377 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_730;
+extern const struct SampleData sfx_730;
 const struct InstrumentPCM InstPCM1378 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
@@ -883,7 +883,7 @@ const struct InstrumentPCM InstPCM1378 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const struct WaveData sfx_731;
+extern const struct SampleData sfx_731;
 const struct InstrumentPCM InstPCM1379 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,

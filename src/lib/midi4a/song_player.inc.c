@@ -107,8 +107,8 @@ void func_0804b534(u16 index) {
     SoundPlayer *soundPlayer;
     const SongInfo *song;
 
-    soundPlayer = D_08aa4460[D_08aa06f8[index].channelID].audioChannel;
-    song = D_08aa06f8[index].songInfo;
+    soundPlayer = D_08aa4460[gSongTable[index].playerNum].soundPlayer;
+    song = gSongTable[index].songInfo;
     func_0804b368(soundPlayer, song);
 }
 
@@ -186,7 +186,7 @@ void func_0804b66c(SoundPlayer *soundPlayer, u16 unused, s8 panning) {
 
 // [func_0804b67c] SOUND PLAYER - Pause Sound Sequence from Index
 void func_0804b67c(u16 offset) {
-    SongInfo *song = D_08aa06f8[offset].songInfo;
+    const SongInfo *song = gSongTable[offset].songInfo;
     u32 i;
 
     for (i = 0; i <= D_08aa4318; i++) {

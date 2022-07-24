@@ -1248,7 +1248,7 @@ const struct InstrumentPSG InstPSG416 = {
     /* PSG Noise */ 0,
 };
 
-extern const struct WaveData sfx_236;
+extern const struct SampleData sfx_236;
 const struct InstrumentPCM InstPCM417 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,

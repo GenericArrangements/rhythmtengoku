@@ -37,45 +37,88 @@ typedef void (*HandWritten)();
 
   // // // // // // // // // // // // // // // // // // // //
 
-#define DIRECTSOUND_MODE_STEREO 0
-#define DIRECTSOUND_MODE_MONO1  1
-#define DIRECTSOUND_MODE_MONO2  2
+enum DirectSoundModeEnum {
+    DIRECTSOUND_MODE_STEREO,
+    DIRECTSOUND_MODE_MONO1,
+    DIRECTSOUND_MODE_MONO2
+};
 
-#define MOD_TYPE_VIBRATO    0
-#define MOD_TYPE_TREMOLO    1
-#define MOD_TYPE_PANNING    2
+enum PsgToneDutyEnum {
+    PSG_TONE_DUTY_12_5,
+    PSG_TONE_DUTY_25,
+    PSG_TONE_DUTY_50,
+    PSG_TONE_DUTY_75
+};
 
-#define ADSR_STAGE_ATTACK       0
-#define ADSR_STAGE_DECAY        1
-#define ADSR_STAGE_SUSTAIN      2
-#define ADSR_STAGE_RELEASE      3
-#define ADSR_STAGE_FORCE_STOP   4
+enum PsgNoiseDutyEnum {
+    PSG_NOISE_COUNTER_15,
+    PSG_NOISE_COUNTER_7
+};
 
-#define LFO_STAGE_DISABLED  0
-#define LFO_STAGE_PRE_DELAY 1
-#define LFO_STAGE_ATTACK    2
-#define LFO_STAGE_SUSTAIN   3
+enum ModulationTypeEnum {
+    MOD_TYPE_VIBRATO,
+    MOD_TYPE_TREMOLO,
+    MOD_TYPE_PANNING
+};
 
-#define LFO_MODE_DISABLED   0
-#define LFO_MODE_KEYPRESS   1
-#define LFO_MODE_CONSTANT   2
+enum AdsrStageEnum {
+    ADSR_STAGE_ATTACK,
+    ADSR_STAGE_DECAY,
+    ADSR_STAGE_SUSTAIN,
+    ADSR_STAGE_RELEASE,
+    ADSR_STAGE_FORCE_STOP
+};
 
-#define VOL_FADE_RESET      0
-#define VOL_FADE_IN         1
-#define VOL_FADE_OUT_CLEAR  2
-#define VOL_FADE_OUT_PAUSE  3
+enum LfoStageEnum {
+    LFO_STAGE_DISABLED,
+    LFO_STAGE_PRE_DELAY,
+    LFO_STAGE_ATTACK,
+    LFO_STAGE_SUSTAIN
+};
 
-#define SYS_EXC_EVENT_LFO       0
-#define SYS_EXC_EVENT_R_SCALE   1
+enum LfoModeEnum {
+    LFO_MODE_DISABLED,
+    LFO_MODE_KEYPRESS,
+    LFO_MODE_CONSTANT
+};
 
-#define META_EVENT_OTHER        0
-#define META_EVENT_TRACK_END    1
-#define META_EVENT_LOOP_START   2
-#define META_EVENT_LOOP_END     3
+enum VolumeFadeTypeEnum {
+    VOL_FADE_RESET,
+    VOL_FADE_IN,
+    VOL_FADE_OUT_CLEAR,
+    VOL_FADE_OUT_PAUSE
+};
 
-#define M_TRACK_STREAM_CONTINUE 0
-#define M_TRACK_STREAM_STOP     1
-#define M_TRACK_STREAM_LOOP     2
+enum MidiSystemExclusiveMessageEnum {
+    SYS_EXC_EVENT_LFO,
+    SYS_EXC_EVENT_R_SCALE
+};
+
+enum MidiMetaEventTypeEnum {
+    META_EVENT_OTHER,
+    META_EVENT_TRACK_END,
+    META_EVENT_LOOP_START,
+    META_EVENT_LOOP_END
+};
+
+enum MidiTrackStreamEndEnum {
+    M_TRACK_STREAM_CONTINUE,
+    M_TRACK_STREAM_STOP,
+    M_TRACK_STREAM_LOOP
+};
+
+enum PsgChannelsEnum {
+    PSG_PULSE_CHANNEL_1,
+    PSG_PULSE_CHANNEL_2,
+    PSG_WAVE_CHANNEL,
+    PSG_NOISE_CHANNEL
+};
+
+#define INSTRUMENT_PCM_ALIGNED 'A' // 0x41
+#define INSTRUMENT_PCM_FIXED   'F' // 0x46
+#define INSTRUMENT_PSG         'P' // 0x50
+#define INSTRUMENT_SUB_RHYTHM  'R' // 0x52
+#define INSTRUMENT_SUB_SPLIT   'S' // 0x53
 
 #define MSG_NOTE_OFF                    0x80
 #define MSG_NOTE_ON                     0x90
