@@ -16,6 +16,11 @@ enum SoundPlayersEnum {
     SFX_PLAYER_9
 };
 
+enum SoundPlayerTypesEnum {
+    SOUNDPLAYER_TYPE_MUSIC,
+    SOUNDPLAYER_TYPE_SFX
+};
+
 enum MidiChannelsEnum {
     MIDI_CHANNEL_0  = (1 << 0),
     MIDI_CHANNEL_1  = (1 << 1),
@@ -399,29 +404,16 @@ struct SongTableEntry {
     u16 playerNum; // Sound Player to play the given Sound Sequence in { 0..12 }
 };
 
-u32 D_08aa4318; // Total number of Audio Channels - 1. [12]
-
-u8  D_08aa431c; // Unknown: ?? [1]
-u8  D_08aa431d; // Unknown: Sound Bank ID [0x45]
-u8  D_08aa431e; // Unknown: Volume [0x7f]
-u8  D_08aa431f; // Unknown: Priority [0]
-u8  D_08aa4320; // Unknown: Tempo [0x96]
-
-SoundPlayer *D_08aa4324[13]; // Array of Audio Channel pointers
-
 // SoundPlayerTable
 struct SoundPlayerTableEntry {
-    u32 id:5;
-    u32 trackCount:5;
-    u32 playerType:6; // ??? (0 for music channels, 1 for sfx channels)
+    u16 id:5;
+    u16 trackCount:5;
+    u16 playerType:6; // ??? (0 for music channels, 1 for sfx channels)
     MidiChannel *midiChannels;
     MidiBus *midiBus;
     MidiTrackStream *trackStreams;
     SoundPlayer *soundPlayer;
 };
-extern struct SoundPlayerTableEntry D_08aa4358[13];
-
-u8 D_08aa445c; // Total number of Audio Channels [13]
 
 // SoundPlayerList
 struct SoundPlayerListEntry {
@@ -430,4 +422,137 @@ struct SoundPlayerListEntry {
     u16 trackCount;
     u16 playerType;
 };
-extern struct SoundPlayerListEntry D_08aa4460[13];
+
+extern SoundPlayer MusicPlayer0;  // [D_030015ac] MUSIC PLAYER 0
+extern SoundPlayer MusicPlayer1;  // [D_030015e4] MUSIC PLAYER 1
+extern SoundPlayer MusicPlayer2;  // [D_0300161c] MUSIC PLAYER 2
+extern SoundPlayer SfxPlayer0;  // [D_03001654] SFX PLAYER 0
+extern SoundPlayer SfxPlayer1;  // [D_0300168c] SFX PLAYER 1
+extern SoundPlayer SfxPlayer2;  // [D_030016c4] SFX PLAYER 2
+extern SoundPlayer SfxPlayer3;  // [D_030016fc] SFX PLAYER 3
+extern SoundPlayer SfxPlayer4;  // [D_03001734] SFX PLAYER 4
+extern SoundPlayer SfxPlayer5;  // [D_0300176c] SFX PLAYER 5
+extern SoundPlayer SfxPlayer6;  // [D_030017a4] SFX PLAYER 6
+extern SoundPlayer SfxPlayer7;  // [D_030017dc] SFX PLAYER 7
+extern SoundPlayer SfxPlayer8;  // [D_03001814] SFX PLAYER 8
+extern SoundPlayer SfxPlayer9;  // [D_0300184c] SFX PLAYER 9
+
+struct {
+    struct MidiChannel channels[15];
+    struct MidiBus bus;
+    struct MidiTrackStream streams[15];
+} MusicReader0;
+
+struct {
+    struct MidiChannel channels[12];
+    struct MidiBus bus;
+    struct MidiTrackStream streams[12];
+} MusicReader1;
+
+struct {
+    struct MidiChannel channels[12];
+    struct MidiBus bus;
+    struct MidiTrackStream streams[12];
+} MusicReader2;
+
+struct {
+    struct MidiChannel channels[5];
+    struct MidiBus bus;
+    struct MidiTrackStream streams[5];
+} SfxReader0;
+
+struct {
+    struct MidiChannel channels[5];
+    struct MidiBus bus;
+    struct MidiTrackStream streams[5];
+} SfxReader1;
+
+struct {
+    struct MidiChannel channels[5];
+    struct MidiBus bus;
+    struct MidiTrackStream streams[5];
+} SfxReader2;
+
+struct {
+    struct MidiChannel channels[5];
+    struct MidiBus bus;
+    struct MidiTrackStream streams[5];
+} SfxReader3;
+
+struct {
+    struct MidiChannel channels[5];
+    struct MidiBus bus;
+    struct MidiTrackStream streams[5];
+} SfxReader4;
+
+struct {
+    struct MidiChannel channels[5];
+    struct MidiBus bus;
+    struct MidiTrackStream streams[5];
+} SfxReader5;
+
+struct {
+    struct MidiChannel channels[5];
+    struct MidiBus bus;
+    struct MidiTrackStream streams[5];
+} SfxReader6;
+
+struct {
+    struct MidiChannel channels[5];
+    struct MidiBus bus;
+    struct MidiTrackStream streams[5];
+} SfxReader7;
+
+struct {
+    struct MidiChannel channels[5];
+    struct MidiBus bus;
+    struct MidiTrackStream streams[5];
+} SfxReader8;
+
+struct {
+    struct MidiChannel channels[5];
+    struct MidiBus bus;
+    struct MidiTrackStream streams[5];
+} SfxReader9;
+
+/*
+extern MidiChannel D_03002bc8[15];      // [D_03002bc8] MUSIC PLAYER 0 - MIDI Channels
+extern MidiBus D_03002da8;              // [D_03002da8] MUSIC PLAYER 0 - MIDI Bus
+extern MidiTrackStream D_03002dd0[15];  // [D_03002dd0] MUSIC PLAYER 0 - MIDI Track Streams
+extern MidiChannel D_03002f78[12];      // [D_03002f78] MUSIC PLAYER 1 - MIDI Channels
+extern MidiBus D_030030f8;              // [D_030030f8] MUSIC PLAYER 1 - MIDI Bus
+extern MidiTrackStream D_03003120[12];  // [D_03003120] MUSIC PLAYER 1 - MIDI Track Streams
+extern MidiChannel D_03003270[12];      // [D_03003270] MUSIC PLAYER 2 - MIDI Channels
+extern MidiBus D_030033f0;              // [D_030033f0] MUSIC PLAYER 2 - MIDI Bus
+extern MidiTrackStream D_03003418[12];  // [D_03003418] MUSIC PLAYER 2 - MIDI Track Streams
+extern MidiChannel D_03003568[5];       // [D_03003568] SFX PLAYER 0 - MIDI Channels
+extern MidiBus D_03003608;              // [D_03003608] SFX PLAYER 0 - MIDI Bus
+extern MidiTrackStream D_03003630[5];   // [D_03003630] SFX PLAYER 0 - MIDI Track Streams
+extern MidiChannel D_030036c0[5];       // [D_030036c0] SFX PLAYER 1 - MIDI Channels
+extern MidiBus D_03003760;              // [D_03003760] SFX PLAYER 1 - MIDI Bus
+extern MidiTrackStream D_03003788[5];   // [D_03003788] SFX PLAYER 1 - MIDI Track Streams
+extern MidiChannel D_03003818[5];       // [D_03003818] SFX PLAYER 2 - MIDI Channels
+extern MidiBus D_030038b8;              // [D_030038b8] SFX PLAYER 2 - MIDI Bus
+extern MidiTrackStream D_030038e0[5];   // [D_030038e0] SFX PLAYER 2 - MIDI Track Streams
+extern MidiChannel D_03003970[5];       // [D_03003970] SFX PLAYER 3 - MIDI Channels
+extern MidiBus D_03003a10;              // [D_03003a10] SFX PLAYER 3 - MIDI Bus
+extern MidiTrackStream D_03003a38[5];   // [D_03003a38] SFX PLAYER 3 - MIDI Track Streams
+extern MidiChannel D_03003ac8[5];       // [D_03003ac8] SFX PLAYER 4 - MIDI Channels
+extern MidiBus D_03003b68;              // [D_03003b68] SFX PLAYER 4 - MIDI Bus
+extern MidiTrackStream D_03003b90[5];   // [D_03003b90] SFX PLAYER 4 - MIDI Track Streams
+extern MidiChannel D_03003c20[5];       // [D_03003c20] SFX PLAYER 5 - MIDI Channels
+extern MidiBus D_03003cc0;              // [D_03003cc0] SFX PLAYER 5 - MIDI Bus
+extern MidiTrackStream D_03003ce8[5];   // [D_03003ce8] SFX PLAYER 5 - MIDI Track Streams
+extern MidiChannel D_03003d78[5];       // [D_03003d78] SFX PLAYER 6 - MIDI Channels
+extern MidiBus D_03003e18;              // [D_03003e18] SFX PLAYER 6 - MIDI Bus
+extern MidiTrackStream D_03003e40[5];   // [D_03003e40] SFX PLAYER 6 - MIDI Track Streams
+extern MidiChannel D_03003ed0[5];       // [D_03003ed0] SFX PLAYER 7 - MIDI Channels
+extern MidiBus D_03003f70;              // [D_03003f70] SFX PLAYER 7 - MIDI Bus
+extern MidiTrackStream D_03003f98[5];   // [D_03003f98] SFX PLAYER 7 - MIDI Track Streams
+extern MidiChannel D_03004028[5];       // [D_03004028] SFX PLAYER 8 - MIDI Channels
+extern MidiBus D_030040c8;              // [D_030040c8] SFX PLAYER 8 - MIDI Bus
+extern MidiTrackStream D_030040f0[5];   // [D_030040f0] SFX PLAYER 8 - MIDI Track Streams
+extern MidiChannel D_03004180[5];       // [D_03004180] SFX PLAYER 9 - MIDI Channels
+extern MidiBus D_03004220;              // [D_03004220] SFX PLAYER 9 - MIDI Bus
+extern MidiTrackStream D_03004248[5];   // [D_03004248] SFX PLAYER 9 - MIDI Track Streams
+*/

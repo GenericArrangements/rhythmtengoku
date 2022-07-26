@@ -8,11 +8,11 @@ thumb_func_start func_0800274c \n\
 /* 08002750 */ CMP R6, 0x0 @ Compare R6 and 0x0 \n\
 /* 08002752 */ BEQ branch_08002784 \n\
 /* 08002754 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
-/* 08002756 */ LDR R0, =D_08aa445c \n\
+/* 08002756 */ LDR R0, =gSoundPlayerCount \n\
 /* 08002758 */ LDRB R0, [R0] \n\
 /* 0800275a */ CMP R4, R0 @ Check R4 - R0 \n\
 /* 0800275c */ BCS branch_08002784 \n\
-/* 0800275e */ LDR R5, =D_08aa4460 \n\
+/* 0800275e */ LDR R5, =gSoundPlayerList \n\
  \n\
 branch_08002760: \n\
 /* 08002760 */ LDR R1, [R5] \n\
@@ -32,7 +32,7 @@ branch_0800276c: \n\
 branch_08002778: \n\
 /* 08002778 */ ADDS R5, 0xC @ Add 0xC to R5 \n\
 /* 0800277a */ ADDS R4, 0x1 @ Add 0x1 to R4 \n\
-/* 0800277c */ LDR R0, =D_08aa445c \n\
+/* 0800277c */ LDR R0, =gSoundPlayerCount \n\
 /* 0800277e */ LDRB R0, [R0] \n\
 /* 08002780 */ CMP R4, R0 @ Check R4 - R0 \n\
 /* 08002782 */ BCC branch_08002760 \n\

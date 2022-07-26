@@ -479,8 +479,8 @@ void func_0804c170(void) {
     D_030055f0 = REG_VCOUNT;
 
     // Standard Sound Players
-    for (i = 0; i <= D_08aa4318; i++) {
-        soundPlayer = D_08aa4324[i];
+    for (i = 0; i <= gMidiPlayerCount; i++) {
+        soundPlayer = gSoundPlayers[i];
         if (soundPlayer != NULL) {
             func_0804c040(soundPlayer);
             func_0804c0f8(soundPlayer);
@@ -496,7 +496,7 @@ void func_0804c170(void) {
 
     // Special Sound Player
     soundPlayer = D_03001598;
-    if ((D_08aa431c != 0) && (soundPlayer != NULL)) {
+    if ((gDirectMidiPlayerHasData != 0) && (soundPlayer != NULL)) {
         func_0804c6c8();
         rvb0 -= (64 * 2) - (soundPlayer->midiController4E * 2);
         rvb1 -= 64 - soundPlayer->midiController4F;

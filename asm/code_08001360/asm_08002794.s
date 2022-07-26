@@ -9,11 +9,11 @@ thumb_func_start func_08002794 \n\
 /* 0800279a */ CMP R6, 0x0 @ Compare R6 and 0x0 \n\
 /* 0800279c */ BEQ branch_080027ce \n\
 /* 0800279e */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
-/* 080027a0 */ LDR R0, =D_08aa445c \n\
+/* 080027a0 */ LDR R0, =gSoundPlayerCount \n\
 /* 080027a2 */ LDRB R0, [R0] \n\
 /* 080027a4 */ CMP R4, R0 @ Check R4 - R0 \n\
 /* 080027a6 */ BCS branch_080027ce \n\
-/* 080027a8 */ LDR R5, =D_08aa4460 \n\
+/* 080027a8 */ LDR R5, =gSoundPlayerList \n\
  \n\
 branch_080027aa: \n\
 /* 080027aa */ LDR R1, [R5] \n\
@@ -33,7 +33,7 @@ branch_080027b6: \n\
 branch_080027c2: \n\
 /* 080027c2 */ ADDS R5, 0xC @ Add 0xC to R5 \n\
 /* 080027c4 */ ADDS R4, 0x1 @ Add 0x1 to R4 \n\
-/* 080027c6 */ LDR R0, =D_08aa445c \n\
+/* 080027c6 */ LDR R0, =gSoundPlayerCount \n\
 /* 080027c8 */ LDRB R0, [R0] \n\
 /* 080027ca */ CMP R4, R0 @ Check R4 - R0 \n\
 /* 080027cc */ BCC branch_080027aa \n\

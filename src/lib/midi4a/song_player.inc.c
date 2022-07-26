@@ -107,7 +107,7 @@ void func_0804b534(u16 index) {
     SoundPlayer *soundPlayer;
     const SongInfo *song;
 
-    soundPlayer = D_08aa4460[gSongTable[index].playerNum].soundPlayer;
+    soundPlayer = gSoundPlayerList[gSongTable[index].playerNum].soundPlayer;
     song = gSongTable[index].songInfo;
     func_0804b368(soundPlayer, song);
 }
@@ -149,8 +149,8 @@ void func_0804b5e4(SoundPlayer *soundPlayer) {
 void func_0804b5f0(void) {
     u32 i;
 
-    for (i = 0; i <= D_08aa4318; i++) {
-        func_0804b574(D_08aa4324[i], TRUE);
+    for (i = 0; i <= gMidiPlayerCount; i++) {
+        func_0804b574(gSoundPlayers[i], TRUE);
     }
 }
 
@@ -158,8 +158,8 @@ void func_0804b5f0(void) {
 void func_0804b620(void) {
     u32 i;
 
-    for (i = 0; i <= D_08aa4318; i++) {
-        func_0804b574(D_08aa4324[i], FALSE);
+    for (i = 0; i <= gMidiPlayerCount; i++) {
+        func_0804b574(gSoundPlayers[i], FALSE);
     }
 }
 
@@ -189,9 +189,9 @@ void func_0804b67c(u16 offset) {
     const SongInfo *song = gSongTable[offset].songInfo;
     u32 i;
 
-    for (i = 0; i <= D_08aa4318; i++) {
-        if ((D_08aa4324[i] != NULL) && (D_08aa4324[i]->songInfo == song)) {
-            func_0804b5d8(D_08aa4324[i]);
+    for (i = 0; i <= gMidiPlayerCount; i++) {
+        if ((gSoundPlayers[i] != NULL) && (gSoundPlayers[i]->songInfo == song)) {
+            func_0804b5d8(gSoundPlayers[i]);
         }
     }
 }

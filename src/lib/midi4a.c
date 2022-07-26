@@ -47,21 +47,21 @@ u32 func_0804c398(MidiStream *midiStream) {
 void func_0804c3c0(SoundPlayer *mPlayer, MidiTrackStream *mStreams, u32 numTracks,
                         MidiBus *mBus, MidiChannel *mChannels, u8 *seq) {
 
-    if (!D_08aa431c) return;
+    if (!gDirectMidiPlayerHasData) return;
 
     func_08049fa0(mBus, numTracks, mChannels);
-    func_0804a014(mBus, instrumentBanks[D_08aa431d]);
-    func_0804adb4(mBus, D_08aa431e);
-    func_08049e8c(mBus, D_08aa431f);
-    func_0804c35c(mPlayer, mBus, numTracks, mStreams, D_08aa431f);
+    func_0804a014(mBus, instrumentBanks[gDirectMidiPlayerBank]);
+    func_0804adb4(mBus, gDirectMidiPlayerVolume);
+    func_08049e8c(mBus, gDirectMidiPlayerPriority);
+    func_0804c35c(mPlayer, mBus, numTracks, mStreams, gDirectMidiPlayerPriority);
 
     mPlayer->speedMulti = Q24(1.0);
     mPlayer->trackGain = Q24(1.0);
     mPlayer->volumeFadeType = 0;
     mPlayer->volumeFadeEnv = 0x8000;
     mPlayer->volumeFadeSpd = 0;
-    mPlayer->midiTempo = D_08aa4320;
-    mPlayer->deltaTime = func_0804b6f0(D_08aa4320, Q24(1.0), 0x18);
+    mPlayer->midiTempo = gDirectMidiPlayerTempo;
+    mPlayer->deltaTime = func_0804b6f0(gDirectMidiPlayerTempo, Q24(1.0), 0x18);
     mPlayer->midiController4E = 64;
     mPlayer->midiController4F = 64;
     mPlayer->midiController50 = 64;
@@ -128,8 +128,8 @@ void func_0804c778(void) {
     func_0804a360(DIRECTSOUND_CHANNEL_COUNT, D_03002a48);
 
     for (i = 0; i < SOUND_PLAYER_COUNT; i++) {
-        func_08049fa0(D_08aa4358[i].midiBus, D_08aa4358[i].trackCount, D_08aa4358[i].midiChannels);
-        func_0804c35c(D_08aa4358[i].soundPlayer, D_08aa4358[i].midiBus, D_08aa4358[i].trackCount, D_08aa4358[i].trackStreams, D_08aa4358[i].playerType);
+        func_08049fa0(gSoundPlayerTable[i].midiBus, gSoundPlayerTable[i].trackCount, gSoundPlayerTable[i].midiChannels);
+        func_0804c35c(gSoundPlayerTable[i].soundPlayer, gSoundPlayerTable[i].midiBus, gSoundPlayerTable[i].trackCount, gSoundPlayerTable[i].trackStreams, gSoundPlayerTable[i].playerType);
     }
 
     D_03005b7c = D_030015a7;

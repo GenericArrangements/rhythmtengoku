@@ -6,7 +6,7 @@ thumb_func_start func_0802b064 \n\
 /* 0802b064 */ PUSH {R4, R5, LR} \n\
 /* 0802b066 */ BL func_0802a994 \n\
 /* 0802b06a */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
-/* 0802b06c */ LDR R5, =D_08aa4460 \n\
+/* 0802b06c */ LDR R5, =gSoundPlayerList \n\
  \n\
 branch_0802b06e: \n\
 /* 0802b06e */ LDR R0, =D_03001568 \n\

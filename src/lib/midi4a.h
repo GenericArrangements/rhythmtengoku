@@ -24,66 +24,10 @@ extern u16 D_030015a4;          // [D_030015a4] TEST PLAYER - Sequence Length
 extern u8  D_030015a6;          // [D_030015a6] TEST PLAYER - Sequence Current Command
 extern u8  D_030015a7[4];       // [D_030015a7] UNDEFINED - Initial value at D_03005b7c
 
-extern SoundPlayer D_030015ac;  // [D_030015ac] MUSIC PLAYER 0
-extern SoundPlayer D_030015e4;  // [D_030015e4] MUSIC PLAYER 1
-extern SoundPlayer D_0300161c;  // [D_0300161c] MUSIC PLAYER 2
-extern SoundPlayer D_03001654;  // [D_03001654] SFX PLAYER 0
-extern SoundPlayer D_0300168c;  // [D_0300168c] SFX PLAYER 1
-extern SoundPlayer D_030016c4;  // [D_030016c4] SFX PLAYER 2
-extern SoundPlayer D_030016fc;  // [D_030016fc] SFX PLAYER 3
-extern SoundPlayer D_03001734;  // [D_03001734] SFX PLAYER 4
-extern SoundPlayer D_0300176c;  // [D_0300176c] SFX PLAYER 5
-extern SoundPlayer D_030017a4;  // [D_030017a4] SFX PLAYER 6
-extern SoundPlayer D_030017dc;  // [D_030017dc] SFX PLAYER 7
-extern SoundPlayer D_03001814;  // [D_03001814] SFX PLAYER 8
-extern SoundPlayer D_0300184c;  // [D_0300184c] SFX PLAYER 9
-
 extern volatile s32 D_03001888[1568*2]; // [D_03001888] DIRECTSOUND - DMA Source Addresses { &D_03001888[0] = Right; &D_03001888[D_03005b24] = Left }
 extern volatile s32 D_030024c8[0x400];  // [D_030024c8] DIRECTSOUND - Sample Processing ScratchPad
 extern SampleStream D_030028c8[12];  // [D_030028c8] DIRECTSOUND - DMA Sample Readers (12 Channels)
 extern SoundChannel D_03002a48[12];     // [D_03002a48] DIRECTSOUND - DirectSound Channels (12 Channels)
-
-extern MidiChannel D_03002bc8[15];      // [D_03002bc8] MUSIC PLAYER 0 - MIDI Channels
-extern MidiBus D_03002da8;              // [D_03002da8] MUSIC PLAYER 0 - MIDI Bus
-extern MidiTrackStream D_03002dd0[15];  // [D_03002dd0] MUSIC PLAYER 0 - MIDI Track Streams
-extern MidiChannel D_03002f78[12];      // [D_03002f78] MUSIC PLAYER 1 - MIDI Channels
-extern MidiBus D_030030f8;              // [D_030030f8] MUSIC PLAYER 1 - MIDI Bus
-extern MidiTrackStream D_03003120[12];  // [D_03003120] MUSIC PLAYER 1 - MIDI Track Streams
-extern MidiChannel D_03003270[12];      // [D_03003270] MUSIC PLAYER 2 - MIDI Channels
-extern MidiBus D_030033f0;              // [D_030033f0] MUSIC PLAYER 2 - MIDI Bus
-extern MidiTrackStream D_03003418[12];  // [D_03003418] MUSIC PLAYER 2 - MIDI Track Streams
-extern MidiChannel D_03003568[5];       // [D_03003568] SFX PLAYER 0 - MIDI Channels
-extern MidiBus D_03003608;              // [D_03003608] SFX PLAYER 0 - MIDI Bus
-extern MidiTrackStream D_03003630[5];   // [D_03003630] SFX PLAYER 0 - MIDI Track Streams
-extern MidiChannel D_030036c0[5];       // [D_030036c0] SFX PLAYER 1 - MIDI Channels
-extern MidiBus D_03003760;              // [D_03003760] SFX PLAYER 1 - MIDI Bus
-extern MidiTrackStream D_03003788[5];   // [D_03003788] SFX PLAYER 1 - MIDI Track Streams
-extern MidiChannel D_03003818[5];       // [D_03003818] SFX PLAYER 2 - MIDI Channels
-extern MidiBus D_030038b8;              // [D_030038b8] SFX PLAYER 2 - MIDI Bus
-extern MidiTrackStream D_030038e0[5];   // [D_030038e0] SFX PLAYER 2 - MIDI Track Streams
-extern MidiChannel D_03003970[5];       // [D_03003970] SFX PLAYER 3 - MIDI Channels
-extern MidiBus D_03003a10;              // [D_03003a10] SFX PLAYER 3 - MIDI Bus
-extern MidiTrackStream D_03003a38[5];   // [D_03003a38] SFX PLAYER 3 - MIDI Track Streams
-extern MidiChannel D_03003ac8[5];       // [D_03003ac8] SFX PLAYER 4 - MIDI Channels
-extern MidiBus D_03003b68;              // [D_03003b68] SFX PLAYER 4 - MIDI Bus
-extern MidiTrackStream D_03003b90[5];   // [D_03003b90] SFX PLAYER 4 - MIDI Track Streams
-extern MidiChannel D_03003c20[5];       // [D_03003c20] SFX PLAYER 5 - MIDI Channels
-extern MidiBus D_03003cc0;              // [D_03003cc0] SFX PLAYER 5 - MIDI Bus
-extern MidiTrackStream D_03003ce8[5];   // [D_03003ce8] SFX PLAYER 5 - MIDI Track Streams
-extern MidiChannel D_03003d78[5];       // [D_03003d78] SFX PLAYER 6 - MIDI Channels
-extern MidiBus D_03003e18;              // [D_03003e18] SFX PLAYER 6 - MIDI Bus
-extern MidiTrackStream D_03003e40[5];   // [D_03003e40] SFX PLAYER 6 - MIDI Track Streams
-extern MidiChannel D_03003ed0[5];       // [D_03003ed0] SFX PLAYER 7 - MIDI Channels
-extern MidiBus D_03003f70;              // [D_03003f70] SFX PLAYER 7 - MIDI Bus
-extern MidiTrackStream D_03003f98[5];   // [D_03003f98] SFX PLAYER 7 - MIDI Track Streams
-extern MidiChannel D_03004028[5];       // [D_03004028] SFX PLAYER 8 - MIDI Channels
-extern MidiBus D_030040c8;              // [D_030040c8] SFX PLAYER 8 - MIDI Bus
-extern MidiTrackStream D_030040f0[5];   // [D_030040f0] SFX PLAYER 8 - MIDI Track Streams
-extern MidiChannel D_03004180[5];       // [D_03004180] SFX PLAYER 9 - MIDI Channels
-extern MidiBus D_03004220;              // [D_03004220] SFX PLAYER 9 - MIDI Bus
-extern MidiTrackStream D_03004248[5];   // [D_03004248] SFX PLAYER 9 - MIDI Track Streams
-
-
 
 extern u16 D_030055f0;              // [D_030055f0] MIDI4AGB - Set to REG_VCOUNT near the start of each update.
 extern u32 D_030055f4;              // [D_030055f4] DIRECTSOUND - Initial Sound Mode { 0 = Stereo; 1 = Mono (One Channel); 2 = Mono (Two Channels) }
@@ -149,6 +93,18 @@ extern const char gMidiLoopEndSym[];    // [D_08a865a8] MIDI "Loop End" Marker: 
 
 extern const union Instrument *instrumentBanks[]; // Instrument Bank Index
 extern const struct SongTableEntry gSongTable[1924];
+
+extern u32 gMidiPlayerCount;
+extern u8  gDirectMidiPlayerHasData; // Has Data [TRUE]
+extern u8  gDirectMidiPlayerBank; // Sound Bank ID [INST_BANK_37]
+extern u8  gDirectMidiPlayerVolume; // Volume [127]
+extern u8  gDirectMidiPlayerPriority; // Priority [0]
+extern u8  gDirectMidiPlayerTempo; // Tempo [150]
+
+extern struct SoundPlayer *const gSoundPlayers[13]; // List of SoundPlayers
+extern struct SoundPlayerTableEntry gSoundPlayerTable[13];
+extern u8 gSoundPlayerCount; // Total number of SoundPlayers [13]
+extern struct SoundPlayerListEntry gSoundPlayerList[13];
 
 extern u32 __udivmoddi4(u64, u64);
 
