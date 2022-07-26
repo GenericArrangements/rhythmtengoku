@@ -32,7 +32,7 @@ void func_0804b368(SoundPlayer *soundPlayer, const SongInfo *song) {
 
     // Reading Sequence Data:
     if (func_0804b5a0(soundPlayer)) {
-        if (soundPlayer->unk0_b21 && !soundPlayer->isPaused) {
+        if (soundPlayer->playerType && !soundPlayer->isPaused) {
             if (soundPlayer->songInfo->priority > song->priority) return;
         }
     }

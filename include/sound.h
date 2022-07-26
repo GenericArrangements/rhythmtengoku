@@ -150,6 +150,12 @@ enum InstrumentBanksEnum {
 	INST_BANK_63
 };
 
+#define AUDIO_SAMPLE_RATE 13379
+#define DIRECTSOUND_CHANNEL_COUNT 12
+#define SOUND_PLAYER_COUNT 13
+#define DMA_SAMPLE_BUFFER_SIZE 1568
+#define SAMPLE_SCRATCHPAD_SIZE 0x80
+
 
 
 struct SampleData {
@@ -301,7 +307,7 @@ typedef struct SoundPlayer {
     u32 inLoop:1;       // Channel is currently within MIDI loop region. [default = 0]
     u32 isPaused:1;     // Paused State { 0 = Unpaused; 1 = Paused }
     u32 midiTempo:9;    // Current MIDI Tempo, in Beats Per Minute (BPM).
-    u32 unk0_b21:1;     // ??? (set on startup. can prevent loading tracks if set to 1) { 0 = Music/Ambience Channel; 1 = Sound Effect Channel }
+    u32 playerType:1;   // ??? (set on startup. can prevent loading tracks if set to 1) { 0 = Music/Ambience Channel; 1 = Sound Effect Channel }
     u32 unk0_b22:5;     // (indeterminate split; may be unused entirely)
     u32 volumeFadeType:3;   // Type of currently-active Volume Fade { 0 = None; 1 = Fade-In; 2 = Fade-Out & Close; 3 = Fade-Out & Pause }
     MidiBus *midiBus;      // MIDI: Bus with effects for all MIDI Channels.
@@ -394,6 +400,7 @@ struct SongTableEntry {
 };
 
 u32 D_08aa4318; // Total number of Audio Channels - 1. [12]
+
 u8  D_08aa431c; // Unknown: ?? [1]
 u8  D_08aa431d; // Unknown: Sound Bank ID [0x45]
 u8  D_08aa431e; // Unknown: Volume [0x7f]
@@ -403,22 +410,24 @@ u8  D_08aa4320; // Unknown: Tempo [0x96]
 SoundPlayer *D_08aa4324[13]; // Array of Audio Channel pointers
 
 // SoundPlayerTable
-struct {
+struct SoundPlayerTableEntry {
     u32 id:5;
-    u32 nTracksMax:5;
-    u32 unk0_b10:6; // ??? (0 for music channels, 1 for sfx channels)
+    u32 trackCount:5;
+    u32 playerType:6; // ??? (0 for music channels, 1 for sfx channels)
     MidiChannel *midiChannels;
     MidiBus *midiBus;
-    MidiTrackStream *midiReaders;
-    SoundPlayer *audioChannel;
-} D_08aa4358[13];
+    MidiTrackStream *trackStreams;
+    SoundPlayer *soundPlayer;
+};
+extern struct SoundPlayerTableEntry D_08aa4358[13];
 
 u8 D_08aa445c; // Total number of Audio Channels [13]
 
-// SoundPlayerTable (simplified)
-struct {
+// SoundPlayerList
+struct SoundPlayerListEntry {
     SoundPlayer *soundPlayer;
-    u32 null4;  // Empty
-    u16 unk8;   // Maximum MIDI Tracks? { 5..15 }
-    u16 unkC;   // ?? { 0, 1 }
-} D_08aa4460[13];
+    u32 null4; // Empty
+    u16 trackCount;
+    u16 playerType;
+};
+extern struct SoundPlayerListEntry D_08aa4460[13];

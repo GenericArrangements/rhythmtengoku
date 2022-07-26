@@ -22,7 +22,7 @@ void func_0804c35c(SoundPlayer *channel, MidiBus *mChnlBus, u32 nTracksMax, Midi
     channel->midiBus = mChnlBus;
     channel->nTracksMax = nTracksMax;
     channel->midiReader = midiReader;
-    channel->unk0_b21 = type;
+    channel->playerType = type;
     channel->channelVolume = 100;
 }
 
@@ -120,13 +120,16 @@ void func_0804c6c8(void) {
 void func_0804c778(void) {
     u32 i;
 
-    func_08049490(DIRECTSOUND_MODE_STEREO, 13379, 0x620, D_03001888, 0x80, D_030024c8, 12, D_030028c8);
+    func_08049490(DIRECTSOUND_MODE_STEREO, AUDIO_SAMPLE_RATE,
+                    DMA_SAMPLE_BUFFER_SIZE, D_03001888,
+                    SAMPLE_SCRATCHPAD_SIZE, D_030024c8,
+                    DIRECTSOUND_CHANNEL_COUNT, D_030028c8);
     func_0804af30();
-    func_0804a360(12, D_03002a48);
+    func_0804a360(DIRECTSOUND_CHANNEL_COUNT, D_03002a48);
 
-    for (i = 0; i < 13; i++) {
-        func_08049fa0(D_08aa4358[i].midiBus, D_08aa4358[i].nTracksMax, D_08aa4358[i].midiChannels);
-        func_0804c35c(D_08aa4358[i].audioChannel, D_08aa4358[i].midiBus, D_08aa4358[i].nTracksMax, D_08aa4358[i].midiReaders, D_08aa4358[i].unk0_b10);
+    for (i = 0; i < SOUND_PLAYER_COUNT; i++) {
+        func_08049fa0(D_08aa4358[i].midiBus, D_08aa4358[i].trackCount, D_08aa4358[i].midiChannels);
+        func_0804c35c(D_08aa4358[i].soundPlayer, D_08aa4358[i].midiBus, D_08aa4358[i].trackCount, D_08aa4358[i].trackStreams, D_08aa4358[i].playerType);
     }
 
     D_03005b7c = D_030015a7;
