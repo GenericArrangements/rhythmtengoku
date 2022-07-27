@@ -736,12 +736,12 @@ const struct InstrumentPSG InstPSG388 = {
     /* PSG Noise */ 0,
 };
 
-extern const u32 sine_psg;
+extern const u32 sine_psg[];
 const struct InstrumentPSG InstPSG389 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
-    /* PSG Wave  */ &sine_psg,
+    /* PSG Wave  */ sine_psg,
     /* ADSR Init */ 0x7f0000,
     /* ADSR Sus  */ 0x7e0000,
     /* ADSR Atk  */ 0x7f0000,
@@ -755,12 +755,12 @@ const struct InstrumentPSG InstPSG389 = {
     /* PSG Noise */ 0,
 };
 
-extern const u32 triangle_psg;
+extern const u32 triangle_psg[];
 const struct InstrumentPSG InstPSG390 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
-    /* PSG Wave  */ &triangle_psg,
+    /* PSG Wave  */ triangle_psg,
     /* ADSR Init */ 0x7f0000,
     /* ADSR Sus  */ 0x7e0000,
     /* ADSR Atk  */ 0x7f0000,
@@ -774,12 +774,12 @@ const struct InstrumentPSG InstPSG390 = {
     /* PSG Noise */ 0,
 };
 
-extern const u32 sawtooth_psg;
+extern const u32 sawtooth_psg[];
 const struct InstrumentPSG InstPSG391 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
-    /* PSG Wave  */ &sawtooth_psg,
+    /* PSG Wave  */ sawtooth_psg,
     /* ADSR Init */ 0x7f0000,
     /* ADSR Sus  */ 0x7e0000,
     /* ADSR Atk  */ 0x7f0000,
@@ -793,12 +793,12 @@ const struct InstrumentPSG InstPSG391 = {
     /* PSG Noise */ 0,
 };
 
-extern const u32 cotangent_psg;
+extern const u32 cotangent_psg[];
 const struct InstrumentPSG InstPSG392 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
-    /* PSG Wave  */ &cotangent_psg,
+    /* PSG Wave  */ cotangent_psg,
     /* ADSR Init */ 0x7f0000,
     /* ADSR Sus  */ 0x7e0000,
     /* ADSR Atk  */ 0x7f0000,
@@ -812,12 +812,12 @@ const struct InstrumentPSG InstPSG392 = {
     /* PSG Noise */ 0,
 };
 
-extern const u32 pulse_12_5_psg;
+extern const u32 pulse_12_5_psg[];
 const struct InstrumentPSG InstPSG393 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
-    /* PSG Wave  */ &pulse_12_5_psg,
+    /* PSG Wave  */ pulse_12_5_psg,
     /* ADSR Init */ 0x7f0000,
     /* ADSR Sus  */ 0x7e0000,
     /* ADSR Atk  */ 0x7f0000,
@@ -831,12 +831,12 @@ const struct InstrumentPSG InstPSG393 = {
     /* PSG Noise */ 0,
 };
 
-extern const u32 pulse_25_psg;
+extern const u32 pulse_25_psg[];
 const struct InstrumentPSG InstPSG394 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
-    /* PSG Wave  */ &pulse_25_psg,
+    /* PSG Wave  */ pulse_25_psg,
     /* ADSR Init */ 0x7f0000,
     /* ADSR Sus  */ 0x7e0000,
     /* ADSR Atk  */ 0x7f0000,
@@ -850,12 +850,12 @@ const struct InstrumentPSG InstPSG394 = {
     /* PSG Noise */ 0,
 };
 
-extern const u32 pulse_50_psg;
+extern const u32 pulse_50_psg[];
 const struct InstrumentPSG InstPSG395 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
-    /* PSG Wave  */ &pulse_50_psg,
+    /* PSG Wave  */ pulse_50_psg,
     /* ADSR Init */ 0x7f0000,
     /* ADSR Sus  */ 0x7e0000,
     /* ADSR Atk  */ 0x7f0000,
@@ -869,12 +869,12 @@ const struct InstrumentPSG InstPSG395 = {
     /* PSG Noise */ 0,
 };
 
-extern const u32 sine_psg;
+extern const u32 sine_psg[];
 const struct InstrumentPSG InstPSG396 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
-    /* PSG Wave  */ &sine_psg,
+    /* PSG Wave  */ sine_psg,
     /* ADSR Init */ 0x7f0000,
     /* ADSR Sus  */ 0x7e0000,
     /* ADSR Atk  */ 0x7f0000,

@@ -48,8 +48,7 @@ BIN		       := bin
 AUDIO		   := audio
 MUSIC		   := $(AUDIO)/sequences
 SFX            := $(AUDIO)/samples
-PSG_WAVE       := $(AUDIO)/psg_wave_samples
-BUILD_DIRS     := $(BUILD) $(BUILD)/$(DATA) $(BUILD)/$(ASM) $(BUILD)/$(SOURCES) $(BUILD)/$(LIB_SRC) $(BUILD)/$(BIN) $(BUILD)/$(MUSIC) $(BUILD)/$(SFX) $(BUILD)/$(PSG_WAVE)
+BUILD_DIRS     := $(BUILD) $(BUILD)/$(DATA) $(BUILD)/$(ASM) $(BUILD)/$(SOURCES) $(BUILD)/$(LIB_SRC) $(BUILD)/$(BIN) $(BUILD)/$(MUSIC) $(BUILD)/$(SFX)
 LD_SCRIPT      := rt.ld
 UNDEFINED_SYMS := undefined_syms.ld
 
@@ -95,7 +94,7 @@ export OUTPUT	:=	$(BUILD)/$(TARGET)
 CFILES		:=	$(foreach dir,$(SOURCES),$(wildcard $(dir)/*.c))  $(foreach dir,$(LIB_SRC),$(wildcard $(dir)/*.c))  $(foreach dir,$(AUDIO),$(wildcard $(dir)/*.c))  $(foreach dir,$(DATA),$(wildcard $(dir)/*.c))
 CPPFILES	:=	$(foreach dir,$(SOURCES),$(wildcard $(dir)/*.cpp))
 SFILES		:=	$(foreach dir,$(ASM),$(wildcard $(dir)/*.s)) $(foreach dir,$(DATA),$(wildcard $(dir)/*.s))
-BINFILES	:=	$(foreach dir,$(BIN),$(wildcard $(dir)/*.bin)) $(foreach dir,$(MUSIC),$(wildcard $(dir)/*.mid)) $(foreach dir,$(PSG_WAVE),$(wildcard $(dir)/*.psg))
+BINFILES	:=	$(foreach dir,$(BIN),$(wildcard $(dir)/*.bin)) $(foreach dir,$(MUSIC),$(wildcard $(dir)/*.mid))
 WAVFILES    :=  $(foreach dir,$(SFX),$(wildcard $(dir)/*.wav))
 JSONFILES   :=  $(foreach dir,$(AUDIO),$(wildcard $(dir)/*.json))
 
@@ -165,11 +164,6 @@ $(OUTPUT).elf	:	$(OFILES)
 
 # Binary data
 $(BUILD)/%.bin.o	$(BUILD)/%.bin.h :	%.bin | $(BUILD_DIRS)
-	$(V)echo "Copying $< to $<.o"
-	$(V)bin2s -a 4 -H $(BUILD)/$<.h $< | $(AS) -o $(BUILD)/$<.o
-
-# PSG Wave files
-$(BUILD)/%.psg.o	$(BUILD)/%.psg.h :	%.psg | $(BUILD_DIRS)
 	$(V)echo "Copying $< to $<.o"
 	$(V)bin2s -a 4 -H $(BUILD)/$<.h $< | $(AS) -o $(BUILD)/$<.o
 
