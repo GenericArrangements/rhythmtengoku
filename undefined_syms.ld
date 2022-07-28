@@ -14995,18 +14995,6 @@ D_08a85e10 = 0x08a85e10;
 D_08a85e88 = 0x08a85e88;
 D_08a85f00 = 0x08a85f00;
 
-/* bindata_08aa4318 */
-gMidiPlayerCount = 0x08aa4318;
-gDirectMidiPlayerHasData = 0x08aa431c;
-gDirectMidiPlayerBank = 0x08aa431d;
-gDirectMidiPlayerVolume = 0x08aa431e;
-gDirectMidiPlayerPriority = 0x08aa431f;
-gDirectMidiPlayerTempo = 0x08aa4320;
-gSoundPlayers = 0x08aa4324;
-gSoundPlayerTable = 0x08aa4358;
-gSoundPlayerCount = 0x08aa445c;
-gSoundPlayerList = 0x08aa4460;
-
 /* bindata_08bd0cac */
 D_08bd0cac = 0x08bd0cac;
 D_08bd0cae = 0x08bd0cae;

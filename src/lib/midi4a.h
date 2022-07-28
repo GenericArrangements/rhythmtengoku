@@ -91,8 +91,8 @@ extern const u8 gPsgNoiseFreqTable[60]; // [D_08a86568] Convert standard frequen
 extern const char gMidiLoopStartSym[];  // [D_08a865a4] MIDI "Loop Start" Marker: '['
 extern const char gMidiLoopEndSym[];    // [D_08a865a8] MIDI "Loop End" Marker: ']'
 
-extern const union Instrument *instrumentBanks[]; // Instrument Bank Index
-extern const struct SongTableEntry gSongTable[1924];
+extern const union Instrument *gInstrumentBanks[]; // Instrument Bank List
+extern const struct SongTableEntry gSongTable[]; // Song Table
 
 extern u32 gMidiPlayerCount;
 extern u8  gDirectMidiPlayerHasData; // Has Data [TRUE]

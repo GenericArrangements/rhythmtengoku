@@ -1,5 +1,5 @@
 extern const struct SampleData sfx_276;
-const struct InstrumentPCM InstPCM468 = {
+const struct InstrumentPCM instrument_pcm_0468 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,

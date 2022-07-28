@@ -1,5 +1,5 @@
 extern const struct SampleData sfx_880;
-const struct InstrumentPCM InstPCM1601 = {
+const struct InstrumentPCM instrument_pcm_1601 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -14,7 +14,7 @@ const struct InstrumentPCM InstPCM1601 = {
 };
 
 extern const struct SampleData sfx_881;
-const struct InstrumentPCM InstPCM1602 = {
+const struct InstrumentPCM instrument_pcm_1602 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -29,7 +29,7 @@ const struct InstrumentPCM InstPCM1602 = {
 };
 
 extern const struct SampleData sfx_863;
-const struct InstrumentPCM InstPCM1603 = {
+const struct InstrumentPCM instrument_pcm_1603 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -44,7 +44,7 @@ const struct InstrumentPCM InstPCM1603 = {
 };
 
 extern const struct SampleData sfx_030;
-const struct InstrumentPCM InstPCM1604 = {
+const struct InstrumentPCM instrument_pcm_1604 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -59,7 +59,7 @@ const struct InstrumentPCM InstPCM1604 = {
 };
 
 extern const struct SampleData sfx_430;
-const struct InstrumentPCM InstPCM1605 = {
+const struct InstrumentPCM instrument_pcm_1605 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -74,7 +74,7 @@ const struct InstrumentPCM InstPCM1605 = {
 };
 
 extern const struct SampleData sfx_842;
-const struct InstrumentPCM InstPCM1606 = {
+const struct InstrumentPCM instrument_pcm_1606 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -89,7 +89,7 @@ const struct InstrumentPCM InstPCM1606 = {
 };
 
 extern const struct SampleData sfx_882;
-const struct InstrumentPCM InstPCM1607 = {
+const struct InstrumentPCM instrument_pcm_1607 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,

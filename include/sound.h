@@ -217,14 +217,14 @@ struct InstrumentPSG {
 struct InstrumentSubRhythm {
 	u32 type:8;
 	u32 total:24;
-	const InstrumentBank *subBank;
+	const union Instrument *subBank;
 };
 
 struct InstrumentSubSplit {
     u32 type:8;
 	u32 total:24;
 	const u8 *keySplitTable;
-	const InstrumentBank *subBank;
+	const union Instrument *subBank;
 };
 
 typedef const u8 MidiSeq;

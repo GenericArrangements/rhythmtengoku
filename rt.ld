@@ -1052,8 +1052,6 @@ SECTIONS {
         build/bin/bindata_089d3984.bin.o(.rodata*);
 
         build/src/lib/midi4a_tables.c.o(.rodata*);
-        build/audio/keysplit_tables.c.o(.rodata*);
-        build/audio/psg_wave_shapes.c.o(.rodata*);
         build/audio/instruments.c.o(.rodata*);
         build/audio/songs.c.o(.rodata*);
         build/audio/sound_data.c.o(.rodata*);

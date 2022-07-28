@@ -50,7 +50,7 @@ void func_0804c3c0(SoundPlayer *mPlayer, MidiTrackStream *mStreams, u32 numTrack
     if (!gDirectMidiPlayerHasData) return;
 
     func_08049fa0(mBus, numTracks, mChannels);
-    func_0804a014(mBus, instrumentBanks[gDirectMidiPlayerBank]);
+    func_0804a014(mBus, gInstrumentBanks[gDirectMidiPlayerBank]);
     func_0804adb4(mBus, gDirectMidiPlayerVolume);
     func_08049e8c(mBus, gDirectMidiPlayerPriority);
     func_0804c35c(mPlayer, mBus, numTracks, mStreams, gDirectMidiPlayerPriority);

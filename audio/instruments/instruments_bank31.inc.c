@@ -1,5 +1,5 @@
 extern const struct SampleData sfx_355;
-const struct InstrumentPCM InstPCM637 = {
+const struct InstrumentPCM instrument_pcm_0637 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -14,7 +14,7 @@ const struct InstrumentPCM InstPCM637 = {
 };
 
 extern const struct SampleData sfx_356;
-const struct InstrumentPCM InstPCM638 = {
+const struct InstrumentPCM instrument_pcm_0638 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -29,7 +29,7 @@ const struct InstrumentPCM InstPCM638 = {
 };
 
 extern const struct SampleData sfx_300;
-const struct InstrumentPCM InstPCM639 = {
+const struct InstrumentPCM instrument_pcm_0639 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -44,7 +44,7 @@ const struct InstrumentPCM InstPCM639 = {
 };
 
 extern const struct SampleData sfx_354;
-const struct InstrumentPCM InstPCM640 = {
+const struct InstrumentPCM instrument_pcm_0640 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -59,7 +59,7 @@ const struct InstrumentPCM InstPCM640 = {
 };
 
 extern const struct SampleData sfx_113;
-const struct InstrumentPCM InstPCM641 = {
+const struct InstrumentPCM instrument_pcm_0641 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -74,7 +74,7 @@ const struct InstrumentPCM InstPCM641 = {
 };
 
 extern const struct SampleData sfx_262;
-const struct InstrumentPCM InstPCM642 = {
+const struct InstrumentPCM instrument_pcm_0642 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -89,7 +89,7 @@ const struct InstrumentPCM InstPCM642 = {
 };
 
 extern const struct SampleData sfx_206;
-const struct InstrumentPCM InstPCM643 = {
+const struct InstrumentPCM instrument_pcm_0643 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -104,7 +104,7 @@ const struct InstrumentPCM InstPCM643 = {
 };
 
 extern const struct SampleData sfx_290;
-const struct InstrumentPCM InstPCM644 = {
+const struct InstrumentPCM instrument_pcm_0644 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -119,7 +119,7 @@ const struct InstrumentPCM InstPCM644 = {
 };
 
 extern const struct SampleData sfx_207;
-const struct InstrumentPCM InstPCM645 = {
+const struct InstrumentPCM instrument_pcm_0645 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -134,7 +134,7 @@ const struct InstrumentPCM InstPCM645 = {
 };
 
 extern const struct SampleData sfx_291;
-const struct InstrumentPCM InstPCM646 = {
+const struct InstrumentPCM instrument_pcm_0646 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -149,7 +149,7 @@ const struct InstrumentPCM InstPCM646 = {
 };
 
 extern const struct SampleData sfx_262;
-const struct InstrumentPCM InstPCM647 = {
+const struct InstrumentPCM instrument_pcm_0647 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -163,18 +163,17 @@ const struct InstrumentPCM InstPCM647 = {
     /* ADSR Rel  */ 0x1e7fba,
 };
 
-extern const u8 KeySplitTable1;
-extern const InstrumentBank InstBank29;
-const struct InstrumentSubSplit InstSubSpl648 = {
+extern const union Instrument inst_bank_29[];
+const struct InstrumentSubSplit instrument_spl_0648 = {
     /* Type      */ INSTRUMENT_SUB_SPLIT,
     /* Total     */ 12,
-    /* Key Split */ &KeySplitTable1,
-    /* Sub-Bank  */ &InstBank29
+    /* Key Split */ keysplit_table_1,
+    /* Sub-Bank  */ inst_bank_29
 };
 
-extern const InstrumentBank InstBank47;
-const struct InstrumentSubRhythm InstSubRhy649 = {
+extern const union Instrument inst_bank_47[];
+const struct InstrumentSubRhythm instrument_rhy_0649 = {
     /* Type      */ INSTRUMENT_SUB_RHYTHM,
     /* Total     */ 36,
-    /* Sub-Bank  */ &InstBank47
+    /* Sub-Bank  */ inst_bank_47
 };

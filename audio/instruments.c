@@ -2,6 +2,8 @@
 #include "sound.h"
 #include "src/lib/midi4a_internal.h"
 
+#include "keysplit_tables.inc.c"
+#include "psg_wave_shapes.inc.c"
 #include "instruments/instruments_bank01.inc.c"
 #include "instruments/instruments_bank02.inc.c"
 #include "instruments/instruments_bank03.inc.c"

@@ -40,7 +40,7 @@ void func_0804b368(SoundPlayer *soundPlayer, const SongInfo *song) {
     midiBus = soundPlayer->midiBus;
     func_08049e64(midiBus);
     func_08049fa0(midiBus, midiBus->totalChannels, midiBus->midiChannel);
-    func_0804a014(midiBus, instrumentBanks[song->soundBank]);
+    func_0804a014(midiBus, gInstrumentBanks[song->soundBank]);
     func_0804adb4(midiBus, song->volume);
     func_08049e8c(midiBus, song->priority);
     soundPlayer->songInfo = song;

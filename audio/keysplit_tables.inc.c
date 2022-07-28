@@ -3,7 +3,7 @@
 #include "src/lib/midi4a_internal.h"
 
 // D_08a865ac
-const u8 KeySplitTable1[] = {
+const u8 keysplit_table_1[] = {
     5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,
     5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,
     5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,
@@ -15,7 +15,7 @@ const u8 KeySplitTable1[] = {
 };
 
 // D_08a8660c
-const u8 KeySplitTable2[] = {
+const u8 keysplit_table_2[] = {
     2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,
     2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,
     2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,
@@ -27,7 +27,7 @@ const u8 KeySplitTable2[] = {
 };
 
 // D_08a8666c
-const u8 KeySplitTable3[] = {
+const u8 keysplit_table_3[] = {
     3,  4,  3,  4,  3,  3,  4,  3,  4,  3,  4,  3,
     3,  4,  3,  4,  3,  3,  4,  3,  4,  3,  4,  3,
     3,  4,  3,  4,  3,  3,  4,  3,  4,  3,  4,  3,
@@ -39,7 +39,7 @@ const u8 KeySplitTable3[] = {
 };
 
 // D_08a866cc
-const u8 KeySplitTable4[] = {
+const u8 keysplit_table_4[] = {
     0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
     0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
     0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
@@ -51,7 +51,7 @@ const u8 KeySplitTable4[] = {
 };
 
 // D_08a8672c
-const u8 KeySplitTable5[] = {
+const u8 keysplit_table_5[] = {
     3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,
     3,  3,  3,  3,  6,  6,  6,  6,  6,  6,  6,  6,
     6,  6,  6,  6,  6,  6,  6,  6,  6,  6,  6,  6,
@@ -63,7 +63,7 @@ const u8 KeySplitTable5[] = {
 };
 
 // D_08a8678c
-const u8 KeySplitTable6[] = {
+const u8 keysplit_table_6[] = {
     1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  13,
     1,  1,  1,  1,  1,  1,  1,  1,  13, 13, 13, 13,
     13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13,
@@ -72,14 +72,14 @@ const u8 KeySplitTable6[] = {
 };
 
 // D_08a867c8
-const u8 KeySplitTable7[] = {
+const u8 keysplit_table_7[] = {
     62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62,
     62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62,
     63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63
 };
 
 // D_08a867ec
-const u8 KeySplitTable8[] = {
+const u8 keysplit_table_8[] = {
     4,  4,  4,  4,  4,  4,  4,  4,  4,  4,  4,  4,
     4,  4,  4,  4,  4,  4,  4,  4,  4,  4,  4,  4,
     4,  4,  4,  4,  4,  5,  5,  5,  5,  5,  5,  5,
@@ -88,7 +88,7 @@ const u8 KeySplitTable8[] = {
 };
 
 // D_08a86828
-const u8 KeySplitTable9[] = {
+const u8 keysplit_table_9[] = {
     6,  6,  6,  6,  6,  6,  6,  6,  6,  6,  6,  6,
     7,  7,  7,  7,  7,  7,  7,  7,  7,  7,  7,  7,
     7,  7,  7,  7,  7,  7,  7,  7,  7,  7,  7,  7,

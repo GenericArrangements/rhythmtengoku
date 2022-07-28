@@ -1,5 +1,5 @@
 extern const struct SampleData sfx_296;
-const struct InstrumentPCM InstPCM506 = {
+const struct InstrumentPCM instrument_pcm_0506 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -14,7 +14,7 @@ const struct InstrumentPCM InstPCM506 = {
 };
 
 extern const struct SampleData sfx_297;
-const struct InstrumentPCM InstPCM507 = {
+const struct InstrumentPCM instrument_pcm_0507 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -29,7 +29,7 @@ const struct InstrumentPCM InstPCM507 = {
 };
 
 extern const struct SampleData sfx_298;
-const struct InstrumentPCM InstPCM508 = {
+const struct InstrumentPCM instrument_pcm_0508 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -44,7 +44,7 @@ const struct InstrumentPCM InstPCM508 = {
 };
 
 extern const struct SampleData sfx_299;
-const struct InstrumentPCM InstPCM509 = {
+const struct InstrumentPCM instrument_pcm_0509 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -59,7 +59,7 @@ const struct InstrumentPCM InstPCM509 = {
 };
 
 extern const struct SampleData sfx_204;
-const struct InstrumentPCM InstPCM510 = {
+const struct InstrumentPCM instrument_pcm_0510 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -74,7 +74,7 @@ const struct InstrumentPCM InstPCM510 = {
 };
 
 extern const struct SampleData sfx_230;
-const struct InstrumentPCM InstPCM511 = {
+const struct InstrumentPCM instrument_pcm_0511 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -88,9 +88,9 @@ const struct InstrumentPCM InstPCM511 = {
     /* ADSR Rel  */ 0x18ea90,
 };
 
-extern const InstrumentBank InstBank47;
-const struct InstrumentSubRhythm InstSubRhy512 = {
+extern const union Instrument inst_bank_47[];
+const struct InstrumentSubRhythm instrument_rhy_0512 = {
     /* Type      */ INSTRUMENT_SUB_RHYTHM,
     /* Total     */ 36,
-    /* Sub-Bank  */ &InstBank47
+    /* Sub-Bank  */ inst_bank_47
 };

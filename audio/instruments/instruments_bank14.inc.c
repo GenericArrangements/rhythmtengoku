@@ -1,4 +1,4 @@
-const struct InstrumentPSG InstPSG348 = {
+const struct InstrumentPSG instrument_psg_0348 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -16,7 +16,7 @@ const struct InstrumentPSG InstPSG348 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG349 = {
+const struct InstrumentPSG instrument_psg_0349 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -34,7 +34,7 @@ const struct InstrumentPSG InstPSG349 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG350 = {
+const struct InstrumentPSG instrument_psg_0350 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -52,7 +52,7 @@ const struct InstrumentPSG InstPSG350 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG351 = {
+const struct InstrumentPSG instrument_psg_0351 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -70,7 +70,7 @@ const struct InstrumentPSG InstPSG351 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG352 = {
+const struct InstrumentPSG instrument_psg_0352 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -88,7 +88,7 @@ const struct InstrumentPSG InstPSG352 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG353 = {
+const struct InstrumentPSG instrument_psg_0353 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -106,7 +106,7 @@ const struct InstrumentPSG InstPSG353 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG354 = {
+const struct InstrumentPSG instrument_psg_0354 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -124,7 +124,7 @@ const struct InstrumentPSG InstPSG354 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG355 = {
+const struct InstrumentPSG instrument_psg_0355 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -142,7 +142,7 @@ const struct InstrumentPSG InstPSG355 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG356 = {
+const struct InstrumentPSG instrument_psg_0356 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -160,7 +160,7 @@ const struct InstrumentPSG InstPSG356 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG357 = {
+const struct InstrumentPSG instrument_psg_0357 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -178,7 +178,7 @@ const struct InstrumentPSG InstPSG357 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG358 = {
+const struct InstrumentPSG instrument_psg_0358 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -196,7 +196,7 @@ const struct InstrumentPSG InstPSG358 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG359 = {
+const struct InstrumentPSG instrument_psg_0359 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -214,7 +214,7 @@ const struct InstrumentPSG InstPSG359 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG360 = {
+const struct InstrumentPSG instrument_psg_0360 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -232,7 +232,7 @@ const struct InstrumentPSG InstPSG360 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG361 = {
+const struct InstrumentPSG instrument_psg_0361 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -250,7 +250,7 @@ const struct InstrumentPSG InstPSG361 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG362 = {
+const struct InstrumentPSG instrument_psg_0362 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -268,7 +268,7 @@ const struct InstrumentPSG InstPSG362 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG363 = {
+const struct InstrumentPSG instrument_psg_0363 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -286,7 +286,7 @@ const struct InstrumentPSG InstPSG363 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG364 = {
+const struct InstrumentPSG instrument_psg_0364 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -304,7 +304,7 @@ const struct InstrumentPSG InstPSG364 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG365 = {
+const struct InstrumentPSG instrument_psg_0365 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -322,7 +322,7 @@ const struct InstrumentPSG InstPSG365 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG366 = {
+const struct InstrumentPSG instrument_psg_0366 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -340,7 +340,7 @@ const struct InstrumentPSG InstPSG366 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG367 = {
+const struct InstrumentPSG instrument_psg_0367 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -358,7 +358,7 @@ const struct InstrumentPSG InstPSG367 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG368 = {
+const struct InstrumentPSG instrument_psg_0368 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -376,7 +376,7 @@ const struct InstrumentPSG InstPSG368 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG369 = {
+const struct InstrumentPSG instrument_psg_0369 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -394,7 +394,7 @@ const struct InstrumentPSG InstPSG369 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG370 = {
+const struct InstrumentPSG instrument_psg_0370 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -412,7 +412,7 @@ const struct InstrumentPSG InstPSG370 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG371 = {
+const struct InstrumentPSG instrument_psg_0371 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -430,7 +430,7 @@ const struct InstrumentPSG InstPSG371 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG372 = {
+const struct InstrumentPSG instrument_psg_0372 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -448,7 +448,7 @@ const struct InstrumentPSG InstPSG372 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG373 = {
+const struct InstrumentPSG instrument_psg_0373 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -466,7 +466,7 @@ const struct InstrumentPSG InstPSG373 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG374 = {
+const struct InstrumentPSG instrument_psg_0374 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -484,7 +484,7 @@ const struct InstrumentPSG InstPSG374 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG375 = {
+const struct InstrumentPSG instrument_psg_0375 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -502,7 +502,7 @@ const struct InstrumentPSG InstPSG375 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG376 = {
+const struct InstrumentPSG instrument_psg_0376 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -520,7 +520,7 @@ const struct InstrumentPSG InstPSG376 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG377 = {
+const struct InstrumentPSG instrument_psg_0377 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -538,7 +538,7 @@ const struct InstrumentPSG InstPSG377 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG378 = {
+const struct InstrumentPSG instrument_psg_0378 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -556,7 +556,7 @@ const struct InstrumentPSG InstPSG378 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG379 = {
+const struct InstrumentPSG instrument_psg_0379 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -574,7 +574,7 @@ const struct InstrumentPSG InstPSG379 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG380 = {
+const struct InstrumentPSG instrument_psg_0380 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -592,7 +592,7 @@ const struct InstrumentPSG InstPSG380 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG381 = {
+const struct InstrumentPSG instrument_psg_0381 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -610,7 +610,7 @@ const struct InstrumentPSG InstPSG381 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG382 = {
+const struct InstrumentPSG instrument_psg_0382 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -628,7 +628,7 @@ const struct InstrumentPSG InstPSG382 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG383 = {
+const struct InstrumentPSG instrument_psg_0383 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -646,7 +646,7 @@ const struct InstrumentPSG InstPSG383 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG384 = {
+const struct InstrumentPSG instrument_psg_0384 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -664,7 +664,7 @@ const struct InstrumentPSG InstPSG384 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG385 = {
+const struct InstrumentPSG instrument_psg_0385 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -682,7 +682,7 @@ const struct InstrumentPSG InstPSG385 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG386 = {
+const struct InstrumentPSG instrument_psg_0386 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -700,7 +700,7 @@ const struct InstrumentPSG InstPSG386 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG387 = {
+const struct InstrumentPSG instrument_psg_0387 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -718,7 +718,7 @@ const struct InstrumentPSG InstPSG387 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG388 = {
+const struct InstrumentPSG instrument_psg_0388 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -736,12 +736,11 @@ const struct InstrumentPSG InstPSG388 = {
     /* PSG Noise */ 0,
 };
 
-extern const u32 sine_psg[];
-const struct InstrumentPSG InstPSG389 = {
+const struct InstrumentPSG instrument_psg_0389 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
-    /* PSG Wave  */ sine_psg,
+    /* PSG Wave  */ psg_wave_sine,
     /* ADSR Init */ 0x7f0000,
     /* ADSR Sus  */ 0x7e0000,
     /* ADSR Atk  */ 0x7f0000,
@@ -755,12 +754,11 @@ const struct InstrumentPSG InstPSG389 = {
     /* PSG Noise */ 0,
 };
 
-extern const u32 triangle_psg[];
-const struct InstrumentPSG InstPSG390 = {
+const struct InstrumentPSG instrument_psg_0390 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
-    /* PSG Wave  */ triangle_psg,
+    /* PSG Wave  */ psg_wave_triangle,
     /* ADSR Init */ 0x7f0000,
     /* ADSR Sus  */ 0x7e0000,
     /* ADSR Atk  */ 0x7f0000,
@@ -774,12 +772,11 @@ const struct InstrumentPSG InstPSG390 = {
     /* PSG Noise */ 0,
 };
 
-extern const u32 sawtooth_psg[];
-const struct InstrumentPSG InstPSG391 = {
+const struct InstrumentPSG instrument_psg_0391 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
-    /* PSG Wave  */ sawtooth_psg,
+    /* PSG Wave  */ psg_wave_sawtooth,
     /* ADSR Init */ 0x7f0000,
     /* ADSR Sus  */ 0x7e0000,
     /* ADSR Atk  */ 0x7f0000,
@@ -793,12 +790,11 @@ const struct InstrumentPSG InstPSG391 = {
     /* PSG Noise */ 0,
 };
 
-extern const u32 cotangent_psg[];
-const struct InstrumentPSG InstPSG392 = {
+const struct InstrumentPSG instrument_psg_0392 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
-    /* PSG Wave  */ cotangent_psg,
+    /* PSG Wave  */ psg_wave_cotangent,
     /* ADSR Init */ 0x7f0000,
     /* ADSR Sus  */ 0x7e0000,
     /* ADSR Atk  */ 0x7f0000,
@@ -812,12 +808,11 @@ const struct InstrumentPSG InstPSG392 = {
     /* PSG Noise */ 0,
 };
 
-extern const u32 pulse_12_5_psg[];
-const struct InstrumentPSG InstPSG393 = {
+const struct InstrumentPSG instrument_psg_0393 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
-    /* PSG Wave  */ pulse_12_5_psg,
+    /* PSG Wave  */ psg_wave_pulse_12_5,
     /* ADSR Init */ 0x7f0000,
     /* ADSR Sus  */ 0x7e0000,
     /* ADSR Atk  */ 0x7f0000,
@@ -831,12 +826,11 @@ const struct InstrumentPSG InstPSG393 = {
     /* PSG Noise */ 0,
 };
 
-extern const u32 pulse_25_psg[];
-const struct InstrumentPSG InstPSG394 = {
+const struct InstrumentPSG instrument_psg_0394 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
-    /* PSG Wave  */ pulse_25_psg,
+    /* PSG Wave  */ psg_wave_pulse_25,
     /* ADSR Init */ 0x7f0000,
     /* ADSR Sus  */ 0x7e0000,
     /* ADSR Atk  */ 0x7f0000,
@@ -850,12 +844,11 @@ const struct InstrumentPSG InstPSG394 = {
     /* PSG Noise */ 0,
 };
 
-extern const u32 pulse_50_psg[];
-const struct InstrumentPSG InstPSG395 = {
+const struct InstrumentPSG instrument_psg_0395 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
-    /* PSG Wave  */ pulse_50_psg,
+    /* PSG Wave  */ psg_wave_pulse_50,
     /* ADSR Init */ 0x7f0000,
     /* ADSR Sus  */ 0x7e0000,
     /* ADSR Atk  */ 0x7f0000,
@@ -869,12 +862,11 @@ const struct InstrumentPSG InstPSG395 = {
     /* PSG Noise */ 0,
 };
 
-extern const u32 sine_psg[];
-const struct InstrumentPSG InstPSG396 = {
+const struct InstrumentPSG instrument_psg_0396 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
-    /* PSG Wave  */ sine_psg,
+    /* PSG Wave  */ psg_wave_sine,
     /* ADSR Init */ 0x7f0000,
     /* ADSR Sus  */ 0x7e0000,
     /* ADSR Atk  */ 0x7f0000,
@@ -888,7 +880,7 @@ const struct InstrumentPSG InstPSG396 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG397 = {
+const struct InstrumentPSG instrument_psg_0397 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -906,7 +898,7 @@ const struct InstrumentPSG InstPSG397 = {
     /* PSG Noise */ PSG_NOISE_COUNTER_15,
 };
 
-const struct InstrumentPSG InstPSG398 = {
+const struct InstrumentPSG instrument_psg_0398 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -924,7 +916,7 @@ const struct InstrumentPSG InstPSG398 = {
     /* PSG Noise */ PSG_NOISE_COUNTER_15,
 };
 
-const struct InstrumentPSG InstPSG399 = {
+const struct InstrumentPSG instrument_psg_0399 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -942,7 +934,7 @@ const struct InstrumentPSG InstPSG399 = {
     /* PSG Noise */ PSG_NOISE_COUNTER_15,
 };
 
-const struct InstrumentPSG InstPSG400 = {
+const struct InstrumentPSG instrument_psg_0400 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -960,7 +952,7 @@ const struct InstrumentPSG InstPSG400 = {
     /* PSG Noise */ PSG_NOISE_COUNTER_7,
 };
 
-const struct InstrumentPSG InstPSG401 = {
+const struct InstrumentPSG instrument_psg_0401 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -978,7 +970,7 @@ const struct InstrumentPSG InstPSG401 = {
     /* PSG Noise */ PSG_NOISE_COUNTER_7,
 };
 
-const struct InstrumentPSG InstPSG402 = {
+const struct InstrumentPSG instrument_psg_0402 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -996,7 +988,7 @@ const struct InstrumentPSG InstPSG402 = {
     /* PSG Noise */ PSG_NOISE_COUNTER_7,
 };
 
-const struct InstrumentPSG InstPSG403 = {
+const struct InstrumentPSG instrument_psg_0403 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -1014,7 +1006,7 @@ const struct InstrumentPSG InstPSG403 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG404 = {
+const struct InstrumentPSG instrument_psg_0404 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -1032,7 +1024,7 @@ const struct InstrumentPSG InstPSG404 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG405 = {
+const struct InstrumentPSG instrument_psg_0405 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -1050,7 +1042,7 @@ const struct InstrumentPSG InstPSG405 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG406 = {
+const struct InstrumentPSG instrument_psg_0406 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -1068,7 +1060,7 @@ const struct InstrumentPSG InstPSG406 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG407 = {
+const struct InstrumentPSG instrument_psg_0407 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -1086,7 +1078,7 @@ const struct InstrumentPSG InstPSG407 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG408 = {
+const struct InstrumentPSG instrument_psg_0408 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -1104,7 +1096,7 @@ const struct InstrumentPSG InstPSG408 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG409 = {
+const struct InstrumentPSG instrument_psg_0409 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -1122,7 +1114,7 @@ const struct InstrumentPSG InstPSG409 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG410 = {
+const struct InstrumentPSG instrument_psg_0410 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -1140,7 +1132,7 @@ const struct InstrumentPSG InstPSG410 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG411 = {
+const struct InstrumentPSG instrument_psg_0411 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -1158,7 +1150,7 @@ const struct InstrumentPSG InstPSG411 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG412 = {
+const struct InstrumentPSG instrument_psg_0412 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -1176,7 +1168,7 @@ const struct InstrumentPSG InstPSG412 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG413 = {
+const struct InstrumentPSG instrument_psg_0413 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -1194,7 +1186,7 @@ const struct InstrumentPSG InstPSG413 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG414 = {
+const struct InstrumentPSG instrument_psg_0414 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -1212,7 +1204,7 @@ const struct InstrumentPSG InstPSG414 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG415 = {
+const struct InstrumentPSG instrument_psg_0415 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -1230,7 +1222,7 @@ const struct InstrumentPSG InstPSG415 = {
     /* PSG Noise */ 0,
 };
 
-const struct InstrumentPSG InstPSG416 = {
+const struct InstrumentPSG instrument_psg_0416 = {
     /* Type      */ INSTRUMENT_PSG,
     /* Key       */ 0x3C,
     /* Panning   */ 127,
@@ -1249,7 +1241,7 @@ const struct InstrumentPSG InstPSG416 = {
 };
 
 extern const struct SampleData sfx_236;
-const struct InstrumentPCM InstPCM417 = {
+const struct InstrumentPCM instrument_pcm_0417 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,

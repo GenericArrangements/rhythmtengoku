@@ -1,5 +1,5 @@
 extern const struct SampleData sfx_148;
-const struct InstrumentPCM InstPCM206 = {
+const struct InstrumentPCM instrument_pcm_0206 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -14,7 +14,7 @@ const struct InstrumentPCM InstPCM206 = {
 };
 
 extern const struct SampleData sfx_149;
-const struct InstrumentPCM InstPCM207 = {
+const struct InstrumentPCM instrument_pcm_0207 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -29,7 +29,7 @@ const struct InstrumentPCM InstPCM207 = {
 };
 
 extern const struct SampleData sfx_150;
-const struct InstrumentPCM InstPCM208 = {
+const struct InstrumentPCM instrument_pcm_0208 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -44,7 +44,7 @@ const struct InstrumentPCM InstPCM208 = {
 };
 
 extern const struct SampleData sfx_151;
-const struct InstrumentPCM InstPCM209 = {
+const struct InstrumentPCM instrument_pcm_0209 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -59,7 +59,7 @@ const struct InstrumentPCM InstPCM209 = {
 };
 
 extern const struct SampleData sfx_152;
-const struct InstrumentPCM InstPCM210 = {
+const struct InstrumentPCM instrument_pcm_0210 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -74,7 +74,7 @@ const struct InstrumentPCM InstPCM210 = {
 };
 
 extern const struct SampleData sfx_153;
-const struct InstrumentPCM InstPCM211 = {
+const struct InstrumentPCM instrument_pcm_0211 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -89,7 +89,7 @@ const struct InstrumentPCM InstPCM211 = {
 };
 
 extern const struct SampleData sfx_154;
-const struct InstrumentPCM InstPCM212 = {
+const struct InstrumentPCM instrument_pcm_0212 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -104,7 +104,7 @@ const struct InstrumentPCM InstPCM212 = {
 };
 
 extern const struct SampleData sfx_155;
-const struct InstrumentPCM InstPCM213 = {
+const struct InstrumentPCM instrument_pcm_0213 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -119,7 +119,7 @@ const struct InstrumentPCM InstPCM213 = {
 };
 
 extern const struct SampleData sfx_156;
-const struct InstrumentPCM InstPCM214 = {
+const struct InstrumentPCM instrument_pcm_0214 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -134,7 +134,7 @@ const struct InstrumentPCM InstPCM214 = {
 };
 
 extern const struct SampleData sfx_157;
-const struct InstrumentPCM InstPCM215 = {
+const struct InstrumentPCM instrument_pcm_0215 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -149,7 +149,7 @@ const struct InstrumentPCM InstPCM215 = {
 };
 
 extern const struct SampleData sfx_158;
-const struct InstrumentPCM InstPCM216 = {
+const struct InstrumentPCM instrument_pcm_0216 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -164,7 +164,7 @@ const struct InstrumentPCM InstPCM216 = {
 };
 
 extern const struct SampleData sfx_159;
-const struct InstrumentPCM InstPCM217 = {
+const struct InstrumentPCM instrument_pcm_0217 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -179,7 +179,7 @@ const struct InstrumentPCM InstPCM217 = {
 };
 
 extern const struct SampleData sfx_160;
-const struct InstrumentPCM InstPCM218 = {
+const struct InstrumentPCM instrument_pcm_0218 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -194,7 +194,7 @@ const struct InstrumentPCM InstPCM218 = {
 };
 
 extern const struct SampleData sfx_161;
-const struct InstrumentPCM InstPCM219 = {
+const struct InstrumentPCM instrument_pcm_0219 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -209,7 +209,7 @@ const struct InstrumentPCM InstPCM219 = {
 };
 
 extern const struct SampleData sfx_162;
-const struct InstrumentPCM InstPCM220 = {
+const struct InstrumentPCM instrument_pcm_0220 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -224,7 +224,7 @@ const struct InstrumentPCM InstPCM220 = {
 };
 
 extern const struct SampleData sfx_163;
-const struct InstrumentPCM InstPCM221 = {
+const struct InstrumentPCM instrument_pcm_0221 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -239,7 +239,7 @@ const struct InstrumentPCM InstPCM221 = {
 };
 
 extern const struct SampleData sfx_164;
-const struct InstrumentPCM InstPCM222 = {
+const struct InstrumentPCM instrument_pcm_0222 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -254,7 +254,7 @@ const struct InstrumentPCM InstPCM222 = {
 };
 
 extern const struct SampleData sfx_165;
-const struct InstrumentPCM InstPCM223 = {
+const struct InstrumentPCM instrument_pcm_0223 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -269,7 +269,7 @@ const struct InstrumentPCM InstPCM223 = {
 };
 
 extern const struct SampleData sfx_166;
-const struct InstrumentPCM InstPCM224 = {
+const struct InstrumentPCM instrument_pcm_0224 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -284,7 +284,7 @@ const struct InstrumentPCM InstPCM224 = {
 };
 
 extern const struct SampleData sfx_167;
-const struct InstrumentPCM InstPCM225 = {
+const struct InstrumentPCM instrument_pcm_0225 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -299,7 +299,7 @@ const struct InstrumentPCM InstPCM225 = {
 };
 
 extern const struct SampleData sfx_168;
-const struct InstrumentPCM InstPCM226 = {
+const struct InstrumentPCM instrument_pcm_0226 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -314,7 +314,7 @@ const struct InstrumentPCM InstPCM226 = {
 };
 
 extern const struct SampleData sfx_169;
-const struct InstrumentPCM InstPCM227 = {
+const struct InstrumentPCM instrument_pcm_0227 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -329,7 +329,7 @@ const struct InstrumentPCM InstPCM227 = {
 };
 
 extern const struct SampleData sfx_170;
-const struct InstrumentPCM InstPCM228 = {
+const struct InstrumentPCM instrument_pcm_0228 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -344,7 +344,7 @@ const struct InstrumentPCM InstPCM228 = {
 };
 
 extern const struct SampleData sfx_171;
-const struct InstrumentPCM InstPCM229 = {
+const struct InstrumentPCM instrument_pcm_0229 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -359,7 +359,7 @@ const struct InstrumentPCM InstPCM229 = {
 };
 
 extern const struct SampleData sfx_172;
-const struct InstrumentPCM InstPCM230 = {
+const struct InstrumentPCM instrument_pcm_0230 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -374,7 +374,7 @@ const struct InstrumentPCM InstPCM230 = {
 };
 
 extern const struct SampleData sfx_173;
-const struct InstrumentPCM InstPCM231 = {
+const struct InstrumentPCM instrument_pcm_0231 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -389,7 +389,7 @@ const struct InstrumentPCM InstPCM231 = {
 };
 
 extern const struct SampleData sfx_174;
-const struct InstrumentPCM InstPCM232 = {
+const struct InstrumentPCM instrument_pcm_0232 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -404,7 +404,7 @@ const struct InstrumentPCM InstPCM232 = {
 };
 
 extern const struct SampleData sfx_175;
-const struct InstrumentPCM InstPCM233 = {
+const struct InstrumentPCM instrument_pcm_0233 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -419,7 +419,7 @@ const struct InstrumentPCM InstPCM233 = {
 };
 
 extern const struct SampleData sfx_176;
-const struct InstrumentPCM InstPCM234 = {
+const struct InstrumentPCM instrument_pcm_0234 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -434,7 +434,7 @@ const struct InstrumentPCM InstPCM234 = {
 };
 
 extern const struct SampleData sfx_177;
-const struct InstrumentPCM InstPCM235 = {
+const struct InstrumentPCM instrument_pcm_0235 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -449,7 +449,7 @@ const struct InstrumentPCM InstPCM235 = {
 };
 
 extern const struct SampleData sfx_178;
-const struct InstrumentPCM InstPCM236 = {
+const struct InstrumentPCM instrument_pcm_0236 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -464,7 +464,7 @@ const struct InstrumentPCM InstPCM236 = {
 };
 
 extern const struct SampleData sfx_179;
-const struct InstrumentPCM InstPCM237 = {
+const struct InstrumentPCM instrument_pcm_0237 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -479,7 +479,7 @@ const struct InstrumentPCM InstPCM237 = {
 };
 
 extern const struct SampleData sfx_180;
-const struct InstrumentPCM InstPCM238 = {
+const struct InstrumentPCM instrument_pcm_0238 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -494,7 +494,7 @@ const struct InstrumentPCM InstPCM238 = {
 };
 
 extern const struct SampleData sfx_181;
-const struct InstrumentPCM InstPCM239 = {
+const struct InstrumentPCM instrument_pcm_0239 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -509,7 +509,7 @@ const struct InstrumentPCM InstPCM239 = {
 };
 
 extern const struct SampleData sfx_182;
-const struct InstrumentPCM InstPCM240 = {
+const struct InstrumentPCM instrument_pcm_0240 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -524,7 +524,7 @@ const struct InstrumentPCM InstPCM240 = {
 };
 
 extern const struct SampleData sfx_183;
-const struct InstrumentPCM InstPCM241 = {
+const struct InstrumentPCM instrument_pcm_0241 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* unkEffect */ FALSE,
@@ -538,9 +538,9 @@ const struct InstrumentPCM InstPCM241 = {
     /* ADSR Rel  */ 0x0f6a90,
 };
 
-extern const InstrumentBank InstBank54;
-const struct InstrumentSubRhythm InstSubRhy242 = {
+extern const union Instrument inst_bank_54[];
+const struct InstrumentSubRhythm instrument_rhy_0242 = {
     /* Type      */ INSTRUMENT_SUB_RHYTHM,
     /* Total     */ 36,
-    /* Sub-Bank  */ &InstBank54
+    /* Sub-Bank  */ inst_bank_54
 };
