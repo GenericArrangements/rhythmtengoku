@@ -29,7 +29,7 @@ branch_080029fe: \n\
 /* 080029fe */ ADDS R0, R3, 0x0 @ Set R0 to R3 + 0x0 \n\
 /* 08002a00 */ MOVS R1, 0xA6 @ Set R1 to 0xA6 \n\
 /* 08002a02 */ MOVS R2, 0x6 @ Set R2 to 0x6 \n\
-/* 08002a04 */ BL func_08049bfc \n\
+/* 08002a04 */ BL equalizer_set \n\
 /* 08002a08 */ POP {R4} \n\
 /* 08002a0a */ POP {R0} \n\
 /* 08002a0c */ BX R0 \n\

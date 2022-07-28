@@ -10,11 +10,11 @@ void func_0804b80c(SoundPlayer *soundPlayer, MidiStream stream) {
     stream++;
     switch (type) {
         case SYS_EXC_EVENT_LFO: // EQ Filter Modulator
-            func_08049be4();
+            equalizer_reset();
             D_03005b3c = LFO_MODE_DISABLED;
             D_03005640 = stream[0] * 2;
             func_0804ae1c(&D_03005b30, stream[1] * 2, stream[2] * 2, stream[3] * 2, stream[4] * 2, stream[5] * 2);
-            func_08049b8c(stream[6]);
+            equalizer_set_high_gain(stream[6]);
             D_03005644 = soundPlayer;
             break;
 
@@ -138,7 +138,7 @@ void func_0804b95c(SoundPlayer *soundPlayer, u32 id, u8 controller, u8 var) {
                     func_0804ae60(&D_03005b30);
                     break;
                 case LFO_MODE_CONSTANT: // Start
-                    func_08049be4();
+                    equalizer_reset();
                     func_0804ae54(&D_03005b30);
                     break;
             }
@@ -147,8 +147,8 @@ void func_0804b95c(SoundPlayer *soundPlayer, u32 id, u8 controller, u8 var) {
         case M_CONTROLLER_UNK_4A: // Set Band-Pass Filter
             D_03005b3c = LFO_MODE_DISABLED;
             func_0804ae60(&D_03005b30);
-            func_08049be4();
-            func_08049b70((var * 2) - 0x80);
+            equalizer_reset();
+            equalizer_set_level((var * 2) - 0x80);
             break;
 
         case M_CONTROLLER_UNK_4C: // Set LFO Multiplier
@@ -156,7 +156,7 @@ void func_0804b95c(SoundPlayer *soundPlayer, u32 id, u8 controller, u8 var) {
             break;
 
         case M_CONTROLLER_UNK_4D: // Set Band-Pass Filter High(?) Gain
-            func_08049b8c(var);
+            equalizer_set_high_gain(var);
             break;
 
         case M_CONTROLLER_STEREO:
@@ -385,7 +385,7 @@ void func_0804bed0(SoundPlayer *soundPlayer, u32 id) {
     if (anyNotePlayed) {
         channel = &soundPlayer->midiBus->midiChannel[id];
         if (channel->filterEQ && (D_03005b3c == LFO_MODE_KEYPRESS)) {
-            func_08049be4();
+            equalizer_reset();
             func_0804ae54(&D_03005b30);
         }
     }
@@ -507,7 +507,7 @@ void func_0804c170(void) {
     if ((D_03005644 != NULL) && (D_03005b3c != LFO_MODE_DISABLED)) {
         delta = func_0804b6f0(D_03005644->midiTempo, D_03005644->speedMulti, 0x18);
         func_0804ae6c(&D_03005b30, delta);
-        func_08049b70(Q24_TO_INT(D_03005b30.output * D_03005640));
+        equalizer_set_level(Q24_TO_INT(D_03005b30.output * D_03005640));
     }
 
     func_0804a334();
@@ -518,8 +518,8 @@ void func_0804c170(void) {
     Clamp(rvb2, 0, 127);
     Clamp(rvb3, 0, 127);
 
-    func_08049b34(rvb0, rvb1, rvb2, rvb3);
-    func_080497f8();
+    directsound_set_reverb(rvb0, rvb1, rvb2, rvb3);
+    directsound_update();
 }
 
 // [func_0804c340] Set Reverb

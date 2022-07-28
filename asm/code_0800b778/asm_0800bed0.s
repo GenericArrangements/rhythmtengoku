@@ -29,9 +29,9 @@ branch_0800bef8: \n\
 /* 0800bef8 */ LDR R1, =D_03005b3c \n\
 /* 0800befa */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0800befc */ STRB R0, [R1] \n\
-/* 0800befe */ BL func_08049be4 \n\
+/* 0800befe */ BL equalizer_reset \n\
 /* 0800bf02 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
-/* 0800bf04 */ BL func_08049b70 \n\
+/* 0800bf04 */ BL equalizer_set_level \n\
 /* 0800bf08 */ LDR R6, =D_030053c0 \n\
 /* 0800bf0a */ CMP R5, 0x0 @ Compare R5 and 0x0 \n\
 /* 0800bf0c */ BGE branch_0800bf20 \n\

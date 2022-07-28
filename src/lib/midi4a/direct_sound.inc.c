@@ -2,7 +2,7 @@
 
 
 // [func_08049144] INTERRUPT_DMA2
-void func_08049144(void) {
+void midi4a_interrupt_dma(void) {
     volatile u32 dummy;
     u32 temp;
     u32 flag;
@@ -118,7 +118,7 @@ void func_08049144(void) {
 
 
 // [func_0804930c] SAMPLE READER - Initialise Stream
-void func_0804930c(u32 id, const struct SampleData *sample) {
+void samplestream_init(u32 id, const struct SampleData *sample) {
     SampleStream *reader = &D_03005b88[id];
     u32 keySampleRate;
     u32 keyFreq;
@@ -143,29 +143,29 @@ void func_0804930c(u32 id, const struct SampleData *sample) {
 }
 
 // [func_08049394] SAMPLE READER - Reset Stream
-void func_08049394(u32 id) {
+void samplestream_reset(u32 id) {
     D_03005b88[id].position = 0;
     D_03005b88[id].active = TRUE;
 }
 
 // [func_080493b0] SAMPLE READER - Close Stream
-void func_080493b0(u32 id) {
+void samplestream_close(u32 id) {
     D_03005b88[id].active = FALSE;
 }
 
 // [func_080493c8] SAMPLE READER - Set Panning
-void func_080493c8(u32 id, u32 left, u32 right) {
+void samplestream_set_pan(u32 id, u32 left, u32 right) {
     D_03005b88[id].volumeL = left;
     D_03005b88[id].volumeR = right;
 }
 
 // [func_080493e4] SAMPLE READER - Set Volume Envelope
-void func_080493e4(u32 id, u32 volume) {
+void samplestream_set_vol(u32 id, u32 volume) {
     D_03005b88[id].volume = volume;
 }
 
 // [func_080493f4] SAMPLE READER - Set Pitch Envelope
-void func_080493f4(u32 id, u32 freq) {
+void samplestream_set_freq(u32 id, u32 freq) {
     SampleStream *reader = &D_03005b88[id];
     if (freq == 0) {
         reader->frequency = 0x4000;
@@ -177,12 +177,12 @@ void func_080493f4(u32 id, u32 freq) {
 }
 
 // [func_08049450] SAMPLE READER - Set Flag: "unk0_b2"
-void func_08049450(u32 id, u32 arg1) {
+void samplestream_set_b2(u32 id, u32 arg1) {
     D_03005b88[id].unk0_b2 = arg1;
 }
 
 // [func_08049470] SAMPLE READER - Set Flag: "Use EQ"
-void func_08049470(u32 id, u32 useEQ) {
+void samplestream_set_eq(u32 id, u32 useEQ) {
     D_03005b88[id].useEQ = useEQ;
 }
 
@@ -193,7 +193,7 @@ void func_08049470(u32 id, u32 useEQ) {
 #include "asm/midi4a/asm_08049490.s"
 
 // [func_080497f8] Update DirectSound
-void func_080497f8(void) {
+void directsound_update(void) {
     HandWritten func8b9c, func83b8, func8d58, func8fc0; // sp0, sp4, sp8, spC
     u32 noSamplesProcessed; // sp10
     SampleStream *sampleReader; // sp14
@@ -330,7 +330,7 @@ void func_08049ad8(void) {
 }
 
 // [func_08049b34] DIRECTSOUND - Set Reverb Controllers
-void func_08049b34(u32 arg0, u32 arg1, u32 arg2, u32 arg3) {
+void directsound_set_reverb(u32 arg0, u32 arg1, u32 arg2, u32 arg3) {
     D_030064a4 = arg0;
     D_03005630 = arg1;
     D_03005b48 = arg2;
@@ -338,22 +338,22 @@ void func_08049b34(u32 arg0, u32 arg1, u32 arg2, u32 arg3) {
 }
 
 // [func_08049b5c] DIRECTSOUND STREAM - Check If Active
-u32 func_08049b5c(u32 id) {
+u32 directsound_stream_is_active(u32 id) {
     return D_03005b88[id].active;
 }
 
 // [func_08049b70] DIRECTSOUND - Set Band-Pass Filter Position
-void func_08049b70(u32 eq) {
+void equalizer_set_level(u32 eq) {
     if (!D_03005b44) D_03005620[0] = eq;
 }
 
 // [func_08049b8c] DIRECTSOUND - Set Band-Pass Filter High(?) Gain
-void func_08049b8c(u8 gain) {
+void equalizer_set_high_gain(u8 gain) {
     if (!D_03005b44) D_03005b28 = gain;
 }
 
 // [func_08049bac] DIRECTSOUND - Initialise Band-Pass Filter
-void func_08049bac(void) {
+void equalizer_init(void) {
     D_03005620[2] = 0;
     D_03005620[1] = 0;
     D_03005620[0] = 0;
@@ -362,15 +362,15 @@ void func_08049bac(void) {
 }
 
 // [func_08049be4] DIRECTSOUND - Reset Band-Pass Filter
-void func_08049be4(void) {
-    if (!D_03005b44) func_08049bac();
+void equalizer_reset(void) {
+    if (!D_03005b44) equalizer_init();
 }
 
 // [func_08049bfc] DIRECTSOUND - Set Band-Pass Filter
-void func_08049bfc(u32 enableFilter, u32 eq, u32 gain) {
+void equalizer_set(u32 enableFilter, u32 eq, u32 gain) {
     if (enableFilter != FALSE) enableFilter = TRUE;
     if (D_03005b44 != enableFilter) {
-        func_08049bac();
+        equalizer_init();
         D_03005b44 = enableFilter;
         D_03005620[0] = eq;
         D_03005b28 = gain;

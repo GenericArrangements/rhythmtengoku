@@ -111,7 +111,7 @@ void func_0804c6c8(void) {
         }
     }
     if (anyNotePlayed) {
-        func_08049be4();
+        equalizer_reset();
         func_0804ae54(&D_03005b30);
     }
 }
@@ -120,7 +120,7 @@ void func_0804c6c8(void) {
 void func_0804c778(void) {
     u32 i;
 
-    func_08049490(DIRECTSOUND_MODE_STEREO, AUDIO_SAMPLE_RATE,
+    directsound_init(DIRECTSOUND_MODE_STEREO, AUDIO_SAMPLE_RATE,
                     DMA_SAMPLE_BUFFER_SIZE, D_03001888,
                     SAMPLE_SCRATCHPAD_SIZE, D_030024c8,
                     DIRECTSOUND_CHANNEL_COUNT, D_030028c8);

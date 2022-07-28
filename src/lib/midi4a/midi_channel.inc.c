@@ -2,8 +2,8 @@
 
 
 // [func_08049c34] MIDI CHANNEL - Update Modulation
-void func_08049c34(struct MidiBus *mChnlBus, u32 id) {
-    struct MidiChannel *mChnl = &mChnlBus->midiChannel[id];
+void func_08049c34(struct MidiBus *midiBus, u32 id) {
+    struct MidiChannel *mChnl = &midiBus->midiChannel[id];
     s32 modVolume;
     u32 busVolume;
     u32 result;
@@ -24,10 +24,10 @@ void func_08049c34(struct MidiBus *mChnlBus, u32 id) {
         Clamp(modVolume, 0, 160);
     }
     if (mChnl->modType == MOD_TYPE_PANNING) {
-        func_0804aae0(mChnlBus, id);
+        func_0804aae0(midiBus, id);
     }
 
-    busVolume = ((mChnlBus->trackSelect >> id) & 1) ? mChnlBus->trackVolume : mChnlBus->busVolume;
+    busVolume = ((midiBus->trackSelect >> id) & 1) ? midiBus->trackVolume : midiBus->busVolume;
     result = modVolume;
 
     result = (busVolume * mChnl->volume * mChnl->expression * result) >> (7 * 3);
@@ -79,7 +79,7 @@ void func_08049db8(MidiBus *midiBus, u32 id) {
     for (i = 0; i < D_03005b8c; i++) {
         if (D_030064bc[i].active && (D_030064bc[i].midiChannel == mChnl)) {
             D_030064bc[i].active = FALSE;
-            func_080493b0(i);
+            samplestream_close(i);
         }
     }
     for (i = 0; i < 4; i++) {
@@ -393,14 +393,14 @@ void func_0804a2c4(u32 id) {
 
     if (!sndChnl->active) return;
 
-    if (func_08049b5c(id)) {
+    if (directsound_stream_is_active(id)) {
         sndChnl->unk17_b7 = FALSE;
         if (!sndChnl->midiChannel->unk0_b1) {
-            func_080493f4(id, func_0804a018(sndChnl));
+            samplestream_set_freq(id, func_0804a018(sndChnl));
         }
-        func_080493e4(id, func_0804a1f4(sndChnl));
+        samplestream_set_vol(id, func_0804a1f4(sndChnl));
         if (func_0804a224(sndChnl) == FALSE) return;
-        func_080493b0(id);
+        samplestream_close(id);
     }
     sndChnl->active = FALSE;
 }
@@ -601,12 +601,12 @@ void func_0804a6b0(MidiBus *mChnlBus, u32 channelID, u8 key, u8 vel) {
     switch (*inst.type) {
         case INSTRUMENT_SUB_RHYTHM:
             isSubRhythm = TRUE;
-            inst = ((const union Instrument *)(inst.rhy->subBank))[key - inst.rhy->total];
+            inst = inst.rhy->subBank[key - inst.rhy->total];
             if (inst.type == NULL) return;
             if ((u8) (*inst.type - 0x52) < 2) return;
             break;
         case INSTRUMENT_SUB_SPLIT:
-            inst = ((const union Instrument *)(inst.spl->subBank))[inst.spl->keySplitTable[key - inst.spl->total]];
+            inst = inst.spl->subBank[inst.spl->keySplitTable[key - inst.spl->total]];
             if (inst.type == NULL) return;
             if ((u8) (*inst.type - 0x52) < 2) return;
             break;
@@ -701,18 +701,18 @@ void func_0804a6b0(MidiBus *mChnlBus, u32 channelID, u8 key, u8 vel) {
         func_0804af74(instPSG->channel);
     }
     else {
-        func_080493b0(bufferID);
-        func_0804930c(bufferID, instPCM->sample);
-        func_080493e4(bufferID, func_0804a1f4(sndBuf));
+        samplestream_close(bufferID);
+        samplestream_init(bufferID, instPCM->sample);
+        samplestream_set_vol(bufferID, func_0804a1f4(sndBuf));
         temp = (mChnl->stereo) ? -1 : 1;
         panning += func_0804aaa4(mChnlBus, channelID);
         if (panning < 0) panning = 0;
         if (panning > 127) panning = 127;
-        func_080493c8(bufferID, func_0804a674(panning), func_0804a65c(panning) * temp);
-        func_080493f4(bufferID, func_0804a018(sndBuf));
-        func_08049450(bufferID, instPCM->distort);
-        func_08049470(bufferID, mChnl->filterEQ);
-        func_08049394(bufferID);
+        samplestream_set_pan(bufferID, func_0804a674(panning), func_0804a65c(panning) * temp);
+        samplestream_set_freq(bufferID, func_0804a018(sndBuf));
+        samplestream_set_b2(bufferID, instPCM->distort);
+        samplestream_set_eq(bufferID, mChnl->filterEQ);
+        samplestream_reset(bufferID);
     }
 
     mChnl->modDelayCount = mChnl->modDelay;
@@ -765,7 +765,7 @@ void func_0804aae0(MidiBus *midiBus, u32 id) {
             pan += sndBuf->panning;
             // Clamp to 7 bits.
             Clamp(pan, 0, 127);
-            func_080493c8(i, func_0804a674(pan), func_0804a65c(pan) * isStereo);
+            samplestream_set_pan(i, func_0804a674(pan), func_0804a65c(pan) * isStereo);
         }
         i++;
         sndBuf++;

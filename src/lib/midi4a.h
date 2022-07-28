@@ -123,35 +123,36 @@ extern HandWritten func_08048a00;
 
   // // //  INTERRUPT_DMA2  // // //
 
-extern void func_08049144(void); // [func_08049144] INTERRUPT_DMA2
+extern void midi4a_interrupt_dma(void); // [func_08049144] INTERRUPT_DMA2
 
   // // //  DIRECTSOUND STREAM OPERATIONS  // // //
 
-extern void func_0804930c(u32, const struct SampleData *); // [func_0804930c] DIRECTSOUND STREAM - Initialise Stream
-extern void func_08049394(u32);             // [func_08049394] DIRECTSOUND STREAM - Reset Stream
-extern void func_080493b0(u32);             // [func_080493b0] DIRECTSOUND STREAM - Close Stream
-extern void func_080493c8(u32, u32, u32);   // [func_080493c8] DIRECTSOUND STREAM - Set Panning
-extern void func_080493e4(u32, u32);        // [func_080493e4] DIRECTSOUND STREAM - Set Volume Envelope
-extern void func_080493f4(u32, u32);        // [func_080493f4] DIRECTSOUND STREAM - Set Pitch Envelope
-extern void func_08049450(u32, u32);        // [func_08049450] DIRECTSOUND STREAM - Set unk0_b2
-extern void func_08049470(u32, u32);        // [func_08049470] DIRECTSOUND STREAM - Set unk0_b3
+extern void samplestream_init(u32, const struct SampleData *); // [func_0804930c] DIRECTSOUND STREAM - Initialise Stream
+extern void samplestream_reset(u32);                // [func_08049394] DIRECTSOUND STREAM - Reset Stream
+extern void samplestream_close(u32);                // [func_080493b0] DIRECTSOUND STREAM - Close Stream
+extern void samplestream_set_pan(u32, u32, u32);    // [func_080493c8] DIRECTSOUND STREAM - Set Panning
+extern void samplestream_set_vol(u32, u32);         // [func_080493e4] DIRECTSOUND STREAM - Set Volume Envelope
+extern void samplestream_set_freq(u32, u32);        // [func_080493f4] DIRECTSOUND STREAM - Set Frequency Envelope
+extern void samplestream_set_b2(u32, u32);          // [func_08049450] DIRECTSOUND STREAM - Set unk0_b2
+extern void samplestream_set_eq(u32, u32);          // [func_08049470] DIRECTSOUND STREAM - Set unk0_b3
 
   // // //  DIRECTSOUND OPERATIONS  // // //
 
-extern void func_08049490(u32, u32, u32, volatile s32 *, u32, volatile s32 *, u16, SampleStream *); // [func_08049490] DIRECTSOUND - Initialise DirectSound
-extern void func_080497f8(void);                // [func_080497f8] DIRECTSOUND - Update DirectSound
-extern void func_08049ad8(void);                // [func_08049ad8] DIRECTSOUND - Initialise(?) REG_DMA1CNT & REG_DMA2CNT (unused)
-extern void func_08049b34(u32, u32, u32, u32);  // [func_08049b34] DIRECTSOUND - Set Reverb Controllers
-extern u32  func_08049b5c(u32);                 // [func_08049b5c] DIRECTSOUND STREAM - Check If Active
-extern void func_08049b70(u32);                 // [func_08049b70] DIRECTSOUND - Set Filter EQ Position
-extern void func_08049b8c(u8);                  // [func_08049b8c] DIRECTSOUND - Set Filter EQ High Gain
-extern void func_08049bac(void);                // [func_08049bac] DIRECTSOUND - Initialise Filter EQ
-extern void func_08049be4(void);                // [func_08049be4] DIRECTSOUND - Reset Filter EQ
-extern void func_08049bfc(u32, u32, u32);       // [func_08049bfc] DIRECTSOUND - Set Filter EQ
+extern void directsound_init(u32, u32, u32, volatile s32 *, u32, volatile s32 *, u16, SampleStream *); // [func_08049490] DIRECTSOUND - Initialise DirectSound
+extern void directsound_update(void);                   // [func_080497f8] DIRECTSOUND - Update DirectSound
+extern void func_08049ad8(void);                        // [func_08049ad8] DIRECTSOUND - Initialise(?) REG_DMA1CNT & REG_DMA2CNT (unused)
+extern void directsound_set_reverb(u32, u32, u32, u32); // [func_08049b34] DIRECTSOUND - Set Reverb Controllers
+extern u32  directsound_stream_is_active(u32);          // [func_08049b5c] DIRECTSOUND - Check If Given SampleStream Active
+
+extern void equalizer_set_level(u32);       // [func_08049b70] DIRECTSOUND - Set Filter EQ Position
+extern void equalizer_set_high_gain(u8);    // [func_08049b8c] DIRECTSOUND - Set Filter EQ High Gain
+extern void equalizer_init(void);           // [func_08049bac] DIRECTSOUND - Initialise Filter EQ
+extern void equalizer_reset(void);          // [func_08049be4] DIRECTSOUND - Reset Filter EQ
+extern void equalizer_set(u32, u32, u32);   // [func_08049bfc] DIRECTSOUND - Set Filter EQ
 
   // // //  MIDI BUS UPDATE OPERATIONS  // // //
 
-// extern ? func_08049c34(?);               // [func_08049c34] MIDI CHANNEL - Update Modulation
+extern void func_08049c34(MidiBus *, u32);  // [func_08049c34] MIDI CHANNEL - Update Modulation
 extern void func_08049d08(MidiBus *);       // [func_08049d08] MIDI CHANNEL - Update Modulation (All)
 extern void func_08049d30(MidiBus *, u32);  // [func_08049d30] MIDI CHANNEL - Note Cut
 extern void func_08049db8(MidiBus *, u32);  // [func_08049db8] MIDI CHANNEL - Note Off
