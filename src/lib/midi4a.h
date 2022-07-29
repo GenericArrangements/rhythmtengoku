@@ -283,8 +283,8 @@ extern void func_0804c358(void);                // [func_0804c358] MIDI4AGB - ST
 
 extern void func_0804c35c(SoundPlayer *, MidiBus *, u32, MidiTrackStream *, u32); // [func_0804c35c] SOUND PLAYER - Initialise
 extern u32  func_0804c398(MidiStream *); // [func_0804c398] MIDI STREAM - Parse Variable-Length Quantity
-extern void func_0804c3c0(SoundPlayer *, MidiTrackStream *, u32, MidiBus *, MidiChannel *, u8 *); // [func_0804c3c0] TEST PLAYER - Initialise
-extern void func_0804c4bc(s8 *, u32);   // [func_0804c4bc] TEST PLAYER - Append MIDI Sequence Instructions
-// extern void func_0804c508(void);     // [func_0804c508] TEST PLAYER - Parse MIDI Sequence Instructions
-extern void func_0804c6c8(void);        // [func_0804c6c8] TEST PLAYER - Update
+extern void directmidi_init(SoundPlayer *, MidiTrackStream *, u32, MidiBus *, MidiChannel *, u8 *); // [func_0804c3c0] TEST PLAYER - Initialise
+extern void directmidi_append_to_seq(s8 *, u32);   // [func_0804c4bc] TEST PLAYER - Append MIDI Sequence Instructions
+// extern void directmidi_read_seq(void);     // [func_0804c508] TEST PLAYER - Parse MIDI Sequence Instructions
+extern void directmidi_update(void);        // [func_0804c6c8] TEST PLAYER - Update
 extern void func_0804c778(void);        // [func_0804c778] MIDI4AGB - Initialise

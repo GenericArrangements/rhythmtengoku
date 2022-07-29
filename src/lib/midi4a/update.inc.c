@@ -497,7 +497,7 @@ void func_0804c170(void) {
     // Special Sound Player
     soundPlayer = D_03001598;
     if ((gDirectMidiPlayerHasData != 0) && (soundPlayer != NULL)) {
-        func_0804c6c8();
+        directmidi_update();
         rvb0 -= (64 * 2) - (soundPlayer->midiController4E * 2);
         rvb1 -= 64 - soundPlayer->midiController4F;
         rvb2 -= 64 - soundPlayer->midiController50;

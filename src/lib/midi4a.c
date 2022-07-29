@@ -44,7 +44,7 @@ u32 func_0804c398(MidiStream *midiStream) {
 }
 
 // [func_0804c3c0] TEST PLAYER - Initialise
-void func_0804c3c0(SoundPlayer *mPlayer, MidiTrackStream *mStreams, u32 numTracks,
+void directmidi_init(SoundPlayer *mPlayer, MidiTrackStream *mStreams, u32 numTracks,
                         MidiBus *mBus, MidiChannel *mChannels, u8 *seq) {
 
     if (!gDirectMidiPlayerHasData) return;
@@ -75,7 +75,7 @@ void func_0804c3c0(SoundPlayer *mPlayer, MidiTrackStream *mStreams, u32 numTrack
 }
 
 // [func_0804c4bc] TEST PLAYER - Append MIDI Sequence Instructions
-void func_0804c4bc(s8 *seq, u32 len) {
+void directmidi_append_to_seq(s8 *seq, u32 len) {
     while ((len != 0) && (D_030015a4 < 0x200)) {
         D_030015a0[D_030015a4++] = *seq;
         seq++;
@@ -87,7 +87,7 @@ void func_0804c4bc(s8 *seq, u32 len) {
 #include "asm/midi4a/asm_0804c508.s"
 
 // [func_0804c6c8] TEST PLAYER - Update
-void func_0804c6c8(void) {
+void directmidi_update(void) {
     MidiChannel *mChnl;
     MidiNote *note;
     u32 anyNotePlayed;
@@ -96,7 +96,7 @@ void func_0804c6c8(void) {
     func_08049d08(D_0300159c);
     anyNotePlayed = FALSE;
     D_03005b78 = 0;
-    func_0804c508();
+    directmidi_read_seq();
 
     note = &D_03005650[0];
     for (i = 0; i < D_03005b78; i++, note++) {
