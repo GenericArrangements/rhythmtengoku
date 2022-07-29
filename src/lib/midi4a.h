@@ -224,11 +224,11 @@ extern void func_0804ae18(MidiBus *, u16 *);  // [func_0804ae18] MIDI BUS - Set 
 
   // // //  LOW-FREQUENCY OSCILLATOR OPERATIONS  // // //
 
-extern void func_0804ae1c(struct LFO *, u8, u8, u8, u8, u8);    // [func_0804ae1c] LOW-FREQUENCY OSCILLATOR - Initialise
-extern void func_0804ae54(struct LFO *);                        // [func_0804ae54] LOW-FREQUENCY OSCILLATOR - Start [Ctrl_49]
-extern void func_0804ae60(struct LFO *);                        // [func_0804ae60] LOW-FREQUENCY OSCILLATOR - Stop [Ctrl_49; Ctrl_4A]
-extern void func_0804ae6c(struct LFO *, u32);                   // [func_0804ae6c] LOW-FREQUENCY OSCILLATOR - Update
-extern u32  func_0804af0c(u16); // [func_0804af0c] UTIL - Pseudo-Random Number Generator
+extern void lfo_init(struct LFO *, u8, u8, u8, u8, u8); // [func_0804ae1c] LOW-FREQUENCY OSCILLATOR - Initialise
+extern void lfo_start(struct LFO *);                    // [func_0804ae54] LOW-FREQUENCY OSCILLATOR - Start [Ctrl_49]
+extern void lfo_stop(struct LFO *);                     // [func_0804ae60] LOW-FREQUENCY OSCILLATOR - Stop [Ctrl_49; Ctrl_4A]
+extern void lfo_update(struct LFO *, u32);              // [func_0804ae6c] LOW-FREQUENCY OSCILLATOR - Update
+extern u32  midi4a_random(u16); // [func_0804af0c] UTIL - Pseudo-Random Number Generator
 
   // // //  PSG CHANNEL OPERATIONS  // // //
 

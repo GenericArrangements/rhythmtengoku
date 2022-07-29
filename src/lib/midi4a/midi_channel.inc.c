@@ -219,7 +219,7 @@ u32 func_0804a018(SoundChannel *sndChnl) {
     // Pitch Envelope: ???
     unk1C = mChnl->unk1C;
     if ((unk1C != 0) && (mChnl->unk1D != 0) && (mChnl->unk1E == 0)) {
-        r5 = sndChnl->key + func_0804af0c((unk1C * 2) + 1) - unk1C + midiBus->key;
+        r5 = sndChnl->key + midi4a_random((unk1C * 2) + 1) - unk1C + midiBus->key;
 
         what = r5;
         while (what < 0) r5 += 12; // ????????
@@ -652,7 +652,7 @@ void func_0804a6b0(MidiBus *mChnlBus, u32 channelID, u8 key, u8 vel) {
 
     // Highly similar to func_0804a018().
     if (chnlUnk1C != 0) {
-        temp += (func_0804af0c((chnlUnk1C << 1) + 1) - chnlUnk1C);
+        temp += (midi4a_random((chnlUnk1C << 1) + 1) - chnlUnk1C);
         temp2 = temp;
         while (temp2 < 0) {
             temp2 += 12;
@@ -694,7 +694,7 @@ void func_0804a6b0(MidiBus *mChnlBus, u32 channelID, u8 key, u8 vel) {
     else sndBuf->instrument.psg = instPSG;
 
     if (mChnl->rndmPitchRange != 0) {
-        mChnl->rndmPitch = mChnl->rndmPitchFloor + func_0804af0c(mChnl->rndmPitchRange);
+        mChnl->rndmPitch = mChnl->rndmPitchFloor + midi4a_random(mChnl->rndmPitchRange);
     }
 
     if (isPSG) {

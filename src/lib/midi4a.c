@@ -112,7 +112,7 @@ void func_0804c6c8(void) {
     }
     if (anyNotePlayed) {
         equalizer_reset();
-        func_0804ae54(&D_03005b30);
+        lfo_start(&D_03005b30);
     }
 }
 

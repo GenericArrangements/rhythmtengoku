@@ -2,7 +2,7 @@
 
 
 // [func_0804ae1c] LOW-FREQUENCY OSCILLATOR - Initialise
-void func_0804ae1c(struct LFO *lfo, u8 preDelay, u8 attack, u8 arg3, u8 offset, u8 duration) {
+void lfo_init(struct LFO *lfo, u8 preDelay, u8 attack, u8 arg3, u8 offset, u8 duration) {
     lfo->stage = LFO_STAGE_DISABLED;
     lfo->output = 0;
     lfo->ticks = 0;
@@ -14,21 +14,21 @@ void func_0804ae1c(struct LFO *lfo, u8 preDelay, u8 attack, u8 arg3, u8 offset, 
 }
 
 // [func_0804ae54] LOW-FREQUENCY OSCILLATOR - Start [Ctrl_49]
-void func_0804ae54(struct LFO *lfo) {
+void lfo_start(struct LFO *lfo) {
     lfo->stage = LFO_STAGE_PRE_DELAY;
     lfo->ticks = 0;
     lfo->output = 0;
 }
 
 // [func_0804ae60] LOW-FREQUENCY OSCILLATOR - Stop [Ctrl_49; Ctrl_4A]
-void func_0804ae60(struct LFO *lfo) {
+void lfo_stop(struct LFO *lfo) {
     lfo->stage = LFO_STAGE_DISABLED;
     lfo->ticks = 0;
     lfo->output = 0;
 }
 
 // [func_0804ae6c] LOW-FREQUENCY OSCILLATOR - Update
-void func_0804ae6c(struct LFO *lfo, u32 delta) {
+void lfo_update(struct LFO *lfo, u32 delta) {
     u32 pos;
     s32 time, result;
 
@@ -69,7 +69,7 @@ void func_0804ae6c(struct LFO *lfo, u32 delta) {
 }
 
 // [func_0804af0c] UTIL - Pseudo-Random Number Generator
-u32 func_0804af0c(u16 var) {
+u32 midi4a_random(u16 var) {
     D_03001570 = (D_03001570 * 109) + 1021;
     return (u32) (var * D_03001570) >> 0x10;
 }
