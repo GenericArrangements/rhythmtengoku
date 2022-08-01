@@ -29,7 +29,7 @@ branch_08002800: \n\
 /* 08002802 */ BEQ branch_0800280c \n\
 /* 08002804 */ ADDS R0, R1, 0x0 @ Set R0 to R1 + 0x0 \n\
 /* 08002806 */ ADDS R1, R7, 0x0 @ Set R1 to R7 + 0x0 \n\
-/* 08002808 */ BL func_0804b7dc \n\
+/* 08002808 */ BL soundplayer_fadeout_stop \n\
  \n\
 branch_0800280c: \n\
 /* 0800280c */ ADDS R5, 0xC @ Add 0xC to R5 \n\

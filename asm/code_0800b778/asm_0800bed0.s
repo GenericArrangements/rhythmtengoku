@@ -26,7 +26,7 @@ branch_0800beea: \n\
 .ltorg \n\
  \n\
 branch_0800bef8: \n\
-/* 0800bef8 */ LDR R1, =D_03005b3c \n\
+/* 0800bef8 */ LDR R1, =gLowFreqOscMode \n\
 /* 0800befa */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0800befc */ STRB R0, [R1] \n\
 /* 0800befe */ BL equalizer_reset \n\

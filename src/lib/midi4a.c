@@ -16,8 +16,8 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 #include "midi4a/update.inc.c"
 
-// [func_0804c35c] Initialise Sound Players
-void func_0804c35c(SoundPlayer *channel, MidiBus *mChnlBus, u32 nTracksMax, MidiTrackStream *midiReader, u32 type) {
+// [func_0804c35c] Initialise Sound Player
+void soundplayer_init(SoundPlayer *channel, MidiBus *mChnlBus, u32 nTracksMax, MidiTrackStream *midiReader, u32 type) {
     channel->songInfo = NULL;
     channel->midiBus = mChnlBus;
     channel->nTracksMax = nTracksMax;
@@ -27,7 +27,7 @@ void func_0804c35c(SoundPlayer *channel, MidiBus *mChnlBus, u32 nTracksMax, Midi
 }
 
 // [func_0804c398] MIDI - Parse Variable-Length Quantity
-u32 func_0804c398(MidiStream *midiStream) {
+u32 midi_parse_variable_length(MidiStream *midiStream) {
     MidiStream mStream = *midiStream;
     u8 current;
     u32 time = 0;
@@ -53,7 +53,7 @@ void directmidi_init(SoundPlayer *mPlayer, MidiTrackStream *mStreams, u32 numTra
     func_0804a014(mBus, gInstrumentBanks[gDirectMidiPlayerBank]);
     func_0804adb4(mBus, gDirectMidiPlayerVolume);
     func_08049e8c(mBus, gDirectMidiPlayerPriority);
-    func_0804c35c(mPlayer, mBus, numTracks, mStreams, gDirectMidiPlayerPriority);
+    soundplayer_init(mPlayer, mBus, numTracks, mStreams, gDirectMidiPlayerPriority);
 
     mPlayer->speedMulti = Q24(1.0);
     mPlayer->trackGain = Q24(1.0);
@@ -61,7 +61,7 @@ void directmidi_init(SoundPlayer *mPlayer, MidiTrackStream *mStreams, u32 numTra
     mPlayer->volumeFadeEnv = 0x8000;
     mPlayer->volumeFadeSpd = 0;
     mPlayer->midiTempo = gDirectMidiPlayerTempo;
-    mPlayer->deltaTime = func_0804b6f0(gDirectMidiPlayerTempo, Q24(1.0), 0x18);
+    mPlayer->deltaTime = midi_get_delta_time(gDirectMidiPlayerTempo, Q24(1.0), 0x18);
     mPlayer->midiController4E = 64;
     mPlayer->midiController4F = 64;
     mPlayer->midiController50 = 64;
@@ -103,7 +103,7 @@ void directmidi_update(void) {
         if (note->velocity != 0) { // Note has non-zero velocity.
             func_0804a6b0(D_0300159c, note->channel, note->key, note->velocity);
             mChnl = &D_0300159c->midiChannel[note->channel];
-            if (mChnl->filterEQ && (D_03005b3c == LFO_MODE_KEYPRESS)) {
+            if (mChnl->filterEQ && (gLowFreqOscMode == LFO_MODE_KEYPRESS)) {
                 anyNotePlayed = TRUE;
             }
         } else { // Note is muted.
@@ -112,12 +112,12 @@ void directmidi_update(void) {
     }
     if (anyNotePlayed) {
         equalizer_reset();
-        lfo_start(&D_03005b30);
+        lfo_start(&gLowFreqOsc);
     }
 }
 
 // [func_0804c778] MAIN INITIALISE
-void func_0804c778(void) {
+void midi4a_init(void) {
     u32 i;
 
     directsound_init(DIRECTSOUND_MODE_STEREO, AUDIO_SAMPLE_RATE,
@@ -129,7 +129,7 @@ void func_0804c778(void) {
 
     for (i = 0; i < SOUND_PLAYER_COUNT; i++) {
         func_08049fa0(gSoundPlayerTable[i].midiBus, gSoundPlayerTable[i].trackCount, gSoundPlayerTable[i].midiChannels);
-        func_0804c35c(gSoundPlayerTable[i].soundPlayer, gSoundPlayerTable[i].midiBus, gSoundPlayerTable[i].trackCount, gSoundPlayerTable[i].trackStreams, gSoundPlayerTable[i].playerType);
+        soundplayer_init(gSoundPlayerTable[i].soundPlayer, gSoundPlayerTable[i].midiBus, gSoundPlayerTable[i].trackCount, gSoundPlayerTable[i].trackStreams, gSoundPlayerTable[i].playerType);
     }
 
     D_03005b7c = D_030015a7;
@@ -139,7 +139,7 @@ void func_0804c778(void) {
         D_03005b7c[i] = 0;
     }
 
-    D_03005b3c = LFO_MODE_DISABLED;
+    gLowFreqOscMode = LFO_MODE_DISABLED;
     D_03005644 = NULL;
     D_03005b90[0] = 0;
     D_03005b90[1] = 0;

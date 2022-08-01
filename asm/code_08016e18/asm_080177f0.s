@@ -81,7 +81,7 @@ branch_08017886: \n\
 /* 08017890 */ MOVS R1, 0x2 @ Set R1 to 0x2 \n\
 /* 08017892 */ MOVS R2, 0x2 @ Set R2 to 0x2 \n\
 /* 08017894 */ MOVS R3, 0x4 @ Set R3 to 0x4 \n\
-/* 08017896 */ BL func_0804c340 \n\
+/* 08017896 */ BL midi4a_set_reverb \n\
 /* 0801789a */ POP {R4, R5} \n\
 /* 0801789c */ POP {R0} \n\
 /* 0801789e */ BX R0 \n\

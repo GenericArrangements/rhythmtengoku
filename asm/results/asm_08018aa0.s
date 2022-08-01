@@ -83,7 +83,7 @@ thumb_func_start func_08018aa0 \n\
 /* 08018b4a */ LDR R1, [R4] \n\
 /* 08018b4c */ STRH R0, [R1, 0x10] \n\
 /* 08018b4e */ BL func_08018a80 \n\
-/* 08018b52 */ LDR R0, =D_03005b3c \n\
+/* 08018b52 */ LDR R0, =gLowFreqOscMode \n\
 /* 08018b54 */ STRB R6, [R0] \n\
 /* 08018b56 */ LDR R0, [R4] \n\
 /* 08018b58 */ STR R5, [R0, 0x8] \n\

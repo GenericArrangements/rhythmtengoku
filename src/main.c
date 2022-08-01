@@ -88,8 +88,8 @@ void agb_main(void) {
 	init_ewram();
 	func_08000224();
 	func_0801e100();
-	func_0804c778();
-	func_0804c340(35, 2, 2, 4);
+	midi4a_init();
+	midi4a_set_reverb(35, 2, 2, 4);
 	func_080029d8(D_030046a8[177]);
 	
 	REG_DISPSTAT = 8;
@@ -120,7 +120,7 @@ void agb_main(void) {
 			}
 		}
 		
-		func_0804c170();
+		midi4a_main();
 		func_0800b590();
 		func_08003ff0();
 	}

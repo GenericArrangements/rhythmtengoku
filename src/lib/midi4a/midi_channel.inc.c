@@ -228,12 +228,12 @@ u32 func_0804a018(SoundChannel *sndChnl) {
         while (r5 < 0) r5 += 12;
         while (r5 > 127) r5 -= 12;
 
-        freq = func_0804a690(midiBus, r5);
+        freq = midi_key_to_freq(midiBus, r5);
         sndChnl->frequency = freq;
         modRange = mChnl->modRange;
-        sndChnl->unk10 = sndChnl->frequency - func_0804a690(midiBus, r5 - modRange);
-        sndChnl->unk12 = func_0804a690(midiBus, r5 + modRange) - sndChnl->frequency;
-        sndChnl->unk14 = func_0804a690(midiBus, r5 + mChnl->unkC) - sndChnl->frequency;
+        sndChnl->unk10 = sndChnl->frequency - midi_key_to_freq(midiBus, r5 - modRange);
+        sndChnl->unk12 = midi_key_to_freq(midiBus, r5 + modRange) - sndChnl->frequency;
+        sndChnl->unk14 = midi_key_to_freq(midiBus, r5 + mChnl->unkC) - sndChnl->frequency;
     }
 
     // Pitch Envelope: MIDI Channel Pitch Wheel (14-bit Integer)
@@ -538,17 +538,17 @@ s32 func_0804a628(MidiBus *midiBus, u32 id, u8 key, u8 vel) {
 }
 
 // [func_0804a65c] DIRECTSOUND STREAM - Convert Panning to Right Volume
-u8 func_0804a65c(u8 pan) {
+u8 midi_pan_to_r_vol(u8 pan) {
     return (pan >= 64) ? 127 : (pan * 2);
 }
 
 // [func_0804a674] DIRECTSOUND STREAM - Convert Panning to Left Volume
-u8 func_0804a674(u8 pan) {
+u8 midi_pan_to_l_vol(u8 pan) {
     return (pan < 64) ? 127 : ((127 - pan) * 2);
 }
 
 // [func_0804a690] MIDI BUS - Convert Midi Key to Frequency
-u32 func_0804a690(MidiBus *midiBus, u32 key) {
+u32 midi_key_to_freq(MidiBus *midiBus, u32 key) {
     u8 u = key;
     s8 s = key;
 
@@ -596,7 +596,7 @@ void func_0804a6b0(MidiBus *mChnlBus, u32 channelID, u8 key, u8 vel) {
     inst = (union Instrument) mChnlBus->soundBank[mChnl->instPatch];
     if (inst.type == NULL) return;
 
-    isSubRhythm = FALSE; // r4
+    isSubRhythm = FALSE;
 
     switch (*inst.type) {
         case INSTRUMENT_SUB_RHYTHM:
@@ -652,7 +652,7 @@ void func_0804a6b0(MidiBus *mChnlBus, u32 channelID, u8 key, u8 vel) {
 
     // Highly similar to func_0804a018().
     if (chnlUnk1C != 0) {
-        temp += (midi4a_random((chnlUnk1C << 1) + 1) - chnlUnk1C);
+        temp += (midi4a_random((chnlUnk1C * 2) + 1) - chnlUnk1C);
         temp2 = temp;
         while (temp2 < 0) {
             temp2 += 12;
@@ -662,7 +662,7 @@ void func_0804a6b0(MidiBus *mChnlBus, u32 channelID, u8 key, u8 vel) {
         while (temp > 127) temp -= 12;
     }
 
-    sndBuf->frequency = func_0804a690(mChnlBus, (u8) temp);
+    sndBuf->frequency = midi_key_to_freq(mChnlBus, (u8) temp);
 
     if (isPSG && (instPSG->channel == PSG_NOISE_CHANNEL)) {
         sndBuf->frequency = temp;
@@ -670,9 +670,9 @@ void func_0804a6b0(MidiBus *mChnlBus, u32 channelID, u8 key, u8 vel) {
 
     // Pretty much directly copied from func_0804a018().
     modRange = mChnl->modRange;
-    sndBuf->unk10 = sndBuf->frequency - func_0804a690(mChnlBus, (u8) (temp - modRange));
-    sndBuf->unk12 = func_0804a690(mChnlBus, (u8) (modRange + temp)) - sndBuf->frequency;
-    sndBuf->unk14 = func_0804a690(mChnlBus, (u8) (temp + mChnl->unkC)) - sndBuf->frequency;
+    sndBuf->unk10 = sndBuf->frequency - midi_key_to_freq(mChnlBus, (u8) (temp - modRange));
+    sndBuf->unk12 = midi_key_to_freq(mChnlBus, (u8) (modRange + temp)) - sndBuf->frequency;
+    sndBuf->unk14 = midi_key_to_freq(mChnlBus, (u8) (temp + mChnl->unkC)) - sndBuf->frequency;
 
     sndBuf->key = key;
     sndBuf->velocity = vel;
@@ -706,9 +706,8 @@ void func_0804a6b0(MidiBus *mChnlBus, u32 channelID, u8 key, u8 vel) {
         samplestream_set_vol(bufferID, func_0804a1f4(sndBuf));
         temp = (mChnl->stereo) ? -1 : 1;
         panning += func_0804aaa4(mChnlBus, channelID);
-        if (panning < 0) panning = 0;
-        if (panning > 127) panning = 127;
-        samplestream_set_pan(bufferID, func_0804a674(panning), func_0804a65c(panning) * temp);
+        Clamp(panning, 0, 127);
+        samplestream_set_pan(bufferID, midi_pan_to_l_vol(panning), midi_pan_to_r_vol(panning) * temp);
         samplestream_set_freq(bufferID, func_0804a018(sndBuf));
         samplestream_set_b2(bufferID, instPCM->distort);
         samplestream_set_eq(bufferID, mChnl->filterEQ);
@@ -754,21 +753,21 @@ u8 func_0804aaa4(MidiBus *midiBus, u32 id) {
 
 // [func_0804aae0] MIDI CHANNEL - Update Effect Chain Panning
 void func_0804aae0(MidiBus *midiBus, u32 id) {
-    s32 pan = func_0804aaa4(midiBus, id);
-    MidiChannel *mChnl = &midiBus->midiChannel[id];
-    u32 isStereo = (mChnl->stereo) ? -1 : 1;
-    s32 i = 0;
-    SoundChannel *sndBuf = D_030064bc;
+    s32 pan, isStereo, i;
+    MidiChannel *mChnl;
+    SoundChannel *sndBuf;
 
-    while (i < D_03005b8c) {
+    pan = func_0804aaa4(midiBus, id);
+    mChnl = &midiBus->midiChannel[id];
+    isStereo = (mChnl->stereo) ? -1 : 1;
+
+    for (i = 0, sndBuf = D_030064bc; i < D_03005b8c; i++, sndBuf++) {
         if (sndBuf->active && (sndBuf->midiChannel == mChnl)) {
             pan += sndBuf->panning;
             // Clamp to 7 bits.
             Clamp(pan, 0, 127);
-            samplestream_set_pan(i, func_0804a674(pan), func_0804a65c(pan) * isStereo);
+            samplestream_set_pan(i, midi_pan_to_l_vol(pan), midi_pan_to_r_vol(pan) * isStereo);
         }
-        i++;
-        sndBuf++;
     }
 }
 

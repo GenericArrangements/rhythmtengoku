@@ -8,11 +8,11 @@ thumb_func_start func_08002868 \n\
 /* 0800286c */ BEQ branch_0800287c \n\
 /* 0800286e */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 08002870 */ BEQ branch_08002878 \n\
-/* 08002872 */ BL func_0804b5d8 \n\
+/* 08002872 */ BL soundplayer_pause \n\
 /* 08002876 */ B branch_0800287c \n\
  \n\
 branch_08002878: \n\
-/* 08002878 */ BL func_0804b5e4 \n\
+/* 08002878 */ BL soundplayer_unpause \n\
  \n\
 branch_0800287c: \n\
 /* 0800287c */ POP {R0} \n\

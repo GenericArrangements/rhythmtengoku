@@ -15,7 +15,7 @@ thumb_func_start func_08002838 \n\
 branch_08002848: \n\
 /* 08002848 */ LDR R0, [R5] \n\
 /* 0800284a */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
-/* 0800284c */ BL func_0804b7dc \n\
+/* 0800284c */ BL soundplayer_fadeout_stop \n\
 /* 08002850 */ ADDS R5, 0xC @ Add 0xC to R5 \n\
 /* 08002852 */ ADDS R4, 0x1 @ Add 0x1 to R4 \n\
 /* 08002854 */ LDRB R0, [R6] \n\

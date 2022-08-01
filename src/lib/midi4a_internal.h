@@ -146,11 +146,11 @@ enum PsgChannelsEnum {
 #define M_CONTROLLER_BANK_SELECT_LSB    0x20
 #define M_CONTROLLER_PRIORITY           0x21
 #define M_CONTROLLER_DAMPEN             0x48
-#define M_CONTROLLER_UNK_49             0x49
-#define M_CONTROLLER_UNK_4A             0x4A
+#define M_CONTROLLER_LFO                0x49
+#define M_CONTROLLER_EQ                 0x4A
 #define M_CONTROLLER_STEREO             0x4B
-#define M_CONTROLLER_UNK_4C             0x4C
-#define M_CONTROLLER_UNK_4D             0x4D
+#define M_CONTROLLER_LFO_GAIN           0x4C
+#define M_CONTROLLER_EQ_GAIN            0x4D
 #define M_CONTROLLER_RVB1               0x4E
 #define M_CONTROLLER_RVB2               0x4F
 #define M_CONTROLLER_RVB3               0x50

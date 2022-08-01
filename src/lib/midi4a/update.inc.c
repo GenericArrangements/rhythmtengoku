@@ -11,9 +11,9 @@ void func_0804b80c(SoundPlayer *soundPlayer, MidiStream stream) {
     switch (type) {
         case SYS_EXC_EVENT_LFO: // EQ Filter Modulator
             equalizer_reset();
-            D_03005b3c = LFO_MODE_DISABLED;
+            gLowFreqOscMode = LFO_MODE_DISABLED;
             D_03005640 = stream[0] * 2;
-            lfo_init(&D_03005b30, stream[1] * 2, stream[2] * 2, stream[3] * 2, stream[4] * 2, stream[5] * 2);
+            lfo_init(&gLowFreqOsc, stream[1] * 2, stream[2] * 2, stream[3] * 2, stream[4] * 2, stream[5] * 2);
             equalizer_set_high_gain(stream[6]);
             D_03005644 = soundPlayer;
             break;
@@ -34,7 +34,7 @@ u32 func_0804b898(SoundPlayer *soundPlayer, MidiStream *upstream) {
     u32 tempo;
 
     stream++;
-    length = func_0804c398(&stream);
+    length = midi_parse_variable_length(&stream);
     *upstream = stream + length;
 
     switch (event) {
@@ -58,7 +58,7 @@ u32 func_0804b898(SoundPlayer *soundPlayer, MidiStream *upstream) {
         case META_SET_TEMPO:
             tempo = (u32) 60000000 / ((stream[0] << 0x10) | (stream[1] << 0x8) | stream[2]);
             soundPlayer->midiTempo = tempo;
-            D_0300562c = func_0804b6f0(tempo, soundPlayer->speedMulti, soundPlayer->midiQuarterNote);
+            D_0300562c = midi_get_delta_time(tempo, soundPlayer->speedMulti, soundPlayer->midiQuarterNote);
             return META_EVENT_OTHER;
 
         // Else, do nothing.
@@ -130,32 +130,32 @@ void func_0804b95c(SoundPlayer *soundPlayer, u32 id, u8 controller, u8 var) {
             func_0804ac80(midiBus, id, var);
             break;
 
-        case M_CONTROLLER_UNK_49: // Set LFO
-            D_03005b3c = var;
+        case M_CONTROLLER_LFO: // Set LFO
+            gLowFreqOscMode = var;
             switch (var) {
                 case LFO_MODE_DISABLED:
                 case LFO_MODE_KEYPRESS: // Stop
-                    lfo_stop(&D_03005b30);
+                    lfo_stop(&gLowFreqOsc);
                     break;
                 case LFO_MODE_CONSTANT: // Start
                     equalizer_reset();
-                    lfo_start(&D_03005b30);
+                    lfo_start(&gLowFreqOsc);
                     break;
             }
             break;
 
-        case M_CONTROLLER_UNK_4A: // Set Band-Pass Filter
-            D_03005b3c = LFO_MODE_DISABLED;
-            lfo_stop(&D_03005b30);
+        case M_CONTROLLER_EQ: // Set Filter EQ
+            gLowFreqOscMode = LFO_MODE_DISABLED;
+            lfo_stop(&gLowFreqOsc);
             equalizer_reset();
             equalizer_set_level((var * 2) - 0x80);
             break;
 
-        case M_CONTROLLER_UNK_4C: // Set LFO Multiplier
+        case M_CONTROLLER_LFO_GAIN: // Set LFO Multiplier
             D_03005640 = var * 2;
             break;
 
-        case M_CONTROLLER_UNK_4D: // Set Band-Pass Filter High(?) Gain
+        case M_CONTROLLER_EQ_GAIN: // Set Filter EQ High Gain
             equalizer_set_high_gain(var);
             break;
 
@@ -228,7 +228,7 @@ u32 func_0804bcc0(SoundPlayer *soundPlayer, u32 id) {
         switch (command & 0x0F) {
             // MIDI System Exclusive Message (F0)
             case 0x00:
-                i = func_0804c398(&byteStream);
+                i = midi_parse_variable_length(&byteStream);
                 func_0804b80c(soundPlayer, byteStream);
                 byteStream += i;
                 break;
@@ -274,7 +274,7 @@ u32 func_0804bcc0(SoundPlayer *soundPlayer, u32 id) {
 
             // Else, do nothing.
             default:
-                i = func_0804c398(&byteStream);
+                i = midi_parse_variable_length(&byteStream);
                 byteStream += i;
                 break;
         }
@@ -360,7 +360,7 @@ void func_0804bed0(SoundPlayer *soundPlayer, u32 id) {
             return;
         }
 
-        delta = func_0804c398(&reader->stream_curr);
+        delta = midi_parse_variable_length(&reader->stream_curr);
         if (delta != 0) {
             note = &D_03005650[0];
 
@@ -384,15 +384,15 @@ void func_0804bed0(SoundPlayer *soundPlayer, u32 id) {
     // Use Filter EQ with LFO
     if (anyNotePlayed) {
         channel = &soundPlayer->midiBus->midiChannel[id];
-        if (channel->filterEQ && (D_03005b3c == LFO_MODE_KEYPRESS)) {
+        if (channel->filterEQ && (gLowFreqOscMode == LFO_MODE_KEYPRESS)) {
             equalizer_reset();
-            lfo_start(&D_03005b30);
+            lfo_start(&gLowFreqOsc);
         }
     }
 }
 
 // [func_0804c040] SOUND PLAYER - Update Volume
-void func_0804c040(SoundPlayer *soundPlayer) {
+void soundplayer_update_volume(SoundPlayer *soundPlayer) {
     u32 volume;
     u32 volumeAsByte;
 
@@ -411,7 +411,7 @@ void func_0804c040(SoundPlayer *soundPlayer) {
             if (soundPlayer->volumeFadeEnv < soundPlayer->volumeFadeSpd) {
                 soundPlayer->volumeFadeType = VOL_FADE_RESET;
                 soundPlayer->volumeFadeEnv = 0;
-                func_0804b560(soundPlayer); // Stop Channel
+                soundplayer_stop(soundPlayer); // Stop Channel
             } else {
                 soundPlayer->volumeFadeEnv -= soundPlayer->volumeFadeSpd;
             }
@@ -419,7 +419,7 @@ void func_0804c040(SoundPlayer *soundPlayer) {
         case VOL_FADE_OUT_PAUSE: // Fade Out & Pause
             if (soundPlayer->volumeFadeEnv < soundPlayer->volumeFadeSpd) {
                 soundPlayer->volumeFadeEnv = 0;
-                func_0804b574(soundPlayer, TRUE); // Pause Channel
+                soundplayer_set_pause(soundPlayer, TRUE); // Pause Channel
             } else {
                 soundPlayer->volumeFadeEnv -= soundPlayer->volumeFadeSpd;
             }
@@ -437,7 +437,7 @@ void func_0804c040(SoundPlayer *soundPlayer) {
 }
 
 // [func_0804c0f8] SOUND PLAYER - Update MIDI Stream
-void func_0804c0f8(SoundPlayer *soundPlayer) {
+void soundplayer_update_stream(SoundPlayer *soundPlayer) {
     MidiTrackStream *mTrkReader;
     u32 noActiveReader;
     u32 i;
@@ -467,7 +467,7 @@ void func_0804c0f8(SoundPlayer *soundPlayer) {
 }
 
 // [func_0804c170] MAIN UPDATE
-void func_0804c170(void) {
+void midi4a_main(void) {
     SoundPlayer *soundPlayer;
     u32 delta;
     u32 i;
@@ -482,8 +482,8 @@ void func_0804c170(void) {
     for (i = 0; i <= gMidiPlayerCount; i++) {
         soundPlayer = gSoundPlayers[i];
         if (soundPlayer != NULL) {
-            func_0804c040(soundPlayer);
-            func_0804c0f8(soundPlayer);
+            soundplayer_update_volume(soundPlayer);
+            soundplayer_update_stream(soundPlayer);
             func_08049d08(soundPlayer->midiBus);
             if (soundPlayer->songInfo != NULL) {
                 rvb0 -= (64 * 2) - (soundPlayer->midiController4E * 2);
@@ -504,10 +504,10 @@ void func_0804c170(void) {
         rvb3 -= 64 - soundPlayer->midiController51;
     }
 
-    if ((D_03005644 != NULL) && (D_03005b3c != LFO_MODE_DISABLED)) {
-        delta = func_0804b6f0(D_03005644->midiTempo, D_03005644->speedMulti, 0x18);
-        lfo_update(&D_03005b30, delta);
-        equalizer_set_level(Q24_TO_INT(D_03005b30.output * D_03005640));
+    if ((D_03005644 != NULL) && (gLowFreqOscMode != LFO_MODE_DISABLED)) {
+        delta = midi_get_delta_time(D_03005644->midiTempo, D_03005644->speedMulti, 0x18);
+        lfo_update(&gLowFreqOsc, delta);
+        equalizer_set_level(Q24_TO_INT(gLowFreqOsc.output * D_03005640));
     }
 
     func_0804a334();
@@ -523,7 +523,7 @@ void func_0804c170(void) {
 }
 
 // [func_0804c340] Set Reverb
-void func_0804c340(u32 rvb0, u32 rvb1, u32 rvb2, u32 rvb3) {
+void midi4a_set_reverb(u32 rvb0, u32 rvb1, u32 rvb2, u32 rvb3) {
     D_03005b90[0] = rvb0;
     D_03005b90[1] = rvb1;
     D_03005b90[2] = rvb2;
@@ -531,5 +531,5 @@ void func_0804c340(u32 rvb0, u32 rvb1, u32 rvb2, u32 rvb3) {
 }
 
 // [func_0804c358] STUB
-void func_0804c358(void) {
+void midi4a_stub(void) {
 }

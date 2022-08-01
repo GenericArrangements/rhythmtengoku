@@ -29,7 +29,7 @@ branch_08002708: \n\
 /* 08002728 */ CMP R0, R5 @ Check R0 - R5 \n\
 /* 0800272a */ BEQ branch_0800273a \n\
 /* 0800272c */ ADDS R0, R3, 0x0 @ Set R0 to R3 + 0x0 \n\
-/* 0800272e */ BL func_0804b534 \n\
+/* 0800272e */ BL soundplayer_play_id \n\
 /* 08002732 */ LDR R0, [R4, 0xC] \n\
 /* 08002734 */ CMP R0, R5 @ Check R0 - R5 \n\
 /* 08002736 */ BEQ branch_0800273a \n\

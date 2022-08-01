@@ -11,7 +11,7 @@ thumb_func_start func_080026c4 \n\
 /* 080026ce */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 080026d0 */ LDR R6, [R0] \n\
 /* 080026d2 */ ADDS R0, R6, 0x0 @ Set R0 to R6 + 0x0 \n\
-/* 080026d4 */ BL func_0804b368 \n\
+/* 080026d4 */ BL soundplayer_play \n\
 /* 080026d8 */ LSLS R4, R4, 0x10 \n\
 /* 080026da */ LSRS R4, R4, 0x10 \n\
 /* 080026dc */ ADDS R0, R6, 0x0 @ Set R0 to R6 + 0x0 \n\

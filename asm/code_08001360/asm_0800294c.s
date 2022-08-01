@@ -11,7 +11,7 @@ thumb_func_start func_0800294c \n\
 /* 08002956 */ LDR R1, =0xffff \n\
 /* 08002958 */ LSLS R2, R2, 0x18 \n\
 /* 0800295a */ ASRS R2, R2, 0x18 \n\
-/* 0800295c */ BL func_0804b66c \n\
+/* 0800295c */ BL soundplayer_set_panning \n\
  \n\
 branch_08002960: \n\
 /* 08002960 */ POP {R0} \n\

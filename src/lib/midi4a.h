@@ -50,8 +50,8 @@ extern u16 D_03005b20;              // [D_03005b20] UNDEFINED - Total Bytes in a
 extern volatile u32 D_03005b24;     // [D_03005b24] DIRECTSOUND - Number of 32-bit samples per DMA Source Address ( = 0x620 / 4 ( = 392))
 extern u8  D_03005b28;              // [D_03005b28] FILTER EQ - High Gain [mCtrl4C]
 
-extern struct LFO D_03005b30;       // [D_03005b30] LFO - Low-Frequency Oscillator
-extern u8  D_03005b3c;              // [D_03005b3c] LFO - Mode { 0 = Disabled; 1 = Note Triggered; 2 = Constant }
+extern struct LFO gLowFreqOsc;      // [D_03005b30] LFO - Low-Frequency Oscillator
+extern u8  gLowFreqOscMode;         // [D_03005b3c] LFO - Mode { 0 = Disabled; 1 = Note Triggered; 2 = Constant }
 extern volatile u32 D_03005b40;     // [D_03005b40] DIRECTSOUND - ??
 extern u8  D_03005b44;              // [D_03005b44] FILTER EQ - Enable Global Filter
 extern u32 D_03005b48;              // [D_03005b48] REVERB - gRVBCNT3 (init. = 2)
@@ -60,7 +60,7 @@ extern u16 D_03005b78;              // [D_03005b78] MIDI - Next Available MIDI N
 extern u8 *D_03005b7c;              // [D_03005b7c] UNDEFINED - (Byte at offset D_03005648 set by MIDI Controller 10)
 extern u16 D_03005b80;              // [D_03005b80] MIDI4AGB - Set to REG_VCOUNT near the end of each update.
 extern u16 D_03005b84;              // [D_03005b84] DIRECTSOUND - ??
-extern SampleStream *D_03005b88; // [D_03005b88] DIRECTSOUND - SampleStream (12 Channels, at D_030028c8)
+extern SampleStream *D_03005b88;    // [D_03005b88] DIRECTSOUND - SampleStream (12 Channels, at D_030028c8)
 extern u16 D_03005b8c;              // [D_03005b8c] DIRECTSOUND - Number of DirectSound Channels ( = 12)
 extern s8  D_03005b90[4];           // [D_03005b90] REVERB - Reverb Controller Update Scratch
 extern u32 D_03005b94;              // [D_03005b94] MIDI4AGB - Global Sample Rate ( = 13379Hz)
@@ -182,9 +182,9 @@ extern s32  func_0804a48c(void);                    // [func_0804a48c] DIRECTSOU
 // extern ? func_0804a4e0(?);                       // [func_0804a4e0] DIRECTSOUND CHANNEL - Get DirectSound Channel with Lowest Priority
 extern void func_0804a5b4(MidiBus *, u32, u8);      // [func_0804a5b4] SOUND CHANNEL - MIDI 'Note Off' Event
 extern s32  func_0804a628(MidiBus *, u32, u8, u8);  // [func_0804a628] DIRECTSOUND CHANNEL - Return First Most Replaceable PCM Buffer
-extern u8   func_0804a65c(u8);                      // [func_0804a65c] DIRECTSOUND STREAM - Convert Panning to Right Volume
-extern u8   func_0804a674(u8);                      // [func_0804a674] DIRECTSOUND STREAM - Convert Panning to Left Volume
-extern u32  func_0804a690(MidiBus *, u32);          // [func_0804a690] MIDI BUS - Convert Midi Key to Frequency
+extern u8   midi_pan_to_r_vol(u8);                  // [func_0804a65c] DIRECTSOUND STREAM - Convert Panning to Right Volume
+extern u8   midi_pan_to_l_vol(u8);                  // [func_0804a674] DIRECTSOUND STREAM - Convert Panning to Left Volume
+extern u32  midi_key_to_freq(MidiBus *, u32);       // [func_0804a690] MIDI BUS - Convert Midi Key to Frequency
 extern void func_0804a6b0(MidiBus *, u32, u8, u8);  // [func_0804a6b0] SOUND CHANNEL - MIDI 'Note On' Event
 
   // // //  MIDI CHANNEL OPERATIONS  // // //
@@ -241,30 +241,30 @@ extern void func_0804b2c4(void);    // [func_0804b2c4] PSG CHANNEL - Update All
 
   // // //  SOUND PLAYER OPERATIONS  // // //
 
-extern u16  func_0804b324(MidiStream);              // [func_0804b324] MIDI STREAM - Evaluate Big Endian Short
-extern u32  func_0804b330(MidiStream);              // [func_0804b330] MIDI STREAM - Evaluate Big Endian Integer
-extern u32  func_0804b348(const char *);            // [func_0804b348] MIDI STREAM - Get Loop Marker Symbol Length
-extern void func_0804b368(SoundPlayer *, const SongInfo *); // [func_0804b368] SOUND PLAYER - Play
-extern void func_0804b534(u16);                     // [func_0804b534] SOUND PLAYER - Play from Index
-extern void func_0804b560(SoundPlayer *);           // [func_0804b560] SOUND PLAYER - Stop
-extern void func_0804b574(SoundPlayer *, u8);       // [func_0804b574] SOUND PLAYER - Pause/Unpause { 0 = Unpause; 1 = Pause }
-extern u32  func_0804b5a0(SoundPlayer *channel);    // [func_0804b5a0] SOUND PLAYER - Check for Active MIDI Readers
-extern void func_0804b5d8(SoundPlayer *);           // [func_0804b5d8] SOUND PLAYER - Pause
-extern void func_0804b5e4(SoundPlayer *);           // [func_0804b5e4] SOUND PLAYER - Unpause
-extern void func_0804b5f0(void);                    // [func_0804b5f0] SOUND PLAYER - Pause All
-extern void func_0804b620(void);                    // [func_0804b620] SOUND PLAYER - Unpause All
-extern void func_0804b650(SoundPlayer *, u16);      // [func_0804b650] SOUND PLAYER - Set Gain (Volume)
-extern void func_0804b654(SoundPlayer *, u16, u16); // [func_0804b654] SOUND PLAYER - Set Gain for Selected Tracks
-extern void func_0804b65c(SoundPlayer *, u16, s16); // [func_0804b65c] SOUND PLAYER - Set Pitch
-extern void func_0804b66c(SoundPlayer *, u16, s8);  // [func_0804b66c] SOUND PLAYER - Set Panning
-extern void func_0804b67c(u16);                     // [func_0804b67c] SOUND PLAYER - Pause from Index
+extern u16  soundplayer_parse_be16(MidiStream);              // [func_0804b324] MIDI STREAM - Evaluate Big Endian Short
+extern u32  soundplayer_parse_be32(MidiStream);              // [func_0804b330] MIDI STREAM - Evaluate Big Endian Integer
+extern u32  soundplayer_get_loop_sym_size(const char *);            // [func_0804b348] MIDI STREAM - Get Loop Marker Symbol Length
+extern void soundplayer_play(SoundPlayer *, const SongInfo *); // [func_0804b368] SOUND PLAYER - Play
+extern void soundplayer_play_id(u16);                     // [func_0804b534] SOUND PLAYER - Play from Index
+extern void soundplayer_stop(SoundPlayer *);           // [soundplayer_stop] SOUND PLAYER - Stop
+extern void soundplayer_set_pause(SoundPlayer *, u8);       // [func_0804b574] SOUND PLAYER - Pause/Unpause { 0 = Unpause; 1 = Pause }
+extern u32  soundplayer_is_playing(SoundPlayer *channel);    // [func_0804b5a0] SOUND PLAYER - Check for Active MIDI Readers
+extern void soundplayer_pause(SoundPlayer *);           // [func_0804b5d8] SOUND PLAYER - Pause
+extern void soundplayer_unpause(SoundPlayer *);           // [func_0804b5e4] SOUND PLAYER - Unpause
+extern void soundplayer_pause_all(void);                    // [func_0804b5f0] SOUND PLAYER - Pause All
+extern void soundplayer_unpause_all(void);                    // [func_0804b620] SOUND PLAYER - Unpause All
+extern void soundplayer_set_gain(SoundPlayer *, u16);      // [func_0804b650] SOUND PLAYER - Set Gain (Volume)
+extern void soundplayer_set_track_gain(SoundPlayer *, u16, u16); // [func_0804b654] SOUND PLAYER - Set Gain for Selected Tracks
+extern void soundplayer_set_pitch(SoundPlayer *, u16, s16); // [func_0804b65c] SOUND PLAYER - Set Pitch
+extern void soundplayer_set_panning(SoundPlayer *, u16, s8);  // [func_0804b66c] SOUND PLAYER - Set Panning
+extern void soundplayer_pause_id(u16);                     // [func_0804b67c] SOUND PLAYER - Pause from Index
 extern u32  func_0804b6c4(MidiStream, MidiStream, u32); // [func_0804b6c4] MIDI STREAM - Stream.equals()
-extern u32  func_0804b6f0(u16, u16, u16);           // [func_0804b6f0] SOUND PLAYER - Get MIDI Ticks Per Frame
-extern void func_0804b710(SoundPlayer *, u16);      // [func_0804b710] SOUND PLAYER - Align Channel Speed with BeatScript
-extern void func_0804b734(SoundPlayer *, u16, u16); // [func_0804b734] SOUND PLAYER - Set Volume Fade { type = 0..3 }
-extern void func_0804b7dc(SoundPlayer *, u16);      // [func_0804b7dc] SOUND PLAYER - Volume Fade-Out & Clear
-extern void func_0804b7ec(SoundPlayer *, u16);      // [func_0804b7ec] SOUND PLAYER - Volume Fade-Out & Pause
-extern void func_0804b7fc(SoundPlayer *, u16);      // [func_0804b7fc] SOUND PLAYER - Volume Fade-In
+extern u32  midi_get_delta_time(u16, u16, u16);     // [func_0804b6f0] SOUND PLAYER - Get MIDI Ticks Per Frame
+extern void soundplayer_set_speed(SoundPlayer *, u16);      // [func_0804b710] SOUND PLAYER - Align Channel Speed with BeatScript
+extern void soundplayer_set_fade(SoundPlayer *, u16, u16); // [func_0804b734] SOUND PLAYER - Set Volume Fade { type = 0..3 }
+extern void soundplayer_fadeout_stop(SoundPlayer *, u16);      // [func_0804b7dc] SOUND PLAYER - Volume Fade-Out & Clear
+extern void soundplayer_fadeout_pause(SoundPlayer *, u16);      // [func_0804b7ec] SOUND PLAYER - Volume Fade-Out & Pause
+extern void soundplayer_fadein(SoundPlayer *, u16);      // [func_0804b7fc] SOUND PLAYER - Volume Fade-In
 
   // // //  MIDI SEQUENCE OPERATIONS  // // //
 
@@ -275,16 +275,18 @@ extern void func_0804bc5c(u32, u32, u32);               // [func_0804bc5c] MIDI 
 extern u32  func_0804bcc0(SoundPlayer *, u32);          // [func_0804bcc0] MIDI STREAM - Messages/Events
 extern void func_0804bed0(SoundPlayer *, u32);          // [func_0804bed0] MIDI STREAM - Update
 
-extern void func_0804c040(SoundPlayer *);       // [func_0804c040] SOUND PLAYER - Update Volume
-extern void func_0804c0f8(SoundPlayer *);       // [func_0804c0f8] SOUND PLAYER - Update MIDI Stream
-extern void func_0804c170(void);                // [func_0804c170] MIDI4AGB - Update
-extern void func_0804c340(u32, u32, u32, u32);  // [func_0804c340] MIDI4AGB - Set Reverb Controller Scratch/Queue
-extern void func_0804c358(void);                // [func_0804c358] MIDI4AGB - STUB
+extern void soundplayer_update_volume(SoundPlayer *);   // [func_0804c040] SOUND PLAYER - Update Volume
+extern void soundplayer_update_stream(SoundPlayer *);   // [func_0804c0f8] SOUND PLAYER - Update MIDI Stream
+extern void midi4a_main(void);                      // [func_0804c170] MIDI4AGB - Update
+extern void midi4a_set_reverb(u32, u32, u32, u32);  // [func_0804c340] MIDI4AGB - Set Reverb Controller Scratch/Queue
+extern void midi4a_stub(void);                      // [func_0804c358] MIDI4AGB - STUB
 
-extern void func_0804c35c(SoundPlayer *, MidiBus *, u32, MidiTrackStream *, u32); // [func_0804c35c] SOUND PLAYER - Initialise
-extern u32  func_0804c398(MidiStream *); // [func_0804c398] MIDI STREAM - Parse Variable-Length Quantity
+extern void soundplayer_init(SoundPlayer *, MidiBus *, u32, MidiTrackStream *, u32); // [func_0804c35c] SOUND PLAYER - Initialise
+extern u32  midi_parse_variable_length(MidiStream *); // [func_0804c398] MIDI STREAM - Parse Variable-Length Quantity
+
 extern void directmidi_init(SoundPlayer *, MidiTrackStream *, u32, MidiBus *, MidiChannel *, u8 *); // [func_0804c3c0] TEST PLAYER - Initialise
-extern void directmidi_append_to_seq(s8 *, u32);   // [func_0804c4bc] TEST PLAYER - Append MIDI Sequence Instructions
-// extern void directmidi_read_seq(void);     // [func_0804c508] TEST PLAYER - Parse MIDI Sequence Instructions
-extern void directmidi_update(void);        // [func_0804c6c8] TEST PLAYER - Update
-extern void func_0804c778(void);        // [func_0804c778] MIDI4AGB - Initialise
+extern void directmidi_append_to_seq(s8 *, u32);    // [func_0804c4bc] TEST PLAYER - Append MIDI Sequence Instructions
+// extern void directmidi_read_seq(void);           // [func_0804c508] TEST PLAYER - Parse MIDI Sequence Instructions
+extern void directmidi_update(void);                // [func_0804c6c8] TEST PLAYER - Update
+
+extern void midi4a_init(void);  // [func_0804c778] MIDI4AGB - Initialise

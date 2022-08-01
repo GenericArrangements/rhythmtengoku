@@ -8,7 +8,7 @@ thumb_func_start func_08002920 \n\
 /* 08002924 */ LSRS R1, R1, 0x10 \n\
 /* 08002926 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08002928 */ BEQ branch_0800292e \n\
-/* 0800292a */ BL func_0804b650 \n\
+/* 0800292a */ BL soundplayer_set_gain \n\
  \n\
 branch_0800292e: \n\
 /* 0800292e */ POP {R0} \n\

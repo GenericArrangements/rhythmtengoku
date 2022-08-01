@@ -116,7 +116,7 @@ thumb_func_start func_08016ec4 \n\
 /* 08016fb2 */ MOVS R1, 0x2 @ Set R1 to 0x2 \n\
 /* 08016fb4 */ MOVS R2, 0x2 @ Set R2 to 0x2 \n\
 /* 08016fb6 */ MOVS R3, 0x4 @ Set R3 to 0x4 \n\
-/* 08016fb8 */ BL func_0804c340 \n\
+/* 08016fb8 */ BL midi4a_set_reverb \n\
 /* 08016fbc */ BL func_08000608 \n\
 /* 08016fc0 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08016fc2 */ BNE branch_08016fca \n\

@@ -9,7 +9,7 @@ thumb_func_start func_0800267c \n\
 /* 08002682 */ LSLS R4, R4, 0x2 \n\
 /* 08002684 */ ADDS R4, R4, R0 @ Set R4 to R4 + R0 \n\
 /* 08002686 */ LDR R0, [R4] \n\
-/* 08002688 */ BL func_0804b368 \n\
+/* 08002688 */ BL soundplayer_play \n\
 /* 0800268c */ LDR R0, [R4] \n\
 /* 0800268e */ POP {R4} \n\
 /* 08002690 */ POP {R1} \n\

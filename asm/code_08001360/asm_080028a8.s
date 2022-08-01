@@ -11,7 +11,7 @@ thumb_func_start func_080028a8 \n\
 /* 080028b2 */ LDR R1, =0xffff \n\
 /* 080028b4 */ LSLS R2, R2, 0x10 \n\
 /* 080028b6 */ ASRS R2, R2, 0x10 \n\
-/* 080028b8 */ BL func_0804b65c \n\
+/* 080028b8 */ BL soundplayer_set_pitch \n\
  \n\
 branch_080028bc: \n\
 /* 080028bc */ POP {R0} \n\

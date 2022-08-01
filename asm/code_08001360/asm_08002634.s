@@ -13,7 +13,7 @@ thumb_func_start func_08002634 \n\
 /* 08002644 */ LSLS R4, R4, 0x10 \n\
 /* 08002646 */ LSRS R4, R4, 0x10 \n\
 /* 08002648 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 0800264a */ BL func_0804b534 \n\
+/* 0800264a */ BL soundplayer_play_id \n\
 /* 0800264e */ LDR R2, =gSoundPlayerList \n\
 /* 08002650 */ LDR R0, =gSongTable \n\
 /* 08002652 */ LSLS R4, R4, 0x3 \n\
