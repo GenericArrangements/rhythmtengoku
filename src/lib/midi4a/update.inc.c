@@ -73,47 +73,47 @@ void func_0804b95c(SoundPlayer *soundPlayer, u32 id, u8 controller, u8 var) {
 
     switch (controller) {
         case M_CONTROLLER_BANK_SELECT_MSB:
-            func_0804abc8(midiBus, id, var | 0x8000);
+            midi_ch_set_bankselect(midiBus, id, var | 0x8000);
             break;
 
         case M_CONTROLLER_MOD_DEPTH:
-            func_0804ac40(midiBus, id, var);
+            midi_ch_set_mod_depth(midiBus, id, var);
             break;
 
         case M_CONTROLLER_VOLUME:
-            func_0804aa5c(midiBus, id, var);
+            midi_ch_set_volume(midiBus, id, var);
             break;
 
         case M_CONTROLLER_PANNING:
-            func_0804aa7c(midiBus, id, var);
+            midi_ch_set_panning(midiBus, id, var);
             break;
 
         case M_CONTROLLER_EXPRESSION:
-            func_0804aba8(midiBus, id, var);
+            midi_ch_set_expression(midiBus, id, var);
             break;
 
         case M_CONTROLLER_MOD_RANGE:
-            func_0804ace4(midiBus, id, var);
+            midi_ch_set_mod_range(midiBus, id, var);
             break;
 
         case M_CONTROLLER_MOD_SPEED:
-            func_0804accc(midiBus, id, var);
+            midi_ch_set_mod_speed(midiBus, id, var);
             break;
 
         case M_CONTROLLER_MOD_TYPE:
-            func_0804aca0(midiBus, id, var);
+            midi_ch_set_mod_type(midiBus, id, var);
             break;
 
         case M_CONTROLLER_MOD_DELAY:
-            func_0804acd8(midiBus, id, var);
+            midi_ch_set_mod_delay(midiBus, id, var);
             break;
 
         case M_CONTROLLER_BANK_SELECT_LSB:
-            func_0804abc8(midiBus, id, var);
+            midi_ch_set_bankselect(midiBus, id, var);
             break;
 
         case M_CONTROLLER_PRIORITY:
-            func_0804ad18(midiBus, id, var);
+            midi_ch_set_priority(midiBus, id, var);
             break;
 
         case M_CONTROLLER_UNK_0E:
@@ -127,7 +127,7 @@ void func_0804b95c(SoundPlayer *soundPlayer, u32 id, u8 controller, u8 var) {
             break;
 
         case M_CONTROLLER_DAMPEN:
-            func_0804ac80(midiBus, id, var);
+            midi_ch_set_eq(midiBus, id, var);
             break;
 
         case M_CONTROLLER_LFO: // Set LFO
@@ -160,7 +160,7 @@ void func_0804b95c(SoundPlayer *soundPlayer, u32 id, u8 controller, u8 var) {
             break;
 
         case M_CONTROLLER_STEREO:
-            func_0804acf0(midiBus, id, var);
+            midi_ch_set_stereo(midiBus, id, var);
             break;
 
         case M_CONTROLLER_RVB1:
@@ -180,15 +180,15 @@ void func_0804b95c(SoundPlayer *soundPlayer, u32 id, u8 controller, u8 var) {
             break;
 
         case M_CONTROLLER_RANDOM_PITCH:
-            func_0804ad38(midiBus, id, var);
+            midi_ch_set_random_key(midiBus, id, var);
             break;
 
         case M_CONTROLLER_RANDOM_53:
-            func_0804ad90(midiBus, id, var);
+            midi_ch_set_random_53(midiBus, id, var);
             break;
 
         case M_CONTROLLER_RANDOM_54:
-            func_0804ad9c(midiBus, id, var);
+            midi_ch_set_random_54(midiBus, id, var);
             break;
     }
 }
@@ -238,7 +238,7 @@ u32 func_0804bcc0(SoundPlayer *soundPlayer, u32 id) {
                 switch (func_0804b898(soundPlayer, &byteStream)) {
                     // End of Track
                     case META_EVENT_TRACK_END:
-                        func_0804accc(soundPlayer->midiBus, id, 0);
+                        midi_ch_set_mod_speed(soundPlayer->midiBus, id, 0);
                         return M_TRACK_STREAM_STOP;
 
                     // Marker: Loop Start
@@ -265,7 +265,7 @@ u32 func_0804bcc0(SoundPlayer *soundPlayer, u32 id) {
                                 tempReader->stream_curr = tempReader->stream_loop;
                                 tempReader->unkC = reader->unkC;
                             }
-                            func_08049d30(soundPlayer->midiBus, i);
+                            midi_ch_stop_note(soundPlayer->midiBus, i);
                         }
                         trackEndType = M_TRACK_STREAM_LOOP;
                         break;
@@ -308,7 +308,7 @@ u32 func_0804bcc0(SoundPlayer *soundPlayer, u32 id) {
 
             // Program Change
             case MSG_PROGRAM_CHANGE:
-                func_0804ab88(soundPlayer->midiBus, id, byteStream[0]);
+                midi_ch_set_patch(soundPlayer->midiBus, id, byteStream[0]);
                 byteStream += 1;
                 break;
 
@@ -320,7 +320,7 @@ u32 func_0804bcc0(SoundPlayer *soundPlayer, u32 id) {
             // Pitch Wheel Change
             case MSG_PITCH_WHEEL_CHANGE:
                 mod = (byteStream[0] & 0x7f) | ((byteStream[1] & 0x7f) << 7);
-                func_0804aa40(soundPlayer->midiBus, id, mod);
+                midi_ch_set_pitch(soundPlayer->midiBus, id, mod);
                 byteStream += 2;
                 break;
         }
@@ -356,7 +356,7 @@ void func_0804bed0(SoundPlayer *soundPlayer, u32 id) {
 
         if (func_0804bcc0(soundPlayer, id) == M_TRACK_STREAM_STOP) {
             reader->active_curr = FALSE;
-            func_08049d30(soundPlayer->midiBus, id);
+            midi_ch_stop_note(soundPlayer->midiBus, id);
             return;
         }
 
@@ -366,10 +366,10 @@ void func_0804bed0(SoundPlayer *soundPlayer, u32 id) {
 
             for (i = 0; i < D_03005b78; i++, note++) {
                 if (note->velocity != 0) { // Note has non-zero velocity.
-                    func_0804a6b0(soundPlayer->midiBus, note->channel, note->key, note->velocity);
+                    midi_note_on(soundPlayer->midiBus, note->channel, note->key, note->velocity);
                     anyNotePlayed = TRUE;
                 } else { // Note is muted.
-                    func_0804a5b4(soundPlayer->midiBus, note->channel, note->key);
+                    midi_note_off(soundPlayer->midiBus, note->channel, note->key);
                 }
             }
             D_03005b78 = 0; // Reset "Current Note To Modify" counter.
@@ -429,11 +429,11 @@ void soundplayer_update_volume(SoundPlayer *soundPlayer) {
     volume = Q24_TO_INT(soundPlayer->channelVolume * soundPlayer->channelGain * soundPlayer->volumeFadeEnv);
     volumeAsByte = volume >> 15;
     Ceil(volumeAsByte, 0xff);
-    func_0804adb4(soundPlayer->midiBus, volumeAsByte);
+    midi_bus_set_vol(soundPlayer->midiBus, volumeAsByte);
 
     volumeAsByte = ((volume >> 8) * soundPlayer->trackGain) >> 15;
     Ceil(volumeAsByte, 0xff);
-    func_08049ec4(soundPlayer->midiBus, volumeAsByte, soundPlayer->trackSelect);
+    midi_bus_set_track_gain(soundPlayer->midiBus, volumeAsByte, soundPlayer->trackSelect);
 }
 
 // [func_0804c0f8] SOUND PLAYER - Update MIDI Stream
@@ -484,7 +484,7 @@ void midi4a_main(void) {
         if (soundPlayer != NULL) {
             soundplayer_update_volume(soundPlayer);
             soundplayer_update_stream(soundPlayer);
-            func_08049d08(soundPlayer->midiBus);
+            midi_ch_update_mod_all(soundPlayer->midiBus);
             if (soundPlayer->songInfo != NULL) {
                 rvb0 -= (64 * 2) - (soundPlayer->midiController4E * 2);
                 rvb1 -= 64 - soundPlayer->midiController4F;
@@ -510,7 +510,7 @@ void midi4a_main(void) {
         equalizer_set_level(Q24_TO_INT(gLowFreqOsc.output * D_03005640));
     }
 
-    func_0804a334();
+    midi_note_update_all();
     D_03005b80 = REG_VCOUNT;
 
     Clamp(rvb0, 0, 127);

@@ -9,7 +9,7 @@ thumb_func_start func_080029c4 \n\
 /* 080029ca */ LDR R0, [R0, 0x4] \n\
 /* 080029cc */ LSLS R1, R1, 0x18 \n\
 /* 080029ce */ ASRS R1, R1, 0x18 \n\
-/* 080029d0 */ BL func_0804adb0 \n\
+/* 080029d0 */ BL midi_bus_set_key \n\
  \n\
 branch_080029d4: \n\
 /* 080029d4 */ POP {R0} \n\

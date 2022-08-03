@@ -147,7 +147,7 @@ branch_0804c5fe: \n\
 /* 0804c604 */ LDR R0, [R1, 0x4] \n\
 /* 0804c606 */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 0804c608 */ ADDS R2, R3, 0x0 @ Set R2 to R3 + 0x0 \n\
-/* 0804c60a */ BL func_0804ab88 \n\
+/* 0804c60a */ BL midi_ch_set_patch \n\
 /* 0804c60e */ B branch_0804c61a \n\
  \n\
 branch_0804c610: \n\
@@ -177,7 +177,7 @@ branch_0804c620: \n\
 /* 0804c632 */ LDR R0, [R1, 0x4] \n\
 /* 0804c634 */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 0804c636 */ ADDS R2, R3, 0x0 @ Set R2 to R3 + 0x0 \n\
-/* 0804c638 */ BL func_0804aa40 \n\
+/* 0804c638 */ BL midi_ch_set_pitch \n\
 /* 0804c63c */ B branch_0804c67a \n\
  \n\
 branch_0804c63e: \n\

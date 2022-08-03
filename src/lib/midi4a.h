@@ -152,75 +152,75 @@ extern void equalizer_set(u32, u32, u32);   // [func_08049bfc] DIRECTSOUND - Set
 
   // // //  MIDI BUS UPDATE OPERATIONS  // // //
 
-extern void func_08049c34(MidiBus *, u32);  // [func_08049c34] MIDI CHANNEL - Update Modulation
-extern void func_08049d08(MidiBus *);       // [func_08049d08] MIDI CHANNEL - Update Modulation (All)
-extern void func_08049d30(MidiBus *, u32);  // [func_08049d30] MIDI CHANNEL - Note Cut
-extern void func_08049db8(MidiBus *, u32);  // [func_08049db8] MIDI CHANNEL - Note Off
-extern void func_08049e3c(MidiBus *);       // [func_08049e3c] MIDI CHANNEL - Note Cut (All)
-extern void func_08049e64(MidiBus *);       // [func_08049e64] MIDI CHANNEL - Note Off (All)
+extern void midi_ch_update_mod(MidiBus *, u32); // [func_08049c34] MIDI CHANNEL - Update Modulation
+extern void midi_ch_update_mod_all(MidiBus *);  // [func_08049d08] MIDI CHANNEL - Update Modulation (All)
+extern void midi_ch_stop_note(MidiBus *, u32);  // [func_08049d30] SOUND CHANNEL - Note Off
+extern void midi_ch_close_note(MidiBus *, u32); // [func_08049db8] SOUND CHANNEL - Close
+extern void midi_ch_stop_all_notes(MidiBus *);  // [func_08049e3c] SOUND CHANNEL - Note Off (All)
+extern void midi_ch_close_all_notes(MidiBus *); // [func_08049e64] SOUND CHANNEL - Close (All)
 
   // // //  MIDI BUS INITIALISATION OPERATIONS  // // //
 
-extern void func_08049e8c(MidiBus *, u8);                       // [func_08049e8c] MIDI BUS - Set Priority
-extern void func_08049ec4(MidiBus *, u8, u16);                  // [func_08049ec4] MIDI BUS - Set Selected Track Volume & Track Selection
-extern void func_08049ecc(MidiChannel *);                       // [func_08049ecc] MIDI CHANNEL - Initialise
-extern void func_08049fa0(MidiBus *, u32, MidiChannel *);       // [func_08049fa0] MIDI BUS - Initialise
-extern void func_0804a014(MidiBus *, const union Instrument *); // [func_0804a014] MIDI BUS - Set Sound Bank
+extern void midi_bus_set_priority(MidiBus *, u8);           // [func_08049e8c] MIDI BUS - Set Priority
+extern void midi_bus_set_track_gain(MidiBus *, u8, u16);    // [func_08049ec4] MIDI BUS - Set Selected Track Volume & Track Selection
+extern void midi_ch_init(MidiChannel *);                    // [func_08049ecc] MIDI CHANNEL - Initialise
+extern void midi_bus_init(MidiBus *, u32, MidiChannel *);   // [func_08049fa0] MIDI BUS - Initialise
+extern void midi_bus_set_bank(MidiBus *, const union Instrument *); // [func_0804a014] MIDI BUS - Set Sound Bank
 
   // // //  SOUND CHANNEL OPERATIONS  // // //
 
-extern u32  func_0804a018(SoundChannel *);          // [func_0804a018] SOUND CHANNEL - Update Pitch
-extern u32  func_0804a1f4(SoundChannel *);          // [func_0804a1f4] SOUND CHANNEL - Update Volume
-extern u32  func_0804a224(SoundChannel *);          // [func_0804a224] SOUND CHANNEL - Update ADSR
-extern void func_0804a2c4(u32);                     // [func_0804a2c4] DIRECTSOUND CHANNEL - Update DirectSound Channel
-extern void func_0804a334(void);                    // [func_0804a334] SOUND CHANNEL - Update DirectSound Channel (All)
-extern void func_0804a360(u32, SoundChannel *);     // [func_0804a360] DIRECTSOUND CHANNEL - Stop DirectSound Channels
+extern u32  midi_note_update_freq(SoundChannel *);  // [func_0804a018] SOUND CHANNEL - Update Pitch
+extern u32  midi_note_update_vol(SoundChannel *);   // [func_0804a1f4] SOUND CHANNEL - Update Volume
+extern u32  midi_note_update_adsr(SoundChannel *);  // [func_0804a224] SOUND CHANNEL - Update ADSR
+extern void midi_note_update(u32);                  // [func_0804a2c4] DIRECTSOUND CHANNEL - Update DirectSound Channel
+extern void midi_note_update_all(void);             // [func_0804a334] SOUND CHANNEL - Update DirectSound Channel (All)
+extern void midi_note_init(u32, SoundChannel *);    // [func_0804a360] DIRECTSOUND CHANNEL - Stop DirectSound Channels
 extern s32  func_0804a3a0(MidiChannel *, u8);       // [func_0804a3a0] DIRECTSOUND CHANNEL - Get First Active DirectSound Channel not at ADSR Stage 3.
 extern s32  func_0804a3fc(void);                    // [func_0804a3fc] DIRECTSOUND CHANNEL - Get First Inactive PCM Buffer
 extern s32  func_0804a434(void);                    // [func_0804a434] DIRECTSOUND CHANNEL - Get DirectSound Channel with Lowest Volume
 extern s32  func_0804a48c(void);                    // [func_0804a48c] DIRECTSOUND CHANNEL - Get DirectSound Channel with Lowest Volume (exclude ADSR)
 // extern ? func_0804a4e0(?);                       // [func_0804a4e0] DIRECTSOUND CHANNEL - Get DirectSound Channel with Lowest Priority
-extern void func_0804a5b4(MidiBus *, u32, u8);      // [func_0804a5b4] SOUND CHANNEL - MIDI 'Note Off' Event
-extern s32  func_0804a628(MidiBus *, u32, u8, u8);  // [func_0804a628] DIRECTSOUND CHANNEL - Return First Most Replaceable PCM Buffer
+extern void midi_note_off(MidiBus *, u32, u8);      // [func_0804a5b4] SOUND CHANNEL - MIDI 'Note Off' Event
+extern s32  midi_note_get_channel(MidiBus *, u32, u8, u8);  // [func_0804a628] DIRECTSOUND CHANNEL - Return First Most Replaceable PCM Buffer
 extern u8   midi_pan_to_r_vol(u8);                  // [func_0804a65c] DIRECTSOUND STREAM - Convert Panning to Right Volume
 extern u8   midi_pan_to_l_vol(u8);                  // [func_0804a674] DIRECTSOUND STREAM - Convert Panning to Left Volume
 extern u32  midi_key_to_freq(MidiBus *, u32);       // [func_0804a690] MIDI BUS - Convert Midi Key to Frequency
-extern void func_0804a6b0(MidiBus *, u32, u8, u8);  // [func_0804a6b0] SOUND CHANNEL - MIDI 'Note On' Event
+extern void midi_note_on(MidiBus *, u32, u8, u8);   // [func_0804a6b0] SOUND CHANNEL - MIDI 'Note On' Event
 
   // // //  MIDI CHANNEL OPERATIONS  // // //
 
-extern void func_0804aa40(MidiBus *, u32, u16); // [func_0804aa40] MIDI CHANNEL - Set Pitch Wheel [Evnt_E]
-extern void func_0804aa5c(MidiBus *, u32, u8);  // [func_0804aa5c] MIDI CHANNEL - Set Volume [Ctrl_07]
-extern void func_0804aa7c(MidiBus *, u32, u8);  // [func_0804aa7c] MIDI CHANNEL - Set Panning [Ctrl_0A]
-extern u8   func_0804aaa4(MidiBus *, u32);      // [func_0804aaa4] MIDI CHANNEL - Calculate Panning Envelope
-extern void func_0804aae0(MidiBus *, u32);      // [func_0804aae0] MIDI CHANNEL - Update Sample Buffer Panning
-extern void func_0804ab88(MidiBus *, u32, u8);  // [func_0804ab88] MIDI Channel - Set Instrument/Patch [Evnt_C]
-extern void func_0804aba8(MidiBus *, u32, u8);  // [func_0804aba8] MIDI CHANNEL - Set Expression [Ctrl_0B]
-extern void func_0804abc8(MidiBus *, u32, u16); // [func_0804abc8] MIDI CHANNEL - Set Bank Select? [Ctrl_00; Ctrl_20]
-extern void func_0804ac24(MidiBus *, u32, u8);  // [func_0804ac24] MIDI CHANNEL - Set unk0_b0
-extern void func_0804ac40(MidiBus *, u32, u8);  // [func_0804ac40] MIDI CHANNEL - Set Modulation Depth [Ctrl_01]
-extern void func_0804ac60(MidiBus *, u32, u8);  // [func_0804ac60] MIDI CHANNEL - Set unk4_b21
-extern void func_0804ac80(MidiBus *, u32, u8);  // [func_0804ac80] MIDI CHANNEL - Set Filter EQ [Ctrl_48]
-extern void func_0804aca0(MidiBus *, u32, u8);  // [func_0804aca0] MIDI CHANNEL - Set Modulation Type [Ctrl_16]
-extern void func_0804acc0(MidiBus *, u32, u8);  // [func_0804acc0] MIDI CHANNEL - Set unkC
-extern void func_0804accc(MidiBus *, u32, u16); // [func_0804accc] MIDI CHANNEL - Set Modulation Speed [Ctrl_15]
-extern void func_0804acd8(MidiBus *, u32, u8);  // [func_0804acd8] MIDI CHANNEL - Set Modulation Delay [Ctrl_1A]
-extern void func_0804ace4(MidiBus *, u32, u8);  // [func_0804ace4] MIDI CHANNEL - Set Modulation Range [Ctrl_14]
-extern void func_0804acf0(MidiBus *, u32, u32); // [func_0804acf0] MIDI CHANNEL - Set Offset/Split Stereo Effect [Ctrl_4B]
-extern void func_0804ad18(MidiBus *, u32, u8);  // [func_0804ad18] MIDI CHANNEL - Set Priority [Ctrl_21]
-extern void func_0804ad38(MidiBus *, u32, u8);  // [func_0804ad38] MIDI CHANNEL - Set Random Pitch Variation [Ctrl_52]
-extern void func_0804ad90(MidiBus *, u32, u8);  // [func_0804ad90] MIDI CHANNEL - Set unk1C [Ctrl_53]
-extern void func_0804ad9c(MidiBus *, u32, u8);  // [func_0804ad9c] MIDI CHANNEL - Set unk1D & unk1E [Ctrl_54]
+extern void midi_ch_set_pitch(MidiBus *, u32, u16);         // [func_0804aa40] MIDI CHANNEL - Set Pitch Wheel [Evnt_E]
+extern void midi_ch_set_volume(MidiBus *, u32, u8);         // [func_0804aa5c] MIDI CHANNEL - Set Volume [Ctrl_07]
+extern void midi_ch_set_panning(MidiBus *, u32, u8);        // [func_0804aa7c] MIDI CHANNEL - Set Panning [Ctrl_0A]
+extern u8   midi_ch_get_panning(MidiBus *, u32);            // [func_0804aaa4] MIDI CHANNEL - Calculate Panning Envelope
+extern void midi_ch_update_pan(MidiBus *, u32);             // [func_0804aae0] MIDI CHANNEL - Update Sample Buffer Panning
+extern void midi_ch_set_patch(MidiBus *, u32, u8);          // [func_0804ab88] MIDI Channel - Set Instrument/Patch [Evnt_C]
+extern void midi_ch_set_expression(MidiBus *, u32, u8);     // [func_0804aba8] MIDI CHANNEL - Set Expression [Ctrl_0B]
+extern void midi_ch_set_bankselect(MidiBus *, u32, u16);    // [func_0804abc8] MIDI CHANNEL - Set Bank Select? [Ctrl_00; Ctrl_20]
+extern void midi_ch_set_b0(MidiBus *, u32, u8);             // [func_0804ac24] MIDI CHANNEL - Set unk0_b0
+extern void midi_ch_set_mod_depth(MidiBus *, u32, u8);      // [func_0804ac40] MIDI CHANNEL - Set Modulation Depth [Ctrl_01]
+extern void midi_ch_set_4b21(MidiBus *, u32, u8);           // [func_0804ac60] MIDI CHANNEL - Set unk4_b21
+extern void midi_ch_set_eq(MidiBus *, u32, u8);             // [func_0804ac80] MIDI CHANNEL - Set Filter EQ [Ctrl_48]
+extern void midi_ch_set_mod_type(MidiBus *, u32, u8);       // [func_0804aca0] MIDI CHANNEL - Set Modulation Type [Ctrl_16]
+extern void midi_ch_set_unk_c(MidiBus *, u32, u8);          // [func_0804acc0] MIDI CHANNEL - Set unkC
+extern void midi_ch_set_mod_speed(MidiBus *, u32, u16);     // [func_0804accc] MIDI CHANNEL - Set Modulation Speed [Ctrl_15]
+extern void midi_ch_set_mod_delay(MidiBus *, u32, u8);      // [func_0804acd8] MIDI CHANNEL - Set Modulation Delay [Ctrl_1A]
+extern void midi_ch_set_mod_range(MidiBus *, u32, u8);      // [func_0804ace4] MIDI CHANNEL - Set Modulation Range [Ctrl_14]
+extern void midi_ch_set_stereo(MidiBus *, u32, u32);        // [func_0804acf0] MIDI CHANNEL - Set Offset/Split Stereo Effect [Ctrl_4B]
+extern void midi_ch_set_priority(MidiBus *, u32, u8);       // [func_0804ad18] MIDI CHANNEL - Set Priority [Ctrl_21]
+extern void midi_ch_set_random_key(MidiBus *, u32, u8);     // [func_0804ad38] MIDI CHANNEL - Set Random Pitch Variation [Ctrl_52]
+extern void midi_ch_set_random_53(MidiBus *, u32, u8);      // [func_0804ad90] MIDI CHANNEL - Set unk1C [Ctrl_53]
+extern void midi_ch_set_random_54(MidiBus *, u32, u8);      // [func_0804ad9c] MIDI CHANNEL - Set unk1D & unk1E [Ctrl_54]
 
   // // //  MIDI BUS OPERATIONS  // // //
 
-extern void func_0804adb0(MidiBus *, s8);     // [func_0804adb0] MIDI BUS - Set Key
-extern void func_0804adb4(MidiBus *, u8);     // [func_0804adb4] MIDI BUS - Set Volume
-extern void func_0804adb8(MidiBus *, s8);     // [func_0804adb8] MIDI BUS - Set Panning
-extern void func_0804ade4(MidiBus *, s16);    // [func_0804ade4] MIDI BUS - Set Pitch
-extern void func_0804ade8(MidiBus *, u8);     // [func_0804ade8] MIDI BUS - Set Modulation Range
-extern void func_0804ae14(MidiBus *, u16);    // [func_0804ae14] MIDI BUS - Set unk8
-extern void func_0804ae18(MidiBus *, u16 *);  // [func_0804ae18] MIDI BUS - Set Tuning
+extern void midi_bus_set_key(MidiBus *, s8);        // [func_0804adb0] MIDI BUS - Set Key
+extern void midi_bus_set_vol(MidiBus *, u8);        // [func_0804adb4] MIDI BUS - Set Volume
+extern void midi_bus_set_pan(MidiBus *, s8);        // [func_0804adb8] MIDI BUS - Set Panning
+extern void midi_bus_set_pitch(MidiBus *, s16);     // [func_0804ade4] MIDI BUS - Set Pitch
+extern void midi_bus_set_mod_range(MidiBus *, u8);  // [func_0804ade8] MIDI BUS - Set Modulation Range
+extern void midi_bus_set_unk8(MidiBus *, u16);      // [func_0804ae14] MIDI BUS - Set unk8
+extern void midi_bus_set_tuning(MidiBus *, u16 *);  // [func_0804ae18] MIDI BUS - Set Tuning
 
   // // //  LOW-FREQUENCY OSCILLATOR OPERATIONS  // // //
 
@@ -232,39 +232,39 @@ extern u32  midi4a_random(u16); // [func_0804af0c] UTIL - Pseudo-Random Number G
 
   // // //  PSG CHANNEL OPERATIONS  // // //
 
-extern void func_0804af30(void);    // [func_0804af30] PSG CHANNEL - Stop All PSG Channels
-extern void func_0804af74(u32);     // [func_0804af74] PSG CHANNEL - Initialise
-extern u32  func_0804afa4(u32);     // [func_0804afa4] PSG CHANNEL - Convert Pitch Envelope to PSG Frequency Register Variable
-extern u32  func_0804afd8(u32);     // [func_0804afd8] PSG CHANNEL - Convert Volume Envelope to PSG Volume Register Variable
-// extern ? func_0804aff0(?);       // [func_0804aff0] PSG CHANNEL - Update PSG Channel
-extern void func_0804b2c4(void);    // [func_0804b2c4] PSG CHANNEL - Update All
+extern void midi_note_psg_stop(void);    // [func_0804af30] PSG CHANNEL - Stop All PSG Channels
+extern void midi_note_psg_init(u32);     // [func_0804af74] PSG CHANNEL - Initialise
+extern u32  midi_note_psg_get_freq(u32);     // [func_0804afa4] PSG CHANNEL - Convert Pitch Envelope to PSG Frequency Register Variable
+extern u32  midi_note_psg_get_vol(u32);     // [func_0804afd8] PSG CHANNEL - Convert Volume Envelope to PSG Volume Register Variable
+// extern ? midi_note_psg_update(?);       // [func_0804aff0] PSG CHANNEL - Update PSG Channel
+extern void midi_note_psg_update_all(void);    // [func_0804b2c4] PSG CHANNEL - Update All
 
   // // //  SOUND PLAYER OPERATIONS  // // //
 
-extern u16  soundplayer_parse_be16(MidiStream);              // [func_0804b324] MIDI STREAM - Evaluate Big Endian Short
-extern u32  soundplayer_parse_be32(MidiStream);              // [func_0804b330] MIDI STREAM - Evaluate Big Endian Integer
+extern u16  soundplayer_parse_be16(MidiStream);                     // [func_0804b324] MIDI STREAM - Evaluate Big Endian Short
+extern u32  soundplayer_parse_be32(MidiStream);                     // [func_0804b330] MIDI STREAM - Evaluate Big Endian Integer
 extern u32  soundplayer_get_loop_sym_size(const char *);            // [func_0804b348] MIDI STREAM - Get Loop Marker Symbol Length
-extern void soundplayer_play(SoundPlayer *, const SongInfo *); // [func_0804b368] SOUND PLAYER - Play
-extern void soundplayer_play_id(u16);                     // [func_0804b534] SOUND PLAYER - Play from Index
-extern void soundplayer_stop(SoundPlayer *);           // [soundplayer_stop] SOUND PLAYER - Stop
-extern void soundplayer_set_pause(SoundPlayer *, u8);       // [func_0804b574] SOUND PLAYER - Pause/Unpause { 0 = Unpause; 1 = Pause }
-extern u32  soundplayer_is_playing(SoundPlayer *channel);    // [func_0804b5a0] SOUND PLAYER - Check for Active MIDI Readers
-extern void soundplayer_pause(SoundPlayer *);           // [func_0804b5d8] SOUND PLAYER - Pause
-extern void soundplayer_unpause(SoundPlayer *);           // [func_0804b5e4] SOUND PLAYER - Unpause
-extern void soundplayer_pause_all(void);                    // [func_0804b5f0] SOUND PLAYER - Pause All
-extern void soundplayer_unpause_all(void);                    // [func_0804b620] SOUND PLAYER - Unpause All
-extern void soundplayer_set_gain(SoundPlayer *, u16);      // [func_0804b650] SOUND PLAYER - Set Gain (Volume)
-extern void soundplayer_set_track_gain(SoundPlayer *, u16, u16); // [func_0804b654] SOUND PLAYER - Set Gain for Selected Tracks
-extern void soundplayer_set_pitch(SoundPlayer *, u16, s16); // [func_0804b65c] SOUND PLAYER - Set Pitch
-extern void soundplayer_set_panning(SoundPlayer *, u16, s8);  // [func_0804b66c] SOUND PLAYER - Set Panning
-extern void soundplayer_pause_id(u16);                     // [func_0804b67c] SOUND PLAYER - Pause from Index
-extern u32  func_0804b6c4(MidiStream, MidiStream, u32); // [func_0804b6c4] MIDI STREAM - Stream.equals()
-extern u32  midi_get_delta_time(u16, u16, u16);     // [func_0804b6f0] SOUND PLAYER - Get MIDI Ticks Per Frame
-extern void soundplayer_set_speed(SoundPlayer *, u16);      // [func_0804b710] SOUND PLAYER - Align Channel Speed with BeatScript
-extern void soundplayer_set_fade(SoundPlayer *, u16, u16); // [func_0804b734] SOUND PLAYER - Set Volume Fade { type = 0..3 }
-extern void soundplayer_fadeout_stop(SoundPlayer *, u16);      // [func_0804b7dc] SOUND PLAYER - Volume Fade-Out & Clear
-extern void soundplayer_fadeout_pause(SoundPlayer *, u16);      // [func_0804b7ec] SOUND PLAYER - Volume Fade-Out & Pause
-extern void soundplayer_fadein(SoundPlayer *, u16);      // [func_0804b7fc] SOUND PLAYER - Volume Fade-In
+extern void soundplayer_play(SoundPlayer *, const SongInfo *);      // [func_0804b368] SOUND PLAYER - Play
+extern void soundplayer_play_id(u16);                               // [func_0804b534] SOUND PLAYER - Play from Index
+extern void soundplayer_stop(SoundPlayer *);                        // [func_0804b560] SOUND PLAYER - Stop
+extern void soundplayer_set_pause(SoundPlayer *, u8);               // [func_0804b574] SOUND PLAYER - Pause/Unpause { 0 = Unpause; 1 = Pause }
+extern u32  soundplayer_is_playing(SoundPlayer *channel);           // [func_0804b5a0] SOUND PLAYER - Check for Active MIDI Readers
+extern void soundplayer_pause(SoundPlayer *);                       // [func_0804b5d8] SOUND PLAYER - Pause
+extern void soundplayer_unpause(SoundPlayer *);                     // [func_0804b5e4] SOUND PLAYER - Unpause
+extern void soundplayer_pause_all(void);                            // [func_0804b5f0] SOUND PLAYER - Pause All
+extern void soundplayer_unpause_all(void);                          // [func_0804b620] SOUND PLAYER - Unpause All
+extern void soundplayer_set_gain(SoundPlayer *, u16);               // [func_0804b650] SOUND PLAYER - Set Gain (Volume)
+extern void soundplayer_set_track_gain(SoundPlayer *, u16, u16);    // [func_0804b654] SOUND PLAYER - Set Gain for Selected Tracks
+extern void soundplayer_set_pitch(SoundPlayer *, u16, s16);         // [func_0804b65c] SOUND PLAYER - Set Pitch
+extern void soundplayer_set_panning(SoundPlayer *, u16, s8);        // [func_0804b66c] SOUND PLAYER - Set Panning
+extern void soundplayer_pause_id(u16);                              // [func_0804b67c] SOUND PLAYER - Pause from Index
+extern u32  func_0804b6c4(MidiStream, MidiStream, u32);             // [func_0804b6c4] MIDI STREAM - Stream.equals()
+extern u32  midi_get_delta_time(u16, u16, u16);                     // [func_0804b6f0] SOUND PLAYER - Get MIDI Ticks Per Frame
+extern void soundplayer_set_speed(SoundPlayer *, u16);              // [func_0804b710] SOUND PLAYER - Align Channel Speed with BeatScript
+extern void soundplayer_set_fade(SoundPlayer *, u16, u16);          // [func_0804b734] SOUND PLAYER - Set Volume Fade { type = 0..3 }
+extern void soundplayer_fadeout_stop(SoundPlayer *, u16);           // [func_0804b7dc] SOUND PLAYER - Volume Fade-Out & Clear
+extern void soundplayer_fadeout_pause(SoundPlayer *, u16);          // [func_0804b7ec] SOUND PLAYER - Volume Fade-Out & Pause
+extern void soundplayer_fadein(SoundPlayer *, u16);                 // [func_0804b7fc] SOUND PLAYER - Volume Fade-In
 
   // // //  MIDI SEQUENCE OPERATIONS  // // //
 

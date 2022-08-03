@@ -315,12 +315,12 @@ typedef struct SoundPlayer {
     u32 playerType:1;   // ??? (set on startup. can prevent loading tracks if set to 1) { 0 = Music/Ambience Channel; 1 = Sound Effect Channel }
     u32 unk0_b22:5;     // (indeterminate split; may be unused entirely)
     u32 volumeFadeType:3;   // Type of currently-active Volume Fade { 0 = None; 1 = Fade-In; 2 = Fade-Out & Close; 3 = Fade-Out & Pause }
-    MidiBus *midiBus;      // MIDI: Bus with effects for all MIDI Channels.
+    MidiBus *midiBus;       // MIDI: Bus with effects for all MIDI Channels.
     MidiTrackStream *midiReader;    // MIDI: Multiple structures which each keep track of a MIDI Track being processed.
-    const SongInfo *songInfo;    // SequenceData: Currently-loaded Sound Sequence.
-    u32 deltaTime;      // MIDI: Ticks Per Frame, using internal assumption of 60fps [default = 1]
-    const char *loopStartSym;     // MIDI: Label char denoting "Loop Start". [always D_08A865D4, '[']
-    const char *loopEndSym;       // MIDI: Label char denoting "Loop End". [always D_08A865D8, ']']
+    const SongInfo *songInfo;       // SequenceData: Currently-loaded Sound Sequence.
+    u32 deltaTime;                  // MIDI: Ticks Per Frame, using internal assumption of 60fps [default = 1]
+    const char *loopStartSym;   // MIDI: Label char denoting "Loop Start". [always D_08A865D4, '[']
+    const char *loopEndSym;     // MIDI: Label char denoting "Loop End". [always D_08A865D8, ']']
     u8  loopStartSymSize;   // MIDI: Value of soundplayer_get_loop_sym_size(D_08a865a4). [1]
     u8  loopEndSymSize;     // MIDI: Value of soundplayer_get_loop_sym_size(D_08a865a8). [1]
     u16 midiQuarterNote;    // MIDI: Value denoting 1 beat. Read upon initialisation, and for any change in tempo. [always 0x18]

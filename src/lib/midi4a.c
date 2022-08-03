@@ -49,10 +49,10 @@ void directmidi_init(SoundPlayer *mPlayer, MidiTrackStream *mStreams, u32 numTra
 
     if (!gDirectMidiPlayerHasData) return;
 
-    func_08049fa0(mBus, numTracks, mChannels);
-    func_0804a014(mBus, gInstrumentBanks[gDirectMidiPlayerBank]);
-    func_0804adb4(mBus, gDirectMidiPlayerVolume);
-    func_08049e8c(mBus, gDirectMidiPlayerPriority);
+    midi_bus_init(mBus, numTracks, mChannels);
+    midi_bus_set_bank(mBus, gInstrumentBanks[gDirectMidiPlayerBank]);
+    midi_bus_set_vol(mBus, gDirectMidiPlayerVolume);
+    midi_bus_set_priority(mBus, gDirectMidiPlayerPriority);
     soundplayer_init(mPlayer, mBus, numTracks, mStreams, gDirectMidiPlayerPriority);
 
     mPlayer->speedMulti = Q24(1.0);
@@ -93,7 +93,7 @@ void directmidi_update(void) {
     u32 anyNotePlayed;
     u32 i;
 
-    func_08049d08(D_0300159c);
+    midi_ch_update_mod_all(D_0300159c);
     anyNotePlayed = FALSE;
     D_03005b78 = 0;
     directmidi_read_seq();
@@ -101,13 +101,13 @@ void directmidi_update(void) {
     note = &D_03005650[0];
     for (i = 0; i < D_03005b78; i++, note++) {
         if (note->velocity != 0) { // Note has non-zero velocity.
-            func_0804a6b0(D_0300159c, note->channel, note->key, note->velocity);
+            midi_note_on(D_0300159c, note->channel, note->key, note->velocity);
             mChnl = &D_0300159c->midiChannel[note->channel];
             if (mChnl->filterEQ && (gLowFreqOscMode == LFO_MODE_KEYPRESS)) {
                 anyNotePlayed = TRUE;
             }
         } else { // Note is muted.
-            func_0804a5b4(D_0300159c, note->channel, note->key);
+            midi_note_off(D_0300159c, note->channel, note->key);
         }
     }
     if (anyNotePlayed) {
@@ -124,11 +124,11 @@ void midi4a_init(void) {
                     DMA_SAMPLE_BUFFER_SIZE, D_03001888,
                     SAMPLE_SCRATCHPAD_SIZE, D_030024c8,
                     DIRECTSOUND_CHANNEL_COUNT, D_030028c8);
-    func_0804af30();
-    func_0804a360(DIRECTSOUND_CHANNEL_COUNT, D_03002a48);
+    midi_note_psg_stop();
+    midi_note_init(DIRECTSOUND_CHANNEL_COUNT, D_03002a48);
 
     for (i = 0; i < SOUND_PLAYER_COUNT; i++) {
-        func_08049fa0(gSoundPlayerTable[i].midiBus, gSoundPlayerTable[i].trackCount, gSoundPlayerTable[i].midiChannels);
+        midi_bus_init(gSoundPlayerTable[i].midiBus, gSoundPlayerTable[i].trackCount, gSoundPlayerTable[i].midiChannels);
         soundplayer_init(gSoundPlayerTable[i].soundPlayer, gSoundPlayerTable[i].midiBus, gSoundPlayerTable[i].trackCount, gSoundPlayerTable[i].trackStreams, gSoundPlayerTable[i].playerType);
     }
 

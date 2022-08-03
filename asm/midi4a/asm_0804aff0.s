@@ -2,7 +2,7 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-thumb_func_start func_0804aff0 \n\
+thumb_func_start midi_note_psg_update \n\
 /* 0804aff0 */ PUSH {R4-R7, LR} \n\
 /* 0804aff2 */ MOV R7, R10 @ Set R7 to R10 \n\
 /* 0804aff4 */ MOV R6, R9 @ Set R6 to R9 \n\
@@ -80,8 +80,8 @@ branch_0804b090: \n\
 /* 0804b090 */ CMP R7, 0x2 @ Compare R7 and 0x2 \n\
 /* 0804b092 */ BHI branch_0804b0b0 \n\
 /* 0804b094 */ MOV R0, R8 @ Set R0 to R8 \n\
-/* 0804b096 */ BL func_0804a018 \n\
-/* 0804b09a */ BL func_0804afa4 \n\
+/* 0804b096 */ BL midi_note_update_freq \n\
+/* 0804b09a */ BL midi_note_psg_get_freq \n\
 /* 0804b09e */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
 /* 0804b0a0 */ LDRH R0, [R6, 0x20] \n\
 /* 0804b0a2 */ LSLS R0, R0, 0x16 \n\
@@ -119,8 +119,8 @@ branch_0804b0d0: \n\
  \n\
 branch_0804b0d2: \n\
 /* 0804b0d2 */ MOV R0, R8 @ Set R0 to R8 \n\
-/* 0804b0d4 */ BL func_0804a1f4 \n\
-/* 0804b0d8 */ BL func_0804afd8 \n\
+/* 0804b0d4 */ BL midi_note_update_vol \n\
+/* 0804b0d8 */ BL midi_note_psg_get_vol \n\
 /* 0804b0dc */ MOV R12, R0 @ Set R12 to R0 \n\
 /* 0804b0de */ LDR R0, =D_03001580 \n\
 /* 0804b0e0 */ LSLS R3, R7, 0x1 \n\
@@ -329,7 +329,7 @@ branch_0804b26c: \n\
 /* 0804b270 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
 /* 0804b272 */ STRB R4, [R0] \n\
 /* 0804b274 */ MOV R0, R8 @ Set R0 to R8 \n\
-/* 0804b276 */ BL func_0804a224 \n\
+/* 0804b276 */ BL midi_note_update_adsr \n\
 /* 0804b27a */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0804b27c */ BEQ branch_0804b2a6 \n\
 /* 0804b27e */ LDR R0, =D_03001580 \n\

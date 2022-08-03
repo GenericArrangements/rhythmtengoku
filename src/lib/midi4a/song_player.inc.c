@@ -38,11 +38,11 @@ void soundplayer_play(SoundPlayer *soundPlayer, const SongInfo *song) {
     }
 
     midiBus = soundPlayer->midiBus;
-    func_08049e64(midiBus);
-    func_08049fa0(midiBus, midiBus->totalChannels, midiBus->midiChannel);
-    func_0804a014(midiBus, gInstrumentBanks[song->soundBank]);
-    func_0804adb4(midiBus, song->volume);
-    func_08049e8c(midiBus, song->priority);
+    midi_ch_close_all_notes(midiBus);
+    midi_bus_init(midiBus, midiBus->totalChannels, midiBus->midiChannel);
+    midi_bus_set_bank(midiBus, gInstrumentBanks[song->soundBank]);
+    midi_bus_set_vol(midiBus, song->volume);
+    midi_bus_set_priority(midiBus, song->priority);
     soundPlayer->songInfo = song;
     soundPlayer->channelVolume = song->volume;
 
@@ -114,14 +114,14 @@ void soundplayer_play_id(u16 index) {
 
 // [func_0804b560] SOUND PLAYER - Remove Sound Sequence
 void soundplayer_stop(SoundPlayer *soundPlayer) {
-    func_08049e3c(soundPlayer->midiBus);
+    midi_ch_stop_all_notes(soundPlayer->midiBus);
     soundPlayer->songInfo = NULL;
 }
 
 // [func_0804b574] SOUND PLAYER - Pause/Unpause Sound Sequence { 0 = Unpause; 1 = Pause }
 void soundplayer_set_pause(SoundPlayer *soundPlayer, u8 pause) {
     soundPlayer->isPaused = pause;
-    if (pause) func_08049e64(soundPlayer->midiBus);
+    if (pause) midi_ch_close_all_notes(soundPlayer->midiBus);
 }
 
 // [func_0804b5a0] SOUND PLAYER - Check for Active MIDI Readers
@@ -176,12 +176,12 @@ void soundplayer_set_track_gain(SoundPlayer *soundPlayer, u16 tracks, u16 gain) 
 
 // [func_0804b65c] SOUND PLAYER - Set Pitch
 void soundplayer_set_pitch(SoundPlayer *soundPlayer, u16 unused, s16 pitch) {
-    func_0804ade4(soundPlayer->midiBus, pitch);
+    midi_bus_set_pitch(soundPlayer->midiBus, pitch);
 }
 
 // [func_0804b66c] SOUND PLAYER - Set Panning
 void soundplayer_set_panning(SoundPlayer *soundPlayer, u16 unused, s8 panning) {
-    func_0804adb8(soundPlayer->midiBus, panning);
+    midi_bus_set_pan(soundPlayer->midiBus, panning);
 }
 
 // [func_0804b67c] SOUND PLAYER - Pause Sound Sequence from Index
